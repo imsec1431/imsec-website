@@ -1,0 +1,654 @@
+/* =========================================================
+   DEPARTMENT RESEARCH - BOOKS / CHAPTERS
+   ========================================================= */
+
+.drb-page {
+  min-height: 100vh;
+  padding: 28px;
+  background: #f6f8fc;
+  color: #1f2937;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.drb-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.drb-header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.drb-icon-back {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #e1e6ef;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.drb-icon-back:hover {
+  background: #f1f5f9;
+  color: #111827;
+  transform: translateX(-2px);
+}
+
+.drb-title-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.18);
+}
+
+.drb-header h1 {
+  margin: 0;
+  color: #111827;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.drb-header p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* =========================================================
+   ADD BUTTON
+   ========================================================= */
+
+.drb-add-btn {
+  min-height: 42px;
+  padding: 10px 17px;
+  border: none;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 7px 18px rgba(79, 70, 229, 0.2);
+  transition: all 0.2s ease;
+}
+
+.drb-add-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(79, 70, 229, 0.25);
+}
+
+/* =========================================================
+   SUMMARY
+   ========================================================= */
+
+.drb-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.drb-summary-card {
+  min-height: 90px;
+  padding: 18px 20px;
+  box-sizing: border-box;
+  border: 1px solid #e7ebf2;
+  border-radius: 14px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+}
+
+.drb-summary-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: #eef2ff;
+  color: #4f46e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.drb-summary-card span {
+  display: block;
+  margin-bottom: 3px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.drb-summary-card strong {
+  display: block;
+  color: #1e293b;
+  font-size: 24px;
+  line-height: 1;
+}
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.drb-card {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e7ebf2;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+}
+
+.drb-card-header {
+  min-height: 72px;
+  padding: 18px 22px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eef2f7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.drb-card-header h2 {
+  margin: 0 0 4px;
+  color: #1e293b;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.drb-card-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.drb-count {
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #f1f5f9;
+  color: #475569;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.drb-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.drb-table {
+  width: 100%;
+  min-width: 1150px;
+  border-collapse: collapse;
+}
+
+.drb-table th {
+  padding: 13px 14px;
+  border-bottom: 1px solid #e8edf4;
+  background: #f8fafc;
+  color: #64748b;
+  text-align: left;
+  white-space: nowrap;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.35px;
+}
+
+.drb-table td {
+  padding: 14px;
+  border-bottom: 1px solid #eef2f7;
+  color: #475569;
+  vertical-align: middle;
+  font-size: 13px;
+}
+
+.drb-table tbody tr {
+  transition: background 0.15s ease;
+}
+
+.drb-table tbody tr:hover {
+  background: #fafbff;
+}
+
+.drb-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================================================
+   NUMBER
+   ========================================================= */
+
+.drb-number {
+  width: 27px;
+  height: 27px;
+  border-radius: 7px;
+  background: #f1f5f9;
+  color: #475569;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   TITLE CELL
+   ========================================================= */
+
+.drb-title-cell {
+  min-width: 260px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.drb-record-icon {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  border-radius: 9px;
+  background: #eef2ff;
+  color: #4f46e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.drb-title-cell strong {
+  display: block;
+  max-width: 330px;
+  color: #1e293b;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.drb-title-cell small {
+  display: block;
+  max-width: 330px;
+  margin-top: 3px;
+  color: #94a3b8;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+/* =========================================================
+   TYPE
+   ========================================================= */
+
+.drb-type {
+  padding: 5px 9px;
+  border-radius: 6px;
+  background: #f5f3ff;
+  color: #6d28d9;
+  white-space: nowrap;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+.drb-text {
+  display: block;
+  max-width: 170px;
+  color: #475569;
+  line-height: 1.4;
+}
+
+.drb-year {
+  color: #334155;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.drb-status {
+  padding: 5px 9px;
+  border-radius: 20px;
+  white-space: nowrap;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.drb-status.active {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.drb-status.inactive {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* =========================================================
+   ORDER
+   ========================================================= */
+
+.drb-order {
+  min-width: 27px;
+  height: 27px;
+  padding: 0 7px;
+  box-sizing: border-box;
+  border-radius: 7px;
+  background: #f8fafc;
+  color: #475569;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.drb-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.drb-action {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.drb-action.view {
+  color: #2563eb;
+}
+
+.drb-action.document {
+  color: #7c3aed;
+}
+
+.drb-action.edit {
+  color: #d97706;
+}
+
+.drb-action.delete {
+  color: #dc2626;
+}
+
+.drb-action:hover {
+  transform: translateY(-1px);
+  background: #f8fafc;
+}
+
+.drb-action.view:hover {
+  border-color: #93c5fd;
+  background: #eff6ff;
+}
+
+.drb-action.document:hover {
+  border-color: #c4b5fd;
+  background: #f5f3ff;
+}
+
+.drb-action.edit:hover {
+  border-color: #fcd34d;
+  background: #fffbeb;
+}
+
+.drb-action.delete:hover {
+  border-color: #fca5a5;
+  background: #fef2f2;
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.drb-empty {
+  min-height: 330px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.drb-empty-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 15px;
+  border-radius: 16px;
+  background: #eef2ff;
+  color: #4f46e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.drb-empty h3 {
+  margin: 0 0 7px;
+  color: #1e293b;
+  font-size: 18px;
+}
+
+.drb-empty p {
+  margin: 0 0 20px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.drb-empty-btn {
+  min-height: 40px;
+  padding: 9px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* =========================================================
+   ALERT
+   ========================================================= */
+
+.drb-alert {
+  margin-bottom: 18px;
+  padding: 12px 15px;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 13px;
+}
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.drb-loading {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.drb-loading h3 {
+  margin: 16px 0 5px;
+  color: #1e293b;
+  font-size: 18px;
+}
+
+.drb-loading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.drb-spinner {
+  width: 42px;
+  height: 42px;
+  border: 4px solid #e5e7eb;
+  border-top-color: #4f46e5;
+  border-radius: 50%;
+  animation: drbSpin 0.8s linear infinite;
+}
+
+@keyframes drbSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.drb-error {
+  min-height: 420px;
+  padding: 40px 25px;
+  border: 1px solid #fee2e2;
+  border-radius: 16px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.drb-error h3 {
+  margin: 0 0 8px;
+  color: #991b1b;
+  font-size: 20px;
+}
+
+.drb-error p {
+  max-width: 600px;
+  margin: 0 0 20px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.drb-back-btn {
+  min-height: 42px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 9px;
+  background: #1e293b;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .drb-page {
+    padding: 20px;
+  }
+
+  .drb-header {
+    align-items: flex-start;
+  }
+
+  .drb-summary {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .drb-page {
+    padding: 15px;
+  }
+
+  .drb-header {
+    flex-direction: column;
+  }
+
+  .drb-header-left {
+    width: 100%;
+  }
+
+  .drb-add-btn {
+    width: 100%;
+  }
+
+  .drb-title-icon {
+    width: 45px;
+    height: 45px;
+    flex: 0 0 45px;
+  }
+
+  .drb-header h1 {
+    font-size: 21px;
+  }
+
+  .drb-card-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .drb-count {
+    align-self: flex-start;
+  }
+}

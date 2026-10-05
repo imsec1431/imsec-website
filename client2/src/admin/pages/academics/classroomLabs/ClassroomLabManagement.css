@@ -1,0 +1,898 @@
+/* =========================================================
+   CLASS ROOMS & LABS — ADMIN CMS
+========================================================= */
+
+.classroom-lab-admin {
+  min-height: 100vh;
+  background: #f4f7fb;
+  padding-bottom: 50px;
+  color: #1d2939;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.classroom-lab-admin-header {
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  padding: 34px 38px;
+
+  margin-bottom: 25px;
+
+  color: #fff;
+
+  background: linear-gradient(135deg, #071d3a 0%, #0a2e5c 50%, #123f7a 100%);
+
+  border-radius: 0 0 24px 24px;
+
+  box-shadow: 0 12px 35px rgba(7, 29, 58, 0.16);
+}
+
+.classroom-lab-admin-header::before {
+  content: "";
+  position: absolute;
+
+  width: 330px;
+  height: 330px;
+
+  right: -100px;
+  top: -180px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.classroom-lab-admin-header::after {
+  content: "";
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  right: 230px;
+  bottom: -120px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 193, 7, 0.08);
+}
+
+.classroom-lab-admin-header > div {
+  position: relative;
+  z-index: 2;
+}
+
+.classroom-lab-admin-header h1 {
+  margin: 12px 0 8px;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+}
+
+.classroom-lab-admin-header p {
+  max-width: 720px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.classroom-lab-admin-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 13px;
+}
+
+.classroom-lab-admin-breadcrumb svg {
+  font-size: 12px;
+}
+
+.classroom-lab-admin-breadcrumb strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* =========================================================
+   HEADER ACTIONS
+========================================================= */
+
+.classroom-lab-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  flex-shrink: 0;
+}
+
+.classroom-lab-header-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-height: 45px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  padding: 10px 17px;
+}
+
+.classroom-lab-header-actions .btn-warning {
+  color: #172033;
+  border: none;
+}
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.classroom-lab-admin-content {
+  width: calc(100% - 50px);
+  max-width: 1450px;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   ALERTS
+========================================================= */
+
+.classroom-lab-admin-content > .alert,
+.classroom-lab-admin > .alert {
+  width: calc(100% - 50px);
+  max-width: 1450px;
+
+  margin: 0 auto 20px;
+
+  border: none;
+  border-radius: 12px;
+
+  box-shadow: 0 5px 18px rgba(16, 24, 40, 0.06);
+}
+
+.classroom-lab-admin .alert {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* =========================================================
+   TABS
+========================================================= */
+
+.classroom-lab-tabs {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 5px;
+
+  padding: 8px;
+
+  background: #fff;
+
+  border: 1px solid #e4eaf2;
+  border-radius: 14px;
+
+  box-shadow: 0 5px 20px rgba(16, 24, 40, 0.05);
+}
+
+.classroom-lab-tabs .nav-item {
+  margin: 0;
+}
+
+.classroom-lab-tabs .nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  border: none !important;
+
+  border-radius: 9px !important;
+
+  padding: 10px 15px;
+
+  color: #667085;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.classroom-lab-tabs .nav-link svg {
+  font-size: 13px;
+}
+
+.classroom-lab-tabs .nav-link:hover {
+  color: #0a2e5c;
+  background: #f0f5fb;
+}
+
+.classroom-lab-tabs .nav-link.active {
+  color: #fff !important;
+
+  background: #0a2e5c !important;
+
+  box-shadow: 0 4px 12px rgba(10, 46, 92, 0.2);
+}
+
+/* =========================================================
+   CMS CARD
+========================================================= */
+
+.cms-section-card {
+  border: 1px solid #e4eaf2 !important;
+
+  border-radius: 18px !important;
+
+  background: #fff;
+
+  box-shadow: 0 7px 25px rgba(16, 24, 40, 0.055);
+
+  overflow: hidden;
+}
+
+.cms-section-card .card-body {
+  padding: 30px;
+}
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.cms-section-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+
+  padding-bottom: 24px;
+  margin-bottom: 28px;
+
+  border-bottom: 1px solid #edf1f6;
+}
+
+.cms-section-heading-icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #0a2e5c;
+
+  background: #eef4fb;
+
+  border-radius: 12px;
+
+  font-size: 20px;
+}
+
+.cms-section-heading h3 {
+  margin: 2px 0 5px;
+
+  color: #172033;
+
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.cms-section-heading p {
+  max-width: 850px;
+
+  margin: 0;
+
+  color: #667085;
+
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.classroom-lab-admin .form-label {
+  margin-bottom: 8px;
+
+  color: #344054;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.classroom-lab-admin .form-control {
+  min-height: 44px;
+
+  border: 1px solid #d9e1eb;
+
+  border-radius: 9px;
+
+  color: #1d2939;
+
+  background: #fff;
+
+  font-size: 14px;
+
+  box-shadow: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.classroom-lab-admin textarea.form-control {
+  min-height: 110px;
+
+  resize: vertical;
+
+  line-height: 1.6;
+}
+
+.classroom-lab-admin .form-control:focus {
+  border-color: #0a2e5c;
+
+  box-shadow: 0 0 0 3px rgba(10, 46, 92, 0.09);
+}
+
+.classroom-lab-admin .form-control::placeholder {
+  color: #98a2b3;
+}
+
+/* =========================================================
+   IMAGE UPLOAD
+========================================================= */
+
+.image-upload-box {
+  margin-top: 10px;
+}
+
+.image-upload-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  min-height: 145px;
+
+  padding: 20px;
+
+  background: #f8fafc;
+
+  border: 1px dashed #c8d3e0;
+  border-radius: 14px;
+}
+
+.image-upload-inner > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.image-upload-inner svg {
+  margin-bottom: 8px;
+
+  color: #0a2e5c;
+
+  font-size: 23px;
+}
+
+.image-upload-inner strong {
+  color: #344054;
+
+  font-size: 14px;
+}
+
+.image-upload-inner small {
+  margin: 5px 0 12px;
+
+  color: #98a2b3;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.image-upload-inner input[type="file"] {
+  max-width: 260px;
+
+  padding: 7px;
+
+  font-size: 12px;
+}
+
+.upload-current-image {
+  width: 150px;
+  height: 100px;
+
+  flex-shrink: 0;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+
+  border: 1px solid #e4eaf2;
+
+  box-shadow: 0 5px 15px rgba(16, 24, 40, 0.08);
+}
+
+/* =========================================================
+   PREVIEW
+========================================================= */
+
+.cms-preview-box {
+  height: 100%;
+
+  padding: 20px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e5eaf0;
+  border-radius: 14px;
+}
+
+.cms-preview-box h5 {
+  margin-bottom: 15px;
+
+  color: #344054;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.cms-preview-box img {
+  width: 100%;
+  height: 270px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+
+  border: 1px solid #e4eaf2;
+}
+
+.cms-preview-empty {
+  height: 270px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #98a2b3;
+
+  background: #eef2f6;
+
+  border-radius: 12px;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   FEATURE EDITOR
+========================================================= */
+
+.feature-editor {
+  margin-top: 25px;
+}
+
+.feature-editor-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 15px;
+}
+
+.feature-editor-header h5 {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.feature-editor-header .btn {
+  border-radius: 8px;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.feature-item {
+  margin-bottom: 14px;
+
+  border: 1px solid #e4eaf2 !important;
+
+  border-radius: 12px !important;
+
+  background: #fbfcfe;
+
+  box-shadow: none !important;
+}
+
+.feature-item .card-body {
+  padding: 20px;
+}
+
+.feature-item-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+}
+
+.feature-item-top .badge {
+  padding: 6px 9px;
+
+  border-radius: 6px;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.feature-item-top .btn {
+  border-radius: 7px;
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   HIGHLIGHT EDITOR
+========================================================= */
+
+.highlight-editor-card {
+  height: 100%;
+
+  border: 1px solid #e4eaf2 !important;
+
+  border-radius: 14px !important;
+
+  background: #fbfcfe;
+
+  box-shadow: none !important;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.highlight-editor-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 22px rgba(16, 24, 40, 0.06) !important;
+}
+
+.highlight-editor-card .card-body {
+  padding: 22px;
+}
+
+.highlight-editor-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 13px;
+
+  color: #0a2e5c;
+
+  background: #edf4fb;
+
+  border-radius: 10px;
+
+  font-size: 18px;
+}
+
+.highlight-editor-card h5 {
+  margin-bottom: 18px;
+
+  color: #172033;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   BOTTOM SAVE
+========================================================= */
+
+.classroom-lab-bottom-save {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 28px 0 5px;
+}
+
+.classroom-lab-bottom-save .btn {
+  min-width: 230px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  min-height: 48px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.classroom-lab-admin-loading {
+  min-height: 65vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+
+  color: #667085;
+}
+
+.classroom-lab-admin-loading .spinner-border {
+  width: 38px;
+  height: 38px;
+
+  color: #0a2e5c;
+}
+
+.classroom-lab-admin-loading p {
+  margin: 0;
+
+  font-size: 14px;
+}
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.classroom-lab-admin .badge {
+  font-weight: 600;
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .classroom-lab-admin-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .classroom-lab-header-actions {
+    width: 100%;
+  }
+
+  .classroom-lab-header-actions .btn {
+    flex: 1;
+  }
+
+  .cms-preview-box img,
+  .cms-preview-empty {
+    height: 230px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+  .classroom-lab-admin {
+    padding-bottom: 30px;
+  }
+
+  .classroom-lab-admin-header {
+    padding: 25px 20px;
+
+    margin-bottom: 18px;
+
+    border-radius: 0 0 18px 18px;
+  }
+
+  .classroom-lab-admin-header h1 {
+    font-size: 23px;
+
+    line-height: 1.3;
+  }
+
+  .classroom-lab-admin-header p {
+    font-size: 13px;
+  }
+
+  .classroom-lab-admin-breadcrumb {
+    flex-wrap: wrap;
+
+    font-size: 11px;
+  }
+
+  .classroom-lab-header-actions {
+    flex-direction: column;
+  }
+
+  .classroom-lab-header-actions .btn {
+    width: 100%;
+  }
+
+  .classroom-lab-admin-content {
+    width: calc(100% - 24px);
+  }
+
+  .classroom-lab-tabs {
+    padding: 6px;
+
+    overflow-x: auto;
+    flex-wrap: nowrap;
+
+    scrollbar-width: thin;
+  }
+
+  .classroom-lab-tabs .nav-link {
+    white-space: nowrap;
+
+    padding: 9px 12px;
+
+    font-size: 12px;
+  }
+
+  .cms-section-card .card-body {
+    padding: 20px 16px;
+  }
+
+  .cms-section-heading {
+    gap: 11px;
+
+    padding-bottom: 18px;
+    margin-bottom: 22px;
+  }
+
+  .cms-section-heading-icon {
+    width: 40px;
+    height: 40px;
+
+    font-size: 17px;
+  }
+
+  .cms-section-heading h3 {
+    font-size: 18px;
+  }
+
+  .cms-section-heading p {
+    font-size: 12px;
+  }
+
+  .image-upload-inner {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .upload-current-image {
+    width: 100%;
+    height: 180px;
+  }
+
+  .image-upload-inner input[type="file"] {
+    width: 100%;
+    max-width: none;
+  }
+
+  .cms-preview-box {
+    margin-top: 20px;
+  }
+
+  .cms-preview-box img,
+  .cms-preview-empty {
+    height: 200px;
+  }
+
+  .feature-editor-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .feature-editor-header .btn {
+    width: 100%;
+  }
+
+  .feature-item .card-body {
+    padding: 16px;
+  }
+
+  .highlight-editor-card .card-body {
+    padding: 18px;
+  }
+
+  .classroom-lab-bottom-save {
+    padding-top: 20px;
+  }
+
+  .classroom-lab-bottom-save .btn {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .classroom-lab-admin-header {
+    padding: 22px 16px;
+  }
+
+  .classroom-lab-admin-header h1 {
+    font-size: 21px;
+  }
+
+  .classroom-lab-admin-content {
+    width: calc(100% - 16px);
+  }
+
+  .cms-section-card .card-body {
+    padding: 17px 13px;
+  }
+
+  .cms-section-heading-icon {
+    width: 36px;
+    height: 36px;
+
+    font-size: 15px;
+  }
+
+  .cms-section-heading h3 {
+    font-size: 16px;
+  }
+
+  .image-upload-inner {
+    padding: 15px;
+  }
+}

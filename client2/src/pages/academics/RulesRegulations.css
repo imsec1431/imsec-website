@@ -1,0 +1,612 @@
+/*=========================================================
+                Rules & Regulations Page
+=========================================================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background: #fff;
+}
+
+/*=========================================================
+                Common
+=========================================================*/
+
+.section-tag {
+  color: #fdb913;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  color: #0a2e5c;
+  margin-bottom: 20px;
+}
+
+.section-title span {
+  color: #fdb913;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  background: #fdb913;
+  border-radius: 50px;
+  margin-top: 15px;
+}
+
+.text-center .section-title::after {
+  margin: 15px auto 0;
+}
+
+/*=========================================================
+                Hero Section
+=========================================================*/
+
+.rules-hero {
+  height: 430px;
+
+  background:
+    linear-gradient(rgba(10, 46, 92, 0.88), rgba(10, 46, 92, 0.88)),
+    url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1600&q=80");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+
+  font-weight: 800;
+}
+
+.hero-content p {
+  margin-top: 15px;
+
+  font-size: 18px;
+}
+
+.hero-content span {
+  color: #fdb913;
+
+  margin: 0 8px;
+}
+
+/*=========================================================
+                About Section
+=========================================================*/
+
+.rules-about {
+  background: #fff;
+}
+
+.rules-image {
+  width: 100%;
+
+  border-radius: 25px;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+
+  transition: 0.35s;
+}
+
+.rules-image:hover {
+  transform: scale(1.03);
+}
+
+.rules-about p {
+  color: #666;
+
+  line-height: 1.9;
+
+  text-align: justify;
+}
+
+/*=========================================================
+                Search
+=========================================================*/
+
+.rules-search {
+  background: #f8f9fb;
+}
+
+.search-box {
+  background: #fff;
+
+  border-radius: 50px;
+
+  display: flex;
+
+  align-items: center;
+
+  height: 60px;
+
+  padding: 0 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.search-box svg {
+  color: #0a2e5c;
+
+  margin-right: 15px;
+
+  font-size: 18px;
+}
+
+.search-box input {
+  border: none !important;
+
+  box-shadow: none !important;
+
+  font-size: 16px;
+}
+
+.rules-search .form-select {
+  height: 60px;
+
+  border-radius: 50px;
+
+  border: none;
+
+  font-weight: 600;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/*=========================================================
+                Rules Accordion
+=========================================================*/
+
+.rules-section {
+  background: #fff;
+}
+
+.rule-item {
+  margin-bottom: 20px;
+
+  border: none !important;
+
+  border-radius: 18px !important;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.rule-item .accordion-button {
+  background: #fff;
+
+  padding: 22px;
+
+  font-weight: 700;
+
+  color: #0a2e5c;
+
+  box-shadow: none !important;
+}
+
+.rule-item .accordion-button:not(.collapsed) {
+  background: #0a2e5c;
+
+  color: #fff;
+}
+
+.rule-item .accordion-button::after {
+  filter: brightness(0) invert(1);
+}
+
+.rule-header {
+  display: flex;
+
+  align-items: center;
+
+  width: 100%;
+}
+
+.rule-header svg {
+  color: #fdb913;
+
+  font-size: 18px;
+}
+
+.important-badge {
+  margin-left: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  background: #dc3545;
+
+  color: #fff;
+
+  padding: 6px 14px;
+
+  border-radius: 30px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.rule-category {
+  display: inline-block;
+
+  background: #fdb913;
+
+  color: #0a2e5c;
+
+  padding: 6px 18px;
+
+  border-radius: 30px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.rule-item .accordion-body {
+  padding: 25px;
+}
+
+.rule-item .accordion-body p {
+  color: #666;
+
+  line-height: 1.9;
+}
+
+.rule-item .btn {
+  font-weight: 600;
+}
+/*=========================================================
+                Rule Book Section
+=========================================================*/
+
+.rulebook-section {
+  background: #f8f9fb;
+}
+
+.rulebook-card {
+  background: #fff;
+
+  border-radius: 25px;
+
+  padding: 35px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 30px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+}
+
+.rulebook-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.rulebook-card h3 {
+  color: #0a2e5c;
+
+  font-weight: 700;
+
+  margin-bottom: 15px;
+}
+
+.rulebook-card p {
+  color: #666;
+
+  line-height: 1.8;
+
+  margin-bottom: 0;
+}
+
+.rulebook-card .btn {
+  padding: 12px 30px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+/*=========================================================
+                Guidelines
+=========================================================*/
+
+.guidelines-section {
+  background: #fff;
+}
+
+.guide-card {
+  background: #fff;
+
+  padding: 35px 25px;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  height: 100%;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+}
+
+.guide-card:hover {
+  transform: translateY(-10px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.guide-icon {
+  font-size: 55px;
+
+  color: #fdb913;
+
+  margin-bottom: 20px;
+}
+
+.guide-card h4 {
+  color: #0a2e5c;
+
+  font-weight: 700;
+
+  margin-bottom: 15px;
+}
+
+.guide-card p {
+  color: #666;
+
+  line-height: 1.8;
+}
+
+/*=========================================================
+                FAQ
+=========================================================*/
+
+.faq-section {
+  background: #f8f9fb;
+}
+
+.faq-card {
+  background: #fff;
+
+  padding: 35px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.faq-card h5 {
+  color: #0a2e5c;
+
+  font-weight: 700;
+
+  margin-bottom: 12px;
+}
+
+.faq-card p {
+  color: #666;
+
+  line-height: 1.8;
+}
+
+.faq-card hr {
+  margin: 25px 0;
+}
+
+/*=========================================================
+                CTA
+=========================================================*/
+
+.rules-cta {
+  background: linear-gradient(135deg, #0a2e5c, #123f7a);
+
+  color: #fff;
+
+  padding: 90px 0;
+}
+
+.rules-cta h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+
+  font-weight: 800;
+
+  margin-bottom: 18px;
+}
+
+.rules-cta p {
+  color: #ddd;
+
+  line-height: 1.8;
+}
+
+.rules-cta .btn {
+  padding: 12px 30px;
+
+  font-weight: 600;
+
+  transition: 0.35s;
+}
+
+.rules-cta .btn-warning {
+  background: #fdb913;
+
+  color: #0a2e5c;
+
+  border: none;
+}
+
+.rules-cta .btn-warning:hover {
+  background: #fff;
+
+  color: #0a2e5c;
+
+  transform: translateY(-5px);
+}
+
+.rules-cta .btn-outline-light {
+  border: 2px solid #fff;
+}
+
+.rules-cta .btn-outline-light:hover {
+  background: #fff;
+
+  color: #0a2e5c;
+
+  transform: translateY(-5px);
+}
+
+/*=========================================================
+                Animation
+=========================================================*/
+
+.rulebook-card,
+.guide-card,
+.rule-item {
+  transition: all 0.35s ease;
+}
+
+/*=========================================================
+                Responsive
+=========================================================*/
+
+@media (max-width: 992px) {
+  .rules-hero {
+    height: 320px;
+  }
+
+  .rulebook-card {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .rules-cta {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .rules-hero {
+    height: 260px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .search-box {
+    height: 55px;
+  }
+
+  .rules-search .form-select {
+    height: 55px;
+  }
+
+  .rule-item .accordion-button {
+    padding: 18px;
+  }
+
+  .important-badge {
+    font-size: 11px;
+
+    padding: 5px 10px;
+  }
+
+  .rulebook-card {
+    padding: 25px;
+  }
+
+  .rulebook-card .btn {
+    width: 100%;
+  }
+
+  .guide-card {
+    padding: 25px;
+  }
+
+  .guide-icon {
+    font-size: 45px;
+  }
+
+  .faq-card {
+    padding: 25px;
+  }
+
+  .rules-cta {
+    padding: 60px 20px;
+  }
+
+  .rules-cta .btn {
+    width: 100%;
+
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .rules-image {
+    margin-bottom: 20px;
+  }
+
+  .rule-header {
+    flex-wrap: wrap;
+
+    gap: 10px;
+  }
+
+  .important-badge {
+    margin-left: 0;
+  }
+
+  .faq-card {
+    padding: 20px;
+  }
+}

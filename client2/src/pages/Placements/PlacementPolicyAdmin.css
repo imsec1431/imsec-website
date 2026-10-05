@@ -1,0 +1,1004 @@
+/* =========================================================
+   PLACEMENT POLICY ADMIN
+========================================================= */
+
+.placement-policy-admin {
+  width: 100%;
+  min-height: 100vh;
+  padding: 28px;
+  background: #f5f7fb;
+  color: #172033;
+}
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.placement-policy-page-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 24px;
+}
+
+.placement-policy-page-header > div:first-child {
+  min-width: 0;
+}
+
+.placement-policy-page-header span {
+  display: block;
+  margin-bottom: 5px;
+  color: #1764aa;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.placement-policy-page-header h1 {
+  margin: 0;
+  color: #102d57;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.placement-policy-page-header p {
+  margin: 7px 0 0;
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   ADD / SAVE BUTTON
+========================================================= */
+
+.placement-policy-add-button,
+.placement-policy-save-button {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0 16px !important;
+  border: none !important;
+  border-radius: 7px !important;
+  background: #1764aa !important;
+  color: #fff !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  box-shadow: none !important;
+}
+
+.placement-policy-add-button:hover,
+.placement-policy-save-button:hover {
+  background: #0e4e8c !important;
+}
+
+.placement-policy-add-button:focus,
+.placement-policy-save-button:focus {
+  box-shadow: 0 0 0 3px rgba(23, 100, 170, 0.13) !important;
+}
+
+/* =========================================================
+   REFRESH
+========================================================= */
+
+.placement-policy-refresh-button {
+  padding: 8px 13px !important;
+  border: none !important;
+  border-radius: 6px !important;
+  background: #eef5fc !important;
+  color: #1764aa !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  box-shadow: none !important;
+}
+
+.placement-policy-refresh-button:hover {
+  background: #1764aa !important;
+  color: #fff !important;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.placement-policy-card {
+  overflow: hidden;
+  border: 1px solid #e1e6ed !important;
+  border-radius: 12px !important;
+  background: #fff;
+  box-shadow: 0 6px 25px rgba(20, 43, 75, 0.05);
+}
+
+.placement-policy-card > .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 18px 22px;
+  border-bottom: 1px solid #e8ecf1;
+  background: #fff;
+}
+
+.placement-policy-card > .card-header h4 {
+  margin: 0;
+  color: #102d57;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.placement-policy-card > .card-header span {
+  display: block;
+  margin-top: 3px;
+  color: #98a2b3;
+  font-size: 11px;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.placement-policy-table {
+  margin: 0 !important;
+  vertical-align: middle;
+}
+
+.placement-policy-table thead th {
+  padding: 14px 17px;
+  border-bottom: 1px solid #e3e8ef;
+  background: #f8fafc;
+  color: #667085;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.placement-policy-table tbody td {
+  padding: 15px 17px;
+  border-color: #edf0f4;
+  color: #475467;
+  font-size: 12px;
+}
+
+.placement-policy-table tbody tr {
+  transition: background 0.18s ease;
+}
+
+.placement-policy-table tbody tr:hover {
+  background: #fafcff;
+}
+
+/* =========================================================
+   POLICY TITLE
+========================================================= */
+
+.placement-policy-title-cell {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 280px;
+}
+
+.placement-policy-pdf-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #fff1f1;
+  color: #d92d20;
+  font-size: 18px;
+}
+
+.placement-policy-title-cell strong {
+  display: block;
+  max-width: 320px;
+  overflow: hidden;
+  color: #172033;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.45;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.placement-policy-title-cell small {
+  display: block;
+  max-width: 320px;
+  margin-top: 3px;
+  overflow: hidden;
+  color: #98a2b3;
+  font-size: 10px;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   PDF LINK
+========================================================= */
+
+.placement-policy-pdf-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 260px;
+  overflow: hidden;
+  color: #1764aa;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.placement-policy-pdf-link > svg:first-child {
+  flex-shrink: 0;
+  color: #d92d20;
+}
+
+.placement-policy-pdf-link > svg:last-child {
+  flex-shrink: 0;
+  font-size: 9px;
+}
+
+.placement-policy-pdf-link:hover {
+  color: #0e4e8c;
+  text-decoration: underline;
+}
+
+.placement-policy-no-pdf {
+  color: #98a2b3;
+  font-size: 10px;
+  font-style: italic;
+}
+
+/* =========================================================
+   ORDER
+========================================================= */
+
+.placement-policy-order {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  background: #f2f4f7;
+  color: #475467;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.placement-policy-order svg {
+  color: #1764aa;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.placement-policy-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 9px;
+  border: none;
+  border-radius: 20px;
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.placement-policy-status > span {
+  width: 6px;
+  height: 6px;
+  display: block;
+  border-radius: 50%;
+}
+
+.placement-policy-status.published {
+  background: #ecfdf3;
+  color: #027a48;
+}
+
+.placement-policy-status.published > span {
+  background: #12b76a;
+}
+
+.placement-policy-status.draft {
+  background: #f2f4f7;
+  color: #667085;
+}
+
+.placement-policy-status.draft > span {
+  background: #98a2b3;
+}
+
+.placement-policy-status:hover {
+  opacity: 0.8;
+}
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.placement-policy-date {
+  color: #667085;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.placement-policy-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.placement-policy-actions .btn {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+}
+
+.policy-action-view {
+  background: #eef5fc !important;
+  color: #1764aa !important;
+}
+
+.policy-action-edit {
+  background: #fff7e8 !important;
+  color: #b54708 !important;
+}
+
+.policy-action-delete {
+  background: #fff1f1 !important;
+  color: #d92d20 !important;
+}
+
+.policy-action-view:hover {
+  background: #1764aa !important;
+  color: #fff !important;
+}
+
+.policy-action-edit:hover {
+  background: #b54708 !important;
+  color: #fff !important;
+}
+
+.policy-action-delete:hover {
+  background: #d92d20 !important;
+  color: #fff !important;
+}
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.placement-policy-empty {
+  padding: 75px 25px;
+  text-align: center;
+}
+
+.placement-policy-empty-icon {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: #fff1f1;
+  color: #d92d20;
+  font-size: 25px;
+}
+
+.placement-policy-empty h4 {
+  margin: 0;
+  color: #102d57;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.placement-policy-empty p {
+  max-width: 450px;
+  margin: 8px auto 20px;
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.placement-policy-loading {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.placement-policy-loading .spinner-border {
+  width: 35px;
+  height: 35px;
+  margin-bottom: 17px;
+  color: #1764aa !important;
+}
+
+.placement-policy-loading h5 {
+  margin: 0;
+  color: #102d57;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.placement-policy-loading p {
+  margin: 5px 0 0;
+  color: #98a2b3;
+  font-size: 12px;
+}
+
+/* =========================================================
+   FORM MODAL
+========================================================= */
+
+.placement-policy-modal .modal-dialog {
+  max-width: 900px;
+  margin: 1rem auto;
+}
+
+.placement-policy-modal .modal-content {
+  overflow: hidden;
+  border: none;
+  border-radius: 13px;
+  box-shadow: 0 20px 60px rgba(5, 20, 40, 0.2);
+}
+
+.placement-policy-modal .modal-header,
+.placement-policy-view-modal .modal-header {
+  padding: 18px 22px;
+  border-bottom: 1px solid #e8ecf1;
+  background: #fff;
+}
+
+.placement-policy-modal .modal-header small,
+.placement-policy-view-modal .modal-header small {
+  display: block;
+  margin-bottom: 3px;
+  color: #1764aa;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.placement-policy-modal .modal-title,
+.placement-policy-view-modal .modal-title {
+  color: #102d57;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.placement-policy-modal .modal-body,
+.placement-policy-view-modal .modal-body {
+  max-height: calc(100vh - 190px);
+  overflow-y: auto;
+  padding: 24px;
+}
+
+.placement-policy-modal .modal-body::-webkit-scrollbar,
+.placement-policy-view-modal .modal-body::-webkit-scrollbar {
+  width: 7px;
+}
+
+.placement-policy-modal .modal-body::-webkit-scrollbar-track,
+.placement-policy-view-modal .modal-body::-webkit-scrollbar-track {
+  background: #f5f7fa;
+}
+
+.placement-policy-modal .modal-body::-webkit-scrollbar-thumb,
+.placement-policy-view-modal .modal-body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #c8d0da;
+}
+
+.placement-policy-modal .modal-body::-webkit-scrollbar-thumb:hover,
+.placement-policy-view-modal .modal-body::-webkit-scrollbar-thumb:hover {
+  background: #aeb8c5;
+}
+
+.placement-policy-modal .modal-footer,
+.placement-policy-view-modal .modal-footer {
+  padding: 14px 22px;
+  border-top: 1px solid #e8ecf1;
+  background: #fff;
+}
+
+/* =========================================================
+   FORM SECTION
+========================================================= */
+
+.placement-policy-form-section {
+  margin-bottom: 24px;
+  padding: 19px;
+  border: 1px solid #e4e7ec;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.placement-policy-form-section:last-child {
+  margin-bottom: 0;
+}
+
+.placement-policy-form-section-title {
+  margin-bottom: 17px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #edf0f4;
+  color: #102d57;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.placement-policy-modal .form-label {
+  margin-bottom: 6px;
+  color: #344054;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.placement-policy-modal .form-label span {
+  margin-left: 3px;
+  color: #d92d20;
+}
+
+.placement-policy-modal .form-control {
+  min-height: 40px;
+  border: 1px solid #d0d5dd;
+  border-radius: 6px;
+  color: #172033;
+  font-size: 12px;
+  box-shadow: none;
+}
+
+.placement-policy-modal textarea.form-control {
+  resize: vertical;
+}
+
+.placement-policy-modal .form-control:focus {
+  border-color: #1764aa;
+  box-shadow: 0 0 0 3px rgba(23, 100, 170, 0.1);
+}
+
+.placement-policy-modal .form-text {
+  margin-top: 5px;
+  color: #98a2b3;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   PDF LINK PREVIEW
+========================================================= */
+
+.placement-policy-link-preview {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px;
+  border: 1px solid #d9e6f2;
+  border-radius: 7px;
+  background: #f7fbff;
+}
+
+.placement-policy-link-preview > svg {
+  flex-shrink: 0;
+  color: #d92d20;
+  font-size: 22px;
+}
+
+.placement-policy-link-preview > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.placement-policy-link-preview strong {
+  display: block;
+  color: #344054;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.placement-policy-link-preview small {
+  display: block;
+  max-width: 100%;
+  margin-top: 3px;
+  overflow: hidden;
+  color: #667085;
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.placement-policy-link-preview > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  padding: 7px 10px;
+  border-radius: 5px;
+  background: #eef5fc;
+  color: #1764aa;
+  font-size: 10px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.placement-policy-link-preview > a:hover {
+  background: #1764aa;
+  color: #fff;
+}
+
+/* =========================================================
+   PUBLISH BOX
+========================================================= */
+
+.placement-policy-publish-box {
+  padding: 12px 15px;
+  border: 1px solid #e4e7ec;
+  border-radius: 7px;
+  background: #f8fafc;
+}
+
+.placement-policy-publish-box .form-check {
+  margin: 0;
+}
+
+.placement-policy-publish-box .form-check-label {
+  color: #344054;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.placement-policy-publish-box .form-check-input {
+  cursor: pointer;
+}
+
+.placement-policy-publish-box .form-check-input:checked {
+  border-color: #1764aa;
+  background-color: #1764aa;
+}
+
+/* =========================================================
+   VIEW MODAL
+========================================================= */
+
+.placement-policy-view-modal .modal-dialog {
+  max-width: 800px;
+}
+
+.placement-policy-view-content {
+  padding: 3px;
+}
+
+.placement-policy-view-status-row {
+  margin-bottom: 18px;
+}
+
+.placement-policy-view-description,
+.placement-policy-view-content-text {
+  margin-bottom: 22px;
+}
+
+.placement-policy-view-description h5,
+.placement-policy-view-content-text h5 {
+  margin: 0 0 8px;
+  color: #102d57;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.placement-policy-view-description p,
+.placement-policy-view-content-text p {
+  margin: 0;
+  color: #667085;
+  font-size: 12px;
+  line-height: 1.8;
+  white-space: pre-line;
+}
+
+/* =========================================================
+   VIEW PDF
+========================================================= */
+
+.placement-policy-view-pdf {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 22px;
+  padding: 15px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.placement-policy-view-pdf-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 7px;
+  background: #fff1f1;
+  color: #d92d20;
+  font-size: 19px;
+}
+
+.placement-policy-view-pdf > div:nth-child(2) {
+  min-width: 0;
+  flex: 1;
+}
+
+.placement-policy-view-pdf strong {
+  display: block;
+  color: #344054;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.placement-policy-view-pdf small {
+  display: block;
+  margin-top: 4px;
+  color: #98a2b3;
+  font-size: 10px;
+}
+
+.placement-policy-view-pdf > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+  padding: 9px 13px;
+  border-radius: 6px;
+  background: #1764aa;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.placement-policy-view-pdf > a:hover {
+  background: #0e4e8c;
+}
+
+/* =========================================================
+   VIEW META
+========================================================= */
+
+.placement-policy-view-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid #edf0f4;
+}
+
+.placement-policy-view-meta > div {
+  padding: 11px;
+  border-radius: 6px;
+  background: #f8fafc;
+}
+
+.placement-policy-view-meta strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #98a2b3;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.placement-policy-view-meta span {
+  display: block;
+  color: #344054;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   DELETE MODAL
+========================================================= */
+
+.placement-policy-delete-content {
+  padding: 12px 5px;
+  text-align: center;
+}
+
+.placement-policy-delete-icon {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: #fff1f1;
+  color: #d92d20;
+  font-size: 20px;
+}
+
+.placement-policy-delete-content h5 {
+  margin: 0;
+  color: #102d57;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.placement-policy-delete-content p {
+  margin: 8px 0 3px;
+  color: #667085;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.placement-policy-delete-content p strong {
+  color: #344054;
+}
+
+.placement-policy-delete-content small {
+  color: #98a2b3;
+  font-size: 10px;
+}
+
+/* =========================================================
+   ALERT
+========================================================= */
+
+.placement-policy-admin .alert {
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+  .placement-policy-admin {
+    padding: 22px;
+  }
+
+  .placement-policy-page-header {
+    align-items: flex-start;
+  }
+
+  .placement-policy-view-meta {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .placement-policy-admin {
+    padding: 18px 14px;
+  }
+
+  .placement-policy-page-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .placement-policy-page-header h1 {
+    font-size: 25px;
+  }
+
+  .placement-policy-add-button {
+    width: 100%;
+  }
+
+  .placement-policy-card > .card-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .placement-policy-refresh-button {
+    width: 100%;
+  }
+
+  .placement-policy-modal .modal-dialog,
+  .placement-policy-view-modal .modal-dialog {
+    margin: 0.5rem;
+  }
+
+  .placement-policy-modal .modal-body,
+  .placement-policy-view-modal .modal-body {
+    max-height: calc(100vh - 180px);
+    padding: 17px;
+  }
+
+  .placement-policy-form-section {
+    padding: 15px;
+  }
+
+  .placement-policy-link-preview {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .placement-policy-link-preview > a {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .placement-policy-admin {
+    padding: 14px 9px;
+  }
+
+  .placement-policy-page-header h1 {
+    font-size: 22px;
+  }
+
+  .placement-policy-card > .card-header {
+    padding: 15px;
+  }
+
+  .placement-policy-table tbody td {
+    padding: 11px;
+  }
+
+  .placement-policy-title-cell {
+    min-width: 240px;
+  }
+
+  .placement-policy-pdf-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .placement-policy-view-pdf {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .placement-policy-view-pdf > a {
+    width: 100%;
+    justify-content: center;
+  }
+}

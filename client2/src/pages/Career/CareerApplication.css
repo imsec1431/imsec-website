@@ -1,0 +1,500 @@
+/* ======================================================
+   CAREER APPLICATION PAGE
+====================================================== */
+
+.careerApplicationPage {
+  width: 100%;
+  min-height: 100vh;
+  padding: 48px 20px 80px;
+  box-sizing: border-box;
+  background: #f6f7fb;
+}
+
+.careerApplicationContainer {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* ======================================================
+   HEADER
+====================================================== */
+
+.careerApplicationHeader {
+  padding: 34px 38px;
+  margin-bottom: 24px;
+  background: #ffffff;
+  border: 1px solid #e7e9f0;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(20, 30, 60, 0.06);
+}
+
+.careerBackButton {
+  border: 0;
+  padding: 0;
+  margin-bottom: 22px;
+  background: transparent;
+  color: #4f46e5;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.careerBackButton:hover {
+  text-decoration: underline;
+}
+
+.careerApplicationEyebrow {
+  display: inline-block;
+  margin-bottom: 9px;
+  color: #6366f1;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.careerApplicationHeader h1 {
+  margin: 0;
+  color: #151827;
+  font-size: 34px;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.careerApplicationHeader p {
+  margin: 10px 0 0;
+  color: #687084;
+  font-size: 15px;
+}
+
+/* ======================================================
+   FORM SECTION
+====================================================== */
+
+.careerFormSection {
+  padding: 30px 34px;
+  margin-bottom: 22px;
+  background: #ffffff;
+  border: 1px solid #e7e9f0;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(20, 30, 60, 0.045);
+}
+
+.careerFormSectionTitle {
+  margin-bottom: 24px;
+}
+
+.careerFormSectionTitle span {
+  display: block;
+  margin-bottom: 7px;
+  color: #6366f1;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.careerFormSectionTitle h2 {
+  margin: 0;
+  color: #171923;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.careerFormGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.careerFormField {
+  min-width: 0;
+}
+
+.careerFormFieldFull {
+  grid-column: 1 / -1;
+}
+
+.careerFormField label {
+  display: block;
+  margin-bottom: 8px;
+  color: #252938;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.careerFormField input,
+.careerFormField select,
+.careerFormField textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d9dce5;
+  border-radius: 10px;
+  outline: none;
+  background: #ffffff;
+  color: #1b1e29;
+  font-family: inherit;
+  font-size: 14px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.careerFormField input,
+.careerFormField select {
+  min-height: 48px;
+  padding: 0 14px;
+}
+
+.careerFormField textarea {
+  min-height: 120px;
+  padding: 13px 14px;
+  resize: vertical;
+}
+
+.careerFormField input:focus,
+.careerFormField select:focus,
+.careerFormField textarea:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+/* ======================================================
+   CV UPLOAD
+====================================================== */
+
+.careerResumeUploadBox {
+  min-height: 170px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 25px;
+  border: 2px dashed #c9cdd8;
+  border-radius: 16px;
+  background: #fafbff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.careerResumeUploadBox:hover {
+  border-color: #6366f1;
+  background: #f7f7ff;
+  transform: translateY(-1px);
+}
+
+.careerResumeIcon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 13px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef2ff;
+  color: #4f46e5;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.careerResumeUploadBox strong {
+  max-width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #252938;
+  font-size: 15px;
+}
+
+.careerResumeUploadBox small {
+  margin-top: 7px;
+  color: #7b8190;
+  font-size: 12px;
+}
+
+/* ======================================================
+   SUBMIT
+====================================================== */
+
+.careerApplicationSubmit {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.careerSubmitButton {
+  min-width: 220px;
+  min-height: 52px;
+  padding: 0 28px;
+  border: 0;
+  border-radius: 12px;
+  background: #4f46e5;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.22);
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.careerSubmitButton:hover:not(:disabled) {
+  background: #4338ca;
+  transform: translateY(-1px);
+}
+
+.careerSubmitButton:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* ======================================================
+   BOOTSTRAP MESSAGE MODAL
+====================================================== */
+
+.careerMessageModal {
+  z-index: 1060;
+}
+
+.careerMessageBackdrop {
+  z-index: 1055;
+}
+
+.careerMessageModal .modal-dialog {
+  max-width: 480px;
+  margin: 1.75rem auto;
+}
+
+.careerMessageModalContent {
+  border: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.careerMessageModal .modal-header {
+  padding: 20px 22px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.careerMessageHeader {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.careerMessageHeader .modal-title {
+  margin: 0;
+  color: #202330;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.careerMessageIcon {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+  font-weight: 900;
+}
+
+.careerMessageIconSuccess {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.careerMessageIconError {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.careerMessageModal .modal-body {
+  padding: 24px 22px;
+}
+
+.careerMessageText {
+  margin: 0;
+  color: #5f6675;
+  font-size: 14px;
+  line-height: 1.7;
+  word-break: break-word;
+}
+
+.careerMessageModal .modal-footer {
+  padding: 14px 22px 20px;
+  border-top: 0;
+}
+
+.careerMessageButton {
+  min-width: 90px;
+  border-radius: 9px !important;
+  font-weight: 700 !important;
+}
+
+/* ======================================================
+   LOADING
+====================================================== */
+
+.careerApplicationLoading {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #5f6675;
+}
+
+.careerApplicationSpinner {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 15px;
+  border: 4px solid #e5e7eb;
+  border-top-color: #6366f1;
+  border-radius: 50%;
+  animation: careerApplicationSpin 0.8s linear infinite;
+}
+
+@keyframes careerApplicationSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ======================================================
+   ERROR PAGE
+====================================================== */
+
+.careerApplicationError {
+  max-width: 650px;
+  margin: 80px auto;
+  padding: 35px;
+  background: #ffffff;
+  border: 1px solid #e7e9f0;
+  border-radius: 18px;
+  text-align: center;
+}
+
+.careerApplicationError h2 {
+  margin: 0 0 10px;
+  color: #202330;
+}
+
+.careerApplicationError p {
+  margin-bottom: 22px;
+  color: #707686;
+  line-height: 1.6;
+}
+
+.careerApplicationError button {
+  min-height: 46px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 10px;
+  background: #4f46e5;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ======================================================
+   MOBILE
+====================================================== */
+
+@media (max-width: 800px) {
+  .careerApplicationPage {
+    padding: 30px 16px 60px;
+  }
+
+  .careerApplicationHeader {
+    padding: 28px 24px;
+  }
+
+  .careerApplicationHeader h1 {
+    font-size: 29px;
+  }
+
+  .careerFormSection {
+    padding: 26px 24px;
+  }
+
+  .careerFormGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .careerFormFieldFull {
+    grid-column: auto;
+  }
+
+  .careerApplicationSubmit {
+    justify-content: stretch;
+  }
+
+  .careerSubmitButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .careerApplicationPage {
+    padding: 18px 10px 45px;
+  }
+
+  .careerApplicationHeader {
+    padding: 23px 18px;
+    border-radius: 15px;
+  }
+
+  .careerApplicationHeader h1 {
+    font-size: 25px;
+  }
+
+  .careerFormSection {
+    padding: 22px 17px;
+    border-radius: 15px;
+  }
+
+  .careerFormSectionTitle h2 {
+    font-size: 20px;
+  }
+
+  .careerResumeUploadBox {
+    min-height: 150px;
+    padding: 20px 15px;
+  }
+
+  .careerResumeUploadBox strong {
+    max-width: 100%;
+    font-size: 13px;
+  }
+
+  .careerSubmitButton {
+    min-height: 50px;
+  }
+
+  .careerMessageModal .modal-dialog {
+    margin: 12px;
+  }
+
+  .careerMessageModal .modal-header {
+    padding: 17px;
+  }
+
+  .careerMessageModal .modal-body {
+    padding: 20px 17px;
+  }
+
+  .careerMessageModal .modal-footer {
+    padding: 10px 17px 17px;
+  }
+}

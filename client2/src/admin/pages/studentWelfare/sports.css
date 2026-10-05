@@ -1,0 +1,1301 @@
+/* =========================================================
+   SPORTS ADMIN - PREMIUM TAB DESIGN
+   IMSEC CONTROL CENTER
+========================================================= */
+
+.sports-admin-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 28px;
+  background: #f5f7fa;
+  color: #1d2939;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.sports-admin-loading {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: #0b2347;
+  font-size: 15px;
+}
+
+.sports-admin-spin {
+  font-size: 32px;
+  animation: sportsAdminSpin 1s linear infinite;
+}
+
+@keyframes sportsAdminSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.sports-admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 22px;
+}
+
+.sports-admin-title-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sports-admin-title-icon {
+  width: 58px;
+  height: 58px;
+  min-width: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+  background: #0b2347;
+  color: #d8bd68;
+
+  font-size: 25px;
+  box-shadow: 0 8px 20px rgba(11, 35, 71, 0.15);
+}
+
+.sports-admin-header h1 {
+  margin: 0 0 5px;
+  color: #0b2347;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.sports-admin-header p {
+  margin: 0;
+  color: #667085;
+  font-size: 14px;
+}
+
+/* =========================================================
+   HEADER BUTTONS
+========================================================= */
+
+.sports-admin-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sports-admin-save-btn,
+.sports-admin-reset-btn {
+  min-height: 44px;
+  padding: 0 18px;
+
+  border: none;
+  border-radius: 8px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.sports-admin-save-btn {
+  background: #0b2347;
+  color: #ffffff;
+  box-shadow: 0 7px 18px rgba(11, 35, 71, 0.16);
+}
+
+.sports-admin-save-btn:hover {
+  background: #12345f;
+  transform: translateY(-1px);
+}
+
+.sports-admin-reset-btn {
+  background: #ffffff;
+  color: #0b2347;
+  border: 1px solid #d9dee7;
+}
+
+.sports-admin-reset-btn:hover {
+  border-color: #c8a951;
+  color: #9a7825;
+}
+
+.sports-admin-save-btn:disabled,
+.sports-admin-reset-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.sports-admin-message {
+  margin-bottom: 20px;
+  padding: 13px 17px;
+
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sports-admin-message.success {
+  background: #ecfdf3;
+  color: #067647;
+  border: 1px solid #abefc6;
+}
+
+.sports-admin-message.error {
+  background: #fef3f2;
+  color: #b42318;
+  border: 1px solid #fecdca;
+}
+
+/* =========================================================
+   PUBLISH BAR
+========================================================= */
+
+.sports-admin-publish-bar {
+  padding: 18px 22px;
+  margin-bottom: 18px;
+
+  background: #ffffff;
+  border: 1px solid #e4e8ee;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  box-shadow: 0 3px 12px rgba(11, 35, 71, 0.04);
+}
+
+.sports-admin-publish-bar > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sports-admin-publish-bar strong {
+  color: #0b2347;
+  font-size: 15px;
+}
+
+.sports-admin-publish-bar span {
+  color: #667085;
+  font-size: 13px;
+}
+
+/* =========================================================
+   SWITCH
+========================================================= */
+
+.sports-admin-switch {
+  position: relative;
+  width: 48px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.sports-admin-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.sports-admin-slider {
+  position: absolute;
+  inset: 0;
+
+  cursor: pointer;
+
+  background: #d0d5dd;
+  border-radius: 30px;
+
+  transition: 0.25s;
+}
+
+.sports-admin-slider::before {
+  content: "";
+
+  position: absolute;
+  width: 20px;
+  height: 20px;
+
+  left: 3px;
+  top: 3px;
+
+  background: #ffffff;
+  border-radius: 50%;
+
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+
+  transition: 0.25s;
+}
+
+.sports-admin-switch input:checked + .sports-admin-slider {
+  background: #0b2347;
+}
+
+.sports-admin-switch input:checked + .sports-admin-slider::before {
+  transform: translateX(22px);
+}
+
+/* =========================================================
+   TABS
+========================================================= */
+
+.sports-admin-tabs {
+  display: flex;
+  align-items: stretch;
+
+  overflow-x: auto;
+
+  background: #ffffff;
+  border: 1px solid #e1e6ed;
+  border-radius: 10px;
+
+  margin-bottom: 18px;
+
+  box-shadow: 0 3px 12px rgba(11, 35, 71, 0.04);
+
+  scrollbar-width: thin;
+}
+
+.sports-admin-tabs button {
+  position: relative;
+
+  min-width: 160px;
+  padding: 17px 20px;
+
+  border: none;
+  border-right: 1px solid #edf0f4;
+
+  background: transparent;
+
+  color: #667085;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease;
+}
+
+.sports-admin-tabs button:last-child {
+  border-right: none;
+}
+
+.sports-admin-tabs button:hover {
+  color: #0b2347;
+  background: #f8fafc;
+}
+
+.sports-admin-tabs button.active {
+  color: #0b2347;
+  background: #f7f9fc;
+}
+
+.sports-admin-tabs button.active::after {
+  content: "";
+
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 0;
+
+  height: 3px;
+
+  background: #c8a951;
+  border-radius: 3px 3px 0 0;
+}
+
+.sports-admin-tabs svg {
+  font-size: 15px;
+  color: #b08c2d;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.sports-admin-content {
+  width: 100%;
+}
+
+.sports-admin-tab-panel {
+  padding: 28px;
+
+  background: #ffffff;
+  border: 1px solid #e1e6ed;
+  border-radius: 10px;
+
+  box-shadow: 0 5px 18px rgba(11, 35, 71, 0.045);
+}
+
+/* =========================================================
+   PANEL HEADING
+========================================================= */
+
+.sports-admin-panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 22px;
+  margin-bottom: 25px;
+
+  border-bottom: 1px solid #edf0f4;
+}
+
+.sports-admin-panel-heading h2 {
+  margin: 0 0 5px;
+  color: #0b2347;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.sports-admin-panel-heading p {
+  margin: 0;
+  color: #667085;
+  font-size: 13px;
+}
+
+.sports-admin-panel-heading > svg {
+  color: #c8a951;
+  font-size: 28px;
+}
+
+/* =========================================================
+   FORM GRID
+========================================================= */
+
+.sports-admin-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.sports-admin-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.sports-admin-field.full {
+  grid-column: 1 / -1;
+}
+
+.sports-admin-field label {
+  color: #344054;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.sports-admin-field input,
+.sports-admin-field select,
+.sports-admin-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 11px 13px;
+
+  border: 1px solid #d0d5dd;
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #1d2939;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.sports-admin-field input,
+.sports-admin-field select {
+  height: 44px;
+}
+
+.sports-admin-field textarea {
+  min-height: 100px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.sports-admin-field input:focus,
+.sports-admin-field select:focus,
+.sports-admin-field textarea:focus {
+  border-color: #b89a42;
+  box-shadow: 0 0 0 3px rgba(200, 169, 81, 0.12);
+}
+
+.sports-admin-field input::placeholder,
+.sports-admin-field textarea::placeholder {
+  color: #98a2b3;
+}
+
+/* =========================================================
+   SUB PANEL
+========================================================= */
+
+.sports-admin-sub-panel {
+  padding: 23px;
+  margin-bottom: 25px;
+
+  background: #f9fafb;
+
+  border: 1px solid #e5e9ef;
+  border-radius: 9px;
+}
+
+.sports-admin-sub-panel h3 {
+  margin: 0 0 20px;
+
+  color: #0b2347;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   CHECKBOX
+========================================================= */
+
+.sports-admin-checkbox-field {
+  display: flex;
+  align-items: center;
+  padding-top: 25px;
+}
+
+.sports-admin-checkbox-field label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #344054;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.sports-admin-checkbox-field input {
+  width: 17px;
+  height: 17px;
+
+  accent-color: #0b2347;
+}
+
+/* =========================================================
+   FORM ACTIONS
+========================================================= */
+
+.sports-admin-form-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.sports-admin-primary-small,
+.sports-admin-secondary-small {
+  min-height: 40px;
+
+  padding: 0 15px;
+
+  border-radius: 7px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.sports-admin-primary-small {
+  background: #0b2347;
+  color: #ffffff;
+  border: 1px solid #0b2347;
+}
+
+.sports-admin-primary-small:hover {
+  background: #12345f;
+}
+
+.sports-admin-secondary-small {
+  background: #ffffff;
+  color: #475467;
+  border: 1px solid #d0d5dd;
+}
+
+.sports-admin-secondary-small:hover {
+  border-color: #b08c2d;
+  color: #9a7825;
+}
+
+/* =========================================================
+   LIST
+========================================================= */
+
+.sports-admin-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  margin-bottom: 28px;
+}
+
+.sports-admin-list-card {
+  padding: 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 17px;
+
+  border: 1px solid #e4e8ee;
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.sports-admin-list-card:hover {
+  border-color: #d6bd72;
+  box-shadow: 0 7px 20px rgba(11, 35, 71, 0.06);
+}
+
+.sports-admin-list-card.inactive {
+  opacity: 0.55;
+}
+
+.sports-admin-list-icon {
+  width: 47px;
+  height: 47px;
+  min-width: 47px;
+
+  border-radius: 9px;
+
+  background: #f7f1df;
+  color: #b08c2d;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 19px;
+}
+
+.sports-admin-list-icon.trophy {
+  background: #0b2347;
+  color: #d8bd68;
+}
+
+.sports-admin-list-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.sports-admin-list-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+
+.sports-admin-list-content h3 {
+  margin: 0;
+  color: #0b2347;
+  font-size: 16px;
+}
+
+.sports-admin-list-content p {
+  margin: 0 0 5px;
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.sports-admin-list-content small {
+  color: #98a2b3;
+  font-size: 11px;
+}
+
+.sports-admin-category {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 4px 9px;
+
+  border-radius: 20px;
+
+  background: #f7f1df;
+  color: #947323;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.sports-admin-list-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.sports-admin-list-actions button {
+  width: 36px;
+  height: 36px;
+
+  border: 1px solid #dfe3e8;
+  border-radius: 7px;
+
+  background: #ffffff;
+  color: #0b2347;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.sports-admin-list-actions button:hover {
+  background: #f5f7fa;
+  border-color: #b9c2cf;
+}
+
+.sports-admin-list-actions button.danger {
+  color: #b42318;
+}
+
+.sports-admin-list-actions button.danger:hover {
+  background: #fef3f2;
+  border-color: #fecdca;
+}
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.sports-admin-empty {
+  padding: 35px 20px;
+
+  border: 1px dashed #d0d5dd;
+  border-radius: 8px;
+
+  text-align: center;
+
+  color: #98a2b3;
+  font-size: 14px;
+
+  background: #fafbfc;
+}
+
+/* =========================================================
+   GALLERY UPLOAD BOX
+========================================================= */
+
+.sports-upload-box {
+  padding: 25px;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  margin-bottom: 25px;
+
+  border: 1px dashed #c8a951;
+  border-radius: 10px;
+
+  background: #fffdf7;
+}
+
+.sports-upload-icon {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #f7f1df;
+  color: #b08c2d;
+
+  font-size: 20px;
+}
+
+.sports-upload-box h3 {
+  margin: 0 0 5px;
+  color: #0b2347;
+  font-size: 16px;
+}
+
+.sports-upload-box p {
+  margin: 0;
+  color: #667085;
+  font-size: 13px;
+}
+
+.sports-upload-button {
+  margin-left: auto;
+
+  min-height: 42px;
+  padding: 0 16px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border-radius: 7px;
+
+  background: #0b2347;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+}
+
+.sports-upload-button:hover {
+  background: #12345f;
+}
+
+.sports-upload-button input {
+  display: none;
+}
+
+/* =========================================================
+   SELECTED IMAGES
+========================================================= */
+
+.sports-selected-images {
+  margin-bottom: 30px;
+  padding: 22px;
+
+  border-radius: 9px;
+  background: #f8fafc;
+  border: 1px solid #e5e9ef;
+}
+
+.sports-selected-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+}
+
+.sports-selected-heading h3 {
+  margin: 0;
+  color: #0b2347;
+  font-size: 17px;
+}
+
+.sports-selected-heading span {
+  padding: 5px 10px;
+
+  border-radius: 20px;
+
+  background: #f7f1df;
+  color: #947323;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.sports-selected-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.sports-selected-card {
+  overflow: hidden;
+
+  background: #ffffff;
+  border: 1px solid #e1e6ed;
+  border-radius: 8px;
+}
+
+.sports-selected-card > img {
+  display: block;
+
+  width: 100%;
+  height: 150px;
+
+  object-fit: cover;
+}
+
+.sports-selected-card > div {
+  min-height: 45px;
+  padding: 8px 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.sports-selected-card > div span {
+  overflow: hidden;
+
+  color: #475467;
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sports-selected-card button {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+
+  border: 1px solid #fecdca;
+  border-radius: 6px;
+
+  background: #fef3f2;
+  color: #b42318;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.sports-upload-note {
+  margin-top: 15px;
+
+  color: #667085;
+  font-size: 12px;
+}
+
+/* =========================================================
+   EXISTING GALLERY
+========================================================= */
+
+.sports-existing-gallery {
+  margin-top: 10px;
+}
+
+.sports-existing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.sports-existing-card {
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e6ed;
+  border-radius: 10px;
+
+  box-shadow: 0 4px 15px rgba(11, 35, 71, 0.04);
+}
+
+.sports-existing-preview {
+  height: 245px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: #eef1f5;
+}
+
+.sports-existing-preview img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.35s ease;
+}
+
+.sports-existing-card:hover .sports-existing-preview img {
+  transform: scale(1.03);
+}
+
+.sports-existing-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(5, 24, 48, 0.38);
+
+  opacity: 0;
+
+  transition: opacity 0.25s ease;
+}
+
+.sports-existing-card:hover .sports-existing-overlay {
+  opacity: 1;
+}
+
+.sports-existing-overlay a {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+  color: #0b2347;
+
+  text-decoration: none;
+
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.sports-existing-body {
+  padding: 20px;
+}
+
+.sports-existing-small-grid {
+  display: grid;
+  grid-template-columns: 0.65fr 1.35fr;
+  gap: 12px;
+  align-items: end;
+}
+
+.sports-replace-button {
+  width: 100%;
+  height: 44px;
+  box-sizing: border-box;
+
+  padding: 0 11px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  border: 1px solid #d0d5dd;
+  border-radius: 7px;
+
+  background: #ffffff;
+  color: #344054;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  overflow: hidden;
+}
+
+.sports-replace-button:hover {
+  border-color: #b08c2d;
+  color: #947323;
+  background: #fffdf7;
+}
+
+.sports-replace-button input {
+  display: none;
+}
+
+.sports-existing-actions {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-top: 17px;
+  padding-top: 15px;
+
+  border-top: 1px solid #edf0f4;
+}
+
+.sports-save-image-btn,
+.sports-delete-image-btn {
+  min-height: 38px;
+
+  padding: 0 13px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  border-radius: 7px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.sports-save-image-btn {
+  background: #0b2347;
+  color: #ffffff;
+  border: 1px solid #0b2347;
+}
+
+.sports-save-image-btn:hover {
+  background: #12345f;
+}
+
+.sports-delete-image-btn {
+  background: #ffffff;
+  color: #b42318;
+  border: 1px solid #fecdca;
+}
+
+.sports-delete-image-btn:hover {
+  background: #fef3f2;
+}
+
+/* =========================================================
+   INPUT WITH ICON
+========================================================= */
+
+.sports-admin-input-icon {
+  position: relative;
+}
+
+.sports-admin-input-icon > svg {
+  position: absolute;
+  left: 13px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #b08c2d;
+
+  pointer-events: none;
+}
+
+.sports-admin-input-icon input {
+  padding-left: 38px;
+}
+
+/* =========================================================
+   BOTTOM ACTIONS
+========================================================= */
+
+.sports-admin-bottom-actions {
+  margin-top: 20px;
+  padding: 20px 0;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+/* =========================================================
+   RESPONSIVE - 1100
+========================================================= */
+
+@media (max-width: 1100px) {
+  .sports-selected-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .sports-existing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - 850
+========================================================= */
+
+@media (max-width: 850px) {
+  .sports-admin-page {
+    padding: 20px;
+  }
+
+  .sports-admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sports-admin-header-actions {
+    width: 100%;
+  }
+
+  .sports-admin-header-actions button {
+    flex: 1;
+  }
+
+  .sports-admin-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sports-admin-field.full {
+    grid-column: auto;
+  }
+
+  .sports-upload-box {
+    flex-wrap: wrap;
+  }
+
+  .sports-upload-button {
+    margin-left: 0;
+  }
+
+  .sports-selected-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - 600
+========================================================= */
+
+@media (max-width: 600px) {
+  .sports-admin-page {
+    padding: 14px;
+  }
+
+  .sports-admin-header h1 {
+    font-size: 22px;
+  }
+
+  .sports-admin-title-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+  }
+
+  .sports-admin-header-actions {
+    flex-direction: column;
+  }
+
+  .sports-admin-header-actions button {
+    width: 100%;
+  }
+
+  .sports-admin-publish-bar {
+    align-items: flex-start;
+  }
+
+  .sports-admin-tabs button {
+    min-width: 135px;
+    padding: 14px 13px;
+  }
+
+  .sports-admin-tab-panel {
+    padding: 18px;
+  }
+
+  .sports-admin-panel-heading {
+    align-items: flex-start;
+  }
+
+  .sports-admin-panel-heading h2 {
+    font-size: 19px;
+  }
+
+  .sports-admin-sub-panel {
+    padding: 17px;
+  }
+
+  .sports-admin-list-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .sports-admin-list-content {
+    width: calc(100% - 65px);
+  }
+
+  .sports-admin-list-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .sports-upload-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sports-upload-button {
+    width: 100%;
+  }
+
+  .sports-selected-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sports-existing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sports-existing-preview {
+    height: 220px;
+  }
+
+  .sports-existing-small-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sports-admin-bottom-actions {
+    flex-direction: column;
+  }
+
+  .sports-admin-bottom-actions button {
+    width: 100%;
+  }
+}

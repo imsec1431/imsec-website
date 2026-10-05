@@ -1,0 +1,564 @@
+/* =========================================================
+   DEPARTMENT RESEARCH JOURNALS
+   ========================================================= */
+
+.department-research-journals-page {
+  min-height: 100vh;
+  padding: 28px;
+  background: #f6f8fc;
+  color: #1f2937;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.drj-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.drj-header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.drj-back-icon-btn {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #e1e6ef;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.drj-back-icon-btn:hover {
+  background: #f1f5f9;
+  color: #111827;
+  transform: translateX(-2px);
+}
+
+.drj-title-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.18);
+}
+
+.drj-header h1 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.drj-header p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.drj-add-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 11px 18px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 7px 18px rgba(79, 70, 229, 0.2);
+  transition: all 0.2s ease;
+}
+
+.drj-add-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(79, 70, 229, 0.25);
+}
+
+/* =========================================================
+   DEPARTMENT CARD
+   ========================================================= */
+
+.drj-department-card {
+  background: #ffffff;
+  border: 1px solid #e7ebf2;
+  border-radius: 16px;
+  padding: 20px 22px;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+.drj-label {
+  display: block;
+  margin-bottom: 5px;
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.drj-department-card h2 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.drj-count-box {
+  min-width: 100px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: #f5f3ff;
+  text-align: center;
+}
+
+.drj-count-box strong {
+  display: block;
+  color: #4f46e5;
+  font-size: 22px;
+  line-height: 1.1;
+}
+
+.drj-count-box span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+/* =========================================================
+   TABLE CARD
+   ========================================================= */
+
+.drj-table-card {
+  background: #ffffff;
+  border: 1px solid #e7ebf2;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+}
+
+.drj-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.drj-table {
+  width: 100%;
+  min-width: 1050px;
+  border-collapse: collapse;
+}
+
+.drj-table thead {
+  background: #f8fafc;
+}
+
+.drj-table th {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.35px;
+}
+
+.drj-table td {
+  padding: 15px 16px;
+  border-bottom: 1px solid #eef2f7;
+  color: #475569;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.drj-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.drj-table tbody tr:hover {
+  background: #fafbff;
+}
+
+.drj-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================================================
+   SERIAL NUMBER
+   ========================================================= */
+
+.drj-number {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: #f1f5f9;
+  color: #475569;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   JOURNAL INFO
+   ========================================================= */
+
+.drj-journal-info {
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.drj-journal-image,
+.drj-journal-placeholder {
+  width: 52px;
+  height: 52px;
+  flex: 0 0 52px;
+  border-radius: 10px;
+}
+
+.drj-journal-image {
+  object-fit: cover;
+  border: 1px solid #e5e7eb;
+}
+
+.drj-journal-placeholder {
+  background: #eef2ff;
+  color: #4f46e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.drj-journal-info strong {
+  display: block;
+  margin-bottom: 3px;
+  color: #1e293b;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.drj-journal-info small {
+  display: block;
+  margin-bottom: 3px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.drj-journal-info p {
+  max-width: 360px;
+  margin: 0;
+  color: #94a3b8;
+  font-size: 12px;
+  line-height: 1.4;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.drj-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 9px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.drj-status.active {
+  background: #ecfdf3;
+  color: #15803d;
+}
+
+.drj-status.inactive {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.drj-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.drj-edit-btn,
+.drj-delete-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.drj-edit-btn {
+  background: #eff6ff;
+  color: #2563eb;
+  border-color: #dbeafe;
+}
+
+.drj-edit-btn:hover {
+  background: #dbeafe;
+  transform: translateY(-1px);
+}
+
+.drj-delete-btn {
+  background: #fff1f2;
+  color: #e11d48;
+  border-color: #ffe4e6;
+}
+
+.drj-delete-btn:hover:not(:disabled) {
+  background: #ffe4e6;
+  transform: translateY(-1px);
+}
+
+.drj-delete-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.drj-empty {
+  min-height: 360px;
+  background: #ffffff;
+  border: 1px solid #e7ebf2;
+  border-radius: 16px;
+  padding: 45px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+}
+
+.drj-empty-icon {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 18px;
+  border-radius: 18px;
+  background: #eef2ff;
+  color: #4f46e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.drj-empty h2 {
+  margin: 0 0 8px;
+  color: #1e293b;
+  font-size: 20px;
+}
+
+.drj-empty p {
+  max-width: 500px;
+  margin: 0 0 22px;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.drj-loading {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.drj-loading h3 {
+  margin: 16px 0 5px;
+  color: #1e293b;
+  font-size: 18px;
+}
+
+.drj-loading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.drj-spinner {
+  width: 42px;
+  height: 42px;
+  border: 4px solid #e5e7eb;
+  border-top-color: #4f46e5;
+  border-radius: 50%;
+  animation: drjSpin 0.8s linear infinite;
+}
+
+.drj-mini-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #fecdd3;
+  border-top-color: #e11d48;
+  border-radius: 50%;
+  animation: drjSpin 0.7s linear infinite;
+}
+
+@keyframes drjSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.drj-error {
+  min-height: 420px;
+  background: #ffffff;
+  border: 1px solid #fee2e2;
+  border-radius: 16px;
+  padding: 45px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.drj-error h3 {
+  margin: 0 0 8px;
+  color: #991b1b;
+  font-size: 20px;
+}
+
+.drj-error p {
+  max-width: 600px;
+  margin: 0 0 22px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.drj-back-btn {
+  border: none;
+  border-radius: 9px;
+  padding: 10px 16px;
+  background: #1e293b;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.drj-back-btn:hover {
+  background: #0f172a;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .department-research-journals-page {
+    padding: 20px;
+  }
+
+  .drj-header {
+    align-items: flex-start;
+  }
+
+  .drj-header h1 {
+    font-size: 22px;
+  }
+
+  .drj-department-card {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 650px) {
+  .department-research-journals-page {
+    padding: 15px;
+  }
+
+  .drj-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .drj-header-left {
+    align-items: flex-start;
+  }
+
+  .drj-add-btn {
+    width: 100%;
+  }
+
+  .drj-department-card {
+    align-items: flex-start;
+  }
+
+  .drj-count-box {
+    min-width: 80px;
+  }
+
+  .drj-title-icon {
+    width: 45px;
+    height: 45px;
+    flex: 0 0 45px;
+  }
+}

@@ -1,0 +1,682 @@
+/*=========================================================
+                    Google Font
+=========================================================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+
+  background: #fff;
+}
+
+/*=========================================================
+                    Common
+=========================================================*/
+
+.section-tag {
+  color: #fdb913;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+
+  font-weight: 800;
+
+  color: #0a2e5c;
+
+  margin-bottom: 20px;
+}
+
+.section-title span {
+  color: #fdb913;
+}
+
+.section-title::after {
+  content: "";
+
+  display: block;
+
+  width: 90px;
+
+  height: 4px;
+
+  background: #fdb913;
+
+  border-radius: 50px;
+
+  margin-top: 15px;
+}
+
+.text-center .section-title::after {
+  margin: 15px auto 0;
+}
+
+/*=========================================================
+                    Hero
+=========================================================*/
+
+.books-hero {
+  height: 430px;
+
+  background:
+    linear-gradient(rgba(10, 46, 92, 0.9), rgba(10, 46, 92, 0.9)),
+    url("https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1600&q=80");
+
+  background-size: cover;
+
+  background-position: center;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: clamp(3rem, 6vw, 4.8rem);
+
+  font-weight: 800;
+
+  margin-bottom: 12px;
+}
+
+.hero-content p {
+  font-size: 18px;
+}
+
+.hero-content span {
+  margin: 0 8px;
+
+  color: #fdb913;
+}
+
+/*=========================================================
+                    About
+=========================================================*/
+
+.books-about {
+  background: #fff;
+}
+
+.about-image {
+  width: 100%;
+
+  border-radius: 20px;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+
+  transition: 0.4s;
+}
+
+.about-image:hover {
+  transform: scale(1.03);
+}
+
+.books-about p {
+  font-size: 16px;
+
+  line-height: 1.9;
+
+  color: #666;
+
+  text-align: justify;
+}
+
+/*=========================================================
+                    Statistics
+=========================================================*/
+
+.books-stats {
+  background: #f7f9fc;
+}
+
+.stat-card {
+  background: #fff;
+
+  padding: 40px 20px;
+
+  text-align: center;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  height: 100%;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card h2 {
+  font-size: 42px;
+
+  font-weight: 800;
+
+  color: #0a2e5c;
+
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 17px;
+
+  font-weight: 600;
+
+  color: #666;
+
+  margin: 0;
+}
+
+/*=========================================================
+                    Search
+=========================================================*/
+
+.search-section {
+  background: #fff;
+}
+
+.search-box {
+  display: flex;
+
+  align-items: center;
+
+  padding: 16px 20px;
+
+  background: #fff;
+
+  border-radius: 50px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.search-box svg {
+  font-size: 22px;
+
+  color: #fdb913;
+
+  margin-right: 15px;
+}
+
+.search-box input {
+  border: none;
+
+  box-shadow: none !important;
+
+  font-size: 16px;
+}
+
+.search-box input:focus {
+  border: none;
+}
+
+/*=========================================================
+                    Books Table
+=========================================================*/
+
+.books-table-section {
+  background: #fff;
+}
+
+.books-table {
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  margin-bottom: 0;
+}
+
+.books-table thead {
+  background: #0a2e5c;
+
+  color: #fff;
+}
+
+.books-table th {
+  padding: 18px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  text-align: center;
+
+  vertical-align: middle;
+
+  white-space: nowrap;
+}
+
+.books-table td {
+  padding: 16px;
+
+  font-size: 14px;
+
+  text-align: center;
+
+  vertical-align: middle;
+}
+
+.books-table tbody tr {
+  transition: 0.3s;
+}
+
+.books-table tbody tr:hover {
+  background: #fff8ea;
+}
+
+/*=========================================================
+                Publication Type Badge
+=========================================================*/
+
+.publication-type {
+  display: inline-block;
+
+  padding: 8px 16px;
+
+  border-radius: 30px;
+
+  background: #eaf4ff;
+
+  color: #0a2e5c;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+/*=========================================================
+                    View Book
+=========================================================*/
+
+.view-book {
+  text-decoration: none;
+
+  font-weight: 600;
+
+  color: #0a2e5c;
+
+  transition: 0.3s;
+}
+
+.view-book:hover {
+  color: #fdb913;
+}
+
+.view-book svg {
+  margin-left: 6px;
+
+  font-size: 13px;
+}
+/*=========================================================
+                    Google Font
+=========================================================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+
+  background: #fff;
+}
+
+/*=========================================================
+                    Common
+=========================================================*/
+
+.section-tag {
+  color: #fdb913;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+
+  font-weight: 800;
+
+  color: #0a2e5c;
+
+  margin-bottom: 20px;
+}
+
+.section-title span {
+  color: #fdb913;
+}
+
+.section-title::after {
+  content: "";
+
+  display: block;
+
+  width: 90px;
+
+  height: 4px;
+
+  background: #fdb913;
+
+  border-radius: 50px;
+
+  margin-top: 15px;
+}
+
+.text-center .section-title::after {
+  margin: 15px auto 0;
+}
+
+/*=========================================================
+                    Hero
+=========================================================*/
+
+.books-hero {
+  height: 430px;
+
+  background:
+    linear-gradient(rgba(10, 46, 92, 0.9), rgba(10, 46, 92, 0.9)),
+    url("https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1600&q=80");
+
+  background-size: cover;
+
+  background-position: center;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: clamp(3rem, 6vw, 4.8rem);
+
+  font-weight: 800;
+
+  margin-bottom: 12px;
+}
+
+.hero-content p {
+  font-size: 18px;
+}
+
+.hero-content span {
+  margin: 0 8px;
+
+  color: #fdb913;
+}
+
+/*=========================================================
+                    About
+=========================================================*/
+
+.books-about {
+  background: #fff;
+}
+
+.about-image {
+  width: 100%;
+
+  border-radius: 20px;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+
+  transition: 0.4s;
+}
+
+.about-image:hover {
+  transform: scale(1.03);
+}
+
+.books-about p {
+  font-size: 16px;
+
+  line-height: 1.9;
+
+  color: #666;
+
+  text-align: justify;
+}
+
+/*=========================================================
+                    Statistics
+=========================================================*/
+
+.books-stats {
+  background: #f7f9fc;
+}
+
+.stat-card {
+  background: #fff;
+
+  padding: 40px 20px;
+
+  text-align: center;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  height: 100%;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card h2 {
+  font-size: 42px;
+
+  font-weight: 800;
+
+  color: #0a2e5c;
+
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 17px;
+
+  font-weight: 600;
+
+  color: #666;
+
+  margin: 0;
+}
+
+/*=========================================================
+                    Search
+=========================================================*/
+
+.search-section {
+  background: #fff;
+}
+
+.search-box {
+  display: flex;
+
+  align-items: center;
+
+  padding: 16px 20px;
+
+  background: #fff;
+
+  border-radius: 50px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.search-box svg {
+  font-size: 22px;
+
+  color: #fdb913;
+
+  margin-right: 15px;
+}
+
+.search-box input {
+  border: none;
+
+  box-shadow: none !important;
+
+  font-size: 16px;
+}
+
+.search-box input:focus {
+  border: none;
+}
+
+/*=========================================================
+                    Books Table
+=========================================================*/
+
+.books-table-section {
+  background: #fff;
+}
+
+.books-table {
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  margin-bottom: 0;
+}
+
+.books-table thead {
+  background: #0a2e5c;
+
+  color: #fff;
+}
+
+.books-table th {
+  padding: 18px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  text-align: center;
+
+  vertical-align: middle;
+
+  white-space: nowrap;
+}
+
+.books-table td {
+  padding: 16px;
+
+  font-size: 14px;
+
+  text-align: center;
+
+  vertical-align: middle;
+}
+
+.books-table tbody tr {
+  transition: 0.3s;
+}
+
+.books-table tbody tr:hover {
+  background: #fff8ea;
+}
+
+/*=========================================================
+                Publication Type Badge
+=========================================================*/
+
+.publication-type {
+  display: inline-block;
+
+  padding: 8px 16px;
+
+  border-radius: 30px;
+
+  background: #eaf4ff;
+
+  color: #0a2e5c;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+/*=========================================================
+                    View Book
+=========================================================*/
+
+.view-book {
+  text-decoration: none;
+
+  font-weight: 600;
+
+  color: #0a2e5c;
+
+  transition: 0.3s;
+}
+
+.view-book:hover {
+  color: #fdb913;
+}
+
+.view-book svg {
+  margin-left: 6px;
+
+  font-size: 13px;
+}

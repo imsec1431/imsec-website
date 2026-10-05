@@ -1,0 +1,799 @@
+/* =========================================================
+   RESEARCH ABOUT PAGE
+========================================================= */
+
+.research-about-page {
+  padding-bottom: 50px;
+}
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.research-about-page .page-header {
+  margin-bottom: 25px;
+}
+
+.research-about-page .page-header h2 {
+  color: #0a2e5c;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.research-about-page .page-header p {
+  color: #64748b;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* =========================================================
+   TABS WRAPPER
+========================================================= */
+
+.research-about-tabs {
+  display: flex;
+  gap: 10px;
+
+  padding: 7px;
+
+  background: #eef2f7;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 14px;
+
+  margin-bottom: 24px;
+}
+
+/* =========================================================
+   TAB
+========================================================= */
+
+.research-about-tab {
+  position: relative;
+
+  flex: 1;
+
+  min-height: 78px;
+
+  border: 1px solid transparent;
+
+  background: transparent;
+
+  padding: 15px 18px;
+
+  border-radius: 10px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  color: #475569;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.research-about-tab:hover {
+  background: #ffffff;
+
+  color: #0a2e5c;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   TAB TITLE
+========================================================= */
+
+.research-about-tab strong {
+  display: block;
+
+  color: inherit;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  margin-bottom: 6px;
+}
+
+/* =========================================================
+   TAB SUBTITLE
+========================================================= */
+
+.research-about-tab span {
+  display: block;
+
+  color: #64748b;
+
+  font-size: 12px;
+
+  line-height: 1.4;
+}
+
+/* =========================================================
+   ACTIVE TAB
+========================================================= */
+
+.research-about-tab.active {
+  background: #ffffff;
+
+  color: #0a2e5c;
+
+  border-color: #e2e8f0;
+
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+}
+
+.research-about-tab.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 18px;
+
+  right: 18px;
+
+  bottom: 0;
+
+  height: 3px;
+
+  background: #fdb913;
+
+  border-radius: 5px 5px 0 0;
+}
+
+.research-about-tab.active span {
+  color: #64748b;
+}
+
+/* =========================================================
+   TAB CONTENT
+========================================================= */
+
+.research-about-content {
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 15px;
+
+  padding: 28px;
+
+  min-height: 380px;
+
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.05);
+}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.research-section-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-bottom: 20px;
+
+  margin-bottom: 22px;
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.research-section-header h4 {
+  color: #0a2e5c;
+
+  font-size: 21px;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  margin: 0 0 5px;
+}
+
+.research-section-header p {
+  color: #64748b;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  margin: 0;
+}
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.research-primary-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  border: none;
+
+  background: #0a2e5c;
+
+  color: #ffffff;
+
+  padding: 11px 20px;
+
+  min-height: 42px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.research-primary-btn:hover {
+  background: #fdb913;
+
+  color: #0a2e5c;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 5px 12px rgba(10, 46, 92, 0.15);
+}
+
+.research-primary-btn:active {
+  transform: translateY(0);
+}
+
+/* =========================================================
+   ABOUT CONTENT BOX
+========================================================= */
+
+.research-about-box {
+  position: relative;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 12px;
+
+  padding: 26px;
+
+  transition:
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.research-about-box:hover {
+  border-color: #cbd5e1;
+
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+/* =========================================================
+   CONTENT BLOCK
+========================================================= */
+
+.research-content-block {
+  margin-bottom: 24px;
+}
+
+.research-content-block:last-of-type {
+  margin-bottom: 16px;
+}
+
+.research-content-block h5 {
+  display: flex;
+
+  align-items: center;
+
+  color: #0a2e5c;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  margin-bottom: 9px;
+}
+
+.research-content-block h5::before {
+  content: "";
+
+  width: 4px;
+
+  height: 18px;
+
+  background: #fdb913;
+
+  border-radius: 4px;
+
+  margin-right: 9px;
+}
+
+.research-content-block p {
+  color: #475569;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  margin: 0;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.research-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding-top: 17px;
+
+  margin-top: 5px;
+
+  border-top: 1px solid #e2e8f0;
+}
+
+.research-edit-btn,
+.research-delete-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 80px;
+
+  border: none;
+
+  padding: 8px 17px;
+
+  border-radius: 7px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.research-edit-btn {
+  background: #fff3cd;
+
+  color: #856404;
+}
+
+.research-edit-btn:hover {
+  transform: translateY(-1px);
+
+  box-shadow: 0 4px 10px rgba(133, 100, 4, 0.12);
+}
+
+.research-delete-btn {
+  background: #fee2e2;
+
+  color: #b91c1c;
+}
+
+.research-delete-btn:hover {
+  transform: translateY(-1px);
+
+  box-shadow: 0 4px 10px rgba(185, 28, 28, 0.12);
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.research-empty-state {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  min-height: 270px;
+
+  padding: 45px 25px;
+
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+
+  border: 1px dashed #cbd5e1;
+
+  border-radius: 13px;
+}
+
+.research-empty-icon {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 64px;
+
+  height: 64px;
+
+  background: #fff8df;
+
+  border-radius: 50%;
+
+  font-size: 30px;
+
+  margin-bottom: 16px;
+
+  box-shadow: 0 5px 15px rgba(253, 185, 19, 0.15);
+}
+
+.research-empty-state h5 {
+  color: #0a2e5c;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  margin-bottom: 8px;
+}
+
+.research-empty-state p {
+  max-width: 500px;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  margin: 0;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.research-about-content .table-responsive {
+  border: 1px solid #e2e8f0;
+
+  border-radius: 10px;
+
+  overflow-x: auto;
+}
+
+.research-about-content table {
+  margin-bottom: 0;
+
+  vertical-align: middle;
+}
+
+.research-about-content table thead th {
+  background: #f1f5f9;
+
+  color: #0a2e5c;
+
+  border-bottom: 1px solid #dbe3ec;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  padding: 13px 12px;
+
+  white-space: nowrap;
+}
+
+.research-about-content table tbody td {
+  color: #475569;
+
+  font-size: 13px;
+
+  padding: 13px 12px;
+
+  border-color: #e5e7eb;
+}
+
+.research-about-content table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.research-about-content table tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* =========================================================
+   STATUS BADGES
+========================================================= */
+
+.research-about-content .badge {
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
+
+.research-placeholder {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  min-height: 280px;
+
+  padding: 25px;
+}
+
+.research-placeholder h4 {
+  color: #0a2e5c;
+
+  font-size: 21px;
+
+  font-weight: 700;
+
+  margin-bottom: 8px;
+}
+
+.research-placeholder p {
+  color: #64748b;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  margin: 0;
+}
+
+/* =========================================================
+   ALERT
+========================================================= */
+
+.research-about-content .alert {
+  border: none;
+
+  border-radius: 9px;
+
+  font-size: 13px;
+
+  margin-bottom: 20px;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.research-about-content .form-label {
+  color: #334155;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  margin-bottom: 7px;
+}
+
+.research-about-content .form-control,
+.research-about-content .form-select {
+  min-height: 44px;
+
+  border: 1px solid #dbe3ec;
+
+  border-radius: 8px;
+
+  color: #334155;
+
+  font-size: 13px;
+
+  box-shadow: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.research-about-content textarea.form-control {
+  min-height: 110px;
+
+  resize: vertical;
+}
+
+.research-about-content .form-control:focus,
+.research-about-content .form-select:focus {
+  border-color: #0a2e5c;
+
+  box-shadow: 0 0 0 3px rgba(10, 46, 92, 0.08);
+}
+
+.research-about-content .form-text {
+  color: #94a3b8;
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.research-about-page .modal-content {
+  border: none;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.2);
+}
+
+.research-about-page .modal-header {
+  background: #0a2e5c;
+
+  color: #ffffff;
+
+  border-bottom: none;
+
+  padding: 17px 20px;
+}
+
+.research-about-page .modal-title {
+  font-size: 18px;
+
+  font-weight: 700;
+}
+
+.research-about-page .modal-header .btn-close {
+  filter: brightness(0) invert(1);
+}
+
+.research-about-page .modal-body {
+  padding: 24px;
+}
+
+.research-about-page .modal-footer {
+  background: #f8fafc;
+
+  border-top: 1px solid #e2e8f0;
+
+  padding: 14px 20px;
+}
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .research-about-tabs {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .research-about-tab {
+    width: 100%;
+  }
+
+  .research-about-tab:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+  .research-about-page {
+    padding-bottom: 30px;
+  }
+
+  .research-about-page .page-header h2 {
+    font-size: 23px;
+  }
+
+  .research-about-tabs {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    padding: 5px;
+  }
+
+  .research-about-tab {
+    min-height: auto;
+
+    padding: 14px 15px;
+  }
+
+  .research-about-tab.active::after {
+    left: 15px;
+
+    right: 15px;
+  }
+
+  .research-about-content {
+    padding: 18px;
+
+    border-radius: 12px;
+  }
+
+  .research-section-header {
+    align-items: stretch;
+
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .research-section-header h4 {
+    font-size: 19px;
+  }
+
+  .research-primary-btn {
+    width: 100%;
+  }
+
+  .research-about-box {
+    padding: 19px;
+  }
+
+  .research-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .research-edit-btn,
+  .research-delete-btn {
+    width: 100%;
+  }
+
+  .research-empty-state {
+    padding: 35px 18px;
+  }
+
+  .research-about-content .table-responsive {
+    border-radius: 8px;
+  }
+}

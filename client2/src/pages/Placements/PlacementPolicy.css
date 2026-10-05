@@ -1,0 +1,379 @@
+/* =========================================================
+   PAGE
+========================================================= */
+
+.placement-policy-page {
+  min-height: 100vh;
+  background: #f7f9fc;
+  color: #172033;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.placement-policy-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 90px 0 85px;
+  background: linear-gradient(135deg, #062d5c 0%, #0b4b88 55%, #1764aa 100%);
+}
+
+.placement-policy-hero::after {
+  content: "";
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  right: -140px;
+  top: -170px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.placement-policy-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 750px;
+}
+
+.placement-policy-hero span {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #fdb913;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.placement-policy-hero h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(36px, 5vw, 58px);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.placement-policy-hero p {
+  max-width: 650px;
+  margin: 18px 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.placement-policy-section {
+  padding: 75px 0 90px;
+}
+
+.placement-policy-heading {
+  max-width: 720px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.placement-policy-heading span {
+  display: block;
+  margin-bottom: 7px;
+  color: #1764aa;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.placement-policy-heading h2 {
+  margin: 0;
+  color: #102d57;
+  font-size: 35px;
+  font-weight: 800;
+}
+
+.placement-policy-heading p {
+  margin: 12px 0 0;
+  color: #667085;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   LIST
+========================================================= */
+
+.placement-policy-list {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.placement-policy-card {
+  margin-bottom: 25px;
+  overflow: hidden;
+  border: 1px solid #e3e8ef;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 10px 35px rgba(16, 45, 87, 0.06);
+}
+
+.placement-policy-card-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 25px 28px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.placement-policy-icon {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #fff1f1;
+  color: #d92d20;
+  font-size: 25px;
+}
+
+.placement-policy-card-header h3 {
+  margin: 0;
+  color: #102d57;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.placement-policy-card-header p {
+  margin: 6px 0 0;
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.placement-policy-content {
+  padding: 25px 28px;
+}
+
+.placement-policy-content-text {
+  color: #475467;
+  font-size: 14px;
+  line-height: 1.9;
+  white-space: pre-line;
+}
+
+/* =========================================================
+   DOCUMENT
+========================================================= */
+
+.placement-policy-document {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 0 28px 28px;
+  padding: 17px;
+  border: 1px solid #dce8f4;
+  border-radius: 10px;
+  background: #f7fbff;
+}
+
+.placement-policy-document-info {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+}
+
+.placement-policy-document-info > svg {
+  flex-shrink: 0;
+  color: #d92d20;
+  font-size: 24px;
+}
+
+.placement-policy-document-info strong {
+  display: block;
+  color: #344054;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.placement-policy-document-info span {
+  display: block;
+  margin-top: 3px;
+  color: #98a2b3;
+  font-size: 11px;
+}
+
+.placement-policy-document-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.placement-policy-view-btn,
+.placement-policy-download-btn {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 14px !important;
+  border-radius: 6px !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+}
+
+.placement-policy-view-btn {
+  border: 1px solid #1764aa !important;
+  background: #1764aa !important;
+  color: #fff !important;
+}
+
+.placement-policy-download-btn {
+  border: 1px solid #d0d5dd !important;
+  background: #fff !important;
+  color: #344054 !important;
+}
+
+.placement-policy-view-btn:hover {
+  background: #0e4e8c !important;
+}
+
+.placement-policy-download-btn:hover {
+  border-color: #1764aa !important;
+  color: #1764aa !important;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.placement-policy-status {
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.placement-policy-status > svg {
+  margin-bottom: 18px;
+  color: #1764aa;
+  font-size: 34px;
+}
+
+.placement-policy-status .spinner-border {
+  margin-bottom: 20px;
+  color: #1764aa !important;
+}
+
+.placement-policy-status h3 {
+  margin: 0;
+  color: #102d57;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.placement-policy-status p {
+  max-width: 500px;
+  margin: 9px 0 0;
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+  .placement-policy-hero {
+    padding: 65px 0;
+  }
+
+  .placement-policy-hero h1 {
+    font-size: 38px;
+  }
+
+  .placement-policy-section {
+    padding: 55px 0 65px;
+  }
+
+  .placement-policy-heading h2 {
+    font-size: 29px;
+  }
+
+  .placement-policy-card-header {
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .placement-policy-content {
+    padding: 20px;
+  }
+
+  .placement-policy-document {
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 0 20px 20px;
+  }
+
+  .placement-policy-document-actions {
+    width: 100%;
+  }
+
+  .placement-policy-view-btn,
+  .placement-policy-download-btn {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .placement-policy-hero {
+    padding: 50px 0;
+  }
+
+  .placement-policy-hero h1 {
+    font-size: 32px;
+  }
+
+  .placement-policy-hero p {
+    font-size: 14px;
+  }
+
+  .placement-policy-card-header {
+    gap: 12px;
+  }
+
+  .placement-policy-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+
+  .placement-policy-card-header h3 {
+    font-size: 17px;
+  }
+
+  .placement-policy-document-actions {
+    flex-direction: column;
+  }
+
+  .placement-policy-view-btn,
+  .placement-policy-download-btn {
+    width: 100%;
+  }
+}

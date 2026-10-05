@@ -1,0 +1,512 @@
+/* =========================================================
+   NIRF ADMIN
+========================================================= */
+
+.nirf-admin {
+  padding: 24px;
+  background: #f5f7fb;
+  min-height: 100%;
+}
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.nirf-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.nirf-page-header h2 {
+  margin: 0;
+  color: #102a43;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.nirf-page-header p {
+  margin: 6px 0 0;
+  color: #6b7c93;
+  font-size: 14px;
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.nirf-reset-btn {
+  border: 1px solid #d9b44a;
+  background: #fff;
+  color: #9a7615;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.nirf-reset-btn:hover {
+  background: #fff8df;
+}
+
+.nirf-reset-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   PANEL
+========================================================= */
+
+.nirf-panel {
+  background: #fff;
+  border: 1px solid #e4e9f0;
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 18px rgba(16, 42, 67, 0.05);
+}
+
+.nirf-panel-title {
+  margin-bottom: 20px;
+}
+
+.nirf-panel-title h4,
+.nirf-panel-header h4 {
+  margin: 0;
+  color: #102a43;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.nirf-panel-header p {
+  margin: 5px 0 0;
+  color: #718096;
+  font-size: 13px;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.nirf-admin label,
+.nirf-modal label {
+  display: block;
+  margin-bottom: 7px;
+  color: #243b53;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.nirf-admin .form-control,
+.nirf-modal .form-control {
+  min-height: 42px;
+  border: 1px solid #d9e2ec;
+  border-radius: 7px;
+  font-size: 14px;
+  color: #243b53;
+  box-shadow: none;
+}
+
+.nirf-admin .form-control:focus,
+.nirf-modal .form-control:focus {
+  border-color: #1f5f9d;
+  box-shadow: 0 0 0 3px rgba(31, 95, 157, 0.1);
+}
+
+.nirf-modal small {
+  display: block;
+  margin-top: 6px;
+  color: #829ab1;
+  font-size: 12px;
+}
+
+/* =========================================================
+   SAVE
+========================================================= */
+
+.nirf-save-btn {
+  border: none;
+  background: #123c63;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.nirf-save-btn:hover {
+  background: #0d2f4d;
+}
+
+.nirf-save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   PANEL HEADER
+========================================================= */
+
+.nirf-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.nirf-add-btn {
+  border: none;
+  background: #c9a227;
+  color: #fff;
+  padding: 10px 17px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.nirf-add-btn:hover {
+  background: #ae891c;
+}
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.nirf-empty {
+  text-align: center;
+  padding: 55px 20px;
+  border: 1px dashed #d9e2ec;
+  border-radius: 10px;
+  background: #fbfcfe;
+}
+
+.nirf-empty svg {
+  color: #c9a227;
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.nirf-empty h5 {
+  color: #243b53;
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+.nirf-empty p {
+  color: #829ab1;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.nirf-table {
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.nirf-table thead th {
+  background: #102a43;
+  color: #fff;
+  border: none;
+  padding: 13px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.nirf-table thead th:first-child {
+  border-radius: 7px 0 0 0;
+}
+
+.nirf-table thead th:last-child {
+  border-radius: 0 7px 0 0;
+}
+
+.nirf-table tbody td {
+  padding: 14px 12px;
+  border-color: #edf1f5;
+  color: #486581;
+  font-size: 13px;
+}
+
+.nirf-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.nirf-table tbody strong {
+  color: #243b53;
+  font-weight: 600;
+}
+
+/* =========================================================
+   PDF
+========================================================= */
+
+.nirf-pdf-link {
+  color: #c0392b;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.nirf-pdf-link:hover {
+  color: #922b21;
+  text-decoration: underline;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.nirf-status {
+  border: none;
+  padding: 6px 11px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nirf-status.published {
+  background: #e8f7ef;
+  color: #18794e;
+}
+
+.nirf-status.unpublished {
+  background: #fcebea;
+  color: #b42318;
+}
+
+.nirf-status:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.nirf-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.nirf-actions button {
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.nirf-actions .view {
+  background: #edf5ff;
+  color: #1769aa;
+}
+
+.nirf-actions .view:hover {
+  background: #dcecff;
+}
+
+.nirf-actions .edit {
+  background: #fff7df;
+  color: #a67c00;
+}
+
+.nirf-actions .edit:hover {
+  background: #ffefb8;
+}
+
+.nirf-actions .delete {
+  background: #fff0ef;
+  color: #c0392b;
+}
+
+.nirf-actions .delete:hover {
+  background: #ffe0dd;
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.nirf-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+  background: rgba(15, 32, 48, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.nirf-modal {
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.nirf-modal-header {
+  padding: 18px 22px;
+  border-bottom: 1px solid #e8edf2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nirf-modal-header h4 {
+  margin: 0;
+  color: #102a43;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.nirf-modal-header button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: #f1f5f8;
+  color: #52606d;
+  border-radius: 50%;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.nirf-modal-header button:hover {
+  background: #e4e9ee;
+}
+
+.nirf-modal-body {
+  padding: 22px;
+}
+
+.nirf-modal-footer {
+  padding: 16px 22px;
+  border-top: 1px solid #e8edf2;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.nirf-cancel-btn {
+  border: 1px solid #d9e2ec;
+  background: #fff;
+  color: #486581;
+  padding: 10px 17px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nirf-cancel-btn:hover {
+  background: #f5f7fa;
+}
+
+/* =========================================================
+   VIEW
+========================================================= */
+
+.nirf-view-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 13px 0;
+  border-bottom: 1px solid #edf1f5;
+}
+
+.nirf-view-row:last-child {
+  border-bottom: none;
+}
+
+.nirf-view-row strong {
+  color: #829ab1;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.nirf-view-row span {
+  color: #243b53;
+  font-size: 15px;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.nirf-loading {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #486581;
+  font-size: 16px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+  .nirf-admin {
+    padding: 15px;
+  }
+
+  .nirf-page-header,
+  .nirf-panel-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nirf-reset-btn,
+  .nirf-add-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nirf-panel {
+    padding: 16px;
+  }
+
+  .nirf-modal-overlay {
+    padding: 10px;
+  }
+
+  .nirf-modal {
+    max-height: 95vh;
+  }
+}

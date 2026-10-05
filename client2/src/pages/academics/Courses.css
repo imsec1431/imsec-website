@@ -1,0 +1,1013 @@
+/* =========================================================
+   GOOGLE FONT
+========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.coursesPage {
+  width: 100%;
+
+  min-height: 100vh;
+
+  background: #f5f7fb;
+
+  font-family: "Poppins", sans-serif;
+
+  color: #263238;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.coursesHero {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 330px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 60px 25px;
+
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+
+  color: #ffffff;
+}
+
+.coursesHero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 360px;
+
+  height: 360px;
+
+  right: -100px;
+
+  top: -150px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.coursesHero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 280px;
+
+  height: 280px;
+
+  left: -100px;
+
+  bottom: -150px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.coursesHeroContent {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 900px;
+
+  text-align: center;
+}
+
+.coursesHeroIcon {
+  width: 65px;
+
+  height: 65px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin: 0 auto 18px;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.14);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  font-size: 29px;
+}
+
+.coursesHeroContent > span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #bfdbfe;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.coursesHeroContent h1 {
+  margin: 0 0 13px;
+
+  font-size: 48px;
+
+  font-weight: 800;
+
+  line-height: 1.15;
+}
+
+.coursesHeroContent p {
+  max-width: 700px;
+
+  margin: auto;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.coursesContainer {
+  width: 100%;
+
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 45px 25px 70px;
+}
+
+/* =========================================================
+   TABS
+========================================================= */
+
+.coursesTabs {
+  width: 100%;
+
+  max-width: 760px;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 15px;
+
+  margin: 0 auto 45px;
+
+  padding: 8px;
+
+  background: #ffffff;
+
+  border-radius: 17px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.coursesTabs button {
+  min-height: 65px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 11px;
+
+  padding: 12px 20px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: transparent;
+
+  color: #64748b;
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.coursesTabs button svg {
+  font-size: 20px;
+}
+
+.coursesTabs button small {
+  padding: 4px 8px;
+
+  border-radius: 20px;
+
+  background: #edf2f7;
+
+  color: #64748b;
+
+  font-size: 9px;
+
+  font-weight: 800;
+}
+
+.coursesTabs button:hover {
+  background: #f1f5f9;
+
+  color: #1565c0;
+}
+
+.coursesTabs button.active {
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+
+  color: #ffffff;
+
+  box-shadow: 0 8px 20px rgba(25, 118, 210, 0.22);
+}
+
+.coursesTabs button.active small {
+  background: rgba(255, 255, 255, 0.18);
+
+  color: #ffffff;
+}
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.coursesError {
+  max-width: 900px;
+
+  margin: 0 auto 25px;
+
+  padding: 14px 18px;
+
+  border: 1px solid #fecdd3;
+
+  border-radius: 12px;
+
+  background: #fff1f2;
+
+  color: #be123c;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  text-align: center;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.coursesLoading {
+  min-height: 300px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #64748b;
+}
+
+.coursesSpinner {
+  width: 42px;
+
+  height: 42px;
+
+  margin-bottom: 15px;
+
+  border: 4px solid #e2e8f0;
+
+  border-top-color: #1565c0;
+
+  border-radius: 50%;
+
+  animation: coursesSpin 0.8s linear infinite;
+}
+
+@keyframes coursesSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.coursesEmpty {
+  max-width: 700px;
+
+  min-height: 300px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin: 0 auto;
+
+  padding: 35px;
+
+  background: #ffffff;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.coursesEmptyIcon {
+  width: 70px;
+
+  height: 70px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 15px;
+
+  border-radius: 18px;
+
+  background: #eef4fb;
+
+  color: #1565c0;
+
+  font-size: 28px;
+}
+
+.coursesEmpty h2 {
+  margin: 0 0 8px;
+
+  color: #0d47a1;
+
+  font-size: 22px;
+}
+
+.coursesEmpty p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   GROUPS
+========================================================= */
+
+.coursesGroups {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 30px;
+}
+
+.publicCourseGroup {
+  width: 100%;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e5eaf0;
+
+  border-radius: 20px;
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+}
+
+/* =========================================================
+   COURSE HEADER
+========================================================= */
+
+.publicCourseHeader {
+  min-height: 105px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 22px 28px;
+
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+
+  color: #ffffff;
+}
+
+.publicCourseTitle {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  min-width: 0;
+}
+
+.publicCourseIcon {
+  width: 52px;
+
+  height: 52px;
+
+  min-width: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  font-size: 21px;
+}
+
+.publicCourseTitle span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #bfdbfe;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.publicCourseTitle h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 23px;
+
+  font-weight: 750;
+
+  line-height: 1.35;
+
+  word-break: break-word;
+}
+
+.publicCourseCount {
+  flex-shrink: 0;
+
+  min-width: 90px;
+
+  min-height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 7px 13px;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.14);
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+/* =========================================================
+   YEAR LIST
+========================================================= */
+
+.publicCourseYears {
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 20px 24px;
+}
+
+/* =========================================================
+   YEAR CARD
+========================================================= */
+
+.publicCourseCard {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 20px 5px;
+
+  border-bottom: 1px solid #edf0f4;
+}
+
+.publicCourseCard:last-child {
+  border-bottom: none;
+}
+
+.publicCourseCard::before {
+  content: "";
+
+  position: absolute;
+
+  left: -24px;
+
+  top: 17px;
+
+  bottom: 17px;
+
+  width: 4px;
+
+  border-radius: 0 5px 5px 0;
+
+  background: linear-gradient(180deg, #0d47a1, #42a5f5);
+
+  opacity: 0;
+
+  transition: opacity 0.25s ease;
+}
+
+.publicCourseCard:hover::before {
+  opacity: 1;
+}
+
+/* =========================================================
+   YEAR
+========================================================= */
+
+.publicCourseYear {
+  width: 105px;
+
+  min-width: 105px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 11px 10px;
+
+  border-radius: 11px;
+
+  background: #eef4fb;
+
+  color: #1565c0;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  text-align: center;
+}
+
+/* =========================================================
+   INFO
+========================================================= */
+
+.publicCourseInfo {
+  min-width: 0;
+
+  flex: 1;
+}
+
+.publicCourseInfo h3 {
+  margin: 0 0 5px;
+
+  color: #0d47a1;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  word-break: break-word;
+}
+
+.publicCourseInfo p {
+  margin: 0;
+
+  max-width: 650px;
+
+  color: #64748b;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+
+  word-break: break-word;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.publicCourseActions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  flex-shrink: 0;
+}
+
+.publicCourseActions a {
+  min-height: 38px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 8px 13px;
+
+  border-radius: 9px;
+
+  font-family: inherit;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: 0.25s ease;
+}
+
+.publicViewPdf {
+  border: 1px solid #bfdbfe;
+
+  background: #eff6ff;
+
+  color: #1565c0;
+}
+
+.publicViewPdf:hover {
+  background: #dbeafe;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 7px 15px rgba(37, 99, 235, 0.13);
+}
+
+.publicDownloadPdf {
+  border: 1px solid #bbf7d0;
+
+  background: #f0fdf4;
+
+  color: #15803d;
+}
+
+.publicDownloadPdf:hover {
+  background: #dcfce7;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 7px 15px rgba(22, 163, 74, 0.12);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+  .coursesHero {
+    min-height: 300px;
+  }
+
+  .coursesHeroContent h1 {
+    font-size: 42px;
+  }
+
+  .publicCourseCard {
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+  }
+
+  .publicCourseInfo {
+    flex: 1 1 calc(100% - 145px);
+  }
+
+  .publicCourseActions {
+    width: 100%;
+
+    padding-left: 125px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .coursesHero {
+    min-height: 270px;
+
+    padding: 50px 20px;
+  }
+
+  .coursesHeroContent h1 {
+    font-size: 34px;
+  }
+
+  .coursesHeroContent p {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+  .coursesHeroContent > span {
+    font-size: 10px;
+  }
+
+  .coursesContainer {
+    padding: 30px 15px 50px;
+  }
+
+  .coursesTabs {
+    margin-bottom: 30px;
+  }
+
+  .coursesTabs button {
+    min-height: 58px;
+
+    padding: 9px 10px;
+
+    gap: 6px;
+
+    font-size: 11px;
+  }
+
+  .coursesTabs button svg {
+    font-size: 17px;
+  }
+
+  .coursesTabs button small {
+    display: none;
+  }
+
+  .publicCourseHeader {
+    min-height: auto;
+
+    align-items: flex-start;
+
+    padding: 19px;
+
+    flex-direction: column;
+
+    gap: 13px;
+  }
+
+  .publicCourseTitle {
+    width: 100%;
+  }
+
+  .publicCourseIcon {
+    width: 44px;
+
+    height: 44px;
+
+    min-width: 44px;
+
+    font-size: 18px;
+  }
+
+  .publicCourseTitle h2 {
+    font-size: 18px;
+  }
+
+  .publicCourseCount {
+    min-height: 32px;
+
+    font-size: 10px;
+  }
+
+  .publicCourseYears {
+    padding: 10px 17px;
+  }
+
+  .publicCourseCard {
+    display: grid;
+
+    grid-template-columns: 85px 1fr;
+
+    gap: 13px;
+
+    padding: 18px 0;
+  }
+
+  .publicCourseCard::before {
+    left: -17px;
+  }
+
+  .publicCourseYear {
+    width: 85px;
+
+    min-width: 85px;
+
+    padding: 9px 5px;
+
+    font-size: 10px;
+  }
+
+  .publicCourseInfo {
+    width: auto;
+  }
+
+  .publicCourseInfo h3 {
+    font-size: 14px;
+  }
+
+  .publicCourseInfo p {
+    font-size: 11px;
+  }
+
+  .publicCourseActions {
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    padding: 0;
+
+    gap: 8px;
+  }
+
+  .publicCourseActions a {
+    width: 100%;
+
+    min-height: 39px;
+
+    font-size: 10px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .coursesHero {
+    min-height: 245px;
+
+    padding: 40px 15px;
+  }
+
+  .coursesHeroIcon {
+    width: 53px;
+
+    height: 53px;
+
+    margin-bottom: 13px;
+
+    border-radius: 15px;
+
+    font-size: 23px;
+  }
+
+  .coursesHeroContent h1 {
+    font-size: 29px;
+  }
+
+  .coursesHeroContent p {
+    font-size: 12px;
+  }
+
+  .coursesContainer {
+    padding: 25px 10px 40px;
+  }
+
+  .coursesTabs {
+    gap: 5px;
+
+    padding: 5px;
+
+    border-radius: 13px;
+  }
+
+  .coursesTabs button {
+    min-height: 52px;
+
+    flex-direction: column;
+
+    font-size: 10px;
+  }
+
+  .publicCourseGroup {
+    border-radius: 15px;
+  }
+
+  .publicCourseHeader {
+    padding: 16px;
+  }
+
+  .publicCourseTitle {
+    gap: 10px;
+  }
+
+  .publicCourseTitle h2 {
+    font-size: 16px;
+  }
+
+  .publicCourseTitle span {
+    font-size: 8px;
+  }
+
+  .publicCourseYears {
+    padding: 7px 14px;
+  }
+
+  .publicCourseCard {
+    grid-template-columns: 72px 1fr;
+
+    gap: 10px;
+  }
+
+  .publicCourseYear {
+    width: 72px;
+
+    min-width: 72px;
+
+    font-size: 9px;
+  }
+
+  .publicCourseInfo h3 {
+    font-size: 13px;
+  }
+
+  .publicCourseInfo p {
+    font-size: 10px;
+  }
+
+  .publicCourseActions a {
+    font-size: 9px;
+
+    padding: 7px 5px;
+  }
+}

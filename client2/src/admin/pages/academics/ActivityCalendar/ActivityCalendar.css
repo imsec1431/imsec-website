@@ -1,0 +1,793 @@
+/* =========================================================
+   ACTIVITY CALENDAR — ADMIN
+========================================================= */
+
+.activity-calendar-page {
+  min-height: 100vh;
+  padding: 22px;
+  background: #f5f7fb;
+}
+
+.activity-calendar-page *,
+.activity-calendar-page *::before,
+.activity-calendar-page *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.activity-calendar-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 20px 22px;
+  margin-bottom: 18px;
+
+  background: #ffffff;
+  border: 1px solid #e3e8f0;
+  border-radius: 12px;
+
+  box-shadow: 0 3px 15px rgba(20, 40, 80, 0.05);
+}
+
+.activity-calendar-header-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+  background: #eef4fb;
+
+  color: #174a7c;
+  font-size: 21px;
+}
+
+.activity-calendar-header span,
+.activity-calendar-card-header span {
+  display: block;
+
+  color: #6c7a91;
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.activity-calendar-header h1 {
+  margin: 4px 0;
+
+  color: #123c6b;
+
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.activity-calendar-header p {
+  margin: 0;
+
+  color: #718096;
+  font-size: 12px;
+}
+
+/* =========================================================
+   ALERTS
+========================================================= */
+
+.activity-calendar-alert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  padding: 11px 14px;
+  margin-bottom: 16px;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.activity-calendar-alert.error {
+  background: #fff5f5;
+  border: 1px solid #f0caca;
+  color: #a33a3a;
+}
+
+.activity-calendar-alert.success {
+  background: #f3fbf5;
+  border: 1px solid #c8e5d2;
+  color: #267344;
+}
+
+.activity-calendar-alert button {
+  width: 27px;
+  height: 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 5px;
+
+  background: transparent;
+  color: inherit;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.activity-calendar-card {
+  padding: 22px;
+  margin-bottom: 18px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e8f0;
+  border-radius: 12px;
+
+  box-shadow: 0 3px 15px rgba(20, 40, 80, 0.05);
+}
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.activity-calendar-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+
+  border-bottom: 1px solid #edf0f5;
+}
+
+.activity-calendar-card-header h2 {
+  margin: 4px 0 0;
+
+  color: #203b5d;
+
+  font-size: 19px;
+  font-weight: 750;
+}
+
+.activity-calendar-count {
+  padding: 6px 11px;
+
+  border: 1px solid #dce5ef;
+  border-radius: 20px;
+
+  background: #f5f8fc;
+
+  color: #526581;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.activity-calendar-form {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 17px;
+}
+
+.activity-calendar-form-group {
+  min-width: 0;
+}
+
+.activity-calendar-form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.activity-calendar-form-group > label:not(.activity-calendar-switch) {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #304966;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.activity-calendar-form-group > label span {
+  margin-left: 3px;
+  color: #d74a4a;
+}
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.activity-calendar-form-group input[type="text"],
+.activity-calendar-form-group input[type="number"],
+.activity-calendar-form-group input[type="url"],
+.activity-calendar-form-group select {
+  width: 100%;
+  height: 42px;
+
+  padding: 0 12px;
+
+  border: 1px solid #d6dee9;
+  border-radius: 7px;
+
+  outline: none;
+
+  background: #ffffff;
+  color: #263f5b;
+
+  font-family: inherit;
+  font-size: 12px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.activity-calendar-form-group input:focus,
+.activity-calendar-form-group select:focus {
+  border-color: #6d91b5;
+
+  box-shadow: 0 0 0 3px rgba(23, 74, 124, 0.08);
+}
+
+.activity-calendar-form-group input::placeholder {
+  color: #a0aaba;
+}
+
+.activity-calendar-form-group small {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #8290a3;
+
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+/* =========================================================
+   PDF LINK
+========================================================= */
+
+.activity-calendar-pdf-input {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+}
+
+.activity-calendar-pdf-input > svg {
+  position: absolute;
+
+  left: 13px;
+
+  color: #174a7c;
+
+  font-size: 13px;
+
+  pointer-events: none;
+}
+
+.activity-calendar-pdf-input input {
+  width: 100%;
+
+  padding-left: 36px !important;
+}
+
+/* =========================================================
+   PUBLISHED SWITCH
+========================================================= */
+
+.activity-calendar-switch {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 9px;
+
+  margin-top: 8px;
+
+  cursor: pointer;
+}
+
+.activity-calendar-switch input {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  opacity: 0;
+}
+
+.activity-calendar-switch span {
+  position: relative;
+
+  width: 40px;
+  height: 22px;
+
+  flex-shrink: 0;
+
+  border-radius: 20px;
+
+  background: #cbd5e1;
+
+  transition: 0.2s ease;
+}
+
+.activity-calendar-switch span::after {
+  content: "";
+
+  position: absolute;
+
+  top: 3px;
+  left: 3px;
+
+  width: 16px;
+  height: 16px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+
+  transition: 0.2s ease;
+}
+
+.activity-calendar-switch input:checked + span {
+  background: #174a7c;
+}
+
+.activity-calendar-switch input:checked + span::after {
+  transform: translateX(18px);
+}
+
+.activity-calendar-switch strong {
+  color: #526581;
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   FORM ACTIONS
+========================================================= */
+
+.activity-calendar-form-actions {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding-top: 3px;
+}
+
+.activity-calendar-save-btn,
+.activity-calendar-reset-btn,
+.activity-calendar-cancel-btn {
+  min-height: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  padding: 0 15px;
+
+  border-radius: 7px;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.activity-calendar-save-btn {
+  border: 1px solid #123c6b;
+
+  background: #123c6b;
+  color: #ffffff;
+}
+
+.activity-calendar-save-btn:hover {
+  background: #0d3158;
+  border-color: #0d3158;
+}
+
+.activity-calendar-save-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.activity-calendar-reset-btn,
+.activity-calendar-cancel-btn {
+  border: 1px solid #d6dee9;
+
+  background: #ffffff;
+  color: #526581;
+}
+
+.activity-calendar-reset-btn:hover,
+.activity-calendar-cancel-btn:hover {
+  background: #f7f9fc;
+  border-color: #b8c4d3;
+}
+
+.activity-calendar-reset-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.activity-calendar-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  border: 1px solid #e5eaf1;
+  border-radius: 9px;
+}
+
+.activity-calendar-table {
+  width: 100%;
+  min-width: 850px;
+
+  border-collapse: collapse;
+}
+
+.activity-calendar-table th {
+  padding: 11px 13px;
+
+  border-bottom: 1px solid #dfe6ef;
+
+  background: #f7f9fc;
+
+  color: #526581;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.activity-calendar-table td {
+  padding: 12px 13px;
+
+  border-bottom: 1px solid #edf0f5;
+
+  color: #4c6078;
+
+  font-size: 12px;
+
+  vertical-align: middle;
+}
+
+.activity-calendar-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.activity-calendar-table tbody tr:hover {
+  background: #fafbfd;
+}
+
+.activity-calendar-table td strong {
+  color: #304966;
+}
+
+/* =========================================================
+   SEMESTER BADGE
+========================================================= */
+
+.activity-calendar-semester {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 52px;
+
+  padding: 4px 9px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.activity-calendar-semester.odd {
+  background: #edf4fb;
+  border: 1px solid #d7e2f0;
+  color: #174a7c;
+}
+
+.activity-calendar-semester.even {
+  background: #f3effa;
+  border: 1px solid #ddd7ec;
+  color: #674d8c;
+}
+
+/* =========================================================
+   PDF VIEW BUTTON
+========================================================= */
+
+.activity-calendar-view-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  padding: 6px 9px;
+
+  border: 1px solid #d2deeb;
+  border-radius: 6px;
+
+  background: #f5f8fc;
+  color: #174a7c;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.activity-calendar-view-btn:hover {
+  background: #edf3f9;
+  border-color: #9db2c9;
+}
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.activity-calendar-actions {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.activity-calendar-action {
+  width: 30px;
+  height: 30px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 6px;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.activity-calendar-action.view {
+  border: 1px solid #d4dfeb;
+
+  background: #f5f8fc;
+  color: #174a7c;
+}
+
+.activity-calendar-action.edit {
+  border: 1px solid #d9e0e8;
+
+  background: #ffffff;
+  color: #526581;
+}
+
+.activity-calendar-action.delete {
+  border: 1px solid #efd0d0;
+
+  background: #fff7f7;
+  color: #a14c4c;
+}
+
+.activity-calendar-action.view:hover {
+  background: #eaf1f8;
+}
+
+.activity-calendar-action.edit:hover {
+  background: #f3f6f9;
+}
+
+.activity-calendar-action.delete:hover {
+  background: #fceeee;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.activity-calendar-loading {
+  min-height: 180px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 10px;
+
+  color: #174a7c;
+}
+
+.activity-calendar-loading svg {
+  font-size: 30px;
+
+  animation: activity-calendar-spin 1.2s linear infinite;
+}
+
+.activity-calendar-loading p {
+  margin: 0;
+
+  color: #718096;
+
+  font-size: 12px;
+}
+
+@keyframes activity-calendar-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.activity-calendar-empty {
+  min-height: 190px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+.activity-calendar-empty svg {
+  margin-bottom: 10px;
+
+  color: #9aacc0;
+
+  font-size: 34px;
+}
+
+.activity-calendar-empty h3 {
+  margin: 0 0 6px;
+
+  color: #304966;
+
+  font-size: 16px;
+}
+
+.activity-calendar-empty p {
+  max-width: 400px;
+
+  margin: 0;
+
+  color: #7a8798;
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+  .activity-calendar-form {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-calendar-form-group.full-width {
+    grid-column: auto;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .activity-calendar-page {
+    padding: 12px;
+  }
+
+  .activity-calendar-header {
+    padding: 17px;
+  }
+
+  .activity-calendar-header h1 {
+    font-size: 21px;
+  }
+
+  .activity-calendar-card {
+    padding: 17px;
+  }
+
+  .activity-calendar-card-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .activity-calendar-form-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .activity-calendar-save-btn,
+  .activity-calendar-reset-btn {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+  .activity-calendar-page {
+    padding: 8px;
+  }
+
+  .activity-calendar-header {
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .activity-calendar-header-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .activity-calendar-header h1 {
+    font-size: 18px;
+  }
+
+  .activity-calendar-header p {
+    font-size: 11px;
+  }
+
+  .activity-calendar-card {
+    padding: 14px;
+  }
+}

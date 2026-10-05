@@ -1,0 +1,521 @@
+/* =========================================================
+   APPLY ADMISSION - PUBLIC
+========================================================= */
+
+.apply-admission-page {
+  min-height: 100vh;
+  padding: 45px 20px 70px;
+  background: #f5f7fa;
+  color: #202938;
+}
+
+.apply-admission-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.apply-admission-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.apply-admission-header > span {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #7d8794;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.apply-admission-header h1 {
+  margin: 0;
+  color: #1d2736;
+  font-size: 36px;
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+.apply-admission-header p {
+  max-width: 650px;
+  margin: 10px auto 0;
+  color: #737e8b;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.apply-admission-card {
+  margin-bottom: 22px;
+  overflow: hidden;
+  background: #ffffff !important;
+  border: 1px solid #e2e7ec !important;
+  border-radius: 12px !important;
+  box-shadow: 0 7px 28px rgba(20, 30, 50, 0.045);
+}
+
+.apply-admission-card .card-header {
+  padding: 20px 23px;
+  background: #ffffff;
+  border-bottom: 1px solid #edf0f3;
+}
+
+.apply-admission-card .card-header span {
+  display: block;
+  margin-bottom: 5px;
+  color: #939ca7;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+.apply-admission-card .card-header h2 {
+  margin: 0;
+  color: #293342;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.apply-admission-card .card-body {
+  padding: 23px;
+}
+
+/* =========================================================
+   FORM LABEL
+========================================================= */
+
+.apply-admission-card .form-label {
+  display: block;
+  margin-bottom: 7px;
+  color: #3c4654;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+/* =========================================================
+   FORM CONTROLS
+========================================================= */
+
+.apply-admission-card .form-control,
+.apply-admission-card .form-select {
+  min-height: 43px;
+  padding: 9px 12px;
+  color: #303947;
+  background-color: #ffffff;
+  border: 1px solid #dce2e8;
+  border-radius: 7px;
+  font-size: 12px;
+  box-shadow: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.apply-admission-card textarea.form-control {
+  min-height: auto;
+  line-height: 1.6;
+}
+
+.apply-admission-card .form-control::placeholder {
+  color: #a2a9b2;
+}
+
+.apply-admission-card .form-control:focus,
+.apply-admission-card .form-select:focus {
+  color: #293342;
+  background: #ffffff;
+  border-color: #8d97a5;
+  box-shadow: 0 0 0 3px rgba(70, 85, 105, 0.08);
+}
+
+/* =========================================================
+   CHECKBOX
+========================================================= */
+
+.apply-admission-card .form-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding-left: 0;
+}
+
+.apply-admission-card .form-check-input {
+  float: none;
+  flex: 0 0 auto;
+  width: 17px;
+  height: 17px;
+  margin: 2px 0 0;
+  border-color: #cbd2da;
+  box-shadow: none;
+}
+
+.apply-admission-card .form-check-input:focus {
+  border-color: #7d8794;
+  box-shadow: 0 0 0 3px rgba(70, 85, 105, 0.08);
+}
+
+.apply-admission-card .form-check-input:checked {
+  background-color: #293342;
+  border-color: #293342;
+}
+
+.apply-admission-card .form-check-label {
+  color: #596473;
+  font-size: 12px;
+  line-height: 1.7;
+  cursor: pointer;
+}
+
+/* =========================================================
+   SUBMIT AREA
+========================================================= */
+
+.apply-admission-submit {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #edf0f3;
+}
+
+.apply-admission-submit .btn {
+  min-width: 190px;
+  min-height: 44px;
+  padding: 10px 20px;
+  color: #ffffff;
+  background: #293342;
+  border: 1px solid #293342;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: none;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.apply-admission-submit .btn:hover {
+  color: #ffffff;
+  background: #202936;
+  border-color: #202936;
+  transform: translateY(-1px);
+}
+
+.apply-admission-submit .btn:disabled {
+  opacity: 0.7;
+  transform: none;
+}
+
+/* =========================================================
+   SUCCESS
+========================================================= */
+
+.application-success-alert {
+  margin-bottom: 22px;
+  padding: 20px;
+  border: 1px solid #cfe5d7;
+  border-radius: 9px;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.application-number-box {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15px;
+  padding: 13px 20px;
+  background: #ffffff;
+  border: 1px solid #cfe5d7;
+  border-radius: 8px;
+}
+
+.application-number-box span {
+  margin-bottom: 3px;
+  color: #718078;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.application-number-box strong {
+  color: #25362b;
+  font-size: 19px;
+  letter-spacing: 0.8px;
+}
+
+/* =========================================================
+   ALERT
+========================================================= */
+
+.apply-admission-page .alert {
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+/* =========================================================
+   REQUIRED FIELD
+========================================================= */
+
+.apply-admission-page input:required:invalid:not(:placeholder-shown),
+.apply-admission-page select:required:invalid {
+  border-color: #d7dce2;
+}
+
+/* =========================================================
+   INFORMATION MODAL
+========================================================= */
+
+.admission-info-modal-header {
+  padding: 18px 22px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #071d3a 0%, #0a2e5c 50%, #123f7a 100%);
+  border-bottom: none !important;
+}
+
+.admission-info-modal-header .modal-title {
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.admission-info-modal-header .btn-close {
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
+.admission-info-modal-header .btn-close:hover {
+  opacity: 1;
+}
+
+.apply-admission-page + .modal,
+.modal {
+  font-size: 13px;
+}
+
+.modal-content {
+  border: none !important;
+  border-radius: 14px !important;
+  overflow: hidden;
+  box-shadow: 0 25px 70px rgba(20, 30, 50, 0.25);
+}
+
+.admission-info-modal-header + .modal-body {
+  padding: 23px;
+}
+
+.admission-info-alert {
+  margin-bottom: 20px !important;
+  padding: 14px 16px;
+  border: 1px solid #ffe08a;
+  border-radius: 8px !important;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.admission-info-alert strong {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.admission-info-list {
+  margin: 0 0 20px;
+  padding-left: 22px;
+}
+
+.admission-info-list li {
+  margin-bottom: 9px;
+  color: #596473;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.admission-info-list li strong {
+  color: #293342;
+}
+
+.admission-info-tip {
+  padding: 14px 16px;
+  color: #596473;
+  background: #f5f7fa;
+  border-left: 3px solid #293342;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.modal-footer {
+  padding: 15px 22px !important;
+  background: #fafbfd;
+  border-top: 1px solid #edf0f3 !important;
+}
+
+.admission-modal-btn {
+  min-width: 190px;
+  min-height: 42px;
+  padding: 9px 18px !important;
+  color: #ffffff !important;
+  background: #293342 !important;
+  border: 1px solid #293342 !important;
+  border-radius: 7px !important;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.admission-modal-btn:hover,
+.admission-modal-btn:focus {
+  color: #ffffff !important;
+  background: #202936 !important;
+  border-color: #202936 !important;
+  box-shadow: none !important;
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+  .apply-admission-page {
+    padding: 32px 15px 55px;
+  }
+
+  .apply-admission-header h1 {
+    font-size: 30px;
+  }
+
+  .apply-admission-header p {
+    font-size: 13px;
+  }
+
+  .apply-admission-card .card-header {
+    padding: 17px 18px;
+  }
+
+  .apply-admission-card .card-body {
+    padding: 18px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+  .apply-admission-page {
+    padding: 25px 10px 45px;
+  }
+
+  .apply-admission-header {
+    margin-bottom: 22px;
+  }
+
+  .apply-admission-header h1 {
+    font-size: 26px;
+  }
+
+  .apply-admission-header p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .apply-admission-card {
+    margin-bottom: 15px;
+    border-radius: 9px !important;
+  }
+
+  .apply-admission-card .card-header {
+    padding: 15px;
+  }
+
+  .apply-admission-card .card-header h2 {
+    font-size: 16px;
+  }
+
+  .apply-admission-card .card-body {
+    padding: 15px;
+  }
+
+  .apply-admission-card .form-label {
+    font-size: 10px;
+  }
+
+  .apply-admission-card .form-control,
+  .apply-admission-card .form-select {
+    min-height: 42px;
+    font-size: 12px;
+  }
+
+  .apply-admission-submit {
+    display: block;
+  }
+
+  .apply-admission-submit .btn {
+    width: 100%;
+  }
+
+  .application-number-box {
+    width: 100%;
+  }
+
+  .admission-info-modal-header {
+    padding: 15px 16px;
+  }
+
+  .admission-info-modal-header .modal-title {
+    font-size: 16px;
+    padding-right: 8px;
+  }
+
+  .admission-info-modal-header + .modal-body {
+    padding: 17px;
+  }
+
+  .admission-info-list {
+    padding-left: 19px;
+  }
+
+  .admission-info-list li {
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+
+  .admission-info-tip {
+    font-size: 11px;
+  }
+
+  .modal-footer {
+    padding: 12px 15px !important;
+  }
+
+  .admission-modal-btn {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 380px) {
+  .apply-admission-page {
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+
+  .apply-admission-header h1 {
+    font-size: 23px;
+  }
+
+  .apply-admission-card .card-header,
+  .apply-admission-card .card-body {
+    padding: 13px;
+  }
+}

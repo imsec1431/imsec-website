@@ -1,0 +1,813 @@
+/* =========================================================
+   ADMIN CAREERS PAGE
+========================================================= */
+
+.admin-careers-page {
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+
+  padding: 30px;
+
+  background: #f6f8fb;
+  color: #111827;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.admin-careers-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+.admin-careers-eyebrow {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.7px;
+
+  color: #6b7280;
+}
+
+.admin-careers-header h1 {
+  margin: 0;
+
+  font-size: 30px;
+  line-height: 1.2;
+
+  letter-spacing: -0.7px;
+
+  color: #111827;
+}
+
+.admin-careers-header p {
+  margin: 8px 0 0;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  color: #6b7280;
+}
+
+/* =========================================================
+   TABS
+========================================================= */
+
+.admin-careers-tabs {
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+
+  width: fit-content;
+
+  padding: 4px;
+
+  margin-bottom: 25px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+}
+
+.admin-careers-tabs button {
+  min-height: 40px;
+
+  padding: 0 20px;
+
+  border: 0;
+
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #6b7280;
+
+  font-family: inherit;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.18s ease,
+    color 0.18s ease;
+}
+
+.admin-careers-tabs button:hover {
+  color: #111827;
+}
+
+.admin-careers-tabs button.active {
+  background: #111827;
+
+  color: #ffffff;
+}
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.admin-careers-error {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 13px 16px;
+
+  margin-bottom: 20px;
+
+  border: 1px solid #fecaca;
+
+  border-radius: 9px;
+
+  background: #fef2f2;
+
+  color: #991b1b;
+
+  font-size: 13px;
+}
+
+.admin-careers-error button {
+  width: 26px;
+  height: 26px;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 6px;
+
+  background: transparent;
+
+  color: #991b1b;
+
+  font-size: 18px;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.admin-careers-section {
+  width: 100%;
+}
+
+.admin-careers-section-header {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-bottom: 20px;
+}
+
+.admin-careers-section-header h2 {
+  margin: 0;
+
+  font-size: 21px;
+
+  letter-spacing: -0.3px;
+
+  color: #111827;
+}
+
+.admin-careers-section-header p {
+  margin: 6px 0 0;
+
+  font-size: 13px;
+
+  color: #6b7280;
+}
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.admin-careers-primary-button {
+  min-height: 42px;
+
+  padding: 0 17px;
+
+  border: 0;
+
+  border-radius: 8px;
+
+  background: #111827;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.18s ease,
+    transform 0.18s ease;
+}
+
+.admin-careers-primary-button:hover {
+  background: #374151;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   FORM CARD
+========================================================= */
+
+.career-opening-form-card {
+  margin-bottom: 25px;
+
+  padding: 25px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 13px;
+
+  background: #ffffff;
+
+  box-shadow: 0 5px 20px rgba(17, 24, 39, 0.04);
+}
+
+/* =========================================================
+   FORM HEADER
+========================================================= */
+
+.career-opening-form-header {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-bottom: 20px;
+
+  margin-bottom: 22px;
+
+  border-bottom: 1px solid #f0f1f3;
+}
+
+.career-opening-form-header > div > span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  color: #9ca3af;
+}
+
+.career-opening-form-header h2 {
+  margin: 0;
+
+  font-size: 20px;
+
+  color: #111827;
+}
+
+.career-form-close {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #6b7280;
+
+  font-size: 20px;
+
+  cursor: pointer;
+}
+
+.career-form-close:hover {
+  background: #f3f4f6;
+
+  color: #111827;
+}
+
+/* =========================================================
+   FORM GRID
+========================================================= */
+
+.career-form-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.career-form-field {
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+.career-form-field.full {
+  grid-column: 1 / -1;
+}
+
+.career-form-field label {
+  margin-bottom: 7px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  color: #374151;
+}
+
+.career-form-field input,
+.career-form-field select,
+.career-form-field textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #111827;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  outline: none;
+
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.career-form-field input,
+.career-form-field select {
+  height: 43px;
+
+  padding: 0 12px;
+}
+
+.career-form-field textarea {
+  padding: 11px 12px;
+
+  resize: vertical;
+
+  line-height: 1.6;
+}
+
+.career-form-field input:focus,
+.career-form-field select:focus,
+.career-form-field textarea:focus {
+  border-color: #6b7280;
+
+  box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.06);
+}
+
+.career-form-field input::placeholder,
+.career-form-field textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* =========================================================
+   FORM ACTIONS
+========================================================= */
+
+.career-form-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  padding-top: 22px;
+
+  margin-top: 22px;
+
+  border-top: 1px solid #f0f1f3;
+}
+
+.career-form-cancel,
+.career-form-save {
+  min-height: 42px;
+
+  padding: 0 17px;
+
+  border-radius: 8px;
+
+  font-family: inherit;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.career-form-cancel {
+  border: 1px solid #d1d5db;
+
+  background: #ffffff;
+
+  color: #374151;
+}
+
+.career-form-cancel:hover {
+  background: #f9fafb;
+}
+
+.career-form-save {
+  border: 0;
+
+  background: #111827;
+
+  color: #ffffff;
+}
+
+.career-form-save:hover {
+  background: #374151;
+}
+
+.career-form-save:disabled,
+.career-form-cancel:disabled {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   OPENING LIST
+========================================================= */
+
+.admin-career-opening-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.admin-career-opening-card {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  padding: 20px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  transition:
+    box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.admin-career-opening-card:hover {
+  border-color: #d1d5db;
+
+  box-shadow: 0 8px 25px rgba(17, 24, 39, 0.05);
+}
+
+.admin-career-opening-info {
+  min-width: 0;
+}
+
+.admin-career-opening-status {
+  margin-bottom: 8px;
+}
+
+.opening-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 24px;
+
+  padding: 0 9px;
+
+  border-radius: 999px;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  text-transform: uppercase;
+}
+
+.opening-status.published {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.opening-status.draft {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.opening-status.closed {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.admin-career-opening-info h3 {
+  margin: 0;
+
+  font-size: 18px;
+
+  color: #111827;
+}
+
+.admin-career-opening-info > p {
+  margin: 5px 0 0;
+
+  font-size: 13px;
+
+  color: #6b7280;
+}
+
+.admin-opening-meta {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 16px;
+
+  margin-top: 12px;
+}
+
+.admin-opening-meta span {
+  font-size: 11px;
+
+  color: #6b7280;
+}
+
+/* =========================================================
+   OPENING ACTIONS
+========================================================= */
+
+.admin-career-opening-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  flex-shrink: 0;
+}
+
+.admin-career-opening-actions button {
+  min-height: 34px;
+
+  padding: 0 12px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #374151;
+
+  font-family: inherit;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.admin-career-opening-actions button:hover {
+  background: #f3f4f6;
+}
+
+.admin-career-opening-actions button.delete {
+  border-color: #fecaca;
+
+  color: #b91c1c;
+}
+
+.admin-career-opening-actions button.delete:hover {
+  background: #fef2f2;
+}
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.admin-careers-empty {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 280px;
+
+  padding: 40px;
+
+  box-sizing: border-box;
+
+  border: 1px dashed #d1d5db;
+
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  text-align: center;
+}
+
+.admin-careers-empty-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 13px;
+
+  border-radius: 11px;
+
+  background: #f3f4f6;
+
+  color: #374151;
+
+  font-size: 25px;
+}
+
+.admin-careers-empty h3 {
+  margin: 0;
+
+  font-size: 17px;
+
+  color: #111827;
+}
+
+.admin-careers-empty p {
+  margin: 7px 0 0;
+
+  font-size: 12px;
+
+  color: #9ca3af;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.admin-careers-loading {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 250px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   APPLICATION TAB
+========================================================= */
+
+.admin-careers-applications-section {
+  width: 100%;
+}
+
+/*
+   CareerApplications.css can have its own styling.
+   We remove its outer background/padding so it fits
+   naturally inside the Careers page.
+*/
+
+.admin-careers-applications-section .career-applications-page {
+  min-height: auto;
+
+  padding: 0;
+
+  background: transparent;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 850px) {
+  .admin-careers-page {
+    padding: 22px;
+  }
+
+  .admin-careers-section-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .admin-careers-primary-button {
+    width: 100%;
+  }
+
+  .admin-career-opening-card {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .admin-career-opening-actions {
+    width: 100%;
+  }
+
+  .admin-career-opening-actions button {
+    flex: 1;
+  }
+}
+
+@media (max-width: 650px) {
+  .admin-careers-page {
+    padding: 16px;
+  }
+
+  .admin-careers-header h1 {
+    font-size: 25px;
+  }
+
+  .admin-careers-tabs {
+    width: 100%;
+  }
+
+  .admin-careers-tabs button {
+    flex: 1;
+
+    padding: 0 10px;
+  }
+
+  .career-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .career-form-field.full {
+    grid-column: auto;
+  }
+
+  .career-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .career-form-actions button {
+    width: 100%;
+  }
+}

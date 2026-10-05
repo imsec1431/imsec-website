@@ -1,0 +1,748 @@
+/* =========================================================
+   SPORTS PUBLIC PAGE
+   IMSEC - Premium Navy & Gold Design
+========================================================= */
+
+.sports-page {
+  width: 100%;
+  background: #ffffff;
+  color: #1d2939;
+  font-family: inherit;
+}
+
+.sports-container {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.sports-loading {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #0b2347;
+  gap: 15px;
+}
+
+.sports-loading-spinner {
+  width: 42px;
+  height: 42px;
+  border: 4px solid #e5eaf1;
+  border-top-color: #c8a951;
+  border-radius: 50%;
+  animation: sportsSpin 0.8s linear infinite;
+}
+
+@keyframes sportsSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.sports-hero {
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 25, 55, 0.97),
+      rgba(8, 38, 78, 0.84),
+      rgba(8, 38, 78, 0.68)
+    ),
+    url("https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1800&q=85")
+      center / cover no-repeat;
+}
+
+.sports-hero-overlay {
+  width: 100%;
+  padding: 85px 0;
+}
+
+.sports-breadcrumb {
+  color: #d9c276;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin-bottom: 18px;
+}
+
+.sports-hero h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(38px, 5vw, 62px);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.sports-hero p {
+  margin: 18px 0 0;
+  color: #e9eef5;
+  font-size: 20px;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   COMMON SECTIONS
+========================================================= */
+
+.sports-section {
+  padding: 80px 0;
+}
+
+.sports-light-section {
+  background: #f7f9fc;
+}
+
+.sports-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+
+  color: #b08c2d;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.sports-heading-line {
+  width: 42px;
+  height: 2px;
+  background: #c8a951;
+  display: inline-block;
+}
+
+.sports-content-heading {
+  max-width: 850px;
+  margin-bottom: 38px;
+}
+
+.sports-content-heading h2 {
+  margin: 0 0 14px;
+  color: #0b2347;
+  font-size: clamp(28px, 4vw, 38px);
+  font-weight: 700;
+}
+
+.sports-content-heading p {
+  margin: 0;
+  color: #667085;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.sports-intro-section {
+  background: #ffffff;
+}
+
+.sports-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.8fr);
+  gap: 55px;
+  align-items: center;
+}
+
+.sports-intro-grid h2 {
+  margin: 0 0 20px;
+  color: #0b2347;
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.2;
+}
+
+.sports-intro-grid p {
+  margin: 0;
+  color: #667085;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.sports-intro-card {
+  padding: 38px 30px;
+  border-radius: 14px;
+  background: #0b2347;
+  box-shadow: 0 18px 45px rgba(11, 35, 71, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.sports-intro-card::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  right: -65px;
+  top: -65px;
+  border-radius: 50%;
+  border: 1px solid rgba(200, 169, 81, 0.35);
+}
+
+.sports-intro-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 12px;
+  background: rgba(200, 169, 81, 0.14);
+  color: #d7bd69;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 25px;
+  margin-bottom: 22px;
+}
+
+.sports-intro-card h3 {
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-size: 23px;
+}
+
+.sports-intro-card p {
+  color: #dbe3ef;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.sports-gallery-section {
+  background: #0b2347;
+}
+
+.sports-gallery-section .sports-section-heading {
+  color: #d9c276;
+}
+
+.sports-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.sports-gallery-card {
+  height: 290px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  background: #102d53;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+}
+
+.sports-gallery-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(5, 20, 42, 0.82), transparent 55%);
+  pointer-events: none;
+}
+
+.sports-gallery-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.sports-gallery-card:hover img {
+  transform: scale(1.06);
+}
+
+.sports-gallery-caption {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 17px;
+  z-index: 2;
+
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   FACILITIES
+========================================================= */
+
+.sports-facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.sports-facility-card {
+  min-height: 210px;
+  padding: 28px 23px;
+
+  background: #ffffff;
+  border: 1px solid #e7ebf1;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.sports-facility-card:hover {
+  transform: translateY(-6px);
+  border-color: #d6bd72;
+  box-shadow: 0 16px 35px rgba(11, 35, 71, 0.11);
+}
+
+.sports-facility-icon {
+  width: 52px;
+  height: 52px;
+
+  border-radius: 10px;
+  background: #f7f1df;
+  color: #b08c2d;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 21px;
+  margin-bottom: 22px;
+}
+
+.sports-facility-card h3 {
+  margin: 0 0 10px;
+  color: #0b2347;
+  font-size: 20px;
+}
+
+.sports-facility-card p {
+  margin: 0;
+  color: #667085;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   FITNESS / TRAINING
+========================================================= */
+
+.sports-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.sports-feature-card {
+  padding: 38px;
+  background: #ffffff;
+  border: 1px solid #e7ebf1;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(11, 35, 71, 0.05);
+}
+
+.sports-feature-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 12px;
+
+  background: #0b2347;
+  color: #d9bf69;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 24px;
+  margin-bottom: 22px;
+}
+
+.sports-feature-card h2 {
+  margin: 0 0 15px;
+  color: #0b2347;
+  font-size: 26px;
+}
+
+.sports-feature-card > p {
+  margin: 0;
+  color: #667085;
+  line-height: 1.8;
+}
+
+.sports-feature-list {
+  margin-top: 24px;
+  display: grid;
+  gap: 10px;
+}
+
+.sports-feature-list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #344054;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sports-feature-list-item span {
+  color: #b08c2d;
+  font-weight: 700;
+}
+
+/* =========================================================
+   ACTIVITIES
+========================================================= */
+
+.sports-activities-card {
+  padding: 38px;
+  background: #ffffff;
+  border: 1px solid #e5e9ef;
+  border-left: 4px solid #c8a951;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+
+  box-shadow: 0 12px 30px rgba(11, 35, 71, 0.06);
+}
+
+.sports-activities-icon {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+
+  border-radius: 50%;
+  background: #f7f1df;
+  color: #b08c2d;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 24px;
+}
+
+.sports-activities-card h2 {
+  margin: 0 0 12px;
+  color: #0b2347;
+  font-size: 27px;
+}
+
+.sports-activities-card p {
+  margin: 0;
+  color: #667085;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   ACHIEVEMENTS
+========================================================= */
+
+.sports-achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.sports-achievement-card {
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 13px;
+  border: 1px solid #e5e9ef;
+  position: relative;
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.sports-achievement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 35px rgba(11, 35, 71, 0.09);
+}
+
+.sports-achievement-year {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  padding: 6px 12px;
+  border-radius: 20px;
+
+  background: #f7f1df;
+  color: #9a7825;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.sports-achievement-icon {
+  width: 52px;
+  height: 52px;
+
+  border-radius: 10px;
+  background: #0b2347;
+  color: #d9bf69;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+}
+
+.sports-achievement-card h3 {
+  margin: 0 0 12px;
+  color: #0b2347;
+  font-size: 20px;
+}
+
+.sports-achievement-card p {
+  margin: 0;
+  color: #667085;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   TIMINGS
+========================================================= */
+
+.sports-timing-section {
+  padding: 35px 0;
+  background: #0b2347;
+}
+
+.sports-timing-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  text-align: center;
+}
+
+.sports-timing-icon {
+  width: 58px;
+  height: 58px;
+  min-width: 58px;
+
+  border-radius: 50%;
+  background: rgba(200, 169, 81, 0.14);
+  color: #d9bf69;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+}
+
+.sports-timing-card h2 {
+  margin: 0 0 5px;
+  color: #ffffff;
+  font-size: 21px;
+}
+
+.sports-timing-card p {
+  margin: 0;
+  color: #dbe3ef;
+  font-size: 15px;
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.sports-contact-card {
+  padding: 35px;
+
+  background: linear-gradient(135deg, #0b2347, #102f59);
+
+  border-radius: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+
+  box-shadow: 0 18px 45px rgba(11, 35, 71, 0.16);
+}
+
+.sports-contact-main {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.sports-contact-icon {
+  width: 65px;
+  height: 65px;
+  min-width: 65px;
+
+  border-radius: 13px;
+  background: rgba(200, 169, 81, 0.14);
+  color: #d9bf69;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 26px;
+}
+
+.sports-contact-main h2 {
+  margin: 0 0 7px;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.sports-contact-main p {
+  margin: 0;
+  color: #dbe3ef;
+  font-size: 14px;
+}
+
+.sports-contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sports-contact-details a,
+.sports-contact-details div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #e7edf5;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.sports-contact-details a:hover {
+  color: #d9bf69;
+}
+
+.sports-contact-details svg {
+  color: #d9bf69;
+  min-width: 16px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+  .sports-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sports-facilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 850px) {
+  .sports-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .sports-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sports-achievements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sports-contact-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sports-contact-details {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .sports-section {
+    padding: 55px 0;
+  }
+
+  .sports-hero {
+    min-height: 310px;
+  }
+
+  .sports-hero-overlay {
+    padding: 65px 0;
+  }
+
+  .sports-hero h1 {
+    font-size: 38px;
+  }
+
+  .sports-hero p {
+    font-size: 16px;
+  }
+
+  .sports-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .sports-gallery-card {
+    height: 260px;
+  }
+
+  .sports-facilities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sports-feature-card {
+    padding: 28px 22px;
+  }
+
+  .sports-activities-card {
+    padding: 27px 22px;
+    flex-direction: column;
+  }
+
+  .sports-contact-card {
+    padding: 28px 22px;
+  }
+
+  .sports-contact-main {
+    align-items: flex-start;
+  }
+
+  .sports-contact-main h2 {
+    font-size: 20px;
+  }
+
+  .sports-timing-card {
+    flex-direction: column;
+  }
+}

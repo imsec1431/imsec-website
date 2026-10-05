@@ -1,0 +1,95 @@
+.academic-matrix-admin {
+  width: 100%;
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.academic-admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.academic-matrix-admin .card {
+  border-radius: 14px;
+}
+
+.academic-matrix-admin .form-label {
+  color: #0a2e5c;
+}
+
+.academic-matrix-admin .form-control,
+.academic-matrix-admin .form-select {
+  min-height: 44px;
+  border-radius: 8px;
+}
+
+.academic-matrix-admin textarea.form-control {
+  min-height: 100px;
+}
+
+.academic-matrix-admin .form-control:focus,
+.academic-matrix-admin .form-select:focus {
+  border-color: #0a2e5c;
+  box-shadow: 0 0 0 0.15rem rgba(10, 46, 92, 0.12);
+}
+
+.academic-matrix-admin .form-check-input {
+  cursor: pointer;
+}
+
+.academic-matrix-admin .form-check-label {
+  cursor: pointer;
+  font-weight: 600;
+  color: #0a2e5c;
+}
+
+.academic-matrix-table {
+  margin-bottom: 0;
+}
+
+.academic-matrix-table thead th {
+  background: #0a2e5c;
+  color: #fff;
+  font-weight: 600;
+  white-space: nowrap;
+  border: none;
+}
+
+.academic-matrix-table thead th:first-child {
+  border-top-left-radius: 8px;
+}
+
+.academic-matrix-table thead th:last-child {
+  border-top-right-radius: 8px;
+}
+
+.academic-matrix-table tbody td {
+  vertical-align: middle;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.academic-matrix-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.academic-matrix-table .btn {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .academic-admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .academic-matrix-admin .card-body {
+    padding: 20px !important;
+  }
+
+  .academic-matrix-table {
+    min-width: 1050px;
+  }
+}

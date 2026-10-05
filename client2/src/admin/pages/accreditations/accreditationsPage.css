@@ -1,0 +1,838 @@
+/* =========================================================
+   ACCREDITATIONS ADMIN PAGE
+   ========================================================= */
+
+.accreditations-admin-page {
+  min-height: 100vh;
+  padding: 30px;
+  background: #f5f7fa;
+  color: #172033;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.accreditations-admin-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.accreditations-admin-kicker {
+  color: #b08d3e;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  margin-bottom: 7px;
+}
+
+.accreditations-admin-header h1 {
+  margin: 0;
+  color: #102a43;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.accreditations-admin-header p {
+  margin: 8px 0 0;
+  color: #68758a;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 680px;
+}
+
+.accreditations-header-actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.accreditations-btn {
+  min-height: 42px;
+  padding: 0 17px;
+  border-radius: 7px;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.accreditations-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.accreditations-btn.primary {
+  color: #fff;
+  background: #102a43;
+  border-color: #102a43;
+}
+
+.accreditations-btn.primary:hover:not(:disabled) {
+  background: #173f63;
+  border-color: #173f63;
+}
+
+.accreditations-btn.secondary {
+  color: #102a43;
+  background: #fff;
+  border-color: #d8dee7;
+}
+
+.accreditations-btn.secondary:hover:not(:disabled) {
+  border-color: #b08d3e;
+  color: #8c6b25;
+}
+
+/* =========================================================
+   MESSAGES
+   ========================================================= */
+
+.accreditations-message {
+  padding: 13px 16px;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.accreditations-message.success {
+  background: #edf8f1;
+  border: 1px solid #c8e8d2;
+  color: #23753d;
+}
+
+.accreditations-message.error {
+  background: #fff1f1;
+  border: 1px solid #f0caca;
+  color: #a52a2a;
+}
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.accreditations-admin-section {
+  background: #fff;
+  border: 1px solid #e2e7ee;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(16, 42, 67, 0.04);
+}
+
+.accreditations-section-heading {
+  min-height: 76px;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid #e7ebf0;
+  background: #fbfcfd;
+}
+
+.accreditations-section-heading span {
+  display: block;
+  color: #b08d3e;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 5px;
+}
+
+.accreditations-section-heading h2 {
+  margin: 0;
+  color: #102a43;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.accreditations-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  padding: 22px;
+}
+
+.accreditations-field {
+  min-width: 0;
+}
+
+.accreditations-field.full {
+  padding: 0 22px;
+  margin-top: 22px;
+}
+
+.accreditations-form-grid .accreditations-field.full {
+  padding: 0;
+  margin-top: 0;
+  grid-column: 1 / -1;
+}
+
+.accreditations-field label {
+  display: block;
+  margin-bottom: 8px;
+  color: #26384c;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.accreditations-field input,
+.accreditations-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d8dee7;
+  border-radius: 6px;
+  background: #fff;
+  color: #172033;
+  padding: 11px 13px;
+  font-size: 13px;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.accreditations-field input {
+  height: 43px;
+}
+
+.accreditations-field textarea {
+  resize: vertical;
+  line-height: 1.55;
+}
+
+.accreditations-field input:focus,
+.accreditations-field textarea:focus {
+  border-color: #b08d3e;
+  box-shadow: 0 0 0 3px rgba(176, 141, 62, 0.1);
+}
+
+.accreditations-field small {
+  display: block;
+  margin-top: 7px;
+  color: #7b8797;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   PUBLISHED SWITCH
+   ========================================================= */
+
+.accreditations-switch-row {
+  display: flex !important;
+  align-items: center;
+  gap: 9px;
+  margin: 0 !important;
+  cursor: pointer;
+}
+
+.accreditations-switch-row input {
+  display: none;
+}
+
+.accreditations-switch {
+  width: 42px;
+  height: 23px;
+  padding: 3px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  background: #c7ced8;
+  transition: background 0.2s ease;
+}
+
+.accreditations-switch span {
+  width: 17px;
+  height: 17px;
+  margin: 0 !important;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.accreditations-switch-row input:checked + .accreditations-switch {
+  background: #b08d3e;
+}
+
+.accreditations-switch-row input:checked + .accreditations-switch span {
+  transform: translateX(19px);
+}
+
+.accreditations-switch-row strong {
+  color: #435268;
+  font-size: 12px;
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.accreditations-empty {
+  padding: 55px 25px;
+  text-align: center;
+}
+
+.accreditations-empty > svg {
+  color: #b08d3e;
+  font-size: 35px;
+  margin-bottom: 13px;
+}
+
+.accreditations-empty h3 {
+  margin: 0 0 7px;
+  color: #102a43;
+  font-size: 18px;
+}
+
+.accreditations-empty p {
+  margin: 0 0 18px;
+  color: #788597;
+  font-size: 13px;
+}
+
+/* =========================================================
+   RECORD LIST
+   ========================================================= */
+
+.accreditations-record-list {
+  padding: 22px;
+  display: grid;
+  gap: 15px;
+}
+
+.accreditation-record-card {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 20px;
+  padding: 16px;
+  border: 1px solid #e1e6ed;
+  border-radius: 9px;
+  background: #fff;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.accreditation-record-card:hover {
+  border-color: #c9b27d;
+  box-shadow: 0 5px 18px rgba(16, 42, 67, 0.07);
+}
+
+/* =========================================================
+   RECORD PHOTO
+   ========================================================= */
+
+.accreditation-record-photo {
+  width: 150px;
+  height: 125px;
+  overflow: hidden;
+  border-radius: 7px;
+  background: #f1f4f7;
+  border: 1px solid #e2e6eb;
+}
+
+.accreditation-record-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.accreditation-photo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b08d3e;
+  font-size: 30px;
+}
+
+/* =========================================================
+   RECORD CONTENT
+   ========================================================= */
+
+.accreditation-record-content {
+  min-width: 0;
+}
+
+.accreditation-record-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.accreditation-record-number {
+  display: inline-block;
+  margin-bottom: 5px;
+  color: #b08d3e;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.accreditation-record-top h3 {
+  margin: 0;
+  color: #102a43;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.accreditation-status {
+  height: 26px;
+  padding: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.accreditation-status.active {
+  background: #eaf7ee;
+  color: #26763f;
+}
+
+.accreditation-status.inactive {
+  background: #f2f3f5;
+  color: #737b86;
+}
+
+.accreditation-body {
+  margin: 9px 0 0;
+  color: #657286;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.accreditation-body strong {
+  color: #39485b;
+}
+
+.accreditation-description {
+  margin: 9px 0 0;
+  color: #68758a;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   RECORD LINKS
+   ========================================================= */
+
+.accreditation-record-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 13px;
+}
+
+.accreditation-small-link {
+  min-height: 31px;
+  padding: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #d8dee7;
+  border-radius: 5px;
+  color: #284e70;
+  background: #fff;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.accreditation-small-link:hover {
+  border-color: #b08d3e;
+  color: #8c6b25;
+}
+
+.accreditation-small-link.certificate {
+  color: #8c6b25;
+}
+
+/* =========================================================
+   RECORD ACTIONS
+   ========================================================= */
+
+.accreditation-record-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.accreditations-action-btn {
+  min-height: 32px;
+  padding: 0 11px;
+  border-radius: 5px;
+  background: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.accreditations-action-btn.edit {
+  border: 1px solid #cdd8e4;
+  color: #315b7d;
+}
+
+.accreditations-action-btn.edit:hover {
+  border-color: #315b7d;
+}
+
+.accreditations-action-btn.delete {
+  border: 1px solid #ebcccc;
+  color: #a53a3a;
+}
+
+.accreditations-action-btn.delete:hover {
+  border-color: #a53a3a;
+}
+
+/* =========================================================
+   EDITOR OVERLAY
+   ========================================================= */
+
+.accreditation-editor-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(8, 24, 39, 0.58);
+}
+
+.accreditation-editor {
+  width: min(850px, 100%);
+  max-height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================================================
+   EDITOR HEADER
+   ========================================================= */
+
+.accreditation-editor-header {
+  padding: 19px 23px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #e4e8ed;
+  background: #fbfcfd;
+}
+
+.accreditation-editor-header span {
+  color: #b08d3e;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.accreditation-editor-header h2 {
+  margin: 5px 0 0;
+  color: #102a43;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.accreditation-close-btn {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #dce1e7;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: #647185;
+  cursor: pointer;
+}
+
+.accreditation-close-btn:hover {
+  color: #a33b3b;
+  border-color: #e0bebe;
+}
+
+/* =========================================================
+   EDITOR BODY
+   ========================================================= */
+
+.accreditation-editor-body {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 22px;
+}
+
+/* =========================================================
+   PHOTO UPLOAD
+   ========================================================= */
+
+.accreditation-upload-box {
+  min-height: 185px;
+  border: 1px dashed #cbd3dd;
+  border-radius: 8px;
+  background: #fafbfc;
+  overflow: hidden;
+}
+
+.accreditation-upload-label {
+  min-height: 185px;
+  padding: 25px;
+  box-sizing: border-box;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.accreditation-upload-label > svg {
+  color: #b08d3e;
+  font-size: 27px;
+  margin-bottom: 3px;
+}
+
+.accreditation-upload-label strong {
+  color: #314156;
+  font-size: 13px;
+}
+
+.accreditation-upload-label span {
+  color: #8792a1;
+  font-size: 11px;
+}
+
+.accreditation-upload-label input {
+  display: none;
+}
+
+.accreditation-upload-preview {
+  height: 230px;
+  position: relative;
+  background: #f1f4f7;
+}
+
+.accreditation-upload-preview img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.accreditation-upload-preview button {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  min-height: 34px;
+  padding: 0 11px;
+  border: 0;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(125, 31, 31, 0.92);
+  color: #fff;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   CHECKBOX
+   ========================================================= */
+
+.accreditation-checkbox {
+  height: 43px;
+  padding: 0 12px;
+  box-sizing: border-box;
+  border: 1px solid #d8dee7;
+  border-radius: 6px;
+  display: flex !important;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  background: #fff;
+}
+
+.accreditation-checkbox input {
+  width: 16px !important;
+  height: 16px !important;
+  accent-color: #b08d3e;
+}
+
+.accreditation-checkbox span {
+  color: #435268;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   EDITOR FOOTER
+   ========================================================= */
+
+.accreditation-editor-footer {
+  padding: 15px 23px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  border-top: 1px solid #e4e8ed;
+  background: #fbfcfd;
+}
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.accreditations-loading {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #647185;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .accreditations-admin-page {
+    padding: 22px;
+  }
+
+  .accreditations-admin-header {
+    flex-direction: column;
+  }
+
+  .accreditations-header-actions {
+    width: 100%;
+  }
+
+  .accreditations-header-actions .accreditations-btn {
+    flex: 1;
+  }
+}
+
+@media (max-width: 700px) {
+  .accreditations-admin-page {
+    padding: 15px;
+  }
+
+  .accreditations-admin-header h1 {
+    font-size: 27px;
+  }
+
+  .accreditations-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .accreditations-form-grid {
+    grid-template-columns: 1fr;
+    padding: 17px;
+  }
+
+  .accreditations-form-grid .accreditations-field.full {
+    grid-column: auto;
+  }
+
+  .accreditations-field.full {
+    padding: 0 17px;
+  }
+
+  .accreditations-record-list {
+    padding: 15px;
+  }
+
+  .accreditation-record-card {
+    grid-template-columns: 1fr;
+  }
+
+  .accreditation-record-photo {
+    width: 100%;
+    height: 190px;
+  }
+
+  .accreditation-editor-overlay {
+    padding: 10px;
+  }
+
+  .accreditation-editor {
+    max-height: calc(100vh - 20px);
+  }
+
+  .accreditations-header-actions {
+    flex-direction: column;
+  }
+
+  .accreditation-record-top {
+    flex-direction: column;
+  }
+
+  .accreditation-status {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 450px) {
+  .accreditations-admin-page {
+    padding: 10px;
+  }
+
+  .accreditations-admin-header h1 {
+    font-size: 24px;
+  }
+
+  .accreditation-editor-header {
+    padding: 15px;
+  }
+
+  .accreditation-editor-header h2 {
+    font-size: 18px;
+  }
+
+  .accreditation-editor-footer {
+    padding: 12px 15px;
+  }
+
+  .accreditations-btn {
+    font-size: 12px;
+  }
+}

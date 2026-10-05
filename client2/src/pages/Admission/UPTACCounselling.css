@@ -1,0 +1,1030 @@
+/* =========================================================
+   UPTAC PUBLIC COUNSELLING PAGE
+   ========================================================= */
+
+.uptacPublicPage {
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f7fa;
+  padding-bottom: 60px;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.uptacPublicHero {
+  position: relative;
+  width: 100%;
+  min-height: 350px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #0d2b4d 0%, #164b76 50%, #246b9c 100%);
+
+  margin-bottom: 35px;
+}
+
+.uptacPublicHero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  right: -120px;
+  top: -180px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.uptacPublicHero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  left: -120px;
+  bottom: -160px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.uptacPublicHeroContent {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  padding: 65px 25px;
+}
+
+.uptacPublicHeroIcon {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.13);
+
+  color: #ffffff;
+
+  font-size: 23px;
+
+  backdrop-filter: blur(8px);
+}
+
+.uptacPublicHeroLabel {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: #d9edff;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.8px;
+}
+
+.uptacPublicHeroContent h1 {
+  max-width: 850px;
+
+  margin: 0 0 17px;
+
+  color: #ffffff;
+
+  font-size: clamp(32px, 5vw, 52px);
+
+  line-height: 1.12;
+
+  font-weight: 800;
+
+  letter-spacing: -0.8px;
+}
+
+.uptacPublicHeroContent p {
+  max-width: 760px;
+
+  margin: 0 0 25px;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 16px;
+
+  line-height: 1.75;
+}
+
+/* =========================================================
+   SESSION
+   ========================================================= */
+
+.uptacSession {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 10px 17px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.09);
+
+  color: #ffffff;
+
+  backdrop-filter: blur(8px);
+}
+
+.uptacSession span {
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 13px;
+}
+
+.uptacSession strong {
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.uptacPublicContent {
+  width: 100%;
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  padding: 0 25px;
+}
+
+/* =========================================================
+   INLINE ERROR
+   ========================================================= */
+
+.uptacPublicInlineError {
+  margin-bottom: 20px;
+
+  padding: 13px 16px;
+
+  border: 1px solid #f0b8b8;
+
+  border-radius: 10px;
+
+  background: #fff2f2;
+
+  color: #a42626;
+
+  font-size: 14px;
+}
+
+/* =========================================================
+   PDF CARD
+   ========================================================= */
+
+.uptacPdfCard {
+  width: 100%;
+
+  overflow: hidden;
+
+  border: 1px solid #e3e8ee;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-shadow: 0 10px 35px rgba(22, 43, 70, 0.07);
+}
+
+/* =========================================================
+   PDF HEADER
+   ========================================================= */
+
+.uptacPdfHeader {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  padding: 25px 28px;
+
+  border-bottom: 1px solid #e8edf2;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+   PDF TITLE
+   ========================================================= */
+
+.uptacPdfTitle {
+  min-width: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 17px;
+}
+
+.uptacPdfIcon {
+  flex: 0 0 58px;
+
+  width: 58px;
+  height: 66px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #fff0f0;
+
+  color: #d32f2f;
+
+  font-size: 22px;
+
+  box-shadow: inset 0 0 0 1px rgba(211, 47, 47, 0.08);
+}
+
+.uptacPdfTitle > div:last-child {
+  min-width: 0;
+}
+
+.uptacPdfTitle span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #7a8795;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+}
+
+.uptacPdfTitle h2 {
+  margin: 0 0 5px;
+
+  color: #172b4d;
+
+  font-size: 19px;
+
+  font-weight: 750;
+}
+
+.uptacPdfTitle p {
+  max-width: 550px;
+
+  margin: 0;
+
+  overflow-wrap: anywhere;
+
+  color: #7a8795;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   PDF BUTTONS
+   ========================================================= */
+
+.uptacPdfButtons {
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.uptacPdfButtons button {
+  min-height: 44px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 10px 16px;
+
+  border-radius: 9px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.uptacPdfButtons button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.uptacPdfButtons button:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.55;
+}
+
+/* =========================================================
+   OPEN BUTTON
+   ========================================================= */
+
+.uptacOpenButton {
+  border: 1px solid #cbd8e5;
+
+  background: #ffffff;
+
+  color: #245a83;
+}
+
+.uptacOpenButton:hover:not(:disabled) {
+  background: #f4f8fb;
+
+  box-shadow: 0 5px 15px rgba(30, 70, 105, 0.08);
+}
+
+/* =========================================================
+   DOWNLOAD BUTTON
+   ========================================================= */
+
+.uptacDownloadButton {
+  border: 1px solid #174f7b;
+
+  background: #174f7b;
+
+  color: #ffffff;
+}
+
+.uptacDownloadButton:hover:not(:disabled) {
+  background: #123f63;
+
+  color: #ffffff;
+}
+
+/* =========================================================
+   PDF PREVIEW PLACEHOLDER
+   ========================================================= */
+
+.uptacPdfPreviewPlaceholder {
+  min-height: 500px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 50px 25px;
+
+  text-align: center;
+
+  background: linear-gradient(180deg, #fafbfd 0%, #f5f7fa 100%);
+}
+
+.uptacPdfPreviewIcon {
+  width: 90px;
+  height: 105px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 22px;
+
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  color: #d32f2f;
+
+  font-size: 38px;
+
+  box-shadow: 0 12px 30px rgba(30, 50, 70, 0.1);
+}
+
+.uptacPdfPreviewPlaceholder h3 {
+  margin: 0 0 9px;
+
+  color: #25364b;
+
+  font-size: 21px;
+
+  font-weight: 750;
+}
+
+.uptacPdfPreviewPlaceholder p {
+  max-width: 500px;
+
+  margin: 0 0 23px;
+
+  color: #758294;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+.uptacPdfPreviewPlaceholder p strong {
+  color: #245a83;
+}
+
+.uptacPreviewButton {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  min-height: 45px;
+
+  padding: 10px 20px;
+
+  border: 0;
+
+  border-radius: 9px;
+
+  background: #174f7b;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.uptacPreviewButton:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(23, 79, 123, 0.2);
+}
+
+/* =========================================================
+   PDF VIEWER
+   ========================================================= */
+
+.uptacPdfViewer {
+  width: 100%;
+
+  background: #343a40;
+}
+
+/* =========================================================
+   PDF TOOLBAR
+   ========================================================= */
+
+.uptacPdfViewerToolbar {
+  min-height: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 9px 15px;
+
+  background: #25313c;
+
+  color: #ffffff;
+}
+
+.uptacPdfViewerToolbar span {
+  min-width: 0;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  font-size: 13px;
+}
+
+.uptacPdfViewerToolbar button {
+  flex-shrink: 0;
+
+  padding: 7px 13px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  cursor: pointer;
+}
+
+.uptacPdfViewerToolbar button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* =========================================================
+   PDF FRAME
+   ========================================================= */
+
+.uptacPdfFrame {
+  display: block;
+
+  width: 100%;
+
+  height: 780px;
+
+  min-height: 600px;
+
+  border: 0;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+   PDF UNAVAILABLE
+   ========================================================= */
+
+.uptacPdfUnavailable {
+  min-height: 500px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 40px;
+
+  text-align: center;
+
+  background: #fafbfd;
+}
+
+.uptacPdfUnavailable svg {
+  margin-bottom: 15px;
+
+  color: #d32f2f;
+
+  font-size: 40px;
+}
+
+.uptacPdfUnavailable h3 {
+  margin: 0 0 8px;
+
+  color: #27384c;
+
+  font-size: 20px;
+}
+
+.uptacPdfUnavailable p {
+  margin: 0;
+
+  color: #758294;
+
+  font-size: 14px;
+}
+
+/* =========================================================
+   INFORMATION
+   ========================================================= */
+
+.uptacInformation {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 16px;
+
+  margin-top: 25px;
+
+  padding: 23px 25px;
+
+  border: 1px solid #e2e8ef;
+
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  box-shadow: 0 7px 25px rgba(22, 43, 70, 0.05);
+}
+
+.uptacInformationIcon {
+  flex: 0 0 42px;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: #edf5fb;
+
+  color: #245f8c;
+
+  font-size: 17px;
+}
+
+.uptacInformation h3 {
+  margin: 2px 0 7px;
+
+  color: #23364c;
+
+  font-size: 17px;
+
+  font-weight: 750;
+}
+
+.uptacInformation p {
+  margin: 0;
+
+  color: #6f7d8c;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.uptacPublicLoading {
+  min-height: 70vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  color: #607080;
+}
+
+.uptacPublicLoading p {
+  margin: 0;
+
+  font-size: 14px;
+}
+
+.uptacPublicSpinner {
+  width: 42px;
+  height: 42px;
+
+  border: 4px solid #dce5ed;
+
+  border-top-color: #245f8c;
+
+  border-radius: 50%;
+
+  animation: uptacSpinner 0.8s linear infinite;
+}
+
+@keyframes uptacSpinner {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   EMPTY / ERROR MESSAGE
+   ========================================================= */
+
+.uptacPublicMessage {
+  max-width: 700px;
+
+  margin: 90px auto;
+
+  padding: 55px 30px;
+
+  text-align: center;
+
+  border: 1px solid #e2e8ef;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-shadow: 0 10px 35px rgba(22, 43, 70, 0.06);
+}
+
+.uptacPublicMessage svg {
+  margin-bottom: 18px;
+
+  color: #d32f2f;
+
+  font-size: 45px;
+}
+
+.uptacPublicMessage h2 {
+  margin: 0 0 10px;
+
+  color: #26394f;
+
+  font-size: 25px;
+}
+
+.uptacPublicMessage p {
+  margin: 0;
+
+  color: #718092;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .uptacPublicHeroContent {
+    padding: 55px 25px;
+  }
+
+  .uptacPdfHeader {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .uptacPdfButtons {
+    width: 100%;
+  }
+
+  .uptacPdfButtons button {
+    flex: 1;
+  }
+
+  .uptacPdfFrame {
+    height: 650px;
+
+    min-height: 500px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .uptacPublicPage {
+    padding-bottom: 35px;
+  }
+
+  .uptacPublicHero {
+    min-height: 390px;
+
+    margin-bottom: 22px;
+  }
+
+  .uptacPublicHeroContent {
+    padding: 45px 18px;
+  }
+
+  .uptacPublicHeroIcon {
+    width: 48px;
+    height: 48px;
+
+    font-size: 19px;
+  }
+
+  .uptacPublicHeroContent h1 {
+    font-size: 31px;
+  }
+
+  .uptacPublicHeroContent p {
+    font-size: 14px;
+
+    line-height: 1.65;
+  }
+
+  .uptacPublicContent {
+    padding: 0 12px;
+  }
+
+  .uptacPdfCard {
+    border-radius: 14px;
+  }
+
+  .uptacPdfHeader {
+    padding: 20px 17px;
+  }
+
+  .uptacPdfTitle {
+    width: 100%;
+
+    gap: 12px;
+  }
+
+  .uptacPdfIcon {
+    flex-basis: 48px;
+
+    width: 48px;
+    height: 57px;
+
+    font-size: 18px;
+  }
+
+  .uptacPdfTitle h2 {
+    font-size: 16px;
+  }
+
+  .uptacPdfTitle p {
+    font-size: 11px;
+  }
+
+  .uptacPdfButtons {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .uptacPdfButtons button {
+    width: 100%;
+  }
+
+  .uptacPdfPreviewPlaceholder {
+    min-height: 400px;
+
+    padding: 40px 18px;
+  }
+
+  .uptacPdfFrame {
+    height: 600px;
+
+    min-height: 450px;
+  }
+
+  .uptacPdfViewerToolbar {
+    min-height: 48px;
+
+    padding: 8px 10px;
+  }
+
+  .uptacPdfViewerToolbar span {
+    font-size: 11px;
+  }
+
+  .uptacPdfViewerToolbar button {
+    font-size: 11px;
+
+    padding: 6px 9px;
+  }
+
+  .uptacInformation {
+    padding: 18px;
+
+    gap: 12px;
+  }
+
+  .uptacInformationIcon {
+    flex-basis: 36px;
+
+    width: 36px;
+    height: 36px;
+  }
+
+  .uptacInformation h3 {
+    font-size: 15px;
+  }
+
+  .uptacInformation p {
+    font-size: 12px;
+  }
+}
+/* =========================================================
+   PDF TOOLBAR BUTTON GROUP
+   ========================================================= */
+
+.uptacPdfViewerToolbar > div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.uptacPdfViewerToolbar button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 6px;
+
+  min-height: 32px;
+
+  padding: 6px 11px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  border-radius: 6px;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  cursor: pointer;
+}
+
+.uptacPdfViewerToolbar button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 600px) {
+  .uptacPdfViewerToolbar {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .uptacPdfViewerToolbar > div {
+    width: 100%;
+  }
+
+  .uptacPdfViewerToolbar button {
+    flex: 1;
+  }
+}

@@ -1,0 +1,871 @@
+/* ==========================================
+   OVERVIEW PAGE CSS
+   IMSEC Website
+==========================================*/
+
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* ==========================================
+   Common
+==========================================*/
+
+.section-tag {
+  color: #fdb913;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+
+  font-weight: 800;
+
+  color: #0a2e5c;
+
+  margin-bottom: 20px;
+}
+
+.section-title span {
+  color: #fdb913;
+}
+
+.section-text {
+  color: #666;
+
+  font-size: 16px;
+
+  line-height: 1.9;
+}
+
+/* ==========================================
+   Hero Banner
+==========================================*/
+
+.overview-hero {
+  height: 420px;
+
+  background-size: cover;
+
+  background-position: center;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+.hero-content {
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+
+  font-weight: 800;
+
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 18px;
+
+  margin: 0;
+}
+
+.hero-content span {
+  color: #fdb913;
+
+  padding: 0 10px;
+}
+
+/* ==========================================
+   About Section
+==========================================*/
+
+.about-section {
+  background: #fff;
+}
+
+.about-section img {
+  width: 100%;
+
+  border-radius: 20px;
+
+  transition: 0.5s;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.about-section img:hover {
+  transform: scale(1.03);
+}
+
+/* ==========================================
+   Highlight Cards
+==========================================*/
+
+.highlight-section {
+  background: #f8f9fb;
+}
+
+.highlight-card {
+  border-radius: 20px;
+
+  padding: 20px;
+
+  height: 100%;
+
+  transition: 0.35s;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.highlight-card:hover {
+  transform: translateY(-10px);
+
+  background: #0a2e5c;
+}
+
+.highlight-card:hover h4 {
+  color: #fdb913;
+}
+
+.highlight-card:hover p {
+  color: #fff;
+}
+
+.highlight-card h4 {
+  color: #0a2e5c;
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  margin-bottom: 15px;
+}
+
+.highlight-card p {
+  color: #666;
+
+  line-height: 1.8;
+}
+
+/* ==========================================
+   Vision Mission
+==========================================*/
+
+.vision-section {
+  background: #fff;
+}
+
+.vision-card {
+  background: white;
+
+  padding: 40px;
+
+  border-radius: 22px;
+
+  text-align: center;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  height: 100%;
+}
+
+.vision-card:hover {
+  transform: translateY(-12px);
+
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+}
+
+.icon-box {
+  width: 90px;
+
+  height: 90px;
+
+  border-radius: 50%;
+
+  background: #0a2e5c;
+
+  color: white;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  margin: auto;
+
+  font-size: 38px;
+
+  margin-bottom: 25px;
+
+  transition: 0.35s;
+}
+
+.vision-card:hover .icon-box {
+  background: #fdb913;
+
+  color: #0a2e5c;
+}
+
+.vision-card h3 {
+  color: #0a2e5c;
+
+  font-weight: 700;
+
+  margin-bottom: 20px;
+}
+
+.vision-card p {
+  color: #666;
+
+  line-height: 1.9;
+}
+
+.vision-card ul {
+  padding-left: 20px;
+
+  text-align: left;
+}
+
+.vision-card ul li {
+  margin-bottom: 12px;
+
+  color: #666;
+}
+
+/* ==========================================
+   Responsive
+==========================================*/
+
+@media (max-width: 991px) {
+  .overview-hero {
+    height: 320px;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .vision-card {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .overview-hero {
+    height: 260px;
+  }
+
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-text {
+    font-size: 15px;
+  }
+
+  .about-section {
+    text-align: center;
+  }
+
+  .highlight-card {
+    margin-bottom: 20px;
+  }
+
+  .vision-card {
+    padding: 25px;
+  }
+
+  .icon-box {
+    width: 70px;
+
+    height: 70px;
+
+    font-size: 30px;
+  }
+}
+/* part2 */
+/* ==========================================
+   Why Choose IMSEC
+==========================================*/
+
+.why-imsec {
+  background: #f8f9fb;
+}
+
+.feature-card {
+  background: #fff;
+
+  border-radius: 20px;
+
+  padding: 35px 25px;
+
+  text-align: center;
+
+  height: 100%;
+
+  transition: 0.35s;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+
+  border: 2px solid transparent;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+
+  border-color: #fdb913;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+  width: 85px;
+
+  height: 85px;
+
+  border-radius: 50%;
+
+  background: #0a2e5c;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  margin: auto;
+
+  font-size: 38px;
+
+  transition: 0.35s;
+
+  margin-bottom: 25px;
+}
+
+.feature-card:hover .feature-icon {
+  background: #fdb913;
+
+  transform: rotate(10deg);
+}
+
+.feature-card h4 {
+  color: #0a2e5c;
+
+  font-weight: 700;
+
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  color: #666;
+
+  line-height: 1.8;
+
+  margin: 0;
+}
+
+/* ==========================================
+   Facts Section
+==========================================*/
+
+.facts-section {
+  background: #fff;
+}
+
+.fact-card {
+  background: #0a2e5c;
+
+  color: #fff;
+
+  border-radius: 20px;
+
+  padding: 35px 20px;
+
+  transition: 0.35s;
+
+  height: 100%;
+}
+
+.fact-card:hover {
+  background: #fdb913;
+
+  color: #0a2e5c;
+
+  transform: translateY(-8px);
+}
+
+.fact-card h2 {
+  font-size: 42px;
+
+  font-weight: 800;
+
+  margin-bottom: 10px;
+}
+
+.fact-card p {
+  margin: 0;
+
+  font-size: 15px;
+
+  font-weight: 500;
+}
+
+/* ==========================================
+   Timeline
+==========================================*/
+
+.timeline-section {
+  background: #f8f9fb;
+}
+
+.timeline {
+  position: relative;
+
+  max-width: 900px;
+
+  margin: auto;
+}
+
+.timeline::before {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+
+  top: 0;
+
+  width: 4px;
+
+  height: 100%;
+
+  background: #fdb913;
+
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+
+  width: 50%;
+
+  padding: 20px 40px;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-dot {
+  position: absolute;
+
+  top: 32px;
+
+  right: -12px;
+
+  width: 24px;
+
+  height: 24px;
+
+  background: #0a2e5c;
+
+  border: 4px solid #fdb913;
+
+  border-radius: 50%;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+  left: -12px;
+}
+
+.timeline-year {
+  color: #fdb913;
+
+  font-size: 22px;
+
+  font-weight: 800;
+}
+
+.timeline-content {
+  background: #fff;
+
+  padding: 18px;
+
+  border-radius: 15px;
+
+  margin-top: 12px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================
+   Facilities
+==========================================*/
+
+.facility-section {
+  background: #fff;
+}
+
+.facility-card {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  cursor: pointer;
+}
+
+.facility-img {
+  width: 100%;
+
+  height: 260px;
+
+  object-fit: cover;
+
+  transition: 0.5s;
+}
+
+.facility-card:hover .facility-img {
+  transform: scale(1.1);
+}
+
+.facility-overlay {
+  position: absolute;
+
+  bottom: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  padding: 20px;
+
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+}
+
+.facility-overlay h4 {
+  color: #fff;
+
+  margin: 0;
+
+  font-weight: 700;
+}
+
+/* ==========================================
+   Gallery
+==========================================*/
+
+.gallery-section {
+  background: #f8f9fb;
+}
+
+.gallery-card {
+  overflow: hidden;
+
+  border-radius: 18px;
+}
+
+.gallery-img {
+  width: 100%;
+
+  height: 260px;
+
+  object-fit: cover;
+
+  transition: 0.5s;
+}
+
+.gallery-card:hover .gallery-img {
+  transform: scale(1.08);
+}
+
+/* ==========================================
+   CTA
+==========================================*/
+
+.cta-section {
+  background: linear-gradient(135deg, #0a2e5c, #123f7a);
+
+  color: #fff;
+
+  padding: 80px 0;
+}
+
+.cta-section h2 {
+  font-size: 42px;
+
+  font-weight: 800;
+
+  margin-bottom: 15px;
+}
+
+.cta-section p {
+  color: #ddd;
+
+  font-size: 18px;
+}
+
+.cta-section .btn {
+  margin-top: 10px;
+
+  font-weight: 600;
+}
+
+/* ==========================================
+   Responsive
+==========================================*/
+
+@media (max-width: 991px) {
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+
+    padding-left: 60px;
+
+    padding-right: 20px;
+
+    left: 0 !important;
+
+    text-align: left !important;
+  }
+
+  .timeline-dot {
+    left: 8px !important;
+
+    right: auto;
+  }
+
+  .cta-section {
+    text-align: center;
+  }
+
+  .cta-section h2 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-card {
+    padding: 25px 18px;
+  }
+
+  .feature-icon {
+    width: 70px;
+
+    height: 70px;
+
+    font-size: 30px;
+  }
+
+  .fact-card {
+    padding: 25px 15px;
+  }
+
+  .fact-card h2 {
+    font-size: 30px;
+  }
+
+  .facility-img {
+    height: 220px;
+  }
+
+  .gallery-img {
+    height: 220px;
+  }
+
+  .cta-section {
+    padding: 60px 20px;
+  }
+
+  .cta-section h2 {
+    font-size: 28px;
+  }
+
+  .cta-section p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .timeline-year {
+    font-size: 18px;
+  }
+
+  .timeline-content {
+    font-size: 14px;
+  }
+
+  .feature-card h4 {
+    font-size: 20px;
+  }
+}
+/* =========================================================
+   ABOUT IMSEC HERO
+   Same premium style as Approvals
+========================================================= */
+
+.overview-hero {
+  position: relative;
+  min-height: 330px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  background: linear-gradient(
+    135deg,
+    rgba(5, 24, 48, 0.96),
+    rgba(0, 86, 125, 0.88)
+  );
+}
+
+.overview-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 20% 50%,
+      rgba(255, 255, 255, 0.08),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(255, 255, 255, 0.06),
+      transparent 30%
+    );
+
+  pointer-events: none;
+}
+
+.overview-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content {
+  text-align: center;
+  color: #ffffff;
+  padding: 70px 15px;
+}
+
+.hero-content h1 {
+  margin: 0 0 14px;
+
+  font-size: clamp(38px, 5vw, 62px);
+
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1px;
+
+  color: #ffffff;
+}
+
+.hero-content p {
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  color: #ffffff !important;
+}
+
+.hero-content p span {
+  margin: 0 8px;
+  opacity: 0.7;
+}
+
+/* =========================================================
+   DECORATIVE HERO SHAPE
+========================================================= */
+
+.overview-hero::after {
+  content: "";
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  right: -180px;
+  bottom: -250px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  box-shadow:
+    0 0 0 45px rgba(255, 255, 255, 0.025),
+    0 0 0 90px rgba(255, 255, 255, 0.018);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+  .overview-hero {
+    min-height: 260px;
+  }
+
+  .hero-content {
+    padding: 55px 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+    letter-spacing: -0.5px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+}

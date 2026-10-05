@@ -1,0 +1,772 @@
+/* =========================================================
+   STUDENT CORNER ADMIN
+========================================================= */
+
+.student-corner-admin-page {
+  min-height: 100vh;
+  padding: 24px;
+  background: #f5f7fb;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.student-corner-header {
+  background: #ffffff;
+  border: 1px solid #e3e8f0;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 18px rgba(20, 40, 80, 0.05);
+}
+
+.student-corner-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  border: 0;
+  background: transparent;
+
+  padding: 0;
+  margin-bottom: 20px;
+
+  color: #526581;
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.student-corner-back:hover {
+  color: #123c6b;
+}
+
+.student-corner-header-content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.student-corner-header-content span {
+  display: block;
+
+  color: #6c7a91;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+}
+
+.student-corner-header-content h1 {
+  margin: 5px 0;
+
+  color: #123c6b;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.student-corner-header-content p {
+  margin: 0;
+
+  color: #718096;
+  font-size: 13px;
+}
+
+/* =========================================================
+   SAVE BUTTON
+========================================================= */
+
+.student-corner-save-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  min-height: 44px;
+  padding: 0 18px;
+
+  border: 0;
+  border-radius: 9px;
+
+  background: #123c6b;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.student-corner-save-btn:hover {
+  background: #0e3158;
+  transform: translateY(-1px);
+}
+
+.student-corner-save-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =========================================================
+   COMMON CARD
+========================================================= */
+
+.student-corner-card {
+  background: #ffffff;
+
+  border: 1px solid #e3e8f0;
+  border-radius: 14px;
+
+  padding: 24px;
+  margin-bottom: 22px;
+
+  box-shadow: 0 4px 18px rgba(20, 40, 80, 0.05);
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.student-corner-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.student-corner-status strong {
+  display: block;
+
+  color: #203b5d;
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.student-corner-status small {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #7a8798;
+  font-size: 12px;
+}
+
+.student-corner-status select {
+  width: 150px;
+  height: 40px;
+
+  padding: 0 12px;
+
+  border: 1px solid #d9e0ea;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #304966;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  outline: none;
+}
+
+.student-corner-status select:focus {
+  border-color: #174a7c;
+}
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.student-corner-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+
+  border-bottom: 1px solid #edf0f5;
+}
+
+.student-corner-card-header span {
+  display: block;
+
+  color: #6c7a91;
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.1px;
+}
+
+.student-corner-card-header h2 {
+  margin: 5px 0 3px;
+
+  color: #203b5d;
+  font-size: 21px;
+  font-weight: 750;
+}
+
+.student-corner-card-header p {
+  margin: 0;
+
+  color: #7a8798;
+  font-size: 12px;
+}
+
+/* =========================================================
+   ADD BUTTON
+========================================================= */
+
+.student-corner-add-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-height: 40px;
+  padding: 0 15px;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: #174a7c;
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.student-corner-add-btn:hover {
+  background: #123c6b;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.student-corner-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.student-corner-table {
+  width: 100%;
+  min-width: 850px;
+
+  border-collapse: collapse;
+}
+
+.student-corner-table thead th {
+  padding: 13px 14px;
+
+  background: #f7f9fc;
+
+  border-bottom: 1px solid #e3e8f0;
+
+  color: #526581;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  text-align: left;
+  white-space: nowrap;
+}
+
+.student-corner-table tbody td {
+  padding: 15px 14px;
+
+  border-bottom: 1px solid #edf0f5;
+
+  color: #526581;
+
+  font-size: 12px;
+
+  vertical-align: middle;
+}
+
+.student-corner-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.student-corner-table tbody tr:hover {
+  background: #fafbfd;
+}
+
+.student-corner-table td strong {
+  color: #304966;
+  font-weight: 700;
+}
+
+.table-description {
+  display: block;
+
+  max-width: 260px;
+
+  margin-top: 4px;
+
+  color: #8995a6;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+/* =========================================================
+   GOOGLE DRIVE LINK
+========================================================= */
+
+.student-corner-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #174a7c;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+}
+
+.student-corner-link:hover {
+  color: #0d3156;
+  text-decoration: underline;
+}
+
+/* =========================================================
+   STATUS BADGES
+========================================================= */
+
+.status-active,
+.status-inactive {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 62px;
+
+  padding: 5px 9px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.status-active {
+  background: #e8f7ef;
+  color: #198754;
+}
+
+.status-inactive {
+  background: #fcebea;
+  color: #c0392b;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.student-corner-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.student-corner-actions button {
+  width: 34px;
+  height: 34px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #e0e6ee;
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #526581;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.student-corner-actions button:first-child:hover {
+  background: #eef4fb;
+  border-color: #cbdced;
+  color: #174a7c;
+}
+
+.student-corner-actions button:last-child:hover {
+  background: #fff1f0;
+  border-color: #f0c7c3;
+  color: #d63031;
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.student-corner-empty {
+  min-height: 230px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+.student-corner-empty > svg {
+  margin-bottom: 14px;
+
+  color: #8ba3be;
+
+  font-size: 38px;
+}
+
+.student-corner-empty h3 {
+  margin: 0 0 7px;
+
+  color: #304966;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.student-corner-empty p {
+  margin: 0;
+
+  color: #7a8798;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.student-corner-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.student-corner-form label {
+  margin-top: 5px;
+
+  color: #304966;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.student-corner-form input,
+.student-corner-form textarea,
+.student-corner-form select {
+  width: 100%;
+
+  padding: 10px 12px;
+
+  border: 1px solid #d9e0ea;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #304966;
+
+  font-size: 13px;
+
+  outline: none;
+
+  transition: border-color 0.2s ease;
+}
+
+.student-corner-form input:focus,
+.student-corner-form textarea:focus,
+.student-corner-form select:focus {
+  border-color: #174a7c;
+
+  box-shadow: 0 0 0 2px rgba(23, 74, 124, 0.08);
+}
+
+.student-corner-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.student-corner-form input::placeholder,
+.student-corner-form textarea::placeholder {
+  color: #a0aabb;
+}
+
+/* =========================================================
+   CHECKBOX
+========================================================= */
+
+.student-corner-checkbox {
+  display: flex !important;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 12px !important;
+
+  cursor: pointer;
+}
+
+.student-corner-checkbox input {
+  width: 16px;
+  height: 16px;
+
+  margin: 0;
+
+  accent-color: #174a7c;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   DELETE MODAL
+========================================================= */
+
+.student-corner-delete-modal {
+  text-align: center;
+
+  padding: 12px 10px 5px;
+}
+
+.student-corner-delete-modal > svg {
+  margin-bottom: 12px;
+
+  color: #d63031;
+
+  font-size: 35px;
+}
+
+.student-corner-delete-modal h4 {
+  margin: 0 0 7px;
+
+  color: #304966;
+
+  font-size: 18px;
+  font-weight: 750;
+}
+
+.student-corner-delete-modal p {
+  margin: 0;
+
+  color: #7a8798;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   SUCCESS / ERROR MODAL
+========================================================= */
+
+.student-corner-message {
+  padding: 20px 10px 8px;
+
+  text-align: center;
+}
+
+.student-corner-message .message-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 14px;
+
+  border-radius: 50%;
+
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.student-corner-message.success .message-icon {
+  background: #e8f7ef;
+  color: #198754;
+}
+
+.student-corner-message.error .message-icon {
+  background: #fcebea;
+  color: #d63031;
+}
+
+.student-corner-message h4 {
+  margin-bottom: 7px;
+
+  color: #304966;
+
+  font-size: 18px;
+  font-weight: 750;
+}
+
+.student-corner-message p {
+  margin-bottom: 18px;
+
+  color: #7a8798;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.student-corner-loading {
+  min-height: 70vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  background: #f5f7fb;
+
+  color: #526581;
+}
+
+.student-corner-loading p {
+  margin-top: 12px;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.student-corner-spinner {
+  width: 35px;
+  height: 35px;
+
+  border: 3px solid #dce5ef;
+  border-top-color: #174a7c;
+
+  border-radius: 50%;
+
+  animation: studentCornerSpin 0.8s linear infinite;
+}
+
+@keyframes studentCornerSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   BOOTSTRAP MODAL IMPROVEMENT
+========================================================= */
+
+.modal-content {
+  border: 0;
+  border-radius: 14px;
+
+  box-shadow: 0 15px 45px rgba(20, 40, 80, 0.18);
+}
+
+.modal-header {
+  padding: 18px 20px;
+
+  border-bottom: 1px solid #edf0f5;
+}
+
+.modal-title {
+  color: #203b5d;
+
+  font-size: 18px;
+  font-weight: 750;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-footer {
+  padding: 14px 20px;
+
+  border-top: 1px solid #edf0f5;
+}
+
+.modal-footer .btn {
+  border-radius: 7px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  padding: 8px 16px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .student-corner-header-content {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .student-corner-save-btn {
+    width: 100%;
+  }
+
+  .student-corner-card-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .student-corner-add-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .student-corner-admin-page {
+    padding: 15px;
+  }
+
+  .student-corner-header,
+  .student-corner-card {
+    padding: 18px;
+  }
+
+  .student-corner-header-content h1 {
+    font-size: 23px;
+  }
+
+  .student-corner-status {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .student-corner-status select {
+    width: 100%;
+  }
+
+  .student-corner-card-header h2 {
+    font-size: 19px;
+  }
+
+  .student-corner-table {
+    min-width: 800px;
+  }
+}

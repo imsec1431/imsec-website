@@ -1,0 +1,828 @@
+/* =========================================================
+   PUBLIC STUDENT HANDBOOK
+========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.publicStudentHandbookPage,
+.publicStudentHandbookPage * {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.publicStudentHandbookPage {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #f5f7fb;
+
+  font-family: "Poppins", sans-serif;
+
+  color: #243447;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.publicStudentHandbookHero {
+  position: relative;
+
+  width: 100%;
+  min-height: 370px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 65px 25px;
+
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #063b82, #1565c0, #1976d2);
+}
+
+.publicStudentHandbookHero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  top: -220px;
+  right: -90px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.publicStudentHandbookHero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 320px;
+  height: 320px;
+
+  bottom: -190px;
+  left: -70px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.publicStudentHandbookHeroOverlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.16));
+}
+
+.publicStudentHandbookHeroContent {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 850px;
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.publicStudentHandbookHeroIcon {
+  width: 68px;
+  height: 68px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 17px;
+
+  border-radius: 19px;
+
+  background: rgba(255, 255, 255, 0.13);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  font-size: 27px;
+}
+
+.publicStudentHandbookHeroContent > span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.publicStudentHandbookHeroContent h1 {
+  margin: 0 0 14px;
+
+  font-size: 45px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+.publicStudentHandbookHeroContent p {
+  max-width: 700px;
+
+  margin: auto;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.publicStudentHandbookSection {
+  width: 100%;
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 70px 30px 90px;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.publicStudentHandbookHeading {
+  max-width: 800px;
+
+  margin: 0 auto 45px;
+
+  text-align: center;
+}
+
+.publicStudentHandbookHeading > span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #1565c0;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.7px;
+}
+
+.publicStudentHandbookHeading h2 {
+  margin: 0 0 12px;
+
+  color: #173a5c;
+
+  font-size: 34px;
+
+  line-height: 1.3;
+
+  font-weight: 700;
+}
+
+.publicStudentHandbookHeading p {
+  max-width: 720px;
+
+  margin: auto;
+
+  color: #748292;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   LIST
+========================================================= */
+
+.publicStudentHandbookList {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.publicStudentHandbookCard {
+  width: 100%;
+
+  min-height: 105px;
+
+  display: grid;
+
+  grid-template-columns:
+    45px
+    60px
+    minmax(0, 1fr)
+    auto;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 18px 22px;
+
+  border: 1px solid #e3e9ef;
+
+  border-radius: 17px;
+
+  background: #ffffff;
+
+  box-shadow: 0 9px 28px rgba(0, 0, 0, 0.055);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.publicStudentHandbookCard:hover {
+  transform: translateY(-3px);
+
+  border-color: #c8d9ec;
+
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.09);
+}
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.publicStudentHandbookNumber {
+  color: #9aa8b6;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  text-align: center;
+}
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.publicStudentHandbookIcon {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background: linear-gradient(135deg, #e8f1fc, #dceafa);
+
+  color: #1565c0;
+
+  font-size: 22px;
+}
+
+/* =========================================================
+   INFORMATION
+========================================================= */
+
+.publicStudentHandbookInfo {
+  min-width: 0;
+}
+
+.publicStudentHandbookInfo > span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #1565c0;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.3px;
+}
+
+.publicStudentHandbookInfo h3 {
+  overflow: hidden;
+
+  margin: 0;
+
+  color: #173a5c;
+
+  font-size: 17px;
+
+  line-height: 1.45;
+
+  font-weight: 650;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.publicStudentHandbookActions {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 8px;
+}
+
+.publicStudentHandbookActions a {
+  min-height: 39px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 9px 14px;
+
+  border-radius: 9px;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.publicStudentHandbookActions a:hover {
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   VIEW
+========================================================= */
+
+.publicStudentHandbookView {
+  border: 1px solid #b9d2ed;
+
+  background: #edf5fd;
+
+  color: #1565c0;
+}
+
+.publicStudentHandbookView:hover {
+  background: #e0effc;
+
+  box-shadow: 0 6px 16px rgba(21, 101, 192, 0.12);
+}
+
+/* =========================================================
+   DOWNLOAD
+========================================================= */
+
+.publicStudentHandbookDownload {
+  border: none;
+
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+
+  color: #ffffff;
+
+  box-shadow: 0 6px 16px rgba(21, 101, 192, 0.18);
+}
+
+.publicStudentHandbookDownload:hover {
+  box-shadow: 0 9px 21px rgba(21, 101, 192, 0.28);
+}
+
+/* =========================================================
+   EXTERNAL
+========================================================= */
+
+.publicStudentHandbookExternal {
+  width: 39px;
+
+  padding: 9px !important;
+
+  border: 1px solid #dbe3eb;
+
+  background: #ffffff;
+
+  color: #687989;
+}
+
+.publicStudentHandbookExternal:hover {
+  background: #f4f7fa;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.publicStudentHandbookLoading {
+  min-height: 280px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.publicStudentHandbookSpinner {
+  width: 42px;
+  height: 42px;
+
+  margin-bottom: 15px;
+
+  border: 4px solid #dce7f3;
+
+  border-top-color: #1565c0;
+
+  border-radius: 50%;
+
+  animation: studentHandbookSpin 0.8s linear infinite;
+}
+
+@keyframes studentHandbookSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.publicStudentHandbookLoading p {
+  margin: 0;
+
+  color: #718096;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.publicStudentHandbookError {
+  min-height: 250px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  color: #c62828;
+
+  text-align: center;
+}
+
+.publicStudentHandbookError svg {
+  margin-bottom: 12px;
+
+  font-size: 35px;
+}
+
+.publicStudentHandbookError p {
+  margin: 0;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.publicStudentHandbookEmpty {
+  min-height: 280px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  text-align: center;
+}
+
+.publicStudentHandbookEmpty svg {
+  margin-bottom: 15px;
+
+  color: #1565c0;
+
+  font-size: 38px;
+}
+
+.publicStudentHandbookEmpty h3 {
+  margin: 0 0 8px;
+
+  color: #173a5c;
+
+  font-size: 20px;
+}
+
+.publicStudentHandbookEmpty p {
+  margin: 0;
+
+  color: #7a8795;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+  .publicStudentHandbookCard {
+    grid-template-columns:
+      40px
+      55px
+      minmax(0, 1fr);
+
+    align-items: start;
+  }
+
+  .publicStudentHandbookActions {
+    grid-column: 3 / -1;
+
+    justify-content: flex-start;
+
+    padding-top: 4px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .publicStudentHandbookHero {
+    min-height: 320px;
+
+    padding: 50px 20px;
+  }
+
+  .publicStudentHandbookHeroIcon {
+    width: 58px;
+    height: 58px;
+
+    font-size: 23px;
+  }
+
+  .publicStudentHandbookHeroContent h1 {
+    font-size: 34px;
+  }
+
+  .publicStudentHandbookHeroContent p {
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+  .publicStudentHandbookSection {
+    padding: 50px 15px 65px;
+  }
+
+  .publicStudentHandbookHeading {
+    margin-bottom: 32px;
+  }
+
+  .publicStudentHandbookHeading h2 {
+    font-size: 28px;
+  }
+
+  .publicStudentHandbookHeading p {
+    font-size: 12px;
+  }
+
+  /* -----------------------------------------
+     CARD
+  ----------------------------------------- */
+
+  .publicStudentHandbookCard {
+    grid-template-columns:
+      42px
+      minmax(0, 1fr);
+
+    gap: 12px;
+
+    padding: 16px;
+  }
+
+  .publicStudentHandbookNumber {
+    grid-column: 1;
+
+    grid-row: 1;
+
+    align-self: start;
+  }
+
+  .publicStudentHandbookIcon {
+    grid-column: 1;
+
+    grid-row: 2;
+
+    width: 42px;
+    height: 42px;
+
+    font-size: 17px;
+
+    border-radius: 11px;
+  }
+
+  .publicStudentHandbookInfo {
+    grid-column: 2;
+
+    grid-row: 1 / span 2;
+  }
+
+  .publicStudentHandbookInfo h3 {
+    white-space: normal;
+
+    overflow: visible;
+
+    text-overflow: clip;
+
+    font-size: 15px;
+  }
+
+  /* -----------------------------------------
+     ACTIONS
+  ----------------------------------------- */
+
+  .publicStudentHandbookActions {
+    grid-column: 1 / -1;
+
+    grid-row: 3;
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr auto;
+
+    gap: 7px;
+
+    padding-top: 6px;
+  }
+
+  .publicStudentHandbookActions a {
+    width: 100%;
+
+    min-height: 41px;
+  }
+
+  .publicStudentHandbookExternal {
+    width: 41px !important;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .publicStudentHandbookHero {
+    min-height: 290px;
+
+    padding: 45px 15px;
+  }
+
+  .publicStudentHandbookHeroIcon {
+    width: 52px;
+    height: 52px;
+
+    margin-bottom: 14px;
+
+    border-radius: 15px;
+
+    font-size: 20px;
+  }
+
+  .publicStudentHandbookHeroContent h1 {
+    font-size: 27px;
+  }
+
+  .publicStudentHandbookHeroContent p {
+    font-size: 12px;
+  }
+
+  .publicStudentHandbookSection {
+    padding: 40px 10px 55px;
+  }
+
+  .publicStudentHandbookHeading h2 {
+    font-size: 24px;
+  }
+
+  .publicStudentHandbookHeading p {
+    font-size: 12px;
+  }
+
+  .publicStudentHandbookCard {
+    padding: 14px;
+
+    border-radius: 13px;
+  }
+
+  .publicStudentHandbookInfo h3 {
+    font-size: 14px;
+  }
+
+  .publicStudentHandbookActions {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .publicStudentHandbookView,
+  .publicStudentHandbookDownload {
+    font-size: 10px !important;
+  }
+
+  .publicStudentHandbookExternal {
+    grid-column: 1 / -1;
+
+    width: 100% !important;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+  .publicStudentHandbookHeroContent h1 {
+    font-size: 24px;
+  }
+
+  .publicStudentHandbookSection {
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+
+  .publicStudentHandbookActions {
+    grid-template-columns: 1fr;
+  }
+
+  .publicStudentHandbookExternal {
+    grid-column: auto;
+  }
+}

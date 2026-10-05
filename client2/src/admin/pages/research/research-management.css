@@ -1,0 +1,174 @@
+.research-management {
+  width: 100%;
+  padding: 25px;
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.research-management-header {
+  margin-bottom: 30px;
+}
+
+.research-management-header h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.research-management-header p {
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* ================================
+   GRID
+================================ */
+
+.research-management-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* ================================
+   CARD
+================================ */
+
+.research-management-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  min-height: 125px;
+  padding: 22px;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.research-management-card:hover {
+  transform: translateY(-3px);
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* ================================
+   ICON
+================================ */
+
+.research-management-icon {
+  width: 58px;
+  height: 58px;
+
+  min-width: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f1f5f9;
+  color: #1e3a8a;
+
+  border-radius: 12px;
+
+  font-size: 24px;
+}
+
+/* ================================
+   CONTENT
+================================ */
+
+.research-management-content {
+  flex: 1;
+}
+
+.research-management-content h3 {
+  margin: 0 0 7px;
+
+  font-size: 18px;
+  font-weight: 650;
+
+  color: #111827;
+}
+
+.research-management-content p {
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  color: #6b7280;
+}
+
+/* ================================
+   ARROW
+================================ */
+
+.research-management-arrow {
+  font-size: 24px;
+  color: #9ca3af;
+
+  transition: all 0.2s ease;
+}
+
+.research-management-card:hover .research-management-arrow {
+  transform: translateX(5px);
+  color: #1e3a8a;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+  .research-management-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 576px) {
+  .research-management {
+    padding: 15px;
+  }
+
+  .research-management-header h2 {
+    font-size: 22px;
+  }
+
+  .research-management-header p {
+    font-size: 13px;
+  }
+
+  .research-management-card {
+    min-height: 105px;
+    padding: 18px;
+  }
+
+  .research-management-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    font-size: 20px;
+  }
+
+  .research-management-content h3 {
+    font-size: 16px;
+  }
+
+  .research-management-content p {
+    font-size: 12px;
+  }
+}

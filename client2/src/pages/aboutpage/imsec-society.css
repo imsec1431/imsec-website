@@ -1,0 +1,315 @@
+/* =========================================
+   IMS SOCIETY PAGE
+========================================= */
+
+.ims-society-page {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #1c2740;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.ims-society-hero {
+  min-height: 300px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 55px 24px;
+
+  background: linear-gradient(135deg, #071b3d 0%, #0d3972 55%, #155da5 100%);
+
+  color: #ffffff;
+}
+
+.ims-society-hero-content {
+  width: 100%;
+  max-width: 1100px;
+  text-align: center;
+}
+
+.ims-society-hero-content span {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  opacity: 0.85;
+}
+
+.ims-society-hero-content h1 {
+  margin: 0;
+
+  font-size: clamp(38px, 5vw, 62px);
+
+  line-height: 1.15;
+
+  font-weight: 800;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.ims-society-content {
+  padding: 10vh 24px;
+}
+
+.ims-society-container {
+  width: 100%;
+  max-width: 1050px;
+
+  margin: 0 auto;
+}
+
+/* =========================================
+   INTRODUCTION
+========================================= */
+
+.ims-society-introduction {
+  margin: 0 0 10vh 0;
+
+  padding: 24px 30px;
+
+  border-left: 4px solid #1764aa;
+
+  border-radius: 0;
+
+  background: #f4f7fb;
+}
+
+.ims-society-introduction p {
+  margin: 0;
+
+  color: #35415a;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+}
+
+/* =========================================
+   SOCIETY SECTIONS
+========================================= */
+
+.ims-society-section {
+  margin: 0 0 10vh 0;
+
+  padding: 0;
+}
+
+/*
+   Last section has no extra bottom spacing
+*/
+
+.ims-society-section:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.ims-society-section h2 {
+  margin: 0;
+
+  padding: 0;
+
+  color: #102c56;
+
+  font-size: 28px;
+
+  line-height: 1.25;
+
+  font-weight: 800;
+}
+
+/* =========================================
+   HEADING UNDERLINE
+========================================= */
+
+.ims-society-section h2::after {
+  content: "";
+
+  display: block;
+
+  width: 45px;
+
+  height: 3px;
+
+  margin: 8px 0 0;
+
+  background: #1764aa;
+}
+
+/* =========================================
+   SECTION TEXT
+========================================= */
+
+.ims-society-section p {
+  margin: 0;
+
+  padding: 0;
+
+  color: #5d687b;
+
+  font-size: 16px;
+
+  line-height: 1.75;
+}
+
+/* =========================================
+   MAIN CONTENT TEXT
+========================================= */
+
+.ims-society-text {
+  margin: 0;
+  padding: 0;
+}
+
+.ims-society-text p {
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================
+   STATUS
+========================================= */
+
+.ims-society-status {
+  min-height: 60vh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+
+  color: #596579;
+
+  font-size: 17px;
+
+  text-align: center;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .ims-society-container {
+    max-width: 100%;
+
+    padding: 0 20px;
+
+    box-sizing: border-box;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .ims-society-hero {
+    min-height: 250px;
+
+    padding: 45px 20px;
+  }
+
+  .ims-society-hero-content h1 {
+    font-size: 37px;
+  }
+
+  .ims-society-content {
+    padding: 5vh 18px;
+  }
+
+  .ims-society-container {
+    padding: 0;
+  }
+
+  /* =======================================
+     INTRODUCTION
+  ======================================= */
+
+  .ims-society-introduction {
+    margin: 0 0 5vh 0;
+
+    padding: 20px 22px;
+  }
+
+  .ims-society-introduction p {
+    font-size: 16px;
+
+    line-height: 1.7;
+  }
+
+  /* =======================================
+     SECTIONS
+  ======================================= */
+
+  .ims-society-section {
+    margin: 0 0 5vh 0;
+
+    padding: 0;
+  }
+
+  .ims-society-section:last-child {
+    margin-bottom: 0;
+  }
+
+  /* =======================================
+     HEADINGS
+  ======================================= */
+
+  .ims-society-section h2 {
+    margin: 0;
+    padding: 0;
+
+    font-size: 25px;
+
+    line-height: 1.25;
+  }
+
+  .ims-society-section h2::after {
+    width: 40px;
+
+    height: 3px;
+
+    margin-top: 7px;
+  }
+
+  /* =======================================
+     TEXT
+  ======================================= */
+
+  .ims-society-section p {
+    margin: 0;
+    padding: 0;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+  .ims-society-text {
+    margin: 0;
+    padding: 0;
+  }
+
+  .ims-society-text p {
+    margin: 0;
+    padding: 0;
+  }
+}

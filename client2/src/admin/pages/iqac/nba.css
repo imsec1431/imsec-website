@@ -1,0 +1,551 @@
+/* =========================================================
+   NBA ADMIN PAGE
+========================================================= */
+
+.nba-admin-page {
+  min-height: 100vh;
+  padding: 28px;
+  background: #f5f7fb;
+  color: #172033;
+}
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.nba-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.nba-page-header h2 {
+  margin: 0 0 6px;
+  color: #0b1f3a;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.nba-page-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* =========================================================
+   ALERT
+========================================================= */
+
+.nba-alert {
+  margin-bottom: 20px;
+  padding: 13px 16px;
+  border: 1px solid #f1c7c7;
+  border-radius: 10px;
+  background: #fff1f1;
+  color: #a32626;
+  font-size: 14px;
+}
+
+/* =========================================================
+   PANEL
+========================================================= */
+
+.nba-panel {
+  margin-bottom: 25px;
+  overflow: hidden;
+  border: 1px solid #e4e8ef;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 8px 25px rgba(15, 35, 65, 0.06);
+}
+
+.nba-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 22px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.nba-panel-header h3 {
+  margin: 0 0 5px;
+  color: #0b1f3a;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.nba-panel-header p {
+  margin: 0;
+  color: #7b8493;
+  font-size: 13px;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.nba-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 22px;
+}
+
+.nba-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.nba-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 18px;
+}
+
+.nba-full-width {
+  grid-column: 1 / -1;
+}
+
+.nba-form-group label {
+  color: #27364d;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.nba-form-group input,
+.nba-form-group select {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 13px;
+  border: 1px solid #d8dee8;
+  border-radius: 9px;
+  outline: none;
+  background: #ffffff;
+  color: #172033;
+  font-size: 14px;
+  transition: 0.2s ease;
+  box-sizing: border-box;
+}
+
+.nba-form-group input:focus,
+.nba-form-group select:focus {
+  border-color: #b8944d;
+  box-shadow: 0 0 0 3px rgba(184, 148, 77, 0.12);
+}
+
+.nba-form-group input:disabled,
+.nba-form-group select:disabled {
+  background: #f6f7f9;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.nba-btn {
+  min-height: 42px;
+  padding: 10px 17px;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+  white-space: nowrap;
+}
+
+.nba-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.nba-btn-primary {
+  background: #0b1f3a;
+  color: #ffffff;
+}
+
+.nba-btn-primary:hover:not(:disabled) {
+  background: #142f52;
+  transform: translateY(-1px);
+}
+
+.nba-btn-secondary {
+  border: 1px solid #d6b56c;
+  background: #ffffff;
+  color: #8a6928;
+}
+
+.nba-btn-secondary:hover:not(:disabled) {
+  background: #fffaf0;
+}
+
+.nba-btn-light {
+  border: 1px solid #d8dee8;
+  background: #ffffff;
+  color: #374151;
+}
+
+.nba-btn-light:hover:not(:disabled) {
+  background: #f5f6f8;
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.nba-empty {
+  padding: 55px 20px;
+  text-align: center;
+}
+
+.nba-empty h4 {
+  margin: 0 0 8px;
+  color: #0b1f3a;
+  font-size: 18px;
+}
+
+.nba-empty p {
+  margin: 0 0 20px;
+  color: #7b8493;
+  font-size: 14px;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.nba-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.nba-table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+}
+
+.nba-table thead {
+  background: #f8f9fb;
+}
+
+.nba-table th {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e5e8ed;
+  color: #4b5563;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.nba-table td {
+  padding: 16px;
+  border-bottom: 1px solid #edf0f4;
+  color: #4b5563;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.nba-table tbody tr {
+  transition: 0.15s ease;
+}
+
+.nba-table tbody tr:hover {
+  background: #fbfcfe;
+}
+
+.nba-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.nba-table td strong {
+  color: #0b1f3a;
+  font-weight: 650;
+}
+
+/* =========================================================
+   PDF LINK
+========================================================= */
+
+.nba-pdf-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #f7f1e3;
+  color: #8a6928;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nba-pdf-link:hover {
+  background: #efe3c7;
+  color: #6e521d;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.nba-status {
+  padding: 6px 11px;
+  border: none;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.nba-status.published {
+  background: #e8f7ef;
+  color: #197044;
+}
+
+.nba-status.unpublished {
+  background: #f1f3f5;
+  color: #6b7280;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.nba-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.nba-action {
+  padding: 6px 10px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nba-action.view {
+  border-color: #d8e2ef;
+  color: #31577f;
+  background: #f4f8fc;
+}
+
+.nba-action.view:hover {
+  background: #eaf1f8;
+}
+
+.nba-action.edit {
+  border-color: #ead9ae;
+  color: #8a6928;
+  background: #fffaf0;
+}
+
+.nba-action.edit:hover {
+  background: #f8edcf;
+}
+
+.nba-action.delete {
+  border-color: #f0cccc;
+  color: #b12e2e;
+  background: #fff5f5;
+}
+
+.nba-action.delete:hover {
+  background: #fee9e9;
+}
+
+.nba-action:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.nba-modal-overlay {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(8, 22, 40, 0.62);
+}
+
+.nba-modal {
+  width: 100%;
+  max-width: 620px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+}
+
+.nba-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 22px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.nba-modal-header h3 {
+  margin: 0 0 5px;
+  color: #0b1f3a;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.nba-modal-header p {
+  margin: 0;
+  color: #7b8493;
+  font-size: 13px;
+}
+
+.nba-modal-close {
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: #f3f5f7;
+  color: #4b5563;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.nba-modal-close:hover {
+  background: #e8ebef;
+}
+
+.nba-modal-body {
+  padding: 22px;
+}
+
+.nba-modal-body .nba-form-group:last-child {
+  margin-bottom: 0;
+}
+
+.nba-modal-pdf {
+  width: fit-content;
+  margin-top: 2px;
+  color: #8a6928;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nba-modal-pdf:hover {
+  text-decoration: underline;
+}
+
+.nba-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 16px 22px;
+  border-top: 1px solid #edf0f4;
+  background: #fafbfc;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.nba-loading {
+  display: flex;
+  min-height: 300px;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+  .nba-admin-page {
+    padding: 18px;
+  }
+
+  .nba-page-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nba-page-header .nba-btn {
+    width: 100%;
+  }
+
+  .nba-panel-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nba-panel-header .nba-btn {
+    width: 100%;
+  }
+
+  .nba-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nba-full-width {
+    grid-column: auto;
+  }
+
+  .nba-form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .nba-modal {
+    max-height: 94vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .nba-admin-page {
+    padding: 12px;
+  }
+
+  .nba-page-header h2 {
+    font-size: 23px;
+  }
+
+  .nba-panel-header,
+  .nba-form-grid,
+  .nba-modal-body {
+    padding: 16px;
+  }
+
+  .nba-modal-header,
+  .nba-modal-footer {
+    padding: 15px 16px;
+  }
+
+  .nba-modal-footer {
+    flex-direction: column-reverse;
+  }
+
+  .nba-modal-footer .nba-btn {
+    width: 100%;
+  }
+}

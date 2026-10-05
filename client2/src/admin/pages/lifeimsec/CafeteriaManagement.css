@@ -1,0 +1,480 @@
+/* =========================================================
+   CAFETERIA MANAGEMENT
+========================================================= */
+
+.cafeteria-management {
+  padding: 28px;
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.cafeteria-admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+  padding: 26px 30px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #071d3a 0%, #0a2e5c 55%, #123f7a 100%);
+  box-shadow: 0 12px 35px rgba(7, 29, 58, 0.18);
+  color: #fff;
+}
+
+.cafeteria-admin-header > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.cafeteria-admin-icon {
+  width: 58px;
+  height: 58px;
+  min-width: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 25px;
+}
+
+.cafeteria-admin-header h1 {
+  margin: 0 0 5px;
+  font-size: 27px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.cafeteria-admin-header p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+}
+
+.cafeteria-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.cafeteria-header-actions .btn {
+  min-height: 44px;
+  border-radius: 10px;
+  padding: 9px 17px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   ALERTS
+========================================================= */
+
+.cafeteria-management .alert {
+  border: none;
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+}
+
+/* =========================================================
+   ADMIN CARDS
+========================================================= */
+
+.cafeteria-admin-card {
+  border: 1px solid #e8edf3 !important;
+  border-radius: 18px !important;
+  margin-bottom: 25px;
+  background: #fff;
+  box-shadow: 0 8px 28px rgba(15, 35, 60, 0.07) !important;
+  overflow: hidden;
+}
+
+.cafeteria-admin-card .card-body {
+  padding: 30px;
+}
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.cafeteria-section-heading {
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.cafeteria-section-heading span {
+  display: inline-block;
+  margin-bottom: 7px;
+  color: #c69700;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.cafeteria-section-heading h2 {
+  margin: 0 0 7px;
+  color: #102a43;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.cafeteria-section-heading p {
+  margin: 0;
+  color: #718096;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.cafeteria-management .form-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #26384a;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.cafeteria-management .form-control {
+  min-height: 46px;
+  border: 1px solid #dce3eb;
+  border-radius: 10px;
+  color: #26384a;
+  font-size: 14px;
+  box-shadow: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cafeteria-management textarea.form-control {
+  min-height: 155px;
+  resize: vertical;
+  line-height: 1.65;
+}
+
+.cafeteria-management .form-control:focus {
+  border-color: #376ea6;
+  box-shadow: 0 0 0 3px rgba(55, 110, 166, 0.1);
+}
+
+.cafeteria-management .form-text {
+  margin-top: 7px;
+  font-size: 12px;
+}
+
+/* =========================================================
+   IMAGE UPLOAD
+========================================================= */
+
+.cafeteria-image-upload {
+  height: 100%;
+}
+
+.cafeteria-image-upload > .form-label {
+  margin-bottom: 10px;
+}
+
+.cafeteria-image-preview {
+  width: 100%;
+  height: 235px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  border: 1px solid #e0e6ed;
+  border-radius: 14px;
+  background: #f5f7fa;
+}
+
+.cafeteria-image-preview img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.cafeteria-image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #9aa7b5;
+  background: repeating-linear-gradient(
+    45deg,
+    #f7f9fb,
+    #f7f9fb 10px,
+    #f1f4f7 10px,
+    #f1f4f7 20px
+  );
+}
+
+.cafeteria-image-placeholder svg {
+  font-size: 30px;
+}
+
+.cafeteria-image-placeholder span {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.cafeteria-image-upload input[type="file"] {
+  min-height: auto;
+  padding: 9px 12px;
+  font-size: 12px;
+  background: #fff;
+}
+
+.cafeteria-selected-file {
+  display: block;
+  margin-top: 8px;
+  color: #2d6a4f;
+  font-size: 11px;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.cafeteria-image-help {
+  display: block;
+  margin-top: 7px;
+  color: #8a97a5;
+  font-size: 11px;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.cafeteria-management .btn-primary {
+  border: none;
+  background: #0a2e5c;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 0 5px 14px rgba(10, 46, 92, 0.16);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.cafeteria-management .btn-primary:hover {
+  background: #071f40;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(10, 46, 92, 0.22);
+}
+
+.cafeteria-management .btn-outline-secondary {
+  border-color: #d7dee7;
+  color: #526274;
+  background: #fff;
+}
+
+.cafeteria-management .btn-outline-secondary:hover {
+  border-color: #b8c3cf;
+  background: #f6f8fa;
+  color: #26384a;
+}
+
+/* =========================================================
+   BOTTOM ACTION
+========================================================= */
+
+.cafeteria-bottom-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 4px 0 25px;
+}
+
+.cafeteria-bottom-actions .btn {
+  min-width: 190px;
+  min-height: 48px;
+  border-radius: 11px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.cafeteria-loading {
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #718096;
+}
+
+.cafeteria-loading .spinner-border {
+  width: 38px;
+  height: 38px;
+  margin-bottom: 15px;
+}
+
+.cafeteria-loading p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+  .cafeteria-management {
+    padding: 22px;
+  }
+
+  .cafeteria-admin-header {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .cafeteria-header-actions {
+    width: 100%;
+  }
+
+  .cafeteria-header-actions .btn {
+    flex: 1;
+  }
+
+  .cafeteria-admin-card .card-body {
+    padding: 24px;
+  }
+
+  .cafeteria-image-preview {
+    height: 260px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+  .cafeteria-management {
+    padding: 14px;
+  }
+
+  .cafeteria-admin-header {
+    padding: 20px;
+    border-radius: 15px;
+    gap: 20px;
+  }
+
+  .cafeteria-admin-header > div:first-child {
+    align-items: flex-start;
+  }
+
+  .cafeteria-admin-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 13px;
+    font-size: 20px;
+  }
+
+  .cafeteria-admin-header h1 {
+    font-size: 21px;
+  }
+
+  .cafeteria-admin-header p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .cafeteria-header-actions {
+    flex-direction: column;
+  }
+
+  .cafeteria-header-actions .btn {
+    width: 100%;
+  }
+
+  .cafeteria-admin-card {
+    border-radius: 14px !important;
+    margin-bottom: 18px;
+  }
+
+  .cafeteria-admin-card .card-body {
+    padding: 19px;
+  }
+
+  .cafeteria-section-heading {
+    margin-bottom: 22px;
+    padding-bottom: 16px;
+  }
+
+  .cafeteria-section-heading h2 {
+    font-size: 18px;
+  }
+
+  .cafeteria-section-heading p {
+    font-size: 12px;
+  }
+
+  .cafeteria-image-preview {
+    height: 210px;
+  }
+
+  .cafeteria-bottom-actions {
+    padding-bottom: 15px;
+  }
+
+  .cafeteria-bottom-actions .btn {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .cafeteria-management {
+    padding: 10px;
+  }
+
+  .cafeteria-admin-header {
+    padding: 17px;
+  }
+
+  .cafeteria-admin-header > div:first-child {
+    gap: 12px;
+  }
+
+  .cafeteria-admin-header h1 {
+    font-size: 18px;
+  }
+
+  .cafeteria-admin-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    font-size: 17px;
+  }
+
+  .cafeteria-admin-card .card-body {
+    padding: 16px;
+  }
+
+  .cafeteria-image-preview {
+    height: 185px;
+  }
+
+  .cafeteria-management .form-control {
+    font-size: 13px;
+  }
+}

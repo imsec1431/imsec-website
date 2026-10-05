@@ -1,0 +1,304 @@
+/* =========================================================
+   ACCREDITATIONS DASHBOARD
+   ADMIN FRONTEND
+   ========================================================= */
+
+.accreditations-dashboard {
+  min-height: calc(100vh - 80px);
+  padding: 35px;
+  background: #f5f7fa;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.accreditations-dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+  padding: 30px 32px;
+
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, #071837, #102d57);
+
+  box-shadow: 0 10px 30px rgba(16, 38, 74, 0.12);
+}
+
+.accreditations-dashboard-eyebrow {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #d4a948;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.accreditations-dashboard-header h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 30px;
+  line-height: 1.3;
+
+  font-weight: 700;
+}
+
+.accreditations-dashboard-header p {
+  max-width: 720px;
+
+  margin: 10px 0 0;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   CARD GRID
+   ========================================================= */
+
+.accreditations-card-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.accreditations-dashboard-card {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  min-height: 310px;
+
+  padding: 25px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e9ef;
+
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  box-shadow: 0 6px 20px rgba(16, 38, 74, 0.06);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.accreditations-dashboard-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 130px;
+  height: 130px;
+
+  right: -65px;
+  bottom: -65px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(212, 169, 72, 0.15);
+
+  pointer-events: none;
+}
+
+.accreditations-dashboard-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #d4a948;
+
+  box-shadow: 0 15px 35px rgba(16, 38, 74, 0.12);
+}
+
+/* =========================================================
+   CARD TOP
+   ========================================================= */
+
+.accreditations-card-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 24px;
+}
+
+/* Icon */
+
+.accreditations-card-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  color: #d4a948;
+
+  background: #10264a;
+
+  font-size: 23px;
+
+  box-shadow: 0 7px 16px rgba(16, 38, 74, 0.15);
+}
+
+/* Number */
+
+.accreditations-card-number {
+  color: #b9bec7;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.accreditations-dashboard-card h2 {
+  margin: 0 0 12px;
+
+  color: #10264a;
+
+  font-size: 21px;
+
+  line-height: 1.35;
+
+  font-weight: 700;
+}
+
+.accreditations-dashboard-card p {
+  margin: 0;
+
+  color: #6c7686;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+/* =========================================================
+   MANAGE BUTTON
+   ========================================================= */
+
+.accreditations-card-button {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  margin-top: auto;
+  padding: 11px 15px;
+
+  border: 1px solid #10264a;
+
+  border-radius: 6px;
+
+  color: #ffffff;
+
+  background: #10264a;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.accreditations-card-button:hover {
+  color: #ffffff;
+
+  background: #183d70;
+
+  border-color: #183d70;
+}
+
+.accreditations-card-button span {
+  font-size: 18px;
+
+  line-height: 1;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .accreditations-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+  .accreditations-dashboard {
+    padding: 20px 15px;
+  }
+
+  .accreditations-dashboard-header {
+    padding: 24px 20px;
+
+    margin-bottom: 20px;
+  }
+
+  .accreditations-dashboard-header h1 {
+    font-size: 24px;
+  }
+
+  .accreditations-dashboard-header p {
+    font-size: 13px;
+  }
+
+  .accreditations-card-grid {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+  .accreditations-dashboard-card {
+    min-height: 285px;
+
+    padding: 22px;
+  }
+}

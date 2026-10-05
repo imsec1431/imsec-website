@@ -1,0 +1,811 @@
+/* =========================================================
+   ADMISSION APPLICATIONS - ADMIN
+========================================================= */
+
+.admission-applications-admin-page {
+  min-height: 100vh;
+  padding: 30px;
+  background: #f5f7fa;
+  color: #202938;
+}
+
+.admission-applications-admin-container {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.admission-admin-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.admission-admin-header > div:first-child {
+  min-width: 0;
+}
+
+.admission-admin-header span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #858e9b;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.admission-admin-header h1 {
+  margin: 0;
+
+  color: #1d2736;
+
+  font-size: 30px;
+  font-weight: 750;
+  line-height: 1.25;
+}
+
+.admission-admin-header p {
+  margin: 8px 0 0;
+
+  color: #747e8c;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   EXCEL BUTTON
+========================================================= */
+
+.admission-excel-button {
+  flex-shrink: 0;
+
+  min-height: 41px;
+
+  padding: 9px 17px !important;
+
+  color: #ffffff !important;
+
+  background: #293342 !important;
+
+  border: 1px solid #293342 !important;
+  border-radius: 7px !important;
+
+  font-size: 12px;
+  font-weight: 650;
+
+  box-shadow: none !important;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.admission-excel-button:hover {
+  background: #202936 !important;
+
+  border-color: #202936 !important;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.admission-admin-card {
+  margin-bottom: 20px;
+
+  overflow: hidden;
+
+  background: #ffffff !important;
+
+  border: 1px solid #e1e6ec !important;
+  border-radius: 12px !important;
+
+  box-shadow: 0 5px 20px rgba(20, 30, 50, 0.035);
+}
+
+.admission-admin-card .card-body {
+  padding: 21px;
+}
+
+.admission-admin-card .card-header {
+  display: flex;
+  align-items: center;
+
+  padding: 18px 21px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #edf0f3;
+}
+
+.admission-admin-card .card-header span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #929aa5;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.admission-admin-card .card-header h2 {
+  margin: 0;
+
+  color: #293342;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+.admission-admin-card .form-label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #3a4554;
+
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.admission-admin-card .form-control,
+.admission-admin-card .form-select {
+  min-height: 41px;
+
+  color: #303947;
+
+  background-color: #ffffff;
+
+  border: 1px solid #dce1e7;
+  border-radius: 7px;
+
+  font-size: 12px;
+
+  box-shadow: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.admission-admin-card .form-control:focus,
+.admission-admin-card .form-select:focus {
+  border-color: #8993a1;
+
+  box-shadow: 0 0 0 3px rgba(90, 105, 125, 0.08);
+}
+
+.admission-admin-card .form-control::placeholder {
+  color: #a2a9b2;
+}
+
+/* =========================================================
+   FILTER ACTIONS
+========================================================= */
+
+.admission-filter-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.admission-filter-actions .btn {
+  min-height: 41px;
+
+  flex: 1;
+
+  padding: 7px 10px;
+
+  border-radius: 7px;
+
+  font-size: 11px;
+  font-weight: 650;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.admission-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+.admission-applications-table {
+  min-width: 1050px;
+
+  margin: 0 !important;
+
+  vertical-align: middle;
+}
+
+.admission-applications-table thead th {
+  padding: 13px 15px;
+
+  color: #7c8592;
+
+  background: #fafbfc;
+
+  border-bottom: 1px solid #e3e7eb;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.9px;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+.admission-applications-table tbody td {
+  padding: 15px;
+
+  color: #414b59;
+
+  border-bottom: 1px solid #edf0f3;
+
+  font-size: 12px;
+
+  vertical-align: middle;
+}
+
+.admission-applications-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.admission-applications-table tbody tr {
+  transition: background 0.15s ease;
+}
+
+.admission-applications-table tbody tr:hover {
+  background: #fafbfc;
+}
+
+.admission-applications-table strong {
+  color: #303947;
+
+  font-weight: 650;
+}
+
+.admission-applications-table small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #929aa5;
+
+  font-size: 10px;
+}
+
+.admission-applications-table .badge {
+  padding: 6px 8px;
+
+  border-radius: 5px;
+
+  font-size: 9px;
+  font-weight: 650;
+}
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.admission-empty-cell {
+  height: 180px;
+
+  color: #929aa5 !important;
+
+  font-size: 12px !important;
+
+  text-align: center;
+}
+
+/* =========================================================
+   TABLE ACTION
+========================================================= */
+
+.admission-applications-table .btn {
+  min-width: 52px;
+
+  padding: 6px 10px;
+
+  border-radius: 6px;
+
+  font-size: 10px;
+  font-weight: 650;
+}
+
+/* =========================================================
+   PAGINATION
+========================================================= */
+
+.admission-admin-card .card-footer {
+  padding: 14px 20px;
+
+  background: #ffffff;
+
+  border-top: 1px solid #edf0f3;
+}
+
+.admission-pagination {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+}
+
+.admission-pagination span {
+  color: #747e8c;
+
+  font-size: 11px;
+}
+
+.admission-pagination .btn {
+  min-width: 75px;
+
+  border-radius: 6px;
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.admission-applications-admin-page .modal-content {
+  overflow: hidden;
+
+  border: 1px solid #dfe4e9;
+  border-radius: 12px;
+
+  box-shadow: 0 18px 60px rgba(20, 30, 50, 0.15);
+}
+
+.admission-applications-admin-page .modal-header {
+  padding: 17px 21px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #edf0f3;
+}
+
+.admission-applications-admin-page .modal-title {
+  color: #293342;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.admission-applications-admin-page .modal-title span {
+  display: inline;
+
+  margin: 0;
+
+  color: #8b939f;
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.admission-applications-admin-page .modal-body {
+  padding: 0;
+
+  background: #f8f9fb;
+}
+
+.admission-applications-admin-page .modal-footer {
+  padding: 14px 20px;
+
+  background: #ffffff;
+
+  border-top: 1px solid #edf0f3;
+}
+
+.admission-applications-admin-page .modal-footer .btn {
+  min-height: 37px;
+
+  padding: 7px 14px;
+
+  border-radius: 6px;
+
+  font-size: 11px;
+  font-weight: 650;
+}
+
+/* =========================================================
+   APPLICATION DETAILS
+========================================================= */
+
+.admission-application-details {
+  padding: 20px;
+}
+
+.admission-application-details section {
+  margin-bottom: 18px;
+
+  padding: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e6eb;
+  border-radius: 9px;
+}
+
+.admission-application-details section:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   DETAIL HEADING
+========================================================= */
+
+.admission-detail-heading {
+  margin-bottom: 17px;
+
+  padding-bottom: 12px;
+
+  border-bottom: 1px solid #edf0f3;
+}
+
+.admission-detail-heading span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #929aa5;
+
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.admission-detail-heading h3 {
+  margin: 0;
+
+  color: #303947;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   DETAIL GRID
+========================================================= */
+
+.admission-details-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 1px;
+
+  overflow: hidden;
+
+  background: #edf0f3;
+
+  border: 1px solid #edf0f3;
+  border-radius: 7px;
+}
+
+.admission-detail-item {
+  min-width: 0;
+
+  padding: 12px 13px;
+
+  background: #ffffff;
+}
+
+.admission-detail-item.wide {
+  grid-column: span 3;
+}
+
+.admission-detail-item span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #9098a3;
+
+  font-size: 9px;
+  font-weight: 650;
+}
+
+.admission-detail-item strong {
+  display: block;
+
+  overflow-wrap: anywhere;
+
+  color: #303947;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   DOCUMENTS
+========================================================= */
+
+.admission-document-list {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 9px;
+}
+
+.admission-document-item {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  padding: 11px 13px;
+
+  background: #fafbfc;
+
+  border: 1px solid #e3e7eb;
+  border-radius: 7px;
+}
+
+.admission-document-item span {
+  color: #4c5664;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.admission-document-item small {
+  color: #979fa9;
+
+  font-size: 10px;
+}
+
+.admission-document-item .btn {
+  min-width: 48px;
+
+  border-radius: 5px;
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   MODAL FORM
+========================================================= */
+
+.admission-application-details .form-label {
+  margin-bottom: 6px;
+
+  color: #4b5563;
+
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.admission-application-details .form-control,
+.admission-application-details .form-select {
+  border-color: #dce1e7;
+  border-radius: 6px;
+
+  font-size: 12px;
+
+  box-shadow: none;
+}
+
+.admission-application-details .form-control:focus,
+.admission-application-details .form-select:focus {
+  border-color: #8993a1;
+
+  box-shadow: 0 0 0 3px rgba(90, 105, 125, 0.08);
+}
+
+/* =========================================================
+   MODAL LOADING
+========================================================= */
+
+.admission-modal-loading {
+  display: flex;
+
+  min-height: 350px;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+  color: #7b8491;
+}
+
+.admission-modal-loading p {
+  margin: 0;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   PAGE LOADING
+========================================================= */
+
+.admission-admin-loading {
+  display: flex;
+
+  min-height: 70vh;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  gap: 13px;
+
+  color: #737d8a;
+}
+
+.admission-admin-loading p {
+  margin: 0;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   ALERT
+========================================================= */
+
+.admission-applications-admin-page .alert {
+  border-radius: 8px;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+  .admission-applications-admin-page {
+    padding: 25px 18px;
+  }
+
+  .admission-details-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admission-detail-item.wide {
+    grid-column: span 2;
+  }
+
+  .admission-document-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  .admission-applications-admin-page {
+    padding: 18px 12px;
+  }
+
+  .admission-admin-header {
+    align-items: stretch;
+
+    flex-direction: column;
+
+    gap: 17px;
+  }
+
+  .admission-admin-header h1 {
+    font-size: 25px;
+  }
+
+  .admission-excel-button {
+    width: 100%;
+  }
+
+  .admission-admin-card .card-body {
+    padding: 16px;
+  }
+
+  .admission-admin-card .card-header {
+    padding: 16px;
+  }
+
+  .admission-filter-actions {
+    margin-top: 3px;
+  }
+
+  .admission-application-details {
+    padding: 12px;
+  }
+
+  .admission-application-details section {
+    padding: 15px;
+  }
+
+  .admission-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admission-detail-item.wide {
+    grid-column: span 1;
+  }
+
+  .admission-pagination {
+    gap: 8px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+  .admission-applications-admin-page {
+    padding: 13px 8px;
+  }
+
+  .admission-admin-header h1 {
+    font-size: 22px;
+  }
+
+  .admission-admin-header p {
+    font-size: 12px;
+  }
+
+  .admission-admin-card .card-body {
+    padding: 13px;
+  }
+
+  .admission-admin-card .card-header {
+    padding: 14px;
+  }
+
+  .admission-application-details {
+    padding: 8px;
+  }
+
+  .admission-application-details section {
+    padding: 13px;
+  }
+
+  .admission-document-item {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .admission-document-item .btn {
+    width: 100%;
+  }
+}

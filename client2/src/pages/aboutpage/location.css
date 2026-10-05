@@ -1,0 +1,613 @@
+/* ===========================================
+   Location Page
+   IMSEC Website
+===========================================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* ===========================================
+   Common
+===========================================*/
+
+.section-tag {
+  color: #fdb913;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.3rem);
+
+  font-weight: 800;
+
+  color: #0a2e5c;
+
+  margin-bottom: 15px;
+}
+
+.section-title span {
+  color: #fdb913;
+}
+
+/* ===========================================
+   Hero
+   NO BACKGROUND PHOTO
+===========================================*/
+
+.location-hero {
+  height: 420px;
+
+  background: linear-gradient(135deg, #071d3a 0%, #0a2e5c 50%, #123f7a 100%);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+.hero-content {
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+
+  font-weight: 800;
+
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 18px;
+}
+
+.hero-content span {
+  color: #fdb913;
+
+  margin: 0 8px;
+}
+
+/* ===========================================
+   Location Details
+===========================================*/
+
+.location-details {
+  background: #fff;
+}
+
+.location-card {
+  background: #fff;
+
+  border-radius: 20px;
+
+  padding: 40px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+
+  height: 100%;
+}
+
+.location-card h2 {
+  color: #0a2e5c;
+
+  font-weight: 700;
+
+  margin-bottom: 30px;
+}
+
+.info-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 18px;
+
+  margin-bottom: 25px;
+
+  color: #555;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+.info-item svg {
+  color: #fdb913;
+
+  font-size: 22px;
+
+  margin-top: 3px;
+}
+
+.location-card button {
+  background: #fdb913;
+
+  color: #0a2e5c;
+
+  border: none;
+
+  font-weight: 600;
+
+  padding: 12px 30px;
+
+  transition: 0.35s;
+}
+
+.location-card button:hover {
+  background: #0a2e5c;
+
+  color: #fff;
+}
+
+/* ===========================================
+   Google Map
+===========================================*/
+
+.map-wrapper {
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+
+  height: 500px;
+}
+
+.map-wrapper iframe {
+  width: 100%;
+
+  height: 100%;
+
+  border: none;
+}
+
+/* ===========================================
+   Travel Section
+===========================================*/
+
+.travel-section {
+  background: #f8f9fb;
+}
+
+.travel-card {
+  background: #fff;
+
+  border-radius: 20px;
+
+  padding: 35px 25px;
+
+  text-align: center;
+
+  transition: 0.35s;
+
+  height: 100%;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.travel-card:hover {
+  transform: translateY(-10px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.travel-icon {
+  width: 80px;
+
+  height: 80px;
+
+  border-radius: 50%;
+
+  background: #0a2e5c;
+
+  color: #fff;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  margin: auto;
+
+  font-size: 32px;
+
+  margin-bottom: 25px;
+
+  transition: 0.35s;
+}
+
+.travel-card:hover .travel-icon {
+  background: #fdb913;
+
+  color: #0a2e5c;
+}
+
+.travel-card h4 {
+  color: #0a2e5c;
+
+  font-weight: 700;
+
+  margin-bottom: 15px;
+}
+
+.travel-card p {
+  color: #666;
+
+  line-height: 1.8;
+}
+
+/* ===========================================
+   Landmark Section
+===========================================*/
+
+.landmark-section {
+  background: #ffffff;
+}
+
+.landmark-card {
+  background: #fff;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  height: 100%;
+}
+
+.landmark-card:hover {
+  transform: translateY(-10px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.landmark-img {
+  width: 100%;
+
+  height: 240px;
+
+  object-fit: cover;
+
+  transition: 0.5s;
+}
+
+.landmark-card:hover .landmark-img {
+  transform: scale(1.08);
+}
+
+.landmark-body {
+  padding: 22px;
+
+  text-align: center;
+}
+
+.landmark-body h4 {
+  color: #0a2e5c;
+
+  font-weight: 700;
+
+  margin-bottom: 10px;
+}
+
+.landmark-body span {
+  display: inline-block;
+
+  background: #fdb913;
+
+  color: #0a2e5c;
+
+  padding: 6px 18px;
+
+  border-radius: 30px;
+
+  font-weight: 600;
+
+  font-size: 14px;
+}
+
+/* ===========================================
+   Contact Section
+===========================================*/
+/* ===========================================
+   Contact Information Section
+===========================================*/
+
+.contact-section {
+  background: #f8f9fb;
+}
+
+.contact-card {
+  background: #0a2e5c;
+
+  border-radius: 20px;
+
+  padding: 35px 25px;
+
+  text-align: center;
+
+  transition: all 0.35s ease;
+
+  height: 100%;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+
+  background: #123f7a;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon */
+
+.contact-card .contact-icon {
+  width: 75px;
+
+  height: 75px;
+
+  border-radius: 50%;
+
+  background: #fdb913;
+
+  color: #0a2e5c;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  margin: 0 auto 20px;
+
+  font-size: 28px;
+
+  transition: all 0.35s ease;
+}
+
+.contact-card:hover .contact-icon {
+  background: #fff;
+
+  color: #0a2e5c;
+
+  transform: translateY(-5px);
+}
+
+/* Heading */
+
+.contact-card h4 {
+  color: #fff !important;
+
+  font-weight: 700;
+
+  margin-bottom: 15px;
+}
+
+/* Text */
+
+.contact-card p {
+  color: #fff !important;
+
+  margin: 0;
+
+  line-height: 1.8;
+
+  font-size: 16px;
+}
+/* ===========================================
+   CTA
+===========================================*/
+
+.cta-section {
+  background: linear-gradient(135deg, #0a2e5c, #123f7a);
+
+  padding: 80px 0;
+
+  color: #fff;
+}
+
+.cta-section h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+
+  font-weight: 800;
+
+  margin-bottom: 20px;
+}
+
+.cta-section p {
+  color: #ddd;
+
+  line-height: 1.8;
+}
+
+.cta-section .btn {
+  padding: 12px 28px;
+
+  font-weight: 600;
+
+  transition: 0.35s;
+}
+
+.cta-section .btn-warning {
+  background: #fdb913;
+
+  color: #0a2e5c;
+
+  border: none;
+}
+
+.cta-section .btn-warning:hover {
+  background: #fff;
+
+  color: #0a2e5c;
+
+  transform: translateY(-4px);
+}
+
+.cta-section .btn-outline-light {
+  border: 2px solid #fff;
+}
+
+.cta-section .btn-outline-light:hover {
+  background: #fff;
+
+  color: #0a2e5c;
+
+  transform: translateY(-4px);
+}
+
+/* ===========================================
+   Hover Animation
+===========================================*/
+
+.landmark-card,
+.travel-card,
+.contact-card,
+.location-card {
+  transition: all 0.35s ease;
+}
+
+img {
+  transition: 0.5s;
+}
+
+/* ===========================================
+   Responsive
+===========================================*/
+
+@media (max-width: 992px) {
+  .location-hero {
+    height: 320px;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .location-card {
+    margin-bottom: 35px;
+
+    padding: 30px;
+  }
+
+  .map-wrapper {
+    height: 400px;
+  }
+
+  .cta-section {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .location-hero {
+    height: 260px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .location-card {
+    padding: 25px;
+  }
+
+  .info-item {
+    font-size: 15px;
+  }
+
+  .map-wrapper {
+    height: 320px;
+  }
+
+  .travel-card {
+    padding: 25px 18px;
+  }
+
+  .travel-icon {
+    width: 70px;
+
+    height: 70px;
+
+    font-size: 28px;
+  }
+
+  .landmark-img {
+    height: 200px;
+  }
+
+  .contact-card {
+    padding: 25px;
+  }
+
+  .contact-icon {
+    width: 65px;
+
+    height: 65px;
+
+    font-size: 24px;
+  }
+
+  .cta-section {
+    padding: 60px 20px;
+  }
+
+  .cta-section .btn {
+    width: 100%;
+
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .location-card h2 {
+    font-size: 26px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .landmark-body h4 {
+    font-size: 20px;
+  }
+
+  .contact-card h4 {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,1638 @@
+/*=========================================================
+    GOOGLE FONT
+=========================================================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/*=========================================================
+    GLOBAL
+=========================================================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f4f7fb;
+}
+
+/*=========================================================
+    PAGE
+=========================================================*/
+
+.eventsPage {
+  width: 100%;
+  padding: 35px;
+  background: #f4f7fb;
+}
+
+/*=========================================================
+    HERO
+=========================================================*/
+
+.eventsHero {
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+
+  color: #fff;
+
+  text-align: center;
+
+  padding: 65px 30px;
+
+  border-radius: 20px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  margin-bottom: 35px;
+
+  z-index: 1;
+}
+
+.eventsHero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+
+  height: 350px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border-radius: 50%;
+
+  top: -120px;
+
+  right: -100px;
+}
+
+.eventsHero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 250px;
+
+  height: 250px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border-radius: 50%;
+
+  bottom: -80px;
+
+  left: -70px;
+}
+
+.eventsHero h1 {
+  position: relative;
+
+  z-index: 2;
+
+  font-size: 46px;
+
+  font-weight: 700;
+
+  margin-bottom: 18px;
+}
+
+.eventsHero p {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 850px;
+
+  margin: auto;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  color: #fff;
+}
+
+/*=========================================================
+    SEARCH
+=========================================================*/
+
+.searchSection {
+  width: 100%;
+
+  margin-top: -65px;
+
+  margin-bottom: 30px;
+
+  position: relative;
+
+  z-index: 50;
+}
+
+.searchBox {
+  width: 100%;
+
+  max-width: 600px;
+
+  margin: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  background: #fff;
+
+  border-radius: 50px;
+
+  padding: 15px 22px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+  border: 1px solid #e7edf5;
+
+  position: relative;
+
+  z-index: 51;
+}
+
+.searchBox svg {
+  color: #1565c0;
+
+  font-size: 20px;
+
+  flex-shrink: 0;
+}
+
+.searchBox input {
+  flex: 1;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  margin-left: 15px;
+
+  font-size: 16px;
+
+  color: #333;
+}
+
+.searchBox input::placeholder {
+  color: #999;
+}
+
+/*=========================================================
+    CATEGORY / FILTER
+=========================================================*/
+
+.categorySection {
+  position: relative;
+
+  z-index: 40;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-bottom: 40px;
+
+  pointer-events: auto;
+}
+
+.categoryBtn {
+  position: relative;
+
+  z-index: 41;
+
+  border: 1px solid #e1e8f0;
+
+  background: #fff;
+
+  color: #444;
+
+  padding: 10px 21px;
+
+  border-radius: 50px;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.35s;
+
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+
+  pointer-events: auto;
+}
+
+.categoryBtn:hover {
+  background: #1565c0;
+
+  color: #fff;
+
+  border-color: #1565c0;
+
+  transform: translateY(-3px);
+}
+
+.categoryBtn.active {
+  background: #1565c0;
+
+  color: #fff;
+
+  border-color: #1565c0;
+
+  box-shadow: 0 8px 20px rgba(21, 101, 192, 0.25);
+}
+
+/*=========================================================
+    ERROR
+=========================================================*/
+
+.eventsError {
+  position: relative;
+
+  z-index: 10;
+
+  width: 90%;
+
+  margin: 20px auto 35px;
+
+  padding: 18px 22px;
+
+  text-align: center;
+
+  border-radius: 14px;
+
+  background: #fff3f3;
+
+  border: 1px solid #ffd4d4;
+
+  color: #c62828;
+
+  font-size: 15px;
+}
+
+/*=========================================================
+    LOADING
+=========================================================*/
+
+.eventsLoading {
+  text-align: center;
+
+  padding: 80px 20px;
+
+  color: #555;
+}
+
+.eventsLoading svg {
+  font-size: 45px;
+
+  color: #1565c0;
+
+  margin-bottom: 15px;
+}
+
+.eventsLoading h3 {
+  color: #0d47a1;
+
+  margin-bottom: 8px;
+}
+
+.eventsLoading p {
+  color: #777;
+}
+
+/*=========================================================
+    FEATURED EVENT
+=========================================================*/
+
+.featuredEvent {
+  position: relative;
+
+  z-index: 1;
+
+  display: grid;
+
+  grid-template-columns: 45% 55%;
+
+  gap: 30px;
+
+  background: #fff;
+
+  border-radius: 20px;
+
+  padding: 25px;
+
+  margin-bottom: 45px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  overflow: hidden;
+}
+
+.featuredImage {
+  width: 100%;
+
+  height: 330px;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+}
+
+.featuredImage img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: 0.4s;
+}
+
+.featuredEvent:hover .featuredImage img {
+  transform: scale(1.05);
+}
+
+.featuredContent {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 10px;
+}
+
+/*=========================================================
+    FEATURED BADGE
+=========================================================*/
+
+.featuredBadge {
+  width: max-content;
+
+  background: #1565c0;
+
+  color: #fff;
+
+  padding: 8px 18px;
+
+  border-radius: 30px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  margin-bottom: 16px;
+}
+
+.featuredContent h2 {
+  color: #0d47a1;
+
+  font-size: 30px;
+
+  margin-bottom: 15px;
+
+  line-height: 1.4;
+}
+
+.featuredContent p {
+  color: #666;
+
+  line-height: 1.75;
+
+  margin-bottom: 20px;
+}
+
+/*=========================================================
+    FEATURED INFORMATION
+=========================================================*/
+
+.featuredInfo {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+}
+
+.featuredInfo div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  background: #f8f9fc;
+
+  border-radius: 12px;
+
+  padding: 13px;
+
+  transition: 0.35s;
+}
+
+.featuredInfo div:hover {
+  background: #1565c0;
+
+  color: #fff;
+
+  transform: translateY(-3px);
+}
+
+.featuredInfo div:hover svg {
+  color: #fff;
+}
+
+.featuredInfo svg {
+  color: #1565c0;
+
+  font-size: 17px;
+
+  flex-shrink: 0;
+}
+
+.featuredInfo span {
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  overflow-wrap: anywhere;
+}
+
+/*=========================================================
+    FEATURED SOCIAL
+=========================================================*/
+
+.featuredContent .eventSocialLinks {
+  margin-top: 4px;
+}
+
+/*=========================================================
+    EVENTS GRID
+    DESKTOP = 3 CARDS
+=========================================================*/
+
+.eventsGrid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+
+  align-items: stretch;
+
+  margin-bottom: 45px;
+
+  position: relative;
+
+  z-index: 1;
+}
+
+/*=========================================================
+    EVENT CARD
+=========================================================*/
+
+.eventCard {
+  display: flex;
+
+  flex-direction: column;
+
+  height: auto;
+
+  min-height: 540px;
+
+  background: #fff;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  position: relative;
+
+  border: 1px solid #edf1f6;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.eventCard::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 0;
+
+  width: 100%;
+
+  height: 5px;
+
+  background: linear-gradient(90deg, #0d47a1, #1976d2, #42a5f5);
+
+  z-index: 3;
+}
+
+.eventCard:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+/*=========================================================
+    EVENT HEADER
+=========================================================*/
+
+.eventHeader {
+  width: 100%;
+
+  min-height: 60px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  padding: 10px 15px;
+
+  background: #fff;
+}
+
+/*=========================================================
+    DATE BADGE
+=========================================================*/
+
+.dateBadge {
+  position: static;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  background: #0d47a1;
+
+  color: #fff;
+
+  padding: 7px 12px;
+
+  border-radius: 30px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.dateBadge svg {
+  font-size: 11px;
+
+  flex-shrink: 0;
+}
+
+/*=========================================================
+    CATEGORY BADGE
+=========================================================*/
+
+.categoryBadge {
+  position: static;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 6px;
+
+  background: #ff9800;
+
+  color: #fff;
+
+  padding: 7px 12px;
+
+  border-radius: 30px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.categoryBadge svg {
+  font-size: 11px;
+
+  flex-shrink: 0;
+}
+
+/*=========================================================
+    EVENT IMAGE
+=========================================================*/
+
+.eventImage {
+  position: relative;
+
+  width: 100%;
+
+  height: 190px;
+
+  min-height: 190px;
+
+  overflow: hidden;
+
+  background: #eef3f9;
+}
+
+.eventImage img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: 0.45s;
+}
+
+.eventCard:hover .eventImage img {
+  transform: scale(1.06);
+}
+
+/*=========================================================
+    IMAGE PLACEHOLDER
+=========================================================*/
+
+.imagePlaceholder {
+  width: 100%;
+
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: linear-gradient(135deg, #eef3f9, #e2eaf4);
+
+  color: #789;
+
+  font-size: 42px;
+}
+
+/*=========================================================
+    EVENT BODY
+=========================================================*/
+
+.eventBody {
+  display: flex;
+
+  flex-direction: column;
+
+  flex: 1;
+
+  padding: 20px;
+}
+
+.eventBody h3 {
+  color: #0d47a1;
+
+  font-size: 19px;
+
+  line-height: 1.5;
+
+  margin-bottom: 10px;
+}
+
+.eventBody p {
+  color: #666;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+
+  margin-bottom: 15px;
+}
+
+/*=========================================================
+    EVENT INFORMATION
+=========================================================*/
+
+.eventInfo {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  margin-top: 5px;
+
+  margin-bottom: 15px;
+}
+
+.eventInfo div {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  color: #555;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+.eventInfo svg {
+  color: #1565c0;
+
+  min-width: 17px;
+
+  margin-top: 2px;
+}
+
+/*=========================================================
+    SOCIAL MEDIA
+=========================================================*/
+
+.eventSocialLinks {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  width: 100%;
+
+  margin-top: 10px;
+
+  margin-bottom: 14px;
+}
+
+.eventSocialLinks a {
+  width: 37px;
+
+  height: 37px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #f4f7fb;
+
+  color: #0d47a1;
+
+  border: 1px solid #dfe7f1;
+
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.eventSocialLinks a:hover {
+  color: #fff;
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.eventSocialLinks a:nth-child(1):hover {
+  background: #1877f2;
+
+  border-color: #1877f2;
+}
+
+.eventSocialLinks a:nth-child(2):hover {
+  background: #e4405f;
+
+  border-color: #e4405f;
+}
+
+.eventSocialLinks a:nth-child(3):hover {
+  background: #0a66c2;
+
+  border-color: #0a66c2;
+}
+
+.eventSocialLinks a:nth-child(4):hover {
+  background: #ff0000;
+
+  border-color: #ff0000;
+}
+
+.eventSocialLinks a:nth-child(5):hover {
+  background: #000;
+
+  border-color: #000;
+}
+
+.eventSocialLinks svg {
+  font-size: 15px;
+}
+
+/*=========================================================
+    VIEW EVENT BUTTON
+=========================================================*/
+
+.readMoreBtn {
+  align-self: flex-start;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  border: none;
+
+  outline: none;
+
+  cursor: pointer;
+
+  padding: 12px 23px;
+
+  border-radius: 50px;
+
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+
+  color: #fff;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: 0.35s;
+}
+
+.readMoreBtn svg {
+  transition: 0.35s;
+}
+
+.readMoreBtn:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 25px rgba(13, 71, 161, 0.3);
+}
+
+.readMoreBtn:hover svg {
+  transform: translateX(6px);
+}
+
+/*=========================================================
+    EVENT STATISTICS
+=========================================================*/
+
+.eventStats {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 25px;
+
+  margin-top: 20px;
+}
+
+.statCard {
+  background: #fff;
+
+  border-radius: 18px;
+
+  padding: 30px 20px;
+
+  text-align: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+}
+
+.statCard::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 0;
+
+  width: 100%;
+
+  height: 5px;
+
+  background: linear-gradient(90deg, #0d47a1, #1976d2, #42a5f5);
+}
+
+.statCard:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
+}
+
+.statCard h2 {
+  font-size: 42px;
+
+  color: #0d47a1;
+
+  margin-bottom: 10px;
+
+  font-weight: 700;
+}
+
+.statCard p {
+  color: #666;
+
+  font-size: 16px;
+
+  font-weight: 500;
+}
+
+/*=========================================================
+    NO EVENTS
+=========================================================*/
+
+.noEvents {
+  grid-column: 1 / -1;
+
+  text-align: center;
+
+  padding: 70px 20px;
+
+  background: #fff;
+
+  border-radius: 20px;
+
+  border: 1px solid #e5ebf4;
+}
+
+.noEvents svg {
+  font-size: 48px;
+
+  color: #1565c0;
+
+  margin-bottom: 15px;
+}
+
+.noEvents h3 {
+  color: #0d47a1;
+
+  margin-bottom: 8px;
+}
+
+.noEvents p {
+  color: #777;
+}
+
+/*=========================================================
+    SCROLLBAR
+=========================================================*/
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1565c0;
+
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: #edf2f7;
+}
+
+/*=========================================================
+    LARGE DESKTOP
+    3 CARDS
+=========================================================*/
+
+@media (min-width: 1200px) {
+  .eventsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .eventCard {
+    min-height: 560px;
+  }
+
+  .eventImage {
+    height: 190px;
+
+    min-height: 190px;
+  }
+}
+
+/*=========================================================
+    DESKTOP / SMALL LAPTOP
+    3 CARDS
+=========================================================*/
+
+@media (max-width: 1199px) and (min-width: 993px) {
+  .eventsPage {
+    padding: 25px;
+  }
+
+  .eventsGrid {
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+  }
+
+  .eventCard {
+    min-height: 540px;
+  }
+
+  .eventImage {
+    height: 180px;
+
+    min-height: 180px;
+  }
+
+  .eventHeader {
+    padding-left: 12px;
+
+    padding-right: 12px;
+  }
+
+  .dateBadge,
+  .categoryBadge {
+    font-size: 10px;
+
+    padding: 6px 8px;
+  }
+
+  .eventBody {
+    padding: 15px;
+  }
+
+  .eventBody h3 {
+    font-size: 18px;
+  }
+
+  .eventBody p {
+    font-size: 13px;
+  }
+}
+
+/*=========================================================
+    TABLET
+    2 CARDS
+=========================================================*/
+
+@media (max-width: 992px) and (min-width: 577px) {
+  .eventsPage {
+    padding: 25px;
+  }
+
+  .eventsHero {
+    padding: 55px 25px;
+  }
+
+  .eventsHero h1 {
+    font-size: 38px;
+  }
+
+  .featuredEvent {
+    grid-template-columns: 1fr;
+
+    padding: 20px;
+  }
+
+  .featuredImage {
+    height: 300px;
+
+    min-height: 300px;
+  }
+
+  .featuredInfo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featuredContent h2 {
+    font-size: 28px;
+  }
+
+  .eventsGrid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+  }
+
+  .eventCard {
+    min-height: 560px;
+  }
+
+  .eventImage {
+    height: 210px;
+
+    min-height: 210px;
+  }
+
+  .categorySection {
+    z-index: 40;
+  }
+}
+
+/*=========================================================
+    MOBILE
+    1 CARD
+=========================================================*/
+
+@media (max-width: 576px) {
+  .eventsPage {
+    padding: 15px;
+  }
+
+  /*=======================================================
+      HERO
+  =======================================================*/
+
+  .eventsHero {
+    padding: 45px 18px;
+
+    border-radius: 16px;
+  }
+
+  .eventsHero h1 {
+    font-size: 29px;
+
+    line-height: 1.3;
+  }
+
+  .eventsHero p {
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+  /*=======================================================
+      SEARCH
+  =======================================================*/
+
+  .searchSection {
+    margin-top: -35px;
+
+    z-index: 50;
+  }
+
+  .searchBox {
+    padding: 13px 17px;
+  }
+
+  .searchBox input {
+    font-size: 14px;
+  }
+
+  /*=======================================================
+      CATEGORY
+  =======================================================*/
+
+  .categorySection {
+    position: relative;
+
+    z-index: 40;
+
+    gap: 8px;
+
+    margin-top: -10rem;
+
+    margin-bottom: 30px;
+  }
+
+  .categoryBtn {
+    position: relative;
+
+    z-index: 41;
+
+    padding: 9px 15px;
+
+    font-size: 12px;
+  }
+
+  /*=======================================================
+      FEATURED
+  =======================================================*/
+
+  .featuredEvent {
+    position: relative;
+
+    z-index: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+
+    padding: 14px;
+
+    gap: 18px;
+
+    border-radius: 16px;
+
+    margin-top: -5rem;
+
+    margin-bottom: 30px;
+  }
+
+  .featuredImage {
+    width: 100%;
+
+    height: 220px;
+
+    min-height: 220px;
+
+    border-radius: 13px;
+
+    overflow: hidden;
+  }
+
+  .featuredImage img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+  .featuredContent {
+    width: 100%;
+
+    padding: 3px;
+  }
+
+  .featuredBadge {
+    padding: 7px 14px;
+
+    font-size: 11px;
+
+    margin-bottom: 12px;
+  }
+
+  .featuredContent h2 {
+    font-size: 22px;
+
+    line-height: 1.4;
+
+    margin-bottom: 10px;
+
+    overflow-wrap: anywhere;
+  }
+
+  .featuredContent p {
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+  }
+
+  /*=======================================================
+      FEATURED INFO
+  =======================================================*/
+
+  .featuredInfo {
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+
+    gap: 8px;
+
+    margin-bottom: 15px;
+  }
+
+  .featuredInfo div {
+    width: 100%;
+
+    min-height: 44px;
+
+    padding: 10px 12px;
+
+    border-radius: 10px;
+  }
+
+  .featuredInfo span {
+    font-size: 12px;
+
+    line-height: 1.4;
+
+    overflow-wrap: anywhere;
+  }
+
+  /*=======================================================
+      FEATURED SOCIAL
+  =======================================================*/
+
+  .featuredContent .eventSocialLinks {
+    width: 100%;
+
+    margin-top: 5px;
+
+    gap: 8px;
+  }
+
+  .featuredContent .eventSocialLinks a {
+    width: 35px;
+
+    height: 35px;
+  }
+
+  /*=======================================================
+      EVENT GRID
+  =======================================================*/
+
+  .eventsGrid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  /*=======================================================
+      EVENT CARD
+  =======================================================*/
+
+  .eventCard {
+    min-height: 0;
+
+    height: auto;
+
+    border-radius: 17px;
+  }
+
+  /*=======================================================
+      EVENT HEADER
+  =======================================================*/
+
+  .eventHeader {
+    min-height: 58px;
+
+    padding: 10px 12px;
+
+    gap: 7px;
+  }
+
+  .dateBadge,
+  .categoryBadge {
+    font-size: 10px;
+
+    padding: 6px 8px;
+
+    gap: 5px;
+  }
+
+  /*=======================================================
+      IMAGE
+  =======================================================*/
+
+  .eventImage {
+    height: 200px;
+
+    min-height: 200px;
+  }
+
+  /*=======================================================
+      BODY
+  =======================================================*/
+
+  .eventBody {
+    padding: 17px;
+  }
+
+  .eventBody h3 {
+    font-size: 19px;
+
+    line-height: 1.5;
+  }
+
+  .eventBody p {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+  /*=======================================================
+      SOCIAL
+  =======================================================*/
+
+  .eventSocialLinks {
+    gap: 8px;
+
+    margin-top: 10px;
+
+    margin-bottom: 14px;
+  }
+
+  .eventSocialLinks a {
+    width: 35px;
+
+    height: 35px;
+  }
+
+  /*=======================================================
+      BUTTON
+  =======================================================*/
+
+  .readMoreBtn {
+    padding: 12px 20px;
+
+    font-size: 14px;
+  }
+
+  /*=======================================================
+      STATISTICS
+  =======================================================*/
+
+  .statCard {
+    padding: 25px 15px;
+  }
+
+  .statCard h2 {
+    font-size: 34px;
+  }
+}
+
+/*=========================================================
+    VERY SMALL MOBILE
+=========================================================*/
+
+@media (max-width: 380px) {
+  .eventsPage {
+    padding: 10px;
+  }
+
+  .eventsHero {
+    padding: 40px 15px;
+
+    border-radius: 14px;
+  }
+
+  .eventsHero h1 {
+    font-size: 25px;
+  }
+
+  .eventsHero p {
+    font-size: 13px;
+  }
+
+  .searchBox {
+    padding: 12px 14px;
+  }
+
+  .searchBox input {
+    font-size: 13px;
+  }
+
+  /* FILTER */
+
+  .categorySection {
+    z-index: 40;
+
+    gap: 7px;
+  }
+
+  .categoryBtn {
+    z-index: 41;
+
+    padding: 8px 12px;
+
+    font-size: 11px;
+  }
+
+  /* FEATURED */
+
+  .featuredEvent {
+    padding: 12px;
+
+    gap: 15px;
+
+    border-radius: 14px;
+  }
+
+  .featuredImage {
+    height: 190px;
+
+    min-height: 190px;
+
+    border-radius: 11px;
+  }
+
+  .featuredBadge {
+    padding: 6px 12px;
+
+    font-size: 10px;
+  }
+
+  .featuredContent h2 {
+    font-size: 20px;
+  }
+
+  .featuredContent p {
+    font-size: 13px;
+  }
+
+  .featuredInfo {
+    gap: 7px;
+  }
+
+  .featuredInfo div {
+    min-height: 42px;
+
+    padding: 9px 10px;
+  }
+
+  .featuredInfo span {
+    font-size: 11px;
+  }
+
+  .featuredContent .eventSocialLinks a {
+    width: 33px;
+
+    height: 33px;
+  }
+
+  /* EVENT */
+
+  .eventHeader {
+    padding: 9px 10px;
+
+    min-height: 54px;
+  }
+
+  .dateBadge,
+  .categoryBadge {
+    font-size: 9px;
+
+    padding: 5px 7px;
+  }
+
+  .eventImage {
+    height: 180px;
+
+    min-height: 180px;
+  }
+
+  .eventBody {
+    padding: 15px;
+  }
+
+  .eventBody h3 {
+    font-size: 17px;
+  }
+
+  .eventBody p {
+    font-size: 13px;
+  }
+
+  .eventInfo div {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,199 @@
+.hostel-mess-admin {
+  padding: 28px;
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+.hostel-admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.admin-page-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #d89b00;
+  margin-bottom: 7px;
+}
+
+.hostel-admin-header h1 {
+  margin: 0;
+  color: #071d3a;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.hostel-admin-header p {
+  margin: 8px 0 0;
+  color: #6b7280;
+}
+
+.hostel-admin-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hostel-admin-card {
+  border: 0;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+}
+
+.hostel-admin-tabs {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.hostel-admin-tabs .nav-link {
+  color: #596273;
+  font-weight: 600;
+  border: 0;
+  padding: 12px 17px;
+}
+
+.hostel-admin-tabs .nav-link.active {
+  color: #0a2e5c;
+  border-bottom: 3px solid #d89b00;
+  background: transparent;
+}
+
+.admin-section {
+  padding: 10px 4px 25px;
+}
+
+.admin-section h3 {
+  color: #071d3a;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.admin-section h4 {
+  color: #0a2e5c;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.admin-section h5 {
+  color: #0a2e5c;
+  font-weight: 700;
+}
+
+.admin-section p {
+  color: #6b7280;
+}
+
+.section-heading-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.item-card,
+.hostel-item-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+.image-upload-box {
+  padding: 18px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+  background: #f8fafc;
+}
+
+.image-upload-box small {
+  display: block;
+  margin-top: 8px;
+  color: #6b7280;
+}
+
+.admin-preview-image {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.gallery-admin-card {
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.gallery-preview {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.repeat-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.repeat-row .form-control {
+  flex: 1;
+}
+
+.admin-section-inner {
+  margin-top: 25px;
+}
+
+.hostel-admin-loading {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #0a2e5c;
+}
+
+@media (max-width: 991px) {
+  .hostel-admin-header {
+    flex-direction: column;
+  }
+
+  .hostel-admin-actions {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .hostel-mess-admin {
+    padding: 18px 12px;
+  }
+
+  .hostel-admin-header h1 {
+    font-size: 26px;
+  }
+
+  .section-heading-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hostel-admin-actions {
+    flex-direction: column;
+  }
+
+  .hostel-admin-actions button {
+    width: 100%;
+  }
+
+  .repeat-row {
+    flex-direction: column;
+  }
+}

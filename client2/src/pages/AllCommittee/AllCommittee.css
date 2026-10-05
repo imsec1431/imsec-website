@@ -1,0 +1,637 @@
+/* =========================================================
+   PAGE
+========================================================= */
+
+.publicAllCommitteePage {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #f5f7fb;
+
+  font-family: "Poppins", Arial, sans-serif;
+
+  color: #263238;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.publicCommitteeHero {
+  position: relative;
+
+  width: 100%;
+  min-height: 320px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 60px 20px;
+
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+
+  color: #ffffff;
+}
+
+.publicCommitteeHero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 360px;
+  height: 360px;
+
+  top: -170px;
+  right: -90px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.publicCommitteeHero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  left: -130px;
+  bottom: -170px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.publicCommitteeHeroContent {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 900px;
+
+  text-align: center;
+}
+
+.publicCommitteeHeroIcon {
+  width: 65px;
+  height: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 17px;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.14);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  font-size: 28px;
+}
+
+.publicCommitteeHeroContent > span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #bfdbfe;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.publicCommitteeHeroContent h1 {
+  margin: 0 0 13px;
+
+  color: #ffffff;
+
+  font-size: 46px;
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+.publicCommitteeHeroContent p {
+  max-width: 680px;
+
+  margin: auto;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.publicCommitteeContainer {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 45px 25px 70px;
+}
+
+/* =========================================================
+   LIST
+========================================================= */
+
+.publicCommitteeList {
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.publicCommitteeCard {
+  position: relative;
+
+  min-width: 0;
+
+  display: grid;
+
+  grid-template-columns: 45px 58px minmax(0, 1fr) auto;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 20px 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5eaf0;
+
+  border-radius: 17px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.publicCommitteeCard::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 4px;
+
+  background: linear-gradient(180deg, #0d47a1, #42a5f5, #fdb913);
+}
+
+.publicCommitteeCard:hover {
+  transform: translateY(-3px);
+
+  border-color: #bfdbfe;
+
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.publicCommitteeNumber {
+  color: #94a3b8;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  text-align: center;
+}
+
+/* =========================================================
+   PDF ICON
+========================================================= */
+
+.publicCommitteePdfIcon {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: #fff1f2;
+
+  color: #dc2626;
+
+  font-size: 22px;
+}
+
+/* =========================================================
+   INFO
+========================================================= */
+
+.publicCommitteeInfo {
+  min-width: 0;
+}
+
+.publicCommitteeInfo > span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #f59e0b;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+}
+
+.publicCommitteeInfo h2 {
+  margin: 0;
+
+  color: #0d47a1;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  line-height: 1.45;
+
+  word-break: break-word;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.publicCommitteeActions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  flex-shrink: 0;
+}
+
+.publicCommitteeActions a {
+  min-height: 39px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 8px 13px;
+
+  border-radius: 9px;
+
+  font-family: inherit;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: 0.25s ease;
+}
+
+/* =========================================================
+   VIEW
+========================================================= */
+
+.publicCommitteeView {
+  border: 1px solid #bfdbfe;
+
+  background: #eff6ff;
+
+  color: #1565c0;
+}
+
+.publicCommitteeView:hover {
+  background: #dbeafe;
+
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   DOWNLOAD
+========================================================= */
+
+.publicCommitteeDownload {
+  border: 1px solid #bbf7d0;
+
+  background: #f0fdf4;
+
+  color: #15803d;
+}
+
+.publicCommitteeDownload:hover {
+  background: #dcfce7;
+
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.publicCommitteeLoading {
+  min-height: 300px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #64748b;
+}
+
+.publicCommitteeSpinner {
+  width: 42px;
+  height: 42px;
+
+  margin-bottom: 15px;
+
+  border: 4px solid #e2e8f0;
+
+  border-top-color: #1565c0;
+
+  border-radius: 50%;
+
+  animation: committeeSpin 0.8s linear infinite;
+}
+
+@keyframes committeeSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.publicCommitteeError {
+  padding: 16px 20px;
+
+  border: 1px solid #fecdd3;
+
+  border-radius: 12px;
+
+  background: #fff1f2;
+
+  color: #be123c;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-align: center;
+}
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.publicCommitteeEmpty {
+  min-height: 320px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+
+  background: #ffffff;
+
+  border: 1px dashed #cbd5e1;
+
+  border-radius: 20px;
+
+  text-align: center;
+}
+
+.publicCommitteeEmptyIcon {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 16px;
+
+  border-radius: 18px;
+
+  background: #eef4fb;
+
+  color: #1565c0;
+
+  font-size: 28px;
+}
+
+.publicCommitteeEmpty h2 {
+  margin: 0 0 8px;
+
+  color: #0d47a1;
+
+  font-size: 21px;
+}
+
+.publicCommitteeEmpty p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+  .publicCommitteeCard {
+    grid-template-columns: 40px 52px minmax(0, 1fr);
+  }
+
+  .publicCommitteeActions {
+    grid-column: 3;
+
+    justify-content: flex-start;
+
+    margin-top: 3px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .publicCommitteeHero {
+    min-height: 270px;
+
+    padding: 50px 20px;
+  }
+
+  .publicCommitteeHeroContent h1 {
+    font-size: 34px;
+  }
+
+  .publicCommitteeHeroContent p {
+    font-size: 13px;
+  }
+
+  .publicCommitteeContainer {
+    padding: 30px 15px 50px;
+  }
+
+  .publicCommitteeCard {
+    grid-template-columns: 34px 46px minmax(0, 1fr);
+
+    gap: 11px;
+
+    padding: 16px;
+  }
+
+  .publicCommitteePdfIcon {
+    width: 46px;
+    height: 46px;
+
+    border-radius: 12px;
+
+    font-size: 19px;
+  }
+
+  .publicCommitteeNumber {
+    font-size: 10px;
+  }
+
+  .publicCommitteeInfo h2 {
+    font-size: 14px;
+  }
+
+  .publicCommitteeActions {
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 8px;
+
+    margin-top: 5px;
+  }
+
+  .publicCommitteeActions a {
+    width: 100%;
+
+    min-height: 40px;
+
+    font-size: 10px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .publicCommitteeHero {
+    min-height: 240px;
+
+    padding: 40px 15px;
+  }
+
+  .publicCommitteeHeroIcon {
+    width: 54px;
+    height: 54px;
+
+    margin-bottom: 12px;
+
+    border-radius: 15px;
+
+    font-size: 23px;
+  }
+
+  .publicCommitteeHeroContent > span {
+    font-size: 9px;
+  }
+
+  .publicCommitteeHeroContent h1 {
+    font-size: 29px;
+  }
+
+  .publicCommitteeHeroContent p {
+    font-size: 11px;
+  }
+
+  .publicCommitteeContainer {
+    padding: 25px 10px 40px;
+  }
+
+  .publicCommitteeCard {
+    grid-template-columns: 28px 40px minmax(0, 1fr);
+
+    gap: 8px;
+
+    padding: 13px;
+  }
+
+  .publicCommitteePdfIcon {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+  }
+
+  .publicCommitteeInfo > span {
+    font-size: 7px;
+  }
+
+  .publicCommitteeInfo h2 {
+    font-size: 12px;
+  }
+
+  .publicCommitteeActions a {
+    min-height: 38px;
+
+    padding: 7px 5px;
+
+    font-size: 9px;
+  }
+}

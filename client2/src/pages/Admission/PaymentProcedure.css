@@ -1,0 +1,707 @@
+/* =========================================================
+   PAYMENT PROCEDURE - PUBLIC PAGE
+========================================================= */
+
+.payment-procedure-public-page {
+  min-height: 100vh;
+  padding: 38px 20px 65px;
+  background: #f6f8fb;
+  color: #202938;
+}
+
+.payment-procedure-public-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.payment-procedure-public-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+
+  margin-bottom: 24px;
+
+  color: #8a929e;
+  font-size: 12px;
+}
+
+.payment-procedure-public-breadcrumb strong {
+  color: #303947;
+  font-weight: 650;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.payment-procedure-public-hero {
+  padding: 42px;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e6ec;
+  border-radius: 15px;
+
+  box-shadow: 0 8px 28px rgba(20, 30, 50, 0.045);
+}
+
+.payment-public-eyebrow {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #89919d;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.payment-procedure-public-hero h1 {
+  margin: 0;
+
+  color: #1d2736;
+
+  font-size: 38px;
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+.payment-procedure-public-hero p {
+  max-width: 720px;
+
+  margin: 13px 0 0;
+
+  color: #707a88;
+
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   ONLINE TRANSACTION SECTION
+========================================================= */
+
+.payment-online-section {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) 270px;
+
+  gap: 30px;
+
+  margin-top: 25px;
+  padding: 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e6ec;
+  border-radius: 14px;
+
+  box-shadow: 0 7px 25px rgba(20, 30, 50, 0.04);
+}
+
+.payment-online-content {
+  padding: 8px 5px;
+}
+
+.payment-section-label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #8b939f;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+.payment-online-content h2 {
+  margin: 0;
+
+  color: #293342;
+
+  font-size: 25px;
+  font-weight: 720;
+}
+
+.payment-online-content p {
+  max-width: 650px;
+
+  margin: 12px 0 22px;
+
+  color: #737d8a;
+
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   ERP BUTTON
+========================================================= */
+
+.payment-erp-button {
+  min-height: 42px;
+
+  padding: 9px 18px !important;
+
+  color: #ffffff !important;
+
+  background: #293342 !important;
+
+  border: 1px solid #293342 !important;
+  border-radius: 7px !important;
+
+  font-size: 12px;
+  font-weight: 650;
+
+  box-shadow: none !important;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.payment-erp-button:hover {
+  transform: translateY(-1px);
+
+  background: #202936 !important;
+
+  border-color: #202936 !important;
+}
+
+/* =========================================================
+   QR CODE
+========================================================= */
+
+.payment-public-qr {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  padding: 20px;
+
+  background: #fafbfc;
+
+  border: 1px solid #e2e6eb;
+  border-radius: 11px;
+}
+
+.payment-qr-label {
+  display: block;
+
+  margin-bottom: 13px;
+
+  color: #858e9b;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.payment-public-qr-image {
+  display: block;
+
+  width: 190px;
+  height: 190px;
+
+  padding: 8px;
+
+  object-fit: contain;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e5ea;
+  border-radius: 8px;
+}
+
+.payment-public-qr-empty {
+  display: flex;
+
+  width: 190px;
+  height: 190px;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  background: #f0f2f5;
+
+  border-radius: 8px;
+
+  text-align: center;
+}
+
+.payment-public-qr-empty span {
+  display: flex;
+
+  width: 55px;
+  height: 55px;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 10px;
+
+  color: #657080;
+
+  background: #e2e6eb;
+
+  border-radius: 8px;
+
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.payment-public-qr-empty p {
+  margin: 0;
+
+  color: #89919d;
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   BANK SECTION
+========================================================= */
+
+.payment-bank-section {
+  margin-top: 25px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e6ec;
+  border-radius: 14px;
+
+  box-shadow: 0 7px 25px rgba(20, 30, 50, 0.04);
+}
+
+.payment-section-heading {
+  padding: 23px 26px;
+
+  border-bottom: 1px solid #edf0f3;
+}
+
+.payment-section-heading span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #9098a3;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+
+.payment-section-heading h2 {
+  margin: 0;
+
+  color: #293342;
+
+  font-size: 21px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   BANK TABLE
+========================================================= */
+
+.payment-bank-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.payment-bank-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  font-size: 13px;
+}
+
+.payment-bank-table tr {
+  border-bottom: 1px solid #edf0f3;
+}
+
+.payment-bank-table tr:last-child {
+  border-bottom: 0;
+}
+
+.payment-bank-table th {
+  width: 55px;
+
+  padding: 17px 12px;
+
+  color: #8a929e;
+
+  background: #fafbfc;
+
+  border-right: 1px solid #edf0f3;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-align: center;
+
+  vertical-align: top;
+}
+
+.payment-bank-table td {
+  padding: 17px 20px;
+
+  vertical-align: top;
+
+  line-height: 1.6;
+}
+
+.payment-bank-table td:nth-child(2) {
+  width: 31%;
+
+  color: #5d6775;
+
+  font-weight: 650;
+}
+
+.payment-bank-table td:nth-child(3) {
+  color: #303947;
+
+  font-weight: 550;
+}
+
+.payment-account-number,
+.payment-code {
+  font-family: "Courier New", Courier, monospace;
+
+  letter-spacing: 0.4px;
+}
+
+.payment-account-number {
+  font-weight: 700 !important;
+}
+
+.payment-code {
+  font-weight: 700 !important;
+}
+
+.payment-remarks {
+  white-space: normal;
+
+  color: #626c7a !important;
+
+  font-weight: 450 !important;
+}
+
+/* =========================================================
+   AFTER ONLINE TRANSACTION
+========================================================= */
+
+.payment-after-section {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 18px;
+
+  margin-top: 25px;
+  padding: 25px 27px;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e6ec;
+  border-radius: 13px;
+
+  box-shadow: 0 6px 22px rgba(20, 30, 50, 0.035);
+}
+
+.payment-after-icon {
+  display: flex;
+
+  flex: 0 0 39px;
+
+  width: 39px;
+  height: 39px;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  background: #303947;
+
+  border-radius: 50%;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.payment-after-section span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #9098a3;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.payment-after-section h2 {
+  margin: 0;
+
+  color: #303947;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.payment-after-section p {
+  max-width: 850px;
+
+  margin: 8px 0 15px;
+
+  color: #707a87;
+
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.payment-after-button {
+  min-height: 38px;
+
+  padding: 8px 15px !important;
+
+  color: #ffffff !important;
+
+  background: #303947 !important;
+
+  border: 1px solid #303947 !important;
+  border-radius: 7px !important;
+
+  font-size: 11px;
+  font-weight: 650;
+
+  box-shadow: none !important;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.payment-procedure-public-loading {
+  display: flex;
+
+  min-height: 70vh;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  gap: 13px;
+
+  color: #747e8c;
+}
+
+.payment-procedure-public-loading .spinner-border {
+  width: 35px;
+  height: 35px;
+}
+
+.payment-procedure-public-loading p {
+  margin: 0;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.payment-procedure-public-empty {
+  display: flex;
+
+  min-height: 55vh;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  padding: 40px;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e6ec;
+  border-radius: 14px;
+
+  text-align: center;
+}
+
+.payment-empty-icon {
+  display: flex;
+
+  width: 70px;
+  height: 70px;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 17px;
+
+  color: #596474;
+
+  background: #eef1f4;
+
+  border-radius: 50%;
+
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.payment-procedure-public-empty h1 {
+  margin: 0 0 9px;
+
+  color: #293342;
+
+  font-size: 25px;
+}
+
+.payment-procedure-public-empty p {
+  margin: 0;
+
+  color: #7c8592;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   ALERT
+========================================================= */
+
+.payment-procedure-public-page .alert {
+  margin-top: 20px;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .payment-online-section {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-public-qr {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .payment-procedure-public-hero {
+    padding: 32px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  .payment-procedure-public-page {
+    padding: 22px 12px 45px;
+  }
+
+  .payment-procedure-public-hero {
+    padding: 27px 20px;
+  }
+
+  .payment-procedure-public-hero h1 {
+    font-size: 29px;
+  }
+
+  .payment-procedure-public-hero p {
+    font-size: 13px;
+  }
+
+  .payment-online-section {
+    padding: 21px 17px;
+  }
+
+  .payment-online-content h2 {
+    font-size: 21px;
+  }
+
+  .payment-bank-table {
+    min-width: 700px;
+  }
+
+  .payment-section-heading {
+    padding: 19px;
+  }
+
+  .payment-after-section {
+    padding: 20px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+  .payment-procedure-public-page {
+    padding: 17px 9px 35px;
+  }
+
+  .payment-procedure-public-breadcrumb {
+    font-size: 10px;
+  }
+
+  .payment-procedure-public-hero {
+    padding: 23px 16px;
+  }
+
+  .payment-procedure-public-hero h1 {
+    font-size: 25px;
+  }
+
+  .payment-public-qr-image,
+  .payment-public-qr-empty {
+    width: 170px;
+    height: 170px;
+  }
+
+  .payment-after-section {
+    gap: 12px;
+  }
+
+  .payment-after-icon {
+    flex-basis: 34px;
+
+    width: 34px;
+    height: 34px;
+
+    font-size: 14px;
+  }
+
+  .payment-after-section h2 {
+    font-size: 16px;
+  }
+}

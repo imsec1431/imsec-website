@@ -1,0 +1,570 @@
+/* =========================================================
+   CDC TEAM PUBLIC PAGE
+========================================================= */
+
+.cdc-team-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #172033;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.cdc-hero {
+  position: relative;
+  min-height: 330px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 70px 0;
+  background: linear-gradient(135deg, #071b3d 0%, #0d3972 55%, #1764aa 100%);
+  color: #ffffff;
+}
+
+.cdc-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(255, 255, 255, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(255, 255, 255, 0.08),
+      transparent 30%
+    );
+}
+
+.cdc-breadcrumb {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 25px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.hero-content span {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.hero-content h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(38px, 5vw, 60px);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.hero-content p {
+  max-width: 750px;
+  margin: 15px 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   TEAM SECTION
+========================================================= */
+
+.team-section {
+  padding: 45px 0;
+  background: #ffffff;
+}
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.section-title {
+  margin-bottom: 25px;
+}
+
+.section-title span {
+  display: block;
+  margin-bottom: 6px;
+  color: #1764aa;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.section-title h2 {
+  margin: 0;
+  color: #102d57;
+  font-size: 29px;
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+.section-title h2::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  margin-top: 9px;
+  border-radius: 5px;
+  background: #1764aa;
+}
+
+/* =========================================================
+   HORIZONTAL TEAM WRAPPER & ROW
+========================================================= */
+
+.team-horizontal-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.team-horizontal-row {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: stretch;
+  gap: 22px;
+  width: 100%;
+  margin: 0 !important;
+  padding: 5px 3px 18px;
+  overflow-x: auto !important;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #b8c3d0 #f1f3f6;
+}
+
+.team-horizontal-row::-webkit-scrollbar {
+  height: 7px;
+}
+
+.team-horizontal-row::-webkit-scrollbar-track {
+  background: #f1f3f6;
+  border-radius: 10px;
+}
+
+.team-horizontal-row::-webkit-scrollbar-thumb {
+  background: #b8c3d0;
+  border-radius: 10px;
+}
+
+.team-horizontal-row::-webkit-scrollbar-thumb:hover {
+  background: #8f9baa;
+}
+
+/* =========================================================
+   TEAM COLUMN
+========================================================= */
+
+.team-column {
+  flex: 0 0 340px !important;
+  width: 340px !important;
+  max-width: 340px !important;
+  min-width: 340px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* =========================================================
+   TEAM CARD
+========================================================= */
+
+.team-card {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #e0e4e9 !important;
+  border-radius: 0 !important;
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.team-image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background: #f1f3f5;
+}
+
+.team-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-image img {
+  transform: scale(1.02);
+}
+
+.team-no-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a0a8b2;
+  font-size: 50px;
+}
+
+.team-card .card-body {
+  padding: 17px 20px 18px;
+  background: #ffffff;
+}
+
+.team-card h4 {
+  margin: 0 0 10px;
+  color: #064f8d;
+  font-size: 19px;
+  line-height: 1.35;
+  font-weight: 800;
+}
+
+.team-designation {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 7px;
+  color: #222222;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.team-designation svg {
+  flex-shrink: 0;
+  color: #111111;
+  font-size: 14px;
+}
+
+.team-email {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #222222;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.team-email svg {
+  flex-shrink: 0;
+  color: #111111;
+  font-size: 14px;
+}
+
+.team-email span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.team-phone {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 7px;
+  color: #222222;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.team-phone svg {
+  flex-shrink: 0;
+  color: #111111;
+  font-size: 13px;
+}
+
+.team-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.linkedin-btn {
+  width: 38px;
+  height: 36px;
+  flex: 0 0 38px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 5px !important;
+  background: #0a66c2 !important;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.linkedin-btn:hover {
+  background: #084f96 !important;
+  transform: translateY(-1px);
+}
+
+.profile-btn {
+  flex: 1;
+  height: 36px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px !important;
+  border: none !important;
+  border-radius: 5px !important;
+  background: #1764aa !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.profile-btn:hover {
+  background: #0e4e8c !important;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.cdc-team-status {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.cdc-team-status > svg {
+  margin-bottom: 18px;
+  color: #1764aa;
+  font-size: 42px;
+}
+
+.cdc-team-status .spinner-border {
+  width: 38px;
+  height: 38px;
+  margin-bottom: 18px;
+}
+
+.cdc-team-status h3 {
+  margin: 0;
+  color: #102d57;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.cdc-team-status p {
+  margin: 9px 0 0;
+  color: #667085;
+  font-size: 14px;
+}
+
+/* =========================================================
+   PROFILE MODAL
+========================================================= */
+
+.cdc-profile-modal-image {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  height: 270px;
+  margin: 0 auto;
+  object-fit: cover;
+  border-radius: 11px;
+  border: 1px solid #e0e6ee;
+}
+
+.cdc-profile-modal-no-image {
+  width: 100%;
+  max-width: 240px;
+  height: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 11px;
+  background: #f1f4f8;
+  color: #9aa4b2;
+  font-size: 45px;
+}
+
+.cdc-modal-role {
+  display: inline-flex;
+  padding: 5px 9px;
+  margin-bottom: 9px;
+  border-radius: 5px;
+  background: #eaf3fc;
+  color: #1764aa;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.modal-dialog {
+  max-height: calc(100vh - 30px);
+}
+
+.modal-content {
+  max-height: calc(100vh - 30px);
+}
+
+.modal-dialog-scrollable .modal-body {
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+.modal .cdc-modal-role + h3 {
+  margin: 0;
+  color: #102d57;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.modal .cdc-modal-role + h3 + h5 {
+  margin: 5px 0 20px;
+  color: #1764aa;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.modal .modal-body p {
+  color: #596579;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.modal .modal-body p svg {
+  margin-right: 7px;
+  color: #1764aa;
+}
+
+.modal .modal-body p strong {
+  color: #344054;
+}
+
+.cdc-modal-section {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e9ef;
+}
+
+.cdc-modal-section h5 {
+  margin: 0 0 8px;
+  color: #102d57;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.cdc-modal-section p {
+  margin: 0;
+  color: #596579;
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+/* =========================================================
+   MEDIA QUERIES
+========================================================= */
+
+@media (max-width: 992px) {
+  .team-column {
+    flex: 0 0 320px !important;
+    width: 320px !important;
+    max-width: 320px !important;
+    min-width: 320px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .cdc-hero {
+    min-height: 280px;
+    padding: 55px 0;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .team-section {
+    padding: 35px 0;
+  }
+
+  .section-title {
+    margin-bottom: 20px;
+  }
+
+  .section-title h2 {
+    font-size: 25px;
+  }
+
+  .team-horizontal-row {
+    gap: 15px;
+  }
+
+  .team-column {
+    flex: 0 0 300px !important;
+    width: 300px !important;
+    max-width: 300px !important;
+    min-width: 300px !important;
+  }
+
+  .team-image {
+    height: 270px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-column {
+    flex: 0 0 285px !important;
+    width: 285px !important;
+    max-width: 285px !important;
+    min-width: 285px !important;
+  }
+
+  .team-image {
+    height: 255px;
+  }
+
+  .team-card h4 {
+    font-size: 18px;
+  }
+
+  .team-email {
+    font-size: 13px;
+  }
+}

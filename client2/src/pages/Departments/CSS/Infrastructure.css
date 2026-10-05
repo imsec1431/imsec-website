@@ -1,0 +1,436 @@
+/* ==========================
+   HERO SECTION
+========================== */
+/*=========================================================
+    HERO
+=========================================================*/
+
+.infraHero {
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+
+  color: #fff;
+
+  text-align: center;
+
+  padding: 65px 30px;
+
+  border-radius: 20px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  margin-bottom: 35px;
+
+  z-index: 1;
+}
+
+/* Decorative Circle - Top Right */
+
+.infraHero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+
+  height: 350px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border-radius: 50%;
+
+  top: -120px;
+
+  right: -100px;
+
+  pointer-events: none;
+}
+
+/* Decorative Circle - Bottom Left */
+
+.infraHero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 250px;
+
+  height: 250px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border-radius: 50%;
+
+  bottom: -80px;
+
+  left: -70px;
+
+  pointer-events: none;
+}
+
+/* Hero Heading */
+
+.infraHero h1 {
+  position: relative;
+
+  z-index: 2;
+
+  font-size: 46px;
+
+  font-weight: 700;
+
+  margin-bottom: 18px;
+
+  color: #ffffff;
+}
+
+/* Hero Description */
+
+.infraHero p {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 850px;
+
+  margin: auto;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  color: #ffffff !important;
+}
+
+/*=========================================================
+    HERO RESPONSIVE
+=========================================================*/
+
+@media (max-width: 991px) {
+  .infraHero {
+    padding: 55px 25px;
+
+    border-radius: 18px;
+  }
+
+  .infraHero h1 {
+    font-size: 38px;
+  }
+
+  .infraHero p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .infraHero {
+    padding: 50px 20px;
+
+    margin-bottom: 25px;
+
+    border-radius: 16px;
+  }
+
+  .infraHero::before {
+    width: 250px;
+
+    height: 250px;
+
+    top: -100px;
+
+    right: -100px;
+  }
+
+  .infraHero::after {
+    width: 180px;
+
+    height: 180px;
+
+    bottom: -70px;
+
+    left: -60px;
+  }
+
+  .infraHero h1 {
+    font-size: 32px;
+
+    margin-bottom: 12px;
+  }
+
+  .infraHero p {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 480px) {
+  .infraHero {
+    padding: 42px 16px;
+
+    border-radius: 14px;
+  }
+
+  .infraHero h1 {
+    font-size: 28px;
+  }
+
+  .infraHero p {
+    font-size: 13px;
+
+    line-height: 1.6;
+  }
+}
+
+/* ==========================
+   COMMON
+========================== */
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.sectionTitle h2 {
+  font-size: 36px;
+  color: #0d3b66;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.sectionTitle h2::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  background: #ffc107;
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  transform: translateX(-50%);
+  border-radius: 20px;
+}
+
+p {
+  line-height: 1.8;
+  color: #555;
+}
+
+/* ==========================
+   HIGHLIGHT SECTION
+========================== */
+
+.infraSection {
+  background: #f8f9fa;
+  padding: 80px 0;
+}
+
+.infraCard {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.4s;
+  height: 100%;
+}
+
+.infraCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.15);
+}
+
+.infraCard img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.infraCard h4 {
+  color: #0d3b66;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+/* ==========================
+   STATISTICS
+========================== */
+
+.statistics {
+  background: #0d3b66;
+  color: white;
+  padding: 70px 0;
+}
+
+.statistics h2 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #ffc107;
+}
+
+.statistics p {
+  color: white;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* ==========================
+   LABS
+========================== */
+
+.labCard {
+  background: white;
+  text-align: center;
+  border-radius: 15px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.4s;
+  height: 100%;
+}
+
+.labCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
+}
+
+.labIcon {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  background: #0d3b66;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 34px;
+  margin-bottom: 25px;
+}
+
+.labCard h4 {
+  color: #0d3b66;
+  font-weight: bold;
+}
+
+.labCard h6 {
+  color: #666;
+  margin: 15px 0;
+}
+
+/* ==========================
+   FACILITIES
+========================== */
+
+.facilitySection {
+  background: #f8f9fa;
+  padding: 80px 0;
+}
+
+.facilityCard {
+  background: white;
+  border-radius: 15px;
+  text-align: center;
+  padding: 40px 20px;
+  transition: 0.3s;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  height: 100%;
+}
+
+.facilityCard:hover {
+  background: #0d3b66;
+  color: white;
+  transform: translateY(-8px);
+}
+
+.facilityCard:hover h5 {
+  color: white;
+}
+
+.facilityIcon {
+  font-size: 45px;
+  color: #ffc107;
+  margin-bottom: 20px;
+}
+
+.facilityCard h5 {
+  color: #0d3b66;
+  font-weight: 600;
+}
+
+/* ==========================
+   GALLERY
+========================== */
+
+.galleryCard {
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.galleryCard img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.galleryCard:hover img {
+  transform: scale(1.1);
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 991px) {
+  .infraHero {
+    padding: 90px 0;
+  }
+
+  .infraHero h1 {
+    font-size: 40px;
+  }
+
+  .sectionTitle h2 {
+    font-size: 30px;
+  }
+
+  .statistics h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 767px) {
+  .infraHero {
+    padding: 70px 20px;
+  }
+
+  .infraHero h1 {
+    font-size: 32px;
+  }
+
+  .infraHero p {
+    font-size: 16px;
+  }
+
+  .sectionTitle h2 {
+    font-size: 26px;
+  }
+
+  .statistics h2 {
+    font-size: 30px;
+  }
+
+  .infraCard img {
+    height: 220px;
+  }
+
+  .galleryCard img {
+    height: 220px;
+  }
+
+  .labCard,
+  .facilityCard {
+    padding: 30px 20px;
+  }
+}

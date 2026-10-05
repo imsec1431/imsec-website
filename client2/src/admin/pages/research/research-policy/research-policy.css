@@ -1,0 +1,874 @@
+/* =========================================================
+   RESEARCH POLICY PAGE
+========================================================= */
+
+.research-policy-page {
+  padding-bottom: 50px;
+}
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.research-policy-page .page-header h2 {
+  color: #0a2e5c;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.research-policy-page .page-header p {
+  color: #64748b;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* =========================================================
+   TABS
+========================================================= */
+
+.research-policy-tabs {
+  display: flex;
+  gap: 10px;
+
+  padding: 7px;
+
+  background: #eef2f7;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 14px;
+
+  margin-bottom: 24px;
+}
+
+.research-policy-tab {
+  position: relative;
+
+  flex: 1;
+
+  border: 1px solid transparent;
+
+  background: transparent;
+
+  padding: 17px 20px;
+
+  border-radius: 10px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  color: #475569;
+
+  transition: all 0.3s ease;
+}
+
+.research-policy-tab:hover {
+  background: #ffffff;
+  color: #0a2e5c;
+}
+
+.research-policy-tab strong {
+  display: block;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  margin-bottom: 5px;
+}
+
+.research-policy-tab span {
+  display: block;
+
+  color: #64748b;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+.research-policy-tab.active {
+  background: #ffffff;
+
+  color: #0a2e5c;
+
+  border-color: #e2e8f0;
+
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.08);
+}
+
+.research-policy-tab.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+
+  height: 3px;
+
+  background: #fdb913;
+
+  border-radius: 5px 5px 0 0;
+}
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.research-policy-content {
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 15px;
+
+  padding: 28px;
+
+  min-height: 400px;
+
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.05);
+}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.research-section-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-bottom: 20px;
+
+  margin-bottom: 22px;
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.research-section-header h4 {
+  color: #0a2e5c;
+
+  font-size: 21px;
+
+  font-weight: 700;
+
+  margin: 0 0 5px;
+}
+
+.research-section-header p {
+  color: #64748b;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  margin: 0;
+}
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.research-primary-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  border: none;
+
+  background: #0a2e5c;
+
+  color: #ffffff;
+
+  padding: 11px 20px;
+
+  min-height: 42px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition: all 0.3s ease;
+}
+
+.research-primary-btn:hover {
+  background: #fdb913;
+
+  color: #0a2e5c;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 5px 12px rgba(10, 46, 92, 0.15);
+}
+
+.research-primary-btn:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+/* =========================================================
+   POLICY LIST
+========================================================= */
+
+.policy-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+/* =========================================================
+   POLICY CARD
+========================================================= */
+
+.policy-card {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  min-height: 86px;
+
+  padding: 17px 20px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 12px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.policy-card:hover {
+  background: #ffffff;
+
+  border-color: #cbd5e1;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.07);
+}
+
+/* =========================================================
+   PDF ICON
+========================================================= */
+
+.policy-icon {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 50px;
+
+  height: 50px;
+
+  flex-shrink: 0;
+
+  background: #fff1f2;
+
+  color: #dc2626;
+
+  border-radius: 10px;
+
+  font-size: 22px;
+
+  border: 1px solid #fecdd3;
+}
+
+/* =========================================================
+   POLICY INFORMATION
+========================================================= */
+
+.policy-info {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.policy-info h5 {
+  color: #0a2e5c;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  line-height: 1.5;
+
+  margin: 0 0 5px;
+}
+
+.policy-info span {
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.policy-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  flex-shrink: 0;
+}
+
+.policy-actions button,
+.policy-actions a {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 6px;
+
+  min-width: 76px;
+
+  padding: 8px 12px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+/* View */
+
+.policy-view-btn {
+  background: #e0f2fe;
+
+  color: #0369a1;
+}
+
+.policy-view-btn:hover {
+  background: #bae6fd;
+
+  color: #075985;
+}
+
+/* Replace */
+
+.policy-replace-btn {
+  background: #fff3cd;
+
+  color: #856404;
+}
+
+.policy-replace-btn:hover {
+  background: #ffe69c;
+
+  color: #664d03;
+}
+
+/* Upload */
+
+.policy-upload-btn {
+  background: #dcfce7;
+
+  color: #15803d;
+}
+
+.policy-upload-btn:hover {
+  background: #bbf7d0;
+
+  color: #166534;
+}
+
+/* Delete */
+
+.policy-delete-btn {
+  background: #fee2e2;
+
+  color: #b91c1c;
+}
+
+.policy-delete-btn:hover {
+  background: #fecaca;
+
+  color: #991b1b;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.research-policy-loading {
+  min-height: 250px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #64748b;
+}
+
+.loading-icon {
+  color: #0a2e5c;
+
+  font-size: 25px;
+
+  animation: researchPolicySpin 1s linear infinite;
+
+  margin-bottom: 12px;
+}
+
+.research-policy-loading p {
+  font-size: 13px;
+
+  margin: 0;
+}
+
+@keyframes researchPolicySpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   UPLOAD BOX
+========================================================= */
+
+.policy-upload-box {
+  max-width: 680px;
+
+  margin: 10px auto 0;
+
+  padding: 35px;
+
+  background: #f8fafc;
+
+  border: 1px dashed #cbd5e1;
+
+  border-radius: 15px;
+}
+
+.upload-icon {
+  width: 68px;
+
+  height: 68px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin: 0 auto 17px;
+
+  background: #fff1f2;
+
+  color: #dc2626;
+
+  border: 1px solid #fecdd3;
+
+  border-radius: 50%;
+
+  font-size: 28px;
+}
+
+.policy-upload-box h5 {
+  color: #0a2e5c;
+
+  text-align: center;
+
+  font-size: 19px;
+
+  font-weight: 700;
+
+  margin-bottom: 7px;
+}
+
+.policy-upload-box > p {
+  color: #64748b;
+
+  text-align: center;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  margin-bottom: 28px;
+}
+
+.policy-upload-box .research-primary-btn {
+  width: 100%;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.research-policy-page .form-label {
+  color: #334155;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  margin-bottom: 7px;
+}
+
+.research-policy-page .form-control,
+.research-policy-page .form-select {
+  min-height: 44px;
+
+  border: 1px solid #dbe3ec;
+
+  border-radius: 8px;
+
+  color: #334155;
+
+  font-size: 13px;
+
+  box-shadow: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.research-policy-page .form-control:focus,
+.research-policy-page .form-select:focus {
+  border-color: #0a2e5c;
+
+  box-shadow: 0 0 0 3px rgba(10, 46, 92, 0.08);
+}
+
+.research-policy-page .text-muted {
+  font-size: 11px;
+}
+
+/* =========================================================
+   ALERT
+========================================================= */
+
+.research-policy-page .alert {
+  border: none;
+
+  border-radius: 9px;
+
+  font-size: 13px;
+
+  margin-bottom: 20px;
+}
+
+/* =========================================================
+   CUSTOM MODAL
+========================================================= */
+
+.policy-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(15, 23, 42, 0.55);
+
+  backdrop-filter: blur(3px);
+}
+
+.policy-modal {
+  width: 100%;
+
+  max-width: 520px;
+
+  background: #ffffff;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.25);
+
+  animation: policyModalShow 0.25s ease;
+}
+
+@keyframes policyModalShow {
+  from {
+    opacity: 0;
+
+    transform: translateY(-15px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.policy-modal-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 17px 20px;
+
+  background: #0a2e5c;
+
+  color: #ffffff;
+}
+
+.policy-modal-header h5 {
+  margin: 0;
+
+  font-size: 17px;
+
+  font-weight: 700;
+}
+
+.policy-modal-header button {
+  border: none;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-size: 27px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  opacity: 0.85;
+}
+
+.policy-modal-header button:hover {
+  opacity: 1;
+}
+
+/* =========================================================
+   MODAL BODY
+========================================================= */
+
+.policy-modal-body {
+  padding: 25px;
+}
+
+/* =========================================================
+   MODAL FOOTER
+========================================================= */
+
+.policy-modal-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  padding: 14px 20px;
+
+  background: #f8fafc;
+
+  border-top: 1px solid #e2e8f0;
+}
+
+.policy-cancel-btn {
+  border: none;
+
+  background: #e2e8f0;
+
+  color: #334155;
+
+  padding: 10px 18px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.policy-cancel-btn:hover {
+  background: #cbd5e1;
+}
+
+/* =========================================================
+   SPINNER
+========================================================= */
+
+.spin {
+  animation: researchPolicySpin 1s linear infinite;
+}
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+  .research-policy-tabs {
+    flex-direction: column;
+  }
+
+  .research-policy-tab {
+    width: 100%;
+  }
+
+  .policy-card {
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+  }
+
+  .policy-info {
+    min-width: calc(100% - 70px);
+  }
+
+  .policy-actions {
+    width: 100%;
+
+    padding-left: 66px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+  .research-policy-page {
+    padding-bottom: 30px;
+  }
+
+  .research-policy-page .page-header h2 {
+    font-size: 23px;
+  }
+
+  .research-policy-content {
+    padding: 18px;
+
+    border-radius: 12px;
+  }
+
+  .research-section-header {
+    align-items: stretch;
+
+    flex-direction: column;
+  }
+
+  .research-section-header h4 {
+    font-size: 19px;
+  }
+
+  .policy-card {
+    padding: 15px;
+
+    gap: 12px;
+  }
+
+  .policy-icon {
+    width: 44px;
+
+    height: 44px;
+
+    font-size: 19px;
+  }
+
+  .policy-info h5 {
+    font-size: 14px;
+  }
+
+  .policy-actions {
+    padding-left: 0;
+
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .policy-actions button,
+  .policy-actions a {
+    width: 100%;
+  }
+
+  .policy-upload-box {
+    padding: 25px 18px;
+  }
+
+  .policy-modal-overlay {
+    padding: 12px;
+  }
+
+  .policy-modal-body {
+    padding: 20px;
+  }
+
+  .policy-modal-footer {
+    padding: 12px 15px;
+  }
+}

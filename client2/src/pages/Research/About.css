@@ -1,0 +1,1062 @@
+/*=========================================================
+                Research About Page
+=========================================================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background: #fff;
+}
+
+/*=========================================================
+                Common
+=========================================================*/
+
+.section-tag {
+  color: #fdb913;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+
+  font-weight: 800;
+
+  color: #0a2e5c;
+
+  margin-bottom: 20px;
+}
+
+.section-title span {
+  color: #fdb913;
+}
+
+.section-title::after {
+  content: "";
+
+  display: block;
+
+  width: 90px;
+
+  height: 4px;
+
+  background: #fdb913;
+
+  border-radius: 50px;
+
+  margin-top: 15px;
+}
+
+.text-center .section-title::after {
+  margin: 15px auto 0;
+}
+
+/*=========================================================
+                Hero
+=========================================================*/
+
+.research-hero {
+  height: 430px;
+
+  background:
+    linear-gradient(rgba(10, 46, 92, 1), rgba(10, 46, 92, 1)),
+    url("https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1600&q=80");
+
+  background-size: cover;
+
+  background-position: center;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+
+  font-weight: 800;
+}
+
+.hero-content p {
+  margin-top: 15px;
+
+  font-size: 18px;
+}
+
+.hero-content span {
+  margin: 0 8px;
+
+  color: #fdb913;
+}
+
+/*=========================================================
+                About
+=========================================================*/
+
+.research-about {
+  background: #fff;
+}
+
+.about-image {
+  width: 100%;
+
+  border-radius: 25px;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+
+  transition: 0.35s;
+}
+
+.about-image:hover {
+  transform: scale(1.03);
+}
+
+.research-about p {
+  color: #666;
+
+  line-height: 1.9;
+
+  text-align: justify;
+}
+
+.research-about .btn {
+  padding: 12px 30px;
+
+  font-weight: 600;
+}
+
+/*=========================================================
+                Vision & Mission
+=========================================================*/
+
+.vision-section {
+  background: #f8f9fb;
+}
+
+.vision-card {
+  background: #fff;
+
+  padding: 40px 35px;
+
+  border-radius: 20px;
+
+  height: 100%;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  border-top: 4px solid transparent;
+}
+
+.vision-card:hover {
+  transform: translateY(-10px);
+
+  border-top: 4px solid #fdb913;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.vision-icon {
+  font-size: 60px;
+
+  color: #fdb913;
+
+  margin-bottom: 20px;
+}
+
+.vision-card h3 {
+  font-weight: 700;
+
+  color: #0a2e5c;
+
+  margin-bottom: 20px;
+}
+
+.vision-card p {
+  color: #666;
+
+  line-height: 1.9;
+}
+
+.vision-card ul {
+  padding-left: 20px;
+
+  margin: 0;
+}
+
+.vision-card li {
+  margin-bottom: 12px;
+
+  line-height: 1.8;
+
+  color: #555;
+}
+
+/*=========================================================
+                Philosophy
+=========================================================*/
+
+.philosophy-section {
+  background: #fff;
+}
+
+.philosophy-card {
+  background: #fff;
+
+  padding: 35px 20px;
+
+  text-align: center;
+
+  border-radius: 20px;
+
+  height: 100%;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  border-bottom: 4px solid transparent;
+}
+
+.philosophy-card:hover {
+  transform: translateY(-10px);
+
+  border-bottom: 4px solid #fdb913;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.philosophy-icon {
+  font-size: 55px;
+
+  color: #fdb913;
+
+  margin-bottom: 20px;
+}
+
+.philosophy-card h5 {
+  font-weight: 700;
+
+  color: #0a2e5c;
+
+  margin: 0;
+}
+
+/*=========================================================
+                Research Ecosystem
+=========================================================*/
+
+.ecosystem-section {
+  background: #f8f9fb;
+}
+
+.ecosystem-card {
+  background: #fff;
+
+  padding: 35px 25px;
+
+  text-align: center;
+
+  border-radius: 20px;
+
+  height: 100%;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  border-top: 4px solid transparent;
+}
+
+.ecosystem-card:hover {
+  transform: translateY(-10px);
+
+  border-top: 4px solid #fdb913;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.ecosystem-icon {
+  font-size: 55px;
+
+  color: #fdb913;
+
+  margin-bottom: 20px;
+}
+
+.ecosystem-card h4 {
+  font-weight: 700;
+
+  color: #0a2e5c;
+
+  margin-bottom: 15px;
+}
+
+.ecosystem-card p {
+  color: #666;
+
+  line-height: 1.8;
+}
+/*=========================================================
+                Research Focus Areas
+=========================================================*/
+
+.focus-section {
+  background: #fff;
+}
+
+.focus-card {
+  background: #fff;
+
+  padding: 35px 20px;
+
+  text-align: center;
+
+  border-radius: 20px;
+
+  height: 100%;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  border-bottom: 4px solid transparent;
+}
+
+.focus-card:hover {
+  transform: translateY(-10px);
+
+  border-bottom: 4px solid #fdb913;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.focus-icon {
+  font-size: 55px;
+
+  color: #fdb913;
+
+  margin-bottom: 20px;
+}
+
+.focus-card h5 {
+  font-weight: 700;
+
+  color: #0a2e5c;
+
+  margin: 0;
+}
+
+/*=========================================================
+                Why Research
+=========================================================*/
+
+.why-section {
+  background: #f8f9fb;
+}
+
+.why-image {
+  width: 100%;
+
+  border-radius: 25px;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+
+  transition: 0.35s;
+}
+
+.why-image:hover {
+  transform: scale(1.03);
+}
+
+.why-list {
+  padding-left: 20px;
+}
+
+.why-list li {
+  margin-bottom: 16px;
+
+  font-size: 17px;
+
+  color: #555;
+
+  line-height: 1.8;
+}
+
+/*=========================================================
+                Statistics
+=========================================================*/
+
+.stats-section {
+  background: #fff;
+}
+
+.stat-card {
+  background: #fff;
+
+  padding: 35px 20px;
+
+  text-align: center;
+
+  border-radius: 20px;
+
+  height: 100%;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  border-bottom: 4px solid transparent;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+
+  border-bottom: 4px solid #fdb913;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card h2 {
+  font-size: 42px;
+
+  font-weight: 800;
+
+  color: #0a2e5c;
+
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  color: #666;
+
+  margin: 0;
+}
+
+/*=========================================================
+                Collaborations
+=========================================================*/
+/* =========================================================
+   INDUSTRY & ACADEMIC PARTNERS
+========================================================= */
+
+.collaboration-section {
+  background: #f8fafc;
+}
+
+/* =========================================================
+   PARTNER CARD
+========================================================= */
+
+.partner-card {
+  position: relative;
+
+  height: 100%;
+
+  min-height: 210px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 30px 25px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.06);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+/* Top gold line */
+
+.partner-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 4px;
+
+  background: #fdb913;
+
+  transform: scaleX(0);
+
+  transform-origin: center;
+
+  transition: transform 0.35s ease;
+}
+
+/* Background decoration */
+
+.partner-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 100px;
+
+  height: 100px;
+
+  right: -45px;
+
+  top: -45px;
+
+  border-radius: 50%;
+
+  background: rgba(209, 211, 214, 0.04);
+
+  transition: 0.35s ease;
+}
+
+/* Hover */
+
+.partner-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(10, 46, 92, 0.15);
+
+  box-shadow: 0 15px 35px rgba(162, 166, 172, 0.12);
+}
+
+.partner-card:hover::before {
+  transform: scaleX(1);
+}
+
+.partner-card:hover::after {
+  transform: scale(1.4);
+}
+
+/* =========================================================
+   PARTNER NAME
+========================================================= */
+
+.partner-card h4 {
+  position: relative;
+
+  z-index: 2;
+
+  color: #0a2e5c;
+
+  font-size: 21px;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  margin: 0 0 12px;
+
+  transition: color 0.3s ease;
+}
+
+.partner-card:hover h4 {
+  color: #202a37;
+}
+
+/* =========================================================
+   PARTNER TYPE
+========================================================= */
+
+.partner-card small {
+  position: relative;
+
+  z-index: 2;
+
+  display: inline-block;
+
+  padding: 5px 13px;
+
+  margin-bottom: 12px;
+
+  background: #fff7d6;
+
+  color: #856404;
+
+  border-radius: 30px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.partner-card p {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 340px;
+
+  color: #080b0f;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  margin: 0 0 17px;
+}
+
+/* =========================================================
+   WEBSITE BUTTON
+========================================================= */
+
+.partner-card a {
+  position: relative;
+
+  z-index: 3;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 8px 18px;
+
+  background: #0a2e5c;
+
+  color: #ffffff;
+
+  border-radius: 30px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.partner-card a:hover {
+  background: #fdb913;
+
+  color: #0a2e5c;
+
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   EMPTY PARTNER STATE
+========================================================= */
+
+.collaboration-section .text-center p {
+  color: #64748b;
+
+  font-size: 15px;
+
+  margin: 0;
+
+  padding: 35px 20px;
+
+  background: #ffffff;
+
+  border: 1px dashed #cbd5e1;
+
+  border-radius: 12px;
+}
+
+/* =========================================================
+   PARTNER GRID
+========================================================= */
+
+.collaboration-section .row {
+  align-items: stretch;
+}
+
+.collaboration-section .row > div {
+  display: flex;
+}
+
+.collaboration-section .row > div .partner-card {
+  width: 100%;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 991px) {
+  .partner-card {
+    min-height: 200px;
+
+    padding: 27px 20px;
+  }
+
+  .partner-card h4 {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 576px) {
+  .partner-card {
+    min-height: 190px;
+
+    padding: 25px 18px;
+
+    border-radius: 13px;
+  }
+
+  .partner-card h4 {
+    font-size: 18px;
+  }
+
+  .partner-card p {
+    font-size: 12px;
+  }
+
+  .partner-card a {
+    padding: 8px 16px;
+
+    font-size: 11px;
+  }
+}
+
+/*=========================================================
+                SDG
+=========================================================*/
+
+.sdg-section {
+  background: #fff;
+}
+
+.sdg-card {
+  background: #fff;
+
+  padding: 35px 20px;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  height: 100%;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  border-top: 4px solid transparent;
+}
+
+.sdg-card:hover {
+  transform: translateY(-10px);
+
+  border-top: 4px solid #28a745;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.sdg-icon {
+  font-size: 55px;
+
+  color: #28a745;
+
+  margin-bottom: 20px;
+}
+
+.sdg-card h5 {
+  font-weight: 700;
+
+  color: #0a2e5c;
+
+  margin: 0;
+}
+
+/*=========================================================
+                Gallery
+=========================================================*/
+
+.gallery-section {
+  background: #f8f9fb;
+}
+
+.gallery-card {
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  height: 100%;
+}
+
+.gallery-card:hover {
+  transform: translateY(-10px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-card img {
+  width: 100%;
+
+  height: 280px;
+
+  object-fit: cover;
+
+  transition: 0.5s;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.08);
+}
+
+/*=========================================================
+                FAQ
+=========================================================*/
+
+.faq-section {
+  background: #fff;
+}
+
+.faq-card {
+  background: #f8f9fb;
+
+  padding: 35px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.faq-card h5 {
+  font-weight: 700;
+
+  color: #0a2e5c;
+
+  margin-bottom: 12px;
+}
+
+.faq-card p {
+  color: #666;
+
+  line-height: 1.8;
+}
+
+.faq-card hr {
+  margin: 25px 0;
+}
+
+/*=========================================================
+                CTA
+=========================================================*/
+
+.research-cta {
+  background: linear-gradient(135deg, #0a2e5c, #123f7a);
+
+  padding: 90px 0;
+
+  color: #fff;
+}
+
+.research-cta h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+
+  font-weight: 800;
+
+  margin-bottom: 20px;
+}
+
+.research-cta p {
+  color: #ddd;
+
+  line-height: 1.8;
+}
+
+.research-cta .btn {
+  padding: 12px 30px;
+
+  font-weight: 600;
+
+  transition: 0.35s;
+}
+
+.research-cta .btn-warning {
+  background: #fdb913;
+
+  color: #0a2e5c;
+
+  border: none;
+}
+
+.research-cta .btn-warning:hover {
+  background: #fff;
+
+  color: #0a2e5c;
+
+  transform: translateY(-5px);
+}
+
+.research-cta .btn-outline-light {
+  border: 2px solid #fff;
+}
+
+.research-cta .btn-outline-light:hover {
+  background: #fff;
+
+  color: #0a2e5c;
+
+  transform: translateY(-5px);
+}
+
+/*=========================================================
+                Animation
+=========================================================*/
+
+.vision-card,
+.philosophy-card,
+.ecosystem-card,
+.focus-card,
+.partner-card,
+.sdg-card,
+.gallery-card,
+.stat-card {
+  transition: all 0.35s ease;
+}
+
+/*=========================================================
+                Responsive
+=========================================================*/
+
+@media (max-width: 992px) {
+  .research-hero {
+    height: 320px;
+  }
+
+  .research-cta {
+    text-align: center;
+  }
+
+  .why-image {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .research-hero {
+    height: 260px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .about-image {
+    margin-bottom: 25px;
+  }
+
+  .vision-card,
+  .ecosystem-card,
+  .focus-card,
+  .partner-card,
+  .sdg-card {
+    padding: 25px;
+  }
+
+  .gallery-card img {
+    height: 220px;
+  }
+
+  .stat-card {
+    padding: 25px;
+  }
+
+  .stat-card h2 {
+    font-size: 34px;
+  }
+
+  .faq-card {
+    padding: 25px;
+  }
+
+  .research-cta {
+    padding: 60px 20px;
+  }
+
+  .research-cta .btn {
+    width: 100%;
+
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .gallery-card img {
+    height: 200px;
+  }
+
+  .why-list li {
+    font-size: 15px;
+  }
+
+  .faq-card {
+    padding: 20px;
+  }
+}

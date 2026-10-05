@@ -1,0 +1,972 @@
+/* =========================================================
+   STUDENT CLUBS MANAGEMENT
+========================================================= */
+
+.student-clubs-management {
+  width: 100%;
+  padding: 28px;
+  background: #f5f7fb;
+  min-height: 100vh;
+  color: #172033;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.student-clubs-page-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 26px;
+}
+
+.student-clubs-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  color: #2f6fed;
+}
+
+.student-clubs-page-header h1 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 800;
+  color: #172033;
+}
+
+.student-clubs-page-header p {
+  margin: 8px 0 0;
+  color: #697386;
+  font-size: 14px;
+}
+
+.student-clubs-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.student-clubs-btn {
+  min-height: 44px;
+  border: 0;
+  border-radius: 10px;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.student-clubs-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.student-clubs-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.student-clubs-btn-primary {
+  background: #0a2e5c;
+  color: #ffffff;
+  box-shadow: 0 7px 18px rgba(10, 46, 92, 0.18);
+}
+
+.student-clubs-btn-primary:hover:not(:disabled) {
+  box-shadow: 0 10px 24px rgba(10, 46, 92, 0.24);
+}
+
+.student-clubs-btn-secondary {
+  background: #ffffff;
+  color: #445066;
+  border: 1px solid #dce2eb;
+}
+
+.student-clubs-btn-secondary:hover:not(:disabled) {
+  background: #f8fafc;
+}
+
+/* =========================================================
+   ALERTS
+========================================================= */
+
+.student-clubs-alert {
+  min-height: 48px;
+  padding: 11px 14px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.student-clubs-alert button {
+  width: 28px;
+  height: 28px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+.student-clubs-alert-error {
+  color: #9b1c1c;
+  background: #fff1f1;
+  border: 1px solid #ffd1d1;
+}
+
+.student-clubs-alert-error button {
+  color: #9b1c1c;
+}
+
+.student-clubs-alert-success {
+  color: #176b3a;
+  background: #effbf4;
+  border: 1px solid #c8efd7;
+}
+
+.student-clubs-alert-success button {
+  color: #176b3a;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.student-clubs-card {
+  background: #ffffff;
+  border: 1px solid #e5e9f0;
+  border-radius: 16px;
+  margin-bottom: 22px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(28, 39, 58, 0.05);
+}
+
+.student-clubs-card-header {
+  min-height: 76px;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.student-clubs-card-header span {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #7b8495;
+}
+
+.student-clubs-card-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  color: #172033;
+}
+
+.student-clubs-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #f3f7fd;
+  border-radius: 8px;
+  color: #0a2e5c;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.student-clubs-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  padding: 22px;
+}
+
+.student-clubs-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.student-clubs-form-full {
+  grid-column: 1 / -1;
+}
+
+.student-clubs-form-group label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #3d4658;
+}
+
+.student-clubs-form-group input,
+.student-clubs-form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #dce2ea;
+  background: #ffffff;
+  color: #172033;
+  border-radius: 9px;
+  padding: 11px 13px;
+  outline: none;
+  font-family: inherit;
+  font-size: 13px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.student-clubs-form-group input {
+  height: 44px;
+}
+
+.student-clubs-form-group textarea {
+  min-height: 110px;
+  resize: vertical;
+  line-height: 1.55;
+}
+
+.student-clubs-form-group input:focus,
+.student-clubs-form-group textarea:focus {
+  border-color: #4d7fd8;
+  box-shadow: 0 0 0 3px rgba(77, 127, 216, 0.1);
+}
+
+.student-clubs-form-group input:disabled,
+.student-clubs-form-group textarea:disabled {
+  background: #f7f8fa;
+  color: #697386;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.student-clubs-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.student-clubs-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+}
+
+.student-clubs-table thead th {
+  padding: 13px 20px;
+  background: #f8fafc;
+  border-bottom: 1px solid #e5e9f0;
+  color: #6b7485;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.student-clubs-table tbody td {
+  padding: 15px 20px;
+  border-bottom: 1px solid #edf0f4;
+  vertical-align: middle;
+  font-size: 13px;
+  color: #384255;
+}
+
+.student-clubs-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.student-clubs-table tbody tr {
+  transition: background 0.18s ease;
+}
+
+.student-clubs-table tbody tr:hover {
+  background: #fafbfd;
+}
+
+.student-clubs-number {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f4f8;
+  color: #596579;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   CLUB NAME CELL
+========================================================= */
+
+.student-clubs-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 230px;
+}
+
+.student-clubs-name-cell strong {
+  color: #172033;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.student-clubs-table-thumb,
+.student-clubs-table-placeholder {
+  width: 44px;
+  height: 44px;
+  border-radius: 9px;
+  flex: 0 0 44px;
+}
+
+.student-clubs-table-thumb {
+  object-fit: cover;
+  display: block;
+  border: 1px solid #e3e7ee;
+}
+
+.student-clubs-table-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef3f9;
+  color: #6b7d95;
+  font-size: 16px;
+}
+
+/* =========================================================
+   COORDINATOR CELL
+========================================================= */
+
+.student-clubs-coordinator-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.student-clubs-coordinator-cell span {
+  font-weight: 600;
+  color: #3b4557;
+}
+
+.student-clubs-coordinator-thumb,
+.student-clubs-coordinator-placeholder {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  flex: 0 0 38px;
+}
+
+.student-clubs-coordinator-thumb {
+  object-fit: cover;
+  display: block;
+  border: 1px solid #e1e6ed;
+}
+
+.student-clubs-coordinator-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef3f9;
+  color: #6b7d95;
+  font-size: 14px;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.student-clubs-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.student-clubs-action-btn {
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  border-radius: 8px;
+  border: 1px solid #e0e5ec;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.student-clubs-action-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.student-clubs-action-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.student-clubs-view-btn {
+  color: #416a9e;
+}
+
+.student-clubs-view-btn:hover:not(:disabled) {
+  background: #f0f5fc;
+  border-color: #cbd9ea;
+}
+
+.student-clubs-edit-btn {
+  color: #a46a12;
+}
+
+.student-clubs-edit-btn:hover:not(:disabled) {
+  background: #fff8e9;
+  border-color: #ecd9af;
+}
+
+.student-clubs-delete-btn {
+  color: #b52c36;
+}
+
+.student-clubs-delete-btn:hover:not(:disabled) {
+  background: #fff1f2;
+  border-color: #efc7cb;
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.student-clubs-empty {
+  min-height: 270px;
+  padding: 45px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.student-clubs-empty > svg {
+  font-size: 34px;
+  color: #9ba7b8;
+  margin-bottom: 15px;
+}
+
+.student-clubs-empty h3 {
+  margin: 0 0 7px;
+  color: #263147;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.student-clubs-empty p {
+  margin: 0 0 18px;
+  color: #7a8495;
+  font-size: 13px;
+}
+
+/* =========================================================
+   IMAGE FIELD
+========================================================= */
+
+.student-clubs-image-field {
+  margin-top: 20px;
+}
+
+.student-clubs-image-field-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 9px;
+}
+
+.student-clubs-image-field-heading label {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: #3d4658;
+}
+
+.student-clubs-image-field-heading span {
+  color: #8791a2;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   IMAGE UPLOADER OVERRIDE / CONTAINER
+========================================================= */
+
+.student-clubs-image-field .card {
+  border-color: #dce3ec !important;
+  border-radius: 11px !important;
+  background: #fbfcfe;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.student-clubs-image-field .card:hover {
+  background: #f6f9fd;
+  border-color: #aebfd7 !important;
+}
+
+.student-clubs-image-field .card h5 {
+  margin-bottom: 3px !important;
+  font-size: 14px;
+  font-weight: 700;
+  color: #364257;
+}
+
+.student-clubs-image-field .card p {
+  margin-bottom: 0;
+  font-size: 12px;
+}
+
+/* =========================================================
+   IMAGE PREVIEW
+========================================================= */
+
+.student-clubs-modal-image-preview {
+  width: 100%;
+  min-height: 180px;
+  max-height: 300px;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid #e0e5ec;
+  border-radius: 11px;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.student-clubs-modal-image-preview img {
+  max-width: 100%;
+  max-height: 270px;
+  display: block;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.student-clubs-no-image {
+  min-height: 120px;
+  border: 1px dashed #d7dde6;
+  border-radius: 10px;
+  background: #fafbfc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8a94a5;
+  font-size: 13px;
+}
+
+/* =========================================================
+   REMOVE IMAGE
+========================================================= */
+
+.student-clubs-remove-image {
+  margin-top: 10px;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid #efcdd0;
+  border-radius: 8px;
+  background: #fff5f5;
+  color: #a52c35;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.student-clubs-remove-image:hover {
+  background: #ffeded;
+  border-color: #e6b7bb;
+}
+
+/* =========================================================
+   SAVE BAR
+========================================================= */
+
+.student-clubs-save-bar {
+  position: sticky;
+  bottom: 15px;
+  z-index: 20;
+  min-height: 68px;
+  padding: 12px 18px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid #dfe5ed;
+  border-radius: 14px;
+  box-shadow: 0 10px 35px rgba(22, 35, 56, 0.1);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.student-clubs-save-bar strong {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 13px;
+  color: #263147;
+}
+
+.student-clubs-save-bar span {
+  display: block;
+  color: #7a8495;
+  font-size: 11px;
+}
+
+.student-clubs-save-btn {
+  min-width: 150px;
+}
+
+/* =========================================================
+   MODAL BACKDROP
+========================================================= */
+
+.student-clubs-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+  padding: 25px;
+  box-sizing: border-box;
+  background: rgba(10, 24, 44, 0.68);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.student-clubs-modal {
+  width: min(900px, 100%);
+  max-height: calc(100vh - 50px);
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.student-clubs-modal-header {
+  min-height: 74px;
+  padding: 16px 22px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-bottom: 1px solid #e8ecf1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.student-clubs-modal-header span {
+  display: block;
+  margin-bottom: 4px;
+  color: #7b8495;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.student-clubs-modal-header h2 {
+  margin: 0;
+  color: #172033;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.student-clubs-modal-close {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #e0e5ec;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #687386;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.student-clubs-modal-close:hover {
+  background: #f5f7fa;
+  color: #172033;
+}
+
+/* =========================================================
+   MODAL BODY
+========================================================= */
+
+.student-clubs-modal-body {
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.student-clubs-modal-section {
+  padding: 20px;
+  border: 1px solid #e5e9f0;
+  border-radius: 13px;
+  background: #ffffff;
+}
+
+.student-clubs-modal-section + .student-clubs-modal-section {
+  margin-top: 18px;
+}
+
+.student-clubs-modal-section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.student-clubs-modal-section-title > svg {
+  width: 37px;
+  height: 37px;
+  padding: 9px;
+  box-sizing: border-box;
+  border-radius: 9px;
+  background: #eef4fb;
+  color: #2e5f98;
+}
+
+.student-clubs-modal-section-title span {
+  display: block;
+  margin-bottom: 3px;
+  color: #8992a2;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.student-clubs-modal-section-title h3 {
+  margin: 0;
+  color: #263147;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   MODAL FOOTER
+========================================================= */
+
+.student-clubs-modal-footer {
+  min-height: 70px;
+  padding: 13px 22px;
+  box-sizing: border-box;
+  border-top: 1px solid #e8ecf1;
+  background: #fafbfd;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.student-clubs-loading {
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #f5f7fb;
+  text-align: center;
+}
+
+.student-clubs-loading h3 {
+  margin: 15px 0 4px;
+  color: #263147;
+  font-size: 18px;
+}
+
+.student-clubs-loading p {
+  margin: 0;
+  color: #7b8495;
+  font-size: 13px;
+}
+
+.student-clubs-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #dce3ec;
+  border-top-color: #0a2e5c;
+  border-radius: 50%;
+  animation: studentClubsSpin 0.8s linear infinite;
+}
+
+.student-clubs-small-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  animation: studentClubsSpin 0.7s linear infinite;
+}
+
+@keyframes studentClubsSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .student-clubs-management {
+    padding: 20px;
+  }
+
+  .student-clubs-page-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .student-clubs-header-actions {
+    width: 100%;
+  }
+
+  .student-clubs-header-actions .student-clubs-btn {
+    flex: 1;
+  }
+
+  .student-clubs-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .student-clubs-form-full {
+    grid-column: auto;
+  }
+
+  .student-clubs-save-bar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .student-clubs-save-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .student-clubs-management {
+    padding: 14px;
+  }
+
+  .student-clubs-page-header h1 {
+    font-size: 24px;
+  }
+
+  .student-clubs-card-header {
+    padding: 16px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .student-clubs-form-grid {
+    padding: 16px;
+  }
+
+  .student-clubs-table thead th,
+  .student-clubs-table tbody td {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+
+  .student-clubs-modal-backdrop {
+    padding: 10px;
+  }
+
+  .student-clubs-modal {
+    max-height: calc(100vh - 20px);
+    border-radius: 14px;
+  }
+
+  .student-clubs-modal-body {
+    padding: 14px;
+  }
+
+  .student-clubs-modal-section {
+    padding: 15px;
+  }
+
+  .student-clubs-modal-footer {
+    padding: 12px 14px;
+  }
+
+  .student-clubs-modal-footer .student-clubs-btn {
+    flex: 1;
+  }
+}

@@ -1,0 +1,628 @@
+/* =========================================================
+   PLACEMENT NOTICES PUBLIC PAGE
+========================================================= */
+
+.placement-notices-page {
+  width: 100%;
+
+  min-height: 100vh;
+
+  background: #ffffff;
+
+  color: #172033;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.placement-notices-hero {
+  position: relative;
+
+  min-height: 330px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 70px 0;
+
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #071b3d 0%, #0d3972 55%, #1764aa 100%);
+
+  color: #ffffff;
+}
+
+.placement-notices-hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 15% 25%,
+      rgba(255, 255, 255, 0.11),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 75%,
+      rgba(255, 255, 255, 0.08),
+      transparent 30%
+    );
+}
+
+.placement-notices-hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.placement-notices-hero-content span {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 14px;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.3px;
+
+  text-transform: uppercase;
+}
+
+.placement-notices-hero-content h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(36px, 5vw, 58px);
+
+  line-height: 1.15;
+
+  font-weight: 800;
+
+  letter-spacing: -0.7px;
+}
+
+.placement-notices-hero-content p {
+  max-width: 700px;
+
+  margin: 18px auto 0;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.placement-notices-content {
+  padding: 70px 0 90px;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.placement-notices-heading {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #e5eaf0;
+}
+
+.placement-notices-heading span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #1764aa;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.1px;
+
+  text-transform: uppercase;
+}
+
+.placement-notices-heading h2 {
+  margin: 0;
+
+  color: #102d57;
+
+  font-size: 30px;
+
+  font-weight: 800;
+}
+
+/* =========================================================
+   NOTICE LIST
+========================================================= */
+
+.placement-notices-list {
+  width: 100%;
+}
+
+/* =========================================================
+   NOTICE ITEM
+========================================================= */
+
+.placement-notice-item {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 70px 1fr;
+
+  gap: 25px;
+
+  padding: 27px 25px;
+
+  margin-bottom: 15px;
+
+  border: 1px solid #e0e6ee;
+
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  box-shadow: 0 6px 24px rgba(20, 43, 75, 0.055);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.placement-notice-item:hover {
+  transform: translateY(-2px);
+
+  border-color: #cbdceb;
+
+  box-shadow: 0 12px 30px rgba(20, 43, 75, 0.09);
+}
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.placement-notice-number {
+  width: 52px;
+
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #edf5fc, #f4f8fc);
+
+  color: #1764aa;
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.placement-notice-main {
+  min-width: 0;
+}
+
+/* =========================================================
+   META
+========================================================= */
+
+.placement-notice-meta {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-bottom: 9px;
+}
+
+.placement-notice-category {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 5px 9px;
+
+  border-radius: 20px;
+
+  background: #edf6fd;
+
+  color: #1764aa;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+
+  text-transform: capitalize;
+}
+
+.placement-notice-date {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: #7a8798;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+.placement-notice-date svg {
+  color: #1764aa;
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.placement-notice-main h3 {
+  margin: 0;
+
+  color: #102d57;
+
+  font-size: 20px;
+
+  line-height: 1.45;
+
+  font-weight: 800;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.placement-notice-main p {
+  max-width: 900px;
+
+  margin: 9px 0 17px;
+
+  color: #667085;
+
+  font-size: 13px;
+
+  line-height: 1.75;
+}
+
+/* =========================================================
+   VIEW BUTTON
+========================================================= */
+
+.placement-notice-view-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 9px 14px;
+
+  border: 1px solid #d7e4f0;
+
+  border-radius: 7px;
+
+  background: #f8fbfe;
+
+  color: #1764aa;
+
+  font-size: 11px;
+
+  font-weight: 750;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.placement-notice-view-button:hover {
+  border-color: #b4cce1;
+
+  background: #eef7fd;
+
+  color: #0e4e8c;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 5px 14px rgba(23, 100, 170, 0.1);
+}
+
+.placement-notice-view-button svg:first-child {
+  color: #d0443c;
+
+  font-size: 13px;
+}
+
+.placement-notice-view-button svg:last-child {
+  color: #8190a1;
+
+  font-size: 9px;
+}
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.placement-notices-empty {
+  min-height: 300px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 40px;
+
+  border: 1px solid #e3e8ee;
+
+  border-radius: 12px;
+
+  background: #fafcfe;
+
+  text-align: center;
+}
+
+.placement-notices-empty > svg {
+  margin-bottom: 16px;
+
+  color: #1764aa;
+
+  font-size: 34px;
+}
+
+.placement-notices-empty h3 {
+  margin: 0;
+
+  color: #102d57;
+
+  font-size: 21px;
+
+  font-weight: 800;
+}
+
+.placement-notices-empty p {
+  margin: 8px 0 0;
+
+  color: #7a8798;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.placement-notices-status {
+  min-height: 70vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 40px;
+
+  text-align: center;
+
+  color: #68788c;
+}
+
+.placement-notices-status > svg {
+  margin-bottom: 17px;
+
+  color: #1764aa;
+
+  font-size: 38px;
+}
+
+.placement-notices-status h2 {
+  margin: 0;
+
+  color: #102d57;
+
+  font-size: 23px;
+
+  font-weight: 800;
+}
+
+.placement-notices-status p {
+  max-width: 500px;
+
+  margin: 9px 0 0;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   SPINNER
+========================================================= */
+
+.placement-notices-spinner {
+  width: 38px;
+
+  height: 38px;
+
+  margin-bottom: 17px;
+
+  border: 3px solid #dce9f4;
+
+  border-top-color: #1764aa;
+
+  border-radius: 50%;
+
+  animation: placementNoticeSpin 0.8s linear infinite;
+}
+
+@keyframes placementNoticeSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+  .placement-notices-hero {
+    min-height: 280px;
+
+    padding: 55px 20px;
+  }
+
+  .placement-notices-content {
+    padding: 50px 15px 65px;
+  }
+
+  .placement-notices-heading h2 {
+    font-size: 26px;
+  }
+
+  .placement-notice-item {
+    grid-template-columns: 55px 1fr;
+
+    gap: 18px;
+
+    padding: 22px 18px;
+  }
+
+  .placement-notice-number {
+    width: 45px;
+
+    height: 45px;
+
+    font-size: 11px;
+  }
+
+  .placement-notice-main h3 {
+    font-size: 18px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .placement-notices-hero {
+    min-height: 255px;
+
+    padding: 50px 18px;
+  }
+
+  .placement-notices-hero-content h1 {
+    font-size: 34px;
+  }
+
+  .placement-notices-hero-content p {
+    font-size: 13px;
+  }
+
+  .placement-notices-content {
+    padding: 42px 12px 55px;
+  }
+
+  .placement-notices-heading {
+    margin-bottom: 22px;
+
+    padding-bottom: 15px;
+  }
+
+  .placement-notices-heading h2 {
+    font-size: 23px;
+  }
+
+  .placement-notice-item {
+    grid-template-columns: 1fr;
+
+    gap: 13px;
+
+    padding: 20px 17px;
+  }
+
+  .placement-notice-number {
+    width: 42px;
+
+    height: 42px;
+  }
+
+  .placement-notice-main h3 {
+    font-size: 17px;
+  }
+
+  .placement-notice-main p {
+    font-size: 12px;
+  }
+
+  .placement-notice-view-button {
+    width: 100%;
+
+    justify-content: center;
+  }
+}

@@ -1,0 +1,361 @@
+.journal-management-page {
+  padding-bottom: 30px;
+}
+
+.journal-page-header {
+  margin-bottom: 24px;
+}
+
+.journal-eyebrow {
+  color: #0a2e5c;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.journal-page-header h2 {
+  color: #0a2e5c;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 5px 0 8px;
+}
+
+.journal-page-header p {
+  color: #64748b;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* =========================================
+   TABS
+========================================= */
+
+.journal-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.journal-tab {
+  align-items: center;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  color: #475569;
+  cursor: pointer;
+  display: flex;
+  font-size: 13px;
+  font-weight: 700;
+  gap: 8px;
+  padding: 11px 16px;
+  transition: 0.2s ease;
+}
+
+.journal-tab:hover {
+  background: #e8f0fa;
+  color: #0a2e5c;
+}
+
+.journal-tab.active {
+  background: #0a2e5c;
+  border-color: #0a2e5c;
+  color: #ffffff;
+}
+
+/* =========================================
+   PANELS
+========================================= */
+
+.journal-panel {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.04);
+  margin-bottom: 24px;
+  padding: 24px;
+}
+
+.journal-panel-header {
+  align-items: center;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 22px;
+  padding-bottom: 17px;
+}
+
+.journal-panel-header h4 {
+  color: #0a2e5c;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 5px;
+}
+
+.journal-panel-header p {
+  color: #64748b;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* =========================================
+   FORM
+========================================= */
+
+.journal-management-page .form-label {
+  color: #334155;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+.journal-management-page .form-control,
+.journal-management-page .form-select {
+  border: 1px solid #dbe3ec;
+  border-radius: 8px;
+  box-shadow: none;
+  color: #334155;
+  font-size: 13px;
+  min-height: 43px;
+}
+
+.journal-management-page .form-control:focus,
+.journal-management-page .form-select:focus {
+  border-color: #0a2e5c;
+  box-shadow: 0 0 0 3px rgba(10, 46, 92, 0.08);
+}
+
+.journal-form-actions {
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+  padding-top: 20px;
+}
+
+.journal-primary-btn,
+.journal-secondary-btn,
+.journal-delete-text-btn {
+  align-items: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 700;
+  gap: 8px;
+  justify-content: center;
+  padding: 10px 16px;
+  transition: 0.2s ease;
+}
+
+.journal-primary-btn {
+  background: #0a2e5c;
+  color: #ffffff;
+}
+
+.journal-primary-btn:hover:not(:disabled) {
+  background: #123f77;
+}
+
+.journal-primary-btn:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.journal-secondary-btn {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.journal-secondary-btn:hover {
+  background: #cbd5e1;
+}
+
+.journal-delete-text-btn {
+  background: #fee2e2;
+  color: #b91c1c;
+  width: 100%;
+}
+
+.journal-delete-text-btn:hover {
+  background: #fecaca;
+}
+
+/* =========================================
+   LIST / SEARCH
+========================================= */
+
+.journal-list-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.journal-list-header h4 {
+  color: #0a2e5c;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+.journal-list-header p {
+  color: #64748b;
+  font-size: 13px;
+  margin: 0;
+}
+
+.journal-search {
+  align-items: center;
+  border: 1px solid #dbe3ec;
+  border-radius: 8px;
+  color: #64748b;
+  display: flex;
+  gap: 8px;
+  height: 42px;
+  padding: 0 12px;
+}
+
+.journal-search input {
+  border: none;
+  color: #334155;
+  font-size: 13px;
+  outline: none;
+  width: 220px;
+}
+
+/* =========================================
+   TABLE
+========================================= */
+
+.journal-table {
+  margin: 0;
+}
+
+.journal-table thead th {
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+  color: #475569;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  padding: 13px 12px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.journal-table tbody td {
+  border-color: #edf2f7;
+  color: #475569;
+  font-size: 13px;
+  padding: 13px 12px;
+  vertical-align: middle;
+}
+
+.indexing-badge,
+.status-badge {
+  border-radius: 50px;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 9px;
+  white-space: nowrap;
+}
+
+.indexing-badge {
+  background: #e8f0fa;
+  color: #0a2e5c;
+}
+
+.status-badge.active {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.status-badge.inactive {
+  background: #fef3c7;
+  color: #a16207;
+}
+
+.journal-actions {
+  display: flex;
+  gap: 7px;
+}
+
+.journal-actions button {
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
+}
+
+.edit-btn {
+  background: #fef3c7;
+  color: #a16207;
+}
+
+.edit-btn:hover {
+  background: #fde68a;
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.delete-btn:hover {
+  background: #fecaca;
+}
+
+/* =========================================
+   LOADING
+========================================= */
+
+.journal-loading {
+  align-items: center;
+  color: #64748b;
+  display: flex;
+  font-size: 14px;
+  justify-content: center;
+  min-height: 260px;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .journal-tabs {
+    flex-direction: column;
+  }
+
+  .journal-tab {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .journal-panel {
+    padding: 17px;
+  }
+
+  .journal-panel-header,
+  .journal-list-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .journal-search {
+    width: 100%;
+  }
+
+  .journal-search input {
+    width: 100%;
+  }
+
+  .journal-delete-text-btn {
+    margin-top: 2px;
+  }
+}

@@ -1,0 +1,600 @@
+/*=========================================================
+                MOUs Page
+=========================================================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background: #fff;
+}
+
+/*=========================================================
+                Common
+=========================================================*/
+
+.section-tag {
+  color: #fdb913;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+
+  font-weight: 800;
+
+  color: #0a2e5c;
+
+  margin-bottom: 20px;
+}
+
+.section-title span {
+  color: #fdb913;
+}
+
+.section-title::after {
+  content: "";
+
+  display: block;
+
+  width: 90px;
+
+  height: 4px;
+
+  background: #fdb913;
+
+  margin-top: 15px;
+
+  border-radius: 50px;
+}
+
+.text-center .section-title::after {
+  margin: 15px auto 0;
+}
+
+/*=========================================================
+                Hero
+=========================================================*/
+
+.mou-hero {
+  height: 430px;
+
+  background:
+    linear-gradient(rgba(10, 46, 92, 0.88), rgba(10, 46, 92, 0.88)),
+    url("https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1600&q=80");
+
+  background-size: cover;
+
+  background-position: center;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+
+  font-weight: 800;
+}
+
+.hero-content p {
+  margin-top: 15px;
+
+  font-size: 18px;
+}
+
+.hero-content span {
+  margin: 0 10px;
+
+  color: #fdb913;
+}
+
+/*=========================================================
+        MOU Cards
+=========================================================*/
+
+.mou-list {
+  background: #fff;
+}
+
+.mou-card {
+  background: #fff;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  height: 100%;
+}
+
+.mou-card:hover {
+  transform: translateY(-10px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.card-photo {
+  width: 100%;
+
+  height: 240px;
+
+  object-fit: cover;
+}
+
+.mou-card .card-body {
+  padding: 25px;
+}
+
+.logo {
+  width: 120px;
+
+  height: 55px;
+
+  object-fit: contain;
+
+  margin-bottom: 18px;
+}
+
+.mou-card h4 {
+  color: #0a2e5c;
+
+  font-weight: 700;
+
+  margin-bottom: 18px;
+}
+
+.mou-card p {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #666;
+
+  margin-bottom: 12px;
+}
+
+.mou-card .btn {
+  margin-top: 20px;
+
+  font-weight: 600;
+
+  width: 100%;
+}
+/*=========================================================
+                Gallery
+=========================================================*/
+
+.mou-gallery {
+  background: #f8f9fb;
+}
+
+.gallery-card {
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  height: 100%;
+}
+
+.gallery-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-card img {
+  width: 100%;
+
+  height: 280px;
+
+  object-fit: cover;
+
+  transition: 0.5s;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.08);
+}
+
+/*=========================================================
+                Statistics
+=========================================================*/
+
+.mou-stats {
+  background: #fff;
+}
+
+.stat-card {
+  background: #fff;
+
+  padding: 35px 20px;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  height: 100%;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  border-bottom: 4px solid transparent;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+
+  border-bottom: 4px solid #fdb913;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card h2 {
+  font-size: 42px;
+
+  font-weight: 800;
+
+  color: #0a2e5c;
+
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  color: #666;
+
+  margin: 0;
+}
+
+/*=========================================================
+                Downloads
+=========================================================*/
+
+.download-section {
+  background: #f8f9fb;
+}
+
+.download-card {
+  background: #fff;
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  height: 100%;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+}
+
+.download-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.download-card h5 {
+  font-weight: 700;
+
+  color: #0a2e5c;
+
+  margin-bottom: 6px;
+}
+
+.download-card span {
+  color: #666;
+
+  font-size: 14px;
+}
+
+.download-card .btn {
+  background: #fdb913;
+
+  color: #0a2e5c;
+
+  border: none;
+
+  font-weight: 600;
+}
+
+.download-card .btn:hover {
+  background: #0a2e5c;
+
+  color: #fff;
+}
+
+/*=========================================================
+                FAQ
+=========================================================*/
+
+.faq-section {
+  background: #fff;
+}
+
+.faq-card {
+  background: #f8f9fb;
+
+  padding: 35px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.faq-card h5 {
+  color: #0a2e5c;
+
+  font-weight: 700;
+
+  margin-bottom: 10px;
+}
+
+.faq-card p {
+  color: #666;
+
+  line-height: 1.8;
+}
+
+.faq-card hr {
+  margin: 25px 0;
+}
+
+/*=========================================================
+                CTA
+=========================================================*/
+
+.mou-cta {
+  background: linear-gradient(135deg, #0a2e5c, #123f7a);
+
+  color: #fff;
+
+  padding: 90px 0;
+}
+
+.mou-cta h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+
+  font-weight: 800;
+
+  margin-bottom: 20px;
+}
+
+.mou-cta p {
+  color: #ddd;
+
+  line-height: 1.8;
+}
+
+.mou-cta .btn {
+  padding: 12px 30px;
+
+  font-weight: 600;
+
+  transition: 0.35s;
+}
+
+.mou-cta .btn-warning {
+  background: #fdb913;
+
+  color: #0a2e5c;
+
+  border: none;
+}
+
+.mou-cta .btn-warning:hover {
+  background: #fff;
+
+  color: #0a2e5c;
+
+  transform: translateY(-5px);
+}
+
+.mou-cta .btn-outline-light {
+  border: 2px solid #fff;
+}
+
+.mou-cta .btn-outline-light:hover {
+  background: #fff;
+
+  color: #0a2e5c;
+
+  transform: translateY(-5px);
+}
+
+/*=========================================================
+                Animation
+=========================================================*/
+
+.featured-card,
+.mou-card,
+.gallery-card,
+.stat-card,
+.download-card {
+  transition: all 0.35s ease;
+}
+
+/*=========================================================
+                Responsive
+=========================================================*/
+
+@media (max-width: 992px) {
+  .mou-hero {
+    height: 320px;
+  }
+
+  .featured-card {
+    text-align: center;
+  }
+
+  .signing-image {
+    height: 320px;
+
+    margin-bottom: 25px;
+  }
+
+  .company-logo {
+    display: flex;
+
+    justify-content: center;
+  }
+
+  .mou-cta {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .mou-hero {
+    height: 260px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .featured-card {
+    padding: 25px;
+  }
+
+  .signing-image {
+    height: 250px;
+  }
+
+  .mou-details p {
+    font-size: 15px;
+
+    align-items: flex-start;
+  }
+
+  .featured-card .btn {
+    width: 100%;
+
+    margin-bottom: 12px;
+  }
+
+  .card-photo {
+    height: 220px;
+  }
+
+  .logo {
+    width: 100px;
+
+    height: 50px;
+  }
+
+  .gallery-card img {
+    height: 220px;
+  }
+
+  .download-card {
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 20px;
+  }
+
+  .download-card .btn {
+    width: 100%;
+  }
+
+  .stat-card {
+    padding: 25px;
+  }
+
+  .stat-card h2 {
+    font-size: 34px;
+  }
+
+  .faq-card {
+    padding: 25px;
+  }
+
+  .mou-cta {
+    padding: 60px 20px;
+  }
+
+  .mou-cta .btn {
+    width: 100%;
+
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .about-image {
+    margin-bottom: 20px;
+  }
+
+  .signing-image {
+    height: 220px;
+  }
+
+  .company-logo img {
+    width: 120px;
+  }
+
+  .card-photo {
+    height: 200px;
+  }
+
+  .gallery-card img {
+    height: 200px;
+  }
+
+  .faq-card {
+    padding: 20px;
+  }
+}

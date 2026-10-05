@@ -1,0 +1,682 @@
+/* =========================================================
+   SUB ADMIN FORM PAGE
+========================================================= */
+
+.subadmin-form-page {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  padding: 24px;
+  background: #f5f7fb;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.subadmin-form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  padding: 20px 22px;
+  background: #ffffff;
+  border: 1px solid #e6eaf0;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
+}
+
+.subadmin-form-header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.subadmin-form-back-btn {
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef2f7;
+  color: #334155;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.subadmin-form-back-btn:hover {
+  background: #e2e8f0;
+  transform: translateX(-2px);
+}
+
+.subadmin-form-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.subadmin-form-title-icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  background: #eef2ff;
+  color: #4f46e5;
+  font-size: 19px;
+}
+
+.subadmin-form-title {
+  margin: 0;
+  color: #172033;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.subadmin-form-subtitle {
+  margin: 4px 0 0;
+  color: #718096;
+  font-size: 13px;
+}
+
+/* =========================================================
+   ALERTS
+========================================================= */
+
+.subadmin-form-alert {
+  margin-bottom: 20px;
+  padding: 13px 16px;
+  border-radius: 9px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.subadmin-form-alert-error {
+  color: #991b1b;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.subadmin-form-alert-success {
+  color: #166534;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+/* =========================================================
+   MAIN GRID
+========================================================= */
+
+.subadmin-form-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 760px);
+  justify-content: center;
+  gap: 22px;
+}
+
+.subadmin-form-grid-edit {
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+  align-items: start;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.subadmin-form-card {
+  background: #ffffff;
+  border: 1px solid #e5e9ef;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.045);
+}
+
+.subadmin-form-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 19px 21px;
+  border-bottom: 1px solid #edf0f4;
+  background: #fafbfc;
+}
+
+.subadmin-form-card-icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #eef2ff;
+  color: #4f46e5;
+  font-size: 17px;
+}
+
+.subadmin-form-card-icon-warning {
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+.subadmin-form-card-header h2 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.subadmin-form-card-header p {
+  margin: 4px 0 0;
+  color: #7b8798;
+  font-size: 12px;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.subadmin-form {
+  padding: 22px;
+}
+
+.subadmin-form-group {
+  margin-bottom: 19px;
+}
+
+.subadmin-form-group label {
+  display: block;
+  margin-bottom: 7px;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.subadmin-form-group label span {
+  margin-left: 3px;
+  color: #dc2626;
+}
+
+.subadmin-form-group input {
+  width: 100%;
+  height: 44px;
+  padding: 0 13px;
+  border: 1px solid #d8dee8;
+  border-radius: 8px;
+  outline: none;
+  background: #ffffff;
+  color: #1f2937;
+  font-size: 13px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.subadmin-form-group input::placeholder {
+  color: #a0a9b8;
+}
+
+.subadmin-form-group input:focus {
+  border-color: #818cf8;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.subadmin-form-group small {
+  display: block;
+  margin-top: 6px;
+  color: #8a95a6;
+  font-size: 11px;
+}
+
+/* =========================================================
+   PASSWORD INPUT
+========================================================= */
+
+.subadmin-form-password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.subadmin-form-password-wrapper input {
+  padding-left: 40px;
+  padding-right: 44px;
+}
+
+.subadmin-form-input-icon {
+  position: absolute;
+  left: 14px;
+  z-index: 2;
+  color: #94a3b8;
+  font-size: 13px;
+  pointer-events: none;
+}
+
+.subadmin-form-password-toggle {
+  position: absolute;
+  right: 6px;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: #64748b;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.subadmin-form-password-toggle:hover {
+  background: #f1f5f9;
+  color: #334155;
+}
+
+/* =========================================================
+   STATUS SWITCH
+========================================================= */
+
+.subadmin-form-status-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 5px 0 22px;
+  padding: 14px 15px;
+  border: 1px solid #e7ebf0;
+  border-radius: 9px;
+  background: #fafbfc;
+}
+
+.subadmin-form-status-box strong {
+  display: block;
+  color: #374151;
+  font-size: 13px;
+}
+
+.subadmin-form-status-box p {
+  margin: 4px 0 0;
+  color: #8a95a6;
+  font-size: 11px;
+}
+
+/* Switch */
+
+.subadmin-form-switch {
+  position: relative;
+  width: 46px;
+  height: 25px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.subadmin-form-switch input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.subadmin-form-switch span {
+  position: absolute;
+  inset: 0;
+  border-radius: 30px;
+  background: #cbd5e1;
+  transition: background 0.2s ease;
+}
+
+.subadmin-form-switch span::before {
+  content: "";
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  top: 3px;
+  left: 3px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.subadmin-form-switch input:checked + span {
+  background: #4f46e5;
+}
+
+.subadmin-form-switch input:checked + span::before {
+  transform: translateX(21px);
+}
+
+/* =========================================================
+   FORM BUTTONS
+========================================================= */
+
+.subadmin-form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 5px;
+}
+
+.subadmin-form-btn {
+  min-height: 42px;
+  padding: 0 17px;
+  border: 0;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.subadmin-form-btn:hover {
+  transform: translateY(-1px);
+}
+
+.subadmin-form-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.subadmin-form-btn-primary {
+  color: #ffffff;
+  background: #4f46e5;
+  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.18);
+}
+
+.subadmin-form-btn-primary:hover {
+  background: #4338ca;
+}
+
+.subadmin-form-btn-secondary {
+  color: #475569;
+  background: #eef2f7;
+}
+
+.subadmin-form-btn-secondary:hover {
+  background: #e2e8f0;
+}
+
+/* =========================================================
+   PASSWORD RESET
+========================================================= */
+
+.subadmin-password-reset-card {
+  border-color: #fed7aa;
+}
+
+.subadmin-password-reset-content {
+  padding: 22px;
+}
+
+.subadmin-password-reset-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  margin-bottom: 20px;
+  padding: 13px 14px;
+  border: 1px solid #fed7aa;
+  border-radius: 9px;
+  background: #fff7ed;
+  color: #9a3412;
+}
+
+.subadmin-password-reset-info > svg {
+  margin-top: 2px;
+  flex-shrink: 0;
+  font-size: 15px;
+}
+
+.subadmin-password-reset-info strong {
+  font-size: 12px;
+}
+
+.subadmin-password-reset-info p {
+  margin: 4px 0 0;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.subadmin-password-reset-info p strong {
+  font-weight: 700;
+}
+
+/* =========================================================
+   RESET PASSWORD BUTTON
+========================================================= */
+
+.subadmin-form-reset-btn {
+  width: 100%;
+  min-height: 43px;
+  border: 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #ffffff;
+  background: #ea580c;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.subadmin-form-reset-btn:hover {
+  background: #c2410c;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(234, 88, 12, 0.18);
+}
+
+.subadmin-form-reset-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* =========================================================
+   LOGIN INFORMATION
+========================================================= */
+
+.subadmin-form-login-info {
+  max-width: 760px;
+  margin: 22px auto 0;
+  padding: 15px 17px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  background: #eff6ff;
+  color: #1e40af;
+}
+
+.subadmin-form-login-info > svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  font-size: 16px;
+}
+
+.subadmin-form-login-info strong {
+  font-size: 12px;
+}
+
+.subadmin-form-login-info p {
+  margin: 4px 0 0;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.subadmin-form-loading {
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  color: #64748b;
+}
+
+.subadmin-form-loading p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.subadmin-form-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #e2e8f0;
+  border-top-color: #4f46e5;
+  border-radius: 50%;
+  animation: subadminFormSpin 0.75s linear infinite;
+}
+
+@keyframes subadminFormSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.subadmin-form-spin {
+  animation: subadminFormSpin 0.8s linear infinite;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+  .subadmin-form-grid-edit {
+    grid-template-columns: 1fr;
+  }
+
+  .subadmin-form-login-info {
+    max-width: none;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .subadmin-form-page {
+    padding: 14px;
+  }
+
+  .subadmin-form-header {
+    padding: 16px;
+  }
+
+  .subadmin-form-title {
+    font-size: 19px;
+  }
+
+  .subadmin-form-title-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+  }
+
+  .subadmin-form-back-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .subadmin-form {
+    padding: 18px;
+  }
+
+  .subadmin-password-reset-content {
+    padding: 18px;
+  }
+
+  .subadmin-form-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .subadmin-form-actions .subadmin-form-btn {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .subadmin-form-page {
+    padding: 10px;
+  }
+
+  .subadmin-form-header {
+    padding: 13px;
+  }
+
+  .subadmin-form-header-left {
+    gap: 9px;
+  }
+
+  .subadmin-form-title-row {
+    gap: 9px;
+  }
+
+  .subadmin-form-title {
+    font-size: 17px;
+  }
+
+  .subadmin-form-subtitle {
+    font-size: 11px;
+  }
+
+  .subadmin-form-title-icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    font-size: 15px;
+  }
+
+  .subadmin-form-card-header {
+    padding: 15px;
+  }
+
+  .subadmin-form {
+    padding: 15px;
+  }
+
+  .subadmin-password-reset-content {
+    padding: 15px;
+  }
+
+  .subadmin-form-status-box {
+    padding: 12px;
+  }
+
+  .subadmin-form-login-info {
+    padding: 13px;
+  }
+}

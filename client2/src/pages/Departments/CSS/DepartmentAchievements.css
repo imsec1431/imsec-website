@@ -1,0 +1,1352 @@
+/* =========================================================
+   ACHIEVEMENT / PLACEMENT PAGE
+   IMSEC PUBLIC WEBSITE
+========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Poppins", sans-serif;
+
+  background: #f4f7fb;
+
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.achievementPage {
+  width: 100%;
+  max-width: 100%;
+
+  padding: 35px;
+
+  background: #f4f7fb;
+
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.achievementHero {
+  position: relative;
+
+  width: 100%;
+
+  /*
+     IMPORTANT:
+     Do not use a fixed height here.
+     The hero must grow according to its content.
+  */
+  min-height: 330px;
+  height: auto;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 70px 30px 80px;
+
+  margin-bottom: 40px;
+
+  border-radius: 20px;
+
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+
+  color: #fff;
+
+  text-align: center;
+
+  /*
+     Keep decorative elements clipped,
+     but do not allow child layout to
+     create unexpected stacking.
+  */
+  overflow: visible;
+
+  z-index: 1;
+}
+
+/* =========================================================
+   HERO DECORATION
+========================================================= */
+
+.achievementHero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 320px;
+  height: 320px;
+
+  top: -120px;
+  right: -100px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+.achievementHero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 250px;
+  height: 250px;
+
+  bottom: -80px;
+  left: -80px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.achievementHero h1 {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  margin-bottom: 18px;
+
+  color: #fff;
+
+  font-size: clamp(32px, 5vw, 46px);
+
+  font-weight: 700;
+
+  line-height: 1.15;
+
+  overflow-wrap: anywhere;
+}
+
+.achievementHero p {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 900px;
+
+  margin: 0 auto 25px;
+
+  color: rgba(255, 255, 255, 0.92);
+
+  font-size: 18px;
+
+  line-height: 1.8;
+
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   SEARCH SECTION
+
+   THIS FIXES THE SEARCH / TABLE OVERLAP
+========================================================= */
+
+.searchSection {
+  position: relative !important;
+
+  z-index: 20 !important;
+
+  width: 100%;
+
+  max-width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  margin-top: 25px !important;
+
+  margin-bottom: 40px !important;
+
+  padding: 0;
+
+  /*
+     Prevent absolute positioning from
+     previous CSS files.
+  */
+  top: auto !important;
+
+  right: auto !important;
+
+  bottom: auto !important;
+
+  left: auto !important;
+
+  transform: none !important;
+
+  float: none !important;
+}
+
+/*
+   If searchSection is inside hero,
+   keep it inside normal document flow.
+*/
+
+.achievementHero .searchSection {
+  position: relative !important;
+
+  width: 100%;
+
+  max-width: 850px;
+
+  margin: 30px auto 0 !important;
+
+  top: auto !important;
+
+  right: auto !important;
+
+  bottom: auto !important;
+
+  left: auto !important;
+
+  transform: none !important;
+
+  z-index: 50 !important;
+}
+
+/* =========================================================
+   SEARCH BOX
+========================================================= */
+
+.searchBox {
+  position: relative;
+
+  z-index: 51;
+
+  width: 100%;
+
+  max-width: 650px;
+
+  min-width: 0;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 17px 25px;
+
+  border: 1px solid rgba(13, 71, 161, 0.18);
+
+  border-radius: 60px;
+
+  background: #fff;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.16);
+
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.searchBox:hover {
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+
+  transform: translateY(-2px);
+}
+
+.searchBox svg {
+  flex: 0 0 auto;
+
+  color: #1565c0;
+
+  font-size: 22px;
+}
+
+.searchBox input {
+  width: 100%;
+
+  min-width: 0;
+
+  border: none;
+
+  outline: none;
+
+  margin-left: 15px;
+
+  color: #333;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 16px;
+
+  background: transparent;
+}
+
+.searchBox input::placeholder {
+  color: #999;
+}
+
+/* =========================================================
+   FILTER
+========================================================= */
+
+.filterSection {
+  position: relative;
+
+  z-index: 10;
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin: 0 0 40px;
+
+  padding: 0;
+}
+
+.filterBtn {
+  flex: 0 0 auto;
+
+  border: none;
+
+  outline: none;
+
+  cursor: pointer;
+
+  background: #fff;
+
+  color: #444;
+
+  padding: 12px 22px;
+
+  border-radius: 40px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.filterBtn:hover {
+  background: #1565c0;
+
+  color: #fff;
+
+  transform: translateY(-2px);
+}
+
+.filterBtn.active {
+  background: #1565c0;
+
+  color: #fff;
+}
+
+/* =========================================================
+   TABLE CARD
+
+   IMPORTANT:
+   Table always starts BELOW search.
+========================================================= */
+
+.tableCard {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 100%;
+
+  min-width: 0;
+
+  margin: 0 0 40px;
+
+  padding: 0;
+
+  border-radius: 20px;
+
+  background: #fff;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  overflow: hidden;
+
+  animation: fadeUp 0.5s ease;
+}
+
+.tableCard:hover {
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================================================
+   TABLE TITLE
+========================================================= */
+
+.tableTitle {
+  width: 100%;
+
+  min-width: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin: 0;
+
+  padding: 25px 25px 20px;
+
+  flex-wrap: wrap;
+}
+
+.tableTitle svg {
+  flex: 0 0 auto;
+
+  color: #1565c0;
+
+  font-size: 26px;
+}
+
+.tableTitle h2 {
+  min-width: 0;
+
+  margin: 0;
+
+  color: #0d47a1;
+
+  font-size: 28px;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.tableResponsive {
+  position: relative;
+
+  z-index: 3;
+
+  width: 100%;
+
+  max-width: 100%;
+
+  margin: 0;
+
+  overflow-x: auto;
+
+  overflow-y: visible;
+
+  border: 1px solid #e6edf5;
+
+  border-radius: 12px;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.tableResponsive table {
+  width: 100%;
+
+  min-width: 850px;
+
+  border-collapse: separate;
+
+  border-spacing: 0;
+
+  background: #fff;
+}
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.tableResponsive thead {
+  background: linear-gradient(135deg, #0d47a1, #1565c0);
+
+  color: #fff;
+}
+
+.tableResponsive thead th {
+  padding: 18px;
+
+  text-align: left;
+
+  color: #fff;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  white-space: nowrap;
+
+  vertical-align: middle;
+
+  position: static;
+
+  z-index: 1;
+}
+
+/*
+   Make sure search can NEVER sit
+   visually over the table header.
+*/
+
+.tableResponsive thead th:first-child {
+  border-top-left-radius: 10px;
+}
+
+.tableResponsive thead th:last-child {
+  border-top-right-radius: 10px;
+}
+
+/* =========================================================
+   TABLE BODY
+========================================================= */
+
+.tableResponsive tbody td {
+  padding: 16px 18px;
+
+  border-bottom: 1px solid #e8eef7;
+
+  color: #444;
+
+  font-size: 15px;
+
+  line-height: 1.5;
+
+  white-space: nowrap;
+
+  vertical-align: middle;
+}
+
+.tableResponsive tbody tr:nth-child(even) {
+  background: #f8fbff;
+}
+
+.tableResponsive tbody tr {
+  transition: background 0.25s ease;
+}
+
+.tableResponsive tbody tr:hover {
+  background: #eaf4ff;
+}
+
+.tableResponsive tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tableResponsive tbody td:first-child {
+  color: #1565c0;
+
+  font-weight: 600;
+}
+
+/* =========================================================
+   TABLE SCROLLBAR
+========================================================= */
+
+.tableResponsive::-webkit-scrollbar {
+  height: 8px;
+}
+
+.tableResponsive::-webkit-scrollbar-track {
+  background: #edf2f7;
+
+  border-radius: 20px;
+}
+
+.tableResponsive::-webkit-scrollbar-thumb {
+  background: #1565c0;
+
+  border-radius: 20px;
+}
+
+.tableResponsive::-webkit-scrollbar-thumb:hover {
+  background: #0d47a1;
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.noData {
+  width: 100%;
+
+  padding: 50px 20px;
+
+  color: #777;
+
+  font-size: 18px;
+
+  font-weight: 500;
+
+  text-align: center;
+}
+
+/* =========================================================
+   COLLEGE BRANCH TOPPERS
+========================================================= */
+
+.branchToppersSection {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 100%;
+
+  min-width: 0;
+
+  margin: 50px 0;
+
+  overflow: visible;
+}
+
+.branchToppersSection .sectionHeading {
+  width: 100%;
+
+  max-width: 850px;
+
+  margin: 0 auto 32px;
+
+  text-align: center;
+}
+
+.branchToppersSection .sectionHeading h2 {
+  width: 100%;
+
+  margin: 0 0 10px;
+
+  color: #0d47a1;
+
+  font-size: clamp(25px, 3vw, 34px);
+
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  overflow-wrap: anywhere;
+}
+
+.branchToppersSection .sectionHeading p {
+  width: 100%;
+
+  margin: 0 auto;
+
+  color: #666;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   TOPPER GRID
+========================================================= */
+
+.branchToppersGrid {
+  width: 100%;
+
+  min-width: 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 25px;
+
+  align-items: stretch;
+}
+
+/* =========================================================
+   TOPPER CARD
+========================================================= */
+
+.branchTopperCard {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 100%;
+
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  border: 1px solid #e5ebf2;
+
+  border-radius: 20px;
+
+  background: #fff;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.branchTopperCard:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 20px 42px rgba(0, 0, 0, 0.14);
+}
+
+/* =========================================================
+   TOPPER HEADER
+========================================================= */
+
+.branchTopperHeader {
+  width: 100%;
+
+  min-height: 66px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 14px 18px;
+
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+
+  text-align: center;
+}
+
+.branchTopperHeader h3 {
+  width: 100%;
+
+  margin: 0;
+
+  color: #fff;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  line-height: 1.35;
+
+  overflow-wrap: anywhere;
+
+  word-break: break-word;
+}
+
+/* =========================================================
+   TOPPER CONTENT
+========================================================= */
+
+.branchTopperContent {
+  width: 100%;
+
+  min-width: 0;
+
+  padding: 25px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  flex: 1;
+}
+
+/* =========================================================
+   TOPPER PHOTO
+   COMPLETE PHOTO VISIBLE
+   NO CROPPING
+========================================================= */
+
+.branchTopperPhoto {
+  width: 150px;
+
+  height: 150px;
+
+  flex: 0 0 150px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 6px;
+
+  margin-bottom: 18px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, #0d47a1, #42a5f5);
+
+  overflow: hidden;
+}
+
+.branchTopperPhoto img {
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  max-width: 100%;
+
+  max-height: 100%;
+
+  border-radius: 50%;
+
+  object-fit: contain;
+
+  object-position: center;
+
+  background: #f4f7fb;
+
+  transform: none !important;
+}
+
+/* =========================================================
+   TOPPER NAME
+========================================================= */
+
+.branchTopperContent h4 {
+  width: 100%;
+
+  margin: 0 0 7px;
+
+  color: #0d47a1;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  line-height: 1.35;
+
+  overflow-wrap: anywhere;
+
+  word-break: break-word;
+}
+
+/* =========================================================
+   BRANCH
+========================================================= */
+
+.branchTopperBranch {
+  width: 100%;
+
+  margin-bottom: 16px;
+
+  color: #ff9800;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  line-height: 1.5;
+
+  overflow-wrap: anywhere;
+
+  word-break: break-word;
+}
+
+/* =========================================================
+   TOPPER DETAILS
+========================================================= */
+
+.branchTopperDetails {
+  width: 100%;
+
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  margin-top: auto;
+}
+
+.branchTopperDetail {
+  width: 100%;
+
+  min-width: 0;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  padding: 11px 13px;
+
+  border-radius: 9px;
+
+  background: #f7f9fc;
+
+  color: #555;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+
+  text-align: left;
+
+  overflow-wrap: anywhere;
+}
+
+.branchTopperDetail svg {
+  flex: 0 0 auto;
+
+  margin-top: 3px;
+
+  color: #1565c0;
+
+  font-size: 15px;
+}
+
+.branchTopperDetail span {
+  min-width: 0;
+
+  overflow-wrap: anywhere;
+
+  word-break: break-word;
+}
+
+/* =========================================================
+   PACKAGE
+========================================================= */
+
+.branchTopperPackage {
+  width: 100%;
+
+  margin-top: 18px;
+
+  padding: 14px;
+
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #eaf4ff, #f4f9ff);
+
+  text-align: center;
+}
+
+.branchTopperPackage small {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #687386;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+
+  text-transform: uppercase;
+}
+
+.branchTopperPackage strong {
+  display: block;
+
+  color: #0d47a1;
+
+  font-size: 25px;
+
+  font-weight: 800;
+
+  line-height: 1.2;
+
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   GENERIC SECTION HEADING
+========================================================= */
+
+.sectionHeading {
+  width: 100%;
+
+  min-width: 0;
+
+  margin-bottom: 30px;
+
+  text-align: center;
+}
+
+.sectionHeading span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #1565c0;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+.sectionHeading h2 {
+  margin: 0;
+
+  color: #0d47a1;
+
+  font-size: 30px;
+
+  font-weight: 700;
+
+  line-height: 1.35;
+
+  overflow-wrap: anywhere;
+}
+
+.sectionHeading p {
+  max-width: 800px;
+
+  margin: 10px auto 0;
+
+  color: #666;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+.tableCard {
+  animation: fadeUp 0.5s ease;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .achievementPage {
+    padding: 30px;
+  }
+
+  .branchToppersGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+  .achievementPage {
+    padding: 25px;
+  }
+
+  .achievementHero {
+    padding: 55px 25px 70px;
+  }
+
+  .achievementHero h1 {
+    font-size: 36px;
+  }
+
+  .achievementHero p {
+    font-size: 16px;
+  }
+
+  .tableTitle h2 {
+    font-size: 24px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .achievementPage {
+    padding: 18px;
+  }
+
+  .achievementHero {
+    min-height: 0;
+
+    padding: 45px 20px 60px;
+
+    margin-bottom: 30px;
+
+    border-radius: 15px;
+  }
+
+  .achievementHero h1 {
+    font-size: 28px;
+  }
+
+  .achievementHero p {
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+  /*
+     Search becomes a normal full-width
+     block on mobile.
+  */
+
+  .achievementHero .searchSection {
+    width: 100%;
+
+    max-width: 100%;
+
+    margin: 25px auto 0 !important;
+  }
+
+  .searchBox {
+    width: 100%;
+
+    padding: 14px 18px;
+
+    border-radius: 35px;
+  }
+
+  .searchBox input {
+    font-size: 15px;
+  }
+
+  .filterSection {
+    justify-content: flex-start;
+
+    overflow-x: auto;
+
+    flex-wrap: nowrap;
+
+    padding-bottom: 8px;
+  }
+
+  .filterSection::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filterBtn {
+    flex-shrink: 0;
+
+    padding: 10px 18px;
+
+    font-size: 13px;
+  }
+
+  .tableCard {
+    margin-top: 0;
+
+    padding: 0;
+
+    border-radius: 15px;
+  }
+
+  .tableTitle {
+    padding: 20px 18px;
+  }
+
+  .tableTitle svg {
+    font-size: 22px;
+  }
+
+  .tableTitle h2 {
+    font-size: 20px;
+  }
+
+  .tableResponsive {
+    border-radius: 10px;
+  }
+
+  .tableResponsive table {
+    min-width: 750px;
+  }
+
+  .tableResponsive thead th {
+    padding: 15px;
+  }
+
+  .tableResponsive tbody td {
+    padding: 14px 15px;
+  }
+
+  .branchToppersSection {
+    margin: 35px 0;
+  }
+
+  .branchToppersGrid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .branchTopperContent {
+    padding: 22px;
+  }
+
+  .branchTopperPhoto {
+    width: 140px;
+
+    height: 140px;
+
+    flex-basis: 140px;
+  }
+
+  .sectionHeading h2 {
+    font-size: 25px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .achievementPage {
+    padding: 15px;
+  }
+
+  .achievementHero {
+    padding: 40px 16px 50px;
+  }
+
+  .achievementHero h1 {
+    font-size: 24px;
+  }
+
+  .achievementHero p {
+    font-size: 14px;
+  }
+
+  .searchBox {
+    padding: 12px 15px;
+  }
+
+  .tableTitle h2 {
+    font-size: 18px;
+  }
+
+  .branchToppersSection .sectionHeading h2 {
+    font-size: 23px;
+  }
+
+  .branchToppersSection .sectionHeading p {
+    font-size: 12px;
+  }
+
+  .branchTopperPhoto {
+    width: 125px;
+
+    height: 125px;
+
+    flex-basis: 125px;
+  }
+
+  .branchTopperContent h4 {
+    font-size: 18px;
+  }
+
+  .branchTopperPackage strong {
+    font-size: 22px;
+  }
+}

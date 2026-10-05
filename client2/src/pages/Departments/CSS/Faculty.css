@@ -1,0 +1,1316 @@
+/* =========================================================
+   GOOGLE FONT
+========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f5f7fb;
+}
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.facultyPage {
+  width: 100%;
+  max-width: 100%;
+  padding: 40px;
+  background: #f5f7fb;
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.facultyHero {
+  width: 100%;
+  min-height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+
+  color: #ffffff;
+  text-align: center;
+
+  padding: 70px 40px;
+
+  border-radius: 25px;
+
+  margin-bottom: 40px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.facultyHero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  top: -120px;
+  right: -80px;
+
+  pointer-events: none;
+}
+
+.facultyHero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 250px;
+  height: 250px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  bottom: -80px;
+  left: -60px;
+
+  pointer-events: none;
+}
+
+.facultyHero h1 {
+  position: relative;
+  z-index: 2;
+
+  font-size: 48px;
+  font-weight: 700;
+
+  margin-bottom: 15px;
+}
+
+.facultyHero p {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 850px;
+
+  margin: auto;
+
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.searchSection {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.searchBox {
+  width: 100%;
+  max-width: 600px;
+
+  margin: auto;
+
+  background: #ffffff;
+
+  border-radius: 60px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 18px 25px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.searchBox svg {
+  flex: 0 0 auto;
+
+  color: #1565c0;
+
+  font-size: 22px;
+}
+
+.searchBox input {
+  width: 100%;
+  min-width: 0;
+
+  border: none;
+  outline: none;
+
+  margin-left: 15px;
+
+  font-size: 17px;
+
+  background: transparent;
+}
+
+/* =========================================================
+   HOD SECTION
+========================================================= */
+
+.hodCard {
+  width: 100%;
+
+  background: #ffffff;
+
+  border-radius: 22px;
+
+  display: grid;
+
+  /*
+    Image + content
+  */
+
+  grid-template-columns: 280px minmax(0, 1fr);
+
+  gap: 40px;
+
+  align-items: center;
+
+  padding: 35px;
+
+  margin-bottom: 50px;
+
+  border: 1px solid #e2e8f0;
+
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+.hodCard::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 5px;
+  height: 100%;
+
+  background: linear-gradient(180deg, #0d47a1, #1976d2, #42a5f5);
+}
+
+/* =========================================================
+   HOD IMAGE CONTAINER
+
+   IMPORTANT:
+   No fixed height is applied to the image itself.
+   This prevents portrait images from being cropped.
+========================================================= */
+
+.hodImage {
+  width: 100%;
+  min-width: 0;
+
+  min-height: 250px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px;
+
+  background: #f5f7fb;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   HOD IMAGE
+
+   FULL IMAGE VISIBLE
+========================================================= */
+
+.facultyPage .hodImage img {
+  display: block;
+
+  width: auto !important;
+  height: auto !important;
+
+  max-width: 100% !important;
+  max-height: 420px !important;
+
+  object-fit: contain !important;
+  object-position: center !important;
+
+  border-radius: 12px;
+
+  border: 6px solid #1976d2;
+
+  background: #ffffff;
+
+  transition: transform 0.35s ease;
+
+  /*
+    Prevent inherited global image rules
+    from cropping the photograph.
+  */
+
+  flex-shrink: 0;
+}
+
+.facultyPage .hodImage img:hover {
+  transform: scale(1.02);
+}
+
+/* =========================================================
+   HOD BADGE
+========================================================= */
+
+.hodBadge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #1565c0;
+
+  color: #ffffff;
+
+  padding: 8px 20px;
+
+  border-radius: 30px;
+
+  font-size: 14px;
+
+  margin-bottom: 15px;
+
+  text-align: center;
+}
+
+/* =========================================================
+   HOD CONTENT
+========================================================= */
+
+.hodContent {
+  width: 100%;
+  min-width: 0;
+
+  overflow-wrap: anywhere;
+}
+
+.hodContent h2 {
+  font-size: 36px;
+
+  color: #0d47a1;
+
+  margin-bottom: 8px;
+
+  line-height: 1.25;
+}
+
+.hodContent h4 {
+  color: #ff9800;
+
+  margin-bottom: 20px;
+
+  font-weight: 600;
+
+  line-height: 1.5;
+}
+
+.hodContent p {
+  color: #555555;
+
+  line-height: 1.8;
+
+  margin-bottom: 25px;
+
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   HOD INFO GRID
+========================================================= */
+
+.infoGrid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 15px;
+}
+
+.infoGrid div {
+  min-width: 0;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  background: #f7f9fc;
+
+  padding: 15px 17px;
+
+  border-radius: 12px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.infoGrid div:hover {
+  background: #1565c0;
+
+  color: #ffffff;
+
+  transform: translateY(-3px);
+}
+
+.infoGrid div:hover svg {
+  color: #ffffff;
+}
+
+.infoGrid svg {
+  flex: 0 0 auto;
+
+  color: #1565c0;
+
+  font-size: 18px;
+
+  margin-top: 3px;
+
+  transition: color 0.3s ease;
+}
+
+.infoGrid span {
+  min-width: 0;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  overflow-wrap: anywhere;
+
+  word-break: break-word;
+}
+
+/* =========================================================
+   FACULTY GRID
+
+   DESKTOP = 2 CARDS PER ROW
+========================================================= */
+
+.facultyGrid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 30px;
+
+  margin-bottom: 60px;
+
+  align-items: stretch;
+}
+
+/* =========================================================
+   FACULTY CARD
+
+   IMAGE LEFT + INFORMATION RIGHT
+========================================================= */
+
+.facultyCard {
+  width: 100%;
+  min-width: 0;
+
+  background: #ffffff;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  border: 1px solid #e2e8f0;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 190px minmax(0, 1fr);
+
+  align-items: stretch;
+}
+
+.facultyCard::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background: linear-gradient(90deg, #0d47a1, #42a5f5, #00c6ff);
+
+  z-index: 5;
+}
+
+.facultyCard:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================================================
+   FACULTY IMAGE CONTAINER
+
+   IMAGE IS NEVER CROPPED
+========================================================= */
+
+.facultyImage {
+  width: 190px;
+
+  min-width: 190px;
+
+  min-height: 260px;
+
+  padding: 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: linear-gradient(180deg, #f7faff 0%, #eef3f8 100%);
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+/* =========================================================
+   FACULTY IMAGE
+
+   IMPORTANT:
+   width/height AUTO prevents cropping.
+========================================================= */
+
+.facultyPage .facultyImage img {
+  display: block;
+
+  width: auto !important;
+  height: auto !important;
+
+  max-width: 100% !important;
+  max-height: 100% !important;
+
+  object-fit: contain !important;
+  object-position: center !important;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  transition: transform 0.35s ease;
+
+  flex-shrink: 0;
+}
+
+/*
+  Very small hover zoom.
+  It does NOT crop because the image
+  remains almost at its original size.
+*/
+
+.facultyCard:hover .facultyImage img {
+  transform: scale(1.015);
+}
+
+/* =========================================================
+   FACULTY BODY
+========================================================= */
+
+.facultyBody {
+  width: 100%;
+
+  min-width: 0;
+
+  padding: 25px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.facultyBody h3 {
+  color: #0d47a1;
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  margin-bottom: 7px;
+
+  line-height: 1.35;
+
+  overflow-wrap: anywhere;
+}
+
+.facultyBody h5 {
+  color: #ff9800;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  margin-bottom: 18px;
+
+  line-height: 1.5;
+
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   FACULTY INFORMATION
+========================================================= */
+
+.facultyInfo {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 11px;
+
+  min-width: 0;
+}
+
+.infoRow {
+  width: 100%;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  color: #555555;
+
+  font-size: 13px;
+
+  line-height: 1.55;
+
+  min-width: 0;
+}
+
+.infoRow svg {
+  flex: 0 0 auto;
+
+  color: #1565c0;
+
+  font-size: 15px;
+
+  margin-top: 3px;
+
+  min-width: 17px;
+}
+
+.infoRow span {
+  min-width: 0;
+
+  overflow-wrap: anywhere;
+
+  word-break: break-word;
+}
+
+/* =========================================================
+   PROFILE BUTTON
+========================================================= */
+
+.profileBtn {
+  width: 100%;
+
+  margin-top: 20px;
+
+  padding: 12px 15px;
+
+  border: none;
+  outline: none;
+
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+
+  color: #ffffff;
+
+  border-radius: 50px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 10px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.profileBtn svg {
+  transition: transform 0.3s ease;
+}
+
+.profileBtn:hover {
+  background: linear-gradient(135deg, #1565c0, #42a5f5);
+
+  color: #ffffff;
+
+  box-shadow: 0 10px 22px rgba(25, 118, 210, 0.3);
+}
+
+.profileBtn:hover svg {
+  transform: translateX(5px);
+}
+
+/* =========================================================
+   HOD PROFILE BUTTON
+========================================================= */
+
+.hodProfileBtn {
+  max-width: 260px;
+}
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.facultyStats {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 30px;
+
+  margin-top: 20px;
+}
+
+.statBox {
+  background: #ffffff;
+
+  border-radius: 20px;
+
+  padding: 35px 25px;
+
+  text-align: center;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.statBox::before {
+  content: "";
+
+  position: absolute;
+
+  width: 100%;
+  height: 5px;
+
+  top: 0;
+  left: 0;
+
+  background: linear-gradient(90deg, #0d47a1, #42a5f5, #00c6ff);
+}
+
+.statBox:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+}
+
+.statBox h2 {
+  color: #0d47a1;
+
+  font-size: 42px;
+
+  margin-bottom: 10px;
+
+  font-weight: 700;
+}
+
+.statBox p {
+  color: #666666;
+
+  font-size: 16px;
+
+  font-weight: 500;
+}
+
+/* =========================================================
+   LOADING / ERROR
+========================================================= */
+
+.facultyPage .text-center {
+  font-family: "Poppins", sans-serif;
+}
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+  .facultyPage {
+    padding: 30px;
+  }
+
+  .facultyGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 25px;
+  }
+
+  .facultyCard {
+    grid-template-columns: 165px minmax(0, 1fr);
+  }
+
+  .facultyImage {
+    width: 165px;
+
+    min-width: 165px;
+
+    min-height: 240px;
+  }
+
+  .facultyBody {
+    padding: 20px;
+  }
+
+  .facultyBody h3 {
+    font-size: 20px;
+  }
+
+  .hodCard {
+    grid-template-columns: 250px minmax(0, 1fr);
+
+    gap: 30px;
+
+    padding: 30px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+  .facultyPage {
+    padding: 25px;
+  }
+
+  .facultyHero {
+    padding: 60px 25px;
+  }
+
+  .facultyHero h1 {
+    font-size: 38px;
+  }
+
+  /* HOD */
+
+  .hodCard {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    align-items: center;
+  }
+
+  .hodImage {
+    width: 100%;
+
+    min-height: 250px;
+
+    padding: 15px;
+  }
+
+  .facultyPage .hodImage img {
+    max-width: 100% !important;
+
+    max-height: 380px !important;
+  }
+
+  .hodContent {
+    width: 100%;
+  }
+
+  .hodContent p {
+    max-width: 850px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+  }
+
+  .hodProfileBtn {
+    margin-left: auto;
+
+    margin-right: auto;
+  }
+
+  .infoGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    text-align: left;
+  }
+
+  /* FACULTY */
+
+  .facultyGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .facultyCard {
+    grid-template-columns: 1fr;
+
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  .facultyImage {
+    width: 100%;
+
+    min-width: 100%;
+
+    min-height: 260px;
+
+    height: 260px;
+  }
+
+  .facultyPage .facultyImage img {
+    width: auto !important;
+
+    height: auto !important;
+
+    max-width: 100% !important;
+
+    max-height: 100% !important;
+  }
+
+  .facultyBody {
+    flex: 1;
+
+    padding: 22px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .facultyPage {
+    padding: 15px;
+  }
+
+  /* HERO */
+
+  .facultyHero {
+    min-height: 270px;
+
+    padding: 45px 20px;
+
+    border-radius: 18px;
+  }
+
+  .facultyHero h1 {
+    font-size: 30px;
+  }
+
+  .facultyHero p {
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+  /* SEARCH */
+
+  .searchSection {
+    margin-bottom: 30px;
+  }
+
+  .searchBox {
+    padding: 15px 18px;
+  }
+
+  /* HOD */
+
+  .hodCard {
+    padding: 22px 18px;
+
+    border-radius: 18px;
+
+    gap: 22px;
+  }
+
+  .hodImage {
+    width: 100%;
+
+    min-height: 220px;
+
+    padding: 12px;
+  }
+
+  .facultyPage .hodImage img {
+    width: auto !important;
+
+    height: auto !important;
+
+    max-width: 100% !important;
+
+    max-height: 400px !important;
+
+    object-fit: contain !important;
+
+    border-width: 5px;
+  }
+
+  .hodContent h2 {
+    font-size: 28px;
+  }
+
+  .hodContent h4 {
+    font-size: 17px;
+  }
+
+  .hodContent p {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .infoGrid div {
+    padding: 14px 15px;
+  }
+
+  /* FACULTY */
+
+  .facultyGrid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .facultyCard {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  .facultyImage {
+    width: 100%;
+
+    min-width: 100%;
+
+    height: 300px;
+
+    min-height: 300px;
+
+    padding: 15px;
+  }
+
+  .facultyPage .facultyImage img {
+    width: auto !important;
+
+    height: auto !important;
+
+    max-width: 100% !important;
+
+    max-height: 100% !important;
+
+    object-fit: contain !important;
+
+    object-position: center !important;
+
+    transform: none !important;
+  }
+
+  .facultyBody {
+    padding: 22px;
+  }
+
+  .facultyBody h3 {
+    font-size: 21px;
+  }
+
+  .facultyBody h5 {
+    font-size: 15px;
+  }
+
+  .profileBtn {
+    font-size: 14px;
+
+    padding: 13px;
+  }
+
+  /* STATS */
+
+  .statBox {
+    padding: 28px 20px;
+  }
+
+  .statBox h2 {
+    font-size: 34px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .facultyPage {
+    padding: 10px;
+  }
+
+  /* HERO */
+
+  .facultyHero {
+    min-height: 250px;
+
+    padding: 40px 16px;
+
+    border-radius: 15px;
+  }
+
+  .facultyHero h1 {
+    font-size: 26px;
+
+    margin-bottom: 12px;
+  }
+
+  .facultyHero p {
+    font-size: 13px;
+
+    line-height: 1.6;
+  }
+
+  /* SEARCH */
+
+  .searchBox {
+    padding: 14px 17px;
+  }
+
+  .searchBox input {
+    font-size: 15px;
+  }
+
+  /* HOD */
+
+  .hodCard {
+    padding: 18px 13px;
+
+    border-radius: 16px;
+  }
+
+  .hodImage {
+    min-height: 200px;
+
+    padding: 10px;
+  }
+
+  .facultyPage .hodImage img {
+    width: auto !important;
+
+    height: auto !important;
+
+    max-width: 100% !important;
+
+    max-height: 350px !important;
+
+    border-width: 5px;
+
+    border-radius: 10px;
+
+    transform: none !important;
+  }
+
+  .hodBadge {
+    font-size: 12px;
+
+    padding: 7px 15px;
+  }
+
+  .hodContent h2 {
+    font-size: 24px;
+  }
+
+  .hodContent h4 {
+    font-size: 15px;
+  }
+
+  .hodContent p {
+    font-size: 13px;
+  }
+
+  .infoGrid div {
+    padding: 12px;
+  }
+
+  .infoGrid span {
+    font-size: 13px;
+  }
+
+  /* FACULTY */
+
+  .facultyImage {
+    height: 280px;
+
+    min-height: 280px;
+
+    padding: 12px;
+  }
+
+  .facultyPage .facultyImage img {
+    width: auto !important;
+
+    height: auto !important;
+
+    max-width: 100% !important;
+
+    max-height: 100% !important;
+
+    object-fit: contain !important;
+
+    object-position: center !important;
+
+    transform: none !important;
+  }
+
+  .facultyBody {
+    padding: 19px;
+  }
+
+  .facultyBody h3 {
+    font-size: 19px;
+  }
+
+  .facultyBody h5 {
+    font-size: 14px;
+  }
+
+  .infoRow {
+    font-size: 13px;
+  }
+
+  .profileBtn {
+    font-size: 13px;
+
+    padding: 12px;
+  }
+
+  /* STATS */
+
+  .statBox h2 {
+    font-size: 32px;
+  }
+}
+
+/* =========================================================
+   EXTRA PROTECTION AGAINST GLOBAL IMAGE CSS
+
+   If another stylesheet contains:
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+   these rules ensure faculty photos are NOT cropped.
+========================================================= */
+
+.facultyPage .hodImage img,
+.facultyPage .facultyImage img {
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.facultyPage img {
+  user-select: none;
+}
+
+.facultyPage a {
+  text-decoration: none;
+}

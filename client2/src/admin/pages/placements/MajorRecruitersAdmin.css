@@ -1,0 +1,743 @@
+/* =========================================================
+   MAJOR RECRUITERS ADMIN
+========================================================= */
+
+.major-recruiters-admin {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px;
+  background: #f5f7fa;
+  color: #172033;
+}
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.major-admin-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.major-admin-eyebrow {
+  display: block;
+  margin-bottom: 5px;
+  color: #1764aa;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.major-admin-page-header h1 {
+  margin: 0;
+  color: #102d57;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.major-admin-page-header p {
+  margin: 7px 0 0;
+  color: #667085;
+  font-size: 14px;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.major-add-button,
+.major-header-add-button,
+.major-save-button {
+  border: none !important;
+  border-radius: 7px !important;
+  background: #1764aa !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  box-shadow: none !important;
+}
+
+.major-add-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 18px;
+}
+
+.major-add-button:hover,
+.major-header-add-button:hover,
+.major-save-button:hover {
+  background: #0e4e8c !important;
+}
+
+.major-header-add-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 14px;
+  font-size: 12px;
+}
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.major-admin-card {
+  overflow: hidden;
+  border: 1px solid #e1e6ed !important;
+  border-radius: 12px !important;
+  background: #ffffff;
+  box-shadow: 0 5px 22px rgba(24, 39, 75, 0.06);
+}
+
+.major-admin-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 19px 22px !important;
+  border-bottom: 1px solid #e7ebf0 !important;
+  background: #ffffff !important;
+}
+
+.major-admin-card-header h4 {
+  margin: 0 0 4px;
+  color: #172033;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.major-admin-card-header span {
+  color: #8a94a6;
+  font-size: 12px;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.major-admin-table {
+  margin: 0 !important;
+  vertical-align: middle;
+}
+
+.major-admin-table thead th {
+  padding: 14px 18px;
+  border-bottom: 1px solid #dfe5ec;
+  background: #f8fafc;
+  color: #667085;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.major-admin-table tbody td {
+  padding: 14px 18px;
+  border-color: #edf0f4;
+  color: #475467;
+  font-size: 13px;
+}
+
+.major-admin-table tbody tr {
+  transition: background 0.15s ease;
+}
+
+.major-admin-table tbody tr:hover {
+  background: #f8fbff;
+}
+
+/* =========================================================
+   ROW NUMBER
+========================================================= */
+
+.major-row-number {
+  color: #98a2b3;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   COMPANY
+========================================================= */
+
+.major-company-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 230px;
+}
+
+.major-company-logo {
+  width: 52px;
+  height: 52px;
+  flex: 0 0 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid #e2e7ed;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #9aa4b2;
+  font-size: 20px;
+}
+
+.major-company-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  object-fit: contain;
+}
+
+.major-company-info {
+  min-width: 0;
+}
+
+.major-company-info strong {
+  display: block;
+  overflow: hidden;
+  color: #172033;
+  font-size: 14px;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.major-company-info small {
+  display: block;
+  max-width: 250px;
+  margin-top: 3px;
+  overflow: hidden;
+  color: #8a94a6;
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   WEBSITE
+========================================================= */
+
+.major-website-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #1764aa;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.major-website-link:hover {
+  color: #0e4e8c;
+  text-decoration: underline;
+}
+
+.major-empty-value {
+  color: #a0a8b3;
+}
+
+/* =========================================================
+   CATEGORY
+========================================================= */
+
+.major-category-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 8px;
+  border-radius: 5px;
+  background: #eef5fc;
+  color: #1764aa;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+/* =========================================================
+   ORDER
+========================================================= */
+
+.major-order {
+  display: inline-flex;
+  min-width: 27px;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 7px;
+  border-radius: 5px;
+  background: #f2f4f7;
+  color: #667085;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.major-status-badge {
+  padding: 6px 9px !important;
+  border-radius: 5px !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+}
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.major-action-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.major-action-buttons .btn {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 6px !important;
+  color: #ffffff !important;
+}
+
+.major-view-btn {
+  background: #64748b !important;
+}
+
+.major-edit-btn {
+  background: #1764aa !important;
+}
+
+.major-delete-btn {
+  background: #dc3545 !important;
+}
+
+.major-view-btn:hover {
+  background: #475569 !important;
+}
+
+.major-edit-btn:hover {
+  background: #0e4e8c !important;
+}
+
+.major-delete-btn:hover {
+  background: #b02a37 !important;
+}
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.major-admin-empty {
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 25px;
+  text-align: center;
+}
+
+.major-empty-icon {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: #eef5fc;
+  color: #1764aa;
+  font-size: 25px;
+}
+
+.major-admin-empty h4 {
+  margin: 0;
+  color: #172033;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.major-admin-empty p {
+  max-width: 450px;
+  margin: 8px 0 20px;
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.major-admin-loading {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.major-admin-loading .spinner-border {
+  margin-bottom: 17px;
+}
+
+.major-admin-loading h5 {
+  margin: 0;
+  color: #172033;
+  font-weight: 800;
+}
+
+.major-admin-loading p {
+  margin: 6px 0 0;
+  color: #667085;
+  font-size: 13px;
+}
+
+/* =========================================================
+   FORM MODAL
+========================================================= */
+
+.major-recruiter-modal .modal-content {
+  overflow: hidden;
+  border: none;
+  border-radius: 12px;
+}
+
+.major-recruiter-modal .modal-header {
+  padding: 19px 22px;
+  border-bottom: 1px solid #e5e9ef;
+  background: #ffffff;
+}
+
+.major-recruiter-modal .modal-header small {
+  display: block;
+  margin-bottom: 3px;
+  color: #1764aa;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.major-recruiter-modal .modal-title {
+  color: #102d57;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.major-recruiter-modal .modal-body {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 24px;
+}
+
+.major-recruiter-modal .modal-footer {
+  padding: 14px 22px;
+  border-top: 1px solid #e5e9ef;
+  background: #fafbfc;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.major-recruiter-modal .form-label {
+  margin-bottom: 6px;
+  color: #344054;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.major-recruiter-modal .form-control,
+.major-recruiter-modal .form-select {
+  min-height: 42px;
+  border: 1px solid #d8dee7;
+  border-radius: 6px;
+  color: #344054;
+  font-size: 13px;
+  box-shadow: none;
+}
+
+.major-recruiter-modal textarea.form-control {
+  min-height: auto;
+}
+
+.major-recruiter-modal .form-control:focus,
+.major-recruiter-modal .form-select:focus {
+  border-color: #1764aa;
+  box-shadow: 0 0 0 3px rgba(23, 100, 170, 0.08);
+}
+
+/* =========================================================
+   UPLOAD
+========================================================= */
+
+.major-upload-box {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 14px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.major-upload-icon {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  background: #eaf3fc;
+  color: #1764aa;
+}
+
+.major-upload-box small {
+  display: block;
+  margin-top: 5px;
+  color: #8a94a6;
+  font-size: 10px;
+}
+
+/* =========================================================
+   IMAGE PREVIEW
+========================================================= */
+
+.major-image-preview-wrapper {
+  margin-bottom: 20px;
+}
+
+.major-image-preview-wrapper > span {
+  display: block;
+  margin-bottom: 7px;
+  color: #667085;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.major-image-preview {
+  width: 170px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid #e0e6ee;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.major-image-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  object-fit: contain;
+}
+
+/* =========================================================
+   PUBLISH SWITCH
+========================================================= */
+
+.major-publish-switch {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  border: 1px solid #d8dee7;
+  border-radius: 6px;
+}
+
+.major-publish-switch .form-check {
+  margin: 0;
+}
+
+.major-publish-switch .form-check-label {
+  color: #475467;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   VIEW MODAL
+========================================================= */
+
+.major-view-image-box {
+  width: 100%;
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid #e1e6ed;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.major-view-image-box img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  object-fit: contain;
+}
+
+.major-view-no-image {
+  width: 100%;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 10px;
+  background: #f2f4f7;
+  color: #98a2b3;
+  font-size: 30px;
+}
+
+.major-view-no-image span {
+  font-size: 12px;
+}
+
+/* =========================================================
+   VIEW INFORMATION
+========================================================= */
+
+.major-view-information h3 {
+  margin: 0 0 18px;
+  color: #102d57;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.major-view-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 11px 0;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.major-view-row strong {
+  width: 105px;
+  flex: 0 0 105px;
+  color: #667085;
+  font-size: 12px;
+}
+
+.major-view-row span,
+.major-view-row a {
+  color: #344054;
+  font-size: 13px;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.major-view-row a {
+  color: #1764aa;
+  text-decoration: none;
+}
+
+.major-view-row a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.major-view-description {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e9ef;
+}
+
+.major-view-description h5 {
+  margin: 0 0 8px;
+  color: #102d57;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.major-view-description p {
+  margin: 0;
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+  .major-recruiters-admin {
+    padding: 22px;
+  }
+
+  .major-admin-page-header h1 {
+    font-size: 28px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .major-recruiters-admin {
+    padding: 18px 14px;
+  }
+
+  .major-admin-page-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .major-admin-page-header h1 {
+    font-size: 25px;
+  }
+
+  .major-add-button {
+    width: 100%;
+  }
+
+  .major-header-add-button {
+    display: none;
+  }
+
+  .major-admin-card-header {
+    padding: 15px !important;
+  }
+
+  .major-company-cell {
+    min-width: 200px;
+  }
+
+  .major-recruiter-modal .modal-body {
+    max-height: 72vh;
+    padding: 18px;
+  }
+
+  .major-view-image-box,
+  .major-view-no-image {
+    height: 190px;
+    margin-bottom: 20px;
+  }
+}

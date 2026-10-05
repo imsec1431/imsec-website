@@ -1,0 +1,491 @@
+/* =========================================================
+   DEPARTMENT RESEARCH POLICY
+   IMSEC ADMIN - PREMIUM COMPACT DESIGN
+   ========================================================= */
+
+.department-research-policy-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  padding: 24px;
+  color: #172033;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.department-research-policy-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 22px;
+}
+
+.department-research-policy-title-section {
+  min-width: 0;
+}
+
+.department-research-policy-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  background: transparent;
+  color: #1764aa;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 0;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.department-research-policy-back-btn:hover {
+  color: #0a2e5c;
+  transform: translateX(-2px);
+}
+
+.department-research-policy-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.department-research-policy-icon {
+  width: 52px;
+  height: 52px;
+  flex: 0 0 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0a2e5c;
+  color: #fdb913;
+  border-radius: 14px;
+  font-size: 22px;
+  box-shadow: 0 8px 20px rgba(10, 46, 92, 0.14);
+}
+
+.department-research-policy-label {
+  display: block;
+  color: #1764aa;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  margin-bottom: 4px;
+}
+
+.department-research-policy-heading h1 {
+  margin: 0;
+  color: #0a2e5c;
+  font-size: 27px;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.department-research-policy-heading p {
+  margin: 5px 0 0;
+  color: #6d7788;
+  font-size: 13px;
+}
+
+/* =========================================================
+   ADD BUTTON
+   ========================================================= */
+
+.department-research-policy-add-btn,
+.department-research-policy-empty-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 0;
+  border-radius: 9px;
+  background: #0a2e5c;
+  color: #fff;
+  padding: 11px 17px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 7px 16px rgba(10, 46, 92, 0.16);
+  transition: 0.2s ease;
+}
+
+.department-research-policy-add-btn:hover,
+.department-research-policy-empty-btn:hover {
+  background: #1764aa;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.department-research-policy-error {
+  margin-bottom: 18px;
+  padding: 12px 15px;
+  border: 1px solid #f0c5c5;
+  border-radius: 9px;
+  background: #fff5f5;
+  color: #b42318;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.department-research-policy-content {
+  width: 100%;
+}
+
+/* =========================================================
+   MAIN CARD
+   ========================================================= */
+
+.department-research-policy-card {
+  background: #fff;
+  border: 1px solid #e5eaf1;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(16, 24, 40, 0.06);
+}
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.department-research-policy-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 22px;
+  border-bottom: 1px solid #edf0f4;
+  background: linear-gradient(135deg, #ffffff 0%, #f9fbfe 100%);
+}
+
+.department-research-policy-card-label {
+  display: block;
+  margin-bottom: 4px;
+  color: #8993a4;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.department-research-policy-card-header h2 {
+  margin: 0;
+  color: #0a2e5c;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.department-research-policy-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.department-research-policy-edit-btn,
+.department-research-policy-delete-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.department-research-policy-edit-btn {
+  background: #eef6ff;
+  border-color: #d6e8fa;
+  color: #1764aa;
+}
+
+.department-research-policy-edit-btn:hover {
+  background: #1764aa;
+  border-color: #1764aa;
+  color: #fff;
+}
+
+.department-research-policy-delete-btn {
+  background: #fff2f2;
+  border-color: #f4d3d3;
+  color: #c62828;
+}
+
+.department-research-policy-delete-btn:hover {
+  background: #c62828;
+  border-color: #c62828;
+  color: #fff;
+}
+
+.department-research-policy-delete-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.department-research-policy-meta {
+  padding: 13px 22px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.department-research-policy-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 30px;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.department-research-policy-status::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.department-research-policy-status.active {
+  background: #eaf8f0;
+  color: #16834d;
+}
+
+.department-research-policy-status.active::before {
+  background: #20a464;
+}
+
+.department-research-policy-status.inactive {
+  background: #f1f3f5;
+  color: #697386;
+}
+
+.department-research-policy-status.inactive::before {
+  background: #8b95a5;
+}
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+.department-research-policy-body {
+  padding: 25px 28px 30px;
+}
+
+.department-research-policy-body h3 {
+  display: inline-block;
+  margin: 0 0 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #fdb913;
+  color: #0a2e5c;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.department-research-policy-text {
+  color: #4d596b;
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.department-research-policy-text p {
+  margin: 0 0 12px;
+}
+
+.department-research-policy-text p:last-child {
+  margin-bottom: 0;
+}
+
+.department-research-policy-no-content {
+  padding: 20px;
+  border: 1px dashed #d9dee7;
+  border-radius: 10px;
+  background: #fafbfc;
+  color: #8993a4;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.department-research-policy-empty {
+  max-width: 620px;
+  margin: 35px auto;
+  padding: 50px 30px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #e5eaf1;
+  border-radius: 15px;
+  box-shadow: 0 8px 28px rgba(16, 24, 40, 0.05);
+}
+
+.department-research-policy-empty-icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #eef6ff;
+  color: #1764aa;
+  font-size: 25px;
+}
+
+.department-research-policy-empty h2 {
+  margin: 0 0 8px;
+  color: #0a2e5c;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.department-research-policy-empty p {
+  max-width: 450px;
+  margin: 0 auto 22px;
+  color: #778195;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.department-research-policy-loading {
+  min-height: 55vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  color: #6d7788;
+  font-size: 13px;
+}
+
+.department-research-policy-loader {
+  width: 35px;
+  height: 35px;
+  border: 3px solid #dce5ef;
+  border-top-color: #1764aa;
+  border-radius: 50%;
+  animation: departmentResearchPolicySpin 0.8s linear infinite;
+}
+
+@keyframes departmentResearchPolicySpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .department-research-policy-page {
+    padding: 16px;
+  }
+
+  .department-research-policy-header {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .department-research-policy-add-btn {
+    width: 100%;
+  }
+
+  .department-research-policy-heading h1 {
+    font-size: 23px;
+  }
+
+  .department-research-policy-card-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .department-research-policy-actions {
+    width: 100%;
+  }
+
+  .department-research-policy-edit-btn,
+  .department-research-policy-delete-btn {
+    flex: 1;
+  }
+
+  .department-research-policy-body {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .department-research-policy-page {
+    padding: 12px;
+  }
+
+  .department-research-policy-heading {
+    align-items: flex-start;
+  }
+
+  .department-research-policy-icon {
+    width: 45px;
+    height: 45px;
+    flex-basis: 45px;
+    font-size: 19px;
+  }
+
+  .department-research-policy-heading h1 {
+    font-size: 20px;
+  }
+
+  .department-research-policy-heading p {
+    font-size: 12px;
+  }
+
+  .department-research-policy-card-header {
+    padding: 17px;
+  }
+
+  .department-research-policy-meta {
+    padding: 11px 17px;
+  }
+
+  .department-research-policy-body {
+    padding: 18px;
+  }
+
+  .department-research-policy-actions {
+    flex-direction: column;
+  }
+
+  .department-research-policy-edit-btn,
+  .department-research-policy-delete-btn {
+    width: 100%;
+  }
+
+  .department-research-policy-empty {
+    margin: 20px auto;
+    padding: 35px 20px;
+  }
+}

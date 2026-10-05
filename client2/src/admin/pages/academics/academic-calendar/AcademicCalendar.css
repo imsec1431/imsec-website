@@ -1,0 +1,504 @@
+/* =========================================
+   ACADEMIC CALENDAR - ADMIN
+========================================= */
+
+.academic-calendar-admin {
+  width: 100%;
+  padding: 24px;
+  background: #f5f7fb;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.academic-calendar-admin-header {
+  margin-bottom: 22px;
+}
+
+.academic-calendar-admin-header h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.academic-calendar-admin-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* =========================================
+   FORM CARD
+========================================= */
+
+.academic-calendar-form-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 24px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.academic-calendar-form-header {
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.academic-calendar-form-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* =========================================
+   FORM GRID
+========================================= */
+
+.academic-calendar-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  margin-bottom: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.form-group label span {
+  color: #dc2626;
+  margin-left: 3px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  height: 42px;
+  padding: 9px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #111827;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-group input::placeholder {
+  color: #9ca3af;
+}
+
+.form-help {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.form-error {
+  margin-top: 5px;
+  color: #dc2626;
+  font-size: 12px;
+}
+
+/* =========================================
+   PUBLISH SWITCH
+========================================= */
+
+.checkbox-group {
+  align-items: flex-start;
+}
+
+.checkbox-group > label:first-child {
+  margin-bottom: 8px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  margin: 0;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: #d1d5db;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 3px;
+  top: 3px;
+  background: #ffffff;
+  border-radius: 50%;
+  transition: 0.25s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.switch input:checked + .slider {
+  background: #2563eb;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+.publish-text {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* =========================================
+   FORM BUTTONS
+========================================= */
+
+.academic-calendar-form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.btn-primary,
+.btn-secondary {
+  min-height: 40px;
+  padding: 9px 18px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+}
+
+.btn-secondary {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.btn-secondary:hover {
+  background: #d1d5db;
+}
+
+.btn-primary:disabled,
+.btn-secondary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   LIST CARD
+========================================= */
+
+.academic-calendar-list-card {
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.academic-calendar-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.academic-calendar-list-header h2 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.academic-calendar-list-header span {
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================================
+   TABLE
+========================================= */
+
+.academic-calendar-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.academic-calendar-table {
+  width: 100%;
+  min-width: 850px;
+  border-collapse: collapse;
+}
+
+.academic-calendar-table th {
+  padding: 13px 16px;
+  text-align: left;
+  background: #f9fafb;
+  color: #4b5563;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.academic-calendar-table td {
+  padding: 14px 16px;
+  color: #374151;
+  border-bottom: 1px solid #f0f1f3;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.academic-calendar-table tbody tr:hover {
+  background: #fafafa;
+}
+
+.academic-calendar-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================================
+   SEMESTER BADGE
+========================================= */
+
+.semester-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.semester-badge.odd {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.semester-badge.even {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+/* =========================================
+   STATUS BADGE
+========================================= */
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-badge.published {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.status-badge.draft {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+/* =========================================
+   PDF BUTTON
+========================================= */
+
+.btn-view-pdf {
+  border: 1px solid #2563eb;
+  background: #ffffff;
+  color: #2563eb;
+  padding: 6px 11px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-view-pdf:hover {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.btn-edit,
+.btn-delete {
+  border: none;
+  padding: 6px 11px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-edit {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.btn-edit:hover {
+  background: #dbeafe;
+}
+
+.btn-delete {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.btn-delete:hover {
+  background: #fee2e2;
+}
+
+/* =========================================
+   LOADING / EMPTY
+========================================= */
+
+.academic-calendar-loading,
+.academic-calendar-empty {
+  padding: 45px 20px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .academic-calendar-admin {
+    padding: 16px;
+  }
+
+  .academic-calendar-form-card {
+    padding: 18px;
+  }
+
+  .academic-calendar-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full-width {
+    grid-column: auto;
+  }
+
+  .academic-calendar-admin-header h1 {
+    font-size: 24px;
+  }
+
+  .academic-calendar-form-actions {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .academic-calendar-admin {
+    padding: 12px;
+  }
+
+  .academic-calendar-form-card {
+    padding: 14px;
+  }
+
+  .academic-calendar-list-header {
+    padding: 15px;
+  }
+
+  .academic-calendar-list-header h2 {
+    font-size: 17px;
+  }
+
+  .academic-calendar-table th,
+  .academic-calendar-table td {
+    padding: 11px 12px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

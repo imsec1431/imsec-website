@@ -1,0 +1,1263 @@
+/* =========================================================
+   CLASS ROOMS & LABS — PUBLIC PAGE
+   Clean / Premium / High Visibility
+========================================================= */
+
+.classroom-lab-page {
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  color: #172033;
+  font-family: inherit;
+}
+
+.classroom-lab-page *,
+.classroom-lab-page *::before,
+.classroom-lab-page *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+.classroom-lab-page .container {
+  position: relative;
+  z-index: 2;
+}
+
+.classroom-lab-eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+
+  color: #0a2e5c !important;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+
+.classroom-lab-eyebrow.light {
+  color: #f6c344 !important;
+}
+
+.classroom-lab-heading-line {
+  width: 58px;
+  height: 4px;
+
+  margin: 16px 0 25px;
+
+  background: #f6c344 !important;
+
+  border-radius: 10px;
+}
+
+.classroom-lab-heading-line.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.classroom-lab-hero {
+  position: relative;
+
+  min-height: 440px;
+
+  display: flex;
+  align-items: center;
+
+  background: linear-gradient(135deg, #071d3a 0%, #0a2e5c 50%, #123f7a 100%);
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+.classroom-lab-hero-glow {
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  top: -250px;
+  right: -80px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+
+  pointer-events: none;
+}
+
+.classroom-lab-hero-circle {
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  bottom: -190px;
+  left: -110px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.classroom-lab-hero-content {
+  position: relative;
+
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding: 90px 20px;
+
+  text-align: center;
+
+  color: #ffffff !important;
+}
+
+.classroom-lab-hero-small {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: #f6c344 !important;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  line-height: 1.5;
+}
+
+.classroom-lab-hero h1 {
+  margin: 0;
+
+  color: #ffffff !important;
+
+  font-size: clamp(36px, 5vw, 62px);
+  font-weight: 750;
+
+  line-height: 1.15;
+
+  letter-spacing: -0.7px;
+}
+
+.classroom-lab-hero-line {
+  display: block;
+
+  width: 68px;
+  height: 4px;
+
+  margin: 22px auto 20px;
+
+  background: #f6c344 !important;
+
+  border-radius: 10px;
+}
+
+.classroom-lab-hero p {
+  max-width: 720px;
+
+  margin: 0 auto 20px;
+
+  color: #ffffff !important;
+
+  opacity: 0.92;
+
+  font-size: 17px;
+  font-weight: 400;
+
+  line-height: 1.75;
+}
+
+.classroom-lab-breadcrumb {
+  color: #ffffff !important;
+
+  opacity: 0.78;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
+
+.classroom-lab-about {
+  padding: 100px 0;
+
+  background: #ffffff;
+}
+
+.classroom-lab-about-content {
+  padding-right: 25px;
+}
+
+.classroom-lab-about-content h2 {
+  max-width: 680px;
+
+  margin: 0;
+
+  color: #102a4c !important;
+
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 750;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.5px;
+}
+
+.classroom-lab-about-content p {
+  margin: 0 0 18px;
+
+  color: #4b5565 !important;
+
+  font-size: 16px;
+  font-weight: 400;
+
+  line-height: 1.9;
+}
+
+.classroom-lab-about-points {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+
+  margin-top: 28px;
+}
+
+.classroom-lab-about-points div {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 11px;
+
+  color: #344054 !important;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  line-height: 1.6;
+}
+
+.classroom-lab-about-points svg {
+  flex-shrink: 0;
+
+  margin-top: 3px;
+
+  color: #0a2e5c !important;
+
+  font-size: 15px;
+}
+
+/* =========================================================
+   ABOUT IMAGE
+========================================================= */
+
+.classroom-lab-about-image-wrap {
+  position: relative;
+
+  padding: 0 12px 18px 0;
+}
+
+.classroom-lab-about-image {
+  width: 100%;
+  height: 470px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 18px;
+
+  box-shadow: 0 20px 45px rgba(16, 24, 40, 0.15);
+}
+
+.classroom-lab-image-placeholder {
+  height: 470px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+
+  color: #0a2e5c !important;
+
+  background: linear-gradient(135deg, #edf4fb, #f8fafc);
+
+  border-radius: 18px;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.classroom-lab-image-placeholder svg {
+  color: #0a2e5c !important;
+
+  font-size: 55px;
+}
+
+.classroom-lab-about-image-wrap::after {
+  content: "";
+
+  position: absolute;
+
+  width: 120px;
+  height: 120px;
+
+  right: -3px;
+  bottom: -3px;
+
+  border-right: 5px solid #f6c344;
+  border-bottom: 5px solid #f6c344;
+
+  border-radius: 0 0 14px 0;
+
+  pointer-events: none;
+}
+
+.classroom-lab-image-badge {
+  position: absolute;
+
+  left: -22px;
+  bottom: 3px;
+
+  min-width: 205px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 16px 19px;
+
+  color: #ffffff !important;
+
+  background: #0a2e5c;
+
+  border-radius: 12px;
+
+  box-shadow: 0 12px 30px rgba(7, 29, 58, 0.22);
+}
+
+.classroom-lab-image-badge svg {
+  flex-shrink: 0;
+
+  color: #f6c344 !important;
+
+  font-size: 24px;
+}
+
+.classroom-lab-image-badge div {
+  display: flex;
+  flex-direction: column;
+}
+
+.classroom-lab-image-badge strong {
+  color: #ffffff !important;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.classroom-lab-image-badge span {
+  margin-top: 3px;
+
+  color: #ffffff !important;
+
+  opacity: 0.75;
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   FEATURE SECTIONS
+========================================================= */
+
+.classroom-lab-feature-section {
+  padding: 95px 0;
+
+  background: #f5f8fc;
+}
+
+.classroom-lab-feature-reverse {
+  background: #ffffff;
+}
+
+.classroom-lab-feature-header {
+  max-width: 900px;
+
+  margin: 0 auto 45px;
+
+  text-align: center;
+}
+
+.classroom-lab-feature-header h2 {
+  margin: 0;
+
+  color: #102a4c !important;
+
+  font-size: clamp(30px, 4vw, 43px);
+  font-weight: 750;
+
+  line-height: 1.2;
+}
+
+.classroom-lab-feature-header p {
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  color: #4b5565 !important;
+
+  font-size: 16px;
+  font-weight: 400;
+
+  line-height: 1.85;
+}
+
+/* =========================================================
+   FEATURE CARDS
+========================================================= */
+
+.classroom-lab-feature-card {
+  height: 100%;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 17px;
+
+  padding: 27px;
+
+  background: #ffffff !important;
+
+  border: 1px solid #e1e7ef;
+
+  border-radius: 15px;
+
+  box-shadow: 0 8px 25px rgba(16, 24, 40, 0.055);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.classroom-lab-feature-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 16px 35px rgba(16, 24, 40, 0.1);
+}
+
+.classroom-lab-feature-icon {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #0a2e5c !important;
+
+  background: #eaf2fb;
+
+  border-radius: 12px;
+
+  font-size: 20px;
+}
+
+.classroom-lab-feature-card h3 {
+  margin: 1px 0 9px;
+
+  color: #172033 !important;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+.classroom-lab-feature-card p {
+  margin: 0;
+
+  color: #4b5565 !important;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   TECHNOLOGY SECTION
+========================================================= */
+
+.classroom-lab-technology {
+  position: relative;
+
+  padding: 100px 0;
+
+  color: #ffffff !important;
+
+  background: linear-gradient(135deg, #071d3a 0%, #0a2e5c 52%, #123f7a 100%);
+
+  overflow: hidden;
+}
+
+.classroom-lab-technology::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  top: -300px;
+  right: -120px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.11),
+    transparent 70%
+  );
+}
+
+.classroom-lab-technology::after {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  left: -100px;
+  bottom: -210px;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  border-radius: 50%;
+}
+
+.classroom-lab-technology-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: radial-gradient(
+    circle at 25% 50%,
+    rgba(246, 195, 68, 0.06),
+    transparent 35%
+  );
+}
+
+.classroom-lab-technology-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 900px;
+
+  margin: 0 auto 45px;
+
+  text-align: center;
+}
+
+.classroom-lab-technology-content .classroom-lab-eyebrow {
+  color: #f6c344 !important;
+}
+
+.classroom-lab-technology-content h2 {
+  margin: 0;
+
+  color: #ffffff !important;
+
+  font-size: clamp(30px, 4vw, 43px);
+  font-weight: 750;
+
+  line-height: 1.2;
+}
+
+.classroom-lab-technology-content p {
+  margin: 0;
+
+  color: #ffffff !important;
+
+  opacity: 0.86;
+
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.light-line {
+  margin-left: auto;
+  margin-right: auto;
+
+  background: #f6c344 !important;
+}
+
+/* =========================================================
+   TECHNOLOGY CARDS
+========================================================= */
+
+.classroom-lab-tech-grid {
+  position: relative;
+
+  z-index: 3;
+}
+
+.classroom-lab-tech-card {
+  height: 100%;
+
+  padding: 29px;
+
+  background: rgba(255, 255, 255, 0.1) !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  border-radius: 15px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.classroom-lab-tech-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+
+  color: #f6c344 !important;
+
+  background: rgba(246, 195, 68, 0.15);
+
+  border-radius: 12px;
+
+  font-size: 21px;
+}
+
+.classroom-lab-tech-card h3 {
+  margin: 0 0 11px;
+
+  color: #ffffff !important;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+.classroom-lab-tech-card p {
+  margin: 0;
+
+  color: #ffffff !important;
+
+  opacity: 0.82;
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   HIGHLIGHTS
+========================================================= */
+
+.classroom-lab-highlights {
+  padding: 100px 0;
+
+  background: #f5f8fc;
+}
+
+.classroom-lab-section-heading {
+  max-width: 850px;
+
+  margin: 0 auto 48px;
+
+  text-align: center;
+}
+
+.classroom-lab-section-heading h2 {
+  margin: 0;
+
+  color: #102a4c !important;
+
+  font-size: clamp(30px, 4vw, 43px);
+  font-weight: 750;
+
+  line-height: 1.2;
+}
+
+.classroom-lab-section-heading p {
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  color: #4b5565 !important;
+
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+/* =========================================================
+   HIGHLIGHT CARDS
+========================================================= */
+
+.classroom-lab-highlight-card {
+  height: 100%;
+
+  padding: 30px 24px;
+
+  text-align: center;
+
+  background: #ffffff !important;
+
+  border: 1px solid #e1e7ef;
+
+  border-radius: 15px;
+
+  box-shadow: 0 8px 25px rgba(16, 24, 40, 0.055);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.classroom-lab-highlight-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 17px 35px rgba(16, 24, 40, 0.1);
+}
+
+.classroom-lab-highlight-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 18px;
+
+  color: #0a2e5c !important;
+
+  background: #eaf2fb;
+
+  border-radius: 15px;
+
+  font-size: 23px;
+}
+
+.classroom-lab-highlight-card h3 {
+  margin: 0 0 11px;
+
+  color: #172033 !important;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+.classroom-lab-highlight-card p {
+  margin: 0;
+
+  color: #4b5565 !important;
+
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   ACADEMIC EXPERIENCE
+========================================================= */
+
+.classroom-lab-academic {
+  padding: 95px 0;
+
+  background: #ffffff;
+}
+
+.classroom-lab-academic-icon {
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 22px;
+
+  color: #0a2e5c !important;
+
+  background: #eaf2fb;
+
+  border-radius: 15px;
+
+  font-size: 27px;
+}
+
+.classroom-lab-academic h2 {
+  max-width: 560px;
+
+  margin: 0;
+
+  color: #102a4c !important;
+
+  font-size: clamp(30px, 4vw, 43px);
+  font-weight: 750;
+
+  line-height: 1.2;
+}
+
+.classroom-lab-academic-text {
+  margin: 0;
+
+  color: #4b5565 !important;
+
+  font-size: 17px;
+  font-weight: 400;
+
+  line-height: 1.9;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.classroom-lab-cta {
+  padding: 30px 0 85px;
+
+  background: #ffffff;
+}
+
+.classroom-lab-cta-box {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding: 50px 55px;
+
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #071d3a 0%, #0a2e5c 52%, #123f7a 100%);
+
+  border-radius: 20px;
+
+  box-shadow: 0 18px 45px rgba(7, 29, 58, 0.16);
+}
+
+.classroom-lab-cta-box::before {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  top: -180px;
+  right: 40px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.classroom-lab-cta-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 850px;
+}
+
+.classroom-lab-cta-content h2 {
+  margin: 0 0 13px;
+
+  color: #ffffff !important;
+
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 750;
+
+  line-height: 1.2;
+}
+
+.classroom-lab-cta-content p {
+  margin: 0;
+
+  color: #ffffff !important;
+
+  opacity: 0.84;
+
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.classroom-lab-cta-icon {
+  position: relative;
+
+  z-index: 2;
+
+  width: 62px;
+  height: 62px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #102a4c !important;
+
+  background: #f6c344;
+
+  border-radius: 50%;
+
+  font-size: 20px;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.classroom-lab-loading {
+  min-height: 60vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 16px;
+
+  background: #ffffff;
+
+  color: #4b5565 !important;
+}
+
+.classroom-lab-loader {
+  width: 42px;
+  height: 42px;
+
+  border: 4px solid #e5ebf2;
+  border-top-color: #0a2e5c;
+
+  border-radius: 50%;
+
+  animation: classroomLabSpin 0.8s linear infinite;
+}
+
+.classroom-lab-loading p {
+  margin: 0;
+
+  color: #4b5565 !important;
+
+  font-size: 14px;
+}
+
+@keyframes classroomLabSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+  .classroom-lab-hero {
+    min-height: 400px;
+  }
+
+  .classroom-lab-about {
+    padding: 75px 0;
+  }
+
+  .classroom-lab-about-content {
+    padding-right: 0;
+  }
+
+  .classroom-lab-about-image-wrap {
+    margin-top: 15px;
+  }
+
+  .classroom-lab-feature-section,
+  .classroom-lab-technology,
+  .classroom-lab-highlights,
+  .classroom-lab-academic {
+    padding: 75px 0;
+  }
+
+  .classroom-lab-image-badge {
+    left: 15px;
+  }
+
+  .classroom-lab-cta-box {
+    padding: 42px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+  .classroom-lab-hero {
+    min-height: 370px;
+  }
+
+  .classroom-lab-hero-content {
+    padding: 70px 15px;
+  }
+
+  .classroom-lab-hero h1 {
+    font-size: 36px;
+  }
+
+  .classroom-lab-hero p {
+    font-size: 14px;
+  }
+
+  .classroom-lab-breadcrumb {
+    font-size: 11px;
+  }
+
+  .classroom-lab-about {
+    padding: 65px 0;
+  }
+
+  .classroom-lab-about-content h2 {
+    font-size: 30px;
+  }
+
+  .classroom-lab-about-content p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .classroom-lab-about-image {
+    height: 350px;
+  }
+
+  .classroom-lab-image-placeholder {
+    height: 350px;
+  }
+
+  .classroom-lab-image-badge {
+    left: 10px;
+    bottom: 0;
+
+    min-width: 185px;
+
+    padding: 13px 15px;
+  }
+
+  .classroom-lab-feature-section,
+  .classroom-lab-technology,
+  .classroom-lab-highlights,
+  .classroom-lab-academic {
+    padding: 65px 0;
+  }
+
+  .classroom-lab-feature-header h2,
+  .classroom-lab-section-heading h2,
+  .classroom-lab-academic h2 {
+    font-size: 30px;
+  }
+
+  .classroom-lab-feature-header p,
+  .classroom-lab-section-heading p {
+    font-size: 14px;
+  }
+
+  .classroom-lab-feature-card {
+    padding: 21px;
+  }
+
+  .classroom-lab-feature-card h3 {
+    font-size: 16px;
+  }
+
+  .classroom-lab-feature-card p {
+    font-size: 13px;
+  }
+
+  .classroom-lab-tech-card {
+    padding: 23px;
+  }
+
+  .classroom-lab-highlight-card {
+    padding: 25px 20px;
+  }
+
+  .classroom-lab-academic-text {
+    font-size: 15px;
+  }
+
+  .classroom-lab-cta {
+    padding: 20px 0 60px;
+  }
+
+  .classroom-lab-cta-box {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    padding: 32px 25px;
+
+    border-radius: 16px;
+  }
+
+  .classroom-lab-cta-content h2 {
+    font-size: 29px;
+  }
+
+  .classroom-lab-cta-content p {
+    font-size: 14px;
+  }
+
+  .classroom-lab-cta-icon {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .classroom-lab-hero {
+    min-height: 350px;
+  }
+
+  .classroom-lab-hero-content {
+    padding: 60px 12px;
+  }
+
+  .classroom-lab-hero h1 {
+    font-size: 31px;
+  }
+
+  .classroom-lab-hero-small {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .classroom-lab-about-image {
+    height: 290px;
+  }
+
+  .classroom-lab-image-placeholder {
+    height: 290px;
+  }
+
+  .classroom-lab-about-image-wrap {
+    padding-right: 6px;
+  }
+
+  .classroom-lab-about-image-wrap::after {
+    width: 80px;
+    height: 80px;
+
+    border-width: 3px;
+  }
+
+  .classroom-lab-image-badge {
+    min-width: 165px;
+
+    gap: 8px;
+
+    padding: 11px 12px;
+  }
+
+  .classroom-lab-image-badge svg {
+    font-size: 19px;
+  }
+
+  .classroom-lab-image-badge strong {
+    font-size: 12px;
+  }
+
+  .classroom-lab-image-badge span {
+    font-size: 10px;
+  }
+
+  .classroom-lab-feature-card {
+    gap: 12px;
+    padding: 18px;
+  }
+
+  .classroom-lab-feature-icon {
+    width: 42px;
+    height: 42px;
+
+    font-size: 17px;
+  }
+
+  .classroom-lab-feature-card h3 {
+    font-size: 15px;
+  }
+
+  .classroom-lab-feature-card p {
+    font-size: 12.5px;
+  }
+
+  .classroom-lab-tech-card {
+    padding: 20px;
+  }
+
+  .classroom-lab-highlight-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .classroom-lab-highlight-card h3 {
+    font-size: 16px;
+  }
+
+  .classroom-lab-highlight-card p {
+    font-size: 12.5px;
+  }
+
+  .classroom-lab-academic-icon {
+    width: 52px;
+    height: 52px;
+
+    font-size: 22px;
+  }
+
+  .classroom-lab-cta-box {
+    padding: 27px 20px;
+  }
+}

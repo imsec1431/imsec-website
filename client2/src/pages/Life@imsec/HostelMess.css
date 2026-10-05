@@ -1,0 +1,749 @@
+/*=========================================================
+                Hostel & Mess Page
+=========================================================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background: #fff;
+}
+
+/*=========================================================
+                Common
+=========================================================*/
+
+.section-tag {
+  color: #fdb913;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+
+  font-weight: 800;
+
+  color: #0a2e5c;
+
+  margin-bottom: 20px;
+}
+
+.section-title span {
+  color: #fdb913;
+}
+
+.section-title::after {
+  content: "";
+
+  display: block;
+
+  width: 90px;
+
+  height: 4px;
+
+  background: #fdb913;
+
+  border-radius: 50px;
+
+  margin-top: 15px;
+}
+
+.text-center .section-title::after {
+  margin: 15px auto 0;
+}
+
+/*=========================================================
+                Hero
+=========================================================*/
+
+.hostel-hero {
+  height: 430px;
+
+  background:
+    linear-gradient(rgba(10, 46, 92, 0.88), rgba(10, 46, 92, 0.88)),
+    url("https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1600&q=80");
+
+  background-size: cover;
+
+  background-position: center;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+
+  font-weight: 800;
+}
+
+.hero-content p {
+  margin-top: 15px;
+
+  font-size: 18px;
+}
+
+.hero-content span {
+  margin: 0 8px;
+
+  color: #fdb913;
+}
+
+/*=========================================================
+                About
+=========================================================*/
+
+.hostel-about {
+  background: #fff;
+}
+
+.about-image {
+  width: 100%;
+
+  border-radius: 25px;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+
+  transition: 0.4s;
+}
+
+.about-image:hover {
+  transform: scale(1.03);
+}
+
+.hostel-about p {
+  color: #666;
+
+  line-height: 1.9;
+
+  text-align: justify;
+}
+
+/*=========================================================
+                Hostel Cards
+=========================================================*/
+
+.boys-hostel,
+.girls-hostel {
+  background: #f8f9fb;
+}
+
+.girls-hostel {
+  background: #fff;
+}
+
+.hostel-card {
+  background: #fff;
+
+  border-radius: 25px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  height: 100%;
+}
+
+.hostel-card:hover {
+  transform: translateY(-10px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.hostel-card img {
+  width: 100%;
+
+  height: 300px;
+
+  object-fit: cover;
+}
+
+.hostel-content {
+  padding: 30px;
+}
+
+.hostel-content h3 {
+  font-weight: 700;
+
+  color: #0a2e5c;
+
+  margin-bottom: 15px;
+}
+
+.hostel-content p {
+  color: #666;
+
+  line-height: 1.8;
+}
+
+.hostel-content ul {
+  padding: 0;
+
+  margin: 25px 0;
+
+  list-style: none;
+}
+
+.hostel-content li {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 15px;
+
+  color: #444;
+}
+
+.hostel-content li svg {
+  color: #fdb913;
+
+  min-width: 18px;
+}
+
+.hostel-content .btn {
+  padding: 12px 28px;
+
+  font-weight: 600;
+}
+
+/*=========================================================
+                Mess Section
+=========================================================*/
+
+.mess-section {
+  background: #f8f9fb;
+}
+
+.mess-image {
+  width: 100%;
+
+  border-radius: 25px;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+
+  transition: 0.4s;
+}
+
+.mess-image:hover {
+  transform: scale(1.03);
+}
+
+.mess-section p {
+  color: #666;
+
+  line-height: 1.9;
+}
+
+.mess-list {
+  padding: 0;
+
+  margin: 25px 0;
+
+  list-style: none;
+}
+
+.mess-list li {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 15px;
+
+  color: #444;
+
+  font-weight: 500;
+}
+
+.mess-list li svg {
+  color: #fdb913;
+
+  font-size: 18px;
+
+  min-width: 18px;
+}
+
+.mess-section .btn {
+  padding: 12px 28px;
+
+  font-weight: 600;
+}
+/*=========================================================
+                Hostel Facilities
+=========================================================*/
+
+.facility-section {
+  background: #fff;
+}
+
+.facility-card {
+  background: #fff;
+
+  padding: 35px 20px;
+
+  text-align: center;
+
+  border-radius: 20px;
+
+  height: 100%;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  border-top: 4px solid transparent;
+}
+
+.facility-card:hover {
+  transform: translateY(-10px);
+
+  border-top: 4px solid #fdb913;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.facility-icon {
+  font-size: 55px;
+
+  color: #fdb913;
+
+  margin-bottom: 20px;
+}
+
+.facility-card h5 {
+  font-weight: 700;
+
+  color: #0a2e5c;
+
+  margin: 0;
+}
+
+/*=========================================================
+                Gallery
+=========================================================*/
+
+.gallery-section {
+  background: #f8f9fb;
+}
+
+.gallery-card {
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  height: 100%;
+}
+
+.gallery-card:hover {
+  transform: translateY(-10px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-card img {
+  width: 100%;
+
+  height: 280px;
+
+  object-fit: cover;
+
+  transition: 0.5s;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.08);
+}
+
+/*=========================================================
+                Weekly Menu
+=========================================================*/
+
+.menu-section {
+  background: #fff;
+}
+
+.menu-table {
+  background: #fff;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.menu-table thead {
+  background: #0a2e5c;
+
+  color: #fff;
+}
+
+.menu-table th {
+  padding: 18px;
+
+  text-align: center;
+
+  font-weight: 700;
+}
+
+.menu-table td {
+  padding: 16px;
+
+  text-align: center;
+
+  vertical-align: middle;
+}
+
+.menu-table tbody tr:hover {
+  background: #fff8e7;
+}
+
+/*=========================================================
+                Hostel Rules
+=========================================================*/
+
+.rules-section {
+  background: #f8f9fb;
+}
+
+.rules-card {
+  background: #fff;
+
+  padding: 35px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.rules-card ul {
+  padding-left: 20px;
+
+  margin: 0;
+}
+
+.rules-card li {
+  margin-bottom: 16px;
+
+  color: #555;
+
+  line-height: 1.8;
+}
+
+/*=========================================================
+                Statistics
+=========================================================*/
+
+.stats-section {
+  background: #fff;
+}
+
+.stat-card {
+  background: #fff;
+
+  padding: 35px 20px;
+
+  text-align: center;
+
+  border-radius: 20px;
+
+  height: 100%;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  border-bottom: 4px solid transparent;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+
+  border-bottom: 4px solid #fdb913;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card h2 {
+  font-size: 42px;
+
+  font-weight: 800;
+
+  color: #0a2e5c;
+
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  color: #666;
+
+  margin: 0;
+}
+
+/*=========================================================
+                FAQ
+=========================================================*/
+
+.faq-section {
+  background: #f8f9fb;
+}
+
+.faq-card {
+  background: #fff;
+
+  padding: 35px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.faq-card h5 {
+  font-weight: 700;
+
+  color: #0a2e5c;
+
+  margin-bottom: 12px;
+}
+
+.faq-card p {
+  color: #666;
+
+  line-height: 1.8;
+}
+
+.faq-card hr {
+  margin: 25px 0;
+}
+
+/*=========================================================
+                CTA
+=========================================================*/
+
+.hostel-cta {
+  background: linear-gradient(135deg, #0a2e5c, #123f7a);
+
+  padding: 90px 0;
+
+  color: #fff;
+}
+
+.hostel-cta h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+
+  font-weight: 800;
+
+  margin-bottom: 20px;
+}
+
+.hostel-cta p {
+  color: #ddd;
+
+  line-height: 1.8;
+}
+
+.hostel-cta .btn {
+  padding: 12px 30px;
+
+  font-weight: 600;
+
+  transition: 0.35s;
+}
+
+.hostel-cta .btn-warning {
+  background: #fdb913;
+
+  color: #0a2e5c;
+
+  border: none;
+}
+
+.hostel-cta .btn-warning:hover {
+  background: #fff;
+
+  color: #0a2e5c;
+
+  transform: translateY(-5px);
+}
+
+.hostel-cta .btn-outline-light {
+  border: 2px solid #fff;
+}
+
+.hostel-cta .btn-outline-light:hover {
+  background: #fff;
+
+  color: #0a2e5c;
+
+  transform: translateY(-5px);
+}
+
+/*=========================================================
+                Animation
+=========================================================*/
+
+.hostel-card,
+.facility-card,
+.gallery-card,
+.stat-card,
+.rules-card,
+.menu-table {
+  transition: all 0.35s ease;
+}
+
+/*=========================================================
+                Responsive
+=========================================================*/
+
+@media (max-width: 992px) {
+  .hostel-hero {
+    height: 320px;
+  }
+
+  .hostel-cta {
+    text-align: center;
+  }
+
+  .hostel-card img {
+    height: 260px;
+  }
+
+  .mess-image {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hostel-hero {
+    height: 260px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .hostel-content {
+    padding: 25px;
+  }
+
+  .hostel-card img {
+    height: 220px;
+  }
+
+  .facility-card {
+    padding: 25px;
+  }
+
+  .facility-icon {
+    font-size: 45px;
+  }
+
+  .gallery-card img {
+    height: 220px;
+  }
+
+  .menu-table {
+    font-size: 14px;
+  }
+
+  .menu-table th,
+  .menu-table td {
+    padding: 12px;
+  }
+
+  .rules-card {
+    padding: 25px;
+  }
+
+  .stat-card {
+    padding: 25px;
+  }
+
+  .stat-card h2 {
+    font-size: 34px;
+  }
+
+  .faq-card {
+    padding: 25px;
+  }
+
+  .hostel-cta {
+    padding: 60px 20px;
+  }
+
+  .hostel-cta .btn {
+    width: 100%;
+
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .about-image {
+    margin-bottom: 20px;
+  }
+
+  .mess-list li {
+    font-size: 15px;
+  }
+
+  .gallery-card img {
+    height: 200px;
+  }
+
+  .menu-table {
+    font-size: 13px;
+  }
+
+  .rules-card {
+    padding: 20px;
+  }
+
+  .faq-card {
+    padding: 20px;
+  }
+}

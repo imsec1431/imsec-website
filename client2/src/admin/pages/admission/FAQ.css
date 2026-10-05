@@ -1,0 +1,945 @@
+/* =========================================================
+   FAQ ADMIN PAGE
+========================================================= */
+
+.faqAdminPage {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px;
+  background: #f5f7fa;
+  color: #202938;
+}
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.faqAdminHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+.faqAdminHeaderContent {
+  flex: 1;
+}
+
+.faqAdminEyebrow {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #7b8492;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+
+.faqAdminHeader h1 {
+  margin: 0;
+  color: #172033;
+  font-size: 34px;
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+.faqAdminHeader p {
+  max-width: 700px;
+  margin: 9px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   HEADER ACTIONS
+========================================================= */
+
+.faqAdminHeaderActions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.faqStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.faqStatusDot {
+  width: 8px;
+  height: 8px;
+  margin: 0 !important;
+  border-radius: 50%;
+}
+
+.faqStatus.published {
+  color: #146c43;
+  background: #d1e7dd;
+}
+
+.faqStatus.published .faqStatusDot {
+  background: #198754;
+}
+
+.faqStatus.unpublished {
+  color: #842029;
+  background: #f8d7da;
+}
+
+.faqStatus.unpublished .faqStatusDot {
+  background: #dc3545;
+}
+
+/* =========================================================
+   COMMON BUTTON
+========================================================= */
+
+.faqAdminPage button {
+  box-shadow: none !important;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.faqAdminPage button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.faqAdminPage button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* =========================================================
+   HEADER BUTTONS
+========================================================= */
+
+.faqResetButton {
+  min-height: 38px;
+  padding: 8px 15px !important;
+  color: #495057 !important;
+  background: #e9ecef !important;
+  border: 1px solid #dee2e6 !important;
+  border-radius: 7px !important;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.faqPublishButton {
+  min-height: 38px;
+  padding: 8px 17px !important;
+  color: #ffffff !important;
+  background: #198754 !important;
+  border: 1px solid #198754 !important;
+  border-radius: 7px !important;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.faqUnpublishButton {
+  min-height: 38px;
+  padding: 8px 17px !important;
+  color: #ffffff !important;
+  background: #dc3545 !important;
+  border: 1px solid #dc3545 !important;
+  border-radius: 7px !important;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.faqAddButton {
+  min-height: 39px;
+  padding: 8px 17px !important;
+  color: #ffffff !important;
+  background: #212529 !important;
+  border: 1px solid #212529 !important;
+  border-radius: 7px !important;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.faqAdminCard {
+  margin-bottom: 22px;
+  padding: 26px;
+  background: #ffffff;
+  border: 1px solid #e4e8ed;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(20, 30, 50, 0.045);
+}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.faqSectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 22px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #edf0f3;
+}
+
+.faqSectionHeader > div:first-child {
+  flex: 1;
+}
+
+.faqSectionHeader span {
+  display: block;
+  margin-bottom: 5px;
+  color: #8b95a5;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.faqSectionHeader h2 {
+  margin: 0;
+  color: #202938;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* =========================================================
+   FORM GRID
+========================================================= */
+
+.faqAdminGrid {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+  gap: 18px;
+}
+
+.faqFullField {
+  grid-column: 1 / -1;
+}
+
+/* =========================================================
+   FORM CONTROLS
+========================================================= */
+
+.faqAdminPage .form-label {
+  display: block;
+  margin-bottom: 7px;
+  color: #4b5563;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.faqAdminPage .form-control,
+.faqAdminPage .form-select {
+  min-height: 43px;
+  color: #202938;
+  background: #ffffff;
+  border: 1px solid #dce2e9;
+  border-radius: 8px;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.faqAdminPage textarea.form-control {
+  min-height: 105px;
+  resize: vertical;
+  line-height: 1.55;
+}
+
+.faqAdminPage .form-control::placeholder {
+  color: #a0a7b2;
+}
+
+.faqAdminPage .form-control:focus,
+.faqAdminPage .form-select:focus {
+  color: #202938;
+  background: #ffffff;
+  border-color: #6c757d;
+  box-shadow: 0 0 0 3px rgba(108, 117, 125, 0.1);
+}
+
+/* =========================================================
+   CATEGORIES
+========================================================= */
+
+.faqCategories {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.faqCategoryItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.faqCategoryNumber {
+  display: flex;
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  color: #596273;
+  background: #f0f2f5;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.faqCategoryItem .form-control {
+  flex: 1;
+}
+
+.faqCategoryDelete {
+  display: flex !important;
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+  color: #dc3545 !important;
+  background: #fff1f2 !important;
+  border: 1px solid #ffd7dc !important;
+  border-radius: 7px !important;
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* =========================================================
+   FAQ LIST
+========================================================= */
+
+.faqAdminList {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+/* =========================================================
+   FAQ EDITOR CARD
+========================================================= */
+
+.faqEditorCard {
+  padding: 20px;
+  background: #fafbfc;
+  border: 1px solid #e1e6ec;
+  border-radius: 12px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.faqEditorCard:hover {
+  border-color: #cfd5dd;
+  box-shadow: 0 3px 12px rgba(20, 30, 50, 0.035);
+}
+
+.faqEditorCard.inactive {
+  opacity: 0.62;
+  background: #f1f3f5;
+}
+
+/* =========================================================
+   FAQ HEADER
+========================================================= */
+
+.faqEditorHeader {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e5e9ee;
+}
+
+.faqEditorNumber {
+  display: flex;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: #303947;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.faqEditorHeading {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  align-items: center;
+  gap: 10px;
+}
+
+.faqEditorHeading strong {
+  color: #202938;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.faqItemStatus {
+  display: inline-flex;
+  align-items: center;
+  min-height: 22px;
+  margin: 0 !important;
+  padding: 3px 9px;
+  color: #146c43 !important;
+  background: #d1e7dd;
+  border-radius: 20px;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+}
+
+.faqItemStatus.inactive {
+  color: #6c757d !important;
+  background: #e2e3e5;
+}
+
+.faqEditorActions {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* =========================================================
+   MOVE BUTTON
+========================================================= */
+
+.faqMoveButton {
+  display: inline-flex !important;
+  width: 33px;
+  height: 33px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+  color: #495057 !important;
+  background: #f1f3f5 !important;
+  border: 1px solid #dfe3e7 !important;
+  border-radius: 6px !important;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   DELETE BUTTON
+========================================================= */
+
+.faqDeleteButton {
+  min-height: 33px;
+  padding: 6px 12px !important;
+  color: #ffffff !important;
+  background: #dc3545 !important;
+  border: 1px solid #dc3545 !important;
+  border-radius: 6px !important;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+/* =========================================================
+   FAQ FORM
+========================================================= */
+
+.faqEditorGrid {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 2fr)
+    minmax(130px, 1fr);
+  gap: 16px;
+}
+
+.faqEditorGrid .faqFullField {
+  grid-column: 1 / -1;
+}
+
+/* =========================================================
+   ACTIVE SWITCH
+========================================================= */
+
+.faqActiveControl {
+  grid-column: 1 / -1;
+  padding-top: 3px;
+}
+
+.faqActiveControl .form-check {
+  display: flex;
+  align-items: center;
+  min-height: 25px;
+  margin: 0;
+}
+
+.faqActiveControl .form-check-input {
+  width: 36px;
+  height: 20px;
+  margin-top: 0;
+  margin-right: 9px;
+  cursor: pointer;
+}
+
+.faqActiveControl .form-check-label {
+  color: #596273;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.faqNoItems {
+  display: flex;
+  min-height: 240px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 35px;
+  text-align: center;
+  background: #fafbfc;
+  border: 1px dashed #ccd3dc;
+  border-radius: 12px;
+}
+
+.faqNoItems > div:first-child {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  color: #ffffff;
+  background: #6c757d;
+  border-radius: 50%;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.faqNoItems h3 {
+  margin: 0 0 6px;
+  color: #303947;
+  font-size: 17px;
+}
+
+.faqNoItems p {
+  margin: 0 0 17px;
+  color: #7b8492;
+  font-size: 13px;
+}
+
+/* =========================================================
+   SAVE BAR
+========================================================= */
+
+.faqAdminSaveBar {
+  position: sticky;
+  bottom: 15px;
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  margin-top: 28px;
+  margin-bottom: 30px;
+  padding: 15px 18px;
+
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid #dfe4ea;
+  border-radius: 12px;
+
+  box-shadow: 0 8px 30px rgba(20, 30, 50, 0.1);
+
+  backdrop-filter: blur(8px);
+}
+
+.faqAdminSaveBar > div:first-child {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.faqAdminSaveBar strong {
+  color: #303947;
+  font-size: 13px;
+}
+
+.faqAdminSaveBar span {
+  color: #7b8492;
+  font-size: 11px;
+}
+
+.faqSaveButton {
+  display: inline-flex !important;
+  min-width: 165px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 24px !important;
+  color: #ffffff !important;
+  background: #212529 !important;
+  border: 1px solid #212529 !important;
+  border-radius: 8px !important;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.faqSaveButton .spinner-border {
+  margin: 0;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.faqAdminLoading {
+  display: flex;
+  min-height: 70vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 14px;
+  color: #6c757d;
+}
+
+.faqAdminLoading .spinner-border {
+  width: 35px;
+  height: 35px;
+}
+
+.faqAdminLoading p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* =========================================================
+   RESET MODAL
+========================================================= */
+
+.faqAdminPage .modal-content {
+  overflow: hidden;
+  border: 0;
+  border-radius: 13px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.16);
+}
+
+.faqAdminPage .modal-header {
+  padding: 17px 20px;
+  border-bottom: 1px solid #edf0f3;
+}
+
+.faqAdminPage .modal-title {
+  color: #202938;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.faqAdminPage .modal-body {
+  padding: 20px;
+}
+
+.faqAdminPage .modal-footer {
+  padding: 13px 20px;
+  border-top: 1px solid #edf0f3;
+}
+
+/* =========================================================
+   RESET WARNING
+========================================================= */
+
+.faqResetWarning {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 17px;
+  background: #fff7f7;
+  border: 1px solid #ffe1e1;
+  border-radius: 10px;
+}
+
+.faqResetWarningIcon {
+  display: flex;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: #dc3545;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.faqResetWarning h4 {
+  margin: 2px 0 7px;
+  color: #202938;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.faqResetWarning p {
+  margin: 0 0 7px;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.faqResetWarning p:last-child {
+  margin-bottom: 0;
+  color: #842029;
+  font-weight: 600;
+}
+
+/* =========================================================
+   ALERT
+========================================================= */
+
+.faqAdminPage .alert {
+  margin-bottom: 20px;
+  border-radius: 9px;
+  font-size: 13px;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .faqAdminPage {
+    padding: 23px;
+  }
+
+  .faqAdminHeader {
+    flex-direction: column;
+  }
+
+  .faqAdminHeaderActions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .faqAdminPage {
+    padding: 16px;
+  }
+
+  .faqAdminHeader {
+    gap: 18px;
+  }
+
+  .faqAdminHeader h1 {
+    font-size: 27px;
+  }
+
+  .faqAdminHeaderActions {
+    width: 100%;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .faqAdminHeaderActions > * {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .faqAdminCard {
+    padding: 18px;
+    margin-bottom: 17px;
+    border-radius: 11px;
+  }
+
+  .faqSectionHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .faqSectionHeader > * {
+    width: 100%;
+  }
+
+  .faqSectionHeader .faqAddButton {
+    width: 100%;
+  }
+
+  .faqAdminGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .faqFullField {
+    grid-column: auto;
+  }
+
+  .faqCategories {
+    grid-template-columns: 1fr;
+  }
+
+  .faqEditorCard {
+    padding: 15px;
+  }
+
+  .faqEditorHeader {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .faqEditorHeading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .faqEditorActions {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .faqEditorActions .faqMoveButton {
+    flex: 0 0 40px;
+  }
+
+  .faqEditorActions .faqDeleteButton {
+    flex: 1;
+  }
+
+  .faqEditorGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .faqEditorGrid .faqFullField {
+    grid-column: auto;
+  }
+
+  .faqActiveControl {
+    grid-column: auto;
+  }
+
+  .faqAdminSaveBar {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 12px;
+    bottom: 8px;
+    margin-top: 20px;
+  }
+
+  .faqAdminSaveBar > div:first-child {
+    width: 100%;
+  }
+
+  .faqSaveButton {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .faqAdminPage {
+    padding: 10px;
+  }
+
+  .faqAdminHeader h1 {
+    font-size: 23px;
+  }
+
+  .faqAdminHeader p {
+    font-size: 13px;
+  }
+
+  .faqAdminCard {
+    padding: 14px;
+    border-radius: 9px;
+  }
+
+  .faqSectionHeader h2 {
+    font-size: 18px;
+  }
+
+  .faqEditorCard {
+    padding: 12px;
+  }
+
+  .faqEditorHeader {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .faqEditorNumber {
+    grid-row: 1;
+  }
+
+  .faqEditorHeading {
+    grid-row: 1;
+  }
+
+  .faqEditorActions {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-top: 4px;
+  }
+
+  .faqEditorActions .faqMoveButton {
+    flex: 1;
+  }
+
+  .faqEditorActions .faqDeleteButton {
+    flex: 1;
+  }
+
+  .faqCategoryItem {
+    gap: 5px;
+  }
+
+  .faqCategoryNumber {
+    flex: 0 0 27px;
+    width: 27px;
+    height: 27px;
+  }
+
+  .faqCategoryDelete {
+    flex: 0 0 31px;
+    width: 31px;
+    height: 31px;
+  }
+
+  .faqAdminPage .form-control,
+  .faqAdminPage .form-select {
+    font-size: 13px;
+  }
+
+  .faqResetWarning {
+    padding: 13px;
+  }
+}

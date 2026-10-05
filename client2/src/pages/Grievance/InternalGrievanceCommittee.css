@@ -1,0 +1,304 @@
+/* =========================================
+   HERO
+========================================= */
+
+.igc-hero {
+  min-height: 420px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    linear-gradient(rgba(10, 46, 92, 0.9), rgba(10, 46, 92, 0.9)),
+    url("https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1600&q=80");
+
+  background-size: cover;
+  background-position: center;
+
+  color: #fff;
+}
+
+.igc-hero-content {
+  max-width: 850px;
+  margin: auto;
+}
+
+.igc-hero-content h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.igc-hero-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin: auto;
+}
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.igc-about {
+  background: #f8fafc;
+}
+
+.igc-about-content {
+  padding-right: 30px;
+}
+
+.igc-about-content h3 {
+  color: #0a2e5c;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.igc-about-content p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.igc-highlight {
+  padding: 45px;
+  border-radius: 20px;
+  background: #fff;
+
+  text-align: center;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.igc-highlight-icon {
+  width: 80px;
+  height: 80px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #fdb913;
+  color: #0a2e5c;
+
+  font-size: 32px;
+}
+
+.igc-highlight h4 {
+  color: #0a2e5c;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.igc-highlight p {
+  color: #666;
+  line-height: 1.7;
+}
+
+/* =========================================
+   MEMBERS
+========================================= */
+
+.igc-members {
+  background: #fff;
+}
+
+.igc-member-table {
+  background: #fff;
+
+  border-radius: 12px;
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.igc-member-table thead th {
+  background: #0a2e5c;
+  color: #fff;
+
+  padding: 16px;
+
+  font-weight: 600;
+}
+
+.igc-member-table tbody td {
+  padding: 16px;
+
+  color: #555;
+
+  vertical-align: middle;
+}
+
+.igc-role {
+  display: inline-block;
+
+  padding: 7px 15px;
+
+  border-radius: 30px;
+
+  background: #fff3cd;
+  color: #856404;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================================
+   RESPONSIBILITIES
+========================================= */
+
+.igc-responsibilities {
+  background: #f8fafc;
+}
+
+.igc-card {
+  height: 100%;
+
+  border: none;
+
+  border-radius: 18px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+
+  transition: 0.3s;
+}
+
+.igc-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.igc-card-icon {
+  width: 70px;
+  height: 70px;
+
+  margin: 30px auto 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #fdb913;
+  color: #0a2e5c;
+
+  font-size: 28px;
+}
+
+.igc-card h5 {
+  color: #0a2e5c;
+  font-weight: 700;
+
+  margin-bottom: 12px;
+}
+
+.igc-card p {
+  color: #666;
+
+  line-height: 1.7;
+
+  margin-bottom: 0;
+}
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.igc-contact {
+  background: #fdb913;
+}
+
+.igc-contact h2 {
+  color: #0a2e5c;
+
+  font-size: 38px;
+
+  font-weight: 800;
+
+  margin-bottom: 15px;
+}
+
+.igc-contact p {
+  color: #333;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+.igc-contact-info p {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 10px;
+
+  font-weight: 600;
+}
+
+.igc-contact-info svg {
+  color: #0a2e5c;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+  .igc-about-content {
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .igc-contact {
+    text-align: center;
+  }
+
+  .igc-contact-info {
+    margin-top: 25px;
+  }
+
+  .igc-contact-info p {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .igc-hero {
+    min-height: 340px;
+    padding: 40px 20px;
+  }
+
+  .igc-hero-content h1 {
+    font-size: 34px;
+  }
+
+  .igc-hero-content p {
+    font-size: 16px;
+  }
+
+  .igc-about-content h3 {
+    font-size: 28px;
+  }
+
+  .igc-highlight {
+    padding: 30px 20px;
+  }
+
+  .igc-contact h2 {
+    font-size: 30px;
+  }
+}

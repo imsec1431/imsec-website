@@ -1,0 +1,521 @@
+/* =========================================================
+   DEPARTMENT RESEARCH JOURNAL FORM
+   ========================================================= */
+
+.drjf-page {
+  min-height: 100vh;
+  padding: 28px;
+  background: #f6f8fc;
+  color: #1f2937;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.drjf-header {
+  margin-bottom: 24px;
+}
+
+.drjf-header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.drjf-back-btn {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #e1e6ef;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.drjf-back-btn:hover {
+  background: #f1f5f9;
+  color: #111827;
+  transform: translateX(-2px);
+}
+
+.drjf-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.18);
+}
+
+.drjf-header h1 {
+  margin: 0;
+  color: #111827;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.drjf-header p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.drjf-form {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.drjf-card {
+  margin-bottom: 20px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e7ebf2;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+}
+
+.drjf-card-header {
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.drjf-card-header h2 {
+  margin: 0 0 5px;
+  color: #1e293b;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.drjf-card-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.drjf-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.drjf-full {
+  grid-column: 1 / -1;
+}
+
+/* =========================================================
+   FIELD
+   ========================================================= */
+
+.drjf-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.drjf-field label {
+  color: #334155;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.drjf-field label span {
+  margin-left: 4px;
+  color: #dc2626;
+}
+
+.drjf-field input,
+.drjf-field textarea,
+.drjf-field select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 13px;
+  border: 1px solid #dbe1ea;
+  border-radius: 9px;
+  outline: none;
+  background: #ffffff;
+  color: #1e293b;
+  font-family: inherit;
+  font-size: 14px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.drjf-field input {
+  height: 44px;
+}
+
+.drjf-field textarea {
+  min-height: 130px;
+  resize: vertical;
+  line-height: 1.55;
+}
+
+.drjf-field input::placeholder,
+.drjf-field textarea::placeholder {
+  color: #94a3b8;
+}
+
+.drjf-field input:focus,
+.drjf-field textarea:focus,
+.drjf-field select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+/* =========================================================
+   IMAGE PREVIEW
+   ========================================================= */
+
+.drjf-preview {
+  margin-top: 18px;
+  padding: 15px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+  background: #f8fafc;
+}
+
+.drjf-preview > span {
+  display: block;
+  margin-bottom: 10px;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.drjf-preview img {
+  display: block;
+  max-width: 220px;
+  max-height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid #e2e8f0;
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.drjf-status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.drjf-status-row h2 {
+  margin: 0 0 5px;
+  color: #1e293b;
+  font-size: 18px;
+}
+
+.drjf-status-row p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.drjf-status-text {
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.drjf-status-text.active {
+  color: #15803d;
+}
+
+.drjf-status-text.inactive {
+  color: #dc2626;
+}
+
+/* =========================================================
+   SWITCH
+   ========================================================= */
+
+.drjf-switch {
+  position: relative;
+  width: 50px;
+  height: 28px;
+  flex: 0 0 50px;
+  cursor: pointer;
+}
+
+.drjf-switch input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.drjf-slider {
+  position: absolute;
+  inset: 0;
+  border-radius: 30px;
+  background: #cbd5e1;
+  transition: 0.25s ease;
+}
+
+.drjf-slider::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  left: 3px;
+  top: 3px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 2px 5px rgba(15, 23, 42, 0.2);
+  transition: 0.25s ease;
+}
+
+.drjf-switch input:checked + .drjf-slider {
+  background: #4f46e5;
+}
+
+.drjf-switch input:checked + .drjf-slider::before {
+  transform: translateX(22px);
+}
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.drjf-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-bottom: 25px;
+}
+
+.drjf-cancel-btn,
+.drjf-save-btn,
+.drjf-secondary-btn {
+  min-height: 42px;
+  padding: 10px 18px;
+  border-radius: 9px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.drjf-cancel-btn {
+  border: 1px solid #dbe1ea;
+  background: #ffffff;
+  color: #475569;
+}
+
+.drjf-cancel-btn:hover:not(:disabled) {
+  background: #f8fafc;
+}
+
+.drjf-save-btn {
+  border: none;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #ffffff;
+  box-shadow: 0 7px 18px rgba(79, 70, 229, 0.2);
+}
+
+.drjf-save-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(79, 70, 229, 0.25);
+}
+
+.drjf-cancel-btn:disabled,
+.drjf-save-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   ALERT
+   ========================================================= */
+
+.drjf-alert {
+  max-width: 1100px;
+  margin: 0 auto 18px;
+  padding: 12px 15px;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 13px;
+}
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.drjf-loading {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.drjf-loading h3 {
+  margin: 16px 0 5px;
+  color: #1e293b;
+  font-size: 18px;
+}
+
+.drjf-loading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.drjf-spinner {
+  width: 42px;
+  height: 42px;
+  border: 4px solid #e5e7eb;
+  border-top-color: #4f46e5;
+  border-radius: 50%;
+  animation: drjfSpin 0.8s linear infinite;
+}
+
+.drjf-mini-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: drjfSpin 0.7s linear infinite;
+}
+
+@keyframes drjfSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.drjf-error {
+  min-height: 420px;
+  background: #ffffff;
+  border: 1px solid #fee2e2;
+  border-radius: 16px;
+  padding: 45px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.drjf-error h3 {
+  margin: 0 0 8px;
+  color: #991b1b;
+  font-size: 20px;
+}
+
+.drjf-error p {
+  max-width: 600px;
+  margin: 0 0 22px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.drjf-secondary-btn {
+  border: none;
+  background: #1e293b;
+  color: #ffffff;
+}
+
+.drjf-secondary-btn:hover {
+  background: #0f172a;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .drjf-page {
+    padding: 20px;
+  }
+
+  .drjf-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .drjf-full {
+    grid-column: auto;
+  }
+
+  .drjf-card {
+    padding: 20px;
+  }
+
+  .drjf-header h1 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 520px) {
+  .drjf-page {
+    padding: 15px;
+  }
+
+  .drjf-header-left {
+    align-items: flex-start;
+  }
+
+  .drjf-icon {
+    width: 45px;
+    height: 45px;
+    flex: 0 0 45px;
+  }
+
+  .drjf-back-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .drjf-card {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .drjf-status-row {
+    align-items: flex-start;
+  }
+
+  .drjf-actions {
+    flex-direction: column-reverse;
+  }
+
+  .drjf-cancel-btn,
+  .drjf-save-btn {
+    width: 100%;
+  }
+}

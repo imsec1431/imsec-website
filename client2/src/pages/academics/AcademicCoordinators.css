@@ -1,0 +1,590 @@
+/* =========================================================
+   ACADEMIC COORDINATORS
+   PREMIUM INSTITUTIONAL DESIGN
+========================================================= */
+
+.academic-coordinators-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 65px 20px 80px;
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(209, 154, 50, 0.06),
+      transparent 28%
+    ),
+    radial-gradient(circle at 90% 80%, rgba(23, 32, 51, 0.05), transparent 30%),
+    #f6f8fb;
+}
+
+.academic-coordinators-container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.academic-coordinators-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.academic-coordinators-header h1 {
+  position: relative;
+
+  display: inline-block;
+
+  margin: 0;
+  padding: 0 0 17px;
+
+  color: #182235;
+
+  font-size: 36px;
+  font-weight: 750;
+
+  letter-spacing: -0.7px;
+}
+
+.academic-coordinators-header h1::before {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  width: 75px;
+  height: 4px;
+
+  transform: translateX(-50%);
+
+  border-radius: 10px;
+
+  background: #c99532;
+}
+
+.academic-coordinators-header h1::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  width: 25px;
+  height: 4px;
+
+  transform: translateX(-50%);
+
+  border-radius: 10px;
+
+  background: #182235;
+}
+
+.academic-coordinators-header p {
+  max-width: 700px;
+
+  margin: 20px auto 0;
+
+  color: #697386;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   LIST
+========================================================= */
+
+.academic-coordinators-grid {
+  display: flex;
+  flex-direction: column;
+
+  gap: 25px;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.academic-coordinator-card {
+  position: relative;
+
+  display: flex;
+  align-items: stretch;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border: 1px solid rgba(226, 231, 239, 0.9);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 25px rgba(24, 34, 53, 0.055),
+    0 2px 6px rgba(24, 34, 53, 0.035);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+/* GOLD VERTICAL LINE */
+
+.academic-coordinator-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background: linear-gradient(to bottom, #b98425, #e0b45a, #b98425);
+
+  transform: scaleY(0);
+
+  transform-origin: center;
+
+  transition: transform 0.35s ease;
+
+  z-index: 5;
+}
+
+.academic-coordinator-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(201, 149, 50, 0.25);
+
+  box-shadow:
+    0 18px 42px rgba(24, 34, 53, 0.11),
+    0 5px 12px rgba(24, 34, 53, 0.05);
+}
+
+.academic-coordinator-card:hover::before {
+  transform: scaleY(1);
+}
+
+/* =========================================================
+   PHOTO AREA - LEFT
+========================================================= */
+
+.academic-coordinator-photo {
+  position: relative;
+
+  flex: 0 0 270px;
+
+  width: 270px;
+  height: 220px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #f1f3f7, #e9edf3);
+
+  border-right: 1px solid #e8ecf2;
+}
+
+/* SUBTLE PHOTO FRAME */
+
+.academic-coordinator-photo::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 12px;
+
+  border: 1px solid rgba(201, 149, 50, 0.2);
+
+  border-radius: 10px;
+
+  pointer-events: none;
+}
+
+.academic-coordinator-photo img {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+
+  z-index: 1;
+
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+
+.academic-coordinator-card:hover .academic-coordinator-photo img {
+  transform: scale(1.035);
+}
+
+/* =========================================================
+   CONTENT - RIGHT
+========================================================= */
+
+.academic-coordinator-content {
+  position: relative;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 32px 42px;
+}
+
+/* SMALL LABEL */
+
+.academic-coordinator-content::before {
+  content: "ACADEMIC COORDINATOR";
+
+  display: inline-block;
+
+  width: fit-content;
+
+  margin-bottom: 11px;
+
+  padding: 5px 11px;
+
+  color: #a8751e;
+
+  background: rgba(201, 149, 50, 0.09);
+
+  border: 1px solid rgba(201, 149, 50, 0.16);
+
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 750;
+
+  letter-spacing: 1.1px;
+}
+
+/* NAME */
+
+.academic-coordinator-content h2 {
+  margin: 0 0 17px;
+
+  color: #182235;
+
+  font-size: 25px;
+  font-weight: 750;
+
+  line-height: 1.35;
+
+  letter-spacing: -0.3px;
+}
+
+/* RESPONSIBILITIES TITLE */
+
+.academic-coordinator-content h4 {
+  position: relative;
+
+  margin: 0 0 9px;
+
+  padding-left: 13px;
+
+  color: #a8751e;
+
+  font-size: 12px;
+  font-weight: 750;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+.academic-coordinator-content h4::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 2px;
+
+  width: 3px;
+  height: 14px;
+
+  border-radius: 5px;
+
+  background: #c99532;
+}
+
+/* RESPONSIBILITIES */
+
+.academic-coordinator-content p {
+  max-width: 760px;
+
+  margin: 0;
+
+  color: #687386;
+
+  font-size: 14.5px;
+
+  line-height: 1.8;
+
+  white-space: pre-line;
+}
+
+/* =========================================================
+   DECORATIVE CORNER
+========================================================= */
+
+.academic-coordinator-card::after {
+  content: "";
+
+  position: absolute;
+
+  right: -45px;
+  bottom: -55px;
+
+  width: 130px;
+  height: 130px;
+
+  border: 1px solid rgba(201, 149, 50, 0.12);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.academic-coordinators-loading {
+  min-height: 450px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f6f8fb;
+}
+
+.academic-coordinators-loading h3 {
+  margin: 0;
+
+  color: #697386;
+
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.academic-coordinators-empty {
+  padding: 60px 25px;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e6eaf0;
+
+  border-radius: 16px;
+
+  box-shadow: 0 8px 25px rgba(24, 34, 53, 0.05);
+}
+
+.academic-coordinators-empty p {
+  margin: 0;
+
+  color: #697386;
+
+  font-size: 15px;
+}
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+  .academic-coordinators-page {
+    padding: 50px 20px 65px;
+  }
+
+  .academic-coordinators-header h1 {
+    font-size: 32px;
+  }
+
+  .academic-coordinator-photo {
+    flex: 0 0 235px;
+
+    width: 235px;
+    height: 205px;
+  }
+
+  .academic-coordinator-content {
+    padding: 28px 30px;
+  }
+
+  .academic-coordinator-content h2 {
+    font-size: 22px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+  .academic-coordinators-page {
+    padding: 45px 18px 60px;
+  }
+
+  .academic-coordinators-header {
+    margin-bottom: 38px;
+  }
+
+  .academic-coordinators-header h1 {
+    font-size: 30px;
+  }
+
+  .academic-coordinator-card {
+    border-radius: 15px;
+  }
+
+  .academic-coordinator-photo {
+    flex: 0 0 205px;
+
+    width: 205px;
+    height: 190px;
+  }
+
+  .academic-coordinator-content {
+    padding: 24px 25px;
+  }
+
+  .academic-coordinator-content h2 {
+    font-size: 21px;
+  }
+
+  .academic-coordinator-content p {
+    font-size: 14px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .academic-coordinators-page {
+    padding: 35px 15px 50px;
+  }
+
+  .academic-coordinators-header {
+    margin-bottom: 30px;
+  }
+
+  .academic-coordinators-header h1 {
+    font-size: 27px;
+  }
+
+  .academic-coordinators-header p {
+    margin-top: 16px;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+  /*
+     MOBILE:
+     PHOTO TOP
+     CONTENT BELOW
+  */
+
+  .academic-coordinator-card {
+    flex-direction: column;
+
+    border-radius: 14px;
+  }
+
+  .academic-coordinator-photo {
+    width: 100%;
+    height: 215px;
+
+    flex: none;
+
+    border-right: none;
+    border-bottom: 1px solid #e8ecf2;
+  }
+
+  .academic-coordinator-photo::after {
+    inset: 10px;
+  }
+
+  .academic-coordinator-content {
+    padding: 22px 20px 25px;
+  }
+
+  .academic-coordinator-content::before {
+    margin-bottom: 10px;
+  }
+
+  .academic-coordinator-content h2 {
+    margin-bottom: 15px;
+
+    font-size: 20px;
+  }
+
+  .academic-coordinator-content h4 {
+    font-size: 11px;
+  }
+
+  .academic-coordinator-content p {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .academic-coordinators-page {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .academic-coordinators-header h1 {
+    font-size: 24px;
+  }
+
+  .academic-coordinator-photo {
+    height: 195px;
+  }
+
+  .academic-coordinator-content {
+    padding: 20px 18px 23px;
+  }
+
+  .academic-coordinator-content h2 {
+    font-size: 19px;
+  }
+}

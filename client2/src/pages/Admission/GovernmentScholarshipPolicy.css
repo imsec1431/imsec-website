@@ -1,0 +1,658 @@
+/* =========================================================
+   GOVERNMENT SCHOLARSHIP POLICY - PUBLIC PAGE
+========================================================= */
+
+.government-scholarship-public-page {
+  min-height: 100vh;
+  padding: 35px 20px 60px;
+  background: #f6f8fb;
+  color: #202938;
+}
+
+.government-scholarship-container {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.government-scholarship-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 25px;
+  color: #7b8492;
+  font-size: 13px;
+}
+
+.government-scholarship-breadcrumb strong {
+  color: #303947;
+  font-weight: 650;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.government-scholarship-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+
+  padding: 42px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e7ed;
+  border-radius: 16px;
+
+  box-shadow: 0 8px 30px rgba(20, 30, 50, 0.055);
+}
+
+.government-scholarship-hero-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.government-scholarship-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: #727b88;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.government-scholarship-hero h1 {
+  max-width: 800px;
+
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 38px;
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+.government-scholarship-hero p {
+  max-width: 720px;
+
+  margin: 14px 0 0;
+
+  color: #68717e;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.government-scholarship-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin-top: 27px;
+}
+
+.government-scholarship-view-btn,
+.government-scholarship-download-btn {
+  min-height: 43px;
+
+  padding: 10px 19px !important;
+
+  border-radius: 8px !important;
+
+  font-size: 13px;
+  font-weight: 650;
+
+  box-shadow: none !important;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.government-scholarship-view-btn {
+  color: #ffffff !important;
+  background: #252d39 !important;
+  border: 1px solid #252d39 !important;
+}
+
+.government-scholarship-download-btn {
+  color: #252d39 !important;
+  background: #ffffff !important;
+  border: 1px solid #d5dbe2 !important;
+}
+
+.government-scholarship-view-btn:hover,
+.government-scholarship-download-btn:hover {
+  transform: translateY(-1px);
+}
+
+.government-scholarship-view-btn:disabled,
+.government-scholarship-download-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* =========================================================
+   DOCUMENT CARD
+========================================================= */
+
+.government-scholarship-document {
+  display: flex;
+
+  flex: 0 0 365px;
+
+  align-items: center;
+  gap: 16px;
+
+  padding: 20px;
+
+  background: #fafbfc;
+
+  border: 1px solid #e1e6eb;
+  border-radius: 12px;
+}
+
+.government-scholarship-pdf-icon {
+  display: flex;
+
+  flex: 0 0 58px;
+
+  width: 58px;
+  height: 68px;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  background: #303947;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+}
+
+.government-scholarship-document-info {
+  display: flex;
+
+  min-width: 0;
+
+  flex-direction: column;
+  gap: 6px;
+}
+
+.government-scholarship-document-info strong {
+  color: #303947;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  line-height: 1.45;
+}
+
+.government-scholarship-document-info span {
+  color: #858e9b;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   ALERT
+========================================================= */
+
+.government-scholarship-alert {
+  margin-top: 20px;
+
+  border-radius: 9px;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   PDF SECTION
+========================================================= */
+
+.government-scholarship-pdf-section {
+  margin-top: 28px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e6eb;
+  border-radius: 15px;
+
+  box-shadow: 0 7px 25px rgba(20, 30, 50, 0.045);
+}
+
+/* =========================================================
+   PDF HEADER
+========================================================= */
+
+.government-scholarship-pdf-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 22px 25px;
+
+  border-bottom: 1px solid #edf0f3;
+}
+
+.government-scholarship-pdf-header span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #929aa6;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+
+.government-scholarship-pdf-header h2 {
+  margin: 0;
+
+  color: #273142;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.government-scholarship-header-download {
+  min-height: 38px;
+
+  padding: 8px 15px !important;
+
+  color: #ffffff !important;
+  background: #303947 !important;
+
+  border: 1px solid #303947 !important;
+  border-radius: 7px !important;
+
+  font-size: 12px;
+  font-weight: 650;
+
+  white-space: nowrap;
+
+  box-shadow: none !important;
+}
+
+/* =========================================================
+   PDF VIEWER
+========================================================= */
+
+.government-scholarship-pdf-wrapper {
+  width: 100%;
+
+  height: 850px;
+
+  background: #eef1f4;
+}
+
+.government-scholarship-pdf-frame {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+   PDF UNAVAILABLE
+========================================================= */
+
+.government-scholarship-pdf-unavailable {
+  display: flex;
+
+  min-height: 420px;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  padding: 40px;
+
+  text-align: center;
+}
+
+.government-scholarship-pdf-unavailable > div {
+  display: flex;
+
+  width: 65px;
+  height: 65px;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 15px;
+
+  background: #f0f2f5;
+
+  border-radius: 50%;
+
+  font-size: 27px;
+}
+
+.government-scholarship-pdf-unavailable h3 {
+  margin: 0 0 7px;
+
+  color: #303947;
+
+  font-size: 19px;
+}
+
+.government-scholarship-pdf-unavailable p {
+  margin: 0;
+
+  color: #858e9b;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   INFORMATION
+========================================================= */
+
+.government-scholarship-information {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 15px;
+
+  margin-top: 25px;
+  padding: 21px 23px;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e6eb;
+  border-radius: 12px;
+}
+
+.government-scholarship-information-icon {
+  display: flex;
+
+  flex: 0 0 34px;
+
+  width: 34px;
+  height: 34px;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  background: #303947;
+
+  border-radius: 50%;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.government-scholarship-information h3 {
+  margin: 2px 0 7px;
+
+  color: #303947;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.government-scholarship-information p {
+  max-width: 950px;
+
+  margin: 0;
+
+  color: #707987;
+
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.government-scholarship-loading {
+  display: flex;
+
+  min-height: 70vh;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  gap: 13px;
+
+  color: #68717e;
+}
+
+.government-scholarship-loading .spinner-border {
+  width: 35px;
+  height: 35px;
+}
+
+.government-scholarship-loading p {
+  margin: 0;
+
+  font-size: 14px;
+}
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.government-scholarship-empty {
+  display: flex;
+
+  min-height: 55vh;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  padding: 40px;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e7ed;
+  border-radius: 15px;
+}
+
+.government-scholarship-empty-icon {
+  display: flex;
+
+  width: 70px;
+  height: 70px;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+
+  background: #f0f2f5;
+
+  border-radius: 50%;
+
+  font-size: 30px;
+}
+
+.government-scholarship-empty h1 {
+  margin: 0 0 10px;
+
+  color: #273142;
+
+  font-size: 25px;
+}
+
+.government-scholarship-empty p {
+  max-width: 550px;
+
+  margin: 0;
+
+  color: #7b8492;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+  .government-scholarship-hero {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .government-scholarship-document {
+    width: 100%;
+    flex: none;
+  }
+
+  .government-scholarship-pdf-wrapper {
+    height: 750px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  .government-scholarship-public-page {
+    padding: 20px 12px 40px;
+  }
+
+  .government-scholarship-breadcrumb {
+    margin-bottom: 18px;
+    font-size: 11px;
+  }
+
+  .government-scholarship-hero {
+    gap: 25px;
+
+    padding: 25px 19px;
+
+    border-radius: 12px;
+  }
+
+  .government-scholarship-hero h1 {
+    font-size: 28px;
+  }
+
+  .government-scholarship-hero p {
+    font-size: 13px;
+  }
+
+  .government-scholarship-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .government-scholarship-actions button {
+    width: 100%;
+  }
+
+  .government-scholarship-document {
+    padding: 15px;
+  }
+
+  .government-scholarship-pdf-header {
+    align-items: flex-start;
+    flex-direction: column;
+
+    padding: 18px;
+  }
+
+  .government-scholarship-header-download {
+    width: 100%;
+  }
+
+  .government-scholarship-pdf-header h2 {
+    font-size: 17px;
+  }
+
+  .government-scholarship-pdf-wrapper {
+    height: 650px;
+  }
+
+  .government-scholarship-information {
+    padding: 17px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+  .government-scholarship-public-page {
+    padding: 15px 9px 30px;
+  }
+
+  .government-scholarship-hero {
+    padding: 21px 15px;
+  }
+
+  .government-scholarship-hero h1 {
+    font-size: 24px;
+  }
+
+  .government-scholarship-eyebrow {
+    font-size: 9px;
+  }
+
+  .government-scholarship-document {
+    align-items: flex-start;
+  }
+
+  .government-scholarship-pdf-icon {
+    flex: 0 0 50px;
+
+    width: 50px;
+    height: 58px;
+  }
+
+  .government-scholarship-pdf-wrapper {
+    height: 560px;
+  }
+
+  .government-scholarship-information {
+    gap: 11px;
+  }
+}

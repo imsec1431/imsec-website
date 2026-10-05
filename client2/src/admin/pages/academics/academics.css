@@ -1,0 +1,159 @@
+/* ===============================
+        Academics Dashboard
+================================= */
+
+.page-header {
+  margin-bottom: 35px;
+}
+
+.page-header h2 {
+  color: #0a2e5c;
+  font-weight: 700;
+  font-size: 34px;
+  margin-bottom: 8px;
+}
+
+.page-header p {
+  color: #6c757d;
+  font-size: 17px;
+  margin-bottom: 0;
+}
+
+/* ===============================
+            Cards
+================================= */
+
+.academic-card {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 40px 30px;
+  min-height: 230px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  border: 1px solid rgba(10, 46, 92, 0.08);
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+  transition: all 0.35s ease;
+}
+
+/* Top Border */
+
+.academic-card::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 6px;
+
+  background: linear-gradient(90deg, #0a2e5c, #0056d6);
+}
+
+/* Hover */
+
+.academic-card:hover {
+  transform: translateY(-10px);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+  border-color: #0a2e5c;
+}
+
+/* ===============================
+            Icon
+================================= */
+
+.academic-icon {
+  width: 90px;
+  height: 90px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 40px;
+
+  color: white;
+
+  background: linear-gradient(135deg, #0a2e5c, #0056d6);
+
+  margin-bottom: 25px;
+
+  transition: 0.35s;
+}
+
+.academic-card:hover .academic-icon {
+  transform: rotate(10deg) scale(1.08);
+}
+
+/* ===============================
+            Title
+================================= */
+
+.academic-card h4 {
+  color: #0a2e5c;
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  margin: 0;
+}
+
+/* ===============================
+        Link
+================================= */
+
+a.text-decoration-none {
+  color: inherit;
+}
+
+/* ===============================
+        Responsive
+================================= */
+
+@media (max-width: 991px) {
+  .academic-card {
+    min-height: 200px;
+    padding: 30px 20px;
+  }
+
+  .academic-icon {
+    width: 75px;
+    height: 75px;
+    font-size: 34px;
+  }
+
+  .academic-card h4 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-header h2 {
+    font-size: 28px;
+  }
+
+  .page-header p {
+    font-size: 15px;
+  }
+
+  .academic-card {
+    min-height: 180px;
+  }
+}

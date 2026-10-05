@@ -1,0 +1,610 @@
+/* =========================================================
+   GOVERNMENT SCHOLARSHIP POLICY - ADMIN
+========================================================= */
+
+.governmentScholarshipAdminPage {
+  min-height: 100vh;
+  padding: 30px;
+  background: #f5f7fa;
+  color: #202938;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.governmentScholarshipHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.governmentScholarshipHeader > div:first-child {
+  flex: 1;
+}
+
+.governmentScholarshipEyebrow {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #7b8492;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+.governmentScholarshipHeader h1 {
+  margin: 0;
+  color: #172033;
+  font-size: 34px;
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+.governmentScholarshipHeader p {
+  max-width: 700px;
+  margin: 9px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   HEADER ACTIONS
+========================================================= */
+
+.governmentScholarshipHeaderActions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 9px;
+}
+
+.governmentScholarshipStatus {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.governmentScholarshipStatus span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.governmentScholarshipStatus.published {
+  color: #146c43;
+  background: #d1e7dd;
+}
+
+.governmentScholarshipStatus.published span {
+  background: #198754;
+}
+
+.governmentScholarshipStatus.unpublished {
+  color: #842029;
+  background: #f8d7da;
+}
+
+.governmentScholarshipStatus.unpublished span {
+  background: #dc3545;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.governmentScholarshipAdminPage button {
+  box-shadow: none !important;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.governmentScholarshipAdminPage button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.governmentScholarshipAdminPage button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.governmentScholarshipPublishButton,
+.governmentScholarshipUnpublishButton {
+  min-height: 38px;
+  padding: 8px 17px !important;
+  border-radius: 7px !important;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.governmentScholarshipPublishButton {
+  color: #ffffff !important;
+  background: #198754 !important;
+  border: 1px solid #198754 !important;
+}
+
+.governmentScholarshipUnpublishButton {
+  color: #ffffff !important;
+  background: #dc3545 !important;
+  border: 1px solid #dc3545 !important;
+}
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.governmentScholarshipCard {
+  margin-bottom: 25px;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #e2e7ed;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(20, 30, 50, 0.045);
+}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.governmentScholarshipSectionHeader {
+  margin-bottom: 25px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #edf0f3;
+}
+
+.governmentScholarshipSectionHeader span {
+  display: block;
+  margin-bottom: 6px;
+  color: #929aa6;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+
+.governmentScholarshipSectionHeader h2 {
+  margin: 0;
+  color: #202938;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.governmentScholarshipField {
+  margin-bottom: 23px;
+}
+
+.governmentScholarshipField .form-label {
+  display: block;
+  margin-bottom: 7px;
+  color: #4b5563;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.governmentScholarshipField .form-control {
+  min-height: 45px;
+  color: #202938;
+  background: #ffffff;
+  border: 1px solid #dce2e9;
+  border-radius: 8px;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.governmentScholarshipField .form-control:focus {
+  color: #202938;
+  background: #ffffff;
+  border-color: #6c757d;
+  box-shadow: 0 0 0 3px rgba(108, 117, 125, 0.1);
+}
+
+.governmentScholarshipField .form-text {
+  display: block;
+  margin-top: 7px;
+  color: #8a929e;
+  font-size: 11px;
+}
+
+/* =========================================================
+   DOCUMENT CARD
+========================================================= */
+
+.governmentScholarshipDocument {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+
+  margin-top: 30px;
+  padding: 18px;
+
+  background: #fafbfc;
+
+  border: 1px solid #e1e6eb;
+  border-radius: 11px;
+}
+
+.governmentScholarshipPdfIcon {
+  display: flex;
+  flex: 0 0 54px;
+
+  width: 54px;
+  height: 60px;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  background: #303947;
+
+  border-radius: 7px;
+
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.governmentScholarshipDocumentInfo {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.governmentScholarshipDocumentInfo strong {
+  overflow: hidden;
+
+  color: #283142;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.governmentScholarshipDocumentInfo span {
+  color: #858e9b;
+  font-size: 11px;
+}
+
+.governmentScholarshipDocumentActions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 7px;
+}
+
+.governmentScholarshipViewButton,
+.governmentScholarshipDownloadButton {
+  min-height: 36px;
+  padding: 7px 14px !important;
+  border-radius: 7px !important;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.governmentScholarshipViewButton {
+  color: #ffffff !important;
+  background: #303947 !important;
+  border: 1px solid #303947 !important;
+}
+
+.governmentScholarshipDownloadButton {
+  color: #303947 !important;
+  background: #ffffff !important;
+  border: 1px solid #d5dbe2 !important;
+}
+
+/* =========================================================
+   PUBLISH BOX
+========================================================= */
+
+.governmentScholarshipPublishBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-top: 25px;
+  padding: 18px;
+
+  background: #f8f9fa;
+
+  border: 1px solid #e5e8ec;
+  border-radius: 10px;
+}
+
+.governmentScholarshipPublishBox strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #303947;
+  font-size: 13px;
+}
+
+.governmentScholarshipPublishBox p {
+  margin: 0;
+  color: #7b8492;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.governmentScholarshipPublishBox .form-check {
+  margin: 0;
+}
+
+.governmentScholarshipPublishBox .form-check-input {
+  width: 40px;
+  height: 21px;
+  margin-top: 0;
+  cursor: pointer;
+}
+
+/* =========================================================
+   SAVE BAR
+========================================================= */
+
+.governmentScholarshipSaveBar {
+  position: sticky;
+  bottom: 15px;
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  padding: 15px 19px;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  border: 1px solid #dfe4ea;
+  border-radius: 12px;
+
+  box-shadow: 0 8px 30px rgba(20, 30, 50, 0.1);
+
+  backdrop-filter: blur(8px);
+}
+
+.governmentScholarshipSaveBar > div:first-child {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.governmentScholarshipSaveBar strong {
+  color: #303947;
+  font-size: 13px;
+}
+
+.governmentScholarshipSaveBar span {
+  color: #7b8492;
+  font-size: 11px;
+}
+
+.governmentScholarshipSaveButton {
+  display: inline-flex !important;
+
+  min-width: 160px;
+  min-height: 44px;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 10px 22px !important;
+
+  color: #ffffff !important;
+  background: #212529 !important;
+
+  border: 1px solid #212529 !important;
+  border-radius: 8px !important;
+
+  font-size: 13px;
+  font-weight: 650;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.governmentScholarshipLoading {
+  display: flex;
+
+  min-height: 70vh;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 14px;
+
+  color: #68717e;
+}
+
+.governmentScholarshipLoading .spinner-border {
+  width: 35px;
+  height: 35px;
+}
+
+.governmentScholarshipLoading p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* =========================================================
+   ALERTS
+========================================================= */
+
+.governmentScholarshipAdminPage .alert {
+  margin-bottom: 20px;
+  border-radius: 9px;
+  font-size: 13px;
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.governmentScholarshipAdminPage .modal-content {
+  overflow: hidden;
+
+  border: 0;
+  border-radius: 13px;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.16);
+}
+
+.governmentScholarshipAdminPage .modal-header {
+  padding: 17px 20px;
+  border-bottom: 1px solid #edf0f3;
+}
+
+.governmentScholarshipAdminPage .modal-title {
+  color: #202938;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.governmentScholarshipAdminPage .modal-body {
+  padding: 0;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .governmentScholarshipAdminPage {
+    padding: 23px;
+  }
+
+  .governmentScholarshipHeader {
+    flex-direction: column;
+  }
+
+  .governmentScholarshipHeaderActions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  .governmentScholarshipAdminPage {
+    padding: 15px;
+  }
+
+  .governmentScholarshipHeader h1 {
+    font-size: 27px;
+  }
+
+  .governmentScholarshipHeaderActions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .governmentScholarshipHeaderActions > * {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .governmentScholarshipCard {
+    padding: 18px;
+    border-radius: 11px;
+  }
+
+  .governmentScholarshipDocument {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .governmentScholarshipPdfIcon {
+    flex: 0 0 auto;
+  }
+
+  .governmentScholarshipDocumentInfo {
+    width: 100%;
+  }
+
+  .governmentScholarshipDocumentInfo strong {
+    white-space: normal;
+  }
+
+  .governmentScholarshipDocumentActions {
+    width: 100%;
+  }
+
+  .governmentScholarshipDocumentActions button {
+    flex: 1;
+  }
+
+  .governmentScholarshipPublishBox {
+    align-items: flex-start;
+  }
+
+  .governmentScholarshipSaveBar {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 12px;
+    bottom: 8px;
+  }
+
+  .governmentScholarshipSaveButton {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+  .governmentScholarshipAdminPage {
+    padding: 10px;
+  }
+
+  .governmentScholarshipHeader h1 {
+    font-size: 23px;
+  }
+
+  .governmentScholarshipCard {
+    padding: 14px;
+  }
+
+  .governmentScholarshipSectionHeader h2 {
+    font-size: 18px;
+  }
+
+  .governmentScholarshipDocumentActions {
+    flex-direction: column;
+  }
+
+  .governmentScholarshipDocumentActions button {
+    width: 100%;
+  }
+
+  .governmentScholarshipPublishBox {
+    gap: 12px;
+  }
+}

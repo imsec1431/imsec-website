@@ -1,0 +1,479 @@
+.approval-admin-page {
+  min-height: 100%;
+  padding: 30px;
+  background: #f5f7fb;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.approval-admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 30px;
+  padding: 30px 34px;
+  border-radius: 20px;
+  background:
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(253, 185, 19, 0.14),
+      transparent 30%
+    ),
+    linear-gradient(135deg, #071d3b, #0a2e5c);
+  color: #fff;
+  box-shadow: 0 15px 40px rgba(10, 46, 92, 0.16);
+}
+
+.approval-header-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 8px;
+  color: #fdb913;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.approval-admin-header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.approval-admin-header p {
+  max-width: 680px;
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+}
+
+.approval-header-stat {
+  min-width: 125px;
+  padding: 18px 22px;
+  border: 1px solid rgba(253, 185, 19, 0.25);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.07);
+  text-align: center;
+}
+
+.approval-header-stat span {
+  display: block;
+  color: #fdb913;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.approval-header-stat small {
+  display: block;
+  margin-top: 7px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 11px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.approval-form-card,
+.approval-list-card {
+  height: 100%;
+  border: 1px solid #e7ebf2 !important;
+  border-radius: 20px !important;
+  background: #fff;
+  box-shadow: 0 10px 35px rgba(25, 42, 70, 0.07);
+}
+
+.approval-form-card .card-body,
+.approval-list-card .card-body {
+  padding: 28px;
+}
+
+.approval-section-title,
+.approval-list-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.approval-section-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 13px;
+  background: #fff6dc;
+  color: #c78e00;
+  font-size: 18px;
+}
+
+.approval-section-title h3,
+.approval-list-header h3 {
+  margin: 0;
+  color: #0a2e5c;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.approval-section-title p,
+.approval-list-header p {
+  margin: 4px 0 0;
+  color: #8791a3;
+  font-size: 12px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.approval-field {
+  margin-bottom: 22px;
+}
+
+.approval-field label {
+  margin-bottom: 8px;
+  color: #26364d;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.approval-field .form-control {
+  min-height: 47px;
+  border: 1px solid #dfe5ee;
+  border-radius: 11px;
+  color: #26364d;
+  font-size: 14px;
+  box-shadow: none;
+}
+
+.approval-field textarea.form-control {
+  min-height: 105px;
+  resize: vertical;
+}
+
+.approval-field .form-control:focus {
+  border-color: #0a2e5c;
+  box-shadow: 0 0 0 3px rgba(10, 46, 92, 0.08);
+}
+
+.approval-field-hint {
+  margin-top: 6px;
+  color: #9aa3b2;
+  font-size: 11px;
+}
+
+.approval-publish-box {
+  padding: 15px 17px;
+  margin-bottom: 23px;
+  border: 1px solid #e7ebf2;
+  border-radius: 13px;
+  background: #fafbfd;
+}
+
+.approval-publish-box .form-check {
+  margin: 0;
+}
+
+.approval-publish-box .form-check-label {
+  color: #26364d;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.approval-publish-box .form-check-input {
+  cursor: pointer;
+}
+
+.approval-publish-box span {
+  display: block;
+  margin-top: 5px;
+  padding-left: 31px;
+  color: #98a1af;
+  font-size: 11px;
+}
+
+.approval-form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.approval-save-btn {
+  min-height: 46px;
+  padding: 0 22px;
+  border: none !important;
+  border-radius: 11px !important;
+  background: #0a2e5c !important;
+  color: #fff !important;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 7px 18px rgba(10, 46, 92, 0.16);
+}
+
+.approval-save-btn:hover {
+  background: #071f40 !important;
+}
+
+.approval-save-btn svg {
+  margin-right: 8px;
+}
+
+.approval-cancel-btn {
+  min-height: 46px;
+  padding: 0 20px;
+  border: 1px solid #dfe5ee !important;
+  border-radius: 11px !important;
+  background: #fff !important;
+  color: #596579 !important;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* =========================
+   LIST
+========================= */
+
+.approval-list-header {
+  justify-content: space-between;
+}
+
+.approval-list-header > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.approval-count {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #eef3f9;
+  color: #0a2e5c;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.approval-table-wrapper {
+  overflow-x: auto;
+}
+
+.approval-table {
+  margin: 0;
+  vertical-align: middle;
+}
+
+.approval-table thead th {
+  padding: 12px 10px;
+  border-bottom: 1px solid #e8edf4;
+  color: #8b95a5;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.approval-table tbody td {
+  padding: 15px 10px;
+  border-bottom: 1px solid #eef1f5;
+}
+
+.approval-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.approval-order {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: #f2f5f9;
+  color: #0a2e5c;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.approval-record {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 190px;
+}
+
+.approval-record strong {
+  color: #1d2d43;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.approval-record span {
+  color: #8d97a7;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.approval-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 9px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.approval-status.published {
+  background: #eaf8f0;
+  color: #16804a;
+}
+
+.approval-status.unpublished {
+  background: #f2f3f5;
+  color: #7d8795;
+}
+
+.approval-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.approval-action {
+  width: 32px;
+  height: 32px;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px !important;
+  font-size: 12px;
+}
+
+.approval-action.edit {
+  border: 1px solid #dce7f5 !important;
+  background: #f3f7fc !important;
+  color: #0a2e5c !important;
+}
+
+.approval-action.publish {
+  border: 1px solid #d8eee2 !important;
+  background: #effaf4 !important;
+  color: #16804a !important;
+}
+
+.approval-action.unpublish {
+  border: 1px solid #eee2c5 !important;
+  background: #fff9eb !important;
+  color: #ad7a00 !important;
+}
+
+.approval-action.delete {
+  border: 1px solid #f2dcdc !important;
+  background: #fff5f5 !important;
+  color: #c44b4b !important;
+}
+
+/* =========================
+   LOADING / EMPTY
+========================= */
+
+.approval-loading {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #0a2e5c;
+}
+
+.approval-loading p {
+  margin-top: 12px;
+  color: #929baa;
+  font-size: 12px;
+}
+
+.approval-empty {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.approval-empty svg {
+  margin-bottom: 15px;
+  color: #d8a30b;
+  font-size: 35px;
+}
+
+.approval-empty h4 {
+  margin: 0;
+  color: #26364d;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.approval-empty p {
+  margin: 6px 0 0;
+  color: #9aa3b2;
+  font-size: 12px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 991px) {
+  .approval-admin-page {
+    padding: 20px;
+  }
+
+  .approval-admin-header {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .approval-admin-page {
+    padding: 15px;
+  }
+
+  .approval-admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .approval-header-stat {
+    width: 100%;
+  }
+
+  .approval-admin-header h1 {
+    font-size: 26px;
+  }
+
+  .approval-form-card .card-body,
+  .approval-list-card .card-body {
+    padding: 20px;
+  }
+
+  .approval-form-actions {
+    flex-direction: column;
+  }
+
+  .approval-save-btn,
+  .approval-cancel-btn {
+    width: 100%;
+  }
+}

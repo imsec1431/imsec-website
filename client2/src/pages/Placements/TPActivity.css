@@ -1,0 +1,890 @@
+/* =========================================================
+   PUBLIC T&P ACTIVITIES
+========================================================= */
+
+.tp-public-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  color: #172033;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.tp-public-hero {
+  position: relative;
+  min-height: 330px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 70px 0;
+  background: linear-gradient(135deg, #071b3d 0%, #0d3972 55%, #1764aa 100%);
+  color: #fff;
+}
+
+.tp-public-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 12% 25%,
+      rgba(255, 255, 255, 0.11),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 75%,
+      rgba(255, 255, 255, 0.08),
+      transparent 32%
+    );
+}
+
+.tp-public-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  text-align: center;
+  margin: auto;
+}
+
+.tp-public-hero-content span {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+
+.tp-public-hero-content h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(35px, 5vw, 56px);
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.tp-public-hero-content p {
+  max-width: 650px;
+  margin: 15px auto 0;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.tp-public-content {
+  padding: 70px 0 85px;
+  background: #fff;
+}
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.tp-public-section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 35px;
+}
+
+.tp-public-section-heading span {
+  display: block;
+  margin-bottom: 6px;
+  color: #1764aa;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.tp-public-section-heading h2 {
+  margin: 0;
+  color: #102d57;
+  font-size: 29px;
+  line-height: 1.3;
+  font-weight: 800;
+}
+
+.tp-public-section-heading p {
+  max-width: 390px;
+  margin: 0;
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   ACTIVITY CARD
+========================================================= */
+
+.tp-activity-public-card {
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #e2e7ee !important;
+  border-radius: 12px !important;
+  background: #fff;
+  box-shadow: 0 8px 28px rgba(20, 43, 75, 0.06);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.tp-activity-public-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(20, 43, 75, 0.11);
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.tp-activity-public-image {
+  position: relative;
+  height: 230px;
+  overflow: hidden;
+  background: #f5f7fa;
+}
+
+.tp-activity-public-image > img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.tp-activity-public-card:hover .tp-activity-public-image > img {
+  transform: scale(1.04);
+}
+
+.tp-activity-no-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #98a2b3;
+  font-size: 40px;
+}
+
+/* =========================================================
+   DATE BADGE
+========================================================= */
+
+.tp-activity-date-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 54px;
+  height: 58px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
+}
+
+.tp-activity-date-badge strong {
+  color: #102d57;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.tp-activity-date-badge span {
+  margin-top: 3px;
+  color: #1764aa;
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   CATEGORY BADGE
+========================================================= */
+
+.tp-activity-category-badge {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  max-width: calc(100% - 85px);
+  padding: 6px 10px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: rgba(7, 27, 61, 0.88);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   CARD BODY
+========================================================= */
+
+.tp-activity-public-card .card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* =========================================================
+   META
+========================================================= */
+
+.tp-activity-card-meta {
+  margin-bottom: 8px;
+}
+
+.tp-activity-card-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #1764aa;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.tp-activity-card-meta svg {
+  font-size: 10px;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.tp-activity-public-card h3 {
+  min-height: 52px;
+  margin: 0;
+  color: #102d57;
+  font-size: 19px;
+  line-height: 1.35;
+  font-weight: 800;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.tp-activity-description {
+  min-height: 66px;
+  margin: 10px 0 13px;
+  color: #667085;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   INFO
+========================================================= */
+
+.tp-activity-info-row {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-height: 48px;
+  margin-bottom: 16px;
+  padding-top: 13px;
+  border-top: 1px solid #edf0f4;
+}
+
+.tp-activity-info-row span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  overflow: hidden;
+  color: #667085;
+  font-size: 10px;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tp-activity-info-row svg {
+  flex-shrink: 0;
+  color: #1764aa;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.tp-activity-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid #edf0f4;
+}
+
+.tp-view-activity-button {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 13px !important;
+  border: none !important;
+  border-radius: 6px !important;
+  background: #1764aa !important;
+  color: #fff !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  box-shadow: none !important;
+}
+
+.tp-view-activity-button:hover {
+  background: #0e4e8c !important;
+}
+
+/* =========================================================
+   SOCIAL
+========================================================= */
+
+.tp-activity-social {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tp-activity-social a {
+  width: 27px;
+  height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f1f4f8;
+  color: #667085;
+  font-size: 10px;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.tp-activity-social a:hover {
+  transform: translateY(-2px);
+  background: #1764aa;
+  color: #fff;
+}
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.tp-public-empty {
+  min-height: 55vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.tp-public-empty > svg {
+  margin-bottom: 18px;
+  color: #1764aa;
+  font-size: 42px;
+}
+
+.tp-public-empty h2 {
+  margin: 0;
+  color: #102d57;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.tp-public-empty p {
+  margin: 8px 0 0;
+  color: #667085;
+  font-size: 13px;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.tp-public-status {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.tp-public-status .alert {
+  max-width: 600px;
+  width: 100%;
+}
+
+.tp-public-spinner {
+  margin-bottom: 17px;
+  color: #1764aa !important;
+}
+
+.tp-public-status h2 {
+  margin: 0;
+  color: #102d57;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.tp-public-status p {
+  margin: 8px 0 0;
+  color: #667085;
+  font-size: 13px;
+}
+
+/* =========================================================
+   DETAIL MODAL
+========================================================= */
+
+.tp-public-detail-modal .modal-dialog {
+  max-width: 1050px;
+  margin: 1rem auto;
+}
+
+.tp-public-detail-modal .modal-content {
+  overflow: hidden;
+  border: none;
+  border-radius: 13px;
+  box-shadow: 0 20px 60px rgba(5, 20, 40, 0.22);
+}
+
+.tp-public-detail-modal .modal-header {
+  padding: 18px 22px;
+  border-bottom: 1px solid #e8ecf1;
+  background: #fff;
+}
+
+.tp-public-detail-modal .modal-header small {
+  display: block;
+  margin-bottom: 3px;
+  color: #1764aa;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.tp-public-detail-modal .modal-title {
+  color: #102d57;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.tp-public-detail-modal .modal-body {
+  max-height: calc(100vh - 180px);
+  overflow-y: auto;
+  padding: 25px;
+}
+
+.tp-public-detail-modal .modal-body::-webkit-scrollbar {
+  width: 7px;
+}
+
+.tp-public-detail-modal .modal-body::-webkit-scrollbar-track {
+  background: #f5f7fa;
+}
+
+.tp-public-detail-modal .modal-body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #c8d0da;
+}
+
+.tp-public-detail-modal .modal-footer {
+  padding: 13px 22px;
+  border-top: 1px solid #e8ecf1;
+}
+
+/* =========================================================
+   DETAIL IMAGE
+========================================================= */
+
+.tp-detail-main-image {
+  width: 100%;
+  height: 360px;
+  display: block;
+  object-fit: cover;
+  border-radius: 9px;
+  background: #f5f7fa;
+}
+
+.tp-detail-no-image {
+  width: 100%;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: #f5f7fa;
+  color: #98a2b3;
+  font-size: 45px;
+}
+
+/* =========================================================
+   DETAIL CONTENT
+========================================================= */
+
+.tp-detail-content {
+  padding: 5px 5px 5px 15px;
+}
+
+.tp-detail-category {
+  display: inline-flex;
+  margin-bottom: 9px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #eef5fc;
+  color: #1764aa;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.tp-detail-content h2 {
+  margin: 0 0 18px;
+  color: #102d57;
+  font-size: 27px;
+  line-height: 1.3;
+  font-weight: 800;
+}
+
+/* =========================================================
+   DETAIL META
+========================================================= */
+
+.tp-detail-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  padding: 15px 0;
+  border-top: 1px solid #edf0f4;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.tp-detail-meta > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+}
+
+.tp-detail-meta > div > svg {
+  margin-top: 3px;
+  flex-shrink: 0;
+  color: #1764aa;
+  font-size: 14px;
+}
+
+.tp-detail-meta strong {
+  display: block;
+  margin-bottom: 3px;
+  color: #98a2b3;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.tp-detail-meta span {
+  display: block;
+  color: #344054;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   DETAIL DESCRIPTION
+========================================================= */
+
+.tp-detail-description {
+  margin-top: 18px;
+}
+
+.tp-detail-description h4 {
+  margin: 0 0 8px;
+  color: #102d57;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.tp-detail-description p {
+  margin: 0;
+  color: #667085;
+  font-size: 12px;
+  line-height: 1.85;
+  white-space: pre-line;
+}
+
+/* =========================================================
+   DETAIL SOCIAL
+========================================================= */
+
+.tp-detail-social {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 20px;
+}
+
+.tp-detail-social a {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  background: #f1f4f8;
+  color: #667085;
+  font-size: 12px;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.tp-detail-social a:hover {
+  transform: translateY(-2px);
+  background: #1764aa;
+  color: #fff;
+}
+
+/* =========================================================
+   DETAIL GALLERY
+========================================================= */
+
+.tp-detail-gallery {
+  margin-top: 32px;
+  padding-top: 25px;
+  border-top: 1px solid #edf0f4;
+}
+
+.tp-detail-gallery-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.tp-detail-gallery-heading span {
+  display: block;
+  margin-bottom: 3px;
+  color: #1764aa;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.tp-detail-gallery-heading h3 {
+  margin: 0;
+  color: #102d57;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.tp-detail-gallery-heading > svg {
+  color: #1764aa;
+  font-size: 22px;
+}
+
+.tp-detail-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.tp-detail-gallery-grid button {
+  height: 125px;
+  overflow: hidden;
+  padding: 0;
+  border: none;
+  border-radius: 7px;
+  background: #f5f7fa;
+  cursor: pointer;
+}
+
+.tp-detail-gallery-grid img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.tp-detail-gallery-grid button:hover img {
+  transform: scale(1.05);
+}
+
+/* =========================================================
+   GALLERY LIGHTBOX
+========================================================= */
+
+.tp-gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 35px;
+  background: rgba(5, 15, 30, 0.94);
+}
+
+.tp-gallery-lightbox img {
+  max-width: 95%;
+  max-height: 92vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.tp-gallery-lightbox-close {
+  position: fixed;
+  top: 18px;
+  right: 22px;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.tp-gallery-lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+  .tp-public-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .tp-detail-main-image,
+  .tp-detail-no-image {
+    height: 300px;
+  }
+
+  .tp-detail-content {
+    padding: 0;
+  }
+
+  .tp-detail-gallery-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .tp-public-hero {
+    min-height: 275px;
+    padding: 55px 15px;
+  }
+
+  .tp-public-content {
+    padding: 50px 15px 65px;
+  }
+
+  .tp-public-section-heading h2 {
+    font-size: 24px;
+  }
+
+  .tp-public-section-heading p {
+    max-width: 100%;
+  }
+
+  .tp-activity-public-image {
+    height: 220px;
+  }
+
+  .tp-public-detail-modal .modal-dialog {
+    margin: 0.5rem;
+  }
+
+  .tp-public-detail-modal .modal-body {
+    max-height: calc(100vh - 170px);
+    padding: 17px;
+  }
+
+  .tp-detail-main-image,
+  .tp-detail-no-image {
+    height: 240px;
+  }
+
+  .tp-detail-content h2 {
+    font-size: 22px;
+  }
+
+  .tp-detail-gallery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .tp-public-hero-content h1 {
+    font-size: 34px;
+  }
+
+  .tp-public-hero-content p {
+    font-size: 12px;
+  }
+
+  .tp-activity-public-card h3 {
+    font-size: 18px;
+  }
+
+  .tp-activity-card-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .tp-activity-social {
+    width: 100%;
+  }
+
+  .tp-detail-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tp-detail-gallery-grid button {
+    height: 140px;
+  }
+
+  .tp-gallery-lightbox {
+    padding: 15px;
+  }
+}

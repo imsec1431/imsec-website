@@ -1,0 +1,483 @@
+/* =========================================================
+   GYM ADMIN PAGE
+   ========================================================= */
+
+.gym-admin-page {
+  min-height: 100vh;
+  padding: 30px;
+  background: #f5f7fb;
+  color: #1d2939;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.gym-admin-header {
+  margin-bottom: 25px;
+}
+
+.gym-admin-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.gym-admin-title-icon {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #08204d;
+  color: #d4af37;
+  border-radius: 12px;
+  font-size: 25px;
+  box-shadow: 0 6px 18px rgba(8, 32, 77, 0.15);
+}
+
+.gym-admin-header h1 {
+  margin: 0;
+  color: #08204d;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.gym-admin-header p {
+  margin: 4px 0 0;
+  color: #667085;
+  font-size: 14px;
+}
+
+/* =========================================================
+   MESSAGES
+   ========================================================= */
+
+.gym-admin-success,
+.gym-admin-error {
+  margin-bottom: 20px;
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.gym-admin-success {
+  background: #ecfdf3;
+  border: 1px solid #abefc6;
+  color: #067647;
+}
+
+.gym-admin-error {
+  background: #fef3f2;
+  border: 1px solid #fecdca;
+  color: #b42318;
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.gym-admin-form {
+  max-width: 1100px;
+}
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.gym-admin-card {
+  margin-bottom: 22px;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #e4e7ec;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(16, 24, 40, 0.05);
+}
+
+.gym-admin-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eaecf0;
+}
+
+.gym-admin-card-header h2 {
+  margin: 0;
+  color: #08204d;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.gym-admin-card-header p {
+  margin: 5px 0 0;
+  color: #667085;
+  font-size: 13px;
+}
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.gym-admin-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* =========================================================
+   FIELDS
+   ========================================================= */
+
+.gym-admin-field {
+  margin-bottom: 20px;
+}
+
+.gym-admin-grid .gym-admin-field {
+  margin-bottom: 0;
+}
+
+.gym-admin-field label {
+  display: block;
+  margin-bottom: 8px;
+  color: #344054;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.gym-admin-field input,
+.gym-admin-field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  outline: none;
+  background: #fff;
+  color: #101828;
+  font-family: inherit;
+  font-size: 14px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.gym-admin-field input {
+  height: 46px;
+}
+
+.gym-admin-field textarea {
+  min-height: 110px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.gym-admin-field input:focus,
+.gym-admin-field textarea:focus {
+  border-color: #0b326f;
+  box-shadow: 0 0 0 3px rgba(11, 50, 111, 0.1);
+}
+
+.gym-admin-field input::placeholder,
+.gym-admin-field textarea::placeholder {
+  color: #98a2b3;
+}
+
+/* =========================================================
+   PHOTO SECTION
+   ========================================================= */
+
+.gym-photo-admin-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.gym-photo-admin-box {
+  padding: 18px;
+  background: #f8fafc;
+  border: 1px solid #e4e7ec;
+  border-radius: 12px;
+}
+
+.gym-photo-admin-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 14px;
+  color: #08204d;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.gym-photo-admin-title svg {
+  color: #b28a16;
+}
+
+.gym-photo-preview {
+  width: 100%;
+  height: 260px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #e9eef5;
+  border: 1px solid #d0d5dd;
+}
+
+.gym-photo-preview img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.gym-upload-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 16px;
+  box-sizing: border-box;
+  border: 1px solid #0b326f;
+  border-radius: 8px;
+  background: #0b326f;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.gym-upload-button:hover {
+  background: #08204d;
+  transform: translateY(-1px);
+}
+
+.gym-upload-button input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gym-selected-file {
+  margin-top: 10px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: #ecfdf3;
+  color: #067647;
+  font-size: 12px;
+  word-break: break-word;
+}
+
+/* =========================================================
+   PUBLISH CARD
+   ========================================================= */
+
+.gym-publish-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.gym-publish-card h2 {
+  margin: 0;
+  color: #08204d;
+  font-size: 19px;
+}
+
+.gym-publish-card p {
+  margin: 6px 0 0;
+  color: #667085;
+  font-size: 13px;
+}
+
+/* =========================================================
+   SWITCH
+   ========================================================= */
+
+.gym-switch {
+  position: relative;
+  flex: 0 0 auto;
+  width: 52px;
+  height: 28px;
+}
+
+.gym-switch input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.gym-slider {
+  position: absolute;
+  inset: 0;
+  border-radius: 30px;
+  background: #d0d5dd;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.gym-slider::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  left: 3px;
+  top: 3px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(16, 24, 40, 0.2);
+  transition: 0.25s ease;
+}
+
+.gym-switch input:checked + .gym-slider {
+  background: #0b326f;
+}
+
+.gym-switch input:checked + .gym-slider::before {
+  transform: translateX(24px);
+}
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.gym-admin-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 25px;
+  padding-bottom: 30px;
+}
+
+.gym-reset-button,
+.gym-save-button {
+  min-height: 46px;
+  padding: 0 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.gym-reset-button {
+  border: 1px solid #d0d5dd;
+  background: #fff;
+  color: #344054;
+}
+
+.gym-reset-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 24, 40, 0.08);
+}
+
+.gym-save-button {
+  border: 1px solid #08204d;
+  background: #08204d;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(8, 32, 77, 0.18);
+}
+
+.gym-save-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 7px 18px rgba(8, 32, 77, 0.24);
+}
+
+.gym-reset-button:disabled,
+.gym-save-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.gym-admin-loading {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #08204d;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .gym-admin-page {
+    padding: 22px;
+  }
+
+  .gym-photo-admin-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .gym-admin-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gym-admin-page {
+    padding: 16px;
+  }
+
+  .gym-admin-card {
+    padding: 20px;
+  }
+
+  .gym-publish-card {
+    align-items: flex-start;
+  }
+
+  .gym-admin-actions {
+    flex-direction: column-reverse;
+  }
+
+  .gym-reset-button,
+  .gym-save-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .gym-admin-title-wrap {
+    align-items: flex-start;
+  }
+
+  .gym-admin-title-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 21px;
+  }
+
+  .gym-admin-header h1 {
+    font-size: 25px;
+  }
+
+  .gym-photo-preview {
+    height: 220px;
+  }
+}

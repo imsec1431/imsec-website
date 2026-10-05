@@ -1,0 +1,432 @@
+/* =========================================================
+   ACTIVITY CALENDAR - PUBLIC PAGE
+   ========================================================= */
+
+.activity-calendar-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 35px 25px 60px;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.activity-calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.activity-calendar-title {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.activity-calendar-title svg {
+  font-size: 30px;
+}
+
+.activity-calendar-title h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.activity-calendar-header p {
+  margin: 8px 0 0 43px;
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.75;
+}
+
+/* =========================================================
+   LIST
+   ========================================================= */
+
+.activity-calendar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.activity-calendar-card {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.activity-calendar-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.09);
+}
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.activity-calendar-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 22px;
+  border-bottom: 1px solid #eeeeee;
+  background: #fafafa;
+}
+
+.activity-calendar-session {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.activity-calendar-session > svg {
+  flex-shrink: 0;
+  font-size: 24px;
+}
+
+.activity-calendar-session span {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.65;
+}
+
+.activity-calendar-session h2 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   SEMESTER BADGE
+   ========================================================= */
+
+.activity-calendar-semester {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 85px;
+  padding: 7px 15px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Even semester */
+.activity-calendar-semester.even {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+/* Odd semester */
+.activity-calendar-semester.odd {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.activity-calendar-card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 22px;
+}
+
+.activity-calendar-card-content h3 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   PDF BUTTON
+   ========================================================= */
+
+.activity-calendar-pdf-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  flex-shrink: 0;
+
+  padding: 10px 17px;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  background: #1f2937;
+  color: #ffffff;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.activity-calendar-pdf-btn:hover {
+  background: #111827;
+  transform: translateY(-1px);
+}
+
+.activity-calendar-pdf-btn svg {
+  font-size: 13px;
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.activity-calendar-empty {
+  min-height: 260px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 20px;
+
+  border: 1px dashed #d1d5db;
+  border-radius: 14px;
+
+  text-align: center;
+}
+
+.activity-calendar-empty > svg {
+  margin-bottom: 15px;
+  font-size: 40px;
+  opacity: 0.55;
+}
+
+.activity-calendar-empty h3 {
+  margin: 0 0 7px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.activity-calendar-empty p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.activity-calendar-loading {
+  min-height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.activity-calendar-loading > svg {
+  margin-bottom: 15px;
+  font-size: 38px;
+  animation: activityCalendarPulse 1.5s ease-in-out infinite;
+}
+
+.activity-calendar-loading p {
+  margin: 0;
+  font-size: 15px;
+  opacity: 0.7;
+}
+
+@keyframes activityCalendarPulse {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(0.95);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.activity-calendar-alert {
+  margin-bottom: 20px;
+  padding: 13px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.activity-calendar-alert.error {
+  border: 1px solid #fecaca;
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .activity-calendar-page {
+    padding: 28px 18px 45px;
+  }
+
+  .activity-calendar-title h1 {
+    font-size: 25px;
+  }
+
+  .activity-calendar-title svg {
+    font-size: 26px;
+  }
+
+  .activity-calendar-header p {
+    margin-left: 39px;
+  }
+
+  .activity-calendar-card-header {
+    padding: 17px 18px;
+  }
+
+  .activity-calendar-card-content {
+    padding: 17px 18px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+  .activity-calendar-page {
+    padding: 22px 13px 35px;
+  }
+
+  .activity-calendar-header {
+    margin-bottom: 22px;
+  }
+
+  .activity-calendar-title {
+    gap: 9px;
+  }
+
+  .activity-calendar-title h1 {
+    font-size: 22px;
+  }
+
+  .activity-calendar-title svg {
+    font-size: 23px;
+  }
+
+  .activity-calendar-header p {
+    margin-left: 32px;
+    font-size: 13px;
+  }
+
+  .activity-calendar-list {
+    gap: 14px;
+  }
+
+  .activity-calendar-card {
+    border-radius: 11px;
+  }
+
+  .activity-calendar-card-header {
+    align-items: flex-start;
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .activity-calendar-session {
+    gap: 10px;
+  }
+
+  .activity-calendar-session > svg {
+    font-size: 20px;
+  }
+
+  .activity-calendar-session span {
+    font-size: 10px;
+  }
+
+  .activity-calendar-session h2 {
+    font-size: 18px;
+  }
+
+  .activity-calendar-semester {
+    min-width: 70px;
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+  .activity-calendar-card-content {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 15px;
+    gap: 14px;
+  }
+
+  .activity-calendar-card-content h3 {
+    font-size: 15px;
+  }
+
+  .activity-calendar-pdf-btn {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .activity-calendar-title h1 {
+    font-size: 20px;
+  }
+
+  .activity-calendar-card-header {
+    flex-direction: column;
+  }
+
+  .activity-calendar-semester {
+    align-self: flex-start;
+  }
+}

@@ -1,0 +1,800 @@
+/* =========================================
+   CDC STRUCTURE ADMIN PAGE
+========================================= */
+
+.cdc-structure-admin {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 30px;
+
+  background: #f5f7fb;
+
+  color: #172033;
+
+  box-sizing: border-box;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.cdc-admin-header {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+.cdc-admin-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 8px;
+
+  color: #1764aa;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.8px;
+
+  text-transform: uppercase;
+}
+
+.cdc-admin-heading svg {
+  font-size: 15px;
+}
+
+.cdc-admin-header h2 {
+  margin: 0;
+
+  color: #102d57;
+
+  font-size: 30px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+.cdc-admin-header p {
+  max-width: 700px;
+
+  margin: 8px 0 0;
+
+  color: #6b7485;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+/* =========================================
+   SUCCESS MESSAGE
+========================================= */
+
+.cdc-success-message {
+  margin-bottom: 20px;
+
+  padding: 14px 18px;
+
+  border: 1px solid #b7e4c7;
+
+  border-radius: 8px;
+
+  background: #ecfdf3;
+
+  color: #176b3a;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+/* =========================================
+   ERROR MESSAGE
+========================================= */
+
+.cdc-error-message {
+  margin-bottom: 20px;
+
+  padding: 14px 18px;
+
+  border: 1px solid #f1b7bd;
+
+  border-radius: 8px;
+
+  background: #fff1f2;
+
+  color: #b42318;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+/* =========================================
+   FORM
+========================================= */
+
+.cdc-structure-form {
+  width: 100%;
+
+  max-width: 1100px;
+
+  margin: 0 auto;
+}
+
+/* =========================================
+   FORM CARD
+========================================= */
+
+.cdc-form-card {
+  overflow: hidden;
+
+  margin-bottom: 22px;
+
+  border: 1px solid #e1e6ee;
+
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  box-shadow: 0 5px 20px rgba(22, 43, 72, 0.05);
+}
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.cdc-card-header {
+  padding: 22px 25px;
+
+  border-bottom: 1px solid #e8ecf2;
+
+  background: #fbfcfe;
+}
+
+.cdc-card-header h3 {
+  margin: 0;
+
+  color: #102d57;
+
+  font-size: 19px;
+
+  font-weight: 800;
+}
+
+.cdc-card-header p {
+  margin: 6px 0 0;
+
+  color: #788294;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+/* =========================================
+   CARD BODY
+========================================= */
+
+.cdc-form-body {
+  padding: 25px;
+}
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.cdc-form-group {
+  margin-bottom: 20px;
+}
+
+.cdc-form-group:last-child {
+  margin-bottom: 0;
+}
+
+.cdc-form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #27354d;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.cdc-form-group input {
+  width: 100%;
+
+  min-height: 46px;
+
+  padding: 11px 14px;
+
+  border: 1px solid #d8dee8;
+
+  border-radius: 7px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #1d2939;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  box-sizing: border-box;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cdc-form-group input::placeholder {
+  color: #a0a8b5;
+}
+
+.cdc-form-group input:focus {
+  border-color: #1764aa;
+
+  box-shadow: 0 0 0 3px rgba(23, 100, 170, 0.1);
+}
+
+/* =========================================
+   PUBLISH TOGGLE
+========================================= */
+
+.cdc-publish-toggle {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 15px;
+
+  border: 1px solid #e0e5ec;
+
+  border-radius: 8px;
+
+  background: #f8fafc;
+
+  cursor: pointer;
+}
+
+.cdc-publish-toggle input {
+  width: 18px;
+
+  height: 18px;
+
+  margin: 0;
+
+  accent-color: #1764aa;
+
+  cursor: pointer;
+}
+
+.cdc-publish-toggle span {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.cdc-publish-toggle strong {
+  color: #27354d;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+.cdc-publish-toggle small {
+  color: #7a8494;
+
+  font-size: 12px;
+}
+
+/* =========================================
+   UPLOAD AREA
+========================================= */
+
+.cdc-upload-area {
+  min-height: 180px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 30px;
+
+  border: 2px dashed #cbd5e1;
+
+  border-radius: 10px;
+
+  background: #f8fafc;
+
+  color: #64748b;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.cdc-upload-area:hover {
+  border-color: #1764aa;
+
+  background: #f1f7fd;
+}
+
+.cdc-upload-area svg {
+  margin-bottom: 5px;
+
+  color: #1764aa;
+
+  font-size: 32px;
+}
+
+.cdc-upload-area strong {
+  color: #27354d;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+.cdc-upload-area span {
+  font-size: 13px;
+
+  color: #667085;
+}
+
+.cdc-upload-area small {
+  color: #98a2b3;
+
+  font-size: 11px;
+}
+
+/* =========================================
+   IMAGE PREVIEW
+========================================= */
+
+.cdc-image-preview {
+  margin-top: 22px;
+
+  overflow: hidden;
+
+  border: 1px solid #e0e5ec;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+}
+
+/* =========================================
+   PREVIEW HEADER
+========================================= */
+
+.cdc-preview-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 13px 16px;
+
+  border-bottom: 1px solid #e6eaf0;
+
+  background: #f8fafc;
+
+  color: #344054;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.cdc-preview-header button {
+  width: 30px;
+
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background: #fee4e2;
+
+  color: #b42318;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.cdc-preview-header button:hover {
+  background: #fecdca;
+
+  transform: scale(1.03);
+}
+
+/* =========================================
+   PREVIEW IMAGE
+
+   IMPORTANT:
+   contain = entire image visible
+========================================= */
+
+.cdc-preview-image {
+  width: 100%;
+
+  padding: 20px;
+
+  background: #f5f7fa;
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+.cdc-preview-image img {
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+  max-width: 100%;
+
+  max-height: 700px;
+
+  margin: 0 auto;
+
+  object-fit: contain;
+
+  border-radius: 5px;
+}
+
+/* =========================================
+   FORM ACTIONS
+========================================= */
+
+.cdc-form-actions {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  margin-top: 10px;
+
+  padding-bottom: 30px;
+}
+
+/* =========================================
+   SAVE BUTTON
+========================================= */
+
+.cdc-save-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  min-height: 44px;
+
+  padding: 0 20px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #1764aa;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cdc-save-button:hover:not(:disabled) {
+  background: #0e4e8c;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 6px 15px rgba(23, 100, 170, 0.2);
+}
+
+.cdc-save-button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+/* =========================================
+   DELETE BUTTON
+========================================= */
+
+.cdc-delete-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  min-height: 44px;
+
+  padding: 0 18px;
+
+  border: 1px solid #f0b5b0;
+
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #b42318;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.cdc-delete-button:hover:not(:disabled) {
+  border-color: #d92d20;
+
+  background: #fff1f0;
+}
+
+.cdc-delete-button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+/* =========================================
+   LOADING
+========================================= */
+
+.cdc-loading {
+  min-height: 60vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #697586;
+
+  text-align: center;
+}
+
+.cdc-loading .spinner-border {
+  margin-bottom: 15px;
+
+  color: #1764aa;
+}
+
+.cdc-loading h3 {
+  margin: 0;
+
+  color: #102d57;
+
+  font-size: 20px;
+
+  font-weight: 700;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .cdc-structure-admin {
+    padding: 20px 15px;
+  }
+
+  .cdc-admin-header h2 {
+    font-size: 25px;
+  }
+
+  .cdc-admin-header p {
+    font-size: 13px;
+  }
+
+  .cdc-card-header {
+    padding: 18px 20px;
+  }
+
+  .cdc-form-body {
+    padding: 20px;
+  }
+
+  .cdc-upload-area {
+    min-height: 150px;
+
+    padding: 25px 15px;
+  }
+
+  .cdc-preview-image {
+    padding: 10px;
+  }
+
+  .cdc-preview-image img {
+    max-height: 500px;
+  }
+
+  .cdc-form-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .cdc-save-button,
+  .cdc-delete-button {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .cdc-structure-admin {
+    padding: 15px 10px;
+  }
+
+  .cdc-admin-header h2 {
+    font-size: 22px;
+  }
+
+  .cdc-form-card {
+    border-radius: 9px;
+  }
+
+  .cdc-form-body {
+    padding: 16px;
+  }
+
+  .cdc-card-header {
+    padding: 16px;
+  }
+
+  .cdc-publish-toggle {
+    align-items: flex-start;
+  }
+}
+/* =========================================
+   CDC TEAM MODAL SCROLLING
+========================================= */
+
+.cdc-team-admin-page .modal-dialog {
+  max-height: calc(100vh - 30px);
+  margin: 15px auto;
+}
+
+.cdc-team-admin-page .modal-content {
+  max-height: calc(100vh - 30px);
+  overflow: hidden;
+}
+
+.cdc-team-admin-page .modal-body {
+  overflow-y: auto !important;
+  overflow-x: hidden;
+  max-height: calc(100vh - 170px);
+  padding: 25px;
+}
+
+/* Smooth scrollbar */
+
+.cdc-team-admin-page .modal-body::-webkit-scrollbar {
+  width: 7px;
+}
+
+.cdc-team-admin-page .modal-body::-webkit-scrollbar-track {
+  background: #f1f3f6;
+  border-radius: 10px;
+}
+
+.cdc-team-admin-page .modal-body::-webkit-scrollbar-thumb {
+  background: #b7c0cc;
+  border-radius: 10px;
+}
+
+.cdc-team-admin-page .modal-body::-webkit-scrollbar-thumb:hover {
+  background: #8f9baa;
+}
+
+/* =========================================
+   ADD / EDIT MODAL
+========================================= */
+
+.cdc-team-admin-page .modal-header {
+  flex-shrink: 0;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e9ef;
+}
+
+.cdc-team-admin-page .modal-footer {
+  flex-shrink: 0;
+  background: #ffffff;
+  border-top: 1px solid #e5e9ef;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .cdc-team-admin-page .modal-dialog {
+    max-height: calc(100vh - 10px);
+    margin: 5px auto;
+  }
+
+  .cdc-team-admin-page .modal-content {
+    max-height: calc(100vh - 10px);
+  }
+
+  .cdc-team-admin-page .modal-body {
+    max-height: calc(100vh - 135px);
+    padding: 18px;
+  }
+}

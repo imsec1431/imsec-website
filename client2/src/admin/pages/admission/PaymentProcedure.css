@@ -1,0 +1,511 @@
+/* =========================================================
+   PAYMENT PROCEDURE - ADMIN
+========================================================= */
+
+.payment-procedure-admin-page {
+  min-height: 100vh;
+  padding: 30px;
+  background: #f5f7fa;
+  color: #202938;
+}
+
+.payment-procedure-admin-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.payment-procedure-admin-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.payment-procedure-admin-eyebrow {
+  display: block;
+  margin-bottom: 7px;
+  color: #858e9b;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.payment-procedure-admin-header h1 {
+  margin: 0;
+  color: #1d2736;
+  font-size: 30px;
+  font-weight: 750;
+}
+
+.payment-procedure-admin-header p {
+  margin: 8px 0 0;
+  color: #747e8c;
+  font-size: 13px;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.payment-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 13px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.payment-status span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.payment-status.published {
+  color: #23734d;
+  background: #eaf7f0;
+}
+
+.payment-status.published span {
+  background: #2c9b68;
+}
+
+.payment-status.unpublished {
+  color: #7b5c1d;
+  background: #fff6df;
+}
+
+.payment-status.unpublished span {
+  background: #d59c24;
+}
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.payment-procedure-admin-card {
+  margin-bottom: 20px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e6ec !important;
+  border-radius: 12px !important;
+
+  box-shadow: 0 5px 20px rgba(20, 30, 50, 0.035);
+}
+
+.payment-procedure-admin-card .card-header {
+  display: flex;
+  align-items: center;
+
+  padding: 18px 22px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #edf0f3;
+}
+
+.payment-procedure-admin-card .card-header span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #929aa5;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.payment-procedure-admin-card .card-header h2 {
+  margin: 0;
+
+  color: #293342;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.payment-procedure-admin-card .card-body {
+  padding: 24px 22px;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.payment-procedure-admin-card .form-label {
+  margin-bottom: 7px;
+
+  color: #3a4554;
+
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.payment-procedure-admin-card .form-control {
+  min-height: 42px;
+
+  color: #293342;
+
+  background: #ffffff;
+
+  border: 1px solid #dce1e7;
+  border-radius: 7px;
+
+  font-size: 13px;
+
+  box-shadow: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.payment-procedure-admin-card textarea.form-control {
+  min-height: 125px;
+  resize: vertical;
+}
+
+.payment-procedure-admin-card .form-control:focus {
+  border-color: #8993a1;
+
+  box-shadow: 0 0 0 3px rgba(90, 105, 125, 0.08);
+}
+
+.payment-procedure-admin-card .form-text {
+  display: block;
+
+  margin-top: 7px;
+
+  color: #929aa5;
+
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   QR UPLOAD
+========================================================= */
+
+.payment-qr-upload-box {
+  display: flex;
+
+  min-height: 280px;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: #f8f9fb;
+
+  border: 1px dashed #cfd5dd;
+  border-radius: 10px;
+}
+
+.payment-qr-preview {
+  display: block;
+
+  width: 230px;
+  height: 230px;
+
+  object-fit: contain;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e5ea;
+  border-radius: 8px;
+
+  padding: 8px;
+}
+
+.payment-qr-placeholder {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  color: #929aa5;
+
+  text-align: center;
+}
+
+.payment-qr-placeholder span {
+  display: flex;
+
+  width: 70px;
+  height: 70px;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 12px;
+
+  color: #596474;
+
+  background: #e9edf2;
+
+  border-radius: 10px;
+
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.payment-qr-placeholder p {
+  margin: 0;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   SELECTED FILE
+========================================================= */
+
+.selected-qr-file {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-top: 15px;
+  padding: 12px;
+
+  background: #f7f9fb;
+
+  border: 1px solid #e2e6eb;
+  border-radius: 7px;
+
+  font-size: 11px;
+}
+
+.selected-qr-file strong {
+  color: #3c4654;
+}
+
+.selected-qr-file span {
+  min-width: 0;
+
+  flex: 1;
+
+  overflow: hidden;
+
+  color: #737d8a;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.selected-qr-file button {
+  flex-shrink: 0;
+
+  font-size: 10px;
+}
+
+.current-qr-file {
+  margin-top: 12px;
+
+  color: #858e9b;
+
+  font-size: 11px;
+}
+
+.current-qr-file strong {
+  color: #3f4957;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.payment-procedure-admin-actions {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  padding: 20px 0;
+}
+
+.payment-procedure-admin-actions .btn {
+  min-height: 40px;
+
+  padding: 8px 17px;
+
+  border-radius: 7px;
+
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.payment-save-btn {
+  color: #ffffff !important;
+
+  background: #293342 !important;
+
+  border-color: #293342 !important;
+
+  box-shadow: none !important;
+}
+
+.payment-save-btn:hover {
+  background: #202936 !important;
+
+  border-color: #202936 !important;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.payment-procedure-admin-loading {
+  display: flex;
+
+  min-height: 70vh;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+  color: #737d8a;
+}
+
+.payment-procedure-admin-loading p {
+  margin: 0;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   ALERT
+========================================================= */
+
+.payment-procedure-admin-page .alert {
+  margin-bottom: 20px;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   FILE INPUT
+========================================================= */
+
+.payment-procedure-admin-card input[type="file"] {
+  min-height: 43px;
+
+  padding: 9px 11px;
+
+  font-size: 12px;
+}
+
+.payment-procedure-admin-card input[type="file"]::file-selector-button {
+  margin-right: 10px;
+
+  padding: 6px 11px;
+
+  color: #ffffff;
+
+  background: #4a5564;
+
+  border: 0;
+  border-radius: 5px;
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .payment-procedure-admin-page {
+    padding: 20px 14px;
+  }
+
+  .payment-procedure-admin-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .payment-procedure-admin-header h1 {
+    font-size: 25px;
+  }
+
+  .payment-procedure-admin-card .card-body {
+    padding: 20px 16px;
+  }
+
+  .payment-qr-upload-box {
+    min-height: 240px;
+  }
+
+  .payment-qr-preview {
+    width: 190px;
+    height: 190px;
+  }
+
+  .payment-procedure-admin-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .payment-procedure-admin-actions .btn {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .payment-procedure-admin-page {
+    padding: 15px 10px;
+  }
+
+  .payment-procedure-admin-header h1 {
+    font-size: 22px;
+  }
+
+  .payment-procedure-admin-header p {
+    font-size: 12px;
+  }
+
+  .payment-procedure-admin-card .card-header {
+    padding: 16px;
+  }
+
+  .payment-procedure-admin-card .card-body {
+    padding: 17px 14px;
+  }
+
+  .payment-qr-preview {
+    width: 170px;
+    height: 170px;
+  }
+}

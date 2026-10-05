@@ -1,0 +1,652 @@
+/* =========================================
+   IMS GROUP ADMIN
+========================================= */
+
+.ims-group-admin {
+  width: 100%;
+  min-height: 100vh;
+  padding: 35px;
+  box-sizing: border-box;
+  background: #f5f7fb;
+  color: #172033;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.ims-group-header {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto 28px;
+}
+
+.ims-group-header h2 {
+  margin: 0;
+  color: #102d57;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.ims-group-header p {
+  margin: 9px 0 0;
+  color: #6b7485;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   SUCCESS / ERROR
+========================================= */
+
+.success-message,
+.error-message {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto 20px;
+  padding: 14px 18px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.success-message {
+  border: 1px solid #b8ddc3;
+  background: #edf9f1;
+  color: #18713a;
+}
+
+.error-message {
+  border: 1px solid #eab7b7;
+  background: #fff0f0;
+  color: #b42323;
+}
+
+/* =========================================
+   MAIN FORM
+========================================= */
+
+.ims-group-form {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 35px;
+  box-sizing: border-box;
+
+  border: 1px solid #e0e5ed;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow: 0 8px 28px rgba(20, 43, 75, 0.07);
+}
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 9px;
+
+  color: #263653;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  border: 1px solid #d5dce7;
+  border-radius: 8px;
+
+  outline: none;
+
+  background: #ffffff;
+  color: #172033;
+
+  font-family: inherit;
+  font-size: 15px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group input {
+  height: 48px;
+  padding: 0 14px;
+}
+
+.form-group textarea {
+  min-height: 110px;
+  padding: 13px 14px;
+
+  line-height: 1.65;
+  resize: vertical;
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+  border-color: #b8c3d3;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #1764aa;
+
+  box-shadow: 0 0 0 3px rgba(23, 100, 170, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #9aa4b4;
+}
+
+/* =========================================
+   ADMIN SECTION
+========================================= */
+
+.admin-section {
+  margin-top: 38px;
+  margin-bottom: 38px;
+  padding: 28px;
+
+  border: 1px solid #e1e6ee;
+  border-radius: 12px;
+
+  background: #f9fafc;
+}
+
+.admin-section-title {
+  margin-bottom: 25px;
+}
+
+.admin-section-title h3 {
+  margin: 0;
+  color: #102d57;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.admin-section-title p {
+  margin: 7px 0 0;
+  color: #737d8e;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   STATISTICS GRID
+========================================= */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.stats-grid .form-group {
+  margin-bottom: 0;
+}
+
+/* =========================================
+   INSTITUTION EDITOR
+========================================= */
+
+.institution-editor {
+  margin-bottom: 25px;
+  padding: 25px;
+
+  border: 1px solid #dce2eb;
+  border-radius: 11px;
+
+  background: #ffffff;
+
+  box-shadow: 0 5px 18px rgba(20, 43, 75, 0.04);
+}
+
+/* =========================================
+   INSTITUTION HEADER
+========================================= */
+
+.institution-editor-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid #e5e9ef;
+}
+
+.institution-editor-header h4 {
+  margin: 0;
+
+  color: #173d6b;
+
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* =========================================
+   REMOVE INSTITUTION
+========================================= */
+
+.remove-button {
+  min-height: 36px;
+  padding: 0 14px;
+
+  border: 1px solid #efc1c1;
+  border-radius: 7px;
+
+  background: #fff5f5;
+  color: #b42323;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.remove-button:hover {
+  background: #b42323;
+  color: #ffffff;
+}
+
+/* =========================================
+   COURSES
+========================================= */
+
+.courses-editor {
+  margin-top: 25px;
+  padding: 20px;
+
+  border: 1px solid #e0e5ed;
+  border-radius: 9px;
+
+  background: #f8fafc;
+}
+
+.courses-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 16px;
+}
+
+.courses-header h5 {
+  margin: 0;
+
+  color: #263653;
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.courses-header button {
+  min-height: 34px;
+  padding: 0 13px;
+
+  border: 1px solid #b9d0e8;
+  border-radius: 7px;
+
+  background: #eef6fd;
+  color: #1764aa;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.courses-header button:hover {
+  background: #1764aa;
+  color: #ffffff;
+}
+
+/* =========================================
+   COURSE ROW
+========================================= */
+
+.course-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 10px;
+}
+
+.course-row:last-child {
+  margin-bottom: 0;
+}
+
+.course-row input {
+  flex: 1;
+
+  width: 100%;
+  height: 43px;
+
+  padding: 0 12px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d5dce7;
+  border-radius: 7px;
+
+  outline: none;
+
+  background: #ffffff;
+  color: #172033;
+
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.course-row input:focus {
+  border-color: #1764aa;
+
+  box-shadow: 0 0 0 3px rgba(23, 100, 170, 0.08);
+}
+
+/* =========================================
+   REMOVE COURSE
+========================================= */
+
+.remove-course {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  border: 1px solid #edc2c2;
+  border-radius: 7px;
+
+  background: #fff5f5;
+  color: #b42323;
+
+  font-size: 20px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.remove-course:hover {
+  background: #b42323;
+  color: #ffffff;
+}
+
+/* =========================================
+   ADD INSTITUTION
+========================================= */
+
+.add-institution {
+  width: 100%;
+  min-height: 48px;
+
+  border: 1px dashed #9dbbd6;
+  border-radius: 8px;
+
+  background: #f0f7fd;
+  color: #1764aa;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.add-institution:hover {
+  border-color: #1764aa;
+  background: #1764aa;
+  color: #ffffff;
+}
+
+/* =========================================
+   PUBLISH TOGGLE
+========================================= */
+
+.publish-toggle {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  margin: 5px 0 28px;
+
+  color: #263653;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.publish-toggle input {
+  width: 18px;
+  height: 18px;
+
+  margin: 0;
+
+  accent-color: #1764aa;
+
+  cursor: pointer;
+}
+
+.publish-toggle span {
+  line-height: 1;
+}
+
+/* =========================================
+   SAVE BUTTON
+========================================= */
+
+.ims-group-form > button[type="submit"] {
+  min-width: 200px;
+  height: 48px;
+
+  padding: 0 25px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #1764aa;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.ims-group-form > button[type="submit"]:hover:not(:disabled) {
+  background: #0e4e8c;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 8px 20px rgba(23, 100, 170, 0.22);
+}
+
+.ims-group-form > button[type="submit"]:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.ims-group-form > button[type="submit"]:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   LOADING
+========================================= */
+
+.ims-group-loading {
+  width: 100%;
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  padding: 60px 35px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #e0e5ed;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  text-align: center;
+
+  box-shadow: 0 8px 28px rgba(20, 43, 75, 0.06);
+}
+
+.ims-group-loading h2 {
+  margin: 0;
+
+  color: #102d57;
+
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.ims-group-loading p {
+  margin: 9px 0 0;
+
+  color: #737d8e;
+
+  font-size: 14px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .ims-group-admin {
+    padding: 25px;
+  }
+
+  .ims-group-form {
+    padding: 28px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+  .ims-group-admin {
+    padding: 18px 14px;
+  }
+
+  .ims-group-header h2 {
+    font-size: 25px;
+  }
+
+  .ims-group-header p {
+    font-size: 13px;
+  }
+
+  .ims-group-form {
+    padding: 20px 16px;
+    border-radius: 10px;
+  }
+
+  .admin-section {
+    padding: 18px 15px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .institution-editor {
+    padding: 18px 14px;
+  }
+
+  .institution-editor-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .remove-button {
+    width: 100%;
+  }
+
+  .courses-editor {
+    padding: 15px;
+  }
+
+  .courses-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .courses-header button {
+    width: 100%;
+  }
+
+  .course-row {
+    gap: 7px;
+  }
+
+  .course-row input {
+    min-width: 0;
+  }
+
+  .ims-group-form > button[type="submit"] {
+    width: 100%;
+  }
+}

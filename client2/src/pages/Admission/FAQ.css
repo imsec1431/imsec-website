@@ -1,0 +1,901 @@
+/* =========================================================
+   PUBLIC FAQ PAGE
+========================================================= */
+
+.publicFaqPage {
+  min-height: 100vh;
+  background: #f7f8fa;
+  color: #202938;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.publicFaqContainer {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.publicFaqHero {
+  position: relative;
+  overflow: hidden;
+  padding: 55px 0 75px;
+  background: #202938;
+  color: #ffffff;
+}
+
+.publicFaqHero::before {
+  position: absolute;
+  top: -140px;
+  right: -100px;
+  width: 420px;
+  height: 420px;
+  content: "";
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.publicFaqHero::after {
+  position: absolute;
+  right: 90px;
+  bottom: -210px;
+  width: 430px;
+  height: 430px;
+  content: "";
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 50%;
+}
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.publicFaqBreadcrumb {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 45px;
+
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 12px;
+}
+
+.publicFaqBreadcrumb strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.publicFaqHeroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.publicFaqEyebrow {
+  display: inline-block;
+  margin-bottom: 15px;
+
+  color: rgba(255, 255, 255, 0.62);
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.publicFaqHeroContent h1 {
+  margin: 0 0 17px;
+
+  color: #ffffff;
+
+  font-size: clamp(36px, 5vw, 58px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+}
+
+.publicFaqHeroContent p {
+  max-width: 720px;
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.publicFaqMain {
+  padding: 55px 0 80px;
+}
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.publicFaqSearch {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  width: min(760px, 100%);
+  height: 58px;
+
+  margin: -85px auto 35px;
+
+  background: #ffffff;
+  border: 1px solid #e2e6eb;
+  border-radius: 10px;
+
+  box-shadow: 0 12px 35px rgba(25, 35, 50, 0.12);
+
+  z-index: 5;
+}
+
+.publicFaqSearchIcon {
+  display: flex;
+  width: 56px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+
+  color: #7b8492;
+
+  font-size: 25px;
+}
+
+.publicFaqSearch input {
+  flex: 1;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 0 45px 0 0;
+
+  color: #202938;
+
+  background: transparent;
+  border: 0;
+  outline: 0;
+
+  font-size: 14px;
+}
+
+.publicFaqSearch input::placeholder {
+  color: #9aa2ad;
+}
+
+.publicFaqSearchClear {
+  position: absolute;
+  right: 14px;
+
+  display: flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  color: #68717e;
+  background: #eef0f3;
+
+  border: 0;
+  border-radius: 50%;
+
+  font-size: 20px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   CATEGORIES
+========================================================= */
+
+.publicFaqCategories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  margin-bottom: 50px;
+}
+
+.publicFaqCategory {
+  min-height: 38px;
+
+  padding: 8px 17px;
+
+  color: #596273;
+  background: #ffffff;
+
+  border: 1px solid #dfe4ea;
+  border-radius: 30px;
+
+  font-size: 12px;
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.publicFaqCategory:hover {
+  transform: translateY(-1px);
+
+  color: #202938;
+  border-color: #bfc6cf;
+}
+
+.publicFaqCategory.active {
+  color: #ffffff;
+  background: #202938;
+  border-color: #202938;
+}
+
+/* =========================================================
+   FAQ HEADING
+========================================================= */
+
+.publicFaqHeading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid #e4e8ed;
+}
+
+.publicFaqHeading > div:first-child span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #929aa6;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+.publicFaqHeading h2 {
+  margin: 0;
+
+  color: #202938;
+
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.publicFaqCount {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+
+  color: #202938;
+
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.publicFaqCount span {
+  color: #7b8492;
+
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* =========================================================
+   FAQ LIST
+========================================================= */
+
+.publicFaqList {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+/* =========================================================
+   FAQ ITEM
+========================================================= */
+
+.publicFaqItem {
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e5ea;
+  border-radius: 10px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.publicFaqItem:hover {
+  border-color: #cdd3da;
+}
+
+.publicFaqItem.open {
+  border-color: #bfc6cf;
+
+  box-shadow: 0 6px 22px rgba(25, 35, 50, 0.055);
+}
+
+/* =========================================================
+   QUESTION
+========================================================= */
+
+.publicFaqQuestion {
+  display: flex;
+  width: 100%;
+  min-height: 72px;
+  align-items: center;
+
+  padding: 13px 18px;
+
+  text-align: left;
+
+  color: #202938;
+  background: #ffffff;
+
+  border: 0;
+
+  cursor: pointer;
+}
+
+.publicFaqQuestionNumber {
+  display: flex;
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 14px;
+
+  color: #6d7683;
+  background: #f0f2f4;
+
+  border-radius: 7px;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.publicFaqQuestionText {
+  flex: 1;
+
+  padding-right: 12px;
+
+  color: #242d3b;
+
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.55;
+}
+
+.publicFaqItemCategory {
+  flex: 0 0 auto;
+
+  margin-right: 15px;
+
+  padding: 5px 9px;
+
+  color: #6d7683;
+  background: #f2f4f6;
+
+  border-radius: 20px;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.publicFaqToggle {
+  display: flex;
+  flex: 0 0 31px;
+  width: 31px;
+  height: 31px;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #596273;
+  background: #f0f2f4;
+
+  border-radius: 50%;
+
+  font-size: 20px;
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+.publicFaqItem.open .publicFaqToggle {
+  color: #ffffff;
+  background: #202938;
+}
+
+/* =========================================================
+   ANSWER
+========================================================= */
+
+.publicFaqAnswerWrapper {
+  background: #fafbfc;
+
+  border-top: 1px solid #edf0f3;
+}
+
+.publicFaqAnswer {
+  display: flex;
+  gap: 17px;
+
+  padding: 22px 25px 24px 70px;
+}
+
+.publicFaqAnswerLine {
+  flex: 0 0 2px;
+
+  width: 2px;
+
+  background: #cfd5dc;
+
+  border-radius: 5px;
+}
+
+.publicFaqAnswer p {
+  max-width: 850px;
+
+  margin: 0;
+
+  color: #626b78;
+
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   NO RESULTS
+========================================================= */
+
+.publicFaqNoResults {
+  display: flex;
+
+  min-height: 280px;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  padding: 40px;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px dashed #cfd5dc;
+  border-radius: 12px;
+}
+
+.publicFaqNoResultsIcon {
+  display: flex;
+
+  width: 48px;
+  height: 48px;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 13px;
+
+  color: #ffffff;
+  background: #68717e;
+
+  border-radius: 50%;
+
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.publicFaqNoResults h3 {
+  margin: 0 0 7px;
+
+  color: #303947;
+
+  font-size: 18px;
+}
+
+.publicFaqNoResults p {
+  margin: 0 0 17px;
+
+  color: #7b8492;
+
+  font-size: 13px;
+}
+
+.publicFaqNoResults button {
+  min-height: 38px;
+
+  padding: 8px 17px;
+
+  color: #ffffff;
+  background: #202938;
+
+  border: 0;
+  border-radius: 7px;
+
+  font-size: 12px;
+  font-weight: 650;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   HELP BOX
+========================================================= */
+
+.publicFaqHelp {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  margin-top: 45px;
+  padding: 24px 27px;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e5ea;
+  border-radius: 12px;
+}
+
+.publicFaqHelpIcon {
+  display: flex;
+  flex: 0 0 45px;
+
+  width: 45px;
+  height: 45px;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  background: #303947;
+
+  border-radius: 50%;
+
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.publicFaqHelp h3 {
+  margin: 0 0 5px;
+
+  color: #202938;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.publicFaqHelp p {
+  margin: 0;
+
+  color: #737c89;
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.publicFaqLoading {
+  display: flex;
+
+  min-height: 70vh;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 14px;
+
+  color: #68717e;
+}
+
+.publicFaqLoading .spinner-border {
+  width: 35px;
+  height: 35px;
+}
+
+.publicFaqLoading p {
+  margin: 0;
+
+  font-size: 14px;
+}
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.publicFaqEmpty {
+  display: flex;
+
+  min-height: 50vh;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+.publicFaqEmptyIcon {
+  display: flex;
+
+  width: 55px;
+  height: 55px;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 15px;
+
+  color: #ffffff;
+  background: #68717e;
+
+  border-radius: 50%;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.publicFaqEmpty h2 {
+  margin: 0 0 8px;
+
+  color: #202938;
+
+  font-size: 24px;
+}
+
+.publicFaqEmpty p {
+  margin: 0;
+
+  color: #737c89;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .publicFaqContainer {
+    width: min(100% - 30px, 760px);
+  }
+
+  .publicFaqHero {
+    padding: 40px 0 70px;
+  }
+
+  .publicFaqHeroContent h1 {
+    font-size: 42px;
+  }
+
+  .publicFaqQuestion {
+    min-height: 68px;
+  }
+
+  .publicFaqItemCategory {
+    display: none;
+  }
+
+  .publicFaqAnswer {
+    padding-left: 70px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .publicFaqContainer {
+    width: calc(100% - 24px);
+  }
+
+  .publicFaqHero {
+    padding: 30px 0 65px;
+  }
+
+  .publicFaqBreadcrumb {
+    margin-bottom: 32px;
+
+    font-size: 11px;
+  }
+
+  .publicFaqHeroContent h1 {
+    font-size: 34px;
+    letter-spacing: -0.8px;
+  }
+
+  .publicFaqHeroContent p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .publicFaqMain {
+    padding: 45px 0 60px;
+  }
+
+  .publicFaqSearch {
+    height: 54px;
+
+    margin-top: -80px;
+    margin-bottom: 25px;
+  }
+
+  .publicFaqSearchIcon {
+    width: 48px;
+  }
+
+  .publicFaqSearch input {
+    font-size: 13px;
+  }
+
+  .publicFaqCategories {
+    justify-content: flex-start;
+
+    overflow-x: auto;
+
+    flex-wrap: nowrap;
+
+    padding-bottom: 7px;
+
+    margin-bottom: 35px;
+
+    scrollbar-width: none;
+  }
+
+  .publicFaqCategories::-webkit-scrollbar {
+    display: none;
+  }
+
+  .publicFaqCategory {
+    flex: 0 0 auto;
+  }
+
+  .publicFaqHeading {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-bottom: 17px;
+  }
+
+  .publicFaqHeading h2 {
+    font-size: 22px;
+  }
+
+  .publicFaqCount {
+    font-size: 20px;
+  }
+
+  .publicFaqQuestion {
+    min-height: 65px;
+
+    padding: 11px 12px;
+  }
+
+  .publicFaqQuestionNumber {
+    flex: 0 0 32px;
+
+    width: 32px;
+    height: 32px;
+
+    margin-right: 10px;
+  }
+
+  .publicFaqQuestionText {
+    padding-right: 7px;
+
+    font-size: 13px;
+  }
+
+  .publicFaqToggle {
+    flex: 0 0 28px;
+
+    width: 28px;
+    height: 28px;
+
+    font-size: 18px;
+  }
+
+  .publicFaqAnswer {
+    gap: 12px;
+
+    padding: 17px 17px 19px 54px;
+  }
+
+  .publicFaqAnswer p {
+    font-size: 12px;
+    line-height: 1.75;
+  }
+
+  .publicFaqHelp {
+    align-items: flex-start;
+
+    margin-top: 30px;
+    padding: 18px;
+
+    gap: 13px;
+  }
+
+  .publicFaqHelpIcon {
+    flex: 0 0 38px;
+
+    width: 38px;
+    height: 38px;
+
+    font-size: 16px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .publicFaqHeroContent h1 {
+    font-size: 29px;
+  }
+
+  .publicFaqQuestionNumber {
+    display: none;
+  }
+
+  .publicFaqQuestion {
+    padding: 12px;
+  }
+
+  .publicFaqAnswer {
+    padding-left: 20px;
+  }
+
+  .publicFaqAnswerLine {
+    display: none;
+  }
+}

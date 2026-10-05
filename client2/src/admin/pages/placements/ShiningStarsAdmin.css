@@ -1,0 +1,1403 @@
+/* =========================================================
+   SHINING STARS ADMIN
+========================================================= */
+
+.shining-stars-admin {
+  width: 100%;
+  min-height: 100vh;
+  padding: 28px;
+  background: #f5f7fb;
+  color: #172033;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.shining-stars-page-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 24px;
+}
+
+.shining-stars-page-header > div {
+  min-width: 0;
+}
+
+.shining-stars-page-header span {
+  display: block;
+  margin-bottom: 5px;
+  color: #1764aa;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.shining-stars-page-header h1 {
+  margin: 0;
+  color: #102d57;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.shining-stars-page-header p {
+  margin: 7px 0 0;
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.shining-stars-add-btn,
+.shining-stars-save-btn {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-height: 40px;
+  padding: 0 16px !important;
+
+  border: 0 !important;
+  border-radius: 7px !important;
+
+  background: #1764aa !important;
+  color: #fff !important;
+
+  font-size: 12px !important;
+  font-weight: 700 !important;
+
+  box-shadow: none !important;
+  transition: 0.2s ease;
+}
+
+.shining-stars-add-btn:hover,
+.shining-stars-save-btn:hover {
+  background: #0e4e8c !important;
+  color: #fff !important;
+  transform: translateY(-1px);
+}
+
+.shining-stars-refresh-btn {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 34px;
+
+  padding: 8px 14px !important;
+
+  border: 0 !important;
+  border-radius: 6px !important;
+
+  background: #eef5fc !important;
+  color: #1764aa !important;
+
+  font-size: 11px !important;
+  font-weight: 700 !important;
+
+  box-shadow: none !important;
+}
+
+.shining-stars-refresh-btn:hover {
+  background: #1764aa !important;
+  color: #fff !important;
+}
+
+/* =========================================================
+   ALERTS
+========================================================= */
+
+.shining-stars-alert {
+  margin-bottom: 18px;
+  padding: 12px 15px;
+
+  border-radius: 7px;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.shining-stars-alert.error {
+  border: 1px solid #fecdca;
+  background: #fff5f4;
+  color: #b42318;
+}
+
+.shining-stars-alert.success {
+  border: 1px solid #abefc6;
+  background: #f0fdf4;
+  color: #027a48;
+}
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.shining-stars-card {
+  width: 100%;
+  overflow: hidden;
+
+  border: 1px solid #e1e6ed !important;
+  border-radius: 12px !important;
+
+  background: #fff;
+
+  box-shadow: 0 6px 25px rgba(20, 43, 75, 0.05);
+}
+
+.shining-stars-card > .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 18px 22px;
+
+  border-bottom: 1px solid #e8ecf1;
+
+  background: #fff;
+}
+
+.shining-stars-card > .card-header h4 {
+  margin: 0;
+
+  color: #102d57;
+
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.shining-stars-card > .card-header span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #98a2b3;
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.shining-stars-card .table-responsive {
+  width: 100%;
+
+  overflow-x: auto !important;
+  overflow-y: visible !important;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.shining-stars-table {
+  width: 100% !important;
+  min-width: 900px;
+
+  margin: 0 !important;
+
+  table-layout: auto !important;
+
+  border-collapse: collapse !important;
+
+  vertical-align: middle !important;
+}
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.shining-stars-table thead tr {
+  height: auto !important;
+}
+
+.shining-stars-table thead th {
+  height: auto !important;
+
+  padding: 14px 17px !important;
+
+  border-bottom: 1px solid #e3e8ef !important;
+
+  background: #f8fafc !important;
+
+  color: #667085 !important;
+
+  font-size: 10px !important;
+  font-weight: 800 !important;
+
+  line-height: 1.3 !important;
+
+  letter-spacing: 0.7px;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  vertical-align: middle !important;
+}
+
+/* =========================================================
+   TABLE BODY
+========================================================= */
+
+.shining-stars-table tbody tr {
+  height: auto !important;
+
+  min-height: 0 !important;
+
+  transition: background 0.18s ease;
+}
+
+.shining-stars-table tbody tr:hover {
+  background: #fafcff;
+}
+
+.shining-stars-table tbody td {
+  height: auto !important;
+
+  min-height: 0 !important;
+
+  padding: 13px 17px !important;
+
+  border-color: #edf0f4 !important;
+
+  color: #475467;
+
+  font-size: 12px;
+
+  line-height: 1.4 !important;
+
+  vertical-align: middle !important;
+}
+
+/* Bootstrap override */
+
+.shining-stars-card .table > :not(caption) > * > * {
+  height: auto !important;
+  min-height: 0 !important;
+
+  padding-top: 13px !important;
+  padding-bottom: 13px !important;
+
+  vertical-align: middle !important;
+}
+
+/* =========================================================
+   PHOTO CELL
+========================================================= */
+
+.shining-stars-photo-cell {
+  display: flex !important;
+
+  align-items: center !important;
+
+  gap: 12px;
+
+  min-width: 250px;
+
+  height: auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.shining-stars-photo-cell img {
+  width: 58px !important;
+  height: 58px !important;
+
+  min-width: 58px !important;
+  min-height: 58px !important;
+
+  max-width: 58px !important;
+  max-height: 58px !important;
+
+  flex: 0 0 58px !important;
+
+  display: block;
+
+  object-fit: cover;
+
+  border: 1px solid #e4e7ec;
+
+  border-radius: 9px;
+
+  background: #f2f4f7;
+}
+
+.shining-stars-photo-cell > div {
+  min-width: 0;
+}
+
+.shining-stars-photo-cell strong {
+  display: block;
+
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.shining-stars-photo-cell small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #98a2b3;
+
+  font-size: 9px;
+}
+
+/* =========================================================
+   ALT TEXT
+========================================================= */
+
+.shining-stars-alt {
+  display: block;
+
+  max-width: 240px;
+
+  overflow: hidden;
+
+  color: #475467;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   PRIORITY
+========================================================= */
+
+.shining-stars-order {
+  display: inline-flex !important;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  min-width: 38px;
+  min-height: 29px;
+
+  padding: 5px 9px;
+
+  border-radius: 6px;
+
+  background: #f2f4f7;
+
+  color: #475467;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+.shining-stars-order svg {
+  color: #1764aa;
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.shining-stars-status {
+  width: auto !important;
+
+  height: 32px !important;
+
+  min-width: 82px !important;
+  min-height: 32px !important;
+
+  max-width: max-content !important;
+  max-height: 32px !important;
+
+  display: inline-flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  flex-direction: row !important;
+
+  gap: 6px;
+
+  margin: 0 !important;
+
+  padding: 0 11px !important;
+
+  border: 0 !important;
+
+  border-radius: 20px !important;
+
+  box-sizing: border-box !important;
+
+  font-family: inherit;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  line-height: 1 !important;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.shining-stars-status.published {
+  background: #ecfdf3 !important;
+  color: #027a48 !important;
+}
+
+.shining-stars-status.draft {
+  background: #f2f4f7 !important;
+  color: #667085 !important;
+}
+
+.shining-stars-status:hover {
+  opacity: 0.75;
+}
+
+.shining-stars-status > span {
+  width: 6px !important;
+  height: 6px !important;
+
+  min-width: 6px !important;
+  min-height: 6px !important;
+
+  max-width: 6px !important;
+  max-height: 6px !important;
+
+  flex: 0 0 6px !important;
+
+  display: block !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  border-radius: 50% !important;
+}
+
+.shining-stars-status.published > span {
+  background: #12b76a !important;
+}
+
+.shining-stars-status.draft > span {
+  background: #98a2b3 !important;
+}
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.shining-stars-date {
+  display: inline-block;
+
+  color: #667085;
+
+  font-size: 10px;
+
+  line-height: 1.3;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.shining-stars-actions {
+  display: flex !important;
+
+  align-items: center !important;
+
+  justify-content: flex-end !important;
+
+  gap: 6px !important;
+
+  height: auto !important;
+
+  min-height: 0 !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.shining-stars-actions .btn {
+  width: 34px !important;
+  height: 34px !important;
+
+  min-width: 34px !important;
+  min-height: 34px !important;
+
+  max-width: 34px !important;
+  max-height: 34px !important;
+
+  flex: 0 0 34px !important;
+
+  display: inline-flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  border: 0 !important;
+
+  border-radius: 7px !important;
+
+  box-shadow: none !important;
+
+  line-height: 1 !important;
+
+  transition: 0.2s ease;
+}
+
+.star-action-view {
+  background: #eef5fc !important;
+  color: #1764aa !important;
+}
+
+.star-action-edit {
+  background: #fff7e8 !important;
+  color: #b54708 !important;
+}
+
+.star-action-delete {
+  background: #fff1f1 !important;
+  color: #d92d20 !important;
+}
+
+.star-action-view:hover {
+  background: #1764aa !important;
+  color: #fff !important;
+}
+
+.star-action-edit:hover {
+  background: #b54708 !important;
+  color: #fff !important;
+}
+
+.star-action-delete:hover {
+  background: #d92d20 !important;
+  color: #fff !important;
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.shining-stars-empty {
+  padding: 75px 25px;
+
+  text-align: center;
+}
+
+.shining-stars-empty-icon {
+  width: 65px;
+  height: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 18px;
+
+  border-radius: 50%;
+
+  background: #fff7e8;
+
+  color: #f59e0b;
+
+  font-size: 25px;
+}
+
+.shining-stars-empty h4 {
+  margin: 0;
+
+  color: #102d57;
+
+  font-size: 19px;
+
+  font-weight: 800;
+}
+
+.shining-stars-empty p {
+  max-width: 450px;
+
+  margin: 8px auto 20px;
+
+  color: #667085;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.shining-stars-loading {
+  min-height: 70vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+.shining-stars-loading .spinner-border {
+  width: 35px;
+  height: 35px;
+
+  margin-bottom: 17px;
+
+  color: #1764aa !important;
+}
+
+.shining-stars-loading h5 {
+  margin: 0;
+
+  color: #102d57;
+
+  font-size: 17px;
+
+  font-weight: 800;
+}
+
+.shining-stars-loading p {
+  margin: 5px 0 0;
+
+  color: #98a2b3;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   CREATE / EDIT MODAL
+========================================================= */
+
+.shining-stars-modal .modal-dialog {
+  max-width: 750px;
+
+  margin: 1rem auto;
+}
+
+.shining-stars-modal .modal-content {
+  overflow: hidden;
+
+  border: 0;
+
+  border-radius: 13px;
+
+  box-shadow: 0 20px 60px rgba(5, 20, 40, 0.2);
+}
+
+.shining-stars-modal .modal-header {
+  padding: 18px 22px;
+
+  border-bottom: 1px solid #e8ecf1;
+
+  background: #fff;
+}
+
+.shining-stars-modal .modal-header small {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #1764aa;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.8px;
+
+  text-transform: uppercase;
+}
+
+.shining-stars-modal .modal-title {
+  color: #102d57;
+
+  font-size: 19px;
+
+  font-weight: 800;
+}
+
+/* =========================================================
+   MODAL BODY
+========================================================= */
+
+.shining-stars-modal .modal-body {
+  max-height: calc(100vh - 190px);
+
+  overflow-y: auto;
+
+  overflow-x: hidden;
+
+  padding: 24px;
+}
+
+.shining-stars-modal .modal-body::-webkit-scrollbar {
+  width: 7px;
+}
+
+.shining-stars-modal .modal-body::-webkit-scrollbar-track {
+  background: #f5f7fa;
+}
+
+.shining-stars-modal .modal-body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+
+  background: #c8d0da;
+}
+
+/* =========================================================
+   FORM SECTION
+========================================================= */
+
+.shining-stars-form-section {
+  margin-bottom: 20px;
+
+  padding: 19px;
+
+  border: 1px solid #e4e7ec;
+
+  border-radius: 9px;
+
+  background: #fff;
+}
+
+.shining-stars-form-section:last-child {
+  margin-bottom: 0;
+}
+
+.shining-stars-form-section > h5 {
+  margin: 0 0 16px;
+
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid #edf0f4;
+
+  color: #102d57;
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+/* =========================================================
+   UPLOAD AREA
+========================================================= */
+
+.shining-stars-upload {
+  width: 100%;
+}
+
+.shining-stars-upload-box {
+  min-height: 220px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 25px;
+
+  border: 2px dashed #cbd5e1;
+
+  border-radius: 10px;
+
+  background: #f8fafc;
+
+  color: #667085;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.shining-stars-upload-box:hover {
+  border-color: #1764aa;
+
+  background: #f7fbff;
+
+  color: #1764aa;
+}
+
+.shining-stars-upload-box > svg {
+  margin-bottom: 5px;
+
+  color: #1764aa;
+
+  font-size: 35px;
+}
+
+.shining-stars-upload-box strong {
+  color: #344054;
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+.shining-stars-upload-box span {
+  color: #98a2b3;
+
+  font-size: 10px;
+}
+
+.shining-stars-upload-box input {
+  display: none;
+}
+
+/* =========================================================
+   IMAGE PREVIEW
+========================================================= */
+
+.shining-stars-preview {
+  position: relative;
+
+  width: 100%;
+
+  padding: 12px;
+
+  border: 1px solid #e4e7ec;
+
+  border-radius: 10px;
+
+  background: #f8fafc;
+
+  text-align: center;
+}
+
+.shining-stars-preview img {
+  width: 100%;
+
+  height: 280px;
+
+  display: block;
+
+  object-fit: contain;
+
+  border-radius: 7px;
+
+  background: #eef1f5;
+}
+
+.shining-stars-preview label {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-top: 12px;
+
+  padding: 9px 15px;
+
+  border-radius: 6px;
+
+  background: #1764aa;
+
+  color: #fff;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.shining-stars-preview label:hover {
+  background: #0e4e8c;
+}
+
+.shining-stars-preview input {
+  display: none;
+}
+
+/* =========================================================
+   FORM CONTROLS
+========================================================= */
+
+.shining-stars-modal .form-label {
+  margin-bottom: 6px;
+
+  color: #344054;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+.shining-stars-modal .form-control {
+  min-height: 40px;
+
+  border: 1px solid #d0d5dd;
+
+  border-radius: 6px;
+
+  color: #172033;
+
+  font-size: 12px;
+
+  box-shadow: none;
+
+  transition: 0.2s ease;
+}
+
+.shining-stars-modal .form-control:focus {
+  border-color: #1764aa;
+
+  box-shadow: 0 0 0 3px rgba(23, 100, 170, 0.1);
+}
+
+.shining-stars-modal .form-text {
+  margin-top: 5px;
+
+  color: #98a2b3;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   PUBLISH BOX
+========================================================= */
+
+.shining-stars-publish-box {
+  min-height: 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 8px 13px;
+
+  border: 1px solid #e4e7ec;
+
+  border-radius: 7px;
+
+  background: #f8fafc;
+}
+
+.shining-stars-publish-box .form-check {
+  margin: 0;
+}
+
+.shining-stars-publish-box .form-check-label {
+  color: #344054;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.shining-stars-publish-box .form-check-input {
+  cursor: pointer;
+}
+
+.shining-stars-publish-box .form-check-input:checked {
+  border-color: #1764aa;
+
+  background-color: #1764aa;
+}
+
+/* =========================================================
+   MODAL FOOTER
+========================================================= */
+
+.shining-stars-modal .modal-footer {
+  padding: 14px 22px;
+
+  border-top: 1px solid #e8ecf1;
+
+  background: #fff;
+}
+
+.shining-stars-modal .modal-footer .btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+}
+
+/* =========================================================
+   VIEW MODAL
+========================================================= */
+
+.shining-stars-view-modal .modal-dialog {
+  max-width: 900px;
+
+  margin: 1rem auto;
+}
+
+.shining-stars-view-modal .modal-content {
+  overflow: hidden;
+
+  border: 0;
+
+  border-radius: 13px;
+}
+
+.shining-stars-view-modal .modal-header {
+  padding: 18px 22px;
+
+  border-bottom: 1px solid #e8ecf1;
+
+  background: #fff;
+}
+
+.shining-stars-view-modal .modal-title {
+  color: #102d57;
+
+  font-size: 19px;
+
+  font-weight: 800;
+}
+
+.shining-stars-view-modal .modal-body {
+  max-height: calc(100vh - 180px);
+
+  overflow-y: auto;
+
+  padding: 20px;
+
+  background: #f5f7fb;
+}
+
+/* =========================================================
+   VIEW IMAGE
+========================================================= */
+
+.shining-stars-view {
+  width: 100%;
+
+  text-align: center;
+}
+
+.shining-stars-view > img {
+  width: 100%;
+
+  max-height: 650px;
+
+  display: block;
+
+  object-fit: contain;
+
+  border-radius: 8px;
+
+  background: #fff;
+
+  box-shadow: 0 8px 30px rgba(16, 45, 87, 0.08);
+}
+
+.shining-stars-view-info {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-top: 15px;
+
+  padding: 13px 15px;
+
+  border: 1px solid #e4e7ec;
+
+  border-radius: 8px;
+
+  background: #fff;
+
+  text-align: left;
+}
+
+.shining-stars-view-info strong {
+  min-width: 0;
+
+  flex: 1;
+
+  color: #344054;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.shining-stars-view-info span {
+  color: #667085;
+
+  font-size: 10px;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   OPEN IMAGE
+========================================================= */
+
+.shining-stars-open-btn {
+  display: inline-flex !important;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  border: 0 !important;
+
+  border-radius: 6px !important;
+
+  background: #1764aa !important;
+
+  color: #fff !important;
+
+  font-size: 11px !important;
+
+  font-weight: 700 !important;
+
+  box-shadow: none !important;
+}
+
+.shining-stars-open-btn:hover {
+  background: #0e4e8c !important;
+}
+
+/* =========================================================
+   DELETE MODAL
+========================================================= */
+
+.shining-stars-delete {
+  padding: 15px 5px;
+
+  text-align: center;
+}
+
+.shining-stars-delete-icon {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 15px;
+
+  border-radius: 50%;
+
+  background: #fff1f1;
+
+  color: #d92d20;
+
+  font-size: 20px;
+}
+
+.shining-stars-delete h5 {
+  margin: 0;
+
+  color: #102d57;
+
+  font-size: 16px;
+
+  font-weight: 800;
+}
+
+.shining-stars-delete p {
+  max-width: 400px;
+
+  margin: 8px auto 0;
+
+  color: #667085;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+  .shining-stars-admin {
+    padding: 22px;
+  }
+
+  .shining-stars-table {
+    min-width: 900px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .shining-stars-admin {
+    padding: 18px 14px;
+  }
+
+  .shining-stars-page-header {
+    align-items: stretch;
+
+    flex-direction: column;
+  }
+
+  .shining-stars-page-header h1 {
+    font-size: 25px;
+  }
+
+  .shining-stars-add-btn {
+    width: 100%;
+  }
+
+  .shining-stars-card > .card-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .shining-stars-refresh-btn {
+    width: 100%;
+  }
+
+  /*
+     Keep the table horizontal on mobile.
+     This prevents row stretching.
+  */
+
+  .shining-stars-table {
+    min-width: 900px !important;
+  }
+
+  .shining-stars-modal .modal-dialog,
+  .shining-stars-view-modal .modal-dialog {
+    margin: 0.5rem;
+  }
+
+  .shining-stars-modal .modal-body {
+    max-height: calc(100vh - 175px);
+
+    padding: 17px;
+  }
+
+  .shining-stars-view-modal .modal-body {
+    max-height: calc(100vh - 160px);
+
+    padding: 14px;
+  }
+
+  .shining-stars-preview img {
+    height: 230px;
+  }
+
+  .shining-stars-view-info {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .shining-stars-admin {
+    padding: 14px 9px;
+  }
+
+  .shining-stars-page-header h1 {
+    font-size: 22px;
+  }
+
+  .shining-stars-card > .card-header {
+    padding: 15px;
+  }
+
+  .shining-stars-table tbody td {
+    padding: 11px !important;
+  }
+
+  .shining-stars-photo-cell {
+    min-width: 230px;
+  }
+
+  .shining-stars-photo-cell img {
+    width: 48px !important;
+    height: 48px !important;
+
+    min-width: 48px !important;
+    min-height: 48px !important;
+
+    max-width: 48px !important;
+    max-height: 48px !important;
+
+    flex-basis: 48px !important;
+  }
+
+  .shining-stars-status {
+    min-width: 78px !important;
+  }
+
+  .shining-stars-preview img {
+    height: 190px;
+  }
+
+  .shining-stars-upload-box {
+    min-height: 180px;
+  }
+}

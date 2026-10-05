@@ -1,0 +1,725 @@
+/* =========================================================
+   PUBLIC CAREER PAGE
+========================================================= */
+
+.careerPage {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #ffffff;
+  color: #172033;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.careerHero {
+  position: relative;
+
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #082c57 0%, #0c3f78 55%, #082c57 100%);
+
+  color: #ffffff;
+}
+
+.careerHero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  right: -150px;
+  top: -180px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 50%;
+}
+
+.careerHeroOverlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: radial-gradient(
+    circle at 80% 30%,
+    rgba(255, 255, 255, 0.08),
+    transparent 35%
+  );
+}
+
+.careerHeroContent {
+  position: relative;
+  z-index: 2;
+
+  width: min(1180px, calc(100% - 40px));
+
+  margin: 0 auto;
+
+  padding: 95px 0 100px;
+}
+
+.careerHeroLabel {
+  display: inline-block;
+
+  margin-bottom: 16px;
+
+  color: #f6c344;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.careerHeroContent h1 {
+  max-width: 800px;
+
+  margin: 0;
+
+  font-size: clamp(42px, 6vw, 70px);
+
+  line-height: 1.04;
+
+  letter-spacing: -2.5px;
+
+  font-weight: 750;
+}
+
+.careerHeroContent p {
+  max-width: 650px;
+
+  margin: 22px 0 0;
+
+  color: #dce8f5;
+
+  font-size: 16px;
+
+  line-height: 1.75;
+}
+
+/* =========================================================
+   OPENINGS SECTION
+========================================================= */
+
+.careerOpeningsSection {
+  padding: 75px 0 100px;
+
+  background: #ffffff;
+}
+
+.careerContainer {
+  width: min(1180px, calc(100% - 40px));
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.careerSectionHeader {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 30px;
+}
+
+.careerSectionHeader > div:first-child > span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #98a2b3;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.7px;
+}
+
+.careerSectionHeader h2 {
+  margin: 0;
+
+  color: #092f5f;
+
+  font-size: 32px;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.7px;
+}
+
+.careerOpeningCount {
+  padding: 8px 12px;
+
+  border: 1px solid #e4e7ec;
+
+  border-radius: 7px;
+
+  color: #475467;
+
+  background: #ffffff;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+/* =========================================================
+   OPENING LIST
+========================================================= */
+
+.careerOpeningList {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+/* =========================================================
+   OPENING CARD
+========================================================= */
+
+.careerOpeningCard {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 35px;
+
+  padding: 27px 29px;
+
+  border: 1px solid #e4e7ec;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.careerOpeningCard:hover {
+  transform: translateY(-2px);
+
+  border-color: #ccd5e0;
+
+  box-shadow: 0 14px 35px rgba(9, 47, 95, 0.08);
+}
+
+/* =========================================================
+   OPENING MAIN
+========================================================= */
+
+.careerOpeningMain {
+  min-width: 0;
+}
+
+.careerOpeningBadge {
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 23px;
+
+  padding: 0 9px;
+
+  margin-bottom: 10px;
+
+  border-radius: 999px;
+
+  background: #fff7dc;
+
+  color: #866300;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.8px;
+}
+
+.careerOpeningMain h3 {
+  margin: 0;
+
+  color: #092f5f;
+
+  font-size: 23px;
+
+  line-height: 1.25;
+
+  letter-spacing: -0.4px;
+}
+
+.careerDepartment {
+  margin: 6px 0 0;
+
+  color: #667085;
+
+  font-size: 14px;
+}
+
+/* =========================================================
+   META
+========================================================= */
+
+.careerMeta {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 28px;
+
+  margin-top: 19px;
+}
+
+.careerMetaItem {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.careerMetaItem span {
+  color: #98a2b3;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.9px;
+}
+
+.careerMetaItem strong {
+  color: #475467;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.careerOpeningActions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  flex-shrink: 0;
+}
+
+.careerOpeningActions button {
+  min-height: 43px;
+
+  padding: 0 15px;
+
+  border-radius: 8px;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.18s ease;
+}
+
+/* VIEW DETAILS */
+
+.careerViewButton {
+  border: 1px solid #d0d5dd;
+
+  background: #ffffff;
+
+  color: #344054;
+}
+
+.careerViewButton:hover {
+  background: #f8fafc;
+
+  border-color: #98a2b3;
+}
+
+/* APPLY */
+
+.careerApplyButton {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  border: 0;
+
+  background: #092f5f;
+
+  color: #ffffff;
+}
+
+.careerApplyButton:hover {
+  background: #0c3f78;
+
+  transform: translateX(2px);
+}
+
+.careerApplyButton span {
+  font-size: 16px;
+
+  line-height: 1;
+}
+
+/* =========================================================
+   NO OPENINGS
+========================================================= */
+
+.careerNoOpening {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 390px;
+
+  padding: 55px 25px;
+
+  border: 1px solid #e4e7ec;
+
+  border-radius: 16px;
+
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+
+  text-align: center;
+}
+
+.careerNoOpeningIcon {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 17px;
+
+  border-radius: 14px;
+
+  background: #fff7dc;
+
+  color: #092f5f;
+
+  font-size: 29px;
+
+  font-weight: 300;
+}
+
+.careerNoOpeningLabel {
+  color: #98a2b3;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.careerNoOpening h2 {
+  margin: 8px 0 0;
+
+  color: #092f5f;
+
+  font-size: 28px;
+
+  line-height: 1.25;
+}
+
+.careerNoOpening p {
+  max-width: 590px;
+
+  margin: 12px auto 25px;
+
+  color: #667085;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+/* =========================================================
+   GENERAL APPLICATION
+========================================================= */
+
+.careerGeneralApplyButton {
+  display: flex;
+
+  align-items: center;
+
+  gap: 17px;
+
+  min-height: 47px;
+
+  padding: 0 19px;
+
+  border: 0;
+
+  border-radius: 9px;
+
+  background: #092f5f;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.18s ease,
+    transform 0.18s ease;
+}
+
+.careerGeneralApplyButton:hover {
+  background: #0c3f78;
+
+  transform: translateY(-2px);
+}
+
+.careerGeneralApplyButton span {
+  font-size: 17px;
+}
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.careerError {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 15px 17px;
+
+  margin-bottom: 20px;
+
+  border: 1px solid #fecaca;
+
+  border-radius: 9px;
+
+  background: #fff7f7;
+}
+
+.careerError strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #991b1b;
+
+  font-size: 12px;
+}
+
+.careerError p {
+  margin: 0;
+
+  color: #b42318;
+
+  font-size: 12px;
+}
+
+.careerError button {
+  border: 0;
+
+  background: transparent;
+
+  color: #991b1b;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.careerLoading {
+  min-height: 600px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+.careerLoadingSpinner {
+  width: 36px;
+  height: 36px;
+
+  border: 3px solid #e4e7ec;
+
+  border-top-color: #092f5f;
+
+  border-radius: 50%;
+
+  animation: careerLoadingSpin 0.8s linear infinite;
+}
+
+.careerLoading h3 {
+  margin: 16px 0 0;
+
+  color: #092f5f;
+
+  font-size: 16px;
+}
+
+.careerLoading p {
+  margin: 6px 0 0;
+
+  color: #98a2b3;
+
+  font-size: 12px;
+}
+
+@keyframes careerLoadingSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+  .careerOpeningCard {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .careerOpeningActions {
+    width: 100%;
+  }
+
+  .careerOpeningActions button {
+    flex: 1;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .careerHeroContent,
+  .careerContainer {
+    width: calc(100% - 32px);
+  }
+
+  .careerHeroContent {
+    padding: 65px 0 70px;
+  }
+
+  .careerHeroContent h1 {
+    font-size: 43px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .careerHeroContent p {
+    font-size: 14px;
+  }
+
+  .careerOpeningsSection {
+    padding: 55px 0 70px;
+  }
+
+  .careerSectionHeader {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .careerSectionHeader h2 {
+    font-size: 27px;
+  }
+
+  .careerOpeningCard {
+    padding: 21px;
+  }
+
+  .careerMeta {
+    flex-direction: column;
+
+    gap: 11px;
+  }
+
+  .careerOpeningActions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .careerOpeningActions button {
+    width: 100%;
+  }
+
+  .careerNoOpening {
+    min-height: 350px;
+
+    padding: 40px 20px;
+  }
+
+  .careerNoOpening h2 {
+    font-size: 24px;
+  }
+}

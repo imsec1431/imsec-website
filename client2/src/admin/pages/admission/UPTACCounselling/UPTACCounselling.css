@@ -1,0 +1,844 @@
+/* =========================================================
+   UPTAC COUNSELLING - ADMIN PAGE
+========================================================= */
+
+.uptac-admin-page {
+  width: 100%;
+  min-height: 100%;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+
+  background: #f6f8fc;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.uptac-admin-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-bottom: 25px;
+}
+
+.uptac-eyebrow {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #1565c0;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+}
+
+.uptac-admin-header h2 {
+  margin: 0 0 7px;
+
+  color: #172033;
+
+  font-size: 30px;
+
+  line-height: 1.25;
+
+  font-weight: 700;
+}
+
+.uptac-admin-header p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   UPLOAD BUTTON
+========================================================= */
+
+.uptac-upload-btn {
+  flex-shrink: 0;
+
+  min-height: 44px;
+
+  padding: 10px 20px !important;
+
+  border: none !important;
+
+  border-radius: 9px !important;
+
+  background: linear-gradient(135deg, #0a2e5c, #1565c0) !important;
+
+  font-size: 14px !important;
+
+  font-weight: 600 !important;
+
+  box-shadow: 0 6px 18px rgba(21, 101, 192, 0.2);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.uptac-upload-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 9px 24px rgba(21, 101, 192, 0.28);
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.uptac-loading {
+  min-height: 400px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 14px;
+}
+
+.uptac-loading p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+/* =========================================================
+   EMPTY CARD
+========================================================= */
+
+.uptac-empty-card {
+  width: 100%;
+
+  padding: 70px 30px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e9f0;
+
+  border-radius: 16px;
+
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);
+}
+
+.uptac-empty-icon {
+  width: 75px;
+
+  height: 75px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #eef4ff;
+
+  font-size: 32px;
+}
+
+.uptac-empty-card h3 {
+  margin: 0 0 10px;
+
+  color: #172033;
+
+  font-size: 22px;
+
+  font-weight: 700;
+}
+
+.uptac-empty-card p {
+  max-width: 550px;
+
+  margin: 0 auto 25px;
+
+  color: #6b7280;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+.uptac-primary-btn {
+  min-height: 43px;
+
+  padding: 10px 20px !important;
+
+  border: none !important;
+
+  border-radius: 8px !important;
+
+  background: #1565c0 !important;
+
+  font-weight: 600 !important;
+}
+
+/* =========================================================
+   RECORD CARD
+========================================================= */
+
+.uptac-record-card {
+  width: 100%;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e7ee;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);
+}
+
+/* =========================================================
+   RECORD TOP
+========================================================= */
+
+.uptac-record-top {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 20px;
+
+  padding: 28px;
+
+  border-bottom: 1px solid #edf0f4;
+}
+
+/* =========================================================
+   PDF ICON
+========================================================= */
+
+.uptac-pdf-icon {
+  width: 64px;
+
+  height: 74px;
+
+  flex: 0 0 64px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #fff1f1, #ffe0e0);
+
+  color: #d32f2f;
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+}
+
+/* =========================================================
+   RECORD INFORMATION
+========================================================= */
+
+.uptac-record-info {
+  min-width: 0;
+
+  flex: 1;
+}
+
+.uptac-record-title-row {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-bottom: 10px;
+}
+
+.uptac-record-title-row h3 {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 21px;
+
+  line-height: 1.4;
+
+  font-weight: 700;
+
+  word-break: break-word;
+}
+
+.uptac-record-info p {
+  margin: 5px 0;
+
+  color: #737d8d;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+.uptac-record-info p strong {
+  color: #374151;
+}
+
+.uptac-record-info p span {
+  color: #374151;
+
+  word-break: break-all;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.uptac-description {
+  padding: 20px 28px;
+
+  background: #fafbfd;
+
+  border-bottom: 1px solid #edf0f4;
+}
+
+.uptac-description strong {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #374151;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.uptac-description p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.uptac-record-actions {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  padding: 20px 28px;
+}
+
+.uptac-record-actions .btn {
+  min-height: 40px;
+
+  padding: 8px 14px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  transition: all 0.2s ease;
+}
+
+.uptac-record-actions .btn:hover {
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   SELECTED FILE
+========================================================= */
+
+.uptac-selected-file {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 12px;
+
+  padding: 12px 14px;
+
+  border: 1px solid #d9e4f5;
+
+  border-radius: 8px;
+
+  background: #f5f8ff;
+
+  color: #4b5563;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  word-break: break-word;
+}
+
+.uptac-selected-file strong {
+  color: #1f2937;
+}
+
+/* =========================================================
+   EXISTING FILE
+========================================================= */
+
+.uptac-existing-file {
+  margin-top: 12px;
+
+  padding: 11px 14px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 8px;
+
+  background: #f9fafb;
+
+  color: #6b7280;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  word-break: break-word;
+}
+
+.uptac-existing-file strong {
+  color: #374151;
+}
+
+/* =========================================================
+   OPTIONAL TEXT
+========================================================= */
+
+.optional-text {
+  color: #9ca3af;
+
+  font-size: 12px;
+
+  font-weight: 400;
+}
+
+/* =========================================================
+   BOOTSTRAP MODAL
+========================================================= */
+
+.uptac-admin-page .modal-content {
+  overflow: hidden;
+
+  border: none;
+
+  border-radius: 14px;
+
+  box-shadow: 0 25px 70px rgba(15, 23, 42, 0.25);
+}
+
+.uptac-admin-page .modal-header {
+  padding: 18px 24px;
+
+  border-bottom: 1px solid #edf0f4;
+}
+
+.uptac-admin-page .modal-title {
+  color: #172033;
+
+  font-size: 19px;
+
+  font-weight: 700;
+}
+
+.uptac-admin-page .modal-body {
+  padding: 24px;
+}
+
+.uptac-admin-page .modal-footer {
+  padding: 15px 24px;
+
+  border-top: 1px solid #edf0f4;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.uptac-admin-page .form-label {
+  margin-bottom: 7px;
+
+  color: #374151;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.uptac-admin-page .form-control {
+  min-height: 43px;
+
+  border: 1px solid #d9dee7;
+
+  border-radius: 8px;
+
+  color: #374151;
+
+  font-size: 14px;
+
+  box-shadow: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.uptac-admin-page textarea.form-control {
+  min-height: 105px;
+}
+
+.uptac-admin-page .form-control:focus {
+  border-color: #1565c0;
+
+  box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.1);
+}
+
+.uptac-admin-page .form-control::placeholder {
+  color: #a0a7b2;
+}
+
+.uptac-admin-page .form-text {
+  display: block;
+
+  margin-top: 7px;
+
+  color: #8b95a5;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   FILE INPUT
+========================================================= */
+
+.uptac-admin-page input[type="file"] {
+  height: auto;
+
+  min-height: 46px;
+
+  padding: 8px 10px;
+}
+
+.uptac-admin-page input[type="file"]::file-selector-button {
+  margin-right: 10px;
+
+  padding: 7px 12px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background: #eef3fb;
+
+  color: #174a85;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   PUBLISH SWITCH
+========================================================= */
+
+.uptac-admin-page .form-check {
+  padding: 10px 14px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 9px;
+
+  background: #fafbfd;
+}
+
+.uptac-admin-page .form-check-input {
+  cursor: pointer;
+}
+
+.uptac-admin-page .form-check-input:checked {
+  background-color: #1565c0;
+
+  border-color: #1565c0;
+}
+
+.uptac-admin-page .form-check-label {
+  color: #374151;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   SAVE BUTTON
+========================================================= */
+
+.uptac-save-btn {
+  min-width: 125px;
+
+  min-height: 40px;
+
+  border: none !important;
+
+  border-radius: 8px !important;
+
+  background: #1565c0 !important;
+
+  font-weight: 600 !important;
+}
+
+.uptac-save-btn:hover {
+  background: #0d4f96 !important;
+}
+
+/* =========================================================
+   PDF MODAL
+========================================================= */
+
+.uptac-pdf-modal-body {
+  height: 78vh;
+
+  padding: 0 !important;
+
+  background: #525659;
+}
+
+.uptac-pdf-frame {
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  min-height: 600px;
+
+  border: none;
+
+  background: #ffffff;
+}
+
+.uptac-pdf-error {
+  width: 100%;
+
+  height: 100%;
+
+  min-height: 300px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #ffffff;
+
+  font-size: 15px;
+}
+
+/* =========================================================
+   ALERT
+========================================================= */
+
+.uptac-admin-page .alert {
+  margin-bottom: 20px;
+
+  border-radius: 9px;
+
+  font-size: 14px;
+}
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.uptac-record-title-row .badge {
+  padding: 6px 9px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .uptac-admin-page {
+    padding: 25px;
+  }
+
+  .uptac-admin-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .uptac-upload-btn {
+    width: auto;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .uptac-admin-page {
+    padding: 20px;
+  }
+
+  .uptac-admin-header h2 {
+    font-size: 25px;
+  }
+
+  .uptac-record-top {
+    padding: 22px;
+
+    gap: 15px;
+  }
+
+  .uptac-record-title-row h3 {
+    font-size: 19px;
+  }
+
+  .uptac-description {
+    padding: 18px 22px;
+  }
+
+  .uptac-record-actions {
+    padding: 18px 22px;
+  }
+
+  .uptac-record-actions .btn {
+    flex: 1 1 auto;
+  }
+
+  .uptac-pdf-modal-body {
+    height: 100vh;
+  }
+
+  .uptac-pdf-frame {
+    min-height: 100%;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .uptac-admin-page {
+    padding: 15px;
+  }
+
+  .uptac-admin-header h2 {
+    font-size: 22px;
+  }
+
+  .uptac-admin-header p {
+    font-size: 13px;
+  }
+
+  .uptac-upload-btn {
+    width: 100%;
+  }
+
+  .uptac-record-top {
+    flex-direction: column;
+  }
+
+  .uptac-pdf-icon {
+    width: 55px;
+
+    height: 64px;
+
+    flex-basis: 64px;
+  }
+
+  .uptac-record-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .uptac-record-actions .btn {
+    width: 100%;
+  }
+
+  .uptac-empty-card {
+    padding: 45px 20px;
+  }
+
+  .uptac-empty-card h3 {
+    font-size: 19px;
+  }
+
+  .uptac-admin-page .modal-body {
+    padding: 18px;
+  }
+
+  .uptac-admin-page .modal-footer {
+    padding: 12px 18px;
+  }
+}

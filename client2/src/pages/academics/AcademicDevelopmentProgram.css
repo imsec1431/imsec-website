@@ -1,0 +1,670 @@
+/* ===========================================
+        Academic Development Program Page
+        IMS Engineering College
+===========================================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background: #fff;
+}
+
+/* ===========================================
+        Common
+===========================================*/
+
+.section-tag {
+  color: #fdb913;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.3rem);
+
+  font-weight: 800;
+
+  color: #0a2e5c;
+
+  margin-bottom: 20px;
+}
+
+.section-title span {
+  color: #fdb913;
+}
+
+.section-title::after {
+  content: "";
+
+  display: block;
+
+  width: 90px;
+
+  height: 4px;
+
+  background: #fdb913;
+
+  border-radius: 20px;
+
+  margin-top: 15px;
+}
+
+.text-center .section-title::after {
+  margin: 15px auto 0;
+}
+
+/* ===========================================
+        Hero
+===========================================*/
+
+.adp-hero {
+  height: 430px;
+
+  background:
+    linear-gradient(rgba(10, 46, 92, 1), rgba(10, 46, 92, 1)),
+    url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&q=80");
+
+  background-size: cover;
+
+  background-position: center;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+
+  font-weight: 800;
+}
+
+.hero-content p {
+  margin-top: 15px;
+
+  font-size: 18px;
+}
+
+.hero-content span {
+  color: #fdb913;
+
+  margin: 0 8px;
+}
+
+/* ===========================================
+        About
+===========================================*/
+
+.adp-about {
+  background: #fff;
+}
+
+.adp-image {
+  width: 100%;
+
+  border-radius: 25px;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+
+  transition: 0.35s;
+}
+
+.adp-image:hover {
+  transform: scale(1.03);
+}
+
+.adp-about p {
+  color: #666;
+
+  line-height: 1.9;
+
+  text-align: justify;
+}
+
+/* ===========================================
+        Programs
+===========================================*/
+
+.program-section {
+  background: #fff;
+}
+
+.program-card {
+  background: #fff;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  padding: 30px 20px;
+
+  height: 100%;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  position: relative;
+}
+
+.program-card:hover {
+  transform: translateY(-10px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.program-icon {
+  font-size: 55px;
+
+  color: #fdb913;
+
+  margin-bottom: 20px;
+}
+
+.program-card h4 {
+  color: #0a2e5c;
+
+  font-weight: 700;
+
+  margin: 20px 0;
+
+  min-height: 65px;
+}
+
+.program-card p {
+  color: #666;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.program-card .btn {
+  margin-top: 20px;
+
+  font-weight: 600;
+}
+
+.upcoming {
+  background: #28a745;
+
+  color: #fff;
+
+  padding: 6px 18px;
+
+  border-radius: 30px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.completed {
+  background: #0a2e5c;
+
+  color: #fff;
+
+  padding: 6px 18px;
+
+  border-radius: 30px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+/* ===========================================
+        Objectives
+===========================================*/
+
+.objective-section {
+  background: #f8f9fb;
+}
+
+.objective-card {
+  background: #fff;
+
+  padding: 35px 25px;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  height: 100%;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+}
+
+.objective-card:hover {
+  transform: translateY(-10px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.objective-icon {
+  font-size: 55px;
+
+  color: #fdb913;
+
+  margin-bottom: 20px;
+}
+
+.objective-card h4 {
+  color: #0a2e5c;
+
+  font-weight: 700;
+
+  margin-bottom: 15px;
+}
+
+.objective-card p {
+  color: #666;
+
+  line-height: 1.8;
+}
+/* ===========================================
+        Statistics Section
+===========================================*/
+
+.stats-section {
+  background: #fff;
+}
+
+.stat-card {
+  background: #fff;
+
+  padding: 35px 20px;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  height: 100%;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  border-bottom: 4px solid transparent;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+
+  border-bottom: 4px solid #fdb913;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card h2 {
+  font-size: 42px;
+
+  color: #0a2e5c;
+
+  font-weight: 800;
+
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  color: #666;
+
+  margin: 0;
+}
+
+/* ===========================================
+        Downloads
+===========================================*/
+
+.download-section {
+  background: #f8f9fb;
+}
+
+.download-card {
+  background: #fff;
+
+  border-radius: 20px;
+
+  padding: 25px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  height: 100%;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+}
+
+.download-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.download-card h5 {
+  color: #0a2e5c;
+
+  font-weight: 700;
+
+  margin-bottom: 8px;
+}
+
+.download-card span {
+  color: #666;
+
+  font-size: 14px;
+}
+
+.download-card .btn {
+  background: #fdb913;
+
+  color: #0a2e5c;
+
+  border: none;
+
+  font-weight: 600;
+}
+
+.download-card .btn:hover {
+  background: #0a2e5c;
+
+  color: #fff;
+}
+
+/* ===========================================
+        FAQ
+===========================================*/
+
+.faq-section {
+  background: #fff;
+}
+
+.faq-card {
+  background: #f8f9fb;
+
+  border-radius: 20px;
+
+  padding: 35px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.faq-card h5 {
+  color: #0a2e5c;
+
+  font-weight: 700;
+
+  margin-bottom: 12px;
+}
+
+.faq-card p {
+  color: #666;
+
+  line-height: 1.8;
+}
+
+.faq-card hr {
+  margin: 25px 0;
+}
+
+/* ===========================================
+        CTA
+===========================================*/
+
+.adp-cta {
+  background: linear-gradient(135deg, #0a2e5c, #123f7a);
+
+  color: #fff;
+
+  padding: 90px 0;
+}
+
+.adp-cta h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+
+  font-weight: 800;
+
+  margin-bottom: 20px;
+}
+
+.adp-cta p {
+  color: #ddd;
+
+  line-height: 1.8;
+}
+
+.adp-cta .btn {
+  padding: 12px 30px;
+
+  font-weight: 600;
+
+  transition: 0.35s;
+}
+
+.adp-cta .btn-warning {
+  background: #fdb913;
+
+  color: #0a2e5c;
+
+  border: none;
+}
+
+.adp-cta .btn-warning:hover {
+  background: #fff;
+
+  color: #0a2e5c;
+
+  transform: translateY(-5px);
+}
+
+.adp-cta .btn-outline-light {
+  border: 2px solid #fff;
+}
+
+.adp-cta .btn-outline-light:hover {
+  background: #fff;
+
+  color: #0a2e5c;
+
+  transform: translateY(-5px);
+}
+
+/* ===========================================
+        Animation
+===========================================*/
+
+.featured-card,
+.program-card,
+.objective-card,
+.stat-card,
+.download-card {
+  transition: all 0.35s ease;
+}
+
+/* ===========================================
+        Responsive
+===========================================*/
+
+@media (max-width: 992px) {
+  .adp-hero {
+    height: 320px;
+  }
+
+  .featured-card {
+    text-align: center;
+  }
+
+  .featured-card img {
+    margin-bottom: 30px;
+  }
+
+  .adp-cta {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .adp-hero {
+    height: 260px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .featured-card {
+    padding: 25px;
+  }
+
+  .program-card {
+    padding: 25px;
+  }
+
+  .program-card h4 {
+    min-height: auto;
+  }
+
+  .objective-card {
+    padding: 25px;
+  }
+
+  .download-card {
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 20px;
+  }
+
+  .download-card .btn {
+    width: 100%;
+  }
+
+  .stat-card {
+    padding: 25px;
+  }
+
+  .stat-card h2 {
+    font-size: 34px;
+  }
+
+  .faq-card {
+    padding: 25px;
+  }
+
+  .adp-cta {
+    padding: 60px 20px;
+  }
+
+  .adp-cta .btn {
+    width: 100%;
+
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .adp-image {
+    margin-bottom: 20px;
+  }
+
+  .program-icon {
+    font-size: 45px;
+  }
+
+  .objective-icon {
+    font-size: 45px;
+  }
+
+  .faq-card {
+    padding: 20px;
+  }
+}
+.program-social {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.program-social a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.program-social a:hover {
+  transform: translateY(-5px) scale(1.08);
+}
+
+.program-social .facebook {
+  background: #1877f2;
+}
+
+.program-social .instagram {
+  background: #e4405f;
+}
+
+.program-social .linkedin {
+  background: #0a66c2;
+}
+
+.program-social .youtube {
+  background: #ff0000;
+}
+
+.program-social .twitter {
+  background: #000;
+}

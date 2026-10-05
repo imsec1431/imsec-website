@@ -1,0 +1,1051 @@
+/* =========================================================
+   T&P ACTIVITIES ADMIN
+========================================================= */
+
+.tp-activities-admin {
+  width: 100%;
+  min-height: 100vh;
+  padding: 28px;
+  background: #f5f7fb;
+  color: #172033;
+}
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.tp-activities-page-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 24px;
+}
+
+.tp-activities-page-header span {
+  display: block;
+  margin-bottom: 5px;
+  color: #1764aa;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.tp-activities-page-header h1 {
+  margin: 0;
+  color: #102d57;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.tp-activities-page-header p {
+  margin: 7px 0 0;
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.tp-activity-add-button,
+.tp-activity-save-button {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none !important;
+  border-radius: 7px !important;
+  background: #1764aa !important;
+  color: #fff !important;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: none !important;
+}
+
+.tp-activity-add-button {
+  min-height: 42px;
+  padding: 0 17px;
+}
+
+.tp-activity-save-button {
+  min-height: 40px;
+  padding: 0 17px;
+}
+
+.tp-activity-add-button:hover,
+.tp-activity-save-button:hover {
+  background: #0e4e8c !important;
+}
+
+.tp-activity-add-button:focus,
+.tp-activity-save-button:focus {
+  box-shadow: 0 0 0 3px rgba(23, 100, 170, 0.14) !important;
+}
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.tp-activities-card {
+  overflow: hidden;
+  border: 1px solid #e1e6ed !important;
+  border-radius: 12px !important;
+  background: #fff;
+  box-shadow: 0 6px 25px rgba(20, 43, 75, 0.05);
+}
+
+.tp-activities-card > .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 18px 22px;
+  border-bottom: 1px solid #e8ecf1;
+  background: #fff;
+}
+
+.tp-activities-card > .card-header h4 {
+  margin: 0;
+  color: #102d57;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.tp-activities-card > .card-header span {
+  display: block;
+  margin-top: 3px;
+  color: #98a2b3;
+  font-size: 11px;
+}
+
+.tp-activity-header-button {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 13px !important;
+  border: none !important;
+  border-radius: 6px !important;
+  background: #eef5fc !important;
+  color: #1764aa !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+}
+
+.tp-activity-header-button:hover {
+  background: #1764aa !important;
+  color: #fff !important;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.tp-activities-table {
+  margin: 0 !important;
+  vertical-align: middle;
+}
+
+.tp-activities-table thead th {
+  padding: 14px 18px;
+  border-bottom: 1px solid #e3e8ef;
+  background: #f8fafc;
+  color: #667085;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.tp-activities-table tbody td {
+  padding: 15px 18px;
+  border-color: #edf0f4;
+  color: #475467;
+  font-size: 12px;
+}
+
+.tp-activities-table tbody tr {
+  transition: background 0.18s ease;
+}
+
+.tp-activities-table tbody tr:hover {
+  background: #fafcff;
+}
+
+/* =========================================================
+   ACTIVITY TITLE
+========================================================= */
+
+.tp-activity-title-cell {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 270px;
+}
+
+.tp-activity-thumb {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 1px solid #e4e7ec;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #98a2b3;
+  font-size: 18px;
+}
+
+.tp-activity-thumb img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.tp-activity-title-cell strong {
+  display: block;
+  max-width: 310px;
+  overflow: hidden;
+  color: #172033;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.45;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tp-activity-title-cell small {
+  display: block;
+  max-width: 250px;
+  margin-top: 3px;
+  overflow: hidden;
+  color: #98a2b3;
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   CATEGORY
+========================================================= */
+
+.tp-activity-category {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 9px;
+  border-radius: 20px;
+  background: #eef5fc;
+  color: #1764aa;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.tp-activity-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.tp-activity-actions .btn {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none !important;
+  border-radius: 6px;
+  box-shadow: none !important;
+}
+
+.tp-activity-view {
+  background: #eef5fc !important;
+  color: #1764aa !important;
+}
+
+.tp-activity-edit {
+  background: #fff7e8 !important;
+  color: #b54708 !important;
+}
+
+.tp-activity-delete {
+  background: #fff1f1 !important;
+  color: #d92d20 !important;
+}
+
+.tp-activity-view:hover {
+  background: #1764aa !important;
+  color: #fff !important;
+}
+
+.tp-activity-edit:hover {
+  background: #b54708 !important;
+  color: #fff !important;
+}
+
+.tp-activity-delete:hover {
+  background: #d92d20 !important;
+  color: #fff !important;
+}
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.tp-activities-empty {
+  padding: 75px 25px;
+  text-align: center;
+}
+
+.tp-activities-empty-icon {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: #eef5fc;
+  color: #1764aa;
+  font-size: 25px;
+}
+
+.tp-activities-empty h4 {
+  margin: 0;
+  color: #102d57;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.tp-activities-empty p {
+  max-width: 450px;
+  margin: 8px auto 20px;
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.tp-activities-loading {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.tp-activities-loading .spinner-border {
+  width: 34px;
+  height: 34px;
+  margin-bottom: 17px;
+  color: #1764aa !important;
+}
+
+.tp-activities-loading h5 {
+  margin: 0;
+  color: #102d57;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.tp-activities-loading p {
+  margin: 5px 0 0;
+  color: #98a2b3;
+  font-size: 12px;
+}
+
+/* =========================================================
+   FORM MODAL
+========================================================= */
+
+.tp-activity-modal .modal-dialog {
+  max-width: 1050px;
+  margin: 1rem auto;
+}
+
+.tp-activity-modal .modal-content {
+  overflow: hidden;
+  border: none;
+  border-radius: 13px;
+  box-shadow: 0 20px 60px rgba(5, 20, 40, 0.2);
+}
+
+.tp-activity-modal .modal-header,
+.tp-activity-view-modal .modal-header {
+  padding: 18px 22px;
+  border-bottom: 1px solid #e8ecf1;
+  background: #fff;
+}
+
+.tp-activity-modal .modal-header small,
+.tp-activity-view-modal .modal-header small {
+  display: block;
+  margin-bottom: 3px;
+  color: #1764aa;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.tp-activity-modal .modal-title,
+.tp-activity-view-modal .modal-title {
+  color: #102d57;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.tp-activity-modal .modal-body,
+.tp-activity-view-modal .modal-body {
+  max-height: calc(100vh - 190px);
+  overflow-y: auto;
+  padding: 24px;
+}
+
+.tp-activity-modal .modal-body::-webkit-scrollbar,
+.tp-activity-view-modal .modal-body::-webkit-scrollbar {
+  width: 7px;
+}
+
+.tp-activity-modal .modal-body::-webkit-scrollbar-track,
+.tp-activity-view-modal .modal-body::-webkit-scrollbar-track {
+  background: #f5f7fa;
+}
+
+.tp-activity-modal .modal-body::-webkit-scrollbar-thumb,
+.tp-activity-view-modal .modal-body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #c8d0da;
+}
+
+.tp-activity-modal .modal-body::-webkit-scrollbar-thumb:hover,
+.tp-activity-view-modal .modal-body::-webkit-scrollbar-thumb:hover {
+  background: #aeb8c5;
+}
+
+.tp-activity-modal .modal-footer,
+.tp-activity-view-modal .modal-footer {
+  padding: 14px 22px;
+  border-top: 1px solid #e8ecf1;
+  background: #fff;
+}
+
+/* =========================================================
+   FORM SECTION
+========================================================= */
+
+.tp-activity-form-section {
+  margin-bottom: 25px;
+  padding: 19px;
+  border: 1px solid #e4e7ec;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.tp-activity-form-section:last-child {
+  margin-bottom: 0;
+}
+
+.tp-activity-form-section-title {
+  margin-bottom: 17px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #edf0f4;
+  color: #102d57;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   FORM CONTROLS
+========================================================= */
+
+.tp-activity-modal .form-label {
+  margin-bottom: 6px;
+  color: #344054;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.tp-activity-modal .form-control,
+.tp-activity-modal .form-select {
+  min-height: 40px;
+  border: 1px solid #d0d5dd;
+  border-radius: 6px;
+  color: #172033;
+  font-size: 12px;
+  box-shadow: none;
+}
+
+.tp-activity-modal textarea.form-control {
+  min-height: 105px;
+  resize: vertical;
+}
+
+.tp-activity-modal .form-control:focus,
+.tp-activity-modal .form-select:focus {
+  border-color: #1764aa;
+  box-shadow: 0 0 0 3px rgba(23, 100, 170, 0.1);
+}
+
+.tp-activity-modal .form-text {
+  color: #98a2b3;
+  font-size: 10px;
+}
+
+/* =========================================================
+   MAIN IMAGE PREVIEW
+========================================================= */
+
+.tp-main-image-preview {
+  position: relative;
+  height: 185px;
+  overflow: hidden;
+  border: 1px solid #e4e7ec;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.tp-main-image-preview img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.tp-main-image-preview span {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  padding: 5px 8px;
+  border-radius: 4px;
+  background: rgba(16, 45, 87, 0.8);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.tp-main-image-empty {
+  height: 185px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #98a2b3;
+}
+
+.tp-main-image-empty svg {
+  margin-bottom: 8px;
+  font-size: 28px;
+}
+
+.tp-main-image-empty span {
+  font-size: 11px;
+}
+
+/* =========================================================
+   GALLERY PREVIEW
+========================================================= */
+
+.tp-gallery-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.tp-gallery-preview-item {
+  position: relative;
+  height: 105px;
+  overflow: hidden;
+  border: 1px solid #e4e7ec;
+  border-radius: 7px;
+  background: #f8fafc;
+}
+
+.tp-gallery-preview-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.tp-gallery-preview-item button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(16, 24, 40, 0.78);
+  color: #fff;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.tp-gallery-preview-item button:hover {
+  background: #d92d20;
+}
+
+.tp-existing-gallery {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #edf0f4;
+}
+
+.tp-existing-gallery-title {
+  margin-bottom: 7px;
+  color: #344054;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.tp-existing-gallery > small {
+  display: block;
+  margin-top: 8px;
+  color: #98a2b3;
+  font-size: 10px;
+}
+
+/* =========================================================
+   SOCIAL MEDIA
+========================================================= */
+
+.tp-activity-modal .form-label svg {
+  margin-right: 3px;
+  vertical-align: -1px;
+}
+
+.tp-social-facebook {
+  color: #1877f2;
+}
+
+.tp-social-instagram {
+  color: #e4405f;
+}
+
+.tp-social-linkedin {
+  color: #0a66c2;
+}
+
+.tp-social-youtube {
+  color: #ff0000;
+}
+
+.tp-social-twitter {
+  color: #111827;
+}
+
+/* =========================================================
+   PUBLISH BOX
+========================================================= */
+
+.tp-publish-box {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  padding: 10px 14px;
+  border: 1px solid #e4e7ec;
+  border-radius: 7px;
+  background: #f8fafc;
+}
+
+.tp-publish-box .form-check {
+  margin: 0;
+}
+
+.tp-publish-box .form-check-label {
+  color: #344054;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.tp-publish-box .form-check-input {
+  cursor: pointer;
+}
+
+.tp-publish-box .form-check-input:checked {
+  background-color: #1764aa;
+  border-color: #1764aa;
+}
+
+/* =========================================================
+   VIEW MODAL
+========================================================= */
+
+.tp-activity-view-modal .modal-dialog {
+  max-width: 1050px;
+}
+
+.tp-view-main-image {
+  width: 100%;
+  height: 330px;
+  display: block;
+  object-fit: cover;
+  border-radius: 9px;
+  background: #f8fafc;
+}
+
+.tp-view-no-image {
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: #f8fafc;
+  color: #98a2b3;
+}
+
+.tp-view-no-image svg {
+  margin-bottom: 10px;
+  font-size: 35px;
+}
+
+.tp-view-no-image span {
+  font-size: 11px;
+}
+
+/* =========================================================
+   VIEW CONTENT
+========================================================= */
+
+.tp-view-content {
+  padding: 4px 4px 4px 15px;
+}
+
+.tp-view-category {
+  display: inline-flex;
+  margin-bottom: 9px;
+  padding: 5px 9px;
+  border-radius: 20px;
+  background: #eef5fc;
+  color: #1764aa;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.tp-view-content h2 {
+  margin: 0 0 17px;
+  color: #102d57;
+  font-size: 25px;
+  line-height: 1.3;
+  font-weight: 800;
+}
+
+.tp-view-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 15px 0;
+  border-top: 1px solid #edf0f4;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.tp-view-meta strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #98a2b3;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+
+.tp-view-meta span {
+  display: block;
+  color: #344054;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.tp-view-description {
+  margin-top: 17px;
+}
+
+.tp-view-description h5 {
+  margin: 0 0 7px;
+  color: #102d57;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.tp-view-description p {
+  margin: 0;
+  color: #667085;
+  font-size: 12px;
+  line-height: 1.8;
+  white-space: pre-line;
+}
+
+.tp-view-status {
+  margin-top: 16px;
+}
+
+/* =========================================================
+   VIEW SOCIAL
+========================================================= */
+
+.tp-view-social {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 17px;
+}
+
+.tp-view-social a {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.tp-view-social a:hover {
+  transform: translateY(-2px);
+  opacity: 0.85;
+}
+
+.tp-view-social .facebook {
+  background: #1877f2;
+  color: #fff;
+}
+
+.tp-view-social .instagram {
+  background: #e4405f;
+  color: #fff;
+}
+
+.tp-view-social .linkedin {
+  background: #0a66c2;
+  color: #fff;
+}
+
+.tp-view-social .youtube {
+  background: #ff0000;
+  color: #fff;
+}
+
+.tp-view-social .twitter {
+  background: #111827;
+  color: #fff;
+}
+
+/* =========================================================
+   VIEW GALLERY
+========================================================= */
+
+.tp-view-gallery {
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid #edf0f4;
+}
+
+.tp-view-gallery h4 {
+  margin: 0 0 15px;
+  color: #102d57;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.tp-view-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.tp-view-gallery-grid a {
+  display: block;
+  height: 125px;
+  overflow: hidden;
+  border-radius: 7px;
+  background: #f8fafc;
+}
+
+.tp-view-gallery-grid img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.tp-view-gallery-grid a:hover img {
+  transform: scale(1.04);
+}
+
+/* =========================================================
+   ALERT
+========================================================= */
+
+.tp-activities-admin .alert {
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+  .tp-activities-admin {
+    padding: 22px;
+  }
+
+  .tp-gallery-preview-grid,
+  .tp-view-gallery-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .tp-view-main-image,
+  .tp-view-no-image {
+    height: 280px;
+    margin-bottom: 20px;
+  }
+
+  .tp-view-content {
+    padding-left: 0;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .tp-activities-admin {
+    padding: 18px 14px;
+  }
+
+  .tp-activities-page-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .tp-activities-page-header h1 {
+    font-size: 25px;
+  }
+
+  .tp-activity-add-button {
+    width: 100%;
+  }
+
+  .tp-activities-card > .card-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .tp-activity-header-button {
+    width: 100%;
+  }
+
+  .tp-activity-modal .modal-dialog,
+  .tp-activity-view-modal .modal-dialog {
+    margin: 0.5rem;
+  }
+
+  .tp-activity-modal .modal-body,
+  .tp-activity-view-modal .modal-body {
+    max-height: calc(100vh - 180px);
+    padding: 17px;
+  }
+
+  .tp-activity-form-section {
+    padding: 15px;
+  }
+
+  .tp-gallery-preview-grid,
+  .tp-view-gallery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .tp-view-meta {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .tp-activities-admin {
+    padding: 14px 9px;
+  }
+
+  .tp-activities-page-header h1 {
+    font-size: 22px;
+  }
+
+  .tp-activities-card > .card-header {
+    padding: 15px;
+  }
+
+  .tp-activities-table tbody td {
+    padding: 11px;
+  }
+
+  .tp-activity-title-cell {
+    min-width: 235px;
+  }
+
+  .tp-activity-thumb {
+    width: 42px;
+    height: 42px;
+  }
+
+  .tp-gallery-preview-grid,
+  .tp-view-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tp-gallery-preview-item {
+    height: 120px;
+  }
+
+  .tp-view-gallery-grid a {
+    height: 140px;
+  }
+
+  .tp-view-content h2 {
+    font-size: 21px;
+  }
+
+  .tp-view-main-image,
+  .tp-view-no-image {
+    height: 220px;
+  }
+}

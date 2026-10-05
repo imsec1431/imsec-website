@@ -1,0 +1,492 @@
+/* =========================================================
+   DEPARTMENT RESEARCH ABOUT
+   IMSEC ADMIN - PREMIUM COMPACT DESIGN
+   ========================================================= */
+
+.department-research-about-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  padding: 24px;
+  color: #172033;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.department-research-about-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 22px;
+}
+
+.department-research-about-title-section {
+  min-width: 0;
+}
+
+.department-research-about-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  background: transparent;
+  color: #1764aa;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 0;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.department-research-about-back-btn:hover {
+  color: #0a2e5c;
+  transform: translateX(-2px);
+}
+
+.department-research-about-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.department-research-about-icon {
+  width: 52px;
+  height: 52px;
+  flex: 0 0 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0a2e5c;
+  color: #fdb913;
+  border-radius: 14px;
+  font-size: 22px;
+  box-shadow: 0 8px 20px rgba(10, 46, 92, 0.14);
+}
+
+.department-research-about-label {
+  display: block;
+  color: #1764aa;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  margin-bottom: 4px;
+}
+
+.department-research-about-heading h1 {
+  margin: 0;
+  color: #0a2e5c;
+  font-size: 27px;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.department-research-about-heading p {
+  margin: 5px 0 0;
+  color: #6d7788;
+  font-size: 13px;
+}
+
+/* =========================================================
+   ADD BUTTON
+   ========================================================= */
+
+.department-research-about-add-btn,
+.department-research-about-empty-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 0;
+  border-radius: 9px;
+  background: #0a2e5c;
+  color: #fff;
+  padding: 11px 17px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 7px 16px rgba(10, 46, 92, 0.16);
+  transition: 0.2s ease;
+}
+
+.department-research-about-add-btn:hover,
+.department-research-about-empty-btn:hover {
+  background: #1764aa;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.department-research-about-error {
+  margin-bottom: 18px;
+  padding: 12px 15px;
+  border: 1px solid #f0c5c5;
+  border-radius: 9px;
+  background: #fff5f5;
+  color: #b42318;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.department-research-about-content {
+  width: 100%;
+}
+
+/* =========================================================
+   MAIN CARD
+   ========================================================= */
+
+.department-research-about-card {
+  background: #fff;
+  border: 1px solid #e5eaf1;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(16, 24, 40, 0.06);
+}
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.department-research-about-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 22px;
+  border-bottom: 1px solid #edf0f4;
+  background: linear-gradient(135deg, #ffffff 0%, #f9fbfe 100%);
+}
+
+.department-research-about-card-label {
+  display: block;
+  margin-bottom: 4px;
+  color: #8993a4;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.department-research-about-card-header h2 {
+  margin: 0;
+  color: #0a2e5c;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.department-research-about-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.department-research-about-edit-btn,
+.department-research-about-delete-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.department-research-about-edit-btn {
+  background: #eef6ff;
+  border-color: #d6e8fa;
+  color: #1764aa;
+}
+
+.department-research-about-edit-btn:hover {
+  background: #1764aa;
+  border-color: #1764aa;
+  color: #fff;
+}
+
+.department-research-about-delete-btn {
+  background: #fff2f2;
+  border-color: #f4d3d3;
+  color: #c62828;
+}
+
+.department-research-about-delete-btn:hover {
+  background: #c62828;
+  border-color: #c62828;
+  color: #fff;
+}
+
+.department-research-about-delete-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.department-research-about-meta {
+  padding: 13px 22px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.department-research-about-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 30px;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.department-research-about-status::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.department-research-about-status.active {
+  background: #eaf8f0;
+  color: #16834d;
+}
+
+.department-research-about-status.active::before {
+  background: #20a464;
+}
+
+.department-research-about-status.inactive {
+  background: #f1f3f5;
+  color: #697386;
+}
+
+.department-research-about-status.inactive::before {
+  background: #8b95a5;
+}
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+.department-research-about-body {
+  padding: 25px 28px 30px;
+}
+
+.department-research-about-body h3 {
+  margin: 0 0 15px;
+  color: #0a2e5c;
+  font-size: 16px;
+  font-weight: 800;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #fdb913;
+  display: inline-block;
+}
+
+.department-research-about-text {
+  color: #4d596b;
+  font-size: 14px;
+  line-height: 1.85;
+  white-space: normal;
+}
+
+.department-research-about-text p {
+  margin: 0 0 12px;
+}
+
+.department-research-about-text p:last-child {
+  margin-bottom: 0;
+}
+
+.department-research-about-no-content {
+  padding: 20px;
+  border: 1px dashed #d9dee7;
+  border-radius: 10px;
+  background: #fafbfc;
+  color: #8993a4;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.department-research-about-empty {
+  max-width: 620px;
+  margin: 35px auto;
+  padding: 50px 30px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #e5eaf1;
+  border-radius: 15px;
+  box-shadow: 0 8px 28px rgba(16, 24, 40, 0.05);
+}
+
+.department-research-about-empty-icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #eef6ff;
+  color: #1764aa;
+  font-size: 25px;
+}
+
+.department-research-about-empty h2 {
+  margin: 0 0 8px;
+  color: #0a2e5c;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.department-research-about-empty p {
+  max-width: 450px;
+  margin: 0 auto 22px;
+  color: #778195;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.department-research-about-loading {
+  min-height: 55vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  color: #6d7788;
+  font-size: 13px;
+}
+
+.department-research-about-loader {
+  width: 35px;
+  height: 35px;
+  border: 3px solid #dce5ef;
+  border-top-color: #1764aa;
+  border-radius: 50%;
+  animation: departmentResearchAboutSpin 0.8s linear infinite;
+}
+
+@keyframes departmentResearchAboutSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .department-research-about-page {
+    padding: 16px;
+  }
+
+  .department-research-about-header {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .department-research-about-add-btn {
+    width: 100%;
+  }
+
+  .department-research-about-heading h1 {
+    font-size: 23px;
+  }
+
+  .department-research-about-card-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .department-research-about-actions {
+    width: 100%;
+  }
+
+  .department-research-about-edit-btn,
+  .department-research-about-delete-btn {
+    flex: 1;
+  }
+
+  .department-research-about-body {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .department-research-about-page {
+    padding: 12px;
+  }
+
+  .department-research-about-heading {
+    align-items: flex-start;
+  }
+
+  .department-research-about-icon {
+    width: 45px;
+    height: 45px;
+    flex-basis: 45px;
+    font-size: 19px;
+  }
+
+  .department-research-about-heading h1 {
+    font-size: 20px;
+  }
+
+  .department-research-about-heading p {
+    font-size: 12px;
+  }
+
+  .department-research-about-card-header {
+    padding: 17px;
+  }
+
+  .department-research-about-meta {
+    padding: 11px 17px;
+  }
+
+  .department-research-about-body {
+    padding: 18px;
+  }
+
+  .department-research-about-actions {
+    flex-direction: column;
+  }
+
+  .department-research-about-edit-btn,
+  .department-research-about-delete-btn {
+    width: 100%;
+  }
+
+  .department-research-about-empty {
+    margin: 20px auto;
+    padding: 35px 20px;
+  }
+}

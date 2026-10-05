@@ -1,0 +1,603 @@
+/* =========================================================
+   COUNSELLING SUPPORT - PUBLIC PAGE
+========================================================= */
+
+.counselling-public-page {
+  background: #f7f9fc;
+  color: #26384d;
+}
+
+/* =========================================================
+   COMMON CONTAINER
+========================================================= */
+
+.counselling-container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.counselling-public-hero {
+  position: relative;
+  min-height: 320px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #0b2942 0%, #123f63 55%, #0d3455 100%);
+}
+
+.counselling-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+
+  padding: 55px 0;
+}
+
+.counselling-breadcrumb {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+.counselling-hero-line {
+  width: 58px;
+  height: 4px;
+  border-radius: 4px;
+  background: #d2a24c;
+  margin-bottom: 22px;
+}
+
+.counselling-hero-content h1 {
+  margin: 0 0 12px;
+
+  color: #ffffff;
+
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.counselling-hero-content p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   HERO DECORATION
+========================================================= */
+
+.counselling-hero-circle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.counselling-circle-one {
+  width: 360px;
+  height: 360px;
+
+  right: -110px;
+  top: -140px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.counselling-circle-two {
+  width: 230px;
+  height: 230px;
+
+  right: 130px;
+  bottom: -145px;
+
+  border: 1px solid rgba(210, 162, 76, 0.18);
+}
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+.counselling-intro-section {
+  padding: 75px 0 35px;
+}
+
+.counselling-section-heading {
+  margin-bottom: 30px;
+}
+
+.counselling-section-heading span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #c99a3e;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.counselling-section-heading h2 {
+  margin: 0;
+
+  color: #0b2942;
+
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.2;
+  font-weight: 750;
+}
+
+.counselling-intro-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+
+  padding: 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5eaf0;
+  border-radius: 16px;
+
+  box-shadow: 0 12px 35px rgba(10, 46, 92, 0.07);
+}
+
+.counselling-intro-icon {
+  width: 58px;
+  height: 58px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  color: #ffffff;
+  background: linear-gradient(135deg, #0a2e5c, #174e7d);
+
+  font-size: 24px;
+}
+
+.counselling-intro-content p {
+  margin: 0;
+
+  color: #536273;
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   COUNSELLOR SECTION
+========================================================= */
+
+.counselling-support-section {
+  padding: 35px 0 75px;
+}
+
+.counselling-support-card {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 30px;
+
+  padding: 35px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8ef;
+  border-radius: 18px;
+
+  box-shadow: 0 15px 40px rgba(10, 46, 92, 0.08);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.counselling-support-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 5px;
+
+  background: linear-gradient(180deg, #c99a3e, #0a2e5c);
+}
+
+.counselling-support-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 22px 50px rgba(10, 46, 92, 0.12);
+}
+
+/* =========================================================
+   PERSON ICON
+========================================================= */
+
+.counselling-person-icon {
+  width: 105px;
+  height: 105px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #0a2e5c, #174e7d);
+
+  font-size: 43px;
+
+  box-shadow: 0 10px 25px rgba(10, 46, 92, 0.18);
+}
+
+/* =========================================================
+   PERSON CONTENT
+========================================================= */
+
+.counselling-person-content {
+  min-width: 0;
+}
+
+.counselling-card-label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #c99a3e;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+.counselling-person-content h3 {
+  margin: 0 0 6px;
+
+  color: #0a2e5c;
+
+  font-size: 27px;
+  font-weight: 750;
+}
+
+.counselling-designation {
+  margin: 0 0 18px;
+
+  color: #667585;
+
+  font-size: 15px;
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.counselling-contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.counselling-contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 9px 13px;
+
+  border-radius: 8px;
+
+  background: #f4f7fa;
+
+  color: #294762;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 550;
+
+  transition: all 0.2s ease;
+}
+
+.counselling-contact-item svg {
+  color: #c99a3e;
+}
+
+.counselling-contact-item:hover {
+  color: #0a2e5c;
+  background: #eaf0f5;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   INFORMATION
+========================================================= */
+
+.counselling-info-section {
+  padding: 0 0 80px;
+}
+
+.counselling-info-box {
+  position: relative;
+
+  padding: 38px 40px 38px 45px;
+
+  background: linear-gradient(135deg, #0b2942, #123f63);
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow: 0 15px 40px rgba(10, 46, 92, 0.13);
+}
+
+.counselling-info-accent {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 6px;
+
+  background: #d2a24c;
+}
+
+.counselling-info-box > span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #d2a24c;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.counselling-info-box h2 {
+  margin: 0 0 12px;
+
+  color: #ffffff;
+
+  font-size: 28px;
+  font-weight: 750;
+}
+
+.counselling-info-box p {
+  max-width: 850px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.counselling-public-loading {
+  min-height: 500px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: #0a2e5c;
+}
+
+.counselling-loading-spinner {
+  width: 42px;
+  height: 42px;
+
+  margin-bottom: 15px;
+
+  border: 4px solid #e0e6ec;
+  border-top-color: #0a2e5c;
+
+  border-radius: 50%;
+
+  animation: counsellingSpin 0.8s linear infinite;
+}
+
+.counselling-public-loading p {
+  margin: 0;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+@keyframes counsellingSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.counselling-public-error {
+  width: min(700px, calc(100% - 40px));
+
+  margin: 80px auto;
+
+  padding: 35px;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #f0cccc;
+  border-radius: 14px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.counselling-public-error h3 {
+  margin: 0 0 10px;
+
+  color: #a52a2a;
+}
+
+.counselling-public-error p {
+  margin: 0;
+
+  color: #687583;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 767px) {
+  .counselling-public-hero {
+    min-height: 280px;
+  }
+
+  .counselling-hero-content {
+    padding: 45px 0;
+  }
+
+  .counselling-intro-section {
+    padding-top: 55px;
+  }
+
+  .counselling-intro-content {
+    padding: 25px;
+  }
+
+  .counselling-support-card {
+    padding: 28px;
+    gap: 22px;
+  }
+
+  .counselling-person-icon {
+    width: 85px;
+    height: 85px;
+    font-size: 35px;
+  }
+
+  .counselling-person-content h3 {
+    font-size: 23px;
+  }
+
+  .counselling-info-box {
+    padding: 30px 30px 30px 35px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+  .counselling-container,
+  .counselling-hero-content {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .counselling-public-hero {
+    min-height: 260px;
+  }
+
+  .counselling-hero-content h1 {
+    font-size: 36px;
+  }
+
+  .counselling-hero-content p {
+    font-size: 15px;
+  }
+
+  .counselling-breadcrumb {
+    font-size: 12px;
+  }
+
+  .counselling-intro-section {
+    padding: 45px 0 25px;
+  }
+
+  .counselling-intro-content {
+    flex-direction: column;
+    padding: 22px;
+  }
+
+  .counselling-intro-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .counselling-intro-content p {
+    font-size: 15px;
+  }
+
+  .counselling-support-section {
+    padding: 25px 0 55px;
+  }
+
+  .counselling-support-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .counselling-person-icon {
+    width: 90px;
+    height: 90px;
+  }
+
+  .counselling-person-content h3 {
+    font-size: 22px;
+  }
+
+  .counselling-contact-list {
+    justify-content: center;
+  }
+
+  .counselling-info-section {
+    padding-bottom: 55px;
+  }
+
+  .counselling-info-box {
+    padding: 28px 22px 28px 30px;
+  }
+
+  .counselling-info-box h2 {
+    font-size: 23px;
+  }
+}

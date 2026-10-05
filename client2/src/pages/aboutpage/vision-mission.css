@@ -1,0 +1,488 @@
+/* =====================================
+   Vision & Mission Page
+===================================== */
+
+/* =====================================
+   Vision & Mission Hero
+   Premium style like Approvals
+===================================== */
+
+.vm-hero {
+  position: relative;
+  min-height: 330px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  color: #fff;
+
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #071d3a 0%, #0a2e5c 50%, #123f7a 100%);
+}
+
+/* =====================================
+   Decorative Background
+===================================== */
+
+.vm-hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 15% 45%,
+      rgba(255, 255, 255, 0.1),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 85% 25%,
+      rgba(253, 185, 19, 0.08),
+      transparent 30%
+    );
+
+  pointer-events: none;
+}
+
+/* =====================================
+   Decorative Circle
+===================================== */
+
+.vm-hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  right: -190px;
+  bottom: -275px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  box-shadow:
+    0 0 0 45px rgba(255, 255, 255, 0.025),
+    0 0 0 90px rgba(255, 255, 255, 0.018);
+
+  pointer-events: none;
+}
+
+/* =====================================
+   Container
+===================================== */
+
+.vm-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* =====================================
+   Hero Title
+===================================== */
+
+.vm-hero h1 {
+  margin: 0 0 14px;
+
+  color: #fff;
+
+  font-size: clamp(2.5rem, 5vw, 4rem);
+
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  letter-spacing: -1px;
+}
+
+/* =====================================
+   Breadcrumb
+===================================== */
+
+.vm-hero p {
+  margin: 0;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  color: #fff !important;
+}
+
+/* =====================================
+   Tablet
+===================================== */
+
+@media (max-width: 992px) {
+  .vm-hero {
+    min-height: 300px;
+  }
+
+  .vm-hero h1 {
+    font-size: 42px;
+  }
+}
+
+/* =====================================
+   Mobile
+===================================== */
+
+@media (max-width: 768px) {
+  .vm-hero {
+    min-height: 260px;
+  }
+
+  .vm-hero h1 {
+    font-size: 34px;
+    letter-spacing: -0.5px;
+  }
+
+  .vm-hero p {
+    font-size: 15px;
+  }
+}
+
+/* =====================================
+   Small Mobile
+===================================== */
+
+@media (max-width: 576px) {
+  .vm-hero {
+    min-height: 240px;
+  }
+
+  .vm-hero h1 {
+    font-size: 29px;
+  }
+
+  .vm-hero p {
+    font-size: 14px;
+  }
+}
+/* ==========================================
+   Vision Mission
+==========================================*/
+
+.vision-section {
+  background: #fff;
+}
+
+.vision-card {
+  background: white;
+
+  padding: 40px;
+
+  border-radius: 22px;
+
+  text-align: center;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  height: 100%;
+}
+
+.vision-card:hover {
+  transform: translateY(-12px);
+
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+}
+
+.icon-box {
+  width: 90px;
+
+  height: 90px;
+
+  border-radius: 50%;
+
+  background: #0a2e5c;
+
+  color: white;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  margin: auto;
+
+  font-size: 38px;
+
+  margin-bottom: 25px;
+
+  transition: 0.35s;
+}
+
+.vision-card:hover .icon-box {
+  background: #fdb913;
+
+  color: #0a2e5c;
+}
+
+.vision-card h3 {
+  color: #0a2e5c;
+
+  font-weight: 700;
+
+  margin-bottom: 20px;
+}
+
+.vision-card p {
+  color: #666;
+
+  line-height: 1.9;
+}
+
+.vision-card ul {
+  padding-left: 20px;
+
+  text-align: left;
+}
+
+.vision-card ul li {
+  margin-bottom: 12px;
+
+  color: #666;
+}
+
+/* ========================= */
+
+.section-tag {
+  color: #fdb913;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.3rem);
+  font-weight: 800;
+  color: #0a2e5c;
+  margin-bottom: 20px;
+}
+
+.section-title span {
+  color: #fdb913;
+}
+
+.section-text {
+  color: #666;
+  line-height: 1.9;
+  font-size: 17px;
+}
+
+/* ========================= */
+
+.mission-section {
+  background: #f8f9fb;
+}
+
+.mission-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 35px 25px;
+  text-align: center;
+  height: 100%;
+  transition: 0.35s;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  border: 2px solid transparent;
+}
+
+.mission-card:hover {
+  transform: translateY(-10px);
+  border-color: #fdb913;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.mission-icon {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background: #0a2e5c;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-size: 36px;
+  transition: 0.35s;
+  margin-bottom: 25px;
+}
+
+.mission-card:hover .mission-icon {
+  background: #fdb913;
+  color: #0a2e5c;
+  transform: rotate(10deg);
+}
+
+.mission-card h4 {
+  color: #0a2e5c;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.mission-card p {
+  color: #666;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ========================= */
+
+.value-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 25px 15px;
+  text-align: center;
+  font-weight: 700;
+  color: #0a2e5c;
+  transition: 0.35s;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+.value-card:hover {
+  background: #0a2e5c;
+  color: #fdb913;
+  transform: translateY(-8px);
+}
+
+/* ========================= */
+
+.cta-section {
+  background: linear-gradient(135deg, #0a2e5c, #123f7a);
+  padding: 80px 0;
+  color: white;
+}
+
+.cta-section h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.cta-section p {
+  color: #ddd;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+.cta-section .btn {
+  font-weight: 600;
+  padding: 12px 35px;
+  transition: 0.3s;
+}
+
+.cta-section .btn-warning:hover {
+  transform: translateY(-4px);
+}
+
+.cta-section .btn-outline-light:hover {
+  transform: translateY(-4px);
+}
+
+/* ========================= */
+
+img {
+  transition: 0.5s;
+}
+
+img:hover {
+  transform: scale(1.03);
+}
+
+/* ========================= */
+
+@media (max-width: 992px) {
+  .vm-hero {
+    height: 320px;
+  }
+
+  .vm-hero h1 {
+    font-size: 42px;
+  }
+
+  .section-title {
+    text-align: center;
+  }
+
+  .section-tag {
+    text-align: center;
+  }
+
+  .section-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .vm-hero {
+    height: 260px;
+  }
+
+  .vm-hero h1 {
+    font-size: 32px;
+  }
+
+  .vm-hero p {
+    font-size: 15px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-text {
+    font-size: 15px;
+  }
+
+  .mission-card {
+    padding: 25px 18px;
+  }
+
+  .mission-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 28px;
+  }
+
+  .value-card {
+    padding: 20px 10px;
+    font-size: 14px;
+  }
+
+  .cta-section {
+    padding: 60px 20px;
+  }
+
+  .cta-section .btn {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .vm-hero h1 {
+    font-size: 28px;
+  }
+
+  .mission-card h4 {
+    font-size: 20px;
+  }
+
+  .cta-section h2 {
+    font-size: 28px;
+  }
+}

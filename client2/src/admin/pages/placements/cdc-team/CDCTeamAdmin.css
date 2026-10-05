@@ -1,0 +1,1443 @@
+/* =========================================================
+   CDC TEAM ADMIN PAGE
+========================================================= */
+
+.cdc-team-admin-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px;
+
+  background: linear-gradient(180deg, #f7f9fc 0%, #f3f6fa 100%);
+
+  color: #172033;
+}
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.cdc-admin-page-header {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 30px;
+  padding: 28px 32px;
+
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+
+  border: 1px solid #e3e9f1;
+  border-radius: 18px;
+
+  box-shadow: 0 10px 35px rgba(15, 42, 75, 0.06);
+}
+
+.cdc-admin-page-header::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 5px;
+  height: 100%;
+
+  background: linear-gradient(180deg, #1764aa, #0d3972);
+}
+
+.cdc-admin-page-header::after {
+  content: "";
+
+  position: absolute;
+
+  right: -90px;
+  top: -110px;
+
+  width: 260px;
+  height: 260px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(23, 100, 170, 0.08),
+    transparent 70%
+  );
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.cdc-admin-eyebrow {
+  position: relative;
+  z-index: 1;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 8px;
+
+  color: #1764aa;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+
+  text-transform: uppercase;
+}
+
+.cdc-admin-eyebrow svg {
+  font-size: 13px;
+}
+
+/* =========================================================
+   PAGE TITLE
+========================================================= */
+
+.cdc-admin-page-header h1 {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+
+  color: #0f2d55;
+
+  font-size: 30px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+}
+
+.cdc-admin-page-header p {
+  position: relative;
+  z-index: 1;
+
+  margin: 7px 0 0;
+
+  max-width: 600px;
+
+  color: #697586;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   ADD BUTTON
+========================================================= */
+
+.cdc-add-button {
+  position: relative;
+  z-index: 2;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  min-width: 170px;
+
+  padding: 12px 20px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: linear-gradient(135deg, #1764aa, #0e4f8d);
+
+  box-shadow: 0 7px 18px rgba(23, 100, 170, 0.2);
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cdc-add-button:hover {
+  background: linear-gradient(135deg, #155b9d, #0b467d);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 11px 24px rgba(23, 100, 170, 0.25);
+}
+
+/* =========================================================
+   GROUP
+========================================================= */
+
+.cdc-admin-group {
+  margin-bottom: 42px;
+}
+
+/* =========================================================
+   GROUP TITLE
+========================================================= */
+
+.cdc-admin-group-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 18px;
+
+  padding: 0 3px 12px;
+
+  border-bottom: 1px solid #dde4ec;
+
+  color: #1764aa;
+}
+
+.cdc-admin-group-title > svg {
+  font-size: 17px;
+}
+
+.cdc-admin-group-title h2 {
+  margin: 0;
+
+  color: #102d57;
+
+  font-size: 20px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.2px;
+}
+
+/* =========================================================
+   MEMBER CARD
+========================================================= */
+
+.cdc-admin-member-card {
+  position: relative;
+
+  display: flex;
+
+  height: 100%;
+
+  min-height: 225px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e7ef;
+
+  border-radius: 16px;
+
+  box-shadow: 0 7px 25px rgba(20, 43, 75, 0.055);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.cdc-admin-member-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #cdd9e7;
+
+  box-shadow: 0 15px 35px rgba(20, 43, 75, 0.1);
+}
+
+/* =========================================================
+   MEMBER IMAGE
+========================================================= */
+
+.cdc-admin-member-image {
+  position: relative;
+
+  width: 160px;
+
+  min-width: 160px;
+
+  overflow: hidden;
+
+  background: linear-gradient(145deg, #edf3f9, #e5edf6);
+}
+
+.cdc-admin-member-image::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(180deg, transparent 55%, rgba(9, 31, 57, 0.1));
+
+  pointer-events: none;
+}
+
+.cdc-admin-member-image img {
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  min-height: 225px;
+
+  object-fit: cover;
+
+  transition: transform 0.35s ease;
+}
+
+.cdc-admin-member-card:hover .cdc-admin-member-image img {
+  transform: scale(1.04);
+}
+
+/* =========================================================
+   NO IMAGE
+========================================================= */
+
+.cdc-admin-no-image {
+  min-height: 225px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #9aa8b8;
+
+  font-size: 42px;
+}
+
+/* =========================================================
+   MEMBER CONTENT
+========================================================= */
+
+.cdc-admin-member-content {
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 20px;
+}
+
+/* =========================================================
+   MEMBER TOP
+========================================================= */
+
+.cdc-admin-member-top {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 12px;
+}
+
+/* =========================================================
+   ROLE BADGE
+========================================================= */
+
+.cdc-role-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  margin-bottom: 8px;
+
+  padding: 5px 9px;
+
+  border-radius: 5px !important;
+
+  background: #eaf3fc !important;
+
+  color: #1764aa !important;
+
+  font-size: 9px !important;
+
+  font-weight: 800;
+
+  letter-spacing: 0.4px;
+
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   NAME
+========================================================= */
+
+.cdc-admin-member-top h3 {
+  margin: 0;
+
+  color: #102d57;
+
+  font-size: 18px;
+
+  line-height: 1.3;
+
+  font-weight: 800;
+}
+
+/* =========================================================
+   DESIGNATION
+========================================================= */
+
+.cdc-admin-member-top p {
+  margin: 5px 0 0;
+
+  color: #667085;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   PUBLISH STATUS
+========================================================= */
+
+.cdc-published,
+.cdc-hidden {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  flex-shrink: 0;
+
+  padding: 5px 8px;
+
+  border-radius: 20px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+.cdc-published {
+  background: #eaf8f0;
+
+  color: #16834b;
+}
+
+.cdc-hidden {
+  background: #fff5df;
+
+  color: #a66a00;
+}
+
+/* =========================================================
+   MEMBER DETAILS
+========================================================= */
+
+.cdc-admin-member-details {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  margin-top: 17px;
+
+  padding-top: 14px;
+
+  border-top: 1px solid #edf1f5;
+
+  color: #667085;
+
+  font-size: 11px;
+
+  line-height: 1.4;
+}
+
+.cdc-admin-member-details span {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  min-width: 0;
+}
+
+.cdc-admin-member-details svg {
+  flex-shrink: 0;
+
+  color: #1764aa;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   CARD ACTIONS
+========================================================= */
+
+.cdc-admin-card-actions {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: auto;
+
+  padding-top: 18px;
+}
+
+.cdc-admin-card-actions button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 5px;
+
+  min-height: 32px;
+
+  padding: 6px 10px;
+
+  border-radius: 6px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.cdc-admin-card-actions button:hover {
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.cdc-admin-empty {
+  padding: 80px 30px;
+
+  text-align: center;
+
+  border: 1px dashed #ccd6e2;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow: 0 5px 20px rgba(20, 43, 75, 0.03);
+}
+
+.cdc-admin-empty > svg {
+  margin-bottom: 17px;
+
+  color: #a0adbd;
+
+  font-size: 45px;
+}
+
+.cdc-admin-empty h3 {
+  margin: 0;
+
+  color: #344054;
+
+  font-size: 20px;
+
+  font-weight: 800;
+}
+
+.cdc-admin-empty p {
+  margin: 8px 0 20px;
+
+  color: #7a8496;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.cdc-admin-loading {
+  min-height: 65vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.cdc-admin-loading .spinner-border {
+  width: 34px;
+
+  height: 34px;
+}
+
+.cdc-admin-loading h4 {
+  margin-top: 16px;
+
+  color: #102d57;
+
+  font-size: 18px;
+
+  font-weight: 700;
+}
+
+/* =========================================================
+   ALERT
+========================================================= */
+
+.cdc-team-admin-page .alert {
+  margin-bottom: 22px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  font-size: 13px;
+
+  box-shadow: 0 4px 15px rgba(20, 43, 75, 0.04);
+}
+
+/* =========================================================
+   ADD / EDIT MODAL
+========================================================= */
+
+.cdc-form-modal-dialog {
+  width: calc(100% - 40px);
+
+  max-width: 1120px;
+
+  height: calc(100vh - 40px);
+
+  margin: 20px auto;
+
+  display: flex;
+
+  align-items: center;
+}
+
+.cdc-form-modal-content {
+  width: 100%;
+
+  height: calc(100vh - 40px);
+
+  max-height: calc(100vh - 40px);
+
+  display: flex;
+
+  flex-direction: column;
+
+  overflow: hidden;
+
+  border: none;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-shadow: 0 30px 80px rgba(10, 31, 55, 0.25);
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.cdc-form-modal-form {
+  height: 100%;
+
+  min-height: 0;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.cdc-form-modal-header {
+  flex: 0 0 auto;
+
+  padding: 20px 26px;
+
+  background: linear-gradient(135deg, #ffffff, #f8fbff);
+
+  border-bottom: 1px solid #e6ebf1;
+}
+
+.cdc-form-modal-header .modal-title {
+  color: #102d57;
+
+  font-size: 20px;
+
+  font-weight: 800;
+}
+
+/* =========================================================
+   MODAL BODY
+========================================================= */
+
+.cdc-form-modal-body {
+  flex: 1 1 auto;
+
+  min-height: 0;
+
+  height: auto;
+
+  overflow-y: auto !important;
+
+  overflow-x: hidden !important;
+
+  padding: 28px;
+
+  background: #ffffff;
+
+  -webkit-overflow-scrolling: touch;
+
+  overscroll-behavior: contain;
+}
+
+.cdc-form-modal-content .modal-body {
+  min-height: 0 !important;
+
+  max-height: none !important;
+
+  overflow-y: auto !important;
+
+  overflow-x: hidden !important;
+}
+
+/* =========================================================
+   FORM SECTIONS / ROW SPACING
+========================================================= */
+
+.cdc-form-modal-body .row {
+  --bs-gutter-y: 18px;
+}
+
+.cdc-form-modal-body .form-group {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   FORM LABEL
+========================================================= */
+
+.cdc-form-modal-body .form-label {
+  margin-bottom: 7px;
+
+  color: #344054;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.cdc-form-modal-body .form-label::after {
+  color: #d92d20;
+}
+
+/* =========================================================
+   FORM CONTROLS
+========================================================= */
+
+.cdc-form-modal-body .form-control,
+.cdc-form-modal-body .form-select {
+  min-height: 43px;
+
+  padding: 9px 12px;
+
+  border: 1px solid #d7dee8;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #27364b;
+
+  font-size: 13px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cdc-form-modal-body textarea.form-control {
+  min-height: auto;
+
+  line-height: 1.6;
+
+  resize: vertical;
+}
+
+.cdc-form-modal-body .form-control::placeholder {
+  color: #a1aaba;
+}
+
+.cdc-form-modal-body .form-control:hover,
+.cdc-form-modal-body .form-select:hover {
+  border-color: #bdc9d8;
+}
+
+.cdc-form-modal-body .form-control:focus,
+.cdc-form-modal-body .form-select:focus {
+  border-color: #1764aa;
+
+  box-shadow: 0 0 0 3px rgba(23, 100, 170, 0.1);
+}
+
+/* =========================================================
+   FORM HELP TEXT
+========================================================= */
+
+.cdc-form-modal-body .form-text {
+  margin-top: 5px;
+
+  color: #8a95a5;
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   CHECKBOX / SWITCH
+========================================================= */
+
+.cdc-form-modal-body .form-check-input {
+  cursor: pointer;
+}
+
+.cdc-form-modal-body .form-check-label {
+  color: #475467;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   IMAGE PREVIEW
+========================================================= */
+
+.cdc-admin-image-preview {
+  position: relative;
+
+  width: 180px;
+
+  height: 180px;
+
+  margin-top: 14px;
+
+  overflow: hidden;
+
+  border: 1px solid #dbe2ea;
+
+  border-radius: 12px;
+
+  background: linear-gradient(145deg, #f5f7fa, #edf1f5);
+
+  box-shadow: 0 5px 15px rgba(20, 43, 75, 0.06);
+}
+
+.cdc-admin-image-preview img {
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* =========================================================
+   MODAL FOOTER
+========================================================= */
+
+.cdc-form-modal-footer {
+  flex: 0 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 8px;
+
+  padding: 15px 26px;
+
+  background: #fafbfd;
+
+  border-top: 1px solid #e6ebf1;
+}
+
+.cdc-form-modal-footer button {
+  min-width: 105px;
+
+  border-radius: 7px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+/* =========================================================
+   MODAL SCROLLBAR
+========================================================= */
+
+.cdc-form-modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cdc-form-modal-body::-webkit-scrollbar-track {
+  background: #f4f6f8;
+}
+
+.cdc-form-modal-body::-webkit-scrollbar-thumb {
+  background: #c1cad6;
+
+  border-radius: 10px;
+
+  border: 2px solid #f4f6f8;
+}
+
+.cdc-form-modal-body::-webkit-scrollbar-thumb:hover {
+  background: #9ca8b7;
+}
+
+.cdc-form-modal-body {
+  scrollbar-width: thin;
+
+  scrollbar-color: #c1cad6 #f4f6f8;
+}
+
+/* =========================================================
+   INFORMATION MODAL
+========================================================= */
+
+.cdc-info-modal-dialog {
+  width: calc(100% - 40px);
+
+  max-width: 900px;
+
+  margin: 20px auto;
+}
+
+.cdc-info-modal-content {
+  max-height: calc(100vh - 40px);
+
+  display: flex;
+
+  flex-direction: column;
+
+  overflow: hidden;
+
+  border: none;
+
+  border-radius: 18px;
+
+  box-shadow: 0 30px 80px rgba(10, 31, 55, 0.25);
+}
+
+/* =========================================================
+   INFO HEADER
+========================================================= */
+
+.cdc-info-modal-header {
+  flex: 0 0 auto;
+
+  padding: 20px 25px;
+
+  background: linear-gradient(135deg, #ffffff, #f8fbff);
+
+  border-bottom: 1px solid #e6ebf1;
+}
+
+.cdc-info-modal-header .modal-title {
+  color: #102d57;
+
+  font-size: 18px;
+
+  font-weight: 800;
+}
+
+/* =========================================================
+   INFO BODY
+========================================================= */
+
+.cdc-info-modal-body {
+  flex: 1 1 auto;
+
+  min-height: 0;
+
+  overflow-y: auto !important;
+
+  overflow-x: hidden;
+
+  padding: 28px;
+
+  background: #ffffff;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.cdc-info-modal-body::-webkit-scrollbar {
+  width: 7px;
+}
+
+.cdc-info-modal-body::-webkit-scrollbar-track {
+  background: #f4f6f8;
+}
+
+.cdc-info-modal-body::-webkit-scrollbar-thumb {
+  background: #c1cad6;
+
+  border-radius: 10px;
+}
+
+/* =========================================================
+   INFO IMAGE
+========================================================= */
+
+.cdc-info-image {
+  display: block;
+
+  width: 100%;
+
+  max-width: 230px;
+
+  height: 250px;
+
+  margin: 0 auto;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+
+  border: 1px solid #e1e7ef;
+
+  box-shadow: 0 8px 25px rgba(20, 43, 75, 0.08);
+}
+
+.cdc-info-no-image {
+  width: 100%;
+
+  max-width: 230px;
+
+  height: 250px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin: 0 auto;
+
+  border-radius: 12px;
+
+  background: linear-gradient(145deg, #f2f5f8, #e8edf3);
+
+  color: #a1acbb;
+
+  font-size: 45px;
+}
+
+/* =========================================================
+   INFO NAME
+========================================================= */
+
+.cdc-info-name {
+  margin: 4px 0 4px;
+
+  color: #102d57;
+
+  font-size: 25px;
+
+  line-height: 1.25;
+
+  font-weight: 800;
+
+  letter-spacing: -0.3px;
+}
+
+.cdc-info-designation {
+  margin: 0 0 20px;
+
+  color: #1764aa;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+/* =========================================================
+   INFO LIST
+========================================================= */
+
+.cdc-info-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 11px;
+
+  padding: 15px;
+
+  border: 1px solid #e6ebf1;
+
+  border-radius: 10px;
+
+  background: #fafbfd;
+}
+
+.cdc-info-list > div {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  color: #596579;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+.cdc-info-list svg {
+  flex-shrink: 0;
+
+  margin-top: 3px;
+
+  color: #1764aa;
+
+  font-size: 13px;
+}
+
+.cdc-info-list strong {
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: #344054;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.4px;
+}
+
+/* =========================================================
+   INFO SECTIONS
+========================================================= */
+
+.cdc-info-section {
+  margin-top: 25px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #e7ecf2;
+}
+
+.cdc-info-section h5 {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin: 0 0 9px;
+
+  color: #102d57;
+
+  font-size: 14px;
+
+  font-weight: 800;
+}
+
+.cdc-info-section p {
+  margin: 0;
+
+  color: #596579;
+
+  font-size: 13px;
+
+  line-height: 1.85;
+}
+
+/* =========================================================
+   DELETE MODAL
+========================================================= */
+
+.cdc-team-admin-page .modal .modal-content {
+  border: none;
+
+  border-radius: 16px;
+
+  box-shadow: 0 25px 70px rgba(10, 31, 55, 0.2);
+}
+
+.cdc-team-admin-page .modal .modal-header {
+  border-bottom-color: #e7ecf2;
+}
+
+.cdc-team-admin-page .modal .modal-footer {
+  border-top-color: #e7ecf2;
+
+  background: #fafbfd;
+}
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+  .cdc-team-admin-page {
+    padding: 22px;
+  }
+
+  .cdc-admin-page-header {
+    padding: 24px;
+  }
+
+  .cdc-admin-member-image {
+    width: 145px;
+
+    min-width: 145px;
+  }
+
+  .cdc-admin-member-content {
+    padding: 17px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .cdc-team-admin-page {
+    padding: 15px;
+  }
+
+  .cdc-admin-page-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    padding: 22px;
+  }
+
+  .cdc-admin-page-header h1 {
+    font-size: 25px;
+  }
+
+  .cdc-add-button {
+    width: 100%;
+  }
+
+  .cdc-admin-group {
+    margin-bottom: 30px;
+  }
+
+  .cdc-admin-member-card {
+    flex-direction: column;
+  }
+
+  .cdc-admin-member-image {
+    width: 100%;
+
+    min-width: 0;
+
+    height: 230px;
+  }
+
+  .cdc-admin-member-image img {
+    min-height: 230px;
+  }
+
+  .cdc-admin-no-image {
+    min-height: 230px;
+  }
+
+  .cdc-admin-member-content {
+    padding: 18px;
+  }
+
+  .cdc-admin-member-top h3 {
+    font-size: 17px;
+  }
+
+  /* =====================================
+     MOBILE FORM MODAL
+  ===================================== */
+
+  .cdc-form-modal-dialog {
+    width: calc(100% - 10px);
+
+    height: calc(100vh - 10px);
+
+    margin: 5px auto;
+  }
+
+  .cdc-form-modal-content {
+    height: calc(100vh - 10px);
+
+    max-height: calc(100vh - 10px);
+
+    border-radius: 12px;
+  }
+
+  .cdc-form-modal-header {
+    padding: 15px 18px;
+  }
+
+  .cdc-form-modal-header .modal-title {
+    font-size: 17px;
+  }
+
+  .cdc-form-modal-body {
+    padding: 18px;
+
+    overflow-y: auto !important;
+  }
+
+  .cdc-form-modal-footer {
+    padding: 12px 18px;
+  }
+
+  .cdc-form-modal-footer button {
+    flex: 1;
+
+    min-width: 0;
+  }
+
+  /* =====================================
+     MOBILE INFO MODAL
+  ===================================== */
+
+  .cdc-info-modal-dialog {
+    width: calc(100% - 10px);
+
+    margin: 5px auto;
+  }
+
+  .cdc-info-modal-content {
+    max-height: calc(100vh - 10px);
+
+    border-radius: 12px;
+  }
+
+  .cdc-info-modal-body {
+    padding: 20px;
+  }
+
+  .cdc-info-image {
+    max-width: 200px;
+
+    height: 220px;
+  }
+
+  .cdc-info-no-image {
+    max-width: 200px;
+
+    height: 220px;
+  }
+
+  .cdc-info-name {
+    font-size: 22px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .cdc-team-admin-page {
+    padding: 10px;
+  }
+
+  .cdc-admin-page-header {
+    padding: 19px;
+  }
+
+  .cdc-admin-page-header h1 {
+    font-size: 23px;
+  }
+
+  .cdc-admin-member-top {
+    flex-direction: column;
+  }
+
+  .cdc-published,
+  .cdc-hidden {
+    align-self: flex-start;
+  }
+
+  .cdc-admin-card-actions {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cdc-admin-card-actions button {
+    width: 100%;
+  }
+
+  .cdc-form-modal-body {
+    padding: 15px;
+  }
+
+  .cdc-info-modal-body {
+    padding: 16px;
+  }
+
+  .cdc-info-name {
+    font-size: 20px;
+  }
+}

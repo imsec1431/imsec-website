@@ -1,0 +1,303 @@
+/* =========================================================
+   CAREER APPLICATION DETAILS
+========================================================= */
+
+.career-application-details-page {
+  min-height: 100vh;
+  padding: 30px;
+  background: #f5f7fa;
+  box-sizing: border-box;
+}
+
+.career-application-details-header {
+  max-width: 1200px;
+  margin: 0 auto 25px;
+}
+
+.career-application-back {
+  margin-bottom: 25px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #092f5f;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.career-application-details-header > div > span {
+  display: block;
+  color: #98a2b3;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.career-application-details-header h1 {
+  margin: 7px 0;
+  color: #092f5f;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.career-application-details-header p {
+  margin: 0;
+  color: #667085;
+  font-size: 13px;
+}
+
+.career-detail-card {
+  max-width: 1200px;
+  margin: 0 auto 18px;
+  padding: 26px;
+  border: 1px solid #e4e7ec;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 5px 20px rgba(9, 47, 95, 0.04);
+  box-sizing: border-box;
+}
+
+.career-detail-card-title {
+  margin-bottom: 22px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eef0f3;
+}
+
+.career-detail-card-title span {
+  display: block;
+  margin-bottom: 5px;
+  color: #98a2b3;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.career-detail-card-title h2 {
+  margin: 0;
+  color: #092f5f;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.career-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.career-detail-item {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.career-detail-item span {
+  color: #98a2b3;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.career-detail-item strong {
+  color: #344054;
+  font-size: 13px;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.career-detail-long {
+  margin-top: 22px;
+  padding: 15px;
+  border-radius: 9px;
+  background: #f8fafc;
+}
+
+.career-detail-long strong {
+  display: block;
+  margin-bottom: 7px;
+  color: #344054;
+  font-size: 11px;
+}
+
+.career-detail-long p {
+  margin: 0;
+  color: #667085;
+  font-size: 12px;
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+.career-detail-empty {
+  margin: 0;
+  color: #98a2b3;
+  font-size: 12px;
+}
+
+/* =========================================================
+   CV / RESUME ACTIONS
+========================================================= */
+
+.career-resume-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.career-resume-button,
+.career-resume-download-button {
+  min-height: 43px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 17px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.career-resume-button {
+  border: 0;
+  background: #092f5f;
+  color: #ffffff;
+}
+
+.career-resume-button:hover {
+  background: #0c3f78;
+}
+
+.career-resume-download-button {
+  border: 1px solid #d0d5dd;
+  background: #ffffff;
+  color: #344054;
+}
+
+.career-resume-download-button:hover {
+  border-color: #092f5f;
+  background: #f8fafc;
+  color: #092f5f;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.career-application-details-loading {
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.career-application-details-loading h3 {
+  margin: 15px 0 5px;
+  color: #092f5f;
+}
+
+.career-application-details-loading p {
+  margin: 0;
+  color: #667085;
+  font-size: 12px;
+}
+
+.career-application-details-spinner {
+  width: 35px;
+  height: 35px;
+  border: 3px solid #e4e7ec;
+  border-top-color: #092f5f;
+  border-radius: 50%;
+  animation: careerDetailSpin 0.8s linear infinite;
+}
+
+@keyframes careerDetailSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.career-application-details-error {
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.career-application-details-error h2 {
+  margin-bottom: 8px;
+  color: #092f5f;
+}
+
+.career-application-details-error p {
+  margin-bottom: 20px;
+  color: #667085;
+  font-size: 12px;
+}
+
+.career-application-details-error button {
+  min-height: 42px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 8px;
+  background: #092f5f;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.career-application-details-error button:hover {
+  background: #0c3f78;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .career-detail-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .career-application-details-page {
+    padding: 20px 14px;
+  }
+
+  .career-application-details-header h1 {
+    font-size: 26px;
+  }
+
+  .career-detail-card {
+    padding: 20px;
+  }
+
+  .career-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .career-resume-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .career-resume-button,
+  .career-resume-download-button {
+    width: 100%;
+  }
+}

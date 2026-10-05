@@ -1,0 +1,1530 @@
+/* =========================================================
+   TEACHING LEARNING PROCESS
+   ADMIN PANEL
+========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.teachingLearningAdmin,
+.teachingLearningAdmin * {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   MAIN PAGE
+========================================================= */
+
+.teachingLearningAdmin {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 30px;
+
+  background: #f5f7fb;
+
+  font-family: "Poppins", sans-serif;
+
+  color: #243447;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.teachingLearningAdminHeader {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  padding: 28px 30px;
+
+  margin-bottom: 25px;
+
+  background: #ffffff;
+
+  border: 1px solid #e4eaf1;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* =========================================================
+   HEADER LEFT
+========================================================= */
+
+.teachingLearningHeading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 17px;
+
+  min-width: 0;
+}
+
+.teachingLearningHeaderIcon {
+  width: 58px;
+
+  height: 58px;
+
+  flex: 0 0 58px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+
+  color: #ffffff;
+
+  font-size: 24px;
+
+  box-shadow: 0 8px 20px rgba(21, 101, 192, 0.25);
+}
+
+.teachingLearningHeading > div:last-child {
+  min-width: 0;
+}
+
+.teachingLearningHeading span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #1565c0;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.4px;
+}
+
+.teachingLearningHeading h1 {
+  margin: 0 0 5px;
+
+  color: #15314b;
+
+  font-size: 28px;
+
+  font-weight: 700;
+
+  line-height: 1.3;
+}
+
+.teachingLearningHeading p {
+  margin: 0;
+
+  color: #778494;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   ADD BUTTON
+========================================================= */
+
+.teachingLearningAddButton {
+  flex: 0 0 auto;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 13px 20px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 20px rgba(21, 101, 192, 0.22);
+
+  transition: all 0.3s ease;
+}
+
+.teachingLearningAddButton:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 25px rgba(21, 101, 192, 0.3);
+}
+
+/* =========================================================
+   SUCCESS / ERROR
+========================================================= */
+
+.teachingLearningSuccess,
+.teachingLearningError {
+  width: 100%;
+
+  margin-bottom: 20px;
+
+  padding: 14px 18px;
+
+  border-radius: 12px;
+
+  font-size: 13px;
+
+  font-weight: 500;
+}
+
+.teachingLearningSuccess {
+  border: 1px solid #c7eadf;
+
+  background: #effaf7;
+
+  color: #08795f;
+}
+
+.teachingLearningError {
+  border: 1px solid #f5caca;
+
+  background: #fff4f4;
+
+  color: #c62828;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.teachingLearningLoading {
+  min-height: 400px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e9f1;
+
+  border-radius: 20px;
+}
+
+.teachingLearningLoading svg {
+  margin-bottom: 15px;
+
+  color: #1565c0;
+
+  font-size: 42px;
+}
+
+.teachingLearningLoading p {
+  margin: 0;
+
+  color: #718096;
+
+  font-size: 14px;
+}
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.teachingLearningEmpty {
+  min-height: 430px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 40px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e9f1;
+
+  border-radius: 22px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.teachingLearningEmptyIcon {
+  width: 85px;
+
+  height: 85px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 24px;
+
+  background: #eaf2ff;
+
+  color: #1565c0;
+
+  font-size: 35px;
+}
+
+.teachingLearningEmpty h2 {
+  margin: 0 0 8px;
+
+  color: #15314b;
+
+  font-size: 22px;
+}
+
+.teachingLearningEmpty p {
+  max-width: 500px;
+
+  margin: 0 0 25px;
+
+  color: #778494;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+.teachingLearningEmpty button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 12px 20px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background: #1565c0;
+
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.teachingLearningEmpty button:hover {
+  background: #0d47a1;
+
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   IMAGE GRID
+========================================================= */
+
+.teachingLearningGrid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+  gap: 25px;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.teachingLearningCard {
+  position: relative;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e9f1;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.teachingLearningCard:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.teachingLearningImage {
+  position: relative;
+
+  width: 100%;
+
+  height: 280px;
+
+  overflow: hidden;
+
+  background: #eef2f7;
+}
+
+.teachingLearningImage img {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+
+  object-position: center;
+
+  background: #f4f6f9;
+
+  transition: transform 0.45s ease;
+}
+
+.teachingLearningCard:hover .teachingLearningImage img {
+  transform: scale(1.025);
+}
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.teachingLearningImageOverlay {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: rgba(5, 28, 55, 0.45);
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+}
+
+.teachingLearningCard:hover .teachingLearningImageOverlay {
+  opacity: 1;
+}
+
+.teachingLearningImageOverlay button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 10px 17px;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  color: #0d47a1;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   ORDER BADGE
+========================================================= */
+
+.teachingLearningOrderBadge {
+  position: absolute;
+
+  top: 14px;
+
+  left: 14px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 7px 11px;
+
+  border-radius: 30px;
+
+  background: rgba(13, 71, 161, 0.92);
+
+  color: #ffffff;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  backdrop-filter: blur(5px);
+}
+
+/* =========================================================
+   CARD BODY
+========================================================= */
+
+.teachingLearningCardBody {
+  padding: 20px;
+}
+
+.teachingLearningCardTop {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+}
+
+.teachingLearningCardTop > div {
+  min-width: 0;
+}
+
+.teachingLearningCardTop span:first-child {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #1565c0;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.teachingLearningCardTop h3 {
+  margin: 0;
+
+  color: #18324d;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.teachingLearningPublished,
+.teachingLearningDraft {
+  flex: 0 0 auto;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 6px 10px;
+
+  border-radius: 30px;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.teachingLearningPublished {
+  background: #e9f8f3;
+
+  color: #08795f;
+}
+
+.teachingLearningDraft {
+  background: #fff4e5;
+
+  color: #c56a00;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.teachingLearningActions {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 8px;
+}
+
+.teachingLearningActions button {
+  min-width: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 6px;
+
+  padding: 9px 8px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.teachingLearningViewButton {
+  background: #edf4ff;
+
+  color: #1565c0;
+}
+
+.teachingLearningViewButton:hover {
+  background: #dceaff;
+}
+
+.teachingLearningEditButton {
+  background: #fff4e5;
+
+  color: #c56a00;
+}
+
+.teachingLearningEditButton:hover {
+  background: #ffe7c2;
+}
+
+.teachingLearningDraftButton {
+  background: #f0efff;
+
+  color: #5e35b1;
+}
+
+.teachingLearningDraftButton:hover {
+  background: #e4e0ff;
+}
+
+.teachingLearningPublishButton {
+  background: #e9f8f3;
+
+  color: #08795f;
+}
+
+.teachingLearningPublishButton:hover {
+  background: #d8f2e9;
+}
+
+.teachingLearningDeleteButton {
+  background: #fff0f0;
+
+  color: #d32f2f;
+}
+
+.teachingLearningDeleteButton:hover {
+  background: #ffe0e0;
+}
+
+/* =========================================================
+   MODAL OVERLAY
+========================================================= */
+
+.teachingLearningModalOverlay {
+  position: fixed;
+
+  z-index: 9999;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 25px;
+
+  background: rgba(8, 22, 40, 0.68);
+
+  backdrop-filter: blur(5px);
+
+  overflow-y: auto;
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.teachingLearningModal {
+  width: 100%;
+
+  max-width: 650px;
+
+  max-height: calc(100vh - 40px);
+
+  overflow-y: auto;
+
+  background: #ffffff;
+
+  border-radius: 22px;
+
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
+
+  animation: teachingLearningModalIn 0.25s ease;
+}
+
+@keyframes teachingLearningModalIn {
+  from {
+    opacity: 0;
+
+    transform: translateY(20px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.teachingLearningModalHeader {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 23px 25px;
+
+  border-bottom: 1px solid #edf1f5;
+}
+
+.teachingLearningModalHeader span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #1565c0;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+}
+
+.teachingLearningModalHeader h2 {
+  margin: 0;
+
+  color: #15314b;
+
+  font-size: 20px;
+
+  font-weight: 700;
+}
+
+.teachingLearningCloseButton {
+  width: 38px;
+
+  height: 38px;
+
+  flex: 0 0 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #f2f5f8;
+
+  color: #607080;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.teachingLearningCloseButton:hover {
+  background: #ffecec;
+
+  color: #d32f2f;
+}
+
+/* =========================================================
+   MODAL ERROR
+========================================================= */
+
+.teachingLearningModalError {
+  margin: 18px 25px 0;
+
+  padding: 12px 15px;
+
+  border-radius: 10px;
+
+  background: #fff4f4;
+
+  border: 1px solid #ffd1d1;
+
+  color: #c62828;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.teachingLearningForm {
+  padding: 25px;
+}
+
+.teachingLearningFormGroup {
+  margin-bottom: 21px;
+}
+
+.teachingLearningFormGroup label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #35485c;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.teachingLearningFormGroup label strong {
+  color: #d32f2f;
+}
+
+.teachingLearningFormGroup input[type="number"] {
+  width: 100%;
+
+  height: 45px;
+
+  padding: 0 13px;
+
+  border: 1px solid #dce4ec;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  color: #34495e;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 13px;
+
+  transition: 0.25s ease;
+}
+
+.teachingLearningFormGroup input[type="number"]:focus {
+  border-color: #1565c0;
+
+  box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.1);
+}
+
+.teachingLearningFormGroup small {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #8994a1;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   HIDDEN INPUT
+========================================================= */
+
+.teachingLearningHiddenInput {
+  display: none;
+}
+
+/* =========================================================
+   UPLOAD BOX
+========================================================= */
+
+.teachingLearningUploadBox {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 260px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  border: 2px dashed #cbd8e5;
+
+  border-radius: 15px;
+
+  background: #f8fafc;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.teachingLearningUploadBox:hover {
+  border-color: #1565c0;
+
+  background: #f3f7fd;
+}
+
+/* =========================================================
+   UPLOAD PLACEHOLDER
+========================================================= */
+
+.teachingLearningUploadPlaceholder {
+  padding: 30px;
+
+  text-align: center;
+}
+
+.teachingLearningUploadPlaceholder svg {
+  margin-bottom: 14px;
+
+  color: #1565c0;
+
+  font-size: 36px;
+}
+
+.teachingLearningUploadPlaceholder h3 {
+  margin: 0 0 7px;
+
+  color: #334b62;
+
+  font-size: 16px;
+}
+
+.teachingLearningUploadPlaceholder p {
+  margin: 0 0 5px;
+
+  color: #758394;
+
+  font-size: 11px;
+}
+
+.teachingLearningUploadPlaceholder small {
+  color: #9aa5b1;
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   UPLOAD PREVIEW
+========================================================= */
+
+.teachingLearningUploadPreview {
+  position: relative;
+
+  width: 100%;
+
+  height: 320px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #edf1f5;
+}
+
+.teachingLearningUploadPreview img {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+
+  object-position: center;
+}
+
+.teachingLearningChangeImage {
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 18px;
+
+  transform: translateX(-50%);
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 9px 15px;
+
+  border-radius: 30px;
+
+  background: rgba(13, 71, 161, 0.92);
+
+  color: #ffffff;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   PUBLISH ROW
+========================================================= */
+
+.teachingLearningPublishRow {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 16px;
+
+  margin-bottom: 22px;
+
+  border: 1px solid #e5ebf1;
+
+  border-radius: 13px;
+
+  background: #f8fafc;
+}
+
+.teachingLearningPublishRow strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #35485c;
+
+  font-size: 12px;
+}
+
+.teachingLearningPublishRow p {
+  margin: 0;
+
+  color: #8994a1;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   SWITCH
+========================================================= */
+
+.teachingLearningSwitch {
+  position: relative;
+
+  width: 48px;
+
+  height: 27px;
+
+  flex: 0 0 48px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background: #cbd5df;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.teachingLearningSwitch span {
+  position: absolute;
+
+  top: 4px;
+
+  left: 4px;
+
+  width: 19px;
+
+  height: 19px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+  transition: 0.3s ease;
+}
+
+.teachingLearningSwitch.active {
+  background: #1565c0;
+}
+
+.teachingLearningSwitch.active span {
+  left: 25px;
+}
+
+/* =========================================================
+   MODAL ACTIONS
+========================================================= */
+
+.teachingLearningModalActions {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  padding-top: 5px;
+}
+
+.teachingLearningCancelButton,
+.teachingLearningSaveButton {
+  min-width: 120px;
+
+  padding: 11px 17px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.teachingLearningCancelButton {
+  background: #eef2f5;
+
+  color: #596a7a;
+}
+
+.teachingLearningCancelButton:hover {
+  background: #e2e7ec;
+}
+
+.teachingLearningSaveButton {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+
+  color: #ffffff;
+
+  box-shadow: 0 7px 18px rgba(21, 101, 192, 0.22);
+}
+
+.teachingLearningSaveButton:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 22px rgba(21, 101, 192, 0.3);
+}
+
+.teachingLearningCancelButton:disabled,
+.teachingLearningSaveButton:disabled,
+.teachingLearningCloseButton:disabled {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+/* =========================================================
+   FULL IMAGE PREVIEW
+========================================================= */
+
+.teachingLearningPreviewOverlay {
+  position: fixed;
+
+  z-index: 10000;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 30px;
+
+  background: rgba(3, 12, 24, 0.88);
+
+  backdrop-filter: blur(6px);
+
+  overflow: auto;
+}
+
+.teachingLearningPreviewModal {
+  position: relative;
+
+  max-width: 95vw;
+
+  max-height: 92vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.teachingLearningPreviewModal img {
+  display: block;
+
+  max-width: 95vw;
+
+  max-height: 88vh;
+
+  width: auto;
+
+  height: auto;
+
+  object-fit: contain;
+
+  border-radius: 10px;
+
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+}
+
+.teachingLearningPreviewClose {
+  position: absolute;
+
+  z-index: 2;
+
+  top: -18px;
+
+  right: -18px;
+
+  width: 42px;
+
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: #d32f2f;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+  .teachingLearningAdmin {
+    padding: 22px;
+  }
+
+  .teachingLearningAdminHeader {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .teachingLearningAddButton {
+    width: 100%;
+  }
+
+  .teachingLearningGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .teachingLearningAdmin {
+    padding: 15px;
+  }
+
+  .teachingLearningAdminHeader {
+    padding: 20px;
+
+    border-radius: 17px;
+  }
+
+  .teachingLearningHeading {
+    align-items: flex-start;
+  }
+
+  .teachingLearningHeaderIcon {
+    width: 48px;
+
+    height: 48px;
+
+    flex-basis: 48px;
+
+    border-radius: 13px;
+
+    font-size: 20px;
+  }
+
+  .teachingLearningHeading h1 {
+    font-size: 21px;
+  }
+
+  .teachingLearningHeading p {
+    font-size: 11px;
+  }
+
+  .teachingLearningGrid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .teachingLearningImage {
+    height: 270px;
+  }
+
+  .teachingLearningModalOverlay {
+    padding: 12px;
+  }
+
+  .teachingLearningModal {
+    max-height: calc(100vh - 24px);
+
+    border-radius: 18px;
+  }
+
+  .teachingLearningModalHeader {
+    padding: 19px;
+  }
+
+  .teachingLearningModalHeader h2 {
+    font-size: 17px;
+  }
+
+  .teachingLearningForm {
+    padding: 19px;
+  }
+
+  .teachingLearningUploadBox {
+    min-height: 230px;
+  }
+
+  .teachingLearningUploadPreview {
+    height: 280px;
+  }
+
+  .teachingLearningPreviewOverlay {
+    padding: 15px;
+  }
+
+  .teachingLearningPreviewModal img {
+    max-width: 94vw;
+
+    max-height: 85vh;
+  }
+
+  .teachingLearningPreviewClose {
+    top: -12px;
+
+    right: -7px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .teachingLearningAdmin {
+    padding: 10px;
+  }
+
+  .teachingLearningAdminHeader {
+    padding: 17px;
+  }
+
+  .teachingLearningHeading {
+    gap: 11px;
+  }
+
+  .teachingLearningHeaderIcon {
+    width: 42px;
+
+    height: 42px;
+
+    flex-basis: 42px;
+
+    font-size: 17px;
+  }
+
+  .teachingLearningHeading h1 {
+    font-size: 18px;
+  }
+
+  .teachingLearningHeading span {
+    font-size: 8px;
+  }
+
+  .teachingLearningHeading p {
+    font-size: 10px;
+  }
+
+  .teachingLearningImage {
+    height: 235px;
+  }
+
+  .teachingLearningCardBody {
+    padding: 16px;
+  }
+
+  .teachingLearningActions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .teachingLearningModalActions {
+    flex-direction: column-reverse;
+  }
+
+  .teachingLearningCancelButton,
+  .teachingLearningSaveButton {
+    width: 100%;
+  }
+
+  .teachingLearningPublishRow {
+    align-items: flex-start;
+  }
+
+  .teachingLearningUploadPreview {
+    height: 240px;
+  }
+}

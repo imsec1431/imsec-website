@@ -1,0 +1,197 @@
+.coe-dashboard {
+  min-height: 100vh;
+  padding: 30px;
+  background: #f5f7fa;
+}
+
+/* HEADER */
+
+.coe-dashboard-header {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin-bottom: 30px;
+}
+
+.coe-header-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 15px;
+  background: #0b1f3a;
+  color: #d6ad60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 27px;
+  box-shadow: 0 8px 22px rgba(11, 31, 58, 0.15);
+}
+
+.coe-dashboard-header h1 {
+  margin: 0;
+  color: #0b1f3a;
+  font-size: 29px;
+  font-weight: 700;
+}
+
+.coe-dashboard-header p {
+  margin: 5px 0 0;
+  color: #718096;
+  font-size: 14px;
+}
+
+/* GRID */
+
+.coe-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* CARD */
+
+.coe-module-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e3e8ef;
+  border-radius: 16px;
+  padding: 26px;
+  min-height: 245px;
+  cursor: pointer;
+  overflow: hidden;
+
+  box-shadow: 0 7px 24px rgba(11, 31, 58, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.coe-module-card::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  right: -55px;
+  bottom: -55px;
+  border-radius: 50%;
+  border: 1px solid rgba(214, 173, 96, 0.18);
+}
+
+.coe-module-card:hover {
+  transform: translateY(-5px);
+  border-color: #d6ad60;
+  box-shadow: 0 15px 35px rgba(11, 31, 58, 0.12);
+}
+
+/* ICON */
+
+.coe-module-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 13px;
+  background: #eef3f8;
+  color: #0b1f3a;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 25px;
+  margin-bottom: 20px;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.coe-module-card:hover .coe-module-icon {
+  background: #0b1f3a;
+  color: #d6ad60;
+}
+
+/* CONTENT */
+
+.coe-module-content {
+  position: relative;
+  z-index: 1;
+}
+
+.coe-module-content h2 {
+  margin: 0 0 9px;
+  color: #0b1f3a;
+  font-size: 19px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.coe-module-content p {
+  margin: 0;
+  color: #718096;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+/* BUTTON */
+
+.coe-module-content button {
+  margin-top: 20px;
+  padding: 9px 15px;
+
+  border: 0;
+  border-radius: 7px;
+
+  background: #0b1f3a;
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  cursor: pointer;
+}
+
+.coe-module-content button span {
+  color: #d6ad60;
+  font-size: 16px;
+  line-height: 10px;
+}
+
+.coe-module-card:hover .coe-module-content button {
+  background: #17375f;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .coe-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .coe-dashboard {
+    padding: 20px;
+  }
+
+  .coe-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .coe-dashboard-header {
+    align-items: flex-start;
+  }
+
+  .coe-header-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 22px;
+  }
+
+  .coe-dashboard-header h1 {
+    font-size: 25px;
+  }
+}

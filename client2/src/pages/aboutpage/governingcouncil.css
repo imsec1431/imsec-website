@@ -1,0 +1,813 @@
+/* ===========================================
+        Governing Council Page
+        IMS Engineering College
+===========================================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background: #fff;
+}
+
+/* ===========================================
+        Common
+===========================================*/
+
+.section-tag {
+  color: #fdb913;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.3rem);
+
+  font-weight: 800;
+
+  color: #0a2e5c;
+
+  margin-bottom: 20px;
+}
+
+.section-title span {
+  color: #fdb913;
+}
+
+.section-title::after {
+  content: "";
+
+  display: block;
+
+  width: 90px;
+
+  height: 4px;
+
+  background: #fdb913;
+
+  margin-top: 15px;
+
+  border-radius: 20px;
+}
+
+.text-center .section-title::after {
+  margin: 15px auto 0;
+}
+
+/* ===========================================
+        Hero
+===========================================*/
+/* ===========================================
+        Hero
+        Same as Vision & Mission
+        NO BACKGROUND PHOTO
+===========================================*/
+
+.governing-hero {
+  position: relative;
+
+  min-height: 330px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  color: #fff;
+
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #071d3a 0%, #0a2e5c 50%, #123f7a 100%);
+}
+
+/* Soft Glow */
+
+.governing-hero::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 15% 30%,
+      rgba(253, 185, 19, 0.12),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 85% 70%,
+      rgba(255, 255, 255, 0.08),
+      transparent 35%
+    );
+
+  pointer-events: none;
+}
+
+/* Decorative Circle */
+
+.governing-hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 380px;
+
+  height: 380px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  right: -140px;
+
+  bottom: -210px;
+
+  box-shadow:
+    0 0 0 35px rgba(255, 255, 255, 0.025),
+    0 0 0 70px rgba(255, 255, 255, 0.018);
+
+  pointer-events: none;
+}
+
+/* Hero Content */
+
+.governing-hero .container {
+  position: relative;
+
+  z-index: 2;
+}
+
+.governing-hero .hero-content {
+  width: 100%;
+}
+
+.governing-hero .hero-content h1 {
+  font-size: clamp(2.5rem, 6vw, 4.2rem);
+
+  font-weight: 800;
+
+  line-height: 1.15;
+
+  color: #fff;
+
+  margin: 0 0 15px;
+}
+
+/* Yellow Underline */
+
+.governing-hero .hero-content h1::after {
+  content: "";
+
+  display: block;
+
+  width: 80px;
+
+  height: 4px;
+
+  background: #fdb913;
+
+  border-radius: 10px;
+
+  margin: 18px auto 0;
+}
+
+/* Breadcrumb */
+
+.governing-hero .hero-content p {
+  font-size: 17px;
+
+  color: rgba(255, 255, 255, 0.9) !important;
+
+  margin: 18px 0 0;
+
+  line-height: 1.6;
+}
+
+.governing-hero .hero-content span {
+  color: #fdb913;
+
+  padding: 0 6px;
+}
+
+/* ===========================================
+        Introduction
+===========================================*/
+
+.governing-intro {
+  background: #fff;
+}
+
+.governing-image {
+  width: 100%;
+
+  border-radius: 25px;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+
+  transition: 0.4s;
+}
+
+.governing-image:hover {
+  transform: scale(1.03);
+}
+
+.governing-intro p {
+  color: #666;
+
+  line-height: 1.9;
+
+  text-align: justify;
+}
+
+/* ===========================================
+        Governing Cards
+===========================================*/
+
+.governing-members {
+  background: #f8f9fb;
+}
+
+.governing-card {
+  background: #fff;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  height: 100%;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+}
+
+.governing-card:hover {
+  transform: translateY(-10px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.governing-image-box {
+  overflow: hidden;
+}
+
+.governing-photo {
+  width: 100%;
+
+  height: 340px;
+
+  object-fit: cover;
+
+  transition: 0.5s;
+}
+
+.governing-card:hover .governing-photo {
+  transform: scale(1.08);
+}
+
+.governing-body {
+  padding: 28px;
+
+  text-align: center;
+}
+
+.governing-body h4 {
+  color: #0a2e5c;
+
+  font-weight: 700;
+
+  margin-bottom: 10px;
+}
+
+.designation {
+  display: inline-block;
+
+  background: #fdb913;
+
+  color: #0a2e5c;
+
+  padding: 7px 18px;
+
+  border-radius: 30px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  margin-bottom: 20px;
+}
+
+.nominee {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #0a2e5c;
+
+  font-weight: 700;
+
+  margin-bottom: 8px;
+}
+
+.nominee svg {
+  color: #fdb913;
+}
+
+.nominee-text {
+  color: #666;
+
+  margin-bottom: 20px;
+
+  font-weight: 500;
+}
+
+.member-social {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 15px;
+}
+
+.member-social a {
+  width: 45px;
+
+  height: 45px;
+
+  border-radius: 50%;
+
+  background: #0a2e5c;
+
+  color: #fff;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-decoration: none;
+
+  transition: 0.35s;
+}
+
+.member-social a:hover {
+  background: #fdb913;
+
+  color: #0a2e5c;
+
+  transform: translateY(-5px);
+}
+/* ===========================================
+        Responsibilities Section
+===========================================*/
+
+.governing-responsibilities {
+  background: #ffffff;
+}
+
+.responsibility-card {
+  background: #fff;
+
+  border-radius: 20px;
+
+  padding: 35px 25px;
+
+  text-align: center;
+
+  height: 100%;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  border-bottom: 4px solid transparent;
+}
+
+.responsibility-card:hover {
+  transform: translateY(-10px);
+
+  border-bottom: 4px solid #fdb913;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.responsibility-icon {
+  font-size: 55px;
+
+  color: #fdb913;
+
+  margin-bottom: 20px;
+}
+
+.responsibility-card h4 {
+  color: #0a2e5c;
+
+  font-weight: 700;
+
+  margin-bottom: 15px;
+}
+
+.responsibility-card p {
+  color: #666;
+
+  line-height: 1.8;
+}
+
+/* ===========================================
+        Statistics Section
+===========================================*/
+
+.governing-stats {
+  background: #f8f9fb;
+}
+
+.stat-card {
+  background: #fff;
+
+  padding: 35px 20px;
+
+  text-align: center;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  height: 100%;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card h2 {
+  color: #0a2e5c;
+
+  font-size: 42px;
+
+  font-weight: 800;
+
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  color: #666;
+
+  margin: 0;
+}
+
+/* ===========================================
+        Quote Section
+===========================================*/
+
+.governing-quote {
+  background: linear-gradient(135deg, #0a2e5c, #123f7a);
+
+  color: #fff;
+
+  padding: 90px 0;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.governing-quote::before {
+  content: "";
+
+  position: absolute;
+
+  width: 250px;
+
+  height: 250px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border-radius: 50%;
+
+  top: -70px;
+
+  left: -70px;
+}
+
+.governing-quote::after {
+  content: "";
+
+  position: absolute;
+
+  width: 320px;
+
+  height: 320px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border-radius: 50%;
+
+  bottom: -120px;
+
+  right: -120px;
+}
+
+.quote-box {
+  max-width: 900px;
+
+  margin: auto;
+
+  text-align: center;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.quote-icon {
+  display: block;
+
+  font-size: 90px;
+
+  color: #fdb913;
+
+  line-height: 1;
+
+  margin-bottom: 20px;
+}
+
+.quote-box h2 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+
+  font-weight: 700;
+
+  font-style: italic;
+
+  line-height: 1.6;
+
+  margin-bottom: 25px;
+}
+
+.quote-box h5 {
+  color: #fdb913;
+
+  font-size: 22px;
+
+  font-weight: 700;
+}
+
+/* ===========================================
+        CTA Section
+===========================================*/
+
+.governing-cta {
+  background: #fff;
+
+  padding: 90px 0;
+}
+
+.governing-cta .row {
+  background: linear-gradient(135deg, #0a2e5c, #123f7a);
+
+  border-radius: 25px;
+
+  padding: 60px 40px;
+
+  color: #fff;
+}
+
+.governing-cta h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+
+  font-weight: 800;
+
+  margin-bottom: 18px;
+}
+
+.governing-cta p {
+  color: #ddd;
+
+  line-height: 1.8;
+
+  margin: 0;
+}
+
+.governing-cta .btn {
+  padding: 12px 30px;
+
+  font-weight: 600;
+
+  transition: 0.35s;
+}
+
+.governing-cta .btn-warning {
+  background: #fdb913;
+
+  color: #0a2e5c;
+
+  border: none;
+}
+
+.governing-cta .btn-warning:hover {
+  background: #fff;
+
+  color: #0a2e5c;
+
+  transform: translateY(-5px);
+}
+
+.governing-cta .btn-outline-light {
+  border: 2px solid #fff;
+}
+
+.governing-cta .btn-outline-light:hover {
+  background: #fff;
+
+  color: #0a2e5c;
+
+  transform: translateY(-5px);
+}
+
+/* ===========================================
+        Animation
+===========================================*/
+
+.governing-card,
+.responsibility-card,
+.stat-card,
+.governing-image {
+  transition: all 0.35s ease;
+}
+
+/* ===========================================
+        Responsive
+===========================================*/
+
+@media (max-width: 992px) {
+  .governing-hero {
+    height: 320px;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .governing-image {
+    margin-bottom: 30px;
+  }
+
+  .governing-cta {
+    text-align: center;
+  }
+
+  .governing-cta .row {
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .governing-hero {
+    height: 260px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .governing-photo {
+    height: 300px;
+  }
+
+  .governing-body {
+    padding: 22px;
+  }
+
+  .governing-body h4 {
+    font-size: 22px;
+  }
+
+  .member-social a {
+    width: 42px;
+
+    height: 42px;
+  }
+
+  .responsibility-card {
+    padding: 25px;
+  }
+
+  .responsibility-icon {
+    font-size: 45px;
+  }
+
+  .stat-card {
+    padding: 25px;
+  }
+
+  .stat-card h2 {
+    font-size: 34px;
+  }
+
+  .quote-icon {
+    font-size: 60px;
+  }
+
+  .quote-box {
+    padding: 0 15px;
+  }
+
+  .quote-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .quote-box h5 {
+    font-size: 18px;
+  }
+
+  .governing-cta {
+    padding: 60px 15px;
+  }
+
+  .governing-cta .btn {
+    width: 100%;
+
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .governing-photo {
+    height: 260px;
+  }
+
+  .designation {
+    font-size: 13px;
+  }
+
+  .governing-cta .row {
+    padding: 30px 20px;
+  }
+
+  .governing-cta h2 {
+    font-size: 2rem;
+  }
+
+  .governing-cta p {
+    font-size: 15px;
+  }
+}
+/* Limit member card images */
+.governing-image-box {
+  max-width: 150px; /* Adjust size to your liking (e.g., 120px - 180px) */
+  margin: 0 auto 15px auto; /* Centers the image box horizontally */
+  overflow: hidden;
+  border-radius: 50%; /* Optional: Makes image circular, remove if square preferred */
+}
+
+.governing-photo {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Optional: Limit introduction banner image size */
+.governing-image {
+  max-width: 80%; /* Reduces intro image width */
+  margin: 0 auto;
+  display: block;
+}

@@ -1,0 +1,344 @@
+.department-faculty-form-page {
+  min-height: 100vh;
+  padding: 24px;
+  background: #f5f7fb;
+}
+
+.faculty-form-header,
+.faculty-form-card {
+  background: #ffffff;
+  border: 1px solid #e3e8f0;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(20, 40, 80, 0.05);
+}
+
+.faculty-form-header {
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.faculty-form-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  border: 0;
+  background: transparent;
+
+  padding: 0;
+  margin-bottom: 22px;
+
+  color: #526581;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.faculty-form-back:hover {
+  color: #123c6b;
+}
+
+.faculty-form-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.faculty-form-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 11px;
+  background: #eef4fb;
+
+  color: #174a7c;
+  font-size: 21px;
+}
+
+.faculty-form-heading span,
+.faculty-form-card-header span {
+  display: block;
+
+  color: #6c7a91;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
+.faculty-form-heading h1 {
+  margin: 5px 0;
+
+  color: #123c6b;
+  font-size: 27px;
+  font-weight: 800;
+}
+
+.faculty-form-heading p {
+  margin: 0;
+
+  color: #718096;
+  font-size: 13px;
+}
+
+.faculty-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faculty-form-card {
+  padding: 26px;
+}
+
+.faculty-form-card-header {
+  padding-bottom: 20px;
+  margin-bottom: 22px;
+
+  border-bottom: 1px solid #edf0f5;
+}
+
+.faculty-form-card-header h2 {
+  margin: 5px 0 0;
+
+  color: #203b5d;
+  font-size: 20px;
+  font-weight: 750;
+}
+
+.faculty-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.faculty-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.faculty-form-group.full {
+  grid-column: 1 / -1;
+}
+
+.faculty-form-group label {
+  color: #3b4c63;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.faculty-form-group label span {
+  margin-left: 4px;
+  color: #c53b3b;
+}
+
+.faculty-form-group input,
+.faculty-form-group textarea,
+.faculty-form-group select {
+  width: 100%;
+
+  border: 1px solid #dce2ea;
+  border-radius: 8px;
+
+  padding: 11px 13px;
+
+  background: #ffffff;
+
+  color: #263b55;
+
+  font-size: 13px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.faculty-form-group textarea {
+  resize: vertical;
+}
+
+.faculty-form-group input:focus,
+.faculty-form-group textarea:focus,
+.faculty-form-group select:focus {
+  border-color: #7898b8;
+
+  box-shadow: 0 0 0 3px rgba(18, 60, 107, 0.08);
+}
+
+.faculty-form-group small,
+.faculty-checkbox-group small {
+  color: #7b8798;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.faculty-photo-preview {
+  grid-column: 1 / -1;
+
+  display: flex;
+  align-items: center;
+}
+
+.faculty-photo-preview img {
+  width: 110px;
+  height: 110px;
+
+  border-radius: 10px;
+
+  object-fit: cover;
+
+  border: 1px solid #e0e6ee;
+}
+
+.faculty-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.faculty-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #3b4c63;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.faculty-checkbox-label input {
+  width: 17px;
+  height: 17px;
+
+  cursor: pointer;
+}
+
+.faculty-form-error,
+.faculty-form-success {
+  padding: 12px 15px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.faculty-form-error {
+  background: #fbecec;
+  border: 1px solid #f2d0d0;
+  color: #a43c3c;
+}
+
+.faculty-form-success {
+  background: #e9f7ef;
+  border: 1px solid #ccebd8;
+  color: #287847;
+}
+
+.faculty-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  padding-bottom: 20px;
+}
+
+.faculty-cancel-btn,
+.faculty-save-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-width: 120px;
+
+  padding: 11px 18px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.faculty-cancel-btn {
+  border: 1px solid #d7dee8;
+  background: #ffffff;
+  color: #526581;
+}
+
+.faculty-save-btn {
+  border: 0;
+  background: #123c6b;
+  color: #ffffff;
+}
+
+.faculty-save-btn:hover {
+  background: #0d3158;
+}
+
+.faculty-save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.faculty-form-loading,
+.faculty-form-error {
+  padding: 50px;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .department-faculty-form-page {
+    padding: 15px;
+  }
+
+  .faculty-form-header,
+  .faculty-form-card {
+    padding: 20px;
+  }
+
+  .faculty-form-heading {
+    align-items: flex-start;
+  }
+
+  .faculty-form-heading h1 {
+    font-size: 22px;
+  }
+
+  .faculty-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faculty-form-group.full {
+    grid-column: auto;
+  }
+
+  .faculty-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .faculty-cancel-btn,
+  .faculty-save-btn {
+    width: 100%;
+  }
+}

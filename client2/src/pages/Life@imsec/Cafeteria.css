@@ -1,0 +1,684 @@
+/* =========================================================
+   CAFETERIA PUBLIC PAGE
+========================================================= */
+
+.cafeteria-page {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.cafeteria-container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.cafeteria-hero {
+  min-height: 430px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.cafeteria-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 15% 25%,
+      rgba(255, 255, 255, 0.09),
+      transparent 28%
+    ),
+    radial-gradient(circle at 85% 75%, rgba(255, 193, 7, 0.08), transparent 30%);
+  pointer-events: none;
+}
+
+.cafeteria-hero-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding: 80px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.cafeteria-hero-icon {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.09);
+
+  color: #f5c242;
+  font-size: 22px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.cafeteria-hero h1 {
+  margin: 0;
+
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -1px;
+
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+}
+
+.cafeteria-yellow-line {
+  width: 62px;
+  height: 4px;
+  margin: 18px auto 18px;
+
+  border-radius: 10px;
+  background: #f5c242;
+}
+
+.cafeteria-hero-content p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* =========================================================
+   HERO DECORATIONS
+========================================================= */
+
+.cafeteria-hero-glow {
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.cafeteria-glow-one {
+  width: 300px;
+  height: 300px;
+
+  top: -150px;
+  left: -100px;
+
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.cafeteria-glow-two {
+  width: 380px;
+  height: 380px;
+
+  right: -180px;
+  bottom: -220px;
+
+  background: rgba(255, 193, 7, 0.035);
+}
+
+.cafeteria-hero-circle {
+  position: absolute;
+  z-index: 1;
+
+  width: 190px;
+  height: 190px;
+
+  right: 9%;
+  top: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+
+  transform: translateY(-50%);
+}
+
+.cafeteria-hero-circle::after {
+  content: "";
+
+  position: absolute;
+  inset: 24px;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 50%;
+}
+
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
+
+.cafeteria-about {
+  position: relative;
+  padding: 90px 0;
+
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.cafeteria-about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  align-items: center;
+  gap: 80px;
+}
+
+/* =========================================================
+   ABOUT IMAGE
+========================================================= */
+
+.cafeteria-about-image-wrap {
+  position: relative;
+  padding: 18px;
+}
+
+.cafeteria-image-decoration {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 145px;
+  height: 145px;
+
+  border-top: 4px solid #f5c242;
+  border-left: 4px solid #f5c242;
+  border-radius: 10px 0 0 0;
+}
+
+.cafeteria-about-image {
+  position: relative;
+  z-index: 2;
+
+  display: block;
+  width: 100%;
+  height: 410px;
+
+  object-fit: cover;
+
+  border-radius: 18px;
+
+  box-shadow: 0 20px 50px rgba(15, 35, 60, 0.15);
+}
+
+.cafeteria-image-badge {
+  position: absolute;
+  z-index: 4;
+
+  right: 0;
+  bottom: 0;
+
+  min-width: 145px;
+  padding: 15px 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  border-radius: 12px;
+
+  background: #0a2e5c;
+  color: #fff;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  box-shadow: 0 12px 30px rgba(10, 46, 92, 0.24);
+}
+
+.cafeteria-image-badge svg {
+  color: #f5c242;
+  font-size: 16px;
+}
+
+/* =========================================================
+   ABOUT CONTENT
+========================================================= */
+
+.cafeteria-about-content {
+  padding: 10px 0;
+}
+
+.cafeteria-section-label {
+  display: inline-block;
+  margin-bottom: 13px;
+
+  color: #b78a00;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.cafeteria-about-content h2 {
+  max-width: 600px;
+  margin: 0;
+
+  color: #102a43;
+
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+}
+
+.cafeteria-heading-line {
+  width: 58px;
+  height: 4px;
+
+  margin: 19px 0 24px;
+
+  border-radius: 10px;
+  background: #f5c242;
+}
+
+.cafeteria-about-content > p {
+  max-width: 610px;
+  margin: 0;
+
+  color: #5f6f80;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.cafeteria-about-bottom {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-top: 30px;
+  padding-top: 24px;
+
+  border-top: 1px solid #e5eaf0;
+
+  color: #34495e;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.cafeteria-mini-icon {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #eef4fa;
+  color: #0a2e5c;
+}
+
+/* =========================================================
+   HIGHLIGHT
+========================================================= */
+
+.cafeteria-highlight {
+  padding: 0 0 90px;
+
+  background: #f8fafc;
+}
+
+.cafeteria-highlight-card {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 68px 1fr 48px;
+  align-items: center;
+  gap: 22px;
+
+  padding: 30px 34px;
+
+  border-radius: 18px;
+
+  background: linear-gradient(135deg, #071d3a 0%, #0a2e5c 55%, #123f7a 100%);
+
+  box-shadow: 0 18px 45px rgba(7, 29, 58, 0.16);
+
+  overflow: hidden;
+}
+
+.cafeteria-highlight-card::after {
+  content: "";
+
+  position: absolute;
+  width: 240px;
+  height: 240px;
+
+  right: -100px;
+  top: -120px;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 50%;
+}
+
+.cafeteria-highlight-icon {
+  position: relative;
+  z-index: 2;
+
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  color: #f5c242;
+  font-size: 23px;
+}
+
+.cafeteria-highlight-card > div:nth-child(2) {
+  position: relative;
+  z-index: 2;
+}
+
+.cafeteria-highlight-card span {
+  display: block;
+  margin-bottom: 6px;
+
+  color: #f5c242;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.cafeteria-highlight-card h3 {
+  margin: 0 0 8px;
+
+  color: #fff;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.cafeteria-highlight-card p {
+  max-width: 720px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.cafeteria-highlight-arrow {
+  position: relative;
+  z-index: 2;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+
+  font-size: 15px;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.cafeteria-page-loading {
+  min-height: 500px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: #637487;
+}
+
+.cafeteria-loading-spinner {
+  width: 38px;
+  height: 38px;
+
+  margin-bottom: 15px;
+
+  border: 3px solid #e3e9ef;
+  border-top-color: #0a2e5c;
+
+  border-radius: 50%;
+
+  animation: cafeteria-spin 0.8s linear infinite;
+}
+
+.cafeteria-page-loading p {
+  margin: 0;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@keyframes cafeteria-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+  .cafeteria-hero {
+    min-height: 390px;
+  }
+
+  .cafeteria-about {
+    padding: 70px 0;
+  }
+
+  .cafeteria-about-grid {
+    gap: 45px;
+  }
+
+  .cafeteria-about-image {
+    height: 350px;
+  }
+
+  .cafeteria-about-content > p {
+    font-size: 15px;
+  }
+
+  .cafeteria-highlight {
+    padding-bottom: 70px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+  .cafeteria-container {
+    width: min(100% - 30px, 600px);
+  }
+
+  .cafeteria-hero {
+    min-height: 350px;
+  }
+
+  .cafeteria-hero-content {
+    padding: 70px 15px;
+  }
+
+  .cafeteria-hero-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 17px;
+    font-size: 19px;
+  }
+
+  .cafeteria-hero h1 {
+    font-size: 38px;
+  }
+
+  .cafeteria-hero-content p {
+    font-size: 12px;
+  }
+
+  .cafeteria-hero-circle {
+    width: 130px;
+    height: 130px;
+    right: -40px;
+  }
+
+  .cafeteria-about {
+    padding: 55px 0;
+  }
+
+  .cafeteria-about-grid {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .cafeteria-about-image-wrap {
+    padding: 12px;
+  }
+
+  .cafeteria-about-image {
+    height: 300px;
+    border-radius: 14px;
+  }
+
+  .cafeteria-image-decoration {
+    width: 100px;
+    height: 100px;
+    border-width: 3px;
+  }
+
+  .cafeteria-image-badge {
+    right: -2px;
+    bottom: -2px;
+    min-width: 125px;
+    padding: 12px 14px;
+    font-size: 12px;
+  }
+
+  .cafeteria-about-content {
+    padding: 0;
+  }
+
+  .cafeteria-about-content h2 {
+    font-size: 31px;
+  }
+
+  .cafeteria-about-content > p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .cafeteria-about-bottom {
+    margin-top: 24px;
+    padding-top: 20px;
+    font-size: 13px;
+  }
+
+  .cafeteria-highlight {
+    padding-bottom: 55px;
+  }
+
+  .cafeteria-highlight-card {
+    grid-template-columns: 52px 1fr;
+    gap: 16px;
+
+    padding: 24px 20px;
+
+    border-radius: 15px;
+  }
+
+  .cafeteria-highlight-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 19px;
+    border-radius: 12px;
+  }
+
+  .cafeteria-highlight-card h3 {
+    font-size: 19px;
+  }
+
+  .cafeteria-highlight-card p {
+    font-size: 12px;
+  }
+
+  .cafeteria-highlight-arrow {
+    display: none;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .cafeteria-container {
+    width: calc(100% - 24px);
+  }
+
+  .cafeteria-hero {
+    min-height: 315px;
+  }
+
+  .cafeteria-hero h1 {
+    font-size: 34px;
+  }
+
+  .cafeteria-yellow-line {
+    width: 50px;
+    height: 3px;
+    margin: 14px auto;
+  }
+
+  .cafeteria-about {
+    padding: 45px 0;
+  }
+
+  .cafeteria-about-image {
+    height: 245px;
+  }
+
+  .cafeteria-about-content h2 {
+    font-size: 27px;
+  }
+
+  .cafeteria-section-label {
+    font-size: 10px;
+  }
+
+  .cafeteria-highlight-card {
+    padding: 20px 17px;
+  }
+
+  .cafeteria-highlight-card h3 {
+    font-size: 17px;
+  }
+}

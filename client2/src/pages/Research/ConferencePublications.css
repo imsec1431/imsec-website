@@ -1,0 +1,636 @@
+/*=========================================================
+                    Google Font
+=========================================================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+
+  background: #fff;
+}
+
+/*=========================================================
+                    Common
+=========================================================*/
+
+.section-tag {
+  color: #fdb913;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+
+  font-weight: 800;
+
+  color: #0a2e5c;
+
+  margin-bottom: 20px;
+}
+
+.section-title span {
+  color: #fdb913;
+}
+
+.section-title::after {
+  content: "";
+
+  display: block;
+
+  width: 90px;
+
+  height: 4px;
+
+  background: #fdb913;
+
+  border-radius: 50px;
+
+  margin-top: 15px;
+}
+
+.text-center .section-title::after {
+  margin: 15px auto 0;
+}
+
+/*=========================================================
+                    Hero
+=========================================================*/
+
+.conference-hero {
+  height: 430px;
+
+  background:
+    linear-gradient(rgba(10, 46, 92, 0.88), rgba(10, 46, 92, 0.88)),
+    url("https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1600&q=80");
+
+  background-size: cover;
+
+  background-position: center;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: clamp(3rem, 6vw, 4.8rem);
+
+  font-weight: 800;
+
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 18px;
+}
+
+.hero-content span {
+  margin: 0 8px;
+
+  color: #fdb913;
+}
+
+/*=========================================================
+                    About
+=========================================================*/
+
+.conference-about {
+  background: #fff;
+}
+
+.about-image {
+  width: 100%;
+
+  border-radius: 20px;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+
+  transition: 0.4s;
+}
+
+.about-image:hover {
+  transform: scale(1.03);
+}
+
+.conference-about p {
+  font-size: 16px;
+
+  line-height: 1.9;
+
+  color: #666;
+
+  text-align: justify;
+}
+
+/*=========================================================
+                    Statistics
+=========================================================*/
+
+.conference-stats {
+  background: #f7f9fc;
+}
+
+.stat-card {
+  background: #fff;
+
+  padding: 40px 20px;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  height: 100%;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card h2 {
+  font-size: 42px;
+
+  font-weight: 800;
+
+  color: #0a2e5c;
+
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 17px;
+
+  font-weight: 600;
+
+  color: #666;
+
+  margin: 0;
+}
+
+/*=========================================================
+                    Search
+=========================================================*/
+
+.search-section {
+  background: #fff;
+}
+
+.search-box {
+  display: flex;
+
+  align-items: center;
+
+  padding: 16px 20px;
+
+  border-radius: 50px;
+
+  background: #fff;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.search-box svg {
+  font-size: 22px;
+
+  color: #fdb913;
+
+  margin-right: 15px;
+}
+
+.search-box input {
+  border: none;
+
+  box-shadow: none !important;
+
+  font-size: 16px;
+}
+
+.search-box input:focus {
+  border: none;
+}
+
+/*=========================================================
+                    Conference Table
+=========================================================*/
+
+.conference-table-section {
+  background: #fff;
+}
+
+.conference-table {
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  margin-bottom: 0;
+}
+
+.conference-table thead {
+  background: #0a2e5c;
+
+  color: #fff;
+}
+
+.conference-table th {
+  padding: 18px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  text-align: center;
+
+  vertical-align: middle;
+
+  white-space: nowrap;
+}
+
+.conference-table td {
+  padding: 16px;
+
+  font-size: 14px;
+
+  vertical-align: middle;
+
+  text-align: center;
+}
+
+.conference-table tbody tr {
+  transition: 0.3s;
+}
+
+.conference-table tbody tr:hover {
+  background: #fff8ea;
+}
+
+/*=========================================================
+                    Indexing Badge
+=========================================================*/
+
+.indexing-badge {
+  display: inline-block;
+
+  padding: 8px 16px;
+
+  border-radius: 30px;
+
+  background: #eaf4ff;
+
+  color: #0a2e5c;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+/*=========================================================
+                    View Paper
+=========================================================*/
+
+.view-paper {
+  text-decoration: none;
+
+  font-weight: 600;
+
+  color: #0a2e5c;
+
+  transition: 0.3s;
+}
+
+.view-paper:hover {
+  color: #fdb913;
+}
+
+.view-paper svg {
+  margin-left: 6px;
+
+  font-size: 13px;
+}
+
+/*=========================================================
+                Timeline
+=========================================================*/
+
+.conference-timeline {
+  background: #fff;
+}
+
+.timeline-card {
+  background: #fff;
+
+  padding: 35px 20px;
+
+  text-align: center;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  height: 100%;
+}
+
+.timeline-card:hover {
+  transform: translateY(-10px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-icon {
+  font-size: 55px;
+
+  color: #fdb913;
+
+  margin-bottom: 20px;
+}
+
+.timeline-card h3 {
+  font-size: 34px;
+
+  font-weight: 700;
+
+  color: #0a2e5c;
+
+  margin-bottom: 10px;
+}
+
+.timeline-card p {
+  margin: 0;
+
+  font-weight: 600;
+
+  color: #666;
+}
+
+/*=========================================================
+                Conference Categories
+=========================================================*/
+
+.conference-category {
+  background: #f7f9fc;
+}
+
+.category-card {
+  background: #fff;
+
+  padding: 35px 25px;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  height: 100%;
+
+  border-top: 4px solid transparent;
+}
+
+.category-card:hover {
+  transform: translateY(-10px);
+
+  border-top: 4px solid #fdb913;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.category-icon {
+  font-size: 55px;
+
+  color: #fdb913;
+
+  margin-bottom: 18px;
+}
+
+.category-card h4 {
+  font-size: 21px;
+
+  font-weight: 700;
+
+  color: #0a2e5c;
+
+  margin: 0;
+}
+
+/*=========================================================
+                CTA
+=========================================================*/
+
+.conference-cta {
+  background: linear-gradient(135deg, #0a2e5c, #144a87);
+
+  padding: 90px 0;
+
+  color: #fff;
+}
+
+.conference-cta h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+
+  font-weight: 800;
+
+  margin-bottom: 20px;
+}
+
+.conference-cta p {
+  font-size: 17px;
+
+  line-height: 1.9;
+
+  color: #e5e5e5;
+}
+
+.conference-cta .btn {
+  padding: 12px 30px;
+
+  font-weight: 600;
+
+  transition: 0.35s;
+}
+
+.conference-cta .btn-warning {
+  background: #fdb913;
+
+  border: none;
+
+  color: #0a2e5c;
+}
+
+.conference-cta .btn-warning:hover {
+  background: #fff;
+
+  color: #0a2e5c;
+
+  transform: translateY(-5px);
+}
+
+.conference-cta .btn-outline-light:hover {
+  background: #fff;
+
+  color: #0a2e5c;
+
+  transform: translateY(-5px);
+}
+
+/*=========================================================
+                Smooth Animation
+=========================================================*/
+
+.stat-card,
+.featured-card,
+.timeline-card,
+.category-card,
+.gallery-card {
+  transition: all 0.35s ease;
+}
+
+/*=========================================================
+                Responsive
+=========================================================*/
+
+@media (max-width: 992px) {
+  .conference-hero {
+    height: 340px;
+  }
+
+  .featured-card img {
+    height: 220px;
+  }
+
+  .conference-cta {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .conference-hero {
+    height: 280px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .featured-content {
+    padding: 20px;
+  }
+
+  .featured-content h4 {
+    font-size: 20px;
+  }
+
+  .timeline-card {
+    padding: 30px 20px;
+  }
+
+  .category-card {
+    padding: 30px 20px;
+  }
+
+  .gallery-card img {
+    height: 220px;
+  }
+
+  .conference-table {
+    font-size: 13px;
+  }
+
+  .conference-table th,
+  .conference-table td {
+    padding: 10px;
+  }
+
+  .search-box {
+    padding: 12px 18px;
+
+    border-radius: 15px;
+  }
+
+  .conference-cta {
+    padding: 70px 20px;
+  }
+
+  .conference-cta .btn {
+    width: 100%;
+
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .conference-hero {
+    height: 230px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .about-image {
+    margin-bottom: 25px;
+  }
+
+  .stat-card h2 {
+    font-size: 34px;
+  }
+
+  .timeline-card h3 {
+    font-size: 28px;
+  }
+
+  .category-card h4 {
+    font-size: 19px;
+  }
+
+  .gallery-card img {
+    height: 190px;
+  }
+}

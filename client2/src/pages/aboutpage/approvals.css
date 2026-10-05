@@ -1,0 +1,612 @@
+/* ===========================================
+        Approvals & Affiliations
+        IMSEC Website
+===========================================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background: #fff;
+}
+
+/* ===========================================
+            Common
+===========================================*/
+
+.section-tag {
+  color: #fdb913;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.3rem);
+  font-weight: 800;
+  color: #0a2e5c;
+  margin-bottom: 20px;
+}
+
+.section-title span {
+  color: #fdb913;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  background: #fdb913;
+  border-radius: 20px;
+  margin-top: 15px;
+}
+
+.text-center .section-title::after {
+  margin: 15px auto 0;
+}
+
+/* ===========================================
+            Hero
+===========================================*/
+
+.approval-hero {
+  height: 430px;
+
+  background:
+    linear-gradient(rgba(10, 46, 92, 0.82), rgba(10, 46, 92, 0.82)),
+    url("https://images.unsplash.com/photo-1562774053-701939374585?w=1600&q=80");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+
+  font-weight: 800;
+}
+
+.hero-content p {
+  font-size: 18px;
+
+  margin-top: 15px;
+}
+
+.hero-content span {
+  color: #fdb913;
+
+  margin: 0 8px;
+}
+
+/* ===========================================
+        About Section
+===========================================*/
+
+.approval-about {
+  background: #fff;
+}
+
+.approval-image {
+  width: 100%;
+
+  border-radius: 25px;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+  transition: 0.5s;
+}
+
+.approval-image:hover {
+  transform: scale(1.03);
+}
+
+.approval-about p {
+  color: #666;
+
+  line-height: 1.9;
+
+  text-align: justify;
+}
+
+/* ===========================================
+        Approval Cards
+===========================================*/
+
+.approval-section {
+  background: #f8f9fb;
+}
+
+.approval-card {
+  background: #fff;
+
+  border-radius: 20px;
+
+  padding: 35px 25px;
+
+  text-align: center;
+
+  height: 100%;
+
+  transition: 0.35s;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  border-top: 4px solid transparent;
+}
+
+.approval-card:hover {
+  transform: translateY(-10px);
+
+  border-color: #fdb913;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.approval-logo {
+  width: 90px;
+
+  height: 90px;
+
+  object-fit: contain;
+
+  margin-bottom: 20px;
+
+  transition: 0.35s;
+}
+
+.approval-card:hover .approval-logo {
+  transform: scale(1.1);
+}
+
+.approval-card h4 {
+  color: #0a2e5c;
+
+  font-weight: 700;
+
+  margin-bottom: 12px;
+
+  min-height: 55px;
+}
+
+.approval-card span {
+  display: inline-block;
+
+  background: #fdb913;
+
+  color: #0a2e5c;
+
+  padding: 6px 18px;
+
+  border-radius: 30px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  margin-bottom: 18px;
+}
+
+.approval-card p {
+  color: #666;
+
+  line-height: 1.8;
+
+  min-height: 120px;
+}
+
+.approval-card .btn {
+  border-radius: 30px;
+
+  font-weight: 600;
+}
+
+/* ===========================================
+        Certificate Section
+===========================================*/
+
+.certificate-section {
+  background: #fff;
+}
+
+.certificate-card {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+
+  cursor: pointer;
+}
+
+.certificate-img {
+  width: 100%;
+
+  height: 260px;
+
+  object-fit: contain;
+
+  background: #fff;
+
+  padding: 30px;
+
+  transition: 0.45s;
+}
+
+.certificate-card:hover .certificate-img {
+  transform: scale(1.05);
+}
+
+.certificate-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(10, 46, 92, 0.85);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  opacity: 0;
+
+  transition: 0.35s;
+}
+
+.certificate-card:hover .certificate-overlay {
+  opacity: 1;
+}
+/* ===========================================
+        Download Documents
+===========================================*/
+
+.document-section {
+  background: #f8f9fb;
+}
+
+.document-card {
+  background: #fff;
+
+  border-radius: 18px;
+
+  padding: 22px 25px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  height: 100%;
+}
+
+.document-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+.document-left {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+.pdf-icon {
+  width: 60px;
+
+  height: 60px;
+
+  border-radius: 50%;
+
+  background: #dc3545;
+
+  color: #fff;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 26px;
+
+  flex-shrink: 0;
+}
+
+.document-left h5 {
+  margin-bottom: 5px;
+
+  color: #0a2e5c;
+
+  font-weight: 700;
+}
+
+.document-left span {
+  color: #666;
+
+  font-size: 14px;
+}
+
+.document-card .btn {
+  background: #fdb913;
+
+  color: #0a2e5c;
+
+  border: none;
+
+  font-weight: 600;
+}
+
+.document-card .btn:hover {
+  background: #0a2e5c;
+
+  color: #fff;
+}
+
+/* ===========================================
+        FAQ
+===========================================*/
+
+.faq-section {
+  background: #fff;
+}
+
+.accordion-item {
+  border: none !important;
+
+  border-radius: 15px !important;
+
+  overflow: hidden;
+
+  margin-bottom: 15px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.accordion-button {
+  font-weight: 600;
+
+  color: #0a2e5c;
+
+  background: #fff;
+
+  padding: 18px 20px;
+
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background: #0a2e5c;
+
+  color: #fff;
+}
+
+.accordion-button::after {
+  filter: brightness(0) saturate(100%) invert(72%) sepia(70%) saturate(700%)
+    hue-rotate(360deg);
+}
+
+.accordion-body {
+  color: #666;
+
+  line-height: 1.8;
+}
+
+/* ===========================================
+        CTA
+===========================================*/
+
+.approval-cta {
+  background: linear-gradient(135deg, #0a2e5c, #123f7a);
+
+  color: #fff;
+
+  padding: 90px 0;
+}
+
+.approval-cta h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+
+  font-weight: 800;
+
+  margin-bottom: 18px;
+}
+
+.approval-cta p {
+  color: #ddd;
+
+  line-height: 1.8;
+}
+
+.approval-cta .btn {
+  padding: 12px 30px;
+
+  font-weight: 600;
+
+  transition: 0.35s;
+}
+
+.approval-cta .btn-warning {
+  background: #fdb913;
+
+  color: #0a2e5c;
+
+  border: none;
+}
+
+.approval-cta .btn-warning:hover {
+  background: #fff;
+
+  color: #0a2e5c;
+
+  transform: translateY(-5px);
+}
+
+.approval-cta .btn-outline-light {
+  border: 2px solid #fff;
+}
+
+.approval-cta .btn-outline-light:hover {
+  background: #fff;
+
+  color: #0a2e5c;
+
+  transform: translateY(-5px);
+}
+
+/* ===========================================
+        Smooth Animation
+===========================================*/
+
+.approval-card,
+.certificate-card,
+.document-card {
+  transition: all 0.35s ease;
+}
+
+/* ===========================================
+        Responsive
+===========================================*/
+
+@media (max-width: 992px) {
+  .approval-hero {
+    height: 320px;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .document-card {
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 20px;
+  }
+
+  .document-left {
+    flex-direction: column;
+  }
+
+  .approval-cta {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .approval-hero {
+    height: 260px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .approval-card {
+    padding: 25px;
+  }
+
+  .approval-logo {
+    width: 75px;
+
+    height: 75px;
+  }
+
+  .approval-card h4 {
+    font-size: 20px;
+
+    min-height: auto;
+  }
+
+  .approval-card p {
+    min-height: auto;
+  }
+
+  .certificate-img {
+    height: 220px;
+
+    padding: 20px;
+  }
+
+  .document-card {
+    padding: 22px;
+  }
+
+  .pdf-icon {
+    width: 50px;
+
+    height: 50px;
+
+    font-size: 22px;
+  }
+
+  .document-card .btn {
+    width: 100%;
+  }
+
+  .approval-cta {
+    padding: 60px 20px;
+  }
+
+  .approval-cta .btn {
+    width: 100%;
+
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .approval-image {
+    margin-bottom: 20px;
+  }
+
+  .document-left h5 {
+    font-size: 18px;
+  }
+
+  .accordion-button {
+    font-size: 15px;
+
+    padding: 15px;
+  }
+}

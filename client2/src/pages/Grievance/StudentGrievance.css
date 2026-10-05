@@ -1,0 +1,473 @@
+/*=========================================================
+                    Google Font
+=========================================================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background: #f8fafc;
+}
+
+/*=========================================================
+                    Common
+=========================================================*/
+
+.section-heading h6 {
+  color: #fdb913;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 10px;
+}
+
+.section-heading h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+
+  font-weight: 800;
+
+  color: #0a2e5c;
+
+  margin-bottom: 15px;
+}
+
+.section-heading p {
+  color: #666;
+
+  font-size: 16px;
+}
+
+/*=========================================================
+                    Hero
+=========================================================*/
+
+.grievance-hero {
+  height: 420px;
+
+  background:
+    linear-gradient(rgba(10, 46, 92, 0.88), rgba(10, 46, 92, 0.88)),
+    url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&q=80");
+
+  background-size: cover;
+
+  background-position: center;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: clamp(3rem, 6vw, 4.5rem);
+
+  font-weight: 800;
+
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 20px;
+
+  max-width: 700px;
+
+  margin: auto;
+
+  line-height: 1.8;
+}
+
+/*=========================================================
+                    Login
+=========================================================*/
+
+/*=========================================================
+                Complaint Form
+=========================================================*/
+
+.complaint-section {
+  background: #f8fafc;
+}
+
+.complaint-section form {
+  background: #fff;
+
+  padding: 40px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.form-label {
+  font-weight: 600;
+
+  color: #0a2e5c;
+
+  margin-bottom: 8px;
+}
+
+.form-control,
+.form-select {
+  height: 52px;
+
+  border-radius: 12px;
+
+  border: 1px solid #ddd;
+}
+
+textarea.form-control {
+  height: auto;
+
+  resize: none;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #fdb913;
+
+  box-shadow: none;
+}
+
+.submit-btn {
+  background: #0a2e5c;
+
+  border: none;
+
+  padding: 14px 40px;
+
+  border-radius: 50px;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #fdb913;
+
+  color: #0a2e5c;
+}
+
+/*=========================================================
+                    Status Badge
+=========================================================*/
+
+.status {
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.pending {
+  background: #fff3cd;
+  color: #b78103;
+}
+
+.progress {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.resolved {
+  background: #d4edda;
+  color: #155724;
+}
+
+.rejected {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/*=========================================================
+                    Workflow
+=========================================================*/
+
+.status-guide {
+  background: #fff;
+}
+
+.guide-card {
+  background: #fff;
+  padding: 35px 25px;
+  text-align: center;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.35s;
+  height: 100%;
+}
+
+.guide-card:hover {
+  transform: translateY(-8px);
+}
+
+.guide-number {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: #fdb913;
+  color: #0a2e5c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.guide-card h5 {
+  font-weight: 700;
+  color: #0a2e5c;
+  margin-bottom: 15px;
+}
+
+.guide-card p {
+  color: #666;
+  line-height: 1.7;
+}
+
+/*=========================================================
+                    CTA
+=========================================================*/
+
+.cta-section {
+  padding: 70px 0;
+  background: #fdb913;
+}
+
+.cta-section h2 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #0a2e5c;
+  margin-bottom: 15px;
+}
+
+.cta-section p {
+  font-size: 18px;
+  color: #333;
+}
+
+.cta-btn {
+  padding: 15px 45px;
+  border: none;
+  border-radius: 50px;
+  background: #0a2e5c;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.35s;
+}
+
+.cta-btn:hover {
+  background: #fff;
+  color: #0a2e5c;
+}
+
+/*=========================================================
+                    Animation
+=========================================================*/
+
+.login-card,
+.track-card,
+.guide-card,
+.contact-card,
+.complaint-section form,
+.grievance-table {
+  transition: 0.35s;
+}
+
+.login-card:hover,
+.track-card:hover,
+.contact-card:hover,
+.complaint-section form:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+/*=========================================================
+                    Responsive
+=========================================================*/
+
+@media (max-width: 991px) {
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .contact-card {
+    padding: 35px 25px;
+  }
+
+  .cta-section {
+    text-align: center;
+  }
+
+  .cta-btn {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grievance-hero {
+    height: 340px;
+    padding: 40px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .login-card,
+  .track-card,
+  .complaint-section form,
+  .contact-card {
+    padding: 25px;
+  }
+
+  .section-heading h2 {
+    font-size: 30px;
+  }
+
+  .contact-card h2 {
+    font-size: 28px;
+  }
+
+  .cta-section h2 {
+    font-size: 30px;
+  }
+
+  .grievance-table {
+    font-size: 14px;
+  }
+
+  .status {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .login-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 28px;
+  }
+
+  .guide-number {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .cta-btn,
+  .login-btn,
+  .track-btn,
+  .submit-btn {
+    width: 100%;
+  }
+}
+/* =========================================
+   Success Popup
+========================================= */
+
+.success-popup-icon {
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #d4edda;
+  color: #198754;
+
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.modal-content {
+  border: none;
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+  border-bottom: 1px solid #eee;
+  padding: 20px 25px;
+}
+
+.modal-title {
+  color: #0a2e5c;
+  font-weight: 700;
+}
+
+.modal-body {
+  color: #333;
+}
+
+.modal-body h4 {
+  color: #0a2e5c;
+  font-weight: 700;
+}
+
+.modal-footer {
+  border-top: 1px solid #eee;
+  padding: 15px 25px;
+}
+
+.modal-footer .btn {
+  border-radius: 30px;
+  padding: 9px 28px;
+  font-weight: 600;
+}
+/* =========================================
+   ERROR POPUP
+========================================= */
+
+.error-popup-icon {
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f8d7da;
+  color: #dc3545;
+
+  font-size: 38px;
+  font-weight: 700;
+}

@@ -1,0 +1,338 @@
+/* =========================================
+   PLACEMENTS ADMIN
+========================================= */
+
+.placements-admin-page {
+  width: 100%;
+
+  padding: 28px;
+
+  box-sizing: border-box;
+
+  background: #f6f8fb;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.placements-admin-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  margin-bottom: 28px;
+
+  padding: 22px 24px;
+
+  border: 1px solid #e1e6ed;
+
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  box-shadow: 0 4px 15px rgba(20, 43, 75, 0.05);
+}
+
+/* =========================================
+   HEADER ICON
+========================================= */
+
+.placements-admin-header-icon {
+  width: 52px;
+
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  background: #1764aa;
+
+  color: #ffffff;
+
+  font-size: 21px;
+}
+
+/* =========================================
+   HEADER TITLE
+========================================= */
+
+.placements-admin-header h1 {
+  margin: 0;
+
+  color: #102d57;
+
+  font-size: 28px;
+
+  line-height: 1.25;
+
+  font-weight: 800;
+}
+
+.placements-admin-header p {
+  max-width: 750px;
+
+  margin: 6px 0 0;
+
+  color: #707b8d;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+/* =========================================
+   SECTION
+========================================= */
+
+.placements-admin-section {
+  width: 100%;
+}
+
+/* =========================================
+   SECTION HEADER
+========================================= */
+
+.placements-admin-section-header {
+  margin-bottom: 18px;
+}
+
+.placements-admin-section-header h2 {
+  margin: 0;
+
+  color: #102d57;
+
+  font-size: 20px;
+
+  font-weight: 800;
+}
+
+.placements-admin-section-header p {
+  margin: 5px 0 0;
+
+  color: #7b8493;
+
+  font-size: 13px;
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+.placements-admin-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.placements-admin-card {
+  display: block;
+
+  padding: 20px;
+
+  border: 1px solid #e1e6ed;
+
+  border-radius: 11px;
+
+  background: #ffffff;
+
+  color: inherit;
+
+  text-decoration: none;
+
+  box-shadow: 0 4px 15px rgba(20, 43, 75, 0.04);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+
+  box-sizing: border-box;
+}
+
+.placements-admin-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #b9d0e5;
+
+  box-shadow: 0 10px 25px rgba(20, 43, 75, 0.09);
+
+  color: inherit;
+}
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.placements-admin-card-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+}
+
+/* =========================================
+   CARD ICON
+========================================= */
+
+.placements-admin-card-icon {
+  width: 44px;
+
+  height: 44px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #eef6fd;
+
+  color: #1764aa;
+
+  font-size: 18px;
+}
+
+/* =========================================
+   ARROW
+========================================= */
+
+.placements-admin-card-arrow {
+  color: #a4adba;
+
+  font-size: 14px;
+
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.placements-admin-card:hover .placements-admin-card-arrow {
+  color: #1764aa;
+
+  transform: translateX(4px);
+}
+
+/* =========================================
+   CARD TITLE
+========================================= */
+
+.placements-admin-card h3 {
+  margin: 0 0 7px;
+
+  color: #1b3154;
+
+  font-size: 16px;
+
+  line-height: 1.35;
+
+  font-weight: 800;
+}
+
+/* =========================================
+   CARD DESCRIPTION
+========================================= */
+
+.placements-admin-card p {
+  margin: 0;
+
+  color: #727d8f;
+
+  font-size: 12.5px;
+
+  line-height: 1.65;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+  .placements-admin-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .placements-admin-page {
+    padding: 20px 15px;
+  }
+
+  .placements-admin-header {
+    padding: 18px;
+
+    align-items: flex-start;
+  }
+
+  .placements-admin-header-icon {
+    width: 46px;
+
+    height: 46px;
+
+    font-size: 18px;
+  }
+
+  .placements-admin-header h1 {
+    font-size: 24px;
+  }
+
+  .placements-admin-header p {
+    font-size: 12px;
+  }
+
+  .placements-admin-grid {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+  .placements-admin-card {
+    padding: 18px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+  .placements-admin-page {
+    padding: 15px 10px;
+  }
+
+  .placements-admin-header {
+    margin-bottom: 20px;
+  }
+
+  .placements-admin-header h1 {
+    font-size: 21px;
+  }
+
+  .placements-admin-section-header h2 {
+    font-size: 18px;
+  }
+}

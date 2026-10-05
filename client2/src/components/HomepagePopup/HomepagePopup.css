@@ -1,0 +1,581 @@
+/* =========================================================
+   HOMEPAGE POPUP OVERLAY
+========================================================= */
+
+.homepage-popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(3, 10, 25, 0.78);
+
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+
+  animation: popupOverlayFade 0.35s ease;
+}
+
+/* =========================================================
+   POPUP CONTAINER
+   Automatically fits image content
+========================================================= */
+
+.homepage-popup-container {
+  position: relative;
+
+  width: auto;
+  max-width: 92vw;
+  max-height: 92vh;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.35),
+    0 8px 30px rgba(0, 0, 0, 0.18);
+
+  animation: popupContainerIn 0.4s ease;
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+/* =========================================================
+   CONTENT AREA
+
+   IMPORTANT:
+   No fixed/minimum height on desktop.
+   This prevents blank space around images.
+========================================================= */
+
+.homepage-popup-content {
+  position: relative;
+
+  width: auto;
+  max-width: 92vw;
+  max-height: 92vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   IMAGE
+
+   Image keeps its original aspect ratio.
+   Popup automatically fits image dimensions.
+========================================================= */
+
+.homepage-popup-image {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 92vw;
+  max-height: 82vh;
+
+  object-fit: contain;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
+}
+
+/* =========================================================
+   PDF
+========================================================= */
+
+.homepage-popup-pdf {
+  display: block;
+
+  width: min(92vw, 1100px);
+  height: min(82vh, 800px);
+
+  border: none;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.homepage-popup-close {
+  position: absolute;
+
+  top: 12px;
+  right: 12px;
+
+  z-index: 20;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 50%;
+
+  background: rgba(4, 16, 38, 0.82);
+
+  color: #ffffff;
+
+  font-size: 30px;
+  font-weight: 300;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.homepage-popup-close:hover {
+  background: #b89535;
+
+  transform: rotate(90deg) scale(1.05);
+
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.homepage-popup-title {
+  position: relative;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 15px 65px 15px 20px;
+
+  background: linear-gradient(90deg, #071a38, #102d55);
+
+  color: #ffffff;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  letter-spacing: 0.2px;
+
+  text-align: center;
+
+  border-top: 3px solid #b89535;
+
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   PREVIOUS / NEXT ARROWS
+========================================================= */
+
+.homepage-popup-arrow {
+  position: absolute;
+
+  top: 50%;
+
+  z-index: 15;
+
+  transform: translateY(-50%);
+
+  width: 46px;
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  background: rgba(5, 19, 43, 0.72);
+
+  color: #ffffff;
+
+  font-size: 42px;
+  font-weight: 300;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  transition:
+    background 0.25s ease,
+    width 0.25s ease,
+    transform 0.25s ease;
+}
+
+.homepage-popup-arrow:hover {
+  width: 52px;
+
+  background: #b89535;
+
+  transform: translateY(-50%) scale(1.02);
+}
+
+.homepage-popup-prev {
+  left: 0;
+
+  border-radius: 0 12px 12px 0;
+}
+
+.homepage-popup-next {
+  right: 0;
+
+  border-radius: 12px 0 0 12px;
+}
+
+/* =========================================================
+   DOT NAVIGATION
+========================================================= */
+
+.homepage-popup-dots {
+  position: absolute;
+
+  left: 50%;
+  bottom: 58px;
+
+  z-index: 16;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 8px 13px;
+
+  background: rgba(4, 16, 38, 0.65);
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+
+  border-radius: 30px;
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.homepage-popup-dot {
+  width: 8px;
+  height: 8px;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.55);
+
+  cursor: pointer;
+
+  transition:
+    width 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.homepage-popup-dot:hover {
+  transform: scale(1.2);
+
+  background: #ffffff;
+}
+
+.homepage-popup-dot.active {
+  width: 25px;
+
+  border-radius: 10px;
+
+  background: #b89535;
+}
+
+/* =========================================================
+   ROTATION INDICATOR
+========================================================= */
+
+.homepage-popup-rotation {
+  position: absolute;
+
+  left: 50%;
+  bottom: 12px;
+
+  z-index: 17;
+
+  transform: translateX(-50%);
+
+  padding: 5px 12px;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  background: rgba(3, 12, 28, 0.68);
+
+  border-radius: 20px;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes popupOverlayFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popupContainerIn {
+  from {
+    opacity: 0;
+
+    transform: scale(0.92) translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+  .homepage-popup-overlay {
+    padding: 15px;
+  }
+
+  .homepage-popup-container {
+    width: auto;
+
+    max-width: 94vw;
+    max-height: 90vh;
+
+    border-radius: 14px;
+  }
+
+  .homepage-popup-content {
+    width: auto;
+
+    max-width: 94vw;
+    max-height: 78vh;
+  }
+
+  .homepage-popup-image {
+    max-width: 94vw;
+    max-height: 70vh;
+  }
+
+  .homepage-popup-pdf {
+    width: 94vw;
+
+    height: 65vh;
+    min-height: 400px;
+  }
+
+  .homepage-popup-close {
+    width: 38px;
+    height: 38px;
+
+    font-size: 27px;
+
+    top: 9px;
+    right: 9px;
+  }
+
+  .homepage-popup-arrow {
+    width: 40px;
+    height: 54px;
+
+    font-size: 35px;
+  }
+
+  .homepage-popup-arrow:hover {
+    width: 44px;
+  }
+
+  .homepage-popup-title {
+    padding: 12px 55px 12px 15px;
+
+    font-size: 15px;
+  }
+
+  .homepage-popup-dots {
+    bottom: 51px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .homepage-popup-overlay {
+    padding: 8px;
+  }
+
+  .homepage-popup-container {
+    width: auto;
+
+    max-width: 96vw;
+    max-height: 88vh;
+
+    border-radius: 12px;
+  }
+
+  .homepage-popup-content {
+    max-width: 96vw;
+    max-height: 72vh;
+  }
+
+  .homepage-popup-image {
+    max-width: 96vw;
+    max-height: 62vh;
+  }
+
+  .homepage-popup-pdf {
+    width: 96vw;
+
+    height: 58vh;
+    min-height: 320px;
+  }
+
+  .homepage-popup-close {
+    width: 34px;
+    height: 34px;
+
+    font-size: 24px;
+
+    top: 7px;
+    right: 7px;
+  }
+
+  .homepage-popup-arrow {
+    width: 34px;
+    height: 48px;
+
+    font-size: 30px;
+  }
+
+  .homepage-popup-arrow:hover {
+    width: 37px;
+  }
+
+  .homepage-popup-prev {
+    border-radius: 0 9px 9px 0;
+  }
+
+  .homepage-popup-next {
+    border-radius: 9px 0 0 9px;
+  }
+
+  .homepage-popup-title {
+    padding: 10px 45px 10px 12px;
+
+    font-size: 14px;
+
+    border-top-width: 2px;
+  }
+
+  .homepage-popup-dots {
+    bottom: 45px;
+
+    gap: 6px;
+
+    padding: 6px 10px;
+  }
+
+  .homepage-popup-dot {
+    width: 7px;
+    height: 7px;
+  }
+
+  .homepage-popup-dot.active {
+    width: 20px;
+  }
+
+  .homepage-popup-rotation {
+    bottom: 9px;
+
+    font-size: 10px;
+
+    padding: 4px 9px;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.homepage-popup-close:focus-visible,
+.homepage-popup-arrow:focus-visible,
+.homepage-popup-dot:focus-visible {
+  outline: 3px solid #b89535;
+
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   REDUCE MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .homepage-popup-overlay,
+  .homepage-popup-container {
+    animation: none;
+  }
+
+  .homepage-popup-close,
+  .homepage-popup-arrow,
+  .homepage-popup-dot,
+  .homepage-popup-image {
+    transition: none;
+  }
+}

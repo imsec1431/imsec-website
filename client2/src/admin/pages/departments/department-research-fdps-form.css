@@ -1,0 +1,444 @@
+/* =========================================================
+   DEPARTMENT RESEARCH FDP FORM
+   ========================================================= */
+
+.department-research-fdps-form-page {
+  min-height: 100vh;
+  padding: 28px;
+  background: #f6f8fc;
+  color: #1f2937;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.drff-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.drff-header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.drff-icon-back {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.drff-icon-back:hover {
+  background: #f3f4f6;
+  transform: translateX(-2px);
+}
+
+.drff-breadcrumb {
+  margin-bottom: 5px;
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.drff-header h1 {
+  margin: 0;
+  color: #111827;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.drff-header p {
+  margin: 5px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* =========================================================
+   ERROR MESSAGE
+   ========================================================= */
+
+.drff-error-message {
+  max-width: 1100px;
+  margin: 0 auto 20px;
+  padding: 12px 15px;
+  border: 1px solid #fecaca;
+  border-radius: 9px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.drff-form {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.drff-card {
+  margin-bottom: 20px;
+  padding: 23px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 13px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.drff-card-header {
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.drff-card-header h2 {
+  margin: 0 0 5px;
+  color: #111827;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.drff-card-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.drff-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.drff-field {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.drff-field.full {
+  grid-column: 1 / -1;
+}
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.drff-field label {
+  margin-bottom: 7px;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.drff-field label span {
+  color: #dc2626;
+}
+
+/* =========================================================
+   INPUT / SELECT / TEXTAREA
+   ========================================================= */
+
+.drff-field input,
+.drff-field select,
+.drff-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  background: #ffffff;
+  color: #111827;
+  font-family: inherit;
+  font-size: 13px;
+  transition: 0.2s ease;
+}
+
+.drff-field input,
+.drff-field select {
+  height: 43px;
+  padding: 0 12px;
+}
+
+.drff-field textarea {
+  min-height: 125px;
+  padding: 11px 12px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.drff-field input::placeholder,
+.drff-field textarea::placeholder {
+  color: #9ca3af;
+}
+
+.drff-field input:focus,
+.drff-field select:focus,
+.drff-field textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+/* =========================================================
+   CHECKBOX
+   ========================================================= */
+
+.drff-checkbox-field {
+  display: flex;
+  align-items: flex-end;
+  min-height: 43px;
+}
+
+.drff-checkbox-label {
+  width: 100%;
+  min-height: 43px;
+  box-sizing: border-box;
+  padding: 9px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f9fafb;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.drff-checkbox-label input {
+  width: 17px;
+  height: 17px;
+  margin: 0;
+  accent-color: #2563eb;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.drff-checkbox-label span {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.drff-checkbox-label strong {
+  color: #374151;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.drff-checkbox-label small {
+  color: #6b7280;
+  font-size: 11px;
+}
+
+/* =========================================================
+   FORM ACTIONS
+   ========================================================= */
+
+.drff-form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 4px 0 25px;
+}
+
+.drff-cancel-btn,
+.drff-save-btn {
+  min-height: 42px;
+  padding: 0 18px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.drff-cancel-btn {
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #374151;
+}
+
+.drff-cancel-btn:hover {
+  background: #f9fafb;
+}
+
+.drff-save-btn {
+  border: 1px solid #2563eb;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.drff-save-btn:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.drff-cancel-btn:disabled,
+.drff-save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.drff-loading {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+}
+
+.drff-spinner {
+  width: 38px;
+  height: 38px;
+  margin-bottom: 14px;
+  border: 3px solid #e5e7eb;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: drffSpin 0.8s linear infinite;
+}
+
+.drff-loading p {
+  margin: 0;
+  font-size: 14px;
+}
+
+@keyframes drffSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   ERROR PAGE
+   ========================================================= */
+
+.drff-error {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.drff-error h3 {
+  margin: 0 0 8px;
+  color: #111827;
+  font-size: 20px;
+}
+
+.drff-error p {
+  max-width: 500px;
+  margin: 0 0 20px;
+  color: #dc2626;
+  font-size: 14px;
+}
+
+.drff-back-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  background: #111827;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .department-research-fdps-form-page {
+    padding: 20px;
+  }
+
+  .drff-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .drff-field.full {
+    grid-column: auto;
+  }
+
+  .drff-card {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .department-research-fdps-form-page {
+    padding: 15px;
+  }
+
+  .drff-header-left {
+    align-items: flex-start;
+  }
+
+  .drff-header h1 {
+    font-size: 22px;
+  }
+
+  .drff-header p {
+    font-size: 12px;
+  }
+
+  .drff-icon-back {
+    width: 38px;
+    height: 38px;
+  }
+
+  .drff-card {
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .drff-card-header {
+    margin-bottom: 16px;
+  }
+
+  .drff-form-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .drff-cancel-btn,
+  .drff-save-btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,443 @@
+/* =========================================================
+   DEPARTMENT RESEARCH PATENTS FORM
+   ========================================================= */
+
+.department-research-patents-form-page {
+  min-height: 100vh;
+  padding: 28px;
+  background: #f6f8fc;
+  color: #1f2937;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.drpf-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.drpf-header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.drpf-icon-back {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.drpf-icon-back:hover {
+  background: #f3f4f6;
+  transform: translateX(-2px);
+}
+
+.drpf-breadcrumb {
+  margin-bottom: 5px;
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.drpf-header h1 {
+  margin: 0;
+  color: #111827;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.drpf-header p {
+  margin: 5px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* =========================================================
+   ERROR MESSAGE
+   ========================================================= */
+
+.drpf-error-message {
+  margin-bottom: 20px;
+  padding: 12px 15px;
+  border: 1px solid #fecaca;
+  border-radius: 9px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.drpf-form {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.drpf-card {
+  margin-bottom: 20px;
+  padding: 23px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 13px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.drpf-card-header {
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.drpf-card-header h2 {
+  margin: 0 0 5px;
+  color: #111827;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.drpf-card-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.drpf-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.drpf-field {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.drpf-field.full {
+  grid-column: 1 / -1;
+}
+
+/* =========================================================
+   LABELS
+   ========================================================= */
+
+.drpf-field label {
+  margin-bottom: 7px;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.drpf-field label span {
+  color: #dc2626;
+}
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.drpf-field input,
+.drpf-field textarea,
+.drpf-field select {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  background: #ffffff;
+  color: #111827;
+  font-family: inherit;
+  font-size: 13px;
+  transition: 0.2s ease;
+}
+
+.drpf-field input,
+.drpf-field select {
+  height: 43px;
+  padding: 0 12px;
+}
+
+.drpf-field textarea {
+  min-height: 120px;
+  padding: 11px 12px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.drpf-field input::placeholder,
+.drpf-field textarea::placeholder {
+  color: #9ca3af;
+}
+
+.drpf-field input:focus,
+.drpf-field textarea:focus,
+.drpf-field select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+/* =========================================================
+   CHECKBOX
+   ========================================================= */
+
+.drpf-checkbox-field {
+  display: flex;
+  align-items: flex-end;
+  min-height: 43px;
+}
+
+.drpf-checkbox-label {
+  width: 100%;
+  min-height: 43px;
+  box-sizing: border-box;
+  padding: 9px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f9fafb;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.drpf-checkbox-label input {
+  width: 17px;
+  height: 17px;
+  margin: 0;
+  accent-color: #2563eb;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.drpf-checkbox-label span {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.drpf-checkbox-label strong {
+  color: #374151;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.drpf-checkbox-label small {
+  color: #6b7280;
+  font-size: 11px;
+}
+
+/* =========================================================
+   FORM ACTIONS
+   ========================================================= */
+
+.drpf-form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 4px 0 25px;
+}
+
+.drpf-cancel-btn,
+.drpf-save-btn {
+  min-height: 42px;
+  padding: 0 18px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.drpf-cancel-btn {
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #374151;
+}
+
+.drpf-cancel-btn:hover {
+  background: #f9fafb;
+}
+
+.drpf-save-btn {
+  border: 1px solid #2563eb;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.drpf-save-btn:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.drpf-cancel-btn:disabled,
+.drpf-save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.drpf-loading {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+}
+
+.drpf-spinner {
+  width: 38px;
+  height: 38px;
+  margin-bottom: 14px;
+  border: 3px solid #e5e7eb;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: drpfSpin 0.8s linear infinite;
+}
+
+.drpf-loading p {
+  margin: 0;
+  font-size: 14px;
+}
+
+@keyframes drpfSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   ERROR PAGE
+   ========================================================= */
+
+.drpf-error {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.drpf-error h3 {
+  margin: 0 0 8px;
+  color: #111827;
+  font-size: 20px;
+}
+
+.drpf-error p {
+  max-width: 500px;
+  margin: 0 0 20px;
+  color: #dc2626;
+  font-size: 14px;
+}
+
+.drpf-back-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  background: #111827;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .department-research-patents-form-page {
+    padding: 20px;
+  }
+
+  .drpf-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .drpf-field.full {
+    grid-column: auto;
+  }
+
+  .drpf-card {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .department-research-patents-form-page {
+    padding: 15px;
+  }
+
+  .drpf-header-left {
+    align-items: flex-start;
+  }
+
+  .drpf-header h1 {
+    font-size: 22px;
+  }
+
+  .drpf-header p {
+    font-size: 12px;
+  }
+
+  .drpf-icon-back {
+    width: 38px;
+    height: 38px;
+  }
+
+  .drpf-card {
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .drpf-card-header {
+    margin-bottom: 16px;
+  }
+
+  .drpf-form-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .drpf-cancel-btn,
+  .drpf-save-btn {
+    width: 100%;
+  }
+}

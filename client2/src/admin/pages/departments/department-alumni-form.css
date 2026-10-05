@@ -1,0 +1,347 @@
+/* =========================================
+   DEPARTMENT ALUMNI FORM
+   IMSEC ADMIN THEME
+========================================= */
+
+.department-alumni-form-page {
+  min-height: 100vh;
+  padding: 28px;
+  background: #f4f7fb;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.department-alumni-form-header {
+  margin-bottom: 24px;
+}
+
+.department-alumni-form-heading {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.department-alumni-form-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #d9e2ef;
+  background: #ffffff;
+  color: #0a2e5c;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.department-alumni-form-back:hover {
+  background: #0a2e5c;
+  color: #ffffff;
+  border-color: #0a2e5c;
+}
+
+.department-alumni-form-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.department-alumni-form-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #0a2e5c;
+  color: #fdb913;
+  font-size: 22px;
+}
+
+.department-alumni-form-title h1 {
+  margin: 0;
+  color: #0a2e5c;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.department-alumni-form-title p {
+  margin: 4px 0 0;
+  color: #667085;
+  font-size: 14px;
+}
+
+/* =========================================
+   ERROR
+========================================= */
+
+.department-alumni-form-error {
+  margin-bottom: 20px;
+  padding: 13px 16px;
+  border: 1px solid #f1b5b5;
+  border-radius: 8px;
+  background: #fff2f2;
+  color: #b42318;
+  font-size: 14px;
+}
+
+/* =========================================
+   FORM CARD
+========================================= */
+
+.department-alumni-form-card {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #e1e8f0;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(10, 46, 92, 0.07);
+}
+
+/* =========================================
+   FORM GRID
+========================================= */
+
+.department-alumni-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.department-alumni-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.department-alumni-form-group.full {
+  grid-column: 1 / -1;
+}
+
+.department-alumni-form-group label {
+  margin-bottom: 8px;
+  color: #344054;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.department-alumni-form-group label span {
+  color: #d92d20;
+}
+
+.department-alumni-form-group input[type="text"],
+.department-alumni-form-group input[type="number"],
+.department-alumni-form-group input[type="url"] {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 13px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  outline: none;
+  background: #ffffff;
+  color: #101828;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.department-alumni-form-group input:focus {
+  border-color: #1764aa;
+  box-shadow: 0 0 0 3px rgba(23, 100, 170, 0.12);
+}
+
+.department-alumni-form-group input::placeholder {
+  color: #98a2b3;
+}
+
+/* =========================================
+   IMAGE PREVIEW
+========================================= */
+
+.department-alumni-image-preview {
+  width: 110px;
+  height: 110px;
+  margin-top: 12px;
+  overflow: hidden;
+  border: 1px solid #d9e2ef;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.department-alumni-image-preview img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* =========================================
+   CHECKBOX
+========================================= */
+
+.department-alumni-checkbox-label {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px !important;
+  cursor: pointer;
+}
+
+.department-alumni-checkbox-label input {
+  width: 17px;
+  height: 17px;
+  accent-color: #0a2e5c;
+  cursor: pointer;
+}
+
+.department-alumni-form-group small {
+  color: #667085;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.department-alumni-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 30px;
+  padding-top: 22px;
+  border-top: 1px solid #eaecf0;
+}
+
+.department-alumni-cancel-btn,
+.department-alumni-save-btn {
+  min-height: 44px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.department-alumni-cancel-btn {
+  border: 1px solid #d0d5dd;
+  background: #ffffff;
+  color: #344054;
+}
+
+.department-alumni-cancel-btn:hover {
+  background: #f2f4f7;
+}
+
+.department-alumni-save-btn {
+  border: 1px solid #0a2e5c;
+  background: #0a2e5c;
+  color: #ffffff;
+}
+
+.department-alumni-save-btn:hover {
+  background: #1764aa;
+  border-color: #1764aa;
+}
+
+.department-alumni-save-btn:disabled,
+.department-alumni-cancel-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   LOADING
+========================================= */
+
+.department-alumni-form-loading {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #667085;
+}
+
+.department-alumni-form-loader {
+  width: 34px;
+  height: 34px;
+  margin-bottom: 12px;
+  border: 4px solid #d9e2ef;
+  border-top-color: #0a2e5c;
+  border-radius: 50%;
+  animation: departmentAlumniFormSpin 0.8s linear infinite;
+}
+
+.department-alumni-form-loading p {
+  margin: 0;
+  font-size: 14px;
+}
+
+@keyframes departmentAlumniFormSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .department-alumni-form-page {
+    padding: 18px;
+  }
+
+  .department-alumni-form-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .department-alumni-form-card {
+    padding: 20px;
+  }
+
+  .department-alumni-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .department-alumni-form-group.full {
+    grid-column: auto;
+  }
+
+  .department-alumni-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .department-alumni-cancel-btn,
+  .department-alumni-save-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .department-alumni-form-page {
+    padding: 12px;
+  }
+
+  .department-alumni-form-title h1 {
+    font-size: 21px;
+  }
+
+  .department-alumni-form-icon {
+    width: 46px;
+    height: 46px;
+  }
+}

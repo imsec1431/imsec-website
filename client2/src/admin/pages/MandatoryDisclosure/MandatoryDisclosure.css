@@ -1,0 +1,81 @@
+.mandatory-disclosure-admin {
+  width: 100%;
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.mandatory-disclosure-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mandatory-disclosure-admin .card {
+  border-radius: 14px;
+}
+
+.mandatory-disclosure-admin .form-label {
+  color: #0a2e5c;
+}
+
+.mandatory-disclosure-admin .form-control {
+  min-height: 44px;
+  border-radius: 8px;
+}
+
+.mandatory-disclosure-admin .form-control:focus {
+  border-color: #0a2e5c;
+  box-shadow: 0 0 0 0.15rem rgba(10, 46, 92, 0.12);
+}
+
+.mandatory-disclosure-admin .form-check-input {
+  cursor: pointer;
+}
+
+.mandatory-disclosure-admin .form-check-label {
+  cursor: pointer;
+  font-weight: 600;
+  color: #0a2e5c;
+}
+
+.mandatory-disclosure-table {
+  margin-bottom: 0;
+}
+
+.mandatory-disclosure-table thead th {
+  background: #0a2e5c;
+  color: #fff;
+  font-weight: 600;
+  white-space: nowrap;
+  border: none;
+}
+
+.mandatory-disclosure-table tbody td {
+  vertical-align: middle;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.mandatory-disclosure-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.mandatory-disclosure-table .btn {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .mandatory-disclosure-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .mandatory-disclosure-admin .card-body {
+    padding: 20px !important;
+  }
+
+  .mandatory-disclosure-table {
+    min-width: 850px;
+  }
+}

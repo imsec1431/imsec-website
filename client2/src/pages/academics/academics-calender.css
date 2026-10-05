@@ -1,0 +1,305 @@
+/* =========================================
+   ACADEMIC CALENDAR - PUBLIC
+========================================= */
+
+.academic-calendar-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 35px 20px 50px;
+  background: #f7f9fc;
+  box-sizing: border-box;
+}
+
+.academic-calendar-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.academic-calendar-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.academic-calendar-header h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.academic-calendar-header p {
+  margin: 0;
+  font-size: 15px;
+  color: #6b7280;
+}
+
+/* =========================================
+   CALENDAR LIST
+========================================= */
+
+.academic-calendar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* =========================================
+   CALENDAR CARD
+========================================= */
+
+.academic-calendar-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 20px 22px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.academic-calendar-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.academic-calendar-card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* =========================================
+   INFO
+========================================= */
+
+.academic-calendar-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.academic-calendar-title-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.academic-calendar-title-row h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 650;
+  color: #1f2937;
+}
+
+/* =========================================
+   SEMESTER BADGE
+========================================= */
+
+.academic-semester-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 52px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.academic-semester-badge.even {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.academic-semester-badge.odd {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+/* =========================================
+   SESSION
+========================================= */
+
+.academic-calendar-session {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.session-label {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.session-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* =========================================
+   PDF BUTTON
+========================================= */
+
+.academic-calendar-pdf-button {
+  flex-shrink: 0;
+  min-width: 105px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+.academic-calendar-pdf-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.academic-calendar-pdf-button:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.academic-calendar-empty {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.academic-calendar-empty h3 {
+  margin: 0 0 8px;
+  font-size: 19px;
+  color: #374151;
+}
+
+.academic-calendar-empty p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* =========================================
+   LOADING
+========================================= */
+
+.academic-calendar-loading {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.academic-calendar-loading h3 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+/* =========================================
+   ERROR
+========================================= */
+
+.academic-calendar-error {
+  background: #ffffff;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.academic-calendar-error h3 {
+  margin: 0 0 8px;
+  color: #b91c1c;
+  font-size: 18px;
+}
+
+.academic-calendar-error p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .academic-calendar-page {
+    padding: 28px 15px 40px;
+  }
+
+  .academic-calendar-header h1 {
+    font-size: 27px;
+  }
+
+  .academic-calendar-card {
+    padding: 17px;
+  }
+
+  .academic-calendar-card-content {
+    align-items: flex-start;
+  }
+
+  .academic-calendar-title-row h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .academic-calendar-page {
+    padding: 22px 12px 35px;
+  }
+
+  .academic-calendar-header {
+    margin-bottom: 22px;
+  }
+
+  .academic-calendar-header h1 {
+    font-size: 24px;
+  }
+
+  .academic-calendar-header p {
+    font-size: 13px;
+  }
+
+  .academic-calendar-card-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .academic-calendar-info {
+    width: 100%;
+  }
+
+  .academic-calendar-pdf-button {
+    width: 100%;
+  }
+
+  .academic-calendar-session {
+    flex-wrap: wrap;
+  }
+}

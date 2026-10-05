@@ -1,0 +1,92 @@
+.mandatory-disclosure-page {
+  width: 100%;
+  min-height: 60vh;
+  background: #ffffff;
+}
+
+.mandatory-disclosure-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.mandatory-disclosure-heading h1 {
+  margin: 0;
+  color: #0a2e5c;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+}
+
+.mandatory-disclosure-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.mandatory-disclosure-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+}
+
+.mandatory-disclosure-table th {
+  background: #0a2e5c;
+  color: #ffffff;
+  padding: 16px 18px;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: left;
+  border: 1px solid #0a2e5c;
+}
+
+.mandatory-disclosure-table td {
+  padding: 16px 18px;
+  border: 1px solid #dee2e6;
+  color: #333333;
+  vertical-align: middle;
+}
+
+.mandatory-disclosure-table tbody tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+.mandatory-disclosure-table tbody tr:hover {
+  background: #f1f4f8;
+}
+
+.serial-column {
+  width: 100px;
+  text-align: center !important;
+}
+
+.download-column {
+  width: 200px;
+  text-align: center !important;
+}
+
+.disclosure-title-cell {
+  font-weight: 600;
+  color: #0a2e5c !important;
+}
+
+.mandatory-download-btn {
+  min-width: 145px;
+  padding: 9px 18px;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+@media (max-width: 576px) {
+  .mandatory-disclosure-heading {
+    margin-bottom: 25px;
+  }
+
+  .mandatory-disclosure-table {
+    min-width: 650px;
+  }
+
+  .mandatory-disclosure-table th,
+  .mandatory-disclosure-table td {
+    padding: 12px;
+  }
+}
