@@ -1030,23 +1030,7 @@ body {
   color: #777;
 }
 
-/*=========================================================
-    SCROLLBAR
-=========================================================*/
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #1565c0;
-
-  border-radius: 20px;
-}
-
-::-webkit-scrollbar-track {
-  background: #edf2f7;
-}
+/* Scoped scrollbars */
 
 /*=========================================================
     LARGE DESKTOP

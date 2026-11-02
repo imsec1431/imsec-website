@@ -1,6 +1,5 @@
 import express from "express";
 
-
 import { validateUploadedFiles } from "../middleware/validateUploadedFiles.js";
 import {
   getAllDepartmentFaculty,
@@ -79,11 +78,19 @@ router.get("/single/:id", getFaculty);
    ADMIN / SUB ADMIN — CREATE FACULTY
 ========================================================= */
 
+// router.post(
+//   "/",
+//   protect,
+//   requireDepartmentPermission("faculty", "faculty-list"),
+//   upload.single("photo"),
+//   validateUploadedFiles,
+//   createDepartmentFaculty,
+// );
 router.post(
   "/",
   protect,
-  requireDepartmentPermission("faculty", "faculty-list"),
   upload.single("photo"),
+  requireDepartmentPermission("faculty", "faculty-list"),
   validateUploadedFiles,
   createDepartmentFaculty,
 );

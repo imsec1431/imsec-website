@@ -424,8 +424,6 @@
 
 /* ---------- Chrome / Edge / Safari ---------- */
 
-html::-webkit-scrollbar,
-body::-webkit-scrollbar,
 .mcaPanel::-webkit-scrollbar,
 .contentPanel::-webkit-scrollbar {
   width: 11px;
@@ -433,8 +431,6 @@ body::-webkit-scrollbar,
 }
 
 /* Scrollbar Track */
-html::-webkit-scrollbar-track,
-body::-webkit-scrollbar-track,
 .mcaPanel::-webkit-scrollbar-track,
 .contentPanel::-webkit-scrollbar-track {
   background: #e9eef5;
@@ -442,8 +438,6 @@ body::-webkit-scrollbar-track,
 }
 
 /* Scrollbar Thumb */
-html::-webkit-scrollbar-thumb,
-body::-webkit-scrollbar-thumb,
 .mcaPanel::-webkit-scrollbar-thumb,
 .contentPanel::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, #0d47a1 0%, #123f78 70%, #ffb800 100%);
@@ -454,16 +448,13 @@ body::-webkit-scrollbar-thumb,
 }
 
 /* Thumb Hover */
-html::-webkit-scrollbar-thumb:hover,
-body::-webkit-scrollbar-thumb:hover,
 .mcaPanel::-webkit-scrollbar-thumb:hover,
 .contentPanel::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #082f63 0%, #0d47a1 65%, #ffb800 100%);
 }
 
 /* Scrollbar Corner */
-html::-webkit-scrollbar-corner,
-body::-webkit-scrollbar-corner {
+.mcaPanel::-webkit-scrollbar-corner, .contentPanel::-webkit-scrollbar-corner {
   background: #e9eef5;
 }
 
@@ -471,8 +462,6 @@ body::-webkit-scrollbar-corner {
    FIREFOX
    ========================================================= */
 
-html,
-body,
 .mcaPanel,
 .contentPanel {
   scrollbar-width: thin;

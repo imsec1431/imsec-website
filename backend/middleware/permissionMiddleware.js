@@ -132,7 +132,7 @@ const resolveDepartmentIdFromResource = async (
        DEPARTMENT EVENTS
     ===================================================== */
 
-    if (moduleKey === "events") {
+    if (moduleKey === "events" || moduleKey === "department-events") {
       const event = await DepartmentEvent.findById(resourceId)
         .select("departmentId")
         .lean();

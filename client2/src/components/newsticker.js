@@ -55,17 +55,17 @@ const NewsTicker = () => {
 
         .ticker-container{
           width:100%;
-          background:#FDB913;
+          background:#f0f4f8;
           display:flex;
           align-items:center;
           overflow:hidden;
-          border-top:1px solid #ddd;
-          border-bottom:1px solid #ddd;
+          border-top:1px solid #dce5ee;
+          border-bottom:1px solid #dce5ee;
           height:45px;
         }
 
         .ticker-label{
-          background:#0A2E5C;
+          background:#1b4568;
           color:#fff;
           min-width:180px;
           height:45px;
@@ -77,6 +77,7 @@ const NewsTicker = () => {
           font-weight:700;
           font-size:15px;
 
+          border-right:3px solid #fdb913;
           z-index:5;
           flex-shrink:0;
         }
@@ -103,7 +104,7 @@ const NewsTicker = () => {
 
           margin-right:80px;
 
-          color:#0A2E5C;
+          color:#1b4568;
 
           font-weight:600;
 
@@ -113,7 +114,7 @@ const NewsTicker = () => {
         }
 
         .ticker-item:hover{
-          color:blue;
+          color:#c99508;
           text-decoration:underline;
         }
 
@@ -200,7 +201,7 @@ const NewsTicker = () => {
 
           padding:15px 20px;
 
-          background:#0A2E5C;
+          background:#1b4568;
 
           color:#fff;
         }
@@ -242,7 +243,7 @@ const NewsTicker = () => {
 
         .news-modal-news-title{
 
-          color:#0A2E5C;
+          color:#1b4568;
 
           font-size:22px;
 
@@ -275,7 +276,7 @@ const NewsTicker = () => {
 
           padding:9px 18px;
 
-          background:#0A2E5C;
+          background:#1b4568;
 
           color:#fff;
 
@@ -290,7 +291,7 @@ const NewsTicker = () => {
 
         .news-view-button:hover{
 
-          background:#082448;
+          background:#12334e;
 
           color:#fff;
         }

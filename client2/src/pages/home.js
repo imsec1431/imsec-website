@@ -664,7 +664,10 @@ const Home = () => {
       </div>
 
       {/* GLOBAL INDUSTRY PARTNERS SECTION */}
-      <div className="partner-section py-5">
+      <div
+        className="partner-section py-5"
+        style={{ backgroundColor: "#1b4568", background: "#1b4568" }}
+      >
         <Container>
           <div className="text-center mb-4">
             <h2
@@ -888,7 +891,7 @@ const Home = () => {
         fluid="xl"
         className="py-5"
         style={{
-          backgroundColor: "rgb(20, 46, 80)",
+          backgroundColor: "#1b4568", background: "#1b4568",
           marginTop: "20px",
         }}
       >
@@ -942,9 +945,8 @@ const Home = () => {
                     className="badge rounded-pill px-3 py-2"
                     style={{
                       background:
-                        item.eventType === "News" ? "#0A2E5C" : "#FDB913",
-                      color: item.eventType === "News" ? "#fff" : "#0A2E5C",
-                      fontWeight: "600",
+                        item.eventType === "News" ? "#1b4568" : "#FDB913",
+                      color: item.eventType === "News" ? "#fff" : "#1b4568", fontWeight: "600",
                     }}
                   >
                     {item.eventType}
@@ -953,9 +955,7 @@ const Home = () => {
                   <h5
                     className="mt-3"
                     style={{
-                      color: "#0A2E5C",
-                      fontWeight: "700",
-                      minHeight: "60px",
+                      color: "#1b4568", fontWeight: "700", minHeight: "60px",
                     }}
                   >
                     {item.title}
@@ -990,9 +990,7 @@ const Home = () => {
                         rel="noopener noreferrer"
                         className="btn btn-sm btn-primary rounded-pill px-4"
                         style={{
-                          background: "#0A2E5C",
-                          border: "none",
-                          textDecoration: "none",
+                          background: "#1b4568", border: "none", textDecoration: "none",
                         }}
                       >
                         More →

@@ -1,6 +1,6 @@
 /* --- GLOBAL BRAND THEME ACCENTS --- */
 .brand-dark {
-  color: #0a2e5c;
+  color: #1b4568;
 }
 .brand-gold {
   color: #fdb913;
@@ -100,12 +100,12 @@
 }
 .micro-stat-badge:hover {
   background: #ffffff;
-  border-color: #0a2e5c;
+  border-color: #1b4568;
   box-shadow: 0 8px 20px rgba(10, 46, 92, 0.05);
   transform: translateY(-2px);
 }
 .micro-badge-icon {
-  color: #0a2e5c;
+  color: #1b4568;
   font-size: 1.3rem;
   background: rgba(10, 46, 92, 0.05);
   width: 36px;
@@ -132,9 +132,9 @@
   transition: all 0.3s ease;
 }
 .programs-tabs .nav-link.active {
-  background-color: #0a2e5c !important;
+  background-color: #1b4568 !important;
   color: #ffffff !important;
-  border-color: #0a2e5c !important;
+  border-color: #1b4568 !important;
   box-shadow: 0 8px 20px rgba(10, 46, 92, 0.15);
 }
 .program-premium-card {
@@ -176,7 +176,7 @@
   margin-bottom: 20px;
 }
 .program-badge-box {
-  color: #0a2e5c;
+  color: #1b4568;
   font-size: 1.6rem;
   background: rgba(10, 46, 92, 0.05);
   width: 52px;
@@ -189,7 +189,7 @@
 }
 .program-premium-card:hover .program-badge-box {
   background: #fdb913;
-  color: #0a2e5c;
+  color: #1b4568;
 }
 .info-row {
   border-top: 1px solid #f1f5f9;
@@ -313,9 +313,10 @@
 }
 /* --- GLOBAL INDUSTRY PARTNERS INFINITE MARQUEE --- */
 .partner-section {
-  background-color: #f8fafc;
-  border-top: 1px solid #e5e7eb;
-  border-bottom: 1px solid #e5e7eb;
+  background-color: #1b4568 !important;
+  background: #1b4568 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 70px 0;
   overflow: hidden;
 }
@@ -375,7 +376,8 @@
   color: "white";
 }
 .partner-section {
-  background-color: #0a2e5c;
+  background-color: #1b4568 !important;
+  background: #1b4568 !important;
   /* nakul */
 }
 /* ---for testimonials */
@@ -411,7 +413,7 @@
 
   font-weight: 700;
 
-  color: #0a2e5c;
+  color: #1b4568;
 }
 
 .student-course {
@@ -423,7 +425,7 @@
 .student-badge {
   background: #fdb913;
 
-  color: #0a2e5c;
+  color: #1b4568;
 
   font-weight: 700;
 
@@ -438,7 +440,7 @@
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: #0a2e5c;
+  color: #1b4568;
 }
 
 .swiper-pagination-bullet-active {
@@ -561,12 +563,12 @@
 .highlight-body button:hover {
   background: #fdb913 !important;
 
-  color: #0a2e5c !important;
+  color: #1b4568 !important;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: #0a2e5c;
+  color: #1b4568;
 }
 
 .swiper-pagination-bullet-active {
@@ -647,7 +649,7 @@
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: #0a2e5c;
+  color: #1b4568;
 }
 
 .swiper-pagination-bullet-active {
@@ -675,7 +677,7 @@
 
   font-weight: 800;
 
-  color: #0a2e5c;
+  color: #1b4568;
 }
 
 .section-title span {
@@ -747,7 +749,7 @@
 
   font-weight: 700;
 
-  color: #0a2e5c;
+  color: #1b4568;
 
   margin-bottom: 5px;
 }
@@ -771,7 +773,7 @@
 
   font-size: 14px;
 
-  color: #0a2e5c;
+  color: #1b4568;
 
   margin-bottom: 12px;
 }
@@ -789,7 +791,7 @@
 
   font-size: 17px;
 
-  color: #0a2e5c;
+  color: #1b4568;
 }
 
 .placement-stat {
@@ -825,7 +827,7 @@
 .placement-stat h2 {
   font-weight: 800;
 
-  color: #0a2e5c;
+  color: #1b4568;
 }
 
 .placement-stat p {
@@ -836,7 +838,7 @@
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: #0a2e5c;
+  color: #1b4568;
 }
 
 .swiper-pagination-bullet-active {
@@ -956,7 +958,7 @@
 
   font-weight: 700;
 
-  color: #0a2e5c;
+  color: #1b4568;
 }
 
 .rank-course {
@@ -1009,7 +1011,7 @@
     aspect-ratio: 16 / 9;
     background-size: contain;
     background-position: center center;
-    background-color: #0a2e5c;
+    background-color: #1b4568;
   }
 
   .hero-overlay {
@@ -1081,7 +1083,7 @@
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
-    background-color: #0a2e5c;
+    background-color: #1b4568;
     overflow: hidden;
   }
 

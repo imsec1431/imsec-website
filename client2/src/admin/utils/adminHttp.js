@@ -145,9 +145,10 @@ if (
       requestInit = {
         method: input.method,
         headers: input.headers,
-        body: input.method === "GET" || input.method === "HEAD"
-          ? undefined
-          : input.body,
+        body:
+          input.method === "GET" || input.method === "HEAD"
+            ? undefined
+            : input.body,
         ...init,
       };
     } else {

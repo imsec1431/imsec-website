@@ -45,12 +45,10 @@
 
   padding: 8px 0;
 
-  background: linear-gradient(
-    135deg,
-    #ffffff 0%,
-    #ffffff 60%,
-    #f4f7fb 100%
-  ) !important;
+  background: linear-gradient(135deg,
+      #ffffff 0%,
+      #ffffff 60%,
+      #f4f7fb 100%) !important;
 
   border: none;
 
@@ -76,12 +74,10 @@
 
   height: 3px;
 
-  background: linear-gradient(
-    90deg,
-    var(--imsec-navy-dark),
-    var(--imsec-gold),
-    var(--imsec-navy-dark)
-  );
+  background: linear-gradient(90deg,
+      var(--imsec-navy-dark),
+      var(--imsec-gold),
+      var(--imsec-navy-dark));
 }
 
 /* =========================================================
@@ -179,11 +175,11 @@
 
   justify-content: center;
 
-  padding: 8px 10px !important;
+  padding: 8px 13px !important;
 
   color: #425166 !important;
 
-  font-size: 12px;
+  font-size: 15px;
 
   font-weight: 600;
 
@@ -267,6 +263,7 @@
   flex-shrink: 0;
 }
 
+.social-icons .social-icon,
 .social-icon {
   width: 38px;
 
@@ -282,17 +279,15 @@
 
   border-radius: 50%;
 
-  color: #ffffff;
+  color: #ffffff !important;
 
-  background: linear-gradient(
-    145deg,
-    var(--imsec-navy-light),
-    var(--imsec-navy-dark)
-  );
+  background: #1b4568 !important;
+  background-color: #1b4568 !important;
+  background-image: none !important;
 
   border: 1px solid rgba(255, 255, 255, 0.1);
 
-  box-shadow: 0 4px 12px rgba(10, 46, 92, 0.18);
+  box-shadow: 0 4px 12px rgba(27, 69, 104, 0.25) !important;
 
   font-size: 15px;
 
@@ -301,10 +296,12 @@
   transition: all 0.3s ease;
 }
 
+.social-icons .social-icon:hover,
 .social-icon:hover {
-  color: var(--imsec-navy);
+  color: #1b4568 !important;
 
-  background: linear-gradient(145deg, var(--imsec-gold), #e5a600);
+  background: linear-gradient(145deg, var(--imsec-gold), #e5a600) !important;
+  background-color: var(--imsec-gold) !important;
 
   transform: translateY(-3px);
 
@@ -320,16 +317,11 @@
 
   padding: 0;
 
-  background: linear-gradient(
-    90deg,
-    #061d3d 0%,
-    #0a2e5c 45%,
-    #0d3568 100%
-  ) !important;
+  background: #1b4568 !important;
 
   border: none;
 
-  box-shadow: 0 8px 22px rgba(6, 29, 61, 0.2);
+  box-shadow: 0 8px 22px rgba(27, 69, 104, 0.2);
 
   position: relative;
 }
@@ -349,12 +341,10 @@
 
   height: 2px;
 
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--imsec-gold),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      var(--imsec-gold),
+      transparent);
 
   opacity: 0.85;
 }
@@ -474,11 +464,9 @@
 .navbar-dark-blue .dropdown-toggle:hover {
   color: var(--imsec-gold) !important;
 
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.11),
-    rgba(253, 185, 19, 0.08)
-  );
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.11),
+      rgba(253, 185, 19, 0.08));
 
   transform: translateY(-1px);
 
@@ -505,12 +493,10 @@
 
   border-radius: 5px 5px 0 0;
 
-  background: linear-gradient(
-    90deg,
-    var(--imsec-gold-dark),
-    var(--imsec-gold),
-    #ffe18a
-  );
+  background: linear-gradient(90deg,
+      var(--imsec-gold-dark),
+      var(--imsec-gold),
+      #ffe18a);
 
   transform: translateX(-50%);
 
@@ -534,11 +520,9 @@
 .navbar-dark-blue .dropdown-toggle.show {
   color: var(--imsec-gold) !important;
 
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(253, 185, 19, 0.12)
-  );
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(253, 185, 19, 0.12));
 
   box-shadow: inset 0 -3px 0 var(--imsec-gold);
 }
@@ -665,11 +649,9 @@
 .navbar-dark-blue .dropdown-item:focus {
   color: var(--imsec-navy);
 
-  background: linear-gradient(
-    90deg,
-    rgba(253, 185, 19, 0.13),
-    rgba(10, 46, 92, 0.035)
-  );
+  background: linear-gradient(90deg,
+      rgba(253, 185, 19, 0.13),
+      rgba(10, 46, 92, 0.035));
 
   padding-left: 19px;
 }
@@ -743,7 +725,8 @@
   }
 
   .top-links .nav-link {
-    font-size: 12px;
+    font-size: 15.5px;
+    padding: 8px 14px !important;
   }
 
   .social-icon {
@@ -760,6 +743,7 @@
 ========================================================= */
 
 @media (min-width: 1200px) and (max-width: 1399px) {
+
   .navbar-dark-blue .nav-link,
   .navbar-dark-blue .dropdown-toggle {
     min-height: 56px;
@@ -792,9 +776,9 @@
   }
 
   .top-links .nav-link {
-    padding: 7px 5px !important;
+    padding: 7px 8px !important;
 
-    font-size: 10px;
+    font-size: 12.5px;
   }
 
   .social-icons {
@@ -863,7 +847,7 @@
 
     padding: 8px;
 
-    background: linear-gradient(180deg, #0a2e5c, #061d3d);
+    background: #1b4568 !important;
 
     border-radius: 0 0 12px 12px;
 
@@ -1015,6 +999,7 @@
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
+
   .main-navbar-fixed *,
   .main-navbar-fixed *::before,
   .main-navbar-fixed *::after {
@@ -1051,12 +1036,7 @@
 
     display: block !important;
 
-    background: linear-gradient(
-      180deg,
-      #061d3d 0%,
-      #0a2e5c 52%,
-      #061d3d 100%
-    ) !important;
+    background: #1b4568 !important;
 
     border: none !important;
     border-radius: 0 18px 18px 0 !important;
@@ -1136,11 +1116,9 @@
   .navbar-dark-blue .dropdown-toggle:hover {
     color: var(--imsec-gold) !important;
 
-    background: linear-gradient(
-      90deg,
-      rgba(253, 185, 19, 0.16),
-      rgba(255, 255, 255, 0.06)
-    );
+    background: linear-gradient(90deg,
+        rgba(253, 185, 19, 0.16),
+        rgba(255, 255, 255, 0.06));
 
     transform: translateX(3px);
 
@@ -1151,11 +1129,9 @@
   .navbar-dark-blue .dropdown-toggle.show {
     color: var(--imsec-gold) !important;
 
-    background: linear-gradient(
-      90deg,
-      rgba(253, 185, 19, 0.2),
-      rgba(255, 255, 255, 0.07)
-    );
+    background: linear-gradient(90deg,
+        rgba(253, 185, 19, 0.2),
+        rgba(255, 255, 255, 0.07));
 
     box-shadow: inset 5px 0 0 var(--imsec-gold);
   }
@@ -1313,52 +1289,47 @@
    Keeps the parent item highlighted even when dropdown is closed
 ========================================================= */
 
-.navbar-dark-blue .nav-item.active > .dropdown-toggle,
-.navbar-dark-blue .nav-item.active > .nav-link {
+.navbar-dark-blue .nav-item.active>.dropdown-toggle,
+.navbar-dark-blue .nav-item.active>.nav-link {
   color: var(--imsec-gold) !important;
 
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(253, 185, 19, 0.12)
-  ) !important;
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(253, 185, 19, 0.12)) !important;
 
   box-shadow: inset 0 -4px 0 var(--imsec-gold);
 
   text-shadow: 0 0 10px rgba(253, 185, 19, 0.25);
 }
 
-.navbar-dark-blue .nav-item.active > .dropdown-toggle::before,
-.navbar-dark-blue .nav-item.active > .nav-link::before {
+.navbar-dark-blue .nav-item.active>.dropdown-toggle::before,
+.navbar-dark-blue .nav-item.active>.nav-link::before {
   width: 78%;
 
-  background: linear-gradient(
-    90deg,
-    var(--imsec-gold-dark),
-    var(--imsec-gold),
-    #ffe18a
-  );
+  background: linear-gradient(90deg,
+      var(--imsec-gold-dark),
+      var(--imsec-gold),
+      #ffe18a);
 
   box-shadow: 0 -2px 12px rgba(253, 185, 19, 0.55);
 }
 
 /* Mobile sidebar active parent */
 @media (max-width: 991.98px) {
-  .navbar-dark-blue .nav-item.active > .dropdown-toggle,
-  .navbar-dark-blue .nav-item.active > .nav-link {
+
+  .navbar-dark-blue .nav-item.active>.dropdown-toggle,
+  .navbar-dark-blue .nav-item.active>.nav-link {
     color: var(--imsec-gold) !important;
 
-    background: linear-gradient(
-      90deg,
-      rgba(253, 185, 19, 0.2),
-      rgba(255, 255, 255, 0.07)
-    ) !important;
+    background: linear-gradient(90deg,
+        rgba(253, 185, 19, 0.2),
+        rgba(255, 255, 255, 0.07)) !important;
 
     box-shadow: inset 5px 0 0 var(--imsec-gold);
   }
 
-  .navbar-dark-blue .nav-item.active > .dropdown-toggle::before,
-  .navbar-dark-blue .nav-item.active > .nav-link::before {
+  .navbar-dark-blue .nav-item.active>.dropdown-toggle::before,
+  .navbar-dark-blue .nav-item.active>.nav-link::before {
     left: 0 !important;
 
     width: 5px !important;

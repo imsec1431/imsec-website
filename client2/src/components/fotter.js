@@ -70,7 +70,7 @@ const Footer = () => {
   return (
     <footer
       style={{
-        background: "#0A2E5C",
+        background: "#1b4568",
         color: "#fff",
         height: "auto",
         transform: "translateY(180px)",
@@ -386,7 +386,7 @@ const SocialIcon = ({ href, icon }) => (
       width: "42px",
       height: "42px",
       borderRadius: "50%",
-      background: "#123F7A",
+      background: "#1b4568",
       color: "#fff",
       display: "flex",
       justifyContent: "center",
@@ -398,10 +398,10 @@ const SocialIcon = ({ href, icon }) => (
     }}
     onMouseEnter={(e) => {
       e.currentTarget.style.background = "#FDB913";
-      e.currentTarget.style.color = "#0A2E5C";
+      e.currentTarget.style.color = "#1b4568";
     }}
     onMouseLeave={(e) => {
-      e.currentTarget.style.background = "#123F7A";
+      e.currentTarget.style.background = "#1b4568";
       e.currentTarget.style.color = "#fff";
     }}
   >
