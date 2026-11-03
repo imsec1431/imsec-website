@@ -179,7 +179,7 @@
   background: #ffffff;
   border-radius: 15px;
   padding: 25px;
-  border-top: 5px solid #0d47a1;
+  border-top: 5px solid #1b4568;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
   transition:
     transform 0.35s ease,
@@ -266,7 +266,7 @@
 }
 
 .tableResponsive th {
-  background: #0d47a1;
+  background: #1b4568;
   color: #ffffff;
   padding: 15px;
   text-align: left;
@@ -290,7 +290,7 @@
   padding: 12px 28px;
   border: none;
   border-radius: 8px;
-  background: #0d47a1;
+  background: #1b4568;
   color: #ffffff;
   cursor: pointer;
   font-size: 15px;
@@ -299,7 +299,7 @@
 }
 
 .primaryBtn:hover {
-  background: #1565c0;
+  background: #2a5f8a;
   transform: translateY(-2px);
 }
 
@@ -327,7 +327,7 @@
 .formGroup input:focus,
 .formGroup textarea:focus,
 .formGroup select:focus {
-  border-color: #1565c0;
+  border-color: #2a5f8a;
 }
 
 /*=========================================================
@@ -441,7 +441,7 @@
 /* Scrollbar Thumb */
 .mcaPanel::-webkit-scrollbar-thumb,
 .contentPanel::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #0d47a1 0%, #123f78 70%, #ffb800 100%);
+  background: linear-gradient(180deg, #1b4568 0%, #123f78 70%, #ffb800 100%);
 
   border-radius: 10px;
   border: 2px solid #e9eef5;
@@ -451,7 +451,7 @@
 /* Thumb Hover */
 .mcaPanel::-webkit-scrollbar-thumb:hover,
 .contentPanel::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #082f63 0%, #0d47a1 65%, #ffb800 100%);
+  background: linear-gradient(180deg, #082f63 0%, #1b4568 65%, #ffb800 100%);
 }
 
 /* Scrollbar Corner */
@@ -496,7 +496,7 @@
 }
 
 .tabBarWrapper::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(90deg, #082f63, #0d47a1, #ffb800);
+  background: linear-gradient(90deg, #082f63, #1b4568, #ffb800);
 }
 
 /* =========================================================
@@ -527,5 +527,5 @@
 }
 
 .tabBar::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(90deg, #082f63, #0d47a1, #ffb800);
+  background: linear-gradient(90deg, #082f63, #1b4568, #ffb800);
 }

@@ -4,9 +4,9 @@
 ========================================================= */
 
 :root {
-  --placement-navy: #082b57;
-  --placement-blue: #0d47a1;
-  --placement-blue-light: #1976d2;
+  --placement-navy: #153c5e;
+  --placement-blue: #1b4568;
+  --placement-blue-light: #2a5f8a;
   --placement-gold: #fdb913;
   --placement-gold-dark: #d99800;
 
@@ -16,9 +16,9 @@
   --placement-border: #e2eaf2;
   --placement-white: #ffffff;
 
-  --placement-shadow-sm: 0 6px 20px rgba(8, 43, 87, 0.06);
-  --placement-shadow-md: 0 14px 35px rgba(8, 43, 87, 0.1);
-  --placement-shadow-lg: 0 22px 55px rgba(8, 43, 87, 0.14);
+  --placement-shadow-sm: 0 6px 20px rgba(27, 69, 104, 0.06);
+  --placement-shadow-md: 0 14px 35px rgba(27, 69, 104, 0.1);
+  --placement-shadow-lg: 0 22px 55px rgba(27, 69, 104, 0.14);
 
   --placement-radius: 18px;
   --placement-transition: all 0.3s ease;
@@ -73,7 +73,7 @@
       rgba(253, 185, 19, 0.18),
       transparent 27%
     ),
-    linear-gradient(135deg, #082b57 0%, #0d47a1 52%, #1976d2 100%);
+    linear-gradient(135deg, #153c5e 0%, #1b4568 52%, #2a5f8a 100%);
 
   box-shadow: var(--placement-shadow-lg);
 }
@@ -745,7 +745,7 @@
       rgba(253, 185, 19, 0.15),
       transparent 30%
     ),
-    linear-gradient(135deg, #082b57, #0d47a1, #1976d2);
+    linear-gradient(135deg, #153c5e, #1b4568, #2a5f8a);
 
   box-shadow: var(--placement-shadow-lg);
 }

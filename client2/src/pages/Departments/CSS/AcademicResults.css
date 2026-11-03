@@ -52,7 +52,7 @@
 
   border-radius: 22px;
 
-  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  background: linear-gradient(135deg, #1b4568, #2a5f8a);
 
   color: #fff;
 
@@ -60,7 +60,7 @@
 
   overflow: hidden;
 
-  box-shadow: 0 20px 45px rgba(13, 71, 161, 0.2);
+  box-shadow: 0 20px 45px rgba(27, 69, 104, 0.2);
 }
 
 .resultsHero h1 {
@@ -170,7 +170,7 @@
 }
 
 .searchBox:focus-within {
-  border-color: #1565c0;
+  border-color: #2a5f8a;
 
   box-shadow: 0 12px 32px rgba(21, 101, 192, 0.16);
 }
@@ -178,7 +178,7 @@
 .searchBox svg {
   flex: 0 0 auto;
 
-  color: #1565c0;
+  color: #2a5f8a;
 
   font-size: 20px;
 }
@@ -252,17 +252,17 @@
 }
 
 .filterBtn:hover {
-  border-color: #1565c0;
+  border-color: #2a5f8a;
 
-  color: #1565c0;
+  color: #2a5f8a;
 
   transform: translateY(-2px);
 }
 
 .filterBtn.active {
-  border-color: #1565c0;
+  border-color: #2a5f8a;
 
-  background: #1565c0;
+  background: #2a5f8a;
 
   color: #fff;
 
@@ -292,7 +292,7 @@
 
   margin-bottom: 7px;
 
-  color: #1565c0;
+  color: #2a5f8a;
 
   font-size: 11px;
 
@@ -304,7 +304,7 @@
 .chartsHeading h2 {
   margin: 0 0 8px;
 
-  color: #0d47a1;
+  color: #1b4568;
 
   font-size: 32px;
 
@@ -384,7 +384,7 @@
 
   background: #e8f1ff;
 
-  color: #1565c0;
+  color: #2a5f8a;
 
   font-size: 20px;
 }
@@ -453,7 +453,7 @@
 
   margin-bottom: 7px;
 
-  color: #1565c0;
+  color: #2a5f8a;
 
   font-size: 11px;
 
@@ -465,7 +465,7 @@
 .resultsSectionHeading h2 {
   margin: 0;
 
-  color: #0d47a1;
+  color: #1b4568;
 
   font-size: 30px;
 
@@ -519,7 +519,7 @@
 .cardTop {
   padding: 22px;
 
-  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  background: linear-gradient(135deg, #1b4568, #2a5f8a);
 
   color: #fff;
 }
@@ -594,7 +594,7 @@
 .overallSection h1 {
   margin: 0;
 
-  color: #1565c0;
+  color: #2a5f8a;
 
   font-size: 44px;
 
@@ -638,7 +638,7 @@
 }
 
 .semesterBox span {
-  color: #0d47a1;
+  color: #1b4568;
 
   font-size: 21px;
 
@@ -666,7 +666,7 @@
 .resultsLoading svg {
   margin-bottom: 15px;
 
-  color: #1565c0;
+  color: #2a5f8a;
 
   font-size: 45px;
 }
@@ -732,7 +732,7 @@
 .noResults svg {
   margin-bottom: 15px;
 
-  color: #1565c0;
+  color: #2a5f8a;
 
   font-size: 48px;
 }

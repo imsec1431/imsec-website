@@ -78,7 +78,7 @@ body {
 
   border-radius: 20px;
 
-  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  background: linear-gradient(135deg, #1b4568, #2a5f8a);
 
   color: #fff;
 
@@ -276,7 +276,7 @@ body {
 
   padding: 17px 25px;
 
-  border: 1px solid rgba(13, 71, 161, 0.18);
+  border: 1px solid rgba(27, 69, 104, 0.18);
 
   border-radius: 60px;
 
@@ -298,7 +298,7 @@ body {
 .searchBox svg {
   flex: 0 0 auto;
 
-  color: #1565c0;
+  color: #2a5f8a;
 
   font-size: 22px;
 }
@@ -383,7 +383,7 @@ body {
 }
 
 .filterBtn:hover {
-  background: #1565c0;
+  background: #2a5f8a;
 
   color: #fff;
 
@@ -391,7 +391,7 @@ body {
 }
 
 .filterBtn.active {
-  background: #1565c0;
+  background: #2a5f8a;
 
   color: #fff;
 }
@@ -458,7 +458,7 @@ body {
 .tableTitle svg {
   flex: 0 0 auto;
 
-  color: #1565c0;
+  color: #2a5f8a;
 
   font-size: 26px;
 }
@@ -468,7 +468,7 @@ body {
 
   margin: 0;
 
-  color: #0d47a1;
+  color: #1b4568;
 
   font-size: 28px;
 
@@ -526,7 +526,7 @@ body {
 ========================================================= */
 
 .tableResponsive thead {
-  background: linear-gradient(135deg, #0d47a1, #1565c0);
+  background: linear-gradient(135deg, #1b4568, #2a5f8a);
 
   color: #fff;
 }
@@ -603,7 +603,7 @@ body {
 }
 
 .tableResponsive tbody td:first-child {
-  color: #1565c0;
+  color: #2a5f8a;
 
   font-weight: 600;
 }
@@ -623,13 +623,13 @@ body {
 }
 
 .tableResponsive::-webkit-scrollbar-thumb {
-  background: #1565c0;
+  background: #2a5f8a;
 
   border-radius: 20px;
 }
 
 .tableResponsive::-webkit-scrollbar-thumb:hover {
-  background: #0d47a1;
+  background: #1b4568;
 }
 
 /* =========================================================
@@ -685,7 +685,7 @@ body {
 
   margin: 0 0 10px;
 
-  color: #0d47a1;
+  color: #1b4568;
 
   font-size: clamp(25px, 3vw, 34px);
 
@@ -783,7 +783,7 @@ body {
 
   padding: 14px 18px;
 
-  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  background: linear-gradient(135deg, #1b4568, #2a5f8a);
 
   text-align: center;
 }
@@ -853,7 +853,7 @@ body {
 
   border-radius: 50%;
 
-  background: linear-gradient(135deg, #0d47a1, #42a5f5);
+  background: linear-gradient(135deg, #1b4568, #3b75a6);
 
   overflow: hidden;
 }
@@ -889,7 +889,7 @@ body {
 
   margin: 0 0 7px;
 
-  color: #0d47a1;
+  color: #1b4568;
 
   font-size: 20px;
 
@@ -975,7 +975,7 @@ body {
 
   margin-top: 3px;
 
-  color: #1565c0;
+  color: #2a5f8a;
 
   font-size: 15px;
 }
@@ -1025,7 +1025,7 @@ body {
 .branchTopperPackage strong {
   display: block;
 
-  color: #0d47a1;
+  color: #1b4568;
 
   font-size: 25px;
 
@@ -1055,7 +1055,7 @@ body {
 
   margin-bottom: 8px;
 
-  color: #1565c0;
+  color: #2a5f8a;
 
   font-size: 11px;
 
@@ -1069,7 +1069,7 @@ body {
 .sectionHeading h2 {
   margin: 0;
 
-  color: #0d47a1;
+  color: #1b4568;
 
   font-size: 30px;
 

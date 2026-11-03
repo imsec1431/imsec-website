@@ -6,7 +6,7 @@
 =========================================================*/
 
 .infraHero {
-  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  background: linear-gradient(135deg, #1b4568, #2a5f8a);
 
   color: #fff;
 
@@ -194,7 +194,7 @@
 
 .sectionTitle h2 {
   font-size: 36px;
-  color: #0d3b66;
+  color: #1b4568;
   font-weight: 700;
   position: relative;
   display: inline-block;
@@ -247,7 +247,7 @@ p {
 }
 
 .infraCard h4 {
-  color: #0d3b66;
+  color: #1b4568;
   margin-bottom: 15px;
   font-weight: 700;
 }
@@ -257,7 +257,7 @@ p {
 ========================== */
 
 .statistics {
-  background: #0d3b66;
+  background: #1b4568;
   color: white;
   padding: 70px 0;
 }
@@ -297,7 +297,7 @@ p {
   width: 80px;
   height: 80px;
   margin: auto;
-  background: #0d3b66;
+  background: #1b4568;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -308,7 +308,7 @@ p {
 }
 
 .labCard h4 {
-  color: #0d3b66;
+  color: #1b4568;
   font-weight: bold;
 }
 
@@ -337,7 +337,7 @@ p {
 }
 
 .facilityCard:hover {
-  background: #0d3b66;
+  background: #1b4568;
   color: white;
   transform: translateY(-8px);
 }
@@ -353,7 +353,7 @@ p {
 }
 
 .facilityCard h5 {
-  color: #0d3b66;
+  color: #1b4568;
   font-weight: 600;
 }
 

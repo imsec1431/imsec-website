@@ -4,8 +4,8 @@
 ========================================================= */
 
 :root {
-  --mca-navy: #082b57;
-  --mca-blue: #0d4f8b;
+  --mca-navy: #153c5e;
+  --mca-blue: #1b4568;
   --mca-blue-light: #176cae;
   --mca-gold: #f4a62a;
   --mca-gold-light: #ffc866;
@@ -16,11 +16,11 @@
   --mca-border: #e4ebf3;
   --mca-white: #ffffff;
 
-  --mca-shadow-sm: 0 5px 20px rgba(12, 43, 78, 0.06);
+  --mca-shadow-sm: 0 5px 20px rgba(27, 69, 104, 0.06);
 
-  --mca-shadow-md: 0 12px 35px rgba(12, 43, 78, 0.1);
+  --mca-shadow-md: 0 12px 35px rgba(27, 69, 104, 0.1);
 
-  --mca-shadow-lg: 0 20px 55px rgba(8, 43, 87, 0.14);
+  --mca-shadow-lg: 0 20px 55px rgba(27, 69, 104, 0.14);
 
   --mca-radius-sm: 10px;
   --mca-radius-md: 16px;
@@ -82,7 +82,7 @@
       rgba(47, 128, 191, 0.25),
       transparent 35%
     ),
-    linear-gradient(125deg, #061f41 0%, #082b57 42%, #0c4c82 75%, #176cae 100%);
+    linear-gradient(125deg, #153c5e 0%, #1b4568 45%, #20537d 75%, #2a5f8a 100%);
 
   box-shadow: var(--mca-shadow-lg);
 }
@@ -407,7 +407,7 @@
 
   background: #ffffff;
 
-  box-shadow: 0 7px 20px rgba(12, 43, 78, 0.06);
+  box-shadow: 0 7px 20px rgba(27, 69, 104, 0.06);
 }
 
 .missionList li svg {
@@ -444,7 +444,7 @@
 
   background: linear-gradient(135deg, #f7faff 0%, #ffffff 55%, #f6faff 100%);
 
-  box-shadow: 0 7px 25px rgba(12, 43, 78, 0.055);
+  box-shadow: 0 7px 25px rgba(27, 69, 104, 0.055);
 }
 
 .hodSection::before {
@@ -485,7 +485,7 @@
 
   background: #eaf0f6;
 
-  box-shadow: 0 8px 25px rgba(8, 43, 87, 0.14);
+  box-shadow: 0 8px 25px rgba(27, 69, 104, 0.14);
 }
 
 .hodImage img {

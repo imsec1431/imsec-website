@@ -34,7 +34,7 @@ body {
 =========================================================*/
 
 .eventsHero {
-  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  background: linear-gradient(135deg, #1b4568, #2a5f8a);
 
   color: #fff;
 
@@ -160,7 +160,7 @@ body {
 }
 
 .searchBox svg {
-  color: #1565c0;
+  color: #2a5f8a;
 
   font-size: 20px;
 
@@ -240,21 +240,21 @@ body {
 }
 
 .categoryBtn:hover {
-  background: #1565c0;
+  background: #2a5f8a;
 
   color: #fff;
 
-  border-color: #1565c0;
+  border-color: #2a5f8a;
 
   transform: translateY(-3px);
 }
 
 .categoryBtn.active {
-  background: #1565c0;
+  background: #2a5f8a;
 
   color: #fff;
 
-  border-color: #1565c0;
+  border-color: #2a5f8a;
 
   box-shadow: 0 8px 20px rgba(21, 101, 192, 0.25);
 }
@@ -302,13 +302,13 @@ body {
 .eventsLoading svg {
   font-size: 45px;
 
-  color: #1565c0;
+  color: #2a5f8a;
 
   margin-bottom: 15px;
 }
 
 .eventsLoading h3 {
-  color: #0d47a1;
+  color: #1b4568;
 
   margin-bottom: 8px;
 }
@@ -388,7 +388,7 @@ body {
 .featuredBadge {
   width: max-content;
 
-  background: #1565c0;
+  background: #2a5f8a;
 
   color: #fff;
 
@@ -404,7 +404,7 @@ body {
 }
 
 .featuredContent h2 {
-  color: #0d47a1;
+  color: #1b4568;
 
   font-size: 30px;
 
@@ -452,7 +452,7 @@ body {
 }
 
 .featuredInfo div:hover {
-  background: #1565c0;
+  background: #2a5f8a;
 
   color: #fff;
 
@@ -464,7 +464,7 @@ body {
 }
 
 .featuredInfo svg {
-  color: #1565c0;
+  color: #2a5f8a;
 
   font-size: 17px;
 
@@ -551,7 +551,7 @@ body {
 
   height: 5px;
 
-  background: linear-gradient(90deg, #0d47a1, #1976d2, #42a5f5);
+  background: linear-gradient(90deg, #1b4568, #2a5f8a, #42a5f5);
 
   z-index: 3;
 }
@@ -597,7 +597,7 @@ body {
 
   gap: 6px;
 
-  background: #0d47a1;
+  background: #1b4568;
 
   color: #fff;
 
@@ -725,7 +725,7 @@ body {
 }
 
 .eventBody h3 {
-  color: #0d47a1;
+  color: #1b4568;
 
   font-size: 19px;
 
@@ -775,7 +775,7 @@ body {
 }
 
 .eventInfo svg {
-  color: #1565c0;
+  color: #2a5f8a;
 
   min-width: 17px;
 
@@ -819,7 +819,7 @@ body {
 
   background: #f4f7fb;
 
-  color: #0d47a1;
+  color: #1b4568;
 
   border: 1px solid #dfe7f1;
 
@@ -895,7 +895,7 @@ body {
 
   border-radius: 50px;
 
-  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  background: linear-gradient(135deg, #1b4568, #2a5f8a);
 
   color: #fff;
 
@@ -915,7 +915,7 @@ body {
 .readMoreBtn:hover {
   transform: translateY(-3px);
 
-  box-shadow: 0 12px 25px rgba(13, 71, 161, 0.3);
+  box-shadow: 0 12px 25px rgba(27, 69, 104, 0.3);
 }
 
 .readMoreBtn:hover svg {
@@ -967,7 +967,7 @@ body {
 
   height: 5px;
 
-  background: linear-gradient(90deg, #0d47a1, #1976d2, #42a5f5);
+  background: linear-gradient(90deg, #1b4568, #2a5f8a, #42a5f5);
 }
 
 .statCard:hover {
@@ -979,7 +979,7 @@ body {
 .statCard h2 {
   font-size: 42px;
 
-  color: #0d47a1;
+  color: #1b4568;
 
   margin-bottom: 10px;
 
@@ -1015,13 +1015,13 @@ body {
 .noEvents svg {
   font-size: 48px;
 
-  color: #1565c0;
+  color: #2a5f8a;
 
   margin-bottom: 15px;
 }
 
 .noEvents h3 {
-  color: #0d47a1;
+  color: #1b4568;
 
   margin-bottom: 8px;
 }
