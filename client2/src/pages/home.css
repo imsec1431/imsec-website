@@ -1255,8 +1255,8 @@
 
 .achievements-swiper .swiper-button-prev:hover,
 .achievements-swiper .swiper-button-next:hover {
-  background: #1b4568;
-  color: #ffffff !important;
+  background: #fdb913;
+  color: #1b4568 !important;
 }
 
 .achievements-swiper .swiper-button-prev {
@@ -1267,8 +1267,13 @@
   right: 0px;
 }
 
+.achievements-swiper .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.5) !important;
+  opacity: 1 !important;
+}
+
 .achievements-swiper .swiper-pagination-bullet-active {
-  background: #1b4568 !important;
+  background: #fdb913 !important;
   width: 22px;
   border-radius: 8px;
 }

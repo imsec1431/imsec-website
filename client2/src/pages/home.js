@@ -1101,39 +1101,48 @@ const Home = () => {
       </Container>
 
       {/* ACHIEVEMENTS & RECOGNITION */}
-      <Container fluid="xl" className="py-5">
+      <Container
+        fluid="xl"
+        className="py-5"
+        style={{
+          backgroundColor: "#1b4568",
+          background: "#1b4568",
+          marginTop: "25px",
+          borderRadius: "8px",
+        }}
+      >
         <div className="text-center mb-5">
           <h6
             style={{
-              color: "#FDB913",
+              color: "#1b4568",
               fontWeight: "700",
               letterSpacing: "2px",
             }}
           >
-            {/* OUR PRIDE */}
+            OUR PRIDE
           </h6>
 
           <h2
             style={{
-              color: "#0A2E5C",
+              color: "#ffffff",
               fontWeight: "800",
               fontSize: "clamp(2rem,4vw,3rem)",
             }}
           >
-            Achievements & Recognition<span style={{ color: "#FDB913" }}> </span>
+            Achievements & Recognition<span > </span>
           </h2>
 
-          <b>   <p
-
+          <p
             style={{
               maxWidth: "700px",
               margin: "15px auto",
+              color: "#e2e8f0",
+              fontWeight: "500",
             }}
           >
             Celebrating excellence through awards, rankings, accreditations,
             research and student success.
           </p>
-          </b>
         </div>
 
         <Swiper
