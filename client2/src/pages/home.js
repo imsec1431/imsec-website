@@ -757,9 +757,9 @@ const Home = () => {
             autoplay={
               placements.length > 1
                 ? {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                  }
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }
                 : false
             }
             breakpoints={{
@@ -826,22 +826,22 @@ const Home = () => {
               fontWeight: "700",
             }}
           >
-            ACADEMIC EXCELLENCE
+            {/* ACADEMIC EXCELLENCE */}
           </h6>
 
           <h2
             style={{
-              color: "#0A2E5C",
+              color: "#1b4568",
               fontWeight: "800",
               fontSize: "clamp(2rem,4vw,3rem)",
             }}
           >
-            University Rank Holders
+            University Rank Holders<span style={{ color: "#FDB913" }}></span>
           </h2>
 
-          <p className="text-muted">
+          <b><p className="text-muted">
             Celebrating students who secured top ranks in AKTU University.
-          </p>
+          </p></b>
         </div>
 
         <Swiper
@@ -861,9 +861,10 @@ const Home = () => {
             992: { slidesPerView: 3 },
             1200: { slidesPerView: 4 },
           }}
+          className="rank-swiper"
         >
           {sortedRankers.map((student) => (
-            <SwiperSlide key={student._id}>
+            <SwiperSlide key={student._id} className="h-auto">
               <div className="rank-card">
                 <img
                   src={student.image}
@@ -1061,7 +1062,7 @@ const Home = () => {
                 letterSpacing: "2px",
               }}
             >
-              CAMPUS EXPERIENCE
+              {/* CAMPUS EXPERIENCE */}
             </h6>
 
             <h2
@@ -1071,16 +1072,16 @@ const Home = () => {
                 color: "#0A2E5C",
               }}
             >
-              Life <span style={{ color: "#FDB913" }}>@ IMSEC</span>
+              Life @ IMSEC<span style={{ color: "#FDB913" }}></span>
             </h2>
 
-            <p
+            <b><p
               className="text-muted mt-3"
               style={{ maxWidth: "700px", margin: "auto" }}
             >
               Discover innovation, sports, culture and unforgettable student
               experiences.
-            </p>
+            </p></b>
           </Col>
         </Row>
 
@@ -1109,7 +1110,7 @@ const Home = () => {
               letterSpacing: "2px",
             }}
           >
-            OUR PRIDE
+            {/* OUR PRIDE */}
           </h6>
 
           <h2
@@ -1119,11 +1120,11 @@ const Home = () => {
               fontSize: "clamp(2rem,4vw,3rem)",
             }}
           >
-            Achievements &<span style={{ color: "#FDB913" }}> Recognition</span>
+            Achievements & Recognition<span style={{ color: "#FDB913" }}> </span>
           </h2>
 
-          <p
-            className="text-muted"
+          <b>   <p
+
             style={{
               maxWidth: "700px",
               margin: "15px auto",
@@ -1132,6 +1133,7 @@ const Home = () => {
             Celebrating excellence through awards, rankings, accreditations,
             research and student success.
           </p>
+          </b>
         </div>
 
         <Swiper
@@ -1151,14 +1153,22 @@ const Home = () => {
             992: { slidesPerView: 4 },
             1200: { slidesPerView: 5 },
           }}
+          className="achievements-swiper"
         >
           {achievements.map((item) => (
-            <SwiperSlide key={item._id}>
+            <SwiperSlide key={item._id} className="h-auto">
               <Card className="achievement-card">
-                <Card.Img variant="top" src={item.image} alt={item.title} />
+                <div className="achievement-img-wrapper">
+                  <Card.Img
+                    variant="top"
+                    src={item.image}
+                    alt={item.title}
+                    className="achievement-img"
+                  />
+                </div>
 
-                <Card.Body>
-                  <Card.Title>{item.title}</Card.Title>
+                <Card.Body className="achievement-body">
+                  <Card.Title className="achievement-title">{item.title}</Card.Title>
                 </Card.Body>
               </Card>
             </SwiperSlide>
@@ -1176,7 +1186,7 @@ const Home = () => {
               letterSpacing: "2px",
             }}
           >
-            ALUMNI SPOTLIGHT
+            {/* ALUMNI SPOTLIGHT */}
           </h6>
 
           <h2
@@ -1189,9 +1199,9 @@ const Home = () => {
             Our Proud Alumni
           </h2>
 
-          <p className="text-muted">
+          <b><p className="text-muted">
             Our alumni are the driving force behind innovation and excellence.
-          </p>
+          </p></b>
         </div>
 
         <Swiper
