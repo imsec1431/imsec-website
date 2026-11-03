@@ -172,7 +172,7 @@ const LanguageCommunicationLabManagement = () => {
       return;
     }
 
-    if (file.size > 10 * 1024 * 1024) {
+    if (file.size > 3 * 1024 * 1024) {
       setMessage("Image size must be less than 10 MB.");
       return;
     }

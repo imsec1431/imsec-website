@@ -65,7 +65,7 @@ const upload = multer({
   fileFilter,
 
   limits: {
-    fileSize: 10 * 1024 * 1024, // 10 MB
+    fileSize: 3 * 1024 * 1024, // 10 MB
     files: 2,
   },
 });
@@ -88,8 +88,12 @@ router.get("/", getCafeteria);
 |--------------------------------------------------------------------------
 */
 
-router.get("/admin", protect,
-  requireGlobalPermission("life-imsec", "cafeteria"), getCafeteriaAdmin);
+router.get(
+  "/admin",
+  protect,
+  requireGlobalPermission("life-imsec", "cafeteria"),
+  getCafeteriaAdmin,
+);
 
 /*
 |--------------------------------------------------------------------------
@@ -103,9 +107,14 @@ router.get("/admin", protect,
 |--------------------------------------------------------------------------
 */
 
-router.put("/admin", protect,
-  requireGlobalPermission("life-imsec", "cafeteria"), upload.any(),
-  validateUploadedFiles, updateCafeteria);
+router.put(
+  "/admin",
+  protect,
+  requireGlobalPermission("life-imsec", "cafeteria"),
+  upload.any(),
+  validateUploadedFiles,
+  updateCafeteria,
+);
 
 /*
 |--------------------------------------------------------------------------
@@ -115,8 +124,12 @@ router.put("/admin", protect,
 |--------------------------------------------------------------------------
 */
 
-router.post("/admin/reset-defaults", protect,
-  requireGlobalPermission("life-imsec", "cafeteria"), resetCafeteriaDefaults);
+router.post(
+  "/admin/reset-defaults",
+  protect,
+  requireGlobalPermission("life-imsec", "cafeteria"),
+  resetCafeteriaDefaults,
+);
 
 /*
 |--------------------------------------------------------------------------

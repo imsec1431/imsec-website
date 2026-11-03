@@ -169,7 +169,7 @@ const CafeteriaManagement = () => {
       return;
     }
 
-    if (file.size > 10 * 1024 * 1024) {
+    if (file.size > 3 * 1024 * 1024) {
       setError("Hero image must be less than 10 MB.");
 
       event.target.value = "";
@@ -204,7 +204,7 @@ const CafeteriaManagement = () => {
       return;
     }
 
-    if (file.size > 10 * 1024 * 1024) {
+    if (file.size > 3 * 1024 * 1024) {
       setError("About image must be less than 10 MB.");
 
       event.target.value = "";

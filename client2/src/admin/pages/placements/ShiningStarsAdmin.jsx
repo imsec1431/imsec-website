@@ -181,7 +181,7 @@ const ShiningStarsAdmin = () => {
       return;
     }
 
-    if (file.size > 10 * 1024 * 1024) {
+    if (file.size > 3 * 1024 * 1024) {
       setError("Image size must be less than 10 MB.");
 
       event.target.value = "";

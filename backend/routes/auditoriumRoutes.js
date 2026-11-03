@@ -66,7 +66,7 @@ const upload = multer({
   fileFilter,
 
   limits: {
-    fileSize: 10 * 1024 * 1024, // 10 MB per image
+    fileSize: 3 * 1024 * 1024, // 10 MB per image
     files: 50,
   },
 });
@@ -95,8 +95,12 @@ router.get("/", getAuditorium);
  *
  * Admin dashboard fetch
  */
-router.get("/admin", protect,
-  requireGlobalPermission("life-imsec", "auditorium"), getAuditoriumAdmin);
+router.get(
+  "/admin",
+  protect,
+  requireGlobalPermission("life-imsec", "auditorium"),
+  getAuditoriumAdmin,
+);
 
 /*
  * PUT /api/auditorium/admin
@@ -112,9 +116,14 @@ router.get("/admin", protect,
  * galleryImage_2
  * ...
  */
-router.put("/admin", protect,
-  requireGlobalPermission("life-imsec", "auditorium"), upload.any(),
-  validateUploadedFiles, updateAuditorium);
+router.put(
+  "/admin",
+  protect,
+  requireGlobalPermission("life-imsec", "auditorium"),
+  upload.any(),
+  validateUploadedFiles,
+  updateAuditorium,
+);
 
 /*
 |--------------------------------------------------------------------------
@@ -127,8 +136,12 @@ router.put("/admin", protect,
  *
  * Restores complete default Auditorium content.
  */
-router.post("/admin/reset-defaults", protect,
-  requireGlobalPermission("life-imsec", "auditorium"), resetAuditoriumDefaults);
+router.post(
+  "/admin/reset-defaults",
+  protect,
+  requireGlobalPermission("life-imsec", "auditorium"),
+  resetAuditoriumDefaults,
+);
 
 /*
 |--------------------------------------------------------------------------

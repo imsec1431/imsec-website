@@ -373,7 +373,7 @@ const DepartmentOverview = () => {
         throw new Error("Please upload JPG, PNG or WEBP image.");
       }
 
-      if (file.size > 5 * 1024 * 1024) {
+      if (file.size > 3 * 1024 * 1024) {
         throw new Error("Overview image must be less than 5 MB.");
       }
 
@@ -483,7 +483,7 @@ const DepartmentOverview = () => {
           throw new Error(`${file.name} is not a JPG, PNG or WEBP image.`);
         }
 
-        if (file.size > 5 * 1024 * 1024) {
+        if (file.size > 3 * 1024 * 1024) {
           throw new Error(`${file.name} is larger than 5 MB.`);
         }
 

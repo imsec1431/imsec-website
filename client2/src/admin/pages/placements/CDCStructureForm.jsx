@@ -118,7 +118,7 @@ const CDCStructureForm = () => {
        10 MB
     --------------------------------------- */
 
-    const maxSize = 10 * 1024 * 1024;
+    const maxSize = 3 * 1024 * 1024;
 
     if (file.size > maxSize) {
       setError("Image size must be less than 10 MB.");

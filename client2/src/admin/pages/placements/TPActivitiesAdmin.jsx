@@ -205,7 +205,7 @@ const TPActivitiesAdmin = () => {
       return;
     }
 
-    if (file.size > 10 * 1024 * 1024) {
+    if (file.size > 3 * 1024 * 1024) {
       setError("Main image must be less than 10 MB.");
 
       event.target.value = "";
@@ -261,7 +261,7 @@ const TPActivitiesAdmin = () => {
       return;
     }
 
-    const oversizedFile = files.find((file) => file.size > 10 * 1024 * 1024);
+    const oversizedFile = files.find((file) => file.size > 3 * 1024 * 1024);
 
     if (oversizedFile) {
       setError("Each gallery image must be less than 10 MB.");

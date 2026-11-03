@@ -569,11 +569,11 @@
 ========================================================= */
 
 .navbar-dark-blue .dropdown-menu {
-  min-width: 250px;
+  min-width: 275px;
 
   margin-top: 0 !important;
 
-  padding: 8px;
+  padding: 10px;
 
   background: rgba(255, 255, 255, 0.99);
 
@@ -595,13 +595,13 @@
 .navbar-dark-blue .dropdown-item {
   position: relative;
 
-  padding: 10px 14px;
+  padding: 12px 18px;
 
   color: #334155;
 
   font-family: "Poppins", "Segoe UI", sans-serif;
 
-  font-size: 12.5px;
+  font-size: 15.5px;
 
   font-weight: 500;
 
@@ -653,11 +653,11 @@
       rgba(253, 185, 19, 0.13),
       rgba(10, 46, 92, 0.035));
 
-  padding-left: 19px;
+  padding-left: 23px;
 }
 
 .navbar-dark-blue .dropdown-item:hover::before {
-  width: 3px;
+  width: 4px;
 }
 
 /* =========================================================
@@ -908,9 +908,9 @@
   }
 
   .navbar-dark-blue .dropdown-item {
-    font-size: 12.5px;
+    font-size: 14.5px;
 
-    padding: 9px 12px;
+    padding: 10px 14px;
   }
 }
 
@@ -975,9 +975,9 @@
   }
 
   .navbar-dark-blue .dropdown-item {
-    font-size: 12px;
+    font-size: 14px;
 
-    padding: 8px 11px;
+    padding: 9px 13px;
   }
 }
 

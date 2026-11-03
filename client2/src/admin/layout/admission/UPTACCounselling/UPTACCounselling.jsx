@@ -241,7 +241,7 @@ const UPTACCounselling = () => {
     // SIZE
     // ---------------------------------------------------
 
-    if (file.size > 10 * 1024 * 1024) {
+    if (file.size > 3 * 1024 * 1024) {
       setError("PDF file must not exceed 10 MB.");
 
       event.target.value = "";

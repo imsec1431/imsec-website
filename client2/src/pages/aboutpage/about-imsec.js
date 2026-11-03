@@ -123,7 +123,6 @@ const AboutImsec = () => {
         <Container>
           <div className="hero-content">
             <h1>{about.heroTitle}</h1>
-
             <p
               style={{
                 color: "white",
@@ -157,7 +156,7 @@ const AboutImsec = () => {
             </Col>
 
             <Col lg={6}>
-              <h6 className="section-tag">{about.aboutTag}</h6>
+              {/* <h6 className="section-tag">{about.aboutTag}</h6> */}
 
               <h2 className="section-title">{about.aboutTitle}</h2>
 

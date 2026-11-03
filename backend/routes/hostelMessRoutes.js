@@ -53,7 +53,7 @@ const upload = multer({
   fileFilter,
 
   limits: {
-    fileSize: 10 * 1024 * 1024,
+    fileSize: 3 * 1024 * 1024,
     files: 60,
   },
 });
@@ -85,8 +85,12 @@ router.get("/", getHostelMess);
 /*
   Get Hostel & Mess CMS data
 */
-router.get("/admin", protect,
-  requireGlobalPermission("life-imsec", "hostel-mess"), getHostelMessAdmin);
+router.get(
+  "/admin",
+  protect,
+  requireGlobalPermission("life-imsec", "hostel-mess"),
+  getHostelMessAdmin,
+);
 
 /*
   Update Hostel & Mess CMS data
@@ -104,15 +108,24 @@ router.get("/admin", protect,
   galleryImage_1
   ...
 */
-router.put("/admin", protect,
-  requireGlobalPermission("life-imsec", "hostel-mess"), upload.any(),
-  validateUploadedFiles, updateHostelMess);
+router.put(
+  "/admin",
+  protect,
+  requireGlobalPermission("life-imsec", "hostel-mess"),
+  upload.any(),
+  validateUploadedFiles,
+  updateHostelMess,
+);
 
 /*
   Restore complete default data
 */
-router.post("/admin/reset-defaults", protect,
-  requireGlobalPermission("life-imsec", "hostel-mess"), resetHostelMessDefaults);
+router.post(
+  "/admin/reset-defaults",
+  protect,
+  requireGlobalPermission("life-imsec", "hostel-mess"),
+  resetHostelMessDefaults,
+);
 
 /* =========================================================
    MULTER ERROR HANDLER

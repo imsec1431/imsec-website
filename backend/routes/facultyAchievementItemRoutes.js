@@ -1,6 +1,5 @@
 import express from "express";
 
-
 import { validateUploadedFiles } from "../middleware/validateUploadedFiles.js";
 import { protect } from "../middleware/authMiddleware.js";
 import { requireDepartmentPermission } from "../middleware/permissionMiddleware.js";
@@ -25,7 +24,7 @@ const router = express.Router();
 const upload = multer({
   dest: "uploads/",
   limits: {
-    fileSize: 5 * 1024 * 1024, // 5 MB
+    fileSize: 3 * 1024 * 1024, // 5 MB
   },
   fileFilter: (req, file, cb) => {
     if (file.mimetype.startsWith("image/")) {
@@ -42,7 +41,12 @@ const upload = multer({
    BY DEPARTMENT
 ========================================================= */
 
-router.get("/department/:departmentId", protect, requireDepartmentPermission("faculty", "faculty-achievements"), getFacultyAchievementItems);
+router.get(
+  "/department/:departmentId",
+  protect,
+  requireDepartmentPermission("faculty", "faculty-achievements"),
+  getFacultyAchievementItems,
+);
 
 /* =========================================================
    PUBLIC
@@ -56,29 +60,51 @@ router.get("/public/:departmentId", getPublicFacultyAchievementItems);
    GET SINGLE FACULTY ACHIEVEMENT
 ========================================================= */
 
-router.get("/:id", protect, requireDepartmentPermission("faculty", "faculty-achievements"), getFacultyAchievementItemById);
+router.get(
+  "/:id",
+  protect,
+  requireDepartmentPermission("faculty", "faculty-achievements"),
+  getFacultyAchievementItemById,
+);
 
 /* =========================================================
    CREATE FACULTY ACHIEVEMENT
    POST /api/faculty-achievement-items
 ========================================================= */
 
-router.post("/", protect, requireDepartmentPermission("faculty", "faculty-achievements"), upload.single("image"),
-  validateUploadedFiles, createFacultyAchievementItem);
+router.post(
+  "/",
+  protect,
+  requireDepartmentPermission("faculty", "faculty-achievements"),
+  upload.single("image"),
+  validateUploadedFiles,
+  createFacultyAchievementItem,
+);
 
 /* =========================================================
    UPDATE FACULTY ACHIEVEMENT
    PUT /api/faculty-achievement-items/:id
 ========================================================= */
 
-router.put("/:id", protect, requireDepartmentPermission("faculty", "faculty-achievements"), upload.single("image"),
-  validateUploadedFiles, updateFacultyAchievementItem);
+router.put(
+  "/:id",
+  protect,
+  requireDepartmentPermission("faculty", "faculty-achievements"),
+  upload.single("image"),
+  validateUploadedFiles,
+  updateFacultyAchievementItem,
+);
 
 /* =========================================================
    DELETE FACULTY ACHIEVEMENT
    DELETE /api/faculty-achievement-items/:id
 ========================================================= */
 
-router.delete("/:id", protect, requireDepartmentPermission("faculty", "faculty-achievements"), deleteFacultyAchievementItem);
+router.delete(
+  "/:id",
+  protect,
+  requireDepartmentPermission("faculty", "faculty-achievements"),
+  deleteFacultyAchievementItem,
+);
 
 export default router;

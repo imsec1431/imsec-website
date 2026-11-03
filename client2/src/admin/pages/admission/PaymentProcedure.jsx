@@ -176,7 +176,7 @@ const PaymentProcedure = () => {
          FILE SIZE
       --------------------------------------------------- */
 
-    const maxSize = 5 * 1024 * 1024;
+    const maxSize = 3 * 1024 * 1024;
 
     if (file.size > maxSize) {
       setError("QR Code image must be less than 5 MB.");

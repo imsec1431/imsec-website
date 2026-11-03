@@ -25,7 +25,7 @@ const upload = multer({
   storage: multer.memoryStorage(),
 
   limits: {
-    fileSize: 10 * 1024 * 1024, // 10 MB
+    fileSize: 3 * 1024 * 1024, // 10 MB
   },
 
   fileFilter: (req, file, cb) => {
@@ -57,15 +57,23 @@ router.get("/public", getPublicPlacementStudents);
   Get all placement records
 */
 
-router.get("/", protect,
-  requireGlobalPermission("placements", "placement-record"), getAllPlacementStudents);
+router.get(
+  "/",
+  protect,
+  requireGlobalPermission("placements", "placement-record"),
+  getAllPlacementStudents,
+);
 
 /*
   Add single student
 */
 
-router.post("/", protect,
-  requireGlobalPermission("placements", "placement-record"), createPlacementStudent);
+router.post(
+  "/",
+  protect,
+  requireGlobalPermission("placements", "placement-record"),
+  createPlacementStudent,
+);
 
 /*
   IMPORT MULTIPLE STUDENTS FROM EXCEL
@@ -87,14 +95,22 @@ router.post(
   Update student
 */
 
-router.put("/:id", protect,
-  requireGlobalPermission("placements", "placement-record"), updatePlacementStudent);
+router.put(
+  "/:id",
+  protect,
+  requireGlobalPermission("placements", "placement-record"),
+  updatePlacementStudent,
+);
 
 /*
   Delete student
 */
 
-router.delete("/:id", protect,
-  requireGlobalPermission("placements", "placement-record"), deletePlacementStudent);
+router.delete(
+  "/:id",
+  protect,
+  requireGlobalPermission("placements", "placement-record"),
+  deletePlacementStudent,
+);
 
 export default router;

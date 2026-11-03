@@ -131,7 +131,7 @@ const IMSGroupImageForm = () => {
     CHECK IMAGE SIZE
     ---------------------------------------*/
 
-    const maxSize = 5 * 1024 * 1024;
+    const maxSize = 3 * 1024 * 1024;
 
     if (file.size > maxSize) {
       setError("Image size must be less than 5 MB.");
