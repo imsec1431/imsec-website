@@ -86,7 +86,7 @@ const Footer = () => {
             lg={3}
             md={6}
             xs={12}
-            className="mb-4 text-center text-lg-start"
+            className="mb-4 d-flex align-items-center justify-content-center"
             style={{
               backgroundColor: "#ffffff",
               padding: "20px",
@@ -98,8 +98,11 @@ const Footer = () => {
               alt="IMSEC"
               style={{
                 width: "100%",
-                maxWidth: "250px",
-                marginBottom: "15px",
+                maxWidth: "230px",
+                maxHeight: "100%",
+                objectFit: "contain",
+                margin: "auto",
+                display: "block",
                 filter:
                   "brightness(0) saturate(100%) invert(19%) sepia(35%) saturate(1700%) hue-rotate(175deg) brightness(85%) contrast(105%)",
               }}
