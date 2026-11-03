@@ -45,7 +45,8 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #e7caca;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: 14px;
   padding: 8px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
@@ -65,7 +66,7 @@
   flex-shrink: 0;
   border: none;
   background: transparent;
-  color: #566;
+  color: #475569;
   padding: 12px 20px;
   border-radius: 10px;
   font-size: 15px;
@@ -76,8 +77,8 @@
 }
 
 .tabItem:hover {
-  background: #eef2fb;
-  color: #0d47a1;
+  background: #f0f4f8;
+  color: #1b4568;
 }
 
 .tabIcon {
@@ -90,9 +91,9 @@
 }
 
 .tabItem.active {
-  background: linear-gradient(135deg, #cdd3db, #1565c0);
+  background: linear-gradient(135deg, #1b4568, #2a5f8a);
   color: #ffffff;
-  box-shadow: 0 6px 16px rgba(13, 71, 161, 0.35);
+  box-shadow: 0 6px 16px rgba(27, 69, 104, 0.35);
 }
 
 .tabItem.active .tabIcon {
@@ -145,7 +146,7 @@
 }
 
 .sectionTitle {
-  color: #0d47a1;
+  color: #1b4568;
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 25px;
@@ -192,7 +193,7 @@
 
 .infoCard h3 {
   margin-bottom: 15px;
-  color: #0d47a1;
+  color: #1b4568;
   font-size: 22px;
   font-weight: 600;
 }
@@ -224,7 +225,7 @@
 }
 
 .statCard h2 {
-  color: #0d47a1;
+  color: #1b4568;
   font-size: 40px;
   margin-bottom: 10px;
 }
@@ -465,7 +466,7 @@
 .mcaPanel,
 .contentPanel {
   scrollbar-width: thin;
-  scrollbar-color: #0d47a1 #e9eef5;
+  scrollbar-color: #1b4568 #e9eef5;
 }
 
 /* =========================================================
@@ -475,7 +476,7 @@
 .tabBarWrapper {
   overflow-x: auto;
   scrollbar-width: thin;
-  scrollbar-color: #0d47a1 #e9eef5;
+  scrollbar-color: #1b4568 #e9eef5;
 }
 
 /* Chrome / Edge / Safari */
@@ -489,7 +490,7 @@
 }
 
 .tabBarWrapper::-webkit-scrollbar-thumb {
-  background: linear-gradient(90deg, #0d47a1, #123f78, #ffb800);
+  background: linear-gradient(90deg, #1b4568, #2a5f8a, #ffb800);
 
   border-radius: 10px;
 }
@@ -505,7 +506,7 @@
 .tabBar {
   overflow-x: auto;
   scrollbar-width: thin;
-  scrollbar-color: #0d47a1 #e9eef5;
+  scrollbar-color: #1b4568 #e9eef5;
 }
 
 /* Chrome / Edge / Safari */
@@ -520,7 +521,7 @@
 }
 
 .tabBar::-webkit-scrollbar-thumb {
-  background: linear-gradient(90deg, #0d47a1, #1565c0, #ffb800);
+  background: linear-gradient(90deg, #1b4568, #2a5f8a, #ffb800);
 
   border-radius: 10px;
 }

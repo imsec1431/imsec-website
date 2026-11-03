@@ -1,12 +1,21 @@
 /* =========================================================
-   SINGLE GLOBAL SLIM SCROLLBAR
+   SINGLE GLOBAL SLIM SCROLLBAR (PREVENTS DUAL SCROLLBARS)
 ========================================================= */
 
-html,
+html {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  scrollbar-width: thin;
+  scrollbar-color: #1b4568 #eef2f6;
+}
+
+html body,
 body {
   margin: 0;
   padding: 0;
-  overflow-x: clip;
+  overflow: visible !important;
+  overflow-x: visible !important;
+  overflow-y: visible !important;
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -14,29 +23,38 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Modern browsers (Firefox, Chrome 121+) */
-html {
-  scrollbar-width: thin;
-  scrollbar-color: #1b4568 #f1f5f9;
+#root {
+  overflow: visible !important;
+  overflow-x: visible !important;
+  overflow-y: visible !important;
 }
 
-/* Chrome, Edge, Safari - Global Single Viewport Scrollbar */
-::-webkit-scrollbar {
-  width: 7px;
-  height: 7px;
+/* Chrome, Edge, Safari - Single Slim Elegant Scrollbar on HTML root only */
+html::-webkit-scrollbar {
+  width: 7px !important;
+  height: 7px !important;
 }
 
-::-webkit-scrollbar-track {
-  background: #f1f5f9;
+html::-webkit-scrollbar-track {
+  background: #f1f5f9 !important;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #1b4568;
-  border-radius: 10px;
+html::-webkit-scrollbar-thumb {
+  background: #1b4568 !important;
+  border-radius: 10px !important;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #0d283e;
+html::-webkit-scrollbar-thumb:hover {
+  background: #0d283e !important;
+}
+
+/* Completely remove any scrollbar on body or #root */
+body::-webkit-scrollbar,
+#root::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
 }
 
 code {
