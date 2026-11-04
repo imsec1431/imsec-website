@@ -591,7 +591,7 @@ const Home = () => {
                         zIndex: 2,
                         border: "1px solid black",
                         borderRadius: "20px",
-                        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), url("https://res.cloudinary.com/a9nuaz4g/image/upload/v1793784736/imse_background_1.png")`,
+                        backgroundImage: `linear-gradient(rgba(108, 68, 68, 0.15), rgba(50, 2, 2, 0.32)), url("https://res.cloudinary.com/a9nuaz4g/image/upload/v1793784736/imse_background_1.png")`,
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",
@@ -616,10 +616,10 @@ const Home = () => {
                         </div>
 
                         <h4
-                          className="fw-bold brand-dark mb-2"
+                          className="fw-bold mb-2"
                           style={{
                             fontSize: "1.35rem",
-                            color: "#080808",
+                            color: "#ffffff",
                           }}
                         >
                           {program.name}
