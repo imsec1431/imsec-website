@@ -918,7 +918,7 @@ const Home = () => {
               textTransform: "uppercase",
             }}
           >
-            CAMPUS HAPPENINGS
+            {/* CAMPUS HAPPENINGS */}
           </h6>
           <h2
             style={{
@@ -938,7 +938,7 @@ const Home = () => {
               fontWeight: "500",
             }}
           >
-            Catch up on the latest events, student initiatives, achievements, and vibrant college moments.
+            {/* Catch up on the latest events, student initiatives, achievements, and vibrant college moments. */}
           </p>
         </div>
 
