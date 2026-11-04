@@ -1105,8 +1105,8 @@ const Home = () => {
         fluid="xl"
         className="py-5"
         style={{
-          backgroundColor: "#1b4568",
-          background: "#1b4568",
+          backgroundColor: "#2e58f0",
+          background: "#2e58f0",
           marginTop: "25px",
           borderRadius: "8px",
         }}
@@ -1114,7 +1114,7 @@ const Home = () => {
         <div className="text-center mb-5">
           <h6
             style={{
-              color: "#1b4568",
+              color: "#FDB913",
               fontWeight: "700",
               letterSpacing: "2px",
             }}
