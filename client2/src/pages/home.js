@@ -619,7 +619,7 @@ const Home = () => {
                           className="fw-bold mb-2"
                           style={{
                             fontSize: "1.35rem",
-                            color: "#ffffff",
+                            color: "#a12a23",
                           }}
                         >
                           {program.name}
