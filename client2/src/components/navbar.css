@@ -80,10 +80,15 @@
 
 .imsec-top-container {
   min-height: 64px;
-
+  width: 100%;
+  max-width: 1550px;
+  margin: 0 auto;
   display: flex;
-
   align-items: center;
+  justify-content: space-between;
+  padding-left: clamp(10px, 1.5vw, 24px);
+  padding-right: clamp(10px, 1.5vw, 24px);
+  gap: clamp(8px, 1.5vw, 20px);
 }
 
 /* =========================================================
@@ -92,24 +97,19 @@
 
 .imsec-logo-link {
   display: flex;
-
   align-items: center;
-
-  flex-shrink: 0;
-
+  flex-shrink: 1;
+  min-width: 0;
   text-decoration: none;
 }
 
 .logo-img {
   width: auto;
-
-  height: 62px;
-
-  max-width: 410px;
-
+  height: clamp(42px, 3.8vw, 60px);
+  max-width: clamp(230px, 25vw, 390px);
   display: block;
-
   object-fit: contain;
+  flex-shrink: 1;
 
   filter: drop-shadow(0 3px 7px rgba(0, 0, 0, 0.12));
 
@@ -130,15 +130,11 @@
 
 .desktop-top-right {
   margin-left: auto;
-
   display: flex;
-
   align-items: center;
-
   justify-content: flex-end;
-
-  gap: 18px;
-
+  flex-shrink: 0;
+  gap: clamp(8px, 1.1vw, 16px);
   min-width: 0;
 }
 
@@ -148,32 +144,22 @@
 
 .top-links {
   display: flex;
-
   align-items: center;
-
   justify-content: flex-end;
-
-  gap: 3px;
-
-  padding-right: 18px;
-
+  gap: clamp(1px, 0.3vw, 4px);
+  padding-right: clamp(6px, 1vw, 16px);
   border-right: 1px solid rgba(161, 42, 35, 0.2);
+  flex-shrink: 0;
 }
 
 .top-links .nav-link {
   position: relative;
-
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
-
-  padding: 8px 13px !important;
-
+  padding: 6px clamp(4px, 0.6vw, 11px) !important;
   color: #a12a23 !important;
-
-  font-size: 15px;
+  font-size: clamp(11.5px, 0.85vw, 14.5px);
 
   font-weight: 600;
 
@@ -245,45 +231,29 @@
 
 .social-icons {
   display: flex;
-
   align-items: center;
-
   justify-content: flex-end;
-
-  gap: 8px;
-
+  gap: clamp(4px, 0.5vw, 8px);
   margin-left: 0;
-
   flex-shrink: 0;
 }
 
 .social-icons .social-icon,
 .social-icon {
-  width: 38px;
-
-  height: 38px;
-
+  width: clamp(28px, 2.2vw, 36px);
+  height: clamp(28px, 2.2vw, 36px);
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   flex-shrink: 0;
-
   border-radius: 50%;
-
   color: #ffffff !important;
-
   background: #2e58f0 !important;
   background-color: #2e58f0 !important;
   background-image: none !important;
-
   border: 1px solid rgba(255, 255, 255, 0.1);
-
   box-shadow: 0 4px 12px rgba(46, 88, 240, 0.25) !important;
-
-  font-size: 15px;
+  font-size: clamp(11.5px, 0.85vw, 14px);
 
   text-decoration: none;
 
@@ -365,19 +335,14 @@
 
 .main-nav-container {
   width: 100%;
-
-  max-width: 1520px;
-
+  max-width: 1550px;
+  margin: 0 auto;
   min-height: 56px;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
-  padding-left: 4px;
-  padding-right: 4px;
+  padding-left: clamp(4px, 1vw, 14px);
+  padding-right: clamp(4px, 1vw, 14px);
 }
 
 /* =========================================================
@@ -404,22 +369,14 @@
 .navbar-dark-blue .nav-link,
 .navbar-dark-blue .dropdown-toggle {
   position: relative;
-
-  min-height: 56px;
-
+  min-height: 54px;
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
-  padding: 0 9px !important;
-
+  padding: 0 clamp(4px, 0.6vw, 9px) !important;
   color: #ffffff !important;
-
   font-family: "Poppins", "Segoe UI", sans-serif;
-
-  font-size: 17px;
+  font-size: clamp(12.5px, 0.95vw, 16px);
 
   font-weight: 600;
 

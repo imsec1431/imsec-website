@@ -192,7 +192,7 @@ const NavigationBar = () => {
           onToggle={setExpanded}
           className="imsec-top-navbar"
         >
-          <Container className="imsec-top-container">
+          <Container fluid className="imsec-top-container">
             {/* =================================================
                 LOGO
             ================================================= */}
@@ -287,7 +287,7 @@ const NavigationBar = () => {
           variant="dark"
         >
           <Container fluid className="main-nav-fluid">
-            <Container className="main-nav-container">
+            <Container fluid className="main-nav-container">
               {/* =================================================
                   MOBILE TOGGLE
               ================================================= */}
