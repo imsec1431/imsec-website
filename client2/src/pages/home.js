@@ -589,9 +589,9 @@ const Home = () => {
                       className="p-0 d-flex flex-column justify-content-between position-relative addhover"
                       style={{
                         zIndex: 2,
-                        border: "1px solid black",
+                        border: "1px solid rgba(0, 0, 0, 0.12)",
                         borderRadius: "20px",
-                        backgroundImage: `linear-gradient(rgba(108, 68, 68, 0.15), rgba(50, 2, 2, 0.32)), url("https://res.cloudinary.com/a9nuaz4g/image/upload/v1793784736/imse_background_1.png")`,
+                        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.94)), url("https://res.cloudinary.com/a9nuaz4g/image/upload/v1793784736/imse_background_1.png")`,
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",
@@ -620,6 +620,7 @@ const Home = () => {
                           style={{
                             fontSize: "1.35rem",
                             color: "#a12a23",
+                            fontWeight: "800",
                           }}
                         >
                           {program.name}
