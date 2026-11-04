@@ -718,8 +718,7 @@
 
 .placement-card:hover {
   transform: translateY(-10px);
-
-  border-color: #fdb913;
+  border-color: #2e58f0;
 
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
 }

@@ -727,7 +727,7 @@ const Home = () => {
                 <Card.Body className="p-0">
                   <div
                     className="display-6 fw-bold mb-2"
-                    style={{ color: "#FDB913" }}
+                    style={{ color: "#2e58f0" }}
                   >
                     {stat.figure}
                   </div>
