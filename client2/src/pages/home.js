@@ -480,7 +480,7 @@ const Home = () => {
                     fontSize: "0.85rem",
                   }}
                 >
-                  {welcome.label}
+                  {/* {welcome.label} */}
                 </h6>
 
                 <h2
@@ -488,7 +488,7 @@ const Home = () => {
                   style={{
                     fontWeight: 800,
                     fontSize: "2.1rem",
-                    color: "#2e58f0",
+                    color: "#a12a23",
                   }}
                 >
                   {welcome.title}
