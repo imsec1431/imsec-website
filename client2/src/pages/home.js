@@ -545,7 +545,7 @@ const Home = () => {
                 className="text-uppercase fw-bold tracking-widest brand-gold mb-2"
                 style={{ letterSpacing: "2px" }}
               >
-                Academic Matrix
+                {/* Academic Matrix */}
               </h6>
 
               <h2
@@ -710,8 +710,8 @@ const Home = () => {
         <Row className="align-items-center mb-4">
           <Col md={8}>
             <h2
-              className="fw-extrabold display-6 brand-dark"
-              style={{ fontWeight: 800 }}
+              className="fw-extrabold display-6"
+              style={{ fontWeight: 800, color: "#a12a23" }}
             >
               Placement Achievements
             </h2>
@@ -1119,7 +1119,7 @@ const Home = () => {
               letterSpacing: "2px",
             }}
           >
-            OUR PRIDE
+            {/* OUR PRIDE */}
           </h6>
 
           <h2
