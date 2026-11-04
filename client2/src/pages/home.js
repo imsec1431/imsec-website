@@ -867,21 +867,29 @@ const Home = () => {
           {sortedRankers.map((student) => (
             <SwiperSlide key={student._id} className="h-auto">
               <div className="rank-card">
-                <img
-                  src={student.image}
-                  alt={student.studentName}
-                  className="rank-photo"
-                />
+                <div className="rank-card-top-accent"></div>
+                <div className="rank-card-body">
+                  <div className="rank-photo-wrapper">
+                    <img
+                      src={student.image}
+                      alt={student.studentName}
+                      className="rank-photo"
+                    />
+                    <span className="rank-medal-badge" title="Rank Holder">🎖️</span>
+                  </div>
 
-                <div className="rank-badge">🏆 Rank #{student.rank}</div>
+                  <div className="rank-badge">🏆 Rank #{student.rank}</div>
 
-                <h5>{student.studentName}</h5>
+                  <h5 className="rank-name">{student.studentName}</h5>
 
-                <div className="rank-course">{student.course}</div>
+                  <div className="rank-course">{student.course}</div>
 
-                <div className="rank-batch">Batch {student.batch}</div>
+                  <div className="rank-batch">Batch {student.batch}</div>
 
-                <div className="rank-cgpa">CGPA {student.cgpa}</div>
+                  <div className="rank-cgpa">
+                    <span>⭐</span> CGPA <strong>{student.cgpa}</strong>
+                  </div>
+                </div>
               </div>
             </SwiperSlide>
           ))}

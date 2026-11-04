@@ -892,11 +892,11 @@
 }
 /* university rank  */
 /* ==========================
-   UNIVERSITY RANK HOLDERS
+   UNIVERSITY RANK HOLDERS - PREMIUM
 ========================== */
 
 .rank-swiper {
-  padding: 10px 15px 45px !important;
+  padding: 15px 15px 50px !important;
 }
 
 .rank-swiper .swiper-slide {
@@ -907,99 +907,179 @@
 .rank-card {
   width: 100%;
   height: 100%;
-  background: #fff;
-  border-radius: 18px;
+  background: #ffffff;
+  border-radius: 20px;
   overflow: hidden;
-  border: 1px solid #e2e8f0;
-  border-top: 4px solid #1b4568;
-  box-shadow: 0 8px 25px rgba(27, 69, 104, 0.08);
-  text-align: center;
-  padding: 26px 20px 22px;
-  transition: all 0.35s ease;
+  border: 1px solid rgba(46, 88, 240, 0.12);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.rank-card-top-accent {
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(90deg, #2e58f0 0%, #688af9 60%, #fdb913 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: height 0.3s ease;
 }
 
 .rank-card:hover {
   transform: translateY(-8px);
-  border-top-color: #fdb913;
-  box-shadow: 0 18px 40px rgba(27, 69, 104, 0.16);
+  border-color: rgba(46, 88, 240, 0.35);
+  box-shadow: 0 20px 40px rgba(46, 88, 240, 0.16);
+}
+
+.rank-card:hover .rank-card-top-accent {
+  height: 6px;
+}
+
+.rank-card-body {
+  padding: 30px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  text-align: center;
+  position: relative;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fbff 100%);
+}
+
+.rank-photo-wrapper {
+  position: relative;
+  margin-bottom: 12px;
+  display: inline-block;
 }
 
 .rank-photo {
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #1b4568;
-  padding: 3px;
-  background: #fff;
+  border: 4px solid #ffffff;
+  box-shadow: 0 0 0 3px rgba(46, 88, 240, 0.22), 0 8px 20px rgba(46, 88, 240, 0.15);
   margin: 0 auto;
-  box-shadow: 0 4px 14px rgba(27, 69, 104, 0.18);
-  transition: border-color 0.3s ease;
+  transition: all 0.35s ease;
 }
 
 .rank-card:hover .rank-photo {
-  border-color: #fdb913;
+  transform: scale(1.05);
+  box-shadow: 0 0 0 4px #2e58f0, 0 12px 26px rgba(46, 88, 240, 0.28);
+}
+
+.rank-medal-badge {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  border: 2px solid rgba(46, 88, 240, 0.2);
 }
 
 .rank-badge {
-  display: inline-block;
-  margin-top: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
   margin-bottom: 12px;
-  background: linear-gradient(135deg, #1b4568, #2a5f8a);
-  color: #fff;
+  background: linear-gradient(135deg, #2e58f0 0%, #1e45c7 100%);
+  color: #ffffff;
   padding: 7px 18px;
   border-radius: 30px;
   font-weight: 700;
   font-size: 13.5px;
   letter-spacing: 0.3px;
-  box-shadow: 0 4px 12px rgba(27, 69, 104, 0.25);
+  box-shadow: 0 4px 14px rgba(46, 88, 240, 0.28);
+  transition: all 0.3s ease;
 }
 
-.rank-card h5 {
-  margin-top: 6px;
-  font-weight: 700;
-  color: #1b4568;
-  font-size: 18px;
+.rank-card:hover .rank-badge {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(46, 88, 240, 0.38);
+}
+
+.rank-name {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  font-weight: 750;
+  color: #0f284e;
+  font-size: 1.2rem;
+  letter-spacing: -0.2px;
+  transition: color 0.3s ease;
+}
+
+.rank-card:hover .rank-name {
+  color: #2e58f0;
 }
 
 .rank-course {
   color: #475569;
   font-weight: 600;
-  font-size: 14px;
-  margin-top: 6px;
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .rank-batch {
-  margin-top: 6px;
-  font-weight: 600;
+  margin-top: 3px;
+  font-weight: 500;
   color: #64748b;
-  font-size: 13.5px;
+  font-size: 0.84rem;
 }
 
 .rank-cgpa {
-  margin-top: 10px;
-  font-size: 15px;
-  font-weight: 800;
-  color: #1b4568;
-  background: #f0f4f8;
-  padding: 6px 16px;
+  margin-top: 14px;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #2e58f0;
+  background: rgba(46, 88, 240, 0.08);
+  padding: 6px 18px;
   border-radius: 20px;
-  border: 1px solid #e2e8f0;
-  display: inline-block;
+  border: 1px solid rgba(46, 88, 240, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+}
+
+.rank-cgpa strong {
+  font-weight: 850;
+  color: #2e58f0;
+}
+
+.rank-card:hover .rank-cgpa {
+  background: #2e58f0;
+  color: #ffffff;
+  border-color: #2e58f0;
+  box-shadow: 0 4px 12px rgba(46, 88, 240, 0.25);
+}
+
+.rank-card:hover .rank-cgpa strong {
+  color: #ffffff;
 }
 
 .rank-swiper .swiper-button-prev,
 .rank-swiper .swiper-button-next {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   background: #ffffff;
   border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
   color: #2e58f0 !important;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 .rank-swiper .swiper-button-prev::after,
@@ -1010,12 +1090,27 @@
 
 .rank-swiper .swiper-button-prev:hover,
 .rank-swiper .swiper-button-next:hover {
-  background: #1b4568;
+  background: #2e58f0;
   color: #ffffff !important;
+  transform: scale(1.08);
+}
+
+.rank-swiper .swiper-button-prev {
+  left: 0px;
+}
+
+.rank-swiper .swiper-button-next {
+  right: 0px;
+}
+
+.rank-swiper .swiper-pagination-bullet {
+  background: rgba(46, 88, 240, 0.25) !important;
+  opacity: 1 !important;
+  transition: all 0.3s ease;
 }
 
 .rank-swiper .swiper-pagination-bullet-active {
-  background: #1b4568 !important;
+  background: #2e58f0 !important;
   width: 22px;
   border-radius: 8px;
 }
