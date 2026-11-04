@@ -549,8 +549,8 @@ const Home = () => {
               </h6>
 
               <h2
-                className="fw-extrabold brand-dark m-0"
-                style={{ fontWeight: 800, fontSize: "2.3rem" }}
+                className="fw-extrabold m-0"
+                style={{ fontWeight: 800, fontSize: "2.3rem", color: "#a12a23" }}
               >
                 Explore Global Academic Programs
               </h2>
@@ -831,7 +831,7 @@ const Home = () => {
 
           <h2
             style={{
-              color: "#1b4568",
+              color: "#a12a23",
               fontWeight: "800",
               fontSize: "clamp(2rem,4vw,3rem)",
             }}
@@ -1069,7 +1069,7 @@ const Home = () => {
               style={{
                 fontSize: "clamp(2rem,5vw,3rem)",
                 fontWeight: "800",
-                color: "#0A2E5C",
+                color: "#a12a23",
               }}
             >
               Life @ IMSEC<span style={{ color: "#FDB913" }}></span>
@@ -1202,7 +1202,7 @@ const Home = () => {
             style={{
               fontWeight: "800",
               fontSize: "clamp(2rem,4vw,3rem)",
-              color: "#0A2E5C",
+              color: "#a12a23",
             }}
           >
             Our Proud Alumni
