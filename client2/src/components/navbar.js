@@ -1122,7 +1122,7 @@ const SocialIcon = ({ href, icon, platform }) => {
       target="_blank"
       rel="noreferrer"
       className="social-icon"
-      style={{ backgroundColor: "#1b4568", background: "#1b4568" }}
+      style={{ backgroundColor: "#2e58f0", background: "#2e58f0" }}
       aria-label={platform || "Social media"}
     >
       {icon}

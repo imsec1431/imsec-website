@@ -70,7 +70,7 @@ const Footer = () => {
   return (
     <footer
       style={{
-        background: "#1b4568",
+        background: "#2e58f0",
         color: "#fff",
         height: "auto",
         transform: "translateY(180px)",
@@ -104,7 +104,7 @@ const Footer = () => {
                 margin: "auto",
                 display: "block",
                 filter:
-                  "brightness(0) saturate(100%) invert(19%) sepia(35%) saturate(1700%) hue-rotate(175deg) brightness(85%) contrast(105%)",
+                  "brightness(0) saturate(100%) invert(31%) sepia(92%) saturate(2385%) hue-rotate(222deg) brightness(97%) contrast(97%)",
               }}
             />
           </Col>
@@ -389,7 +389,7 @@ const SocialIcon = ({ href, icon }) => (
       width: "42px",
       height: "42px",
       borderRadius: "50%",
-      background: "#1b4568",
+      background: "#2e58f0",
       color: "#fff",
       display: "flex",
       justifyContent: "center",
@@ -401,10 +401,10 @@ const SocialIcon = ({ href, icon }) => (
     }}
     onMouseEnter={(e) => {
       e.currentTarget.style.background = "#FDB913";
-      e.currentTarget.style.color = "#1b4568";
+      e.currentTarget.style.color = "#2e58f0";
     }}
     onMouseLeave={(e) => {
-      e.currentTarget.style.background = "#1b4568";
+      e.currentTarget.style.background = "#2e58f0";
       e.currentTarget.style.color = "#fff";
     }}
   >

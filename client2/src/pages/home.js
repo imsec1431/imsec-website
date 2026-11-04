@@ -666,7 +666,7 @@ const Home = () => {
       {/* GLOBAL INDUSTRY PARTNERS SECTION */}
       <div
         className="partner-section py-5"
-        style={{ backgroundColor: "#1b4568", background: "#1b4568" }}
+        style={{ backgroundColor: "#2e58f0", background: "#2e58f0" }}
       >
         <Container>
           <div className="text-center mb-4">
@@ -892,7 +892,7 @@ const Home = () => {
         fluid="xl"
         className="py-5"
         style={{
-          backgroundColor: "#1b4568", background: "#1b4568",
+          backgroundColor: "#2e58f0", background: "#2e58f0",
           marginTop: "20px",
         }}
       >
@@ -900,7 +900,7 @@ const Home = () => {
           <div>
             <h2
               style={{
-                color: "#FDB913",
+                color: "#a12a23",
                 fontWeight: "800",
                 fontSize: "clamp(2rem,4vw,3rem)",
               }}
@@ -946,8 +946,8 @@ const Home = () => {
                     className="badge rounded-pill px-3 py-2"
                     style={{
                       background:
-                        item.eventType === "News" ? "#1b4568" : "#FDB913",
-                      color: item.eventType === "News" ? "#fff" : "#1b4568", fontWeight: "600",
+                        item.eventType === "News" ? "#2e58f0" : "#FDB913",
+                      color: item.eventType === "News" ? "#fff" : "#2e58f0", fontWeight: "600",
                     }}
                   >
                     {item.eventType}
@@ -956,7 +956,7 @@ const Home = () => {
                   <h5
                     className="mt-3"
                     style={{
-                      color: "#1b4568", fontWeight: "700", minHeight: "60px",
+                      color: "#2e58f0", fontWeight: "700", minHeight: "60px",
                     }}
                   >
                     {item.title}
@@ -991,7 +991,7 @@ const Home = () => {
                         rel="noopener noreferrer"
                         className="btn btn-sm btn-primary rounded-pill px-4"
                         style={{
-                          background: "#1b4568", border: "none", textDecoration: "none",
+                          background: "#2e58f0", border: "none", textDecoration: "none",
                         }}
                       >
                         More →
