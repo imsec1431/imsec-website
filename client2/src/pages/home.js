@@ -1186,7 +1186,7 @@ const Home = () => {
       </Container>
 
       {/* TESTIMONIALS / ALUMNI SPOTLIGHT */}
-      <Container className="py-5">
+      <Container className="pt-5 pb-3">
         <div className="text-center mb-5">
           <h6
             className="text-uppercase fw-bold"

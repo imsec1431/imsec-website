@@ -73,7 +73,6 @@ const Footer = () => {
         background: "#2e58f0",
         color: "#fff",
         height: "auto",
-        transform: "translateY(180px)",
       }}
     >
       <Container className="py-5">
