@@ -902,27 +902,49 @@ const Home = () => {
         fluid="xl"
         className="py-5"
         style={{
-          backgroundColor: "#2e58f0", background: "#2e58f0",
-          marginTop: "20px",
+          backgroundColor: "#2e58f0",
+          background: "#2e58f0",
+          marginTop: "25px",
+          borderRadius: "16px",
+          boxShadow: "0 10px 30px rgba(46, 88, 240, 0.25)",
         }}
       >
-        <div className="d-flex justify-content-between align-items-center flex-wrap mb-4">
-          <div>
-            <h2
-              style={{
-                color: "#ffffff",
-                fontWeight: "800",
-                fontSize: "clamp(2rem,4vw,3rem)",
-              }}
-            >
-              Campus Highlights
-            </h2>
-          </div>
+        <div className="text-center mb-5">
+          <h6
+            style={{
+              color: "#FDB913",
+              fontWeight: "700",
+              letterSpacing: "2px",
+              textTransform: "uppercase",
+            }}
+          >
+            CAMPUS HAPPENINGS
+          </h6>
+          <h2
+            style={{
+              color: "#ffffff",
+              fontWeight: "800",
+              fontSize: "clamp(2rem,4vw,3rem)",
+            }}
+          >
+            Campus Highlights
+          </h2>
+          <p
+            style={{
+              maxWidth: "650px",
+              margin: "12px auto 0",
+              color: "#e2e8f0",
+              fontSize: "1rem",
+              fontWeight: "500",
+            }}
+          >
+            Catch up on the latest events, student initiatives, achievements, and vibrant college moments.
+          </p>
         </div>
 
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={15}
+          spaceBetween={20}
           navigation
           pagination={{ clickable: true }}
           autoplay={{
@@ -937,95 +959,66 @@ const Home = () => {
             992: { slidesPerView: 3 },
             1200: { slidesPerView: 4 },
           }}
+          className="highlight-swiper"
         >
           {campusHighlights.map((item) => (
-            <SwiperSlide key={item._id}>
-              <div className="highlight-card bg-white p-3 rounded">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="highlight-img w-100 rounded mb-3"
-                  style={{
-                    height: "180px",
-                    objectFit: "cover",
-                  }}
-                />
-
-                <div className="highlight-body">
+            <SwiperSlide key={item._id} className="h-auto">
+              <div className="highlight-premium-card">
+                <div className="highlight-img-wrapper">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="highlight-img"
+                  />
                   <span
-                    className="badge rounded-pill px-3 py-2"
-                    style={{
-                      background:
-                        item.eventType === "News" ? "#2e58f0" : "#FDB913",
-                      color: item.eventType === "News" ? "#fff" : "#2e58f0", fontWeight: "600",
-                    }}
+                    className={`highlight-badge ${item.eventType === "News" ? "badge-news" : "badge-event"}`}
                   >
-                    {item.eventType}
+                    {item.eventType === "News" ? "📰 News" : "🎉 Event"}
                   </span>
+                </div>
 
-                  <h5
-                    className="mt-3"
-                    style={{
-                      color: "#2e58f0", fontWeight: "700", minHeight: "60px",
-                    }}
-                  >
+                <div className="highlight-content">
+                  <div className="highlight-date">
+                    <span>📅</span>
+                    {new Date(item.date).toLocaleDateString("en-IN", {
+                      day: "2-digit",
+                      month: "short",
+                      year: "numeric",
+                    })}
+                  </div>
+
+                  <h5 className="highlight-title" title={item.title}>
                     {item.title}
                   </h5>
 
-                  <small className="d-block mb-3" style={{ color: "#888" }}>
-                    <strong style={{ color: "black" }}>
-                      📅{" "}
-                      {new Date(item.date).toLocaleDateString("en-IN", {
-                        day: "2-digit",
-                        month: "long",
-                        year: "numeric",
-                      })}
-                    </strong>
-                  </small>
-
-                  <p
-                    style={{
-                      color: "#666",
-                      fontSize: "15px",
-                      lineHeight: "1.7",
-                    }}
-                  >
+                  <p className="highlight-desc">
                     {item.description}
                   </p>
 
-                  <div className="d-flex justify-content-between align-items-center mt-3">
+                  <div className="highlight-footer">
                     {item.readMore ? (
                       <a
                         href={item.readMore}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn btn-sm btn-primary rounded-pill px-4"
-                        style={{
-                          background: "#2e58f0", border: "none", textDecoration: "none",
-                        }}
+                        className="highlight-btn"
                       >
-                        More →
+                        Read More →
                       </a>
                     ) : (
-                      <button
-                        className="btn btn-sm btn-primary rounded-pill px-4"
-                        style={{
-                          background: "#0A2E5C",
-                          border: "none",
-                        }}
-                        disabled
-                      >
-                        More →
-                      </button>
+                      <span className="highlight-btn disabled">
+                        Read More →
+                      </span>
                     )}
 
-                    <div className="d-flex gap-2">
+                    <div className="highlight-socials">
                       {item.facebook && (
                         <a
                           href={item.facebook}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="social-icon facebook"
+                          className="highlight-social-icon"
+                          title="Facebook"
                         >
                           <FaFacebookF />
                         </a>
@@ -1036,7 +1029,8 @@ const Home = () => {
                           href={item.instagram}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="social-icon instagram"
+                          className="highlight-social-icon"
+                          title="Instagram"
                         >
                           <FaInstagram />
                         </a>
@@ -1047,7 +1041,8 @@ const Home = () => {
                           href={item.linkedin}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="social-icon linkedin"
+                          className="highlight-social-icon"
+                          title="LinkedIn"
                         >
                           <FaLinkedinIn />
                         </a>
