@@ -591,7 +591,7 @@ const Home = () => {
                         zIndex: 2,
                         border: "1px solid black",
                         borderRadius: "20px",
-                        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), url("https://res.cloudinary.com/dgdlwai9p/image/upload/v1788431807/images_2_gfn7tj.jpg")`,
+                        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), url("https://res.cloudinary.com/a9nuaz4g/image/upload/v1793784736/imse_background_1.png")`,
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",
@@ -900,7 +900,7 @@ const Home = () => {
           <div>
             <h2
               style={{
-                color: "#a12a23",
+                color: "#ffffff",
                 fontWeight: "800",
                 fontSize: "clamp(2rem,4vw,3rem)",
               }}
