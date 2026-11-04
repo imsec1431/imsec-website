@@ -205,7 +205,7 @@ const NavigationBar = () => {
                 DESKTOP RIGHT AREA
             ================================================= */}
 
-            <div className="desktop-top-right d-none d-lg-flex">
+            <div className="desktop-top-right d-none d-md-flex">
               {/* =================================================
                   TOP LINKS
               ================================================= */}
