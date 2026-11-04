@@ -164,7 +164,7 @@
   transform: rotate(-15deg);
 }
 .program-premium-card:hover .program-floating-shape {
-  color: rgba(253, 185, 19, 0.08);
+  color: rgba(46, 88, 240, 0.12);
   transform: scale(1.15) rotate(0deg);
   bottom: -10px;
   right: -10px;
@@ -176,9 +176,9 @@
   margin-bottom: 20px;
 }
 .program-badge-box {
-  color: #1b4568;
+  color: #2e58f0;
   font-size: 1.6rem;
-  background: rgba(10, 46, 92, 0.05);
+  background: rgba(46, 88, 240, 0.08);
   width: 52px;
   height: 52px;
   border-radius: 12px;
@@ -188,8 +188,8 @@
   transition: all 0.3s ease;
 }
 .program-premium-card:hover .program-badge-box {
-  background: #fdb913;
-  color: #1b4568;
+  background: #2e58f0;
+  color: #ffffff;
 }
 .info-row {
   border-top: 1px solid #f1f5f9;
