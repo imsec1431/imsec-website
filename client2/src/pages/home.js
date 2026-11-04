@@ -1216,7 +1216,7 @@ const Home = () => {
 
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={30}
+          spaceBetween={25}
           loop={true}
           navigation={true}
           pagination={{ clickable: true }}
@@ -1230,40 +1230,29 @@ const Home = () => {
             992: { slidesPerView: 3 },
             1200: { slidesPerView: 4 },
           }}
+          className="alumni-swiper"
         >
           {alumni.map((student) => (
             <SwiperSlide key={student._id}>
-              <div className="student-card text-center p-3">
-                <img
-                  src={student.image}
-                  alt={student.name}
-                  className="student-img rounded-circle mb-3"
-                  style={{
-                    width: "100px",
-                    height: "100px",
-                    objectFit: "cover",
-                  }}
-                />
-
-                <div className="student-info">
-                  <div className="student-name fw-bold">{student.name}</div>
-
-                  <div className="student-course text-muted">
-                    {student.course}
+              <div className="alumni-card">
+                <div className="alumni-card-top-accent"></div>
+                <div className="alumni-card-body">
+                  <div className="alumni-avatar-wrapper">
+                    <img
+                      src={student.image}
+                      alt={student.name}
+                      className="alumni-avatar"
+                    />
+                    <span className="alumni-grad-cap" title="Graduate">🎓</span>
                   </div>
 
-                  <div
-                    className="student-badge mt-2"
-                    style={{
-                      background: "#0A2E5C",
-                      color: "#fff",
-                      padding: "8px 16px",
-                      borderRadius: "30px",
-                      display: "inline-block",
-                      fontWeight: "600",
-                    }}
-                  >
-                    💼 Placed at {student.company}
+                  <div className="alumni-info">
+                    <h5 className="alumni-name">{student.name}</h5>
+                    <p className="alumni-course">{student.course}</p>
+                  </div>
+
+                  <div className="alumni-badge">
+                    <span className="alumni-badge-text">💼 Placed at <strong>{student.company}</strong></span>
                   </div>
                 </div>
               </div>
