@@ -484,10 +484,11 @@ const Home = () => {
                 </h6>
 
                 <h2
-                  className="fw-extrabold brand-dark m-0"
+                  className="fw-extrabold m-0"
                   style={{
                     fontWeight: 800,
                     fontSize: "2.1rem",
+                    color: "#2e58f0",
                   }}
                 >
                   {welcome.title}
