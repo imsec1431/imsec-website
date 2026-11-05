@@ -592,7 +592,7 @@ const Home = () => {
                         zIndex: 2,
                         border: "1px solid rgba(0, 0, 0, 0.12)",
                         borderRadius: "20px",
-                        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.94)), url("https://res.cloudinary.com/a9nuaz4g/image/upload/v1793784736/imse_background_1.png")`,
+                        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("https://res.cloudinary.com/a9nuaz4g/image/upload/v1793784736/imse_background_1.png")`,
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",
