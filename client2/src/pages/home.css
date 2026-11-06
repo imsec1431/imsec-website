@@ -317,7 +317,7 @@
   background: #002147 !important;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 70px 0;
+  padding: 45px 0 !important;
   overflow: hidden;
 }
 .partner-slider-wrapper {
@@ -521,7 +521,7 @@
    ========================================================= */
 
 .highlight-swiper {
-  padding: 10px 15px 50px !important;
+  padding: 10px 15px 35px !important;
 }
 
 .highlight-swiper .swiper-slide {
@@ -1073,7 +1073,7 @@
 ========================== */
 
 .rank-swiper {
-  padding: 15px 15px 50px !important;
+  padding: 10px 15px 35px !important;
 }
 
 .rank-swiper .swiper-slide {
@@ -1437,7 +1437,7 @@
    ========================================================= */
 
 .achievements-swiper {
-  padding: 10px 15px 45px !important;
+  padding: 10px 15px 35px !important;
 }
 
 .achievements-swiper .swiper-slide {
@@ -1555,7 +1555,7 @@
    ========================================================= */
 
 .alumni-swiper {
-  padding: 15px 15px 50px !important;
+  padding: 10px 15px 35px !important;
 }
 
 .alumni-swiper .swiper-slide {

@@ -458,7 +458,7 @@ const Home = () => {
       {/* ABOUT SECTION */}
       {/* ABOUT SECTION */}
       {welcomeData.map((welcome) => (
-        <Container className="py-5 my-4" key={welcome._id}>
+        <Container className="py-4 my-2" key={welcome._id}>
           <Row className="g-4 align-items-center">
             <Col lg={5} md={12}>
               <div className="about-img-container">
@@ -539,7 +539,7 @@ const Home = () => {
 
       {/* ACADEMIC MATRIX */}
       <div className="bg-light py-5 border-top border-bottom">
-        <Container className="my-3">
+        <Container className="my-2 pb-2">
           <Row className="align-items-end mb-5">
             <Col lg={7} md={12}>
               <h6
@@ -667,7 +667,7 @@ const Home = () => {
 
       {/* GLOBAL INDUSTRY PARTNERS SECTION */}
       <div
-        className="partner-section py-5"
+        className="partner-section py-4"
         style={{ backgroundColor: "#002147", background: "#002147" }}
       >
         <Container>
@@ -708,7 +708,7 @@ const Home = () => {
       </div>
 
       {/* PLACEMENT PERFORMANCE DASHBOARD */}
-      <Container className="py-5 mt-4">
+      <Container className="py-4 mt-2">
         <Row className="align-items-center mb-4">
           <Col md={8}>
             <h2
@@ -819,8 +819,8 @@ const Home = () => {
       </Container>
 
       {/* UNIVERSITY RANK HOLDERS */}
-      <Container className="py-5">
-        <div className="text-center mb-5">
+      <Container className="py-4">
+        <div className="text-center mb-4">
           <h6
             style={{
               color: "#FDB913",
@@ -900,16 +900,17 @@ const Home = () => {
       {/* CAMPUS HIGHLIGHTS */}
       <Container
         fluid="xl"
-        className="py-5"
+        className="py-4"
         style={{
           backgroundColor: "#002147",
           background: "#002147",
-          marginTop: "25px",
+          marginTop: "15px",
+          marginBottom: "15px",
           borderRadius: "16px",
           boxShadow: "0 10px 30px rgba(0, 33, 71, 0.25)",
         }}
       >
-        <div className="text-center mb-5">
+        <div className="text-center mb-4">
           <h6
             style={{
               color: "#FDB913",
@@ -1057,8 +1058,8 @@ const Home = () => {
       </Container>
 
       {/* LIFE @ IMSEC */}
-      <Container className="py-5">
-        <Row className="mb-5">
+      <Container className="py-4">
+        <Row className="mb-4">
           <Col lg={12} className="text-center">
             <h6
               style={{
@@ -1108,15 +1109,16 @@ const Home = () => {
       {/* ACHIEVEMENTS & RECOGNITION */}
       <Container
         fluid="xl"
-        className="py-5"
+        className="py-4"
         style={{
           backgroundColor: "#002147",
           background: "#002147",
-          marginTop: "25px",
-          borderRadius: "8px",
+          marginTop: "15px",
+          marginBottom: "15px",
+          borderRadius: "12px",
         }}
       >
-        <div className="text-center mb-5">
+        <div className="text-center mb-4">
           <h6
             style={{
               color: "#FDB913",
@@ -1191,8 +1193,8 @@ const Home = () => {
       </Container>
 
       {/* TESTIMONIALS / ALUMNI SPOTLIGHT */}
-      <Container className="pt-5 pb-3">
-        <div className="text-center mb-5">
+      <Container className="pt-4 pb-2">
+        <div className="text-center mb-4">
           <h6
             className="text-uppercase fw-bold"
             style={{
