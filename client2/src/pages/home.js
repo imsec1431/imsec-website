@@ -668,7 +668,7 @@ const Home = () => {
       {/* GLOBAL INDUSTRY PARTNERS SECTION */}
       <div
         className="partner-section py-5"
-        style={{ backgroundColor: "#2e58f0", background: "#2e58f0" }}
+        style={{ backgroundColor: "#002147", background: "#002147" }}
       >
         <Container>
           <div className="text-center mb-4">
@@ -902,11 +902,11 @@ const Home = () => {
         fluid="xl"
         className="py-5"
         style={{
-          backgroundColor: "#2e58f0",
-          background: "#2e58f0",
+          backgroundColor: "#002147",
+          background: "#002147",
           marginTop: "25px",
           borderRadius: "16px",
-          boxShadow: "0 10px 30px rgba(46, 88, 240, 0.25)",
+          boxShadow: "0 10px 30px rgba(0, 33, 71, 0.25)",
         }}
       >
         <div className="text-center mb-5">
@@ -1110,8 +1110,8 @@ const Home = () => {
         fluid="xl"
         className="py-5"
         style={{
-          backgroundColor: "#2e58f0",
-          background: "#2e58f0",
+          backgroundColor: "#002147",
+          background: "#002147",
           marginTop: "25px",
           borderRadius: "8px",
         }}

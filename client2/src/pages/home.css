@@ -313,8 +313,8 @@
 }
 /* --- GLOBAL INDUSTRY PARTNERS INFINITE MARQUEE --- */
 .partner-section {
-  background-color: #2e58f0 !important;
-  background: #2e58f0 !important;
+  background-color: #002147 !important;
+  background: #002147 !important;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 70px 0;
@@ -376,8 +376,8 @@
   color: "white";
 }
 .partner-section {
-  background-color: #2e58f0 !important;
-  background: #2e58f0 !important;
+  background-color: #002147 !important;
+  background: #002147 !important;
   /* nakul */
 }
 /* ---for testimonials */
@@ -580,7 +580,7 @@
 }
 
 .highlight-badge.badge-news {
-  background: #2e58f0;
+  background: #002147;
   color: #ffffff;
 }
 
@@ -651,7 +651,7 @@
   align-items: center;
   padding: 7px 18px;
   border-radius: 30px;
-  background: #2e58f0;
+  background: #002147;
   color: #ffffff !important;
   font-size: 0.84rem;
   font-weight: 600;
@@ -707,7 +707,7 @@
   background: #ffffff;
   border-radius: 50%;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
-  color: #2e58f0 !important;
+  color: #002147 !important;
   transition: all 0.25s ease;
 }
 
@@ -1502,7 +1502,7 @@
 .achievement-title {
   font-size: 14.5px;
   font-weight: 600;
-  color: #2e58f0;
+  color: #002147;
   margin: 0;
   line-height: 1.4;
   word-break: break-word;
@@ -1515,7 +1515,7 @@
   background: #ffffff;
   border-radius: 50%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  color: #2e58f0 !important;
+  color: #002147 !important;
   transition: all 0.2s ease;
 }
 
@@ -1528,7 +1528,7 @@
 .achievements-swiper .swiper-button-prev:hover,
 .achievements-swiper .swiper-button-next:hover {
   background: #fdb913;
-  color: #2e58f0 !important;
+  color: #002147 !important;
 }
 
 .achievements-swiper .swiper-button-prev {
