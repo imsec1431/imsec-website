@@ -1284,7 +1284,7 @@ const Home = () => {
               fontWeight: "800",
               fontSize: "clamp(1.85rem, 3.6vw, 2.65rem)",
               lineHeight: "1.2",
-              color: "#a12a23",
+              color: "#002147",
             }}
           >
             Our Proud Alumni
