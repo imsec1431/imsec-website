@@ -41,8 +41,9 @@
 ========================================================= */
 
 .imsec-top-navbar {
-  min-height: 38px;
-  padding: 3px 0;
+  min-height: 28px !important;
+  height: 28px;
+  padding: 0 !important;
   background: #002147 !important;
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
@@ -71,7 +72,8 @@
 ========================================================= */
 
 .imsec-top-container {
-  min-height: 32px;
+  min-height: 28px !important;
+  height: 28px;
   width: 100%;
   max-width: 1550px;
   margin: 0 auto;
@@ -80,7 +82,7 @@
   justify-content: space-between;
   padding-left: clamp(10px, 1.5vw, 24px);
   padding-right: clamp(10px, 1.5vw, 24px);
-  gap: 12px;
+  gap: 10px;
 }
 
 /* =========================================================
@@ -90,20 +92,22 @@
 .imsec-top-left-info {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   min-width: 0;
   flex-shrink: 1;
+  line-height: 1;
 }
 
 .top-clg-identity {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   color: #ffffff !important;
   text-decoration: none !important;
-  font-size: clamp(11px, 0.78vw, 12.5px);
+  font-size: clamp(10.5px, 0.72vw, 11.5px);
   font-weight: 500;
-  letter-spacing: 0.15px;
+  letter-spacing: 0.1px;
+  line-height: 1;
   white-space: nowrap;
   transition: color 0.2s ease;
 }
@@ -114,21 +118,23 @@
 
 .top-pin-icon {
   color: var(--imsec-gold);
-  font-size: 13px;
+  font-size: 11px;
   flex-shrink: 0;
 }
 
 .top-info-divider {
   color: rgba(255, 255, 255, 0.28);
-  font-size: 12px;
+  font-size: 11px;
+  line-height: 1;
   user-select: none;
-  padding: 0 2px;
+  padding: 0 1px;
 }
 
 .top-accreditation-tag {
   color: rgba(255, 255, 255, 0.85);
-  font-size: clamp(10.5px, 0.74vw, 12px);
+  font-size: clamp(10px, 0.68vw, 11px);
   font-weight: 400;
+  line-height: 1;
   white-space: nowrap;
 }
 
@@ -142,8 +148,9 @@
   align-items: center;
   justify-content: flex-end;
   flex-shrink: 0;
-  gap: clamp(6px, 0.7vw, 10px);
+  gap: clamp(4px, 0.6vw, 8px);
   min-width: 0;
+  height: 28px;
 }
 
 /* =========================================================
@@ -154,10 +161,11 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: clamp(3px, 0.4vw, 6px);
+  gap: clamp(1px, 0.3vw, 4px);
   padding-right: 0;
   border-right: none;
   flex-shrink: 0;
+  height: 28px;
 }
 
 .top-links .nav-link {
@@ -165,15 +173,16 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 2px clamp(3px, 0.4vw, 6px) !important;
+  padding: 0 clamp(2px, 0.35vw, 5px) !important;
   color: rgba(255, 255, 255, 0.88) !important;
-  font-size: clamp(11px, 0.78vw, 12.5px);
+  font-size: clamp(10.5px, 0.72vw, 11.5px);
   font-weight: 500;
-  letter-spacing: 0.15px;
-  line-height: 1.2;
+  letter-spacing: 0.1px;
+  line-height: 28px;
+  height: 28px;
   white-space: nowrap;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
@@ -194,20 +203,20 @@
 .top-erp-btn {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
   background: var(--imsec-gold);
   color: #002147 !important;
   font-weight: 700;
-  font-size: clamp(11px, 0.78vw, 12px);
-  padding: 3px 10px;
-  border-radius: 4px;
+  font-size: clamp(10px, 0.68vw, 11px);
+  padding: 2px 7px;
+  border-radius: 3px;
   text-decoration: none !important;
-  box-shadow: 0 2px 6px rgba(253, 185, 19, 0.25);
+  box-shadow: 0 1px 4px rgba(253, 185, 19, 0.25);
   transition: all 0.25s ease;
-  line-height: 1.4;
+  line-height: 1.2;
   white-space: nowrap;
   margin-left: 2px;
-  letter-spacing: 0.2px;
+  height: 20px;
 }
 
 .top-erp-btn:hover {
@@ -218,7 +227,7 @@
 }
 
 .top-erp-btn .erp-btn-icon {
-  font-size: 11px;
+  font-size: 10px;
 }
 
 /* =========================================================
@@ -236,8 +245,8 @@
 
 .social-icons .social-icon,
 .social-icon {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -247,7 +256,7 @@
   background: rgba(255, 255, 255, 0.12) !important;
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: none !important;
-  font-size: 11px;
+  font-size: 9.5px;
   text-decoration: none;
   transition: all 0.25s ease;
 }
@@ -266,7 +275,7 @@
 ========================================================= */
 
 .navbar-dark-blue {
-  min-height: 44px;
+  min-height: 40px;
 
   padding: 0;
 
@@ -326,7 +335,7 @@
   width: 100%;
   max-width: 1550px;
   margin: 0 auto;
-  min-height: 44px;
+  min-height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -358,14 +367,14 @@
 .navbar-dark-blue .nav-link,
 .navbar-dark-blue .dropdown-toggle {
   position: relative;
-  min-height: 44px;
+  min-height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 clamp(4px, 0.6vw, 9px) !important;
   color: #ffffff !important;
   font-family: "Poppins", "Segoe UI", sans-serif;
-  font-size: clamp(12.5px, 0.95vw, 16px);
+  font-size: clamp(12px, 0.9vw, 15px);
 
   font-weight: 600;
 
@@ -658,22 +667,24 @@
 
   .navbar-dark-blue .nav-link,
   .navbar-dark-blue .dropdown-toggle {
-    min-height: 46px;
+    min-height: 40px;
 
     padding: 0 10px !important;
 
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .top-links .nav-link {
-    font-size: 12.5px;
-    padding: 2px 6px !important;
+    font-size: 11.5px;
+    padding: 0 5px !important;
+    line-height: 28px;
+    height: 28px;
   }
 
   .social-icon {
-    width: 25px;
-    height: 25px;
-    font-size: 11px;
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
   }
 }
 
@@ -692,18 +703,20 @@
     height: 56px;
   }
   .top-links .nav-link {
-    font-size: 12px;
-    padding: 2px 5px !important;
+    font-size: 11px;
+    padding: 0 4px !important;
+    line-height: 28px;
+    height: 28px;
   }
   .social-icon {
-    width: 24px;
-    height: 24px;
-    font-size: 11px;
+    width: 20px;
+    height: 20px;
+    font-size: 9.5px;
   }
 
   .navbar-dark-blue .nav-link,
   .navbar-dark-blue .dropdown-toggle {
-    min-height: 44px;
+    min-height: 40px;
 
     padding: 0 8px !important;
 
@@ -738,27 +751,29 @@
   }
 
   .top-links .nav-link {
-    padding: 2px 4px !important;
-    font-size: 11.5px;
+    padding: 0 3px !important;
+    font-size: 10.5px;
+    line-height: 28px;
+    height: 28px;
   }
 
   .social-icons {
-    gap: 4px;
+    gap: 3px;
   }
 
   .social-icon {
-    width: 22px;
-    height: 22px;
-    font-size: 10px;
+    width: 19px;
+    height: 19px;
+    font-size: 9px;
   }
 
   .navbar-dark-blue .nav-link,
   .navbar-dark-blue .dropdown-toggle {
-    min-height: 42px;
+    min-height: 38px;
 
     padding: 0 6px !important;
 
-    font-size: 14.5px;
+    font-size: 13.5px;
   }
 
   .navbar-dark-blue .dropdown-toggle::after {
@@ -776,12 +791,14 @@
 
 @media (max-width: 991.98px) {
   .imsec-top-navbar {
-    min-height: 38px;
-    padding: 3px 0;
+    min-height: 28px !important;
+    height: 28px;
+    padding: 0 !important;
   }
 
   .imsec-top-container {
-    min-height: 32px;
+    min-height: 28px !important;
+    height: 28px;
     max-width: 100%;
     padding-left: 12px;
     padding-right: 12px;
@@ -823,11 +840,11 @@
   }
 
   .navbar-dark-blue {
-    min-height: 46px;
+    min-height: 42px;
   }
 
   .main-nav-container {
-    min-height: 46px;
+    min-height: 42px;
 
     justify-content: flex-end;
   }
@@ -914,11 +931,11 @@
   }
 
   .navbar-dark-blue {
-    min-height: 46px;
+    min-height: 42px;
   }
 
   .main-nav-container {
-    min-height: 46px;
+    min-height: 42px;
 
     padding: 0 14px;
   }
@@ -942,11 +959,11 @@
 
 @media (max-width: 480px) {
   .navbar-dark-blue {
-    min-height: 44px;
+    min-height: 40px;
   }
 
   .main-nav-container {
-    min-height: 44px;
+    min-height: 40px;
 
     padding: 0 10px;
   }
