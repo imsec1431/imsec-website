@@ -707,62 +707,22 @@ const Home = () => {
         </Container>
       </section>
 
-      {/* PLACEMENT STATS & COLLABORATIONS HIGHLIGHT STRIP */}
+      {/* RECENT COLLABORATIONS HIGHLIGHT STRIP */}
       <div className="placement-collab-strip py-3">
         <Container fluid className="px-lg-5">
-          <Row className="align-items-center g-3">
-            {/* Left Side: Placements 2026 (ongoing) */}
-            <Col lg={7} md={12}>
-              <div className="placements-quick-strip">
-                <div className="placements-title-tag">
-                  <FaChartColumn className="placement-gold-icon" />
-                  <div>
-                    <span className="placement-tag-main">Placements 2026</span>
-                    <span className="placement-tag-sub">(ongoing)</span>
-                  </div>
-                </div>
+          <div className="recent-collab-strip">
+            <div className="collab-title-tag">
+              <FaHandshake className="collab-gold-icon" />
+              <span>Recent Collaborations</span>
+            </div>
 
-                <div className="placement-metrics-group">
-                  <div className="placement-metric-card">
-                    <span className="metric-val">500+</span>
-                    <span className="metric-label">Offers</span>
-                  </div>
-
-                  <div className="placement-metric-card">
-                    <span className="metric-val">50+</span>
-                    <span className="metric-label">Recruiters (New)</span>
-                  </div>
-
-                  <div className="placement-metric-card">
-                    <span className="metric-val">₹ 12 LPA</span>
-                    <span className="metric-label">Average CTC</span>
-                  </div>
-
-                  <div className="placement-metric-card highlight-pkg">
-                    <span className="metric-val">₹ 72.30 LPA</span>
-                    <span className="metric-label">Highest CTC</span>
-                  </div>
-                </div>
-              </div>
-            </Col>
-
-            {/* Right Side: Recent Collaborations */}
-            <Col lg={5} md={12}>
-              <div className="recent-collab-strip">
-                <div className="collab-title-tag">
-                  <FaHandshake className="collab-gold-icon" />
-                  <span>Recent Collaborations</span>
-                </div>
-
-                <div className="collab-partners-logos">
-                  <div className="collab-partner-badge">सी-डैक CDAC</div>
-                  <div className="collab-partner-badge">MongoDB</div>
-                  <div className="collab-partner-badge">Red Hat Academy</div>
-                  <div className="collab-partner-badge">SmartBridge</div>
-                </div>
-              </div>
-            </Col>
-          </Row>
+            <div className="collab-partners-logos">
+              <div className="collab-partner-badge">सी-डैक CDAC</div>
+              <div className="collab-partner-badge">MongoDB</div>
+              <div className="collab-partner-badge">Red Hat Academy</div>
+              <div className="collab-partner-badge">SmartBridge</div>
+            </div>
+          </div>
         </Container>
       </div>
 

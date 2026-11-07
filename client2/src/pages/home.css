@@ -2095,118 +2095,78 @@
 }
 
 /* --- PLACEMENT STATS & COLLABORATIONS HIGHLIGHT STRIP --- */
+/* --- RECENT COLLABORATIONS FULL-WIDTH STRIP --- */
 .placement-collab-strip {
   background: #f8fafc;
   border-top: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
 }
 
-.placements-quick-strip {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.placements-title-tag {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-shrink: 0;
-  padding-right: 8px;
-  border-right: 1px solid #cbd5e1;
-}
-
-.placement-gold-icon {
-  font-size: 22px;
-  color: #d97706;
-}
-
-.placement-tag-main {
-  font-weight: 800;
-  font-size: 15px;
-  color: #002147;
-  display: block;
-  line-height: 1.1;
-  font-family: "Poppins", "Segoe UI", sans-serif;
-}
-
-.placement-tag-sub {
-  font-size: 11px;
-  color: #64748b;
-  font-weight: 600;
-}
-
-.placement-metrics-group {
-  display: flex;
-  align-items: center;
-  gap: clamp(10px, 1.2vw, 20px);
-  flex-wrap: wrap;
-}
-
-.placement-metric-card {
-  display: flex;
-  flex-direction: column;
-}
-
-.metric-val {
-  font-size: 16px;
-  font-weight: 800;
-  color: #002147;
-  line-height: 1.1;
-  font-family: "Poppins", "Segoe UI", sans-serif;
-}
-
-.highlight-pkg .metric-val {
-  color: #b8860b !important;
-  font-size: 17px;
-}
-
-.metric-label {
-  font-size: 11px;
-  color: #64748b;
-  font-weight: 500;
-}
-
 .recent-collab-strip {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 24px;
+  width: 100%;
   flex-wrap: wrap;
-  justify-content: flex-start;
 }
 
 .collab-title-tag {
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-weight: 700;
-  font-size: 13.5px;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 15px;
   color: #002147;
   flex-shrink: 0;
+  padding-right: 18px;
+  border-right: 2px solid #cbd5e1;
+  font-family: "Poppins", "Segoe UI", sans-serif;
 }
 
 .collab-gold-icon {
   color: #d97706;
-  font-size: 17px;
+  font-size: 20px;
 }
 
 .collab-partners-logos {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   flex-wrap: wrap;
+  flex: 1;
 }
 
 .collab-partner-badge {
   background: #ffffff;
   border: 1px solid #cbd5e1;
-  border-radius: 4px;
-  padding: 4px 10px;
-  font-size: 11.5px;
+  border-radius: 6px;
+  padding: 6px 16px;
+  font-size: 13px;
   font-weight: 700;
   color: #334155;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.collab-partner-badge:hover {
+  border-color: #002147;
+  color: #002147;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0, 33, 71, 0.12);
+}
+
+@media (max-width: 768px) {
+  .recent-collab-strip {
+    gap: 12px;
+  }
+  .collab-title-tag {
+    border-right: none;
+    padding-right: 0;
+    width: 100%;
+  }
 }
 
 /* Responsiveness for Quick Access and Stats */
