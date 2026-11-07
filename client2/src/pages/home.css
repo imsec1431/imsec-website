@@ -16,7 +16,7 @@
 }
 
 .custom-btn:hover {
-  background-color: #2e58f0 !important;
+  background-color: #002147 !important;
   color: #ffffff !important;
   transform: translateY(-2px);
 }
@@ -132,9 +132,9 @@
   transition: all 0.3s ease;
 }
 .programs-tabs .nav-link.active {
-  background-color: #2e58f0 !important;
+  background-color: #002147 !important;
   color: #ffffff !important;
-  border-color: #2e58f0 !important;
+  border-color: #002147 !important;
   box-shadow: 0 8px 20px rgba(10, 46, 92, 0.15);
 }
 .program-premium-card {
@@ -164,7 +164,7 @@
   transform: rotate(-15deg);
 }
 .program-premium-card:hover .program-floating-shape {
-  color: rgba(46, 88, 240, 0.12);
+  color: rgba(0, 33, 71, 0.12);
   transform: scale(1.15) rotate(0deg);
   bottom: -10px;
   right: -10px;
@@ -176,9 +176,9 @@
   margin-bottom: 20px;
 }
 .program-badge-box {
-  color: #2e58f0;
+  color: #002147;
   font-size: 1.6rem;
-  background: rgba(46, 88, 240, 0.08);
+  background: rgba(0, 33, 71, 0.08);
   width: 52px;
   height: 52px;
   border-radius: 12px;
@@ -188,7 +188,7 @@
   transition: all 0.3s ease;
 }
 .program-premium-card:hover .program-badge-box {
-  background: #2e58f0;
+  background: #002147;
   color: #ffffff;
 }
 .info-row {
@@ -622,7 +622,7 @@
 }
 
 .highlight-premium-card:hover .highlight-title {
-  color: #2e58f0;
+  color: #002147;
 }
 
 .highlight-desc {
@@ -656,14 +656,14 @@
   font-size: 0.84rem;
   font-weight: 600;
   text-decoration: none;
-  box-shadow: 0 4px 12px rgba(46, 88, 240, 0.25);
+  box-shadow: 0 4px 12px rgba(0, 33, 71, 0.25);
   transition: all 0.25s ease;
 }
 
 .highlight-btn:hover {
   background: #1e45c7;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(46, 88, 240, 0.35);
+  box-shadow: 0 6px 16px rgba(0, 33, 71, 0.35);
   color: #ffffff !important;
 }
 
@@ -694,7 +694,7 @@
 }
 
 .highlight-social-icon:hover {
-  background: #2e58f0;
+  background: #002147;
   color: #ffffff !important;
   transform: translateY(-2px);
 }
@@ -896,7 +896,7 @@
 
 .placement-card:hover {
   transform: translateY(-10px);
-  border-color: #2e58f0;
+  border-color: #002147;
 
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
 }
@@ -1087,7 +1087,7 @@
   background: #ffffff;
   border-radius: 20px;
   overflow: hidden;
-  border: 1px solid rgba(46, 88, 240, 0.12);
+  border: 1px solid rgba(0, 33, 71, 0.12);
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
   position: relative;
   transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -1098,7 +1098,7 @@
 .rank-card-top-accent {
   height: 5px;
   width: 100%;
-  background: linear-gradient(90deg, #2e58f0 0%, #688af9 60%, #fdb913 100%);
+  background: linear-gradient(90deg, #002147 0%, #0a2e5c 60%, #fdb913 100%);
   position: absolute;
   top: 0;
   left: 0;
@@ -1108,8 +1108,8 @@
 
 .rank-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(46, 88, 240, 0.35);
-  box-shadow: 0 20px 40px rgba(46, 88, 240, 0.16);
+  border-color: rgba(0, 33, 71, 0.35);
+  box-shadow: 0 20px 40px rgba(0, 33, 71, 0.16);
 }
 
 .rank-card:hover .rank-card-top-accent {
@@ -1140,14 +1140,14 @@
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid #ffffff;
-  box-shadow: 0 0 0 3px rgba(46, 88, 240, 0.22), 0 8px 20px rgba(46, 88, 240, 0.15);
+  box-shadow: 0 0 0 3px rgba(0, 33, 71, 0.22), 0 8px 20px rgba(0, 33, 71, 0.15);
   margin: 0 auto;
   transition: all 0.35s ease;
 }
 
 .rank-card:hover .rank-photo {
   transform: scale(1.05);
-  box-shadow: 0 0 0 4px #2e58f0, 0 12px 26px rgba(46, 88, 240, 0.28);
+  box-shadow: 0 0 0 4px #002147, 0 12px 26px rgba(0, 33, 71, 0.28);
 }
 
 .rank-medal-badge {
@@ -1163,7 +1163,7 @@
   justify-content: center;
   font-size: 15px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-  border: 2px solid rgba(46, 88, 240, 0.2);
+  border: 2px solid rgba(0, 33, 71, 0.2);
 }
 
 .rank-badge {
@@ -1172,20 +1172,20 @@
   gap: 6px;
   margin-top: 6px;
   margin-bottom: 12px;
-  background: linear-gradient(135deg, #2e58f0 0%, #1e45c7 100%);
+  background: linear-gradient(135deg, #002147 0%, #061d3d 100%);
   color: #ffffff;
   padding: 7px 18px;
   border-radius: 30px;
   font-weight: 700;
   font-size: 13.5px;
   letter-spacing: 0.3px;
-  box-shadow: 0 4px 14px rgba(46, 88, 240, 0.28);
+  box-shadow: 0 4px 14px rgba(0, 33, 71, 0.28);
   transition: all 0.3s ease;
 }
 
 .rank-card:hover .rank-badge {
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(46, 88, 240, 0.38);
+  box-shadow: 0 6px 18px rgba(0, 33, 71, 0.38);
 }
 
 .rank-name {
@@ -1199,7 +1199,7 @@
 }
 
 .rank-card:hover .rank-name {
-  color: #2e58f0;
+  color: #002147;
 }
 
 .rank-course {
@@ -1221,11 +1221,11 @@
   margin-top: 14px;
   font-size: 14.5px;
   font-weight: 700;
-  color: #2e58f0;
-  background: rgba(46, 88, 240, 0.08);
+  color: #002147;
+  background: rgba(0, 33, 71, 0.08);
   padding: 6px 18px;
   border-radius: 20px;
-  border: 1px solid rgba(46, 88, 240, 0.2);
+  border: 1px solid rgba(0, 33, 71, 0.2);
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -1234,14 +1234,14 @@
 
 .rank-cgpa strong {
   font-weight: 850;
-  color: #2e58f0;
+  color: #002147;
 }
 
 .rank-card:hover .rank-cgpa {
-  background: #2e58f0;
+  background: #002147;
   color: #ffffff;
-  border-color: #2e58f0;
-  box-shadow: 0 4px 12px rgba(46, 88, 240, 0.25);
+  border-color: #002147;
+  box-shadow: 0 4px 12px rgba(0, 33, 71, 0.25);
 }
 
 .rank-card:hover .rank-cgpa strong {
@@ -1255,7 +1255,7 @@
   background: #ffffff;
   border-radius: 50%;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
-  color: #2e58f0 !important;
+  color: #002147 !important;
   transition: all 0.25s ease;
 }
 
@@ -1267,7 +1267,7 @@
 
 .rank-swiper .swiper-button-prev:hover,
 .rank-swiper .swiper-button-next:hover {
-  background: #2e58f0;
+  background: #002147;
   color: #ffffff !important;
   transform: scale(1.08);
 }
@@ -1281,13 +1281,13 @@
 }
 
 .rank-swiper .swiper-pagination-bullet {
-  background: rgba(46, 88, 240, 0.25) !important;
+  background: rgba(0, 33, 71, 0.25) !important;
   opacity: 1 !important;
   transition: all 0.3s ease;
 }
 
 .rank-swiper .swiper-pagination-bullet-active {
-  background: #2e58f0 !important;
+  background: #002147 !important;
   width: 22px;
   border-radius: 8px;
 }
@@ -1460,7 +1460,7 @@
 
 .achievement-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(46, 88, 240, 0.15);
+  box-shadow: 0 10px 25px rgba(0, 33, 71, 0.15);
   border-color: #cbd5e1;
 }
 
@@ -1567,7 +1567,7 @@
   width: 100%;
   background: #ffffff;
   border-radius: 20px;
-  border: 1px solid rgba(46, 88, 240, 0.12);
+  border: 1px solid rgba(0, 33, 71, 0.12);
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
   position: relative;
   overflow: hidden;
@@ -1579,7 +1579,7 @@
 .alumni-card-top-accent {
   height: 5px;
   width: 100%;
-  background: linear-gradient(90deg, #2e58f0 0%, #688af9 60%, #fdb913 100%);
+  background: linear-gradient(90deg, #002147 0%, #0a2e5c 60%, #fdb913 100%);
   position: absolute;
   top: 0;
   left: 0;
@@ -1589,8 +1589,8 @@
 
 .alumni-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(46, 88, 240, 0.35);
-  box-shadow: 0 20px 40px rgba(46, 88, 240, 0.16);
+  border-color: rgba(0, 33, 71, 0.35);
+  box-shadow: 0 20px 40px rgba(0, 33, 71, 0.16);
 }
 
 .alumni-card:hover .alumni-card-top-accent {
@@ -1621,13 +1621,13 @@
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid #ffffff;
-  box-shadow: 0 0 0 3px rgba(46, 88, 240, 0.22), 0 8px 20px rgba(46, 88, 240, 0.15);
+  box-shadow: 0 0 0 3px rgba(0, 33, 71, 0.22), 0 8px 20px rgba(0, 33, 71, 0.15);
   transition: all 0.35s ease;
 }
 
 .alumni-card:hover .alumni-avatar {
   transform: scale(1.05);
-  box-shadow: 0 0 0 4px #2e58f0, 0 12px 26px rgba(46, 88, 240, 0.28);
+  box-shadow: 0 0 0 4px #002147, 0 12px 26px rgba(0, 33, 71, 0.28);
 }
 
 .alumni-grad-cap {
@@ -1643,7 +1643,7 @@
   justify-content: center;
   font-size: 15px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-  border: 2px solid rgba(46, 88, 240, 0.2);
+  border: 2px solid rgba(0, 33, 71, 0.2);
 }
 
 .alumni-info {
@@ -1661,7 +1661,7 @@
 }
 
 .alumni-card:hover .alumni-name {
-  color: #2e58f0;
+  color: #002147;
 }
 
 .alumni-course {
@@ -1674,7 +1674,7 @@
 }
 
 .alumni-badge {
-  background: linear-gradient(135deg, #2e58f0 0%, #1e45c7 100%);
+  background: linear-gradient(135deg, #002147 0%, #061d3d 100%);
   color: #ffffff;
   padding: 8px 18px;
   border-radius: 50px;
@@ -1683,7 +1683,7 @@
   gap: 6px;
   font-size: 0.86rem;
   font-weight: 600;
-  box-shadow: 0 4px 14px rgba(46, 88, 240, 0.28);
+  box-shadow: 0 4px 14px rgba(0, 33, 71, 0.28);
   transition: all 0.3s ease;
   width: auto;
   max-width: 90%;
@@ -1694,7 +1694,7 @@
 
 .alumni-card:hover .alumni-badge {
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(46, 88, 240, 0.38);
+  box-shadow: 0 6px 18px rgba(0, 33, 71, 0.38);
 }
 
 .alumni-badge-text {
@@ -1714,7 +1714,7 @@
   background: #ffffff;
   border-radius: 50%;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
-  color: #2e58f0 !important;
+  color: #002147 !important;
   transition: all 0.25s ease;
 }
 
@@ -1726,7 +1726,7 @@
 
 .alumni-swiper .swiper-button-prev:hover,
 .alumni-swiper .swiper-button-next:hover {
-  background: #2e58f0;
+  background: #002147;
   color: #ffffff !important;
   transform: scale(1.08);
 }
@@ -1740,13 +1740,13 @@
 }
 
 .alumni-swiper .swiper-pagination-bullet {
-  background: rgba(46, 88, 240, 0.25) !important;
+  background: rgba(0, 33, 71, 0.25) !important;
   opacity: 1 !important;
   transition: all 0.3s ease;
 }
 
 .alumni-swiper .swiper-pagination-bullet-active {
-  background: #2e58f0 !important;
+  background: #002147 !important;
   width: 22px;
   border-radius: 8px;
 }
