@@ -37,23 +37,18 @@
 }
 
 /* =========================================================
-   TOP HEADER
+   TOP HEADER / UTILITY BAR (FOOTER THEME COLOR #002147)
 ========================================================= */
 
 .imsec-top-navbar {
-  min-height: 82px;
-
-  padding: 8px 0;
-
-  background: #fafa8e !important;
-
+  min-height: 38px;
+  padding: 3px 0;
+  background: #002147 !important;
   border: none;
-
-  border-bottom: 1px solid rgba(161, 42, 35, 0.15);
-
-  box-shadow: 0 5px 22px rgba(10, 46, 92, 0.08);
-
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   position: relative;
+  z-index: 1032;
 }
 
 /* =========================================================
@@ -62,16 +57,13 @@
 
 .imsec-top-navbar::before {
   content: "";
-
   position: absolute;
-
   top: 0;
   left: 0;
   right: 0;
-
-  height: 3px;
-
-  background: linear-gradient(90deg, #002147 0%, #a12a23 50%, #002147 100%);
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, var(--imsec-gold) 50%, transparent 100%);
+  opacity: 0.65;
 }
 
 /* =========================================================
@@ -79,7 +71,7 @@
 ========================================================= */
 
 .imsec-top-container {
-  min-height: 64px;
+  min-height: 32px;
   width: 100%;
   max-width: 1550px;
   margin: 0 auto;
@@ -88,40 +80,56 @@
   justify-content: space-between;
   padding-left: clamp(10px, 1.5vw, 24px);
   padding-right: clamp(10px, 1.5vw, 24px);
-  gap: clamp(8px, 1.5vw, 20px);
+  gap: 12px;
 }
 
 /* =========================================================
-   LOGO
+   TOP LEFT INFO (LOCATION & ACCREDITATION)
 ========================================================= */
 
-.imsec-logo-link {
+.imsec-top-left-info {
   display: flex;
   align-items: center;
-  flex-shrink: 1;
+  gap: 8px;
   min-width: 0;
-  text-decoration: none;
-}
-
-.logo-img {
-  width: auto;
-  height: clamp(42px, 3.8vw, 60px);
-  max-width: clamp(230px, 25vw, 390px);
-  display: block;
-  object-fit: contain;
   flex-shrink: 1;
-
-  filter: drop-shadow(0 3px 7px rgba(0, 0, 0, 0.12));
-
-  transition:
-    transform 0.3s ease,
-    filter 0.3s ease;
 }
 
-.logo-img:hover {
-  transform: translateY(-1px);
+.top-clg-identity {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-size: clamp(11px, 0.78vw, 12.5px);
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
 
-  filter: drop-shadow(0 5px 12px rgba(10, 46, 92, 0.18));
+.top-clg-identity:hover {
+  color: var(--imsec-gold) !important;
+}
+
+.top-pin-icon {
+  color: var(--imsec-gold);
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.top-info-divider {
+  color: rgba(255, 255, 255, 0.28);
+  font-size: 12px;
+  user-select: none;
+  padding: 0 2px;
+}
+
+.top-accreditation-tag {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: clamp(10.5px, 0.74vw, 12px);
+  font-weight: 400;
+  white-space: nowrap;
 }
 
 /* =========================================================
@@ -134,7 +142,7 @@
   align-items: center;
   justify-content: flex-end;
   flex-shrink: 0;
-  gap: clamp(8px, 1.1vw, 16px);
+  gap: clamp(6px, 0.7vw, 10px);
   min-width: 0;
 }
 
@@ -146,9 +154,9 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: clamp(1px, 0.3vw, 4px);
-  padding-right: clamp(6px, 1vw, 16px);
-  border-right: 1px solid rgba(161, 42, 35, 0.2);
+  gap: clamp(3px, 0.4vw, 6px);
+  padding-right: 0;
+  border-right: none;
   flex-shrink: 0;
 }
 
@@ -157,119 +165,100 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 6px clamp(4px, 0.6vw, 11px) !important;
-  color: #a12a23 !important;
-  font-size: clamp(11.5px, 0.85vw, 14.5px);
-
-  font-weight: 600;
-
-  letter-spacing: 0.25px;
-
-  line-height: 1;
-
+  padding: 2px clamp(3px, 0.4vw, 6px) !important;
+  color: rgba(255, 255, 255, 0.88) !important;
+  font-size: clamp(11px, 0.78vw, 12.5px);
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  line-height: 1.2;
   white-space: nowrap;
-
   text-decoration: none;
-
-  border-radius: 6px;
-
-  transition:
-    color 0.25s ease,
-    background 0.25s ease,
-    transform 0.25s ease;
-}
-
-/* =========================================================
-   TOP LINK UNDERLINE
-========================================================= */
-
-.top-links .nav-link::after {
-  content: "";
-
-  position: absolute;
-
-  left: 50%;
-  bottom: 1px;
-
-  width: 0;
-
-  height: 2px;
-
-  border-radius: 10px;
-
-  background: #a12a23;
-
-  transform: translateX(-50%);
-
-  transition: width 0.3s ease;
+  border-radius: 4px;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .top-links .nav-link:hover {
-  color: #7d1c16 !important;
-
-  background: rgba(161, 42, 35, 0.08);
-
+  color: var(--imsec-gold) !important;
+  background: transparent !important;
   transform: translateY(-1px);
 }
 
-.top-links .nav-link:hover::after {
-  width: 65%;
-}
-
 .top-links .nav-link.active {
-  color: #a12a23 !important;
-}
-
-.top-links .nav-link.active::after {
-  width: 65%;
+  color: var(--imsec-gold) !important;
 }
 
 /* =========================================================
-   SOCIAL ICONS
-   EXTREME RIGHT
+   ERP LOGIN BUTTON (EXACTLY AS IN REFERENCE IMAGE)
+========================================================= */
+
+.top-erp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--imsec-gold);
+  color: #002147 !important;
+  font-weight: 700;
+  font-size: clamp(11px, 0.78vw, 12px);
+  padding: 3px 10px;
+  border-radius: 4px;
+  text-decoration: none !important;
+  box-shadow: 0 2px 6px rgba(253, 185, 19, 0.25);
+  transition: all 0.25s ease;
+  line-height: 1.4;
+  white-space: nowrap;
+  margin-left: 2px;
+  letter-spacing: 0.2px;
+}
+
+.top-erp-btn:hover {
+  background: #e5a600;
+  color: #002147 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(253, 185, 19, 0.45);
+}
+
+.top-erp-btn .erp-btn-icon {
+  font-size: 11px;
+}
+
+/* =========================================================
+   SOCIAL ICONS (SLEEK & COMPACT)
 ========================================================= */
 
 .social-icons {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: clamp(4px, 0.5vw, 8px);
+  gap: 4px;
   margin-left: 0;
   flex-shrink: 0;
 }
 
 .social-icons .social-icon,
 .social-icon {
-  width: clamp(28px, 2.2vw, 36px);
-  height: clamp(28px, 2.2vw, 36px);
+  width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   border-radius: 50%;
   color: #ffffff !important;
-  background: #002147 !important;
-  background-color: #002147 !important;
-  background-image: none !important;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 12px rgba(0, 33, 71, 0.25) !important;
-  font-size: clamp(11.5px, 0.85vw, 14px);
-
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: none !important;
+  font-size: 11px;
   text-decoration: none;
-
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 
 .social-icons .social-icon:hover,
 .social-icon:hover {
   color: #002147 !important;
-
-  background: linear-gradient(145deg, var(--imsec-gold), #e5a600) !important;
-  background-color: var(--imsec-gold) !important;
-
-  transform: translateY(-3px);
-
-  box-shadow: 0 8px 18px rgba(253, 185, 19, 0.3);
+  background: var(--imsec-gold) !important;
+  border-color: var(--imsec-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(253, 185, 19, 0.35);
 }
 
 /* =========================================================
@@ -677,16 +666,14 @@
   }
 
   .top-links .nav-link {
-    font-size: 15.5px;
-    padding: 8px 14px !important;
+    font-size: 12.5px;
+    padding: 2px 6px !important;
   }
 
   .social-icon {
-    width: 39px;
-
-    height: 39px;
-
-    font-size: 15px;
+    width: 25px;
+    height: 25px;
+    font-size: 11px;
   }
 }
 
@@ -705,13 +692,13 @@
     height: 56px;
   }
   .top-links .nav-link {
-    font-size: 14px;
-    padding: 7px 11px !important;
+    font-size: 12px;
+    padding: 2px 5px !important;
   }
   .social-icon {
-    width: 35px;
-    height: 35px;
-    font-size: 14px;
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
   }
 
   .navbar-dark-blue .nav-link,
@@ -751,21 +738,18 @@
   }
 
   .top-links .nav-link {
-    padding: 7px 8px !important;
-
-    font-size: 12.5px;
+    padding: 2px 4px !important;
+    font-size: 11.5px;
   }
 
   .social-icons {
-    gap: 5px;
+    gap: 4px;
   }
 
   .social-icon {
-    width: 32px;
-
-    height: 32px;
-
-    font-size: 13px;
+    width: 22px;
+    height: 22px;
+    font-size: 10px;
   }
 
   .navbar-dark-blue .nav-link,
@@ -792,12 +776,12 @@
 
 @media (max-width: 991.98px) {
   .imsec-top-navbar {
-    min-height: 64px;
-    padding: 6px 0;
+    min-height: 38px;
+    padding: 3px 0;
   }
 
   .imsec-top-container {
-    min-height: 52px;
+    min-height: 32px;
     max-width: 100%;
     padding-left: 12px;
     padding-right: 12px;

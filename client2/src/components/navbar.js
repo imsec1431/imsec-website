@@ -7,6 +7,8 @@ import {
   FaLinkedinIn,
   FaXTwitter,
   FaYoutube,
+  FaUser,
+  FaLocationDot
 } from "react-icons/fa6";
 
 import { Link, useLocation } from "react-router-dom";
@@ -188,89 +190,116 @@ const NavigationBar = () => {
 
         <Navbar
           expand="lg"
-          expanded={expanded}
-          onToggle={setExpanded}
           className="imsec-top-navbar"
         >
           <Container fluid className="imsec-top-container">
             {/* =================================================
-                LOGO
+                TOP LEFT INFO: LOCATION & AFFILIATION / ACCREDITATIONS
             ================================================= */}
-
-            <Link to="/" className="imsec-logo-link" onClick={handleNavClick}>
-              <img src={imseclogo} alt="IMSEC" className="logo-img" />
-            </Link>
+            <div className="imsec-top-left-info">
+              <Link to="/" className="top-clg-identity" onClick={handleNavClick}>
+                <FaLocationDot className="top-pin-icon" />
+                <span>IMS Engineering College, Ghaziabad (AKTU, Lucknow Affiliated)</span>
+              </Link>
+              <span className="top-info-divider d-none d-xl-inline">|</span>
+              <span className="top-accreditation-tag d-none d-xl-inline">
+                NBA (In Process)
+              </span>
+              <span className="top-info-divider d-none d-xl-inline">|</span>
+              <span className="top-accreditation-tag d-none d-xl-inline">
+                NAAC (Planned 2027)
+              </span>
+            </div>
 
             {/* =================================================
                 DESKTOP RIGHT AREA
             ================================================= */}
-
             <div className="desktop-top-right d-none d-md-flex">
               {/* =================================================
                   TOP LINKS
               ================================================= */}
-
               <div className="top-links">
+                <Nav.Link as={Link} to="/Alumni" onClick={handleNavClick}>
+                  Alumni
+                </Nav.Link>
+
+                <span className="top-info-divider">|</span>
+
+                <Nav.Link as={Link} to="/career" onClick={handleNavClick}>
+                  Careers
+                </Nav.Link>
+
+                <span className="top-info-divider">|</span>
+
                 <Nav.Link
                   as={Link}
                   to="/Announcements"
                   onClick={handleNavClick}
                 >
-                  ANNOUNCEMENTS
+                  Announcements
                 </Nav.Link>
 
-                <a
-                  href="https://erp.imsec.ac.in/"
-                  className="nav-link"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  ERP
-                </a>
-
-                <Nav.Link as={Link} to="/Alumni" onClick={handleNavClick}>
-                  ALUMNI
-                </Nav.Link>
+                <span className="top-info-divider">|</span>
 
                 <Nav.Link
                   as={Link}
-                  to="/imsec-newsletters"
+                  to="/IMSEC-NewsLetters"
                   onClick={handleNavClick}
                 >
-                  NEWSLETTER
+                  Newsletter
                 </Nav.Link>
+
+                <span className="top-info-divider">|</span>
 
                 <Nav.Link
                   as={Link}
                   to="/about/ContactUs"
                   onClick={handleNavClick}
                 >
-                  CONTACT US
+                  Contact Us
                 </Nav.Link>
               </div>
 
               {/* =================================================
+                  ERP LOGIN BUTTON (LIKE IMAGE 1)
+              ================================================= */}
+              <a
+                href="https://erp.imsec.ac.in/"
+                className="top-erp-btn"
+                target="_blank"
+                rel="noreferrer"
+                title="ERP Login"
+              >
+                <FaUser className="erp-btn-icon" />
+                <span>ERP Login</span>
+              </a>
+
+              {/* =================================================
                   SOCIAL ICONS
               ================================================= */}
+              {socialMedia && socialMedia.length > 0 && (
+                <>
+                  <span className="top-info-divider d-none d-lg-inline">|</span>
+                  <div className="social-icons d-none d-lg-flex">
+                    {socialMedia.map((item) => {
+                      const icon = getSocialIcon(item.platform);
 
-              <div className="social-icons">
-                {socialMedia.map((item) => {
-                  const icon = getSocialIcon(item.platform);
+                      if (!icon || !item.url) {
+                        return null;
+                      }
 
-                  if (!icon || !item.url) {
-                    return null;
-                  }
-
-                  return (
-                    <SocialIcon
-                      key={item._id}
-                      href={item.url}
-                      icon={icon}
-                      platform={item.platform}
-                    />
-                  );
-                })}
-              </div>
+                      return (
+                        <SocialIcon
+                          key={item._id}
+                          href={item.url}
+                          icon={icon}
+                          platform={item.platform}
+                        />
+                      );
+                    })}
+                  </div>
+                </>
+              )}
             </div>
           </Container>
         </Navbar>
@@ -1122,7 +1151,7 @@ const SocialIcon = ({ href, icon, platform }) => {
       target="_blank"
       rel="noreferrer"
       className="social-icon"
-      style={{ backgroundColor: "#002147", background: "#002147" }}
+
       aria-label={platform || "Social media"}
     >
       {icon}
