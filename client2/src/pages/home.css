@@ -1750,3 +1750,498 @@
   width: 22px;
   border-radius: 8px;
 }
+
+/* =========================================================
+   NEW REDESIGNED HOMEPAGE HERO & HIGHLIGHTS
+========================================================= */
+
+.hero-banner-container {
+  position: relative;
+  width: 100%;
+}
+
+.hero-carousel {
+  position: relative;
+}
+
+.hero-slide {
+  height: 48vh;
+  min-height: 340px;
+  max-height: 410px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero-banner-content {
+  max-width: 650px;
+  padding: 16px 0 40px;
+  z-index: 5;
+}
+
+.hero-main-heading {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  font-size: clamp(1.7rem, 2.5vw, 2.5rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 12px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+.hero-highlight-gold {
+  color: #fdb913 !important;
+}
+
+.hero-sub-tags {
+  font-size: clamp(0.72rem, 0.8vw, 0.86rem);
+  color: rgba(255, 255, 255, 0.92);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 16px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.hero-dot {
+  color: rgba(253, 185, 19, 0.85);
+  font-weight: 700;
+}
+
+.hero-cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-btn-primary {
+  background: #fdb913 !important;
+  border: none !important;
+  color: #002147 !important;
+  font-weight: 700 !important;
+  padding: 7px 18px !important;
+  border-radius: 6px !important;
+  box-shadow: 0 4px 15px rgba(253, 185, 19, 0.35) !important;
+  transition: all 0.25s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  font-size: 0.88rem !important;
+}
+
+.hero-btn-primary:hover {
+  background: #e5a600 !important;
+  color: #002147 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(253, 185, 19, 0.5) !important;
+}
+
+.hero-btn-outline {
+  background: rgba(0, 0, 0, 0.35) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.85) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding: 6px 18px !important;
+  border-radius: 6px !important;
+  backdrop-filter: blur(4px);
+  transition: all 0.25s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  font-size: 0.88rem !important;
+}
+
+.hero-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: #fdb913 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+/* --- FLOATING QUICK ACCESS BAR (8 ACTION CARDS) --- */
+.quick-access-wrapper {
+  margin-top: -38px;
+  position: relative;
+  z-index: 25;
+  width: 100%;
+}
+
+.quick-access-bar {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.quick-access-item {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 12px 6px;
+  text-decoration: none !important;
+  color: #002147 !important;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.quick-access-item:hover {
+  background: #f8fafc;
+  color: #002147 !important;
+  transform: translateY(-2px);
+}
+
+.quick-access-icon-wrap {
+  font-size: 24px;
+  color: #002147;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.quick-access-item:hover .quick-access-icon-wrap {
+  color: #fdb913;
+}
+
+.quick-access-label {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  font-size: clamp(10px, 0.72vw, 11.5px);
+  font-weight: 700;
+  line-height: 1.25;
+  color: inherit;
+  white-space: nowrap;
+}
+
+.quick-access-divider {
+  width: 1px;
+  background: #e2e8f0;
+  align-self: stretch;
+  flex-shrink: 0;
+}
+
+/* --- KEY STATISTICS STRIP (#002147 NAVY BLUE) --- */
+.stats-strip-section {
+  background: #002147;
+  padding: 14px 0;
+  margin-top: 14px;
+  border-top: 2px solid var(--imsec-gold);
+}
+
+.stats-strip-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.stat-strip-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 140px;
+  justify-content: center;
+  padding: 4px 6px;
+}
+
+.stat-strip-icon {
+  font-size: 22px;
+  color: #fdb913;
+  flex-shrink: 0;
+}
+
+.stat-strip-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-strip-num {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.1;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+.stat-strip-lbl {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.stat-strip-sep {
+  width: 1px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
+}
+
+/* --- TWO-COLUMN SECTION: OUR PROGRAMMES & WHY IMSEC? --- */
+.programmes-why-section {
+  background: #ffffff;
+}
+
+.section-headline {
+  font-size: 22px;
+  font-weight: 800;
+  color: #002147;
+  margin: 0 0 6px;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+.section-title-gold-bar {
+  width: 42px;
+  height: 3px;
+  background: #fdb913;
+  border-radius: 2px;
+}
+
+.programme-mini-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  height: 100%;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.programme-mini-card:hover {
+  border-color: #fdb913;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.prog-icon-wrap {
+  width: 38px;
+  height: 38px;
+  border-radius: 6px;
+  background: rgba(0, 33, 71, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #002147;
+  flex-shrink: 0;
+}
+
+.prog-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.prog-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: #002147;
+  margin: 0 0 2px;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+.prog-sub {
+  font-size: 11px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.35;
+  font-weight: 500;
+}
+
+.why-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.why-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.why-badge-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(253, 185, 19, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b8860b;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.why-feature-text {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1e293b;
+  line-height: 1.3;
+}
+
+/* --- PLACEMENT STATS & COLLABORATIONS HIGHLIGHT STRIP --- */
+.placement-collab-strip {
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.placements-quick-strip {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.placements-title-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  padding-right: 8px;
+  border-right: 1px solid #cbd5e1;
+}
+
+.placement-gold-icon {
+  font-size: 22px;
+  color: #d97706;
+}
+
+.placement-tag-main {
+  font-weight: 800;
+  font-size: 15px;
+  color: #002147;
+  display: block;
+  line-height: 1.1;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+.placement-tag-sub {
+  font-size: 11px;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.placement-metrics-group {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 1.2vw, 20px);
+  flex-wrap: wrap;
+}
+
+.placement-metric-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-val {
+  font-size: 16px;
+  font-weight: 800;
+  color: #002147;
+  line-height: 1.1;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+.highlight-pkg .metric-val {
+  color: #b8860b !important;
+  font-size: 17px;
+}
+
+.metric-label {
+  font-size: 11px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.recent-collab-strip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.collab-title-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 13.5px;
+  color: #002147;
+  flex-shrink: 0;
+}
+
+.collab-gold-icon {
+  color: #d97706;
+  font-size: 17px;
+}
+
+.collab-partners-logos {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.collab-partner-badge {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #334155;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsiveness for Quick Access and Stats */
+@media (max-width: 991.98px) {
+  .quick-access-bar {
+    flex-wrap: wrap;
+  }
+  .quick-access-item {
+    flex: 1 0 25%;
+    padding: 10px 4px;
+  }
+  .quick-access-divider {
+    display: none;
+  }
+  .stat-strip-sep {
+    display: none;
+  }
+  .stat-strip-box {
+    flex: 1 0 30%;
+  }
+}
+
+@media (max-width: 576px) {
+  .quick-access-item {
+    flex: 1 0 50%;
+  }
+  .stat-strip-box {
+    flex: 1 0 50%;
+  }
+  .hero-slide {
+    height: auto;
+    min-height: 280px;
+    padding: 20px 0;
+  }
+  .hero-main-heading {
+    font-size: 1.55rem;
+  }
+}

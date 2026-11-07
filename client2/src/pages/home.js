@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import axios from "axios";
@@ -56,6 +57,23 @@ import {
   FaLinkedinIn,
   FaDatabase,
   FaComputer,
+  FaBookOpen,
+  FaHandshake,
+  FaBuildingColumns,
+  FaCalendarDays,
+  FaBullhorn,
+  FaAward,
+  FaUsers,
+  FaLaptopCode,
+  FaFlask,
+  FaTrophy,
+  FaGears,
+  FaChartColumn,
+  FaLaptop,
+  FaSeedling,
+  FaLightbulb,
+  FaPenToSquare,
+  FaCompass,
 } from "react-icons/fa6";
 
 import "./home.css";
@@ -400,11 +418,11 @@ const Home = () => {
     <>
       <HomepagePopup />
 
-      {/* HERO SECTION */}
+      {/* HERO SECTION WITH HEADLINE & CTAS */}
       {loading ? (
         <div
           style={{
-            height: "85vh",
+            height: "75vh",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -413,254 +431,337 @@ const Home = () => {
           <h2>Loading...</h2>
         </div>
       ) : (
-        <Carousel controls indicators fade interval={5000} className="w-100">
-          {heroSlides.map((slide, index) => (
-            <Carousel.Item key={slide._id}>
-              <div
-                className="hero-slide"
-                style={{
-                  backgroundImage: `url(${slide.image})`,
-                }}
-              >
-                <div className="hero-overlay"></div>
-
-                <Container
-                  className="h-100 d-flex align-items-center"
-                  style={{ position: "relative", zIndex: 5 }}
+        <div className="hero-banner-container position-relative">
+          <Carousel controls={false} indicators={false} fade interval={5000} className="w-100 hero-carousel">
+            {(heroSlides && heroSlides.length > 0 ? heroSlides : [
+              {
+                _id: 'default-hero-1',
+                image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1920'
+              }
+            ]).map((slide, index) => (
+              <Carousel.Item key={slide._id || index}>
+                <div
+                  className="hero-slide"
+                  style={{
+                    backgroundImage: `linear-gradient(90deg, rgba(0, 18, 45, 0.82) 0%, rgba(0, 24, 55, 0.65) 45%, rgba(0, 24, 55, 0.25) 100%), url(${slide.image})`,
+                  }}
                 >
-                  {/* <div className="text-white">
-                    <h1 className="hero-title">{slide.title}</h1>
-                  </div> */}
-                </Container>
+                  <Container className="h-100 d-flex align-items-center">
+                    <div className="hero-banner-content">
+                      <h1 className="hero-main-heading">
+                        Where<br />
+                        Engineering Education<br />
+                        Meets <span className="hero-highlight-gold">Industry &amp; Innovation</span>
+                      </h1>
+                      <div className="hero-sub-tags">
+                        <span>Industry-Aligned Programmes</span>
+                        <span className="hero-dot">|</span>
+                        <span>Experiential Learning</span>
+                        <span className="hero-dot">|</span>
+                        <span>Research &amp; Innovation</span>
+                        <span className="hero-dot">|</span>
+                        <span>Holistic Development</span>
+                      </div>
+                      <div className="hero-cta-buttons">
+                        <Button
+                          as={Link}
+                          to="/Admissions/ApplyforAdmission"
+                          className="hero-btn-primary"
+                        >
+                          <FaPenToSquare className="me-2" /> Apply Now <FaArrowRight className="ms-2" />
+                        </Button>
+                        <Button
+                          as={Link}
+                          to="/about/Campus"
+                          className="hero-btn-outline"
+                        >
+                          <FaCompass className="me-2" /> Virtual Campus Tour
+                        </Button>
+                      </div>
+                    </div>
+                  </Container>
+                </div>
+              </Carousel.Item>
+            ))}
+          </Carousel>
+
+          {/* FLOATING QUICK ACCESS BAR (8 ACTION CARDS OVERLAPPING HERO) */}
+          <div className="quick-access-wrapper">
+            <Container fluid className="px-lg-5">
+              <div className="quick-access-bar">
+                <Link to="/Admissions/ApplyforAdmission" className="quick-access-item">
+                  <div className="quick-access-icon-wrap">
+                    <FaGraduationCap />
+                  </div>
+                  <span className="quick-access-label">Admission<br />Enquiry</span>
+                </Link>
+
+                <div className="quick-access-divider" />
+
+                <Link to="/Academics/courses" className="quick-access-item">
+                  <div className="quick-access-icon-wrap">
+                    <FaBookOpen />
+                  </div>
+                  <span className="quick-access-label">Explore<br />Programmes</span>
+                </Link>
+
+                <div className="quick-access-divider" />
+
+                <Link to="/Placements/PlacementsRecords" className="quick-access-item">
+                  <div className="quick-access-icon-wrap">
+                    <FaBriefcase />
+                  </div>
+                  <span className="quick-access-label">Placement<br />Highlights</span>
+                </Link>
+
+                <div className="quick-access-divider" />
+
+                <Link to="/coe/industry-academics-collaboration" className="quick-access-item">
+                  <div className="quick-access-icon-wrap">
+                    <FaHandshake />
+                  </div>
+                  <span className="quick-access-label">Industry<br />Collaborations</span>
+                </Link>
+
+                <div className="quick-access-divider" />
+
+                <Link to="/coe/MOUs" className="quick-access-item">
+                  <div className="quick-access-icon-wrap">
+                    <FaBuildingColumns />
+                  </div>
+                  <span className="quick-access-label">Centres of<br />Excellence</span>
+                </Link>
+
+                <div className="quick-access-divider" />
+
+                <Link to="/Academics/AcademicCalendar" className="quick-access-item">
+                  <div className="quick-access-icon-wrap">
+                    <FaCalendarDays />
+                  </div>
+                  <span className="quick-access-label">Academic<br />Calendar</span>
+                </Link>
+
+                <div className="quick-access-divider" />
+
+                <Link to="/Announcements" className="quick-access-item">
+                  <div className="quick-access-icon-wrap">
+                    <FaBullhorn />
+                  </div>
+                  <span className="quick-access-label">Notices &amp;<br />Announcements</span>
+                </Link>
+
+                <div className="quick-access-divider" />
+
+                <Link to="/iqac/naac" className="quick-access-item">
+                  <div className="quick-access-icon-wrap">
+                    <FaAward />
+                  </div>
+                  <span className="quick-access-label">NBA / NAAC<br />Accreditation</span>
+                </Link>
               </div>
-            </Carousel.Item>
-          ))}
-        </Carousel>
+            </Container>
+          </div>
+        </div>
       )}
 
-      {/* ACCREDITATIONS & CREDENTIALS MATRIX */}
-      <Container>
-        <div className="accreditation-bar p-4">
-          <Row className="align-items-center text-center g-3">
-            {approvals.map((approval) => (
-              <Col key={approval._id} lg={3} md={6} xs={12}>
-                <div className="fw-bold brand-dark fs-5 mb-0">
-                  {approval.title}
+      {/* TWO-COLUMN SECTION: OUR PROGRAMMES & WHY IMSEC? */}
+      <section className="programmes-why-section py-4">
+        <Container fluid className="px-lg-5">
+          <Row className="g-4 align-items-stretch">
+            {/* Left 50%: Our Programmes */}
+            <Col lg={6} md={12}>
+              <div className="programmes-box-container h-100">
+                <div className="section-title-wrap mb-3">
+                  <h3 className="section-headline">Our Programmes</h3>
+                  <div className="section-title-gold-bar" />
                 </div>
 
-                <div className="text-muted small">{approval.description}</div>
-              </Col>
-            ))}
-          </Row>
-        </div>
-      </Container>
-
-      {/* ABOUT SECTION */}
-      {/* ABOUT SECTION */}
-      {welcomeData.map((welcome) => (
-        <Container className="py-4 my-2" key={welcome._id}>
-          <Row className="g-4 align-items-center">
-            <Col lg={5} md={12}>
-              <div className="about-img-container">
-                <img
-                  src={welcome.imageUrl}
-                  alt="IMSEC Campus Ecosystem"
-                  className="about-premium-img"
-                  loading="lazy"
-                />
-              </div>
-            </Col>
-
-            <Col lg={7} md={12}>
-              <div className="accent-heading-box mb-3">
-                <h6
-                  className="text-uppercase fw-bold tracking-widest brand-gold mb-1"
-                  style={{
-                    letterSpacing: "1.5px",
-                    fontSize: "0.85rem",
-                  }}
-                >
-                  {/* {welcome.label} */}
-                </h6>
-
-                <h2
-                  className="fw-extrabold m-0"
-                  style={{
-                    fontWeight: 800,
-                    fontSize: "2.1rem",
-                    color: "#a12a23",
-                  }}
-                >
-                  {welcome.title}
-                </h2>
-              </div>
-
-              <p
-                className="text-muted mb-4"
-                style={{
-                  lineHeight: "1.6",
-                  fontSize: "0.98rem",
-                }}
-              >
-                {welcome.description}
-              </p>
-
-              <Row className="g-3">
-                {(welcome.pillars || []).map((pillar) => (
-                  <Col key={pillar._id} sm={6} xs={12}>
-                    <div className="micro-stat-badge">
-                      <div className="micro-badge-icon">
-                        {getPillarIcon(pillar.icon)}
+                <Row className="g-2 g-md-3">
+                  <Col sm={6} xs={12}>
+                    <div className="programme-mini-card">
+                      <div className="prog-icon-wrap">
+                        <FaMicrochip className="prog-icon" />
                       </div>
-
-                      <div>
-                        <div className="fw-bold brand-dark small">
-                          {pillar.title}
-                        </div>
-
-                        <div
-                          className="text-muted"
-                          style={{
-                            fontSize: "0.78rem",
-                            lineHeight: "1.3",
-                          }}
-                        >
-                          {pillar.description}
-                        </div>
+                      <div className="prog-info">
+                        <h5 className="prog-title">B.Tech</h5>
+                        <p className="prog-sub">CSE, CS, IT, AIML, CSD, ECE, EEE, ME, CE, BT</p>
                       </div>
                     </div>
                   </Col>
-                ))}
-              </Row>
+
+                  <Col sm={6} xs={12}>
+                    <div className="programme-mini-card">
+                      <div className="prog-icon-wrap">
+                        <FaGears className="prog-icon" />
+                      </div>
+                      <div className="prog-info">
+                        <h5 className="prog-title">M.Tech</h5>
+                        <p className="prog-sub">CSE, ECE, Mechanical</p>
+                      </div>
+                    </div>
+                  </Col>
+
+                  <Col sm={6} xs={12}>
+                    <div className="programme-mini-card">
+                      <div className="prog-icon-wrap">
+                        <FaChartColumn className="prog-icon" />
+                      </div>
+                      <div className="prog-info">
+                        <h5 className="prog-title">MBA</h5>
+                        <p className="prog-sub">180 Intake (AICTE Approved)</p>
+                      </div>
+                    </div>
+                  </Col>
+
+                  <Col sm={6} xs={12}>
+                    <div className="programme-mini-card">
+                      <div className="prog-icon-wrap">
+                        <FaLaptop className="prog-icon" />
+                      </div>
+                      <div className="prog-info">
+                        <h5 className="prog-title">MCA</h5>
+                        <p className="prog-sub">(AICTE Approved)</p>
+                      </div>
+                    </div>
+                  </Col>
+                </Row>
+              </div>
+            </Col>
+
+            {/* Right 50%: Why IMSEC? */}
+            <Col lg={6} md={12}>
+              <div className="why-imsec-container h-100">
+                <div className="section-title-wrap mb-3">
+                  <h3 className="section-headline">Why IMSEC?</h3>
+                  <div className="section-title-gold-bar" />
+                </div>
+
+                <Row className="g-2">
+                  <Col sm={6} xs={12}>
+                    <div className="why-feature-list">
+                      <div className="why-feature-item">
+                        <div className="why-badge-icon">
+                          <FaGear />
+                        </div>
+                        <span className="why-feature-text">Outcome-Based Education (OBE)</span>
+                      </div>
+
+                      <div className="why-feature-item">
+                        <div className="why-badge-icon">
+                          <FaGraduationCap />
+                        </div>
+                        <span className="why-feature-text">Industry Integrated Curriculum</span>
+                      </div>
+
+                      <div className="why-feature-item">
+                        <div className="why-badge-icon">
+                          <FaFlask />
+                        </div>
+                        <span className="why-feature-text">Modern Labs &amp; Innovation Ecosystem</span>
+                      </div>
+
+                      <div className="why-feature-item">
+                        <div className="why-badge-icon">
+                          <FaBriefcase />
+                        </div>
+                        <span className="why-feature-text">Strong Placement &amp; Internship Support</span>
+                      </div>
+                    </div>
+                  </Col>
+
+                  <Col sm={6} xs={12}>
+                    <div className="why-feature-list">
+                      <div className="why-feature-item">
+                        <div className="why-badge-icon">
+                          <FaTrophy />
+                        </div>
+                        <span className="why-feature-text">Centres of Excellence with Leading Industry Partners</span>
+                      </div>
+
+                      <div className="why-feature-item">
+                        <div className="why-badge-icon">
+                          <FaSeedling />
+                        </div>
+                        <span className="why-feature-text">Holistic Student Development (Technical, Cultural &amp; Sports)</span>
+                      </div>
+
+                      <div className="why-feature-item">
+                        <div className="why-badge-icon">
+                          <FaLightbulb />
+                        </div>
+                        <span className="why-feature-text">Focus on Research, Innovation &amp; Entrepreneurship</span>
+                      </div>
+
+                      <div className="why-feature-item">
+                        <div className="why-badge-icon">
+                          <FaAward />
+                        </div>
+                        <span className="why-feature-text">NBA / NAAC / NIRF Readiness</span>
+                      </div>
+                    </div>
+                  </Col>
+                </Row>
+              </div>
             </Col>
           </Row>
         </Container>
-      ))}
+      </section>
 
-      {/* ACADEMIC MATRIX */}
-      <div className="bg-light py-5 border-top border-bottom">
-        <Container className="my-2 pb-2">
-          <Row className="align-items-end mb-5">
+      {/* PLACEMENT STATS & COLLABORATIONS HIGHLIGHT STRIP */}
+      <div className="placement-collab-strip py-3">
+        <Container fluid className="px-lg-5">
+          <Row className="align-items-center g-3">
+            {/* Left Side: Placements 2026 (ongoing) */}
             <Col lg={7} md={12}>
-              <h6
-                className="text-uppercase fw-bold tracking-widest brand-gold mb-2"
-                style={{ letterSpacing: "2px" }}
-              >
-                {/* Academic Matrix */}
-              </h6>
+              <div className="placements-quick-strip">
+                <div className="placements-title-tag">
+                  <FaChartColumn className="placement-gold-icon" />
+                  <div>
+                    <span className="placement-tag-main">Placements 2026</span>
+                    <span className="placement-tag-sub">(ongoing)</span>
+                  </div>
+                </div>
 
-              <h2
-                className="fw-extrabold m-0"
-                style={{ fontWeight: 800, fontSize: "2.3rem", color: "#a12a23" }}
-              >
-                Explore Global Academic Programs
-              </h2>
+                <div className="placement-metrics-group">
+                  <div className="placement-metric-card">
+                    <span className="metric-val">500+</span>
+                    <span className="metric-label">Offers</span>
+                  </div>
+
+                  <div className="placement-metric-card">
+                    <span className="metric-val">50+</span>
+                    <span className="metric-label">Recruiters (New)</span>
+                  </div>
+
+                  <div className="placement-metric-card">
+                    <span className="metric-val">₹ 12 LPA</span>
+                    <span className="metric-label">Average CTC</span>
+                  </div>
+
+                  <div className="placement-metric-card highlight-pkg">
+                    <span className="metric-val">₹ 72.30 LPA</span>
+                    <span className="metric-label">Highest CTC</span>
+                  </div>
+                </div>
+              </div>
             </Col>
 
-            <Col lg={5} md={12} className="text-lg-end mt-4 mt-lg-0">
-              <Nav className="programs-tabs justify-content-lg-end justify-content-start border-0">
-                <Nav.Item>
-                  <Nav.Link
-                    active={activeTab === "ug"}
-                    onClick={() => setActiveTab("ug")}
-                  >
-                    Undergraduate
-                  </Nav.Link>
-                </Nav.Item>
+            {/* Right Side: Recent Collaborations */}
+            <Col lg={5} md={12}>
+              <div className="recent-collab-strip">
+                <div className="collab-title-tag">
+                  <FaHandshake className="collab-gold-icon" />
+                  <span>Recent Collaborations</span>
+                </div>
 
-                <Nav.Item>
-                  <Nav.Link
-                    active={activeTab === "pg"}
-                    onClick={() => setActiveTab("pg")}
-                  >
-                    Postgraduate
-                  </Nav.Link>
-                </Nav.Item>
-              </Nav>
+                <div className="collab-partners-logos">
+                  <div className="collab-partner-badge">सी-डैक CDAC</div>
+                  <div className="collab-partner-badge">MongoDB</div>
+                  <div className="collab-partner-badge">Red Hat Academy</div>
+                  <div className="collab-partner-badge">SmartBridge</div>
+                </div>
+              </div>
             </Col>
-          </Row>
-
-          <Row className="g-4">
-            {academicPrograms
-              .filter((p) => p.type === activeTab)
-              .map((program) => (
-                <Col key={program._id} lg={4} md={12}>
-                  <Card className="program-premium-card p-4 h-100">
-                    <Card.Body
-                      className="p-0 d-flex flex-column justify-content-between position-relative addhover"
-                      style={{
-                        zIndex: 2,
-                        border: "1px solid rgba(0, 0, 0, 0.12)",
-                        borderRadius: "20px",
-                        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("https://res.cloudinary.com/a9nuaz4g/image/upload/v1793784736/imse_background_1.png")`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                        backgroundRepeat: "no-repeat",
-                      }}
-                    >
-                      <div style={{ padding: "10px" }}>
-                        <div className="program-top-bar">
-                          <div className="program-badge-box">
-                            {getAcademicIcon(program.icon)}
-                          </div>
-
-                          <Badge
-                            bg="dark"
-                            className="text-white px-3 py-2 rounded-pill fw-bold"
-                            style={{
-                              fontSize: "0.8rem",
-                              backgroundColor: "#0A2E5C",
-                            }}
-                          >
-                            {program.code}
-                          </Badge>
-                        </div>
-
-                        <h4
-                          className="fw-bold mb-2"
-                          style={{
-                            fontSize: "1.35rem",
-                            color: "#a12a23",
-                            fontWeight: "800",
-                          }}
-                        >
-                          {program.name}
-                        </h4>
-
-                        <p
-                          className="text-muted small mb-0"
-                          style={{
-                            lineHeight: "1.6",
-                            fontWeight: "500",
-                          }}
-                        >
-                          {program.description}
-                        </p>
-                      </div>
-
-                      <div style={{ padding: "10px" }}>
-                        <Button
-                          as="a"
-                          href={program.buttonLink || "#"}
-                          variant="dark"
-                          className="px-4 brand-dark fw-bold d-inline-flex align-items-center gap-2 mt-3 custom-btn"
-                          style={{
-                            fontSize: "1rem",
-                            color: "#fff",
-                            textDecoration: "none",
-                          }}
-                        >
-                          {program.buttonText || "More Details"}
-                        </Button>
-                      </div>
-                    </Card.Body>
-
-                    <div className="program-floating-shape">
-                      {getAcademicIcon(program.icon)}
-                    </div>
-                  </Card>
-                </Col>
-              ))}
           </Row>
         </Container>
       </div>
