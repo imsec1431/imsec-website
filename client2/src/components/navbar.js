@@ -8,7 +8,8 @@ import {
   FaXTwitter,
   FaYoutube,
   FaUser,
-  FaLocationDot
+  FaLocationDot,
+  FaHouse
 } from "react-icons/fa6";
 
 import { Link, useLocation } from "react-router-dom";
@@ -16,8 +17,66 @@ import axios from "axios";
 
 import { getPublicDepartments } from "../services/departmentService";
 import imseclogo from "./imsec-logo.png";
+import imsecEmblem from "./images/imseclogo.png";
 
 import "./navbar.css";
+
+// =============================================================
+// LAUREL WREATH SVG COMPONENTS
+// =============================================================
+
+const LaurelLeft = () => (
+  <svg
+    viewBox="0 0 20 48"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="wreath-branch left-branch"
+    aria-hidden="true"
+  >
+    <path
+      d="M16 45 C14 34 11 20 4 8"
+      stroke="#c59b27"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+    />
+    <path d="M15 41 C11 39 8 35 10 32 C13 34 15 38 15 41 Z" fill="#c59b27" />
+    <path d="M13 33 C8 31 6 26 9 23 C12 25 13 30 13 33 Z" fill="#c59b27" />
+    <path d="M11 25 C5 22 5 16 8 13 C11 15 11 21 11 25 Z" fill="#c59b27" />
+    <path d="M8 17 C3 13 4 7 8 5 C10 8 9 13 8 17 Z" fill="#c59b27" />
+    <path d="M5 8 C2 4 5 1 8 0.5 C8.5 4 7 7 5 8 Z" fill="#c59b27" />
+    <path d="M16 42 C18 39 20 36 19 33 C17 34 16 38 16 42 Z" fill="#c59b27" />
+    <path d="M14 34 C17 31 19 28 18 25 C15 26 14 30 14 34 Z" fill="#c59b27" />
+    <path d="M12 26 C15 22 17 19 16 16 C13 18 12 22 12 26 Z" fill="#c59b27" />
+    <path d="M10 18 C13 14 14 10 12 8 C10 10 9 15 10 18 Z" fill="#c59b27" />
+  </svg>
+);
+
+const LaurelRight = () => (
+  <svg
+    viewBox="0 0 20 48"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="wreath-branch right-branch"
+    aria-hidden="true"
+    style={{ transform: "scaleX(-1)" }}
+  >
+    <path
+      d="M16 45 C14 34 11 20 4 8"
+      stroke="#c59b27"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+    />
+    <path d="M15 41 C11 39 8 35 10 32 C13 34 15 38 15 41 Z" fill="#c59b27" />
+    <path d="M13 33 C8 31 6 26 9 23 C12 25 13 30 13 33 Z" fill="#c59b27" />
+    <path d="M11 25 C5 22 5 16 8 13 C11 15 11 21 11 25 Z" fill="#c59b27" />
+    <path d="M8 17 C3 13 4 7 8 5 C10 8 9 13 8 17 Z" fill="#c59b27" />
+    <path d="M5 8 C2 4 5 1 8 0.5 C8.5 4 7 7 5 8 Z" fill="#c59b27" />
+    <path d="M16 42 C18 39 20 36 19 33 C17 34 16 38 16 42 Z" fill="#c59b27" />
+    <path d="M14 34 C17 31 19 28 18 25 C15 26 14 30 14 34 Z" fill="#c59b27" />
+    <path d="M12 26 C15 22 17 19 16 16 C13 18 12 22 12 26 Z" fill="#c59b27" />
+    <path d="M10 18 C13 14 14 10 12 8 C10 10 9 15 10 18 Z" fill="#c59b27" />
+  </svg>
+);
 
 const NavigationBar = () => {
   const location = useLocation();
@@ -305,6 +364,85 @@ const NavigationBar = () => {
         </Navbar>
 
         {/* =====================================================
+            MID NAVBAR: COLLEGE BRANDING & STATS BADGES (WHITE BACKGROUND)
+        ===================================================== */}
+        <div className="imsec-mid-navbar">
+          <Container fluid className="imsec-mid-container">
+            {/* Left: Logo & College Branding */}
+            <Link to="/" className="mid-nav-brand" onClick={handleNavClick}>
+              <img
+                src={imsecEmblem}
+                alt="IMS Engineering College Logo"
+                className="mid-nav-logo-img"
+              />
+              <div className="mid-nav-title-block">
+                <div className="mid-nav-college-name">
+                  <span className="mid-nav-name-main">IMS Engineering College</span>
+                  <span className="mid-nav-name-city">Ghaziabad</span>
+                </div>
+                <div className="mid-nav-divider" aria-hidden="true" />
+                <div className="mid-nav-society-badge">
+                  An Institute of IMS Society
+                </div>
+              </div>
+            </Link>
+
+            {/* Right: Academic Achievement Badges (Laurel Wreaths) */}
+            <div className="mid-nav-badges d-none d-lg-flex">
+              {/* Badge 1: 23+ Years of Academic Excellence */}
+              <div className="mid-wreath-badge">
+                <LaurelLeft />
+                <div className="mid-badge-content">
+                  <span className="mid-badge-value">23+</span>
+                  <span className="mid-badge-label">Years of<br />Academic Excellence</span>
+                </div>
+                <LaurelRight />
+              </div>
+
+              {/* Badge 2: 4000+ Students */}
+              <div className="mid-wreath-badge">
+                <LaurelLeft />
+                <div className="mid-badge-content">
+                  <span className="mid-badge-value">4000+</span>
+                  <span className="mid-badge-label">Students</span>
+                </div>
+                <LaurelRight />
+              </div>
+
+              {/* Badge 3: 350+ Faculty Members */}
+              <div className="mid-wreath-badge d-none d-xl-inline-flex">
+                <LaurelLeft />
+                <div className="mid-badge-content">
+                  <span className="mid-badge-value">350+</span>
+                  <span className="mid-badge-label">Faculty Members</span>
+                </div>
+                <LaurelRight />
+              </div>
+
+              {/* Badge 4: 500+ Recruiters */}
+              <div className="mid-wreath-badge">
+                <LaurelLeft />
+                <div className="mid-badge-content">
+                  <span className="mid-badge-value">500+</span>
+                  <span className="mid-badge-label">Recruiters</span>
+                </div>
+                <LaurelRight />
+              </div>
+
+              {/* Badge 5: Excellent Industry Collaborations */}
+              <div className="mid-wreath-badge d-none d-xl-inline-flex">
+                <LaurelLeft />
+                <div className="mid-badge-content">
+                  <span className="mid-badge-value text-gold-accent">Excellent</span>
+                  <span className="mid-badge-label">Industry<br />Collaborations</span>
+                </div>
+                <LaurelRight />
+              </div>
+            </div>
+          </Container>
+        </div>
+
+        {/* =====================================================
             MAIN NAVIGATION
         ===================================================== */}
 
@@ -335,8 +473,10 @@ const NavigationBar = () => {
                     className={isPathActive(["/"]) ? "active" : ""}
                     onMouseEnter={() => setActiveDropdown(null)}
                     onClick={handleNavClick}
+                    title="Home"
                   >
-                    Home
+                    <FaHouse className="main-nav-home-icon" />
+                    <span>Home</span>
                   </Nav.Link>
 
                   {/* =================================================
