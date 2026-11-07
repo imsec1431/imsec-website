@@ -810,11 +810,11 @@ const Home = () => {
 
       {/* PLACEMENT PERFORMANCE DASHBOARD */}
       <Container className="py-4 mt-2">
-        <Row className="align-items-center mb-4">
-          <Col md={8}>
+        <Row className="justify-content-center mb-4 text-center">
+          <Col md={12}>
             <h2
               className="fw-extrabold display-6"
-              style={{ fontWeight: 800, color: "#a12a23" }}
+              style={{ fontWeight: 800, color: "#002147" }}
             >
               Placement Achievements
             </h2>
@@ -934,7 +934,7 @@ const Home = () => {
 
           <h2
             style={{
-              color: "#a12a23",
+              color: "#002147",
               fontWeight: "800",
               fontSize: "clamp(2rem,4vw,3rem)",
             }}
