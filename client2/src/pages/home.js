@@ -471,8 +471,10 @@ const Home = () => {
                           <FaPenToSquare className="me-2" /> Apply Now <FaArrowRight className="ms-2" />
                         </Button>
                         <Button
-                          as={Link}
-                          to="/about/Campus"
+                          as="a"
+                          href="http://imsec.ac.in/assets/images/virtual-tour/index.htm"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="hero-btn-outline"
                         >
                           <FaCompass className="me-2" /> Virtual Campus Tour
