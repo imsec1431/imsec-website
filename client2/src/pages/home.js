@@ -776,8 +776,8 @@ const Home = () => {
             <h2
               className="fw-extrabold brand-dark m-0"
               style={{
-                fontWeight: 800,
-                fontSize: "clamp(1.7rem, 4vw, 2.8rem)",
+                fontWeight: "800",
+                fontSize: "clamp(1.85rem, 3.6vw, 2.65rem)",
                 lineHeight: "1.2",
                 color: "white",
               }}
@@ -813,8 +813,13 @@ const Home = () => {
         <Row className="justify-content-center mb-4 text-center">
           <Col md={12}>
             <h2
-              className="fw-extrabold display-6"
-              style={{ fontWeight: 800, color: "#002147" }}
+              className="fw-extrabold m-0"
+              style={{
+                fontWeight: "800",
+                fontSize: "clamp(1.85rem, 3.6vw, 2.65rem)",
+                lineHeight: "1.2",
+                color: "#002147",
+              }}
             >
               Placement Achievements
             </h2>
@@ -936,7 +941,8 @@ const Home = () => {
             style={{
               color: "#002147",
               fontWeight: "800",
-              fontSize: "clamp(2rem,4vw,3rem)",
+              fontSize: "clamp(1.85rem, 3.6vw, 2.65rem)",
+              lineHeight: "1.2",
             }}
           >
             University Rank Holders<span style={{ color: "#FDB913" }}></span>
@@ -1026,7 +1032,8 @@ const Home = () => {
             style={{
               color: "#ffffff",
               fontWeight: "800",
-              fontSize: "clamp(2rem,4vw,3rem)",
+              fontSize: "clamp(1.85rem, 3.6vw, 2.65rem)",
+              lineHeight: "1.2",
             }}
           >
             Campus Highlights
@@ -1174,9 +1181,10 @@ const Home = () => {
 
             <h2
               style={{
-                fontSize: "clamp(2rem,5vw,3rem)",
+                fontSize: "clamp(1.85rem, 3.6vw, 2.65rem)",
                 fontWeight: "800",
-                color: "#a12a23",
+                lineHeight: "1.2",
+                color: "#002147",
               }}
             >
               Life @ IMSEC<span style={{ color: "#FDB913" }}></span>
@@ -1234,7 +1242,8 @@ const Home = () => {
             style={{
               color: "#ffffff",
               fontWeight: "800",
-              fontSize: "clamp(2rem,4vw,3rem)",
+              fontSize: "clamp(1.85rem, 3.6vw, 2.65rem)",
+              lineHeight: "1.2",
             }}
           >
             Achievements & Recognition<span > </span>
@@ -1309,7 +1318,8 @@ const Home = () => {
           <h2
             style={{
               fontWeight: "800",
-              fontSize: "clamp(2rem,4vw,3rem)",
+              fontSize: "clamp(1.85rem, 3.6vw, 2.65rem)",
+              lineHeight: "1.2",
               color: "#a12a23",
             }}
           >
