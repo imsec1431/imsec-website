@@ -22,62 +22,67 @@ import imsecEmblem from "./images/imseclogo.png";
 import "./navbar.css";
 
 // =============================================================
-// LAUREL WREATH SVG COMPONENTS
+// CURVED GOLDEN LAUREL WREATH SVG COMPONENTS (GHUMA HUA DESIGN)
 // =============================================================
 
 const LaurelLeft = () => (
   <svg
-    viewBox="0 0 20 48"
+    viewBox="0 0 38 64"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     className="wreath-branch left-branch"
     aria-hidden="true"
   >
+    <defs>
+      <linearGradient id="goldLaurelGradL" x1="0%" y1="100%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="#b8860b" />
+        <stop offset="35%" stopColor="#f3d068" />
+        <stop offset="70%" stopColor="#d4af37" />
+        <stop offset="100%" stopColor="#b08318" />
+      </linearGradient>
+    </defs>
     <path
-      d="M16 45 C14 34 11 20 4 8"
-      stroke="#c59b27"
-      strokeWidth="1.5"
+      d="M 30 60 C 14 56, 3 44, 3 30 C 3 16, 14 5, 30 2"
+      stroke="url(#goldLaurelGradL)"
+      strokeWidth="1.8"
       strokeLinecap="round"
     />
-    <path d="M15 41 C11 39 8 35 10 32 C13 34 15 38 15 41 Z" fill="#c59b27" />
-    <path d="M13 33 C8 31 6 26 9 23 C12 25 13 30 13 33 Z" fill="#c59b27" />
-    <path d="M11 25 C5 22 5 16 8 13 C11 15 11 21 11 25 Z" fill="#c59b27" />
-    <path d="M8 17 C3 13 4 7 8 5 C10 8 9 13 8 17 Z" fill="#c59b27" />
-    <path d="M5 8 C2 4 5 1 8 0.5 C8.5 4 7 7 5 8 Z" fill="#c59b27" />
-    <path d="M16 42 C18 39 20 36 19 33 C17 34 16 38 16 42 Z" fill="#c59b27" />
-    <path d="M14 34 C17 31 19 28 18 25 C15 26 14 30 14 34 Z" fill="#c59b27" />
-    <path d="M12 26 C15 22 17 19 16 16 C13 18 12 22 12 26 Z" fill="#c59b27" />
-    <path d="M10 18 C13 14 14 10 12 8 C10 10 9 15 10 18 Z" fill="#c59b27" />
+    <path
+      d="M 29.0 60.0 Q 25.0 62.9 21.5 59.3 Q 25.5 56.5 29.0 60.0 Z M 28.0 58.0 Q 26.6 62.9 21.4 62.6 Q 22.9 57.7 28.0 58.0 Z M 21.0 54.0 Q 17.8 58.4 12.8 56.2 Q 16.0 51.8 21.0 54.0 Z M 19.0 51.0 Q 19.3 56.4 14.1 58.0 Q 13.8 52.5 19.0 51.0 Z M 12.0 44.0 Q 10.4 49.5 4.6 49.2 Q 6.2 43.6 12.0 44.0 Z M 10.0 41.0 Q 12.3 46.3 7.7 49.7 Q 5.4 44.4 10.0 41.0 Z M 6.0 32.0 Q 6.4 38.1 0.6 39.8 Q 0.2 33.7 6.0 32.0 Z M 6.0 29.0 Q 10.2 33.4 6.8 38.5 Q 2.6 34.1 6.0 29.0 Z M 8.0 20.0 Q 11.2 24.8 7.2 29.0 Q 4.0 24.2 8.0 20.0 Z M 10.0 18.0 Q 15.5 19.6 15.2 25.4 Q 9.6 23.8 10.0 18.0 Z M 15.0 11.0 Q 19.9 13.4 18.6 18.7 Q 13.7 16.3 15.0 11.0 Z M 18.0 9.0 Q 23.3 7.7 25.7 12.6 Q 20.4 13.9 18.0 9.0 Z M 24.0 5.0 Q 29.1 4.7 30.6 9.6 Q 25.4 9.9 24.0 5.0 Z M 27.0 3.0 Q 30.5 -0.3 34.5 2.3 Q 31.0 5.7 27.0 3.0 Z M 30.0 2.0 Q 34.2 -0.1 37.4 3.3 Q 33.2 5.4 30.0 2.0 Z"
+      fill="url(#goldLaurelGradL)"
+    />
   </svg>
 );
 
 const LaurelRight = () => (
   <svg
-    viewBox="0 0 20 48"
+    viewBox="0 0 38 64"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     className="wreath-branch right-branch"
     aria-hidden="true"
     style={{ transform: "scaleX(-1)" }}
   >
+    <defs>
+      <linearGradient id="goldLaurelGradR" x1="0%" y1="100%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="#b8860b" />
+        <stop offset="35%" stopColor="#f3d068" />
+        <stop offset="70%" stopColor="#d4af37" />
+        <stop offset="100%" stopColor="#b08318" />
+      </linearGradient>
+    </defs>
     <path
-      d="M16 45 C14 34 11 20 4 8"
-      stroke="#c59b27"
-      strokeWidth="1.5"
+      d="M 30 60 C 14 56, 3 44, 3 30 C 3 16, 14 5, 30 2"
+      stroke="url(#goldLaurelGradR)"
+      strokeWidth="1.8"
       strokeLinecap="round"
     />
-    <path d="M15 41 C11 39 8 35 10 32 C13 34 15 38 15 41 Z" fill="#c59b27" />
-    <path d="M13 33 C8 31 6 26 9 23 C12 25 13 30 13 33 Z" fill="#c59b27" />
-    <path d="M11 25 C5 22 5 16 8 13 C11 15 11 21 11 25 Z" fill="#c59b27" />
-    <path d="M8 17 C3 13 4 7 8 5 C10 8 9 13 8 17 Z" fill="#c59b27" />
-    <path d="M5 8 C2 4 5 1 8 0.5 C8.5 4 7 7 5 8 Z" fill="#c59b27" />
-    <path d="M16 42 C18 39 20 36 19 33 C17 34 16 38 16 42 Z" fill="#c59b27" />
-    <path d="M14 34 C17 31 19 28 18 25 C15 26 14 30 14 34 Z" fill="#c59b27" />
-    <path d="M12 26 C15 22 17 19 16 16 C13 18 12 22 12 26 Z" fill="#c59b27" />
-    <path d="M10 18 C13 14 14 10 12 8 C10 10 9 15 10 18 Z" fill="#c59b27" />
+    <path
+      d="M 29.0 60.0 Q 25.0 62.9 21.5 59.3 Q 25.5 56.5 29.0 60.0 Z M 28.0 58.0 Q 26.6 62.9 21.4 62.6 Q 22.9 57.7 28.0 58.0 Z M 21.0 54.0 Q 17.8 58.4 12.8 56.2 Q 16.0 51.8 21.0 54.0 Z M 19.0 51.0 Q 19.3 56.4 14.1 58.0 Q 13.8 52.5 19.0 51.0 Z M 12.0 44.0 Q 10.4 49.5 4.6 49.2 Q 6.2 43.6 12.0 44.0 Z M 10.0 41.0 Q 12.3 46.3 7.7 49.7 Q 5.4 44.4 10.0 41.0 Z M 6.0 32.0 Q 6.4 38.1 0.6 39.8 Q 0.2 33.7 6.0 32.0 Z M 6.0 29.0 Q 10.2 33.4 6.8 38.5 Q 2.6 34.1 6.0 29.0 Z M 8.0 20.0 Q 11.2 24.8 7.2 29.0 Q 4.0 24.2 8.0 20.0 Z M 10.0 18.0 Q 15.5 19.6 15.2 25.4 Q 9.6 23.8 10.0 18.0 Z M 15.0 11.0 Q 19.9 13.4 18.6 18.7 Q 13.7 16.3 15.0 11.0 Z M 18.0 9.0 Q 23.3 7.7 25.7 12.6 Q 20.4 13.9 18.0 9.0 Z M 24.0 5.0 Q 29.1 4.7 30.6 9.6 Q 25.4 9.9 24.0 5.0 Z M 27.0 3.0 Q 30.5 -0.3 34.5 2.3 Q 31.0 5.7 27.0 3.0 Z M 30.0 2.0 Q 34.2 -0.1 37.4 3.3 Q 33.2 5.4 30.0 2.0 Z"
+      fill="url(#goldLaurelGradR)"
+    />
   </svg>
 );
-
 const NavigationBar = () => {
   const location = useLocation();
 
