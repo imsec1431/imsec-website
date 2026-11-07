@@ -942,6 +942,10 @@ const Home = () => {
                       src={student.image}
                       alt={student.studentName}
                       className="rank-photo"
+                      onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(student.studentName || "Ranker")}&background=002147&color=ffffff&size=200&bold=true`;
+                      }}
                     />
                     <span className="rank-medal-badge" title="Rank Holder">🎖️</span>
                   </div>
@@ -1319,6 +1323,10 @@ const Home = () => {
                       src={student.image}
                       alt={student.name}
                       className="alumni-avatar"
+                      onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(student.name || "Alumni")}&background=002147&color=ffffff&size=200&bold=true`;
+                      }}
                     />
                     <span className="alumni-grad-cap" title="Graduate">🎓</span>
                   </div>
