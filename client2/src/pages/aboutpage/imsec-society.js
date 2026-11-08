@@ -99,7 +99,11 @@ const IMSSociety = () => {
             <section className="ims-society-section">
               <h2>Mission</h2>
 
-              <p>{society.mission}</p>
+              <div className="ims-society-text">
+                {society.mission.split("\n").map((point, index) => (
+                  <p key={index}>{point}</p>
+                ))}
+              </div>
             </section>
           )}
         </div>

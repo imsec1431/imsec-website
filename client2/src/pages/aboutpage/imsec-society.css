@@ -1,11 +1,12 @@
 /* =========================================
-   IMS SOCIETY PAGE
+   IMS SOCIETY PAGE (FOOTER THEME #002147)
 ========================================= */
 
 .ims-society-page {
   min-height: 100vh;
-  background: #ffffff;
-  color: #1c2740;
+  background: #002147;
+  color: #e2e8f0;
+  font-family: "Poppins", "Segoe UI", sans-serif;
 }
 
 /* =========================================
@@ -13,47 +14,30 @@
 ========================================= */
 
 .ims-society-hero {
-  min-height: 300px;
-
+  min-height: 160px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  padding: 55px 24px;
-
-  background: linear-gradient(135deg, #071b3d 0%, #0d3972 55%, #155da5 100%);
-
+  padding: 35px 24px 30px;
+  background: linear-gradient(180deg, #001733 0%, #002147 100%);
+  border-bottom: 2px solid #fdb913;
   color: #ffffff;
+  text-align: center;
 }
 
 .ims-society-hero-content {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1050px;
   text-align: center;
-}
-
-.ims-society-hero-content span {
-  display: inline-block;
-
-  margin-bottom: 10px;
-
-  font-size: 14px;
-  font-weight: 700;
-
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-
-  opacity: 0.85;
 }
 
 .ims-society-hero-content h1 {
   margin: 0;
-
-  font-size: clamp(38px, 5vw, 62px);
-
-  line-height: 1.15;
-
+  font-size: clamp(26px, 4vw, 38px);
+  line-height: 1.2;
   font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.3px;
 }
 
 /* =========================================
@@ -61,13 +45,13 @@
 ========================================= */
 
 .ims-society-content {
-  padding: 10vh 24px;
+  padding: 30px 20px 50px;
+  background: #002147;
 }
 
 .ims-society-container {
   width: 100%;
-  max-width: 1050px;
-
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -76,40 +60,42 @@
 ========================================= */
 
 .ims-society-introduction {
-  margin: 0 0 10vh 0;
-
-  padding: 24px 30px;
-
-  border-left: 4px solid #1764aa;
-
-  border-radius: 0;
-
-  background: #f4f7fb;
+  margin: 0 0 22px 0;
+  padding: 18px 24px;
+  border-left: 4px solid #fdb913;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .ims-society-introduction p {
   margin: 0;
-
-  color: #35415a;
-
-  font-size: 18px;
-
+  color: #f1f5f9;
+  font-size: 16px;
   line-height: 1.7;
+  font-weight: 450;
 }
 
 /* =========================================
-   SOCIETY SECTIONS
+   SOCIETY SECTIONS (COMPACT GAPS)
 ========================================= */
 
 .ims-society-section {
-  margin: 0 0 10vh 0;
-
-  padding: 0;
+  margin: 0 0 22px 0;
+  padding: 22px 26px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  transition: border-color 0.2s ease;
 }
 
-/*
-   Last section has no extra bottom spacing
-*/
+.ims-society-section:hover {
+  border-color: rgba(253, 185, 19, 0.3);
+}
 
 .ims-society-section:last-child {
   margin-bottom: 0;
@@ -120,35 +106,28 @@
 ========================================= */
 
 .ims-society-section h2 {
-  margin: 0;
-
+  margin: 0 0 14px 0;
   padding: 0;
-
-  color: #102c56;
-
-  font-size: 28px;
-
+  color: #ffffff;
+  font-size: 22px;
   line-height: 1.25;
-
   font-weight: 800;
+  display: flex;
+  flex-direction: column;
 }
 
 /* =========================================
-   HEADING UNDERLINE
+   HEADING UNDERLINE (GOLD)
 ========================================= */
 
 .ims-society-section h2::after {
   content: "";
-
   display: block;
-
-  width: 45px;
-
+  width: 42px;
   height: 3px;
-
   margin: 8px 0 0;
-
-  background: #1764aa;
+  background: #fdb913;
+  border-radius: 2px;
 }
 
 /* =========================================
@@ -156,15 +135,16 @@
 ========================================= */
 
 .ims-society-section p {
-  margin: 0;
-
+  margin: 0 0 10px 0;
   padding: 0;
-
-  color: #5d687b;
-
-  font-size: 16px;
-
+  color: #cbd5e1;
+  font-size: 15px;
   line-height: 1.75;
+  white-space: pre-line;
+}
+
+.ims-society-section p:last-child {
+  margin-bottom: 0;
 }
 
 /* =========================================
@@ -177,8 +157,15 @@
 }
 
 .ims-society-text p {
-  margin: 0;
+  margin: 0 0 12px 0;
   padding: 0;
+  color: #cbd5e1;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.ims-society-text p:last-child {
+  margin-bottom: 0;
 }
 
 /* =========================================
@@ -187,129 +174,63 @@
 
 .ims-society-status {
   min-height: 60vh;
-
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   padding: 40px;
-
-  color: #596579;
-
+  color: #cbd5e1;
   font-size: 17px;
-
   text-align: center;
+  background: #002147;
 }
 
 /* =========================================
-   TABLET
+   RESPONSIVE
 ========================================= */
 
 @media (max-width: 900px) {
   .ims-society-container {
     max-width: 100%;
-
-    padding: 0 20px;
-
-    box-sizing: border-box;
+    padding: 0 10px;
   }
 }
 
-/* =========================================
-   MOBILE
-========================================= */
-
 @media (max-width: 768px) {
   .ims-society-hero {
-    min-height: 250px;
-
-    padding: 45px 20px;
+    min-height: 130px;
+    padding: 28px 18px 24px;
   }
 
   .ims-society-hero-content h1 {
-    font-size: 37px;
+    font-size: 24px;
   }
 
   .ims-society-content {
-    padding: 5vh 18px;
+    padding: 22px 14px 35px;
   }
-
-  .ims-society-container {
-    padding: 0;
-  }
-
-  /* =======================================
-     INTRODUCTION
-  ======================================= */
 
   .ims-society-introduction {
-    margin: 0 0 5vh 0;
-
-    padding: 20px 22px;
+    margin: 0 0 16px 0;
+    padding: 16px 18px;
   }
 
   .ims-society-introduction p {
-    font-size: 16px;
-
-    line-height: 1.7;
+    font-size: 15px;
+    line-height: 1.65;
   }
-
-  /* =======================================
-     SECTIONS
-  ======================================= */
 
   .ims-society-section {
-    margin: 0 0 5vh 0;
-
-    padding: 0;
+    margin: 0 0 16px 0;
+    padding: 18px 18px;
   }
-
-  .ims-society-section:last-child {
-    margin-bottom: 0;
-  }
-
-  /* =======================================
-     HEADINGS
-  ======================================= */
 
   .ims-society-section h2 {
-    margin: 0;
-    padding: 0;
-
-    font-size: 25px;
-
-    line-height: 1.25;
+    font-size: 20px;
   }
 
-  .ims-society-section h2::after {
-    width: 40px;
-
-    height: 3px;
-
-    margin-top: 7px;
-  }
-
-  /* =======================================
-     TEXT
-  ======================================= */
-
-  .ims-society-section p {
-    margin: 0;
-    padding: 0;
-
-    font-size: 15px;
-
-    line-height: 1.7;
-  }
-
-  .ims-society-text {
-    margin: 0;
-    padding: 0;
-  }
-
+  .ims-society-section p,
   .ims-society-text p {
-    margin: 0;
-    padding: 0;
+    font-size: 14.5px;
+    line-height: 1.7;
   }
 }
