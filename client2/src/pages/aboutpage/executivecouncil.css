@@ -205,9 +205,9 @@ body {
 
 .member-body span {
   display: inline-block;
-  background: #fdb913;
-  color: #002147;
-  padding: 4px 14px;
+  background: #002147;
+  color: #ffffff;
+  padding: 5px 16px;
   border-radius: 20px;
   font-size: 13px;
   font-weight: 600;
@@ -234,8 +234,8 @@ body {
 }
 
 .member-social a:hover {
-  background: #fdb913;
-  color: #002147;
+  background: #00152e;
+  color: #ffffff;
   transform: translateY(-3px);
 }
 
@@ -375,14 +375,14 @@ body {
 }
 
 .executive-cta .btn-warning {
-  background: #fdb913;
-  color: #002147;
+  background: #002147;
+  color: #ffffff;
   border: none;
 }
 
 .executive-cta .btn-warning:hover {
-  background: #fff;
-  color: #002147;
+  background: #00152e;
+  color: #ffffff;
   transform: translateY(-3px);
 }
 
