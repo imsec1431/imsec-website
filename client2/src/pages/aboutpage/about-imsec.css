@@ -70,13 +70,14 @@ body {
 }
 
 /* ==========================================
-   Hero Banner
+   Hero Banner (Clean Solid Footer Theme #002147)
 ==========================================*/
 
 .overview-hero {
-  min-height: 200px;
+  min-height: 180px;
 
-  background: #002147;
+  background: #002147 !important;
+  background-image: none !important;
 
   border-bottom: 2px solid #fdb913;
 
@@ -89,9 +90,17 @@ body {
   text-align: center;
 }
 
+.overview-hero::before,
+.overview-hero::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
 .hero-content {
   color: white;
-  padding: 32px 15px;
+  padding: 30px 15px;
 }
 
 .hero-content h1 {
@@ -828,37 +837,26 @@ body {
   }
 }
 /* =========================================================
-   ABOUT IMSEC HERO
+   ABOUT IMSEC HERO (SOLID FOOTER THEME #002147, NO GRADIENTS/PATTERNS)
 ========================================================= */
 
 .overview-hero {
   position: relative;
-  min-height: 200px;
+  min-height: 180px;
   display: flex;
   align-items: center;
-  overflow: hidden;
-  background: #002147;
+  justify-content: center;
+  background: #002147 !important;
+  background-image: none !important;
   border-bottom: 2px solid #fdb913;
 }
 
-.overview-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background:
-    radial-gradient(
-      circle at 20% 50%,
-      rgba(255, 255, 255, 0.08),
-      transparent 35%
-    ),
-    radial-gradient(
-      circle at 85% 20%,
-      rgba(255, 255, 255, 0.06),
-      transparent 30%
-    );
-
-  pointer-events: none;
+.overview-hero::before,
+.overview-hero::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  box-shadow: none !important;
 }
 
 .overview-hero .container {
@@ -869,7 +867,7 @@ body {
 .hero-content {
   text-align: center;
   color: #ffffff;
-  padding: 34px 15px;
+  padding: 30px 15px;
 }
 
 .hero-content h1 {
@@ -899,45 +897,20 @@ body {
 }
 
 /* =========================================================
-   DECORATIVE HERO SHAPE
-========================================================= */
-
-.overview-hero::after {
-  content: "";
-  position: absolute;
-
-  width: 320px;
-  height: 320px;
-
-  right: -140px;
-  bottom: -190px;
-
-  border-radius: 50%;
-
-  border: 1px solid rgba(255, 255, 255, 0.12);
-
-  box-shadow:
-    0 0 0 35px rgba(255, 255, 255, 0.025),
-    0 0 0 70px rgba(255, 255, 255, 0.018);
-
-  pointer-events: none;
-}
-
-/* =========================================================
    MOBILE
 ========================================================= */
 
 @media (max-width: 767px) {
   .overview-hero {
-    min-height: 160px;
+    min-height: 140px;
   }
 
   .hero-content {
-    padding: 26px 15px;
+    padding: 22px 15px;
   }
 
   .hero-content h1 {
-    font-size: 28px;
+    font-size: 26px;
     letter-spacing: -0.5px;
   }
 
