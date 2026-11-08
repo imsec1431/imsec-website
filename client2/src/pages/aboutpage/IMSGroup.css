@@ -360,11 +360,12 @@
 }
 
 /* =========================================
-   CTA (COMPACT GAPS)
+   CTA (COMPACT GAPS WITH PROPER BOTTOM SPACING)
 ========================================= */
 
 .ims-group-cta {
-  padding: 38px 0;
+  padding: 42px 0 54px;
+  margin-bottom: 35px;
   background:
     radial-gradient(
       circle at 20% 30%,
@@ -373,6 +374,7 @@
     ),
     linear-gradient(135deg, #071b3d, #002147);
   border-top: 2px solid #fdb913;
+  border-bottom: 2px solid rgba(253, 185, 19, 0.4);
   color: #ffffff;
 }
 
@@ -534,7 +536,8 @@
   }
 
   .ims-group-cta {
-    padding: 28px 0;
+    padding: 30px 0 42px;
+    margin-bottom: 25px;
   }
 }
 
