@@ -3,13 +3,12 @@
 ===================================== */
 
 /* =====================================
-   Vision & Mission Hero
-   Premium style like Approvals
+   Vision & Mission Hero (Clean Solid Footer Theme #002147)
 ===================================== */
 
 .vm-hero {
   position: relative;
-  min-height: 330px;
+  min-height: 180px;
 
   display: flex;
   align-items: center;
@@ -19,155 +18,94 @@
 
   color: #fff;
 
-  overflow: hidden;
+  background: #002147 !important;
+  background-image: none !important;
 
-  background: linear-gradient(135deg, #071d3a 0%, #0a2e5c 50%, #123f7a 100%);
+  border-bottom: 2px solid #fdb913;
+  padding: 30px 15px;
 }
 
-/* =====================================
-   Decorative Background
-===================================== */
-
-.vm-hero::before {
-  content: "";
-
-  position: absolute;
-  inset: 0;
-
-  background:
-    radial-gradient(
-      circle at 15% 45%,
-      rgba(255, 255, 255, 0.1),
-      transparent 32%
-    ),
-    radial-gradient(
-      circle at 85% 25%,
-      rgba(253, 185, 19, 0.08),
-      transparent 30%
-    );
-
-  pointer-events: none;
-}
-
-/* =====================================
-   Decorative Circle
-===================================== */
-
+.vm-hero::before,
 .vm-hero::after {
-  content: "";
-
-  position: absolute;
-
-  width: 430px;
-  height: 430px;
-
-  right: -190px;
-  bottom: -275px;
-
-  border-radius: 50%;
-
-  border: 1px solid rgba(255, 255, 255, 0.14);
-
-  box-shadow:
-    0 0 0 45px rgba(255, 255, 255, 0.025),
-    0 0 0 90px rgba(255, 255, 255, 0.018);
-
-  pointer-events: none;
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  box-shadow: none !important;
 }
-
-/* =====================================
-   Container
-===================================== */
 
 .vm-hero .container {
   position: relative;
   z-index: 2;
 }
 
-/* =====================================
-   Hero Title
-===================================== */
-
 .vm-hero h1 {
-  margin: 0 0 14px;
+  margin: 0 0 10px;
 
   color: #fff;
 
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(28px, 4vw, 42px);
 
   font-weight: 800;
 
-  line-height: 1.1;
+  line-height: 1.15;
 
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
 }
-
-/* =====================================
-   Breadcrumb
-===================================== */
 
 .vm-hero p {
   margin: 0;
 
-  font-size: 16px;
+  font-size: 15px;
 
   font-weight: 500;
 
   color: #fff !important;
 }
 
-/* =====================================
-   Tablet
-===================================== */
-
-@media (max-width: 992px) {
-  .vm-hero {
-    min-height: 300px;
-  }
-
-  .vm-hero h1 {
-    font-size: 42px;
-  }
-}
-
-/* =====================================
-   Mobile
-===================================== */
-
-@media (max-width: 768px) {
-  .vm-hero {
-    min-height: 260px;
-  }
-
-  .vm-hero h1 {
-    font-size: 34px;
-    letter-spacing: -0.5px;
-  }
-
-  .vm-hero p {
-    font-size: 15px;
-  }
-}
-
-/* =====================================
-   Small Mobile
-===================================== */
-
-@media (max-width: 576px) {
-  .vm-hero {
-    min-height: 240px;
-  }
-
-  .vm-hero h1 {
-    font-size: 29px;
-  }
-
-  .vm-hero p {
-    font-size: 14px;
-  }
-}
 /* ==========================================
-   Vision Mission
+   Section Spacing (Reduced Gaps)
+==========================================*/
+
+.vm-intro-section,
+.vision-section,
+.mission-section,
+.vm-values-section,
+.vm-philosophy-section {
+  padding: 38px 0;
+}
+
+/* ==========================================
+   Common Typography
+==========================================*/
+
+.section-tag {
+  color: #fdb913;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-size: clamp(1.85rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  color: #002147;
+  margin-bottom: 14px;
+}
+
+.section-title span {
+  color: #fdb913;
+}
+
+.section-text {
+  color: #475569;
+  line-height: 1.75;
+  font-size: 15.5px;
+}
+
+/* ==========================================
+   Vision & Mission Cards
 ==========================================*/
 
 .vision-section {
@@ -177,13 +115,15 @@
 .vision-card {
   background: white;
 
-  padding: 40px;
+  padding: 30px 24px;
 
-  border-radius: 22px;
+  border-radius: 16px;
 
   text-align: center;
 
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+
+  border: 1px solid #e2e8f0;
 
   transition: 0.35s;
 
@@ -191,19 +131,21 @@
 }
 
 .vision-card:hover {
-  transform: translateY(-12px);
+  transform: translateY(-6px);
 
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 35px rgba(0, 33, 71, 0.12);
+
+  border-color: rgba(253, 185, 19, 0.4);
 }
 
 .icon-box {
-  width: 90px;
+  width: 70px;
 
-  height: 90px;
+  height: 70px;
 
   border-radius: 50%;
 
-  background: #0a2e5c;
+  background: #002147;
 
   color: white;
 
@@ -215,9 +157,9 @@
 
   margin: auto;
 
-  font-size: 38px;
+  font-size: 30px;
 
-  margin-bottom: 25px;
+  margin-bottom: 18px;
 
   transition: 0.35s;
 }
@@ -225,21 +167,27 @@
 .vision-card:hover .icon-box {
   background: #fdb913;
 
-  color: #0a2e5c;
+  color: #002147;
 }
 
 .vision-card h3 {
-  color: #0a2e5c;
+  color: #002147;
 
   font-weight: 700;
 
-  margin-bottom: 20px;
+  font-size: 22px;
+
+  margin-bottom: 14px;
 }
 
 .vision-card p {
-  color: #666;
+  color: #475569;
 
-  line-height: 1.9;
+  line-height: 1.75;
+
+  font-size: 15px;
+
+  margin: 0;
 }
 
 .vision-card ul {
@@ -249,39 +197,18 @@
 }
 
 .vision-card ul li {
-  margin-bottom: 12px;
-
-  color: #666;
-}
-
-/* ========================= */
-
-.section-tag {
-  color: #fdb913;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
   margin-bottom: 10px;
+
+  color: #475569;
+
+  font-size: 15px;
+
+  line-height: 1.7;
 }
 
-.section-title {
-  font-size: clamp(2rem, 5vw, 3.3rem);
-  font-weight: 800;
-  color: #0a2e5c;
-  margin-bottom: 20px;
-}
-
-.section-title span {
-  color: #fdb913;
-}
-
-.section-text {
-  color: #666;
-  line-height: 1.9;
-  font-size: 17px;
-}
-
-/* ========================= */
+/* ==========================================
+   Mission Section
+==========================================*/
 
 .mission-section {
   background: #f8f9fb;
@@ -289,131 +216,152 @@
 
 .mission-card {
   background: #fff;
-  border-radius: 20px;
-  padding: 35px 25px;
+  border-radius: 16px;
+  padding: 28px 20px;
   text-align: center;
   height: 100%;
   transition: 0.35s;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-  border: 2px solid transparent;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
 }
 
 .mission-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-6px);
   border-color: #fdb913;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 35px rgba(0, 33, 71, 0.12);
 }
 
 .mission-icon {
-  width: 85px;
-  height: 85px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  background: #0a2e5c;
+  background: #002147;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
-  font-size: 36px;
+  font-size: 30px;
   transition: 0.35s;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
 }
 
 .mission-card:hover .mission-icon {
   background: #fdb913;
-  color: #0a2e5c;
+  color: #002147;
   transform: rotate(10deg);
 }
 
 .mission-card h4 {
-  color: #0a2e5c;
+  color: #002147;
   font-weight: 700;
-  margin-bottom: 15px;
+  font-size: 19px;
+  margin-bottom: 10px;
 }
 
 .mission-card p {
-  color: #666;
-  line-height: 1.8;
+  color: #475569;
+  line-height: 1.7;
+  font-size: 14.5px;
   margin: 0;
 }
 
-/* ========================= */
+/* ==========================================
+   Core Values Section
+==========================================*/
+
+.vm-values-section {
+  background: #fff;
+}
 
 .value-card {
   background: #fff;
-  border-radius: 18px;
-  padding: 25px 15px;
+  border-radius: 14px;
+  padding: 18px 12px;
   text-align: center;
   font-weight: 700;
-  color: #0a2e5c;
+  font-size: 15px;
+  color: #002147;
   transition: 0.35s;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
   cursor: pointer;
 }
 
 .value-card:hover {
-  background: #0a2e5c;
+  background: #002147;
   color: #fdb913;
-  transform: translateY(-8px);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0, 33, 71, 0.15);
 }
 
-/* ========================= */
+/* ==========================================
+   Philosophy Section
+==========================================*/
 
+.vm-philosophy-section {
+  background: #f8fafc;
+}
+
+/* ==========================================
+   CTA Section (Footer Theme #002147)
+==========================================*/
+
+.vm-cta-section,
+.cta-section.vm-cta-section,
 .cta-section {
-  background: linear-gradient(135deg, #0a2e5c, #123f7a);
-  padding: 80px 0;
-  color: white;
+  background: #002147 !important;
+  color: #fff !important;
+  padding: 42px 0 46px !important;
+  border-top: 3px solid #fdb913 !important;
+  margin-bottom: 25px !important;
 }
 
+.vm-cta-section h2,
+.cta-section.vm-cta-section h2,
 .cta-section h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 800;
-  margin-bottom: 20px;
+  font-size: clamp(24px, 3.2vw, 34px) !important;
+  font-weight: 800 !important;
+  margin-bottom: 10px !important;
+  color: #ffffff !important;
 }
 
+.vm-cta-section p,
+.cta-section.vm-cta-section p,
 .cta-section p {
-  color: #ddd;
+  color: #cbd5e1 !important;
+  font-size: 15.5px !important;
   max-width: 700px;
-  margin: auto;
-  line-height: 1.8;
-  margin-bottom: 35px;
+  margin: 0 auto !important;
+  line-height: 1.75;
 }
 
+.vm-cta-section .btn,
+.cta-section.vm-cta-section .btn,
 .cta-section .btn {
   font-weight: 600;
-  padding: 12px 35px;
+  padding: 10px 30px;
+  margin-top: 10px;
   transition: 0.3s;
 }
 
-.cta-section .btn-warning:hover {
-  transform: translateY(-4px);
-}
-
-.cta-section .btn-outline-light:hover {
-  transform: translateY(-4px);
-}
-
-/* ========================= */
+/* ==========================================
+   Images
+==========================================*/
 
 img {
-  transition: 0.5s;
+  transition: 0.4s ease;
 }
 
 img:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
-/* ========================= */
+/* ==========================================
+   Responsive
+==========================================*/
 
 @media (max-width: 992px) {
-  .vm-hero {
-    height: 320px;
-  }
-
-  .vm-hero h1 {
-    font-size: 42px;
-  }
-
   .section-title {
     text-align: center;
   }
@@ -429,60 +377,59 @@ img:hover {
 
 @media (max-width: 768px) {
   .vm-hero {
-    height: 260px;
+    min-height: 140px;
+    padding: 22px 15px;
   }
 
   .vm-hero h1 {
-    font-size: 32px;
+    font-size: 26px;
+    letter-spacing: -0.5px;
   }
 
   .vm-hero p {
-    font-size: 15px;
+    font-size: 13.5px;
   }
 
   .section-title {
-    font-size: 2rem;
+    font-size: 1.85rem;
   }
 
   .section-text {
-    font-size: 15px;
+    font-size: 14.5px;
   }
 
   .mission-card {
-    padding: 25px 18px;
+    padding: 22px 16px;
   }
 
   .mission-icon {
-    width: 70px;
-    height: 70px;
-    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
   }
 
   .value-card {
-    padding: 20px 10px;
-    font-size: 14px;
+    padding: 14px 8px;
+    font-size: 13.5px;
   }
 
+  .vm-cta-section,
   .cta-section {
-    padding: 60px 20px;
-  }
-
-  .cta-section .btn {
-    width: 100%;
-    margin: 10px 0;
+    padding: 34px 20px !important;
   }
 }
 
 @media (max-width: 576px) {
   .vm-hero h1 {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .mission-card h4 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
+  .vm-cta-section h2,
   .cta-section h2 {
-    font-size: 28px;
+    font-size: 24px !important;
   }
 }

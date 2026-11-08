@@ -155,9 +155,9 @@ const VisionMission = () => {
           INTRODUCTION
       ====================================================== */}
 
-      <section className="py-5">
+      <section className="vm-intro-section">
         <Container>
-          <Row className="align-items-center g-5">
+          <Row className="align-items-center g-4">
             <Col lg={6}>
               {data.introImage && (
                 <img
@@ -186,7 +186,7 @@ const VisionMission = () => {
           VISION & MISSION
       ====================================================== */}
 
-      <section className="vision-section py-5">
+      <section className="vision-section">
         <Container>
           <Row className="g-4">
             {/* VISION */}
@@ -237,10 +237,10 @@ const VisionMission = () => {
           MISSION CARDS
       ====================================================== */}
 
-      <section className="mission-section py-5">
+      <section className="mission-section">
         <Container>
-          <div className="text-center mb-5">
-            <h6 className="section-tag" style={{ color: "black" }}>
+          <div className="text-center mb-4">
+            <h6 className="section-tag" style={{ color: "#fdb913" }}>
               {data.missionSectionTag || "OUR MISSION"}
             </h6>
 
@@ -338,9 +338,9 @@ const VisionMission = () => {
           CORE VALUES
       ====================================================== */}
 
-      <section className="py-5">
+      <section className="vm-values-section">
         <Container>
-          <div className="text-center mb-5">
+          <div className="text-center mb-4">
             <h2 className="section-title">
               {data.valuesSectionTitle || "Core Values"}{" "}
               {data.valuesSectionHighlight && (
@@ -350,7 +350,7 @@ const VisionMission = () => {
           </div>
 
           {values.length > 0 ? (
-            <Row className="g-4">
+            <Row className="g-3 g-md-4">
               {values.map((item, index) => (
                 <Col lg={2} md={4} xs={6} key={item?._id || item?.id || index}>
                   <div className="value-card">{getValueText(item)}</div>
@@ -358,7 +358,7 @@ const VisionMission = () => {
               ))}
             </Row>
           ) : (
-            <Row className="g-4">
+            <Row className="g-3 g-md-4">
               {/* Default Core Values */}
 
               {[
@@ -382,9 +382,9 @@ const VisionMission = () => {
           EDUCATIONAL PHILOSOPHY
       ====================================================== */}
 
-      <section className="py-5 bg-light">
+      <section className="vm-philosophy-section bg-light">
         <Container>
-          <Row className="align-items-center g-5">
+          <Row className="align-items-center g-4">
             <Col lg={6}>
               <h2 className="section-title">
                 {data.philosophyTitle || "Our Educational Philosophy"}{" "}
@@ -413,7 +413,7 @@ const VisionMission = () => {
           CTA
       ====================================================== */}
 
-      <section className="cta-section">
+      <section className="cta-section vm-cta-section">
         <Container className="text-center">
           <h2>{data.ctaTitle || "Shape Your Future With IMSEC"}</h2>
 
