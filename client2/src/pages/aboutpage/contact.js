@@ -113,19 +113,31 @@ const ContactUs = () => {
       {/* ================= HERO ================= */}
       <section className="contact-hero">
         <Container>
-          <div className="hero-content">
-            <h1>Contact Us</h1>
+          <div className="hero-content text-center">
+            <h1 className="text-center" style={{ textAlign: "center" }}>
+              Contact Us
+            </h1>
 
-            <p style={{ color: "white" }}>
+            <p
+              className="text-center"
+              style={{
+                color: "white",
+                margin: "0 auto",
+                textAlign: "center",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
               Home
-              <span>/</span>
+              <span style={{ color: "#fdb913", margin: "0 8px" }}>/</span>
               Contact Us
             </p>
           </div>
         </Container>
       </section>
       {/* ================= CONTACT INFO ================= */}
-      <section className="contact-info py-5">
+      <section className="contact-info">
         <Container>
           <Row className="g-4">
             <Col lg={3} md={6}>
@@ -175,9 +187,9 @@ const ContactUs = () => {
         </Container>
       </section>
       {/* ================= CONTACT FORM ================= */}
-      <section className="contact-form-section py-5">
+      <section className="contact-form-section">
         <Container>
-          <Row className="g-5">
+          <Row className="g-4">
             <Col lg={6}>
               <h6 className="section-tag">SEND MESSAGE</h6>
 
@@ -242,7 +254,7 @@ const ContactUs = () => {
                 <Form.Group className="mb-4">
                   <Form.Control
                     as="textarea"
-                    rows={6}
+                    rows={4}
                     name="message"
                     placeholder="Write Your Message..."
                     value={formData.message}
