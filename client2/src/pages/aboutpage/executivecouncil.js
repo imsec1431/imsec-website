@@ -55,9 +55,9 @@ const ExecutiveCouncil = () => {
       </section>
 
       {/* ================= Introduction ================= */}
-      <section className="executive-intro py-5">
+      <section className="executive-intro">
         <Container>
-          <Row className="align-items-center g-5">
+          <Row className="align-items-center g-4">
             <Col lg={12}>
               <h6 className="section-tag" style={{ color: "black" }}>
                 LEADERSHIP TEAM
@@ -86,9 +86,9 @@ const ExecutiveCouncil = () => {
       </section>
 
       {/* ================= Members ================= */}
-      <section className="executive-members py-5">
+      <section className="executive-members">
         <Container fluid="lg">
-          <div className="text-center mb-5">
+          <div className="text-center mb-4">
             <h2 className="section-title">
               Meet Our
               <span> Executive Council</span>
