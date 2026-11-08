@@ -353,14 +353,17 @@ Quote Section (Reduced Padding)
 CTA Section (Footer Theme #002147)
 ===========================================*/
 
+.director-cta-section,
 .chairman-cta-section,
 .cta-section.chairman-cta-section,
+.cta-section.director-cta-section,
 .cta-section {
   padding: 42px 0 46px !important;
   background: #002147 !important;
   color: #fff !important;
   border-top: 3px solid #fdb913 !important;
-  margin-bottom: 25px !important;
+  margin-top: 35px !important;
+  margin-bottom: 35px !important;
 }
 
 .chairman-cta-section h2,

@@ -204,7 +204,7 @@ const DirectorMessage = () => {
 
       {/* ================= Call To Action ================= */}
 
-      <section className="cta-section">
+      <section className="cta-section director-cta-section chairman-cta-section">
         <Container>
           <Row className="align-items-center">
             <Col lg={8}>
