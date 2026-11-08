@@ -700,39 +700,47 @@ body {
 }
 
 /* ==========================================
-   CTA
+   CTA (Footer Theme #002147)
 ==========================================*/
 
+.about-imsec-cta,
+.cta-section.about-imsec-cta,
 .cta-section {
-  background: #002147;
+  background: #002147 !important;
 
-  color: #fff;
+  color: #fff !important;
 
-  padding: 42px 0 46px;
+  padding: 42px 0 46px !important;
 
-  border-top: 3px solid #fdb913;
+  border-top: 3px solid #fdb913 !important;
 
-  margin-bottom: 25px;
+  margin-bottom: 25px !important;
 }
 
+.about-imsec-cta h2,
+.cta-section.about-imsec-cta h2,
 .cta-section h2 {
-  font-size: clamp(24px, 3.2vw, 34px);
+  font-size: clamp(24px, 3.2vw, 34px) !important;
 
-  font-weight: 800;
+  font-weight: 800 !important;
 
-  margin-bottom: 10px;
+  margin-bottom: 10px !important;
 
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
+.about-imsec-cta p,
+.cta-section.about-imsec-cta p,
 .cta-section p {
-  color: #cbd5e1;
+  color: #cbd5e1 !important;
 
-  font-size: 15.5px;
+  font-size: 15.5px !important;
 
-  margin: 0;
+  margin: 0 !important;
 }
 
+.about-imsec-cta .btn,
+.cta-section.about-imsec-cta .btn,
 .cta-section .btn {
   margin-top: 10px;
 
