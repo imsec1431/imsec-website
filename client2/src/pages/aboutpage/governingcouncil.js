@@ -45,14 +45,26 @@ const GoverningCouncil = () => {
       {/* ================= Hero ================= */}
       <section className="governing-hero">
         <Container>
-          <div className="hero-content">
-            <h1>Governing Council</h1>
+          <div className="hero-content text-center">
+            <h1 className="text-center" style={{ textAlign: "center" }}>
+              Governing Council
+            </h1>
 
-            <p style={{ color: "white" }}>
+            <p
+              className="text-center"
+              style={{
+                color: "white",
+                margin: "0 auto",
+                textAlign: "center",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
               Home
-              <span>/</span>
+              <span style={{ color: "#fdb913", margin: "0 8px" }}>/</span>
               About
-              <span>/</span>
+              <span style={{ color: "#fdb913", margin: "0 8px" }}>/</span>
               Governing Council
             </p>
           </div>
@@ -60,9 +72,9 @@ const GoverningCouncil = () => {
       </section>
 
       {/* ================= Introduction ================= */}
-      <section className="governing-intro py-5">
+      <section className="governing-intro">
         <Container>
-          <Row className="align-items-center g-5">
+          <Row className="align-items-center g-4">
             <Col lg={12}>
               <h6 className="section-tag" style={{ color: "black" }}>
                 GOVERNANCE
@@ -90,9 +102,9 @@ const GoverningCouncil = () => {
       </section>
 
       {/* ================= Governing Members ================= */}
-      <section className="governing-members py-5">
+      <section className="governing-members">
         <Container fluid="lg">
-          <div className="text-center mb-5">
+          <div className="text-center mb-4">
             <h2 className="section-title">
               Governing
               <span> Council Members</span>
@@ -144,9 +156,9 @@ const GoverningCouncil = () => {
       </section>
 
       {/* ================= Roles & Responsibilities ================= */}
-      <section className="governing-responsibilities py-5">
+      <section className="governing-responsibilities">
         <Container fluid="lg">
-          <div className="text-center mb-5">
+          <div className="text-center mb-4">
             <h2 className="section-title">
               Roles &<span> Responsibilities</span>
             </h2>
