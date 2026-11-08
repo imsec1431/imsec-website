@@ -58,14 +58,26 @@ const Location = () => {
 
       <section className="location-hero">
         <Container>
-          <div className="hero-content">
-            <h1>Location</h1>
+          <div className="hero-content text-center">
+            <h1 className="text-center" style={{ textAlign: "center" }}>
+              Location
+            </h1>
 
-            <p style={{ color: "white" }}>
+            <p
+              className="text-center"
+              style={{
+                color: "white",
+                margin: "0 auto",
+                textAlign: "center",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
               Home
-              <span>/</span>
+              <span style={{ color: "#fdb913", margin: "0 8px" }}>/</span>
               Contact
-              <span>/</span>
+              <span style={{ color: "#fdb913", margin: "0 8px" }}>/</span>
               Location
             </p>
           </div>
