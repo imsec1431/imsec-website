@@ -96,11 +96,28 @@ const IMSGroupImage = () => {
       =====================================*/}
 
       <section className="ims-group-image-hero">
-        <div className="ims-group-image-hero-overlay" />
-
         <div className="container">
-          <div className="ims-group-image-hero-content">
-            <h1>{page.title}</h1>
+          <div className="ims-group-image-hero-content text-center">
+            <h1 className="text-center">{page.title}</h1>
+
+            <p
+              className="text-center"
+              style={{
+                color: "white",
+                margin: "8px auto 0",
+                fontSize: "14px",
+                textAlign: "center",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              Home
+              <span style={{ color: "#fdb913", margin: "0 8px" }}>/</span>
+              About
+              <span style={{ color: "#fdb913", margin: "0 8px" }}>/</span>
+              Organizational Chart
+            </p>
           </div>
         </div>
       </section>
