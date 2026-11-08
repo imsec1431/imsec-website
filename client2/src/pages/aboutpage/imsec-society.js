@@ -76,7 +76,7 @@ const IMSSociety = () => {
           )}
 
           {society.content && (
-            <section className="ims-society-section ims-society-about-section">
+            <section className="ims-society-section">
               <h2>About IMS Society</h2>
 
               <div className="ims-society-text">

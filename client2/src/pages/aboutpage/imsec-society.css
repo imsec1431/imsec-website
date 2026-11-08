@@ -142,34 +142,6 @@
   margin-bottom: 0;
 }
 
-/* ========================================================
-   ABOUT IMS SOCIETY SECTION (ONLY THIS SECTION HAS #002147)
-======================================================== */
-
-.ims-society-about-section {
-  background: #002147 !important;
-  color: #ffffff !important;
-  border: 1px solid rgba(0, 33, 71, 0.4) !important;
-  box-shadow: 0 6px 20px rgba(0, 33, 71, 0.18) !important;
-}
-
-.ims-society-about-section:hover {
-  border-color: rgba(253, 185, 19, 0.4) !important;
-}
-
-.ims-society-about-section h2 {
-  color: #ffffff !important;
-}
-
-.ims-society-about-section h2::after {
-  background: #fdb913 !important;
-}
-
-.ims-society-about-section p,
-.ims-society-about-section .ims-society-text p {
-  color: #e2e8f0 !important;
-}
-
 /* =========================================
    STATUS
 ========================================= */
