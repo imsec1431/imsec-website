@@ -97,9 +97,9 @@ const ChairmanMessage = () => {
 
       {/* ================= Chairman Section ================= */}
 
-      <section className="chairman-wrapper py-5">
+      <section className="chairman-wrapper">
         <Container>
-          <Row className="align-items-center g-5">
+          <Row className="align-items-center g-4">
             {/* Left Card */}
 
             <Col lg={4}>
@@ -153,9 +153,9 @@ const ChairmanMessage = () => {
 
       {/* ================= Leadership Principles ================= */}
 
-      <section className="principle-section py-5">
+      <section className="principle-section">
         <Container>
-          <div className="text-center mb-5">
+          <div className="text-center mb-4">
             <h2 className="section-title">
               Our Guiding
               <span> Principles</span>
@@ -196,7 +196,7 @@ const ChairmanMessage = () => {
 
       {/* ================= Call To Action ================= */}
 
-      <section className="cta-section">
+      <section className="cta-section chairman-cta-section">
         <Container>
           <Row className="align-items-center">
             <Col lg={8}>

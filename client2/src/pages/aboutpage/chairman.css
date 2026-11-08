@@ -23,127 +23,73 @@ Common Styles
 
 .section-tag {
   color: #fdb913;
-
-  font-size: 15px;
-
+  font-size: 14px;
   font-weight: 700;
-
   text-transform: uppercase;
-
-  letter-spacing: 2px;
-
-  margin-bottom: 12px;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
 }
 
 .section-title {
-  font-size: clamp(2rem, 5vw, 3.3rem);
-
+  font-size: clamp(1.85rem, 3.5vw, 2.5rem);
   font-weight: 800;
-
-  color: #0a2e5c;
-
-  margin-bottom: 25px;
+  color: #002147;
+  margin-bottom: 14px;
 }
 
 .section-title span {
   color: #fdb913;
 }
 
+.section-title::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: #fdb913;
+  display: block;
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
 .section-text {
-  color: #666;
-
-  font-size: 17px;
-
-  line-height: 1.9;
-
-  text-align: justify;
+  color: #475569;
+  font-size: 15.5px;
+  line-height: 1.75;
+  text-align: left;
 }
 
 /*===========================================
-Hero Banner
+Hero Banner (Clean Solid Footer Theme #002147)
 ===========================================*/
-
-/* ===========================================
-        Vision & Mission Hero
-        Same Style as Approval Hero
-=========================================== */
-/* ===========================================
-   Chairman's Message Hero
-   Same as Vision & Mission
-   NO BACKGROUND IMAGE
-=========================================== */
 
 .chairman-hero {
   position: relative;
-
-  min-height: 330px;
+  min-height: 180px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   text-align: center;
-
   color: #fff;
 
-  overflow: hidden;
+  background: #002147 !important;
+  background-image: none !important;
 
-  background: linear-gradient(135deg, #071d3a 0%, #0a2e5c 50%, #123f7a 100%);
+  border-bottom: 2px solid #fdb913;
+  padding: 30px 15px;
 }
 
-/* Soft Background Glow */
-
-.chairman-hero::before {
-  content: "";
-
-  position: absolute;
-
-  inset: 0;
-
-  background:
-    radial-gradient(
-      circle at 15% 30%,
-      rgba(253, 185, 19, 0.12),
-      transparent 32%
-    ),
-    radial-gradient(
-      circle at 85% 70%,
-      rgba(255, 255, 255, 0.08),
-      transparent 35%
-    );
-
-  pointer-events: none;
-}
-
-/* Decorative Circle */
-
+.chairman-hero::before,
 .chairman-hero::after {
-  content: "";
-
-  position: absolute;
-
-  width: 380px;
-  height: 380px;
-
-  border-radius: 50%;
-
-  border: 1px solid rgba(255, 255, 255, 0.08);
-
-  right: -140px;
-  bottom: -210px;
-
-  box-shadow:
-    0 0 0 35px rgba(255, 255, 255, 0.025),
-    0 0 0 70px rgba(255, 255, 255, 0.018);
-
-  pointer-events: none;
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  box-shadow: none !important;
 }
-
-/* Hero Content */
 
 .chairman-hero .container {
   position: relative;
-
   z-index: 2;
 }
 
@@ -152,332 +98,150 @@ Hero Banner
 }
 
 .hero-content h1 {
-  font-size: clamp(2.5rem, 6vw, 4.2rem);
-
+  font-size: clamp(28px, 4vw, 42px);
   font-weight: 800;
-
   line-height: 1.15;
-
+  letter-spacing: -0.5px;
   color: #fff;
-
-  margin: 0 0 15px;
+  margin: 0 0 10px;
 }
 
-/* Yellow Underline */
-
-.hero-content h1::after {
-  content: "";
-
-  display: block;
-
-  width: 80px;
-
-  height: 4px;
-
-  background: #fdb913;
-
-  border-radius: 10px;
-
-  margin: 18px auto 0;
+.chairman-hero .hero-content h1::after {
+  content: none !important;
+  display: none !important;
 }
-
-/* Breadcrumb */
 
 .hero-content p {
-  font-size: 17px;
-
-  color: rgba(255, 255, 255, 0.9) !important;
-
-  margin: 18px 0 0;
-
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff !important;
+  margin: 0;
   line-height: 1.6;
 }
 
-/* Yellow Text Accent */
-
 .hero-content span {
   color: #fdb913;
-
   padding: 0 6px;
 }
 
-/* ===========================================
-   Responsive
-=========================================== */
-
-@media (max-width: 992px) {
-  .chairman-hero {
-    min-height: 300px;
-  }
-
-  .hero-content h1 {
-    font-size: 3.2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .chairman-hero {
-    min-height: 270px;
-
-    padding: 60px 20px;
-  }
-
-  .hero-content h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-content p {
-    font-size: 15px;
-  }
-
-  .chairman-hero::after {
-    width: 280px;
-
-    height: 280px;
-
-    right: -120px;
-
-    bottom: -170px;
-  }
-}
-
-@media (max-width: 576px) {
-  .chairman-hero {
-    min-height: 240px;
-
-    padding: 50px 15px;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content p {
-    font-size: 14px;
-  }
-
-  .hero-content h1::after {
-    width: 65px;
-
-    height: 3px;
-
-    margin-top: 14px;
-  }
-}
-
-/* ===========================================
-        Responsive
-=========================================== */
-
-@media (max-width: 992px) {
-  .vm-hero {
-    height: 320px;
-  }
-
-  .vm-hero h1 {
-    font-size: 3rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .vm-hero {
-    height: 260px;
-  }
-
-  .vm-hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .vm-hero p {
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 576px) {
-  .vm-hero {
-    height: 260px;
-  }
-
-  .vm-hero h1 {
-    font-size: 2rem;
-  }
-
-  .vm-hero p {
-    font-size: 14px;
-  }
-}
 /*===========================================
-Chairman Section
+Chairman Section (Reduced Gaps)
 ===========================================*/
 
 .chairman-wrapper {
   background: #fff;
-
-  padding: 80px 0;
+  padding: 38px 0;
 }
-
-/*===========================================
-Chairman Profile Card
-===========================================*/
 
 .chairman-card {
   background: #ffffff;
-
-  border-radius: 24px;
-
+  border-radius: 18px;
   overflow: hidden;
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
-
-  transition: 0.4s;
-
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  transition: 0.35s;
   position: relative;
 }
 
 .chairman-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 33, 71, 0.12);
 }
 
 .chairman-photo {
   width: 100%;
-
-  height: 430px;
-
+  height: 380px;
   object-fit: cover;
-
-  transition: 0.5s;
+  transition: 0.4s ease;
 }
 
 .chairman-card:hover .chairman-photo {
-  transform: scale(1.06);
+  transform: scale(1.03);
 }
 
 .chairman-info {
-  padding: 25px;
-
+  padding: 20px;
   text-align: center;
-
-  background: #0a2e5c;
-
+  background: #002147;
   color: #fff;
 }
 
 .chairman-info h3 {
-  margin-bottom: 8px;
-
-  font-size: 28px;
-
+  margin-bottom: 6px;
+  font-size: 24px;
   font-weight: 700;
+  color: #ffffff;
 }
 
 .chairman-info h5 {
   color: #fdb913;
-
-  margin-bottom: 8px;
-
-  font-size: 18px;
+  margin-bottom: 6px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .chairman-info p {
   margin: 0;
-
-  color: #ddd;
-
-  font-size: 15px;
+  color: #cbd5e1;
+  font-size: 14.5px;
 }
 
 .chairman-card hr {
   margin: 0;
-
-  border-color: #eee;
+  border-color: rgba(255, 255, 255, 0.1);
 }
-
-/*===========================================
-Experience Box
-===========================================*/
 
 .experience-box {
   display: flex;
-
   justify-content: center;
-
   align-items: center;
-
   gap: 10px;
-
-  padding: 20px;
-
-  background: #f8f9fa;
-
-  color: #0a2e5c;
-
+  padding: 16px;
+  background: #f8fafc;
+  color: #002147;
   font-weight: 600;
+  font-size: 15px;
 }
 
 .experience-box svg {
   color: #fdb913;
-
-  font-size: 24px;
+  font-size: 22px;
 }
-
-/*===========================================
-Social Icons
-===========================================*/
 
 .social-icons {
   display: flex;
-
   justify-content: center;
-
-  gap: 15px;
-
-  padding: 25px;
+  gap: 12px;
+  padding: 18px;
 }
 
 .social-icons a {
-  width: 45px;
-
-  height: 45px;
-
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-
-  background: #0a2e5c;
-
+  background: #002147;
   color: #fff;
-
   display: flex;
-
   justify-content: center;
-
   align-items: center;
-
-  font-size: 18px;
-
+  font-size: 16px;
   transition: 0.35s;
-
   text-decoration: none;
 }
 
 .social-icons a:hover {
   background: #fdb913;
-
-  color: #0a2e5c;
-
-  transform: translateY(-5px);
+  color: #002147;
+  transform: translateY(-3px);
 }
-
-/*===========================================
-Message Box
-===========================================*/
 
 .message-box {
   background: #fff;
-
-  padding: 15px;
+  padding: 10px;
 }
 
 .message-box .section-text {
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
 .message-box .section-text:last-child {
@@ -485,409 +249,145 @@ Message Box
 }
 
 /*===========================================
-Image Hover
-===========================================*/
-
-img {
-  transition: 0.5s;
-}
-
-img:hover {
-  transform: scale(1.02);
-}
-
-/*===========================================
-Responsive (Part 1)
-===========================================*/
-
-@media (max-width: 992px) {
-  .chairman-hero {
-    height: 320px;
-  }
-
-  .hero-content h1 {
-    font-size: 3rem;
-  }
-
-  .chairman-card {
-    max-width: 420px;
-
-    margin: auto;
-
-    margin-bottom: 40px;
-  }
-
-  .section-tag,
-  .section-title {
-    text-align: center;
-  }
-
-  .section-text {
-    text-align: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .chairman-hero {
-    height: 260px;
-  }
-
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero-content p {
-    font-size: 15px;
-  }
-
-  .chairman-photo {
-    height: 320px;
-  }
-
-  .chairman-info h3 {
-    font-size: 24px;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .section-text {
-    font-size: 15px;
-
-    line-height: 1.8;
-  }
-
-  .social-icons {
-    padding: 20px;
-  }
-}
-
-@media (max-width: 576px) {
-  .chairman-photo {
-    height: 280px;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .experience-box {
-    flex-direction: column;
-
-    gap: 8px;
-  }
-}
-/*===========================================
-Leadership Principles
+Leadership Principles (Reduced Gaps)
 ===========================================*/
 
 .principle-section {
   background: #f8f9fb;
+  padding: 38px 0;
 }
 
 .principle-card {
   background: #fff;
-
-  padding: 35px 25px;
-
-  border-radius: 20px;
-
+  padding: 28px 20px;
+  border-radius: 16px;
   text-align: center;
-
   height: 100%;
-
   transition: 0.35s;
-
-  border: 2px solid transparent;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
 }
 
 .principle-card:hover {
-  transform: translateY(-10px);
-
+  transform: translateY(-6px);
   border-color: #fdb913;
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 35px rgba(0, 33, 71, 0.12);
 }
 
 .principle-icon {
-  width: 85px;
-
-  height: 85px;
-
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-
-  background: #0a2e5c;
-
+  background: #002147;
   color: #fff;
-
   display: flex;
-
   justify-content: center;
-
   align-items: center;
-
   margin: auto;
-
-  font-size: 34px;
-
-  margin-bottom: 25px;
-
+  font-size: 30px;
+  margin-bottom: 18px;
   transition: 0.35s;
 }
 
 .principle-card:hover .principle-icon {
   background: #fdb913;
-
-  color: #0a2e5c;
-
+  color: #002147;
   transform: rotate(10deg);
 }
 
 .principle-card h4 {
-  color: #0a2e5c;
-
+  color: #002147;
   font-weight: 700;
-
-  font-size: 22px;
-
-  margin-bottom: 10px;
+  font-size: 19px;
+  margin-bottom: 0;
 }
 
 /*===========================================
-Quote Section
+Quote Section (Reduced Padding)
 ===========================================*/
 
 .quote-section {
-  padding: 90px 0;
-
-  background: linear-gradient(135deg, #0a2e5c, #123f7a);
-
+  padding: 45px 0;
+  background: #002147;
+  border-top: 2px solid #fdb913;
+  border-bottom: 2px solid #fdb913;
   position: relative;
-
   overflow: hidden;
-}
-
-.quote-section::before {
-  content: "";
-
-  position: absolute;
-
-  width: 250px;
-
-  height: 250px;
-
-  border-radius: 50%;
-
-  background: rgba(255, 255, 255, 0.05);
-
-  top: -80px;
-
-  left: -80px;
-}
-
-.quote-section::after {
-  content: "";
-
-  position: absolute;
-
-  width: 300px;
-
-  height: 300px;
-
-  border-radius: 50%;
-
-  background: rgba(255, 255, 255, 0.05);
-
-  bottom: -120px;
-
-  right: -120px;
 }
 
 .quote-box {
   position: relative;
-
   z-index: 2;
-
   max-width: 900px;
-
   margin: auto;
-
   text-align: center;
+  padding: 0 15px;
 }
 
 .quote-icon {
-  font-size: 90px;
-
+  font-size: 60px;
   color: #fdb913;
-
   font-weight: 800;
-
   display: block;
-
-  margin-bottom: 10px;
-
+  margin-bottom: 6px;
   line-height: 1;
 }
 
 .quote-box h2 {
   color: #fff;
-
-  font-size: clamp(1.8rem, 4vw, 3rem);
-
-  font-weight: 700;
-
+  font-size: clamp(1.3rem, 2.8vw, 1.85rem);
+  font-weight: 600;
   line-height: 1.6;
-
-  margin-bottom: 25px;
-
+  margin-bottom: 16px;
   font-style: italic;
 }
 
 .quote-box h5 {
   color: #fdb913;
-
-  font-size: 22px;
-
+  font-size: 18px;
   font-weight: 700;
+  margin: 0;
 }
 
 /*===========================================
-Vision Section
+CTA Section (Footer Theme #002147)
 ===========================================*/
 
-.vision-wrapper {
-  background: #fff;
-}
-
-.vision-image {
-  width: 100%;
-
-  border-radius: 20px;
-
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-
-  transition: 0.5s;
-}
-
-.vision-image:hover {
-  transform: scale(1.03);
-}
-
-.vision-wrapper .btn {
-  background: #fdb913;
-
-  color: #0a2e5c;
-
-  border: none;
-
-  font-weight: 600;
-
-  transition: 0.35s;
-}
-
-.vision-wrapper .btn:hover {
-  background: #0a2e5c;
-
-  color: #fff;
-
-  transform: translateY(-4px);
-}
-
-/*===========================================
-CTA Section
-===========================================*/
-
+.chairman-cta-section,
+.cta-section.chairman-cta-section,
 .cta-section {
-  padding: 80px 0;
-
-  background: linear-gradient(135deg, #0a2e5c, #123f7a);
-
-  color: #fff;
+  padding: 42px 0 46px !important;
+  background: #002147 !important;
+  color: #fff !important;
+  border-top: 3px solid #fdb913 !important;
+  margin-bottom: 25px !important;
 }
 
+.chairman-cta-section h2,
+.cta-section.chairman-cta-section h2,
 .cta-section h2 {
-  font-size: clamp(2rem, 5vw, 3rem);
-
-  font-weight: 800;
-
-  margin-bottom: 15px;
+  font-size: clamp(24px, 3.2vw, 34px) !important;
+  font-weight: 800 !important;
+  margin-bottom: 10px !important;
+  color: #ffffff !important;
 }
 
+.chairman-cta-section p,
+.cta-section.chairman-cta-section p,
 .cta-section p {
-  color: #ddd;
-
-  line-height: 1.8;
-
-  margin-bottom: 0;
+  color: #cbd5e1 !important;
+  line-height: 1.75 !important;
+  font-size: 15.5px !important;
+  margin-bottom: 0 !important;
 }
 
+.chairman-cta-section .btn,
+.cta-section.chairman-cta-section .btn,
 .cta-section .btn {
   font-weight: 600;
-
-  transition: 0.35s;
-
-  padding: 12px 28px;
-}
-
-.cta-section .btn-warning {
-  background: #fdb913;
-
-  border: none;
-
-  color: #0a2e5c;
-}
-
-.cta-section .btn-warning:hover {
-  background: #fff;
-
-  color: #0a2e5c;
-
-  transform: translateY(-5px);
-}
-
-.cta-section .btn-outline-light {
-  border: 2px solid #fff;
-}
-
-.cta-section .btn-outline-light:hover {
-  background: #fff;
-
-  color: #0a2e5c;
-
-  transform: translateY(-5px);
-}
-
-/*===========================================
-Animations
-===========================================*/
-
-.principle-card,
-.chairman-card,
-.vision-image {
-  transition: all 0.4s ease;
-}
-
-.section-title {
-  position: relative;
-}
-
-.section-title::after {
-  content: "";
-
-  width: 80px;
-
-  height: 4px;
-
-  background: #fdb913;
-
-  display: block;
-
-  margin-top: 12px;
-
-  border-radius: 10px;
+  padding: 10px 28px;
+  margin-top: 10px;
+  transition: 0.3s;
 }
 
 /*===========================================
@@ -895,81 +395,100 @@ Responsive
 ===========================================*/
 
 @media (max-width: 992px) {
-  .quote-box {
-    padding: 0 20px;
+  .chairman-card {
+    max-width: 420px;
+    margin: 0 auto 30px;
+  }
+
+  .section-tag,
+  .section-title {
+    text-align: center;
+  }
+
+  .section-title::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-text {
+    text-align: center;
   }
 
   .cta-section {
     text-align: center;
   }
-
-  .cta-section .btn {
-    margin-top: 15px;
-  }
 }
 
 @media (max-width: 768px) {
+  .chairman-hero {
+    min-height: 140px;
+    padding: 22px 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+    letter-spacing: -0.5px;
+  }
+
+  .hero-content p {
+    font-size: 13.5px;
+  }
+
+  .chairman-photo {
+    height: 320px;
+  }
+
+  .chairman-info h3 {
+    font-size: 22px;
+  }
+
+  .section-title {
+    font-size: 1.85rem;
+  }
+
+  .section-text {
+    font-size: 14.5px;
+  }
+
   .principle-card {
-    padding: 25px 20px;
+    padding: 22px 16px;
   }
 
   .principle-icon {
-    width: 70px;
-
-    height: 70px;
-
-    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
   }
 
   .quote-section {
-    padding: 70px 20px;
-  }
-
-  .quote-icon {
-    font-size: 70px;
+    padding: 35px 15px;
   }
 
   .quote-box h2 {
-    font-size: 1.6rem;
-
-    line-height: 1.5;
+    font-size: 1.25rem;
   }
 
-  .quote-box h5 {
-    font-size: 18px;
-  }
-
+  .chairman-cta-section,
   .cta-section {
-    padding: 60px 20px;
-  }
-
-  .cta-section h2 {
-    font-size: 2rem;
-  }
-
-  .cta-section .btn {
-    width: 100%;
-
-    margin-top: 12px;
+    padding: 34px 20px !important;
   }
 }
 
 @media (max-width: 576px) {
+  .chairman-hero h1 {
+    font-size: 24px;
+  }
+
+  .chairman-photo {
+    height: 270px;
+  }
+
   .principle-card h4 {
-    font-size: 20px;
+    font-size: 17px;
   }
 
-  .quote-box h2 {
-    font-size: 1.3rem;
-  }
-
-  .quote-icon {
-    font-size: 55px;
-  }
-
-  .section-title::after {
-    margin-left: auto;
-
-    margin-right: auto;
+  .chairman-cta-section h2,
+  .cta-section h2 {
+    font-size: 24px !important;
   }
 }
