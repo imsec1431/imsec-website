@@ -297,6 +297,7 @@ body {
   overflow: hidden;
   border-top: 2px solid #fdb913;
   border-bottom: 2px solid #fdb913;
+  margin-bottom: 35px;
 }
 
 .leadership-quote::before,
