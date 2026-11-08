@@ -60,11 +60,17 @@ const Approvals = () => {
 
   return (
     <>
-      {/* Page Header */}
+      {/* Page Header (Solid Footer Theme #002147) */}
       <section
         style={{
-          background: "linear-gradient(135deg, #0A2E5C 0%, #123f75 100%)",
-          padding: "65px 20px",
+          background: "#002147",
+          borderBottom: "2px solid #fdb913",
+          padding: "35px 20px",
+          minHeight: "180px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
           color: "#fff",
           textAlign: "center",
         }}
@@ -72,9 +78,11 @@ const Approvals = () => {
         <div className="container">
           <h1
             style={{
-              fontSize: "42px",
-              fontWeight: "700",
-              marginBottom: "12px",
+              fontSize: "clamp(2rem, 4vw, 2.8rem)",
+              fontWeight: "800",
+              marginBottom: "8px",
+              color: "#fff",
+              lineHeight: 1.2,
             }}
           >
             Approvals & Affiliations
@@ -82,9 +90,12 @@ const Approvals = () => {
 
           <p
             style={{
-              fontSize: "17px",
+              fontSize: "14.5px",
               marginBottom: 0,
-              color: "#fff",
+              color: "rgba(255, 255, 255, 0.9)",
+              maxWidth: "800px",
+              margin: "0 auto",
+              lineHeight: 1.5,
             }}
           >
             Approvals, affiliations, certificates and official institutional
@@ -96,7 +107,7 @@ const Approvals = () => {
       {/* Main Content */}
       <section
         style={{
-          padding: "55px 20px 70px",
+          padding: "38px 20px 50px",
           background: "#f7f9fc",
         }}
       >
@@ -108,7 +119,7 @@ const Approvals = () => {
               justifyContent: "center",
               flexWrap: "wrap",
               gap: "10px",
-              marginBottom: "40px",
+              marginBottom: "30px",
             }}
           >
             {documentTypes.map((type) => {
@@ -121,11 +132,11 @@ const Approvals = () => {
                   onClick={() => setActiveFilter(type)}
                   style={{
                     border: isActive
-                      ? "1px solid #0A2E5C"
+                      ? "1px solid #002147"
                       : "1px solid #d7dce5",
-                    background: isActive ? "#0A2E5C" : "#fff",
+                    background: isActive ? "#002147" : "#fff",
                     color: isActive ? "#fff" : "#333",
-                    padding: "10px 22px",
+                    padding: "8px 20px",
                     borderRadius: "25px",
                     fontWeight: "600",
                     cursor: "pointer",
@@ -149,7 +160,7 @@ const Approvals = () => {
               <div
                 className="spinner-border"
                 role="status"
-                style={{ color: "#0A2E5C" }}
+                style={{ color: "#002147" }}
               >
                 <span className="visually-hidden">Loading...</span>
               </div>
@@ -185,7 +196,7 @@ const Approvals = () => {
             >
               <h4
                 style={{
-                  color: "#0A2E5C",
+                  color: "#002147",
                   fontWeight: "600",
                 }}
               >
@@ -223,9 +234,9 @@ const Approvals = () => {
                     <div
                       style={{
                         display: "inline-block",
-                        background: "#FDB913",
-                        color: "#0A2E5C",
-                        padding: "5px 12px",
+                        background: "#002147",
+                        color: "#fff",
+                        padding: "4px 14px",
                         borderRadius: "20px",
                         fontSize: "12px",
                         fontWeight: "700",
@@ -238,9 +249,9 @@ const Approvals = () => {
                     {/* Title */}
                     <h3
                       style={{
-                        fontSize: "21px",
+                        fontSize: "20px",
                         fontWeight: "700",
-                        color: "#0A2E5C",
+                        color: "#002147",
                         marginBottom: "10px",
                       }}
                     >
@@ -302,7 +313,7 @@ const Approvals = () => {
                           display: "inline-flex",
                           alignItems: "center",
                           gap: "8px",
-                          background: "#0A2E5C",
+                          background: "#002147",
                           color: "#fff",
                           padding: "10px 18px",
                           borderRadius: "6px",
