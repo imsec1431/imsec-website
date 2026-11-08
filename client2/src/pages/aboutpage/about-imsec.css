@@ -126,22 +126,18 @@ body {
 }
 
 /* ==========================================
-   About Section (Footer Color Theme #002147)
+   About Section
 ==========================================*/
 
 .about-section {
-  background: #002147 !important;
-  color: #ffffff !important;
-  padding: 42px 0;
-  position: relative;
-  border-top: 2px solid #fdb913;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: #ffffff;
+  color: #1e293b;
+  padding: 38px 0;
 }
 
 .about-section .section-title {
-  color: #ffffff !important;
+  color: #002147;
   margin-bottom: 14px;
-  position: relative;
 }
 
 .about-section .section-title::after {
@@ -155,9 +151,9 @@ body {
 }
 
 .about-section .section-text {
-  color: #e2e8f0 !important;
+  color: #475569;
   font-size: 15.5px;
-  line-height: 1.8;
+  line-height: 1.75;
   margin-bottom: 14px;
 }
 
@@ -172,9 +168,7 @@ body {
 
   transition: 0.4s ease;
 
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .about-section img:hover {
