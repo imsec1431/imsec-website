@@ -144,9 +144,9 @@ const AboutImsec = () => {
           ABOUT IMSEC
       ===================================================== */}
 
-      <section className="about-section py-5">
+      <section className="about-section">
         <Container>
-          <Row className="align-items-center g-5">
+          <Row className="align-items-center g-4">
             <Col lg={6}>
               <img
                 src={about.aboutImage}
@@ -172,11 +172,11 @@ const AboutImsec = () => {
           OVERVIEW HIGHLIGHTS
       ===================================================== */}
 
-      <section className="highlight-section py-5">
+      <section className="highlight-section">
         <Container>
-          <Row>
+          <Row className="g-4">
             {highlights.map((item, index) => (
-              <Col lg={4} md={6} key={item._id || index} className="mb-4">
+              <Col lg={4} md={6} key={item._id || index}>
                 <Card className="highlight-card border-0">
                   <Card.Body>
                     <h4>{item.title}</h4>
@@ -194,7 +194,7 @@ const AboutImsec = () => {
           VISION & MISSION
       ===================================================== */}
 
-      <section className="vision-section py-5">
+      <section className="vision-section">
         <Container>
           <Row className="g-4">
             {/* VISION */}
@@ -236,9 +236,9 @@ const AboutImsec = () => {
           WHY CHOOSE IMSEC
       ===================================================== */}
 
-      <section className="why-imsec py-5">
+      <section className="why-imsec">
         <Container>
-          <div className="text-center mb-5">
+          <div className="text-center mb-4">
             <h2 className="section-title">{about.whyChooseTitle}</h2>
 
             <p
@@ -271,13 +271,13 @@ const AboutImsec = () => {
           CAMPUS FACILITIES
       ===================================================== */}
 
-      <section className="facility-section py-5">
+      <section className="facility-section">
         <Container>
-          <div className="text-center mb-5">
+          <div className="text-center mb-4">
             <h6
               className="section-tag"
               style={{
-                color: "black",
+                color: "#fdb913",
               }}
             >
               {about.facilityTag}

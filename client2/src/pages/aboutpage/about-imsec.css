@@ -24,25 +24,25 @@ body {
 .section-tag {
   color: #fdb913;
 
-  font-size: 15px;
+  font-size: 14px;
 
   font-weight: 700;
 
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
 
   text-transform: uppercase;
 
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .section-title {
-  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-size: clamp(1.85rem, 3.5vw, 2.5rem);
 
   font-weight: 800;
 
-  color: #0a2e5c;
+  color: #002147;
 
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .section-title span {
@@ -50,11 +50,23 @@ body {
 }
 
 .section-text {
-  color: #666;
+  color: #475569;
 
-  font-size: 16px;
+  font-size: 15.5px;
 
-  line-height: 1.9;
+  line-height: 1.75;
+}
+
+/* ==========================================
+   Section Spacing (Reduced Gaps)
+==========================================*/
+
+.about-section,
+.highlight-section,
+.vision-section,
+.why-imsec,
+.facility-section {
+  padding: 38px 0;
 }
 
 /* ==========================================
@@ -62,11 +74,11 @@ body {
 ==========================================*/
 
 .overview-hero {
-  height: 420px;
+  min-height: 200px;
 
-  background-size: cover;
+  background: #002147;
 
-  background-position: center;
+  border-bottom: 2px solid #fdb913;
 
   display: flex;
 
@@ -79,48 +91,85 @@ body {
 
 .hero-content {
   color: white;
+  padding: 32px 15px;
 }
 
 .hero-content h1 {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(28px, 4vw, 42px);
 
   font-weight: 800;
 
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 
 .hero-content p {
-  font-size: 18px;
+  font-size: 15px;
 
   margin: 0;
+
+  color: #e2e8f0 !important;
 }
 
 .hero-content span {
   color: #fdb913;
 
-  padding: 0 10px;
+  padding: 0 8px;
 }
 
 /* ==========================================
-   About Section
+   About Section (Footer Color Theme #002147)
 ==========================================*/
 
 .about-section {
-  background: #fff;
+  background: #002147 !important;
+  color: #ffffff !important;
+  padding: 42px 0;
+  position: relative;
+  border-top: 2px solid #fdb913;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-section .section-title {
+  color: #ffffff !important;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.about-section .section-title::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: #fdb913;
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
+.about-section .section-text {
+  color: #e2e8f0 !important;
+  font-size: 15.5px;
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+.about-section .section-text:last-child {
+  margin-bottom: 0;
 }
 
 .about-section img {
   width: 100%;
 
-  border-radius: 20px;
+  border-radius: 16px;
 
-  transition: 0.5s;
+  transition: 0.4s ease;
 
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .about-section img:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 /* ==========================================
@@ -132,21 +181,23 @@ body {
 }
 
 .highlight-card {
-  border-radius: 20px;
+  border-radius: 16px;
 
-  padding: 20px;
+  padding: 22px 20px;
 
   height: 100%;
 
   transition: 0.35s;
 
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+
+  border: 1px solid #e2e8f0;
 }
 
 .highlight-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-6px);
 
-  background: #0a2e5c;
+  background: #002147;
 }
 
 .highlight-card:hover h4 {
@@ -158,19 +209,23 @@ body {
 }
 
 .highlight-card h4 {
-  color: #0a2e5c;
+  color: #002147;
 
-  font-size: 22px;
+  font-size: 20px;
 
   font-weight: 700;
 
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .highlight-card p {
-  color: #666;
+  color: #475569;
 
-  line-height: 1.8;
+  line-height: 1.7;
+
+  font-size: 14.5px;
+
+  margin: 0;
 }
 
 /* ==========================================
@@ -184,13 +239,15 @@ body {
 .vision-card {
   background: white;
 
-  padding: 40px;
+  padding: 30px 24px;
 
-  border-radius: 22px;
+  border-radius: 16px;
 
   text-align: center;
 
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+
+  border: 1px solid #e2e8f0;
 
   transition: 0.35s;
 
@@ -198,19 +255,21 @@ body {
 }
 
 .vision-card:hover {
-  transform: translateY(-12px);
+  transform: translateY(-6px);
 
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 35px rgba(0, 33, 71, 0.12);
+
+  border-color: rgba(253, 185, 19, 0.4);
 }
 
 .icon-box {
-  width: 90px;
+  width: 70px;
 
-  height: 90px;
+  height: 70px;
 
   border-radius: 50%;
 
-  background: #0a2e5c;
+  background: #002147;
 
   color: white;
 
@@ -222,9 +281,9 @@ body {
 
   margin: auto;
 
-  font-size: 38px;
+  font-size: 30px;
 
-  margin-bottom: 25px;
+  margin-bottom: 18px;
 
   transition: 0.35s;
 }
@@ -232,21 +291,27 @@ body {
 .vision-card:hover .icon-box {
   background: #fdb913;
 
-  color: #0a2e5c;
+  color: #002147;
 }
 
 .vision-card h3 {
-  color: #0a2e5c;
+  color: #002147;
 
   font-weight: 700;
 
-  margin-bottom: 20px;
+  font-size: 22px;
+
+  margin-bottom: 14px;
 }
 
 .vision-card p {
-  color: #666;
+  color: #475569;
 
-  line-height: 1.9;
+  line-height: 1.75;
+
+  font-size: 15px;
+
+  margin: 0;
 }
 
 .vision-card ul {
@@ -332,9 +397,9 @@ body {
 .feature-card {
   background: #fff;
 
-  border-radius: 20px;
+  border-radius: 16px;
 
-  padding: 35px 25px;
+  padding: 28px 20px;
 
   text-align: center;
 
@@ -342,27 +407,29 @@ body {
 
   transition: 0.35s;
 
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
 
-  border: 2px solid transparent;
+  border: 1px solid #e2e8f0;
 }
 
 .feature-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-6px);
 
   border-color: #fdb913;
 
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 35px rgba(0, 33, 71, 0.12);
 }
 
 .feature-icon {
-  width: 85px;
+  width: 70px;
 
-  height: 85px;
+  height: 70px;
 
   border-radius: 50%;
 
-  background: #0a2e5c;
+  background: #002147;
+
+  color: #ffffff;
 
   display: flex;
 
@@ -372,31 +439,37 @@ body {
 
   margin: auto;
 
-  font-size: 38px;
+  font-size: 30px;
 
   transition: 0.35s;
 
-  margin-bottom: 25px;
+  margin-bottom: 18px;
 }
 
 .feature-card:hover .feature-icon {
   background: #fdb913;
 
+  color: #002147;
+
   transform: rotate(10deg);
 }
 
 .feature-card h4 {
-  color: #0a2e5c;
+  color: #002147;
 
   font-weight: 700;
 
-  margin-bottom: 15px;
+  font-size: 19px;
+
+  margin-bottom: 10px;
 }
 
 .feature-card p {
-  color: #666;
+  color: #475569;
 
-  line-height: 1.8;
+  font-size: 14.5px;
+
+  line-height: 1.7;
 
   margin: 0;
 }
@@ -628,25 +701,33 @@ body {
 ==========================================*/
 
 .cta-section {
-  background: linear-gradient(135deg, #0a2e5c, #123f7a);
+  background: #002147;
 
   color: #fff;
 
-  padding: 80px 0;
+  padding: 42px 0 46px;
+
+  border-top: 3px solid #fdb913;
+
+  margin-bottom: 25px;
 }
 
 .cta-section h2 {
-  font-size: 42px;
+  font-size: clamp(24px, 3.2vw, 34px);
 
   font-weight: 800;
 
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+
+  color: #ffffff;
 }
 
 .cta-section p {
-  color: #ddd;
+  color: #cbd5e1;
 
-  font-size: 18px;
+  font-size: 15.5px;
+
+  margin: 0;
 }
 
 .cta-section .btn {
@@ -748,21 +829,16 @@ body {
 }
 /* =========================================================
    ABOUT IMSEC HERO
-   Same premium style as Approvals
 ========================================================= */
 
 .overview-hero {
   position: relative;
-  min-height: 330px;
+  min-height: 200px;
   display: flex;
   align-items: center;
   overflow: hidden;
-
-  background: linear-gradient(
-    135deg,
-    rgba(5, 24, 48, 0.96),
-    rgba(0, 86, 125, 0.88)
-  );
+  background: #002147;
+  border-bottom: 2px solid #fdb913;
 }
 
 .overview-hero::before {
@@ -793,17 +869,17 @@ body {
 .hero-content {
   text-align: center;
   color: #ffffff;
-  padding: 70px 15px;
+  padding: 34px 15px;
 }
 
 .hero-content h1 {
-  margin: 0 0 14px;
+  margin: 0 0 10px;
 
-  font-size: clamp(38px, 5vw, 62px);
+  font-size: clamp(28px, 4vw, 42px);
 
   font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -1px;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
 
   color: #ffffff;
 }
@@ -811,7 +887,7 @@ body {
 .hero-content p {
   margin: 0;
 
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
 
   color: #ffffff !important;
@@ -830,19 +906,19 @@ body {
   content: "";
   position: absolute;
 
-  width: 420px;
-  height: 420px;
+  width: 320px;
+  height: 320px;
 
-  right: -180px;
-  bottom: -250px;
+  right: -140px;
+  bottom: -190px;
 
   border-radius: 50%;
 
   border: 1px solid rgba(255, 255, 255, 0.12);
 
   box-shadow:
-    0 0 0 45px rgba(255, 255, 255, 0.025),
-    0 0 0 90px rgba(255, 255, 255, 0.018);
+    0 0 0 35px rgba(255, 255, 255, 0.025),
+    0 0 0 70px rgba(255, 255, 255, 0.018);
 
   pointer-events: none;
 }
@@ -853,19 +929,19 @@ body {
 
 @media (max-width: 767px) {
   .overview-hero {
-    min-height: 260px;
+    min-height: 160px;
   }
 
   .hero-content {
-    padding: 55px 15px;
+    padding: 26px 15px;
   }
 
   .hero-content h1 {
-    font-size: 36px;
+    font-size: 28px;
     letter-spacing: -0.5px;
   }
 
   .hero-content p {
-    font-size: 14px;
+    font-size: 13.5px;
   }
 }
