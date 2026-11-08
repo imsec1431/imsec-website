@@ -74,9 +74,9 @@ const Location = () => {
 
       {/* ================= Contact Details ================= */}
 
-      <section className="location-details py-5">
+      <section className="location-details">
         <Container>
-          <Row className="g-5 align-items-center">
+          <Row className="g-4 align-items-center">
             <Col lg={5}>
               <div className="location-card">
                 <h2>IMS Engineering College</h2>
@@ -135,9 +135,9 @@ const Location = () => {
 
       {/* ================= How To Reach ================= */}
 
-      <section className="travel-section py-5">
+      <section className="travel-section">
         <Container>
-          <div className="text-center mb-5">
+          <div className="text-center mb-4">
             <h6 className="section-tag">HOW TO REACH</h6>
 
             <h2 className="section-title">
@@ -148,7 +148,7 @@ const Location = () => {
 
           <Row className="g-4">
             {travelInfo.map((item, index) => (
-              <Col lg={3} md={6} key={index}>
+              <Col lg={4} md={6} key={index}>
                 <div className="travel-card">
                   <div className="travel-icon">{item.icon}</div>
 
@@ -164,9 +164,9 @@ const Location = () => {
 
       {/* ================= Contact Information ================= */}
 
-      <section className="contact-section py-5">
+      <section className="contact-section">
         <Container>
-          <div className="text-center mb-5">
+          <div className="text-center mb-4">
             <h6 className="section-tag">CONTACT INFORMATION</h6>
 
             <h2 className="section-title">

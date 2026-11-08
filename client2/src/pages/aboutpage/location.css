@@ -14,6 +14,7 @@
 
 body {
   overflow-x: hidden;
+  background: #fff;
 }
 
 /* ===========================================
@@ -22,70 +23,102 @@ body {
 
 .section-tag {
   color: #fdb913;
-
-  font-size: 15px;
-
+  font-size: 14px;
   font-weight: 700;
-
   text-transform: uppercase;
-
-  letter-spacing: 2px;
-
-  margin-bottom: 10px;
+  letter-spacing: 1.5px;
+  margin-bottom: 6px;
 }
 
 .section-title {
-  font-size: clamp(2rem, 5vw, 3.3rem);
-
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 800;
-
-  color: #0a2e5c;
-
-  margin-bottom: 15px;
+  color: #002147;
+  margin-bottom: 12px;
 }
 
 .section-title span {
   color: #fdb913;
 }
 
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #fdb913;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+.text-center .section-title::after {
+  margin: 10px auto 0;
+}
+
 /* ===========================================
-   Hero
-   NO BACKGROUND PHOTO
+   Hero (Solid Footer Theme #002147)
 ===========================================*/
 
 .location-hero {
-  height: 420px;
-
-  background: linear-gradient(135deg, #071d3a 0%, #0a2e5c 50%, #123f7a 100%);
-
-  display: flex;
-
+  position: relative;
+  min-height: 180px;
+  background: #002147 !important;
+  background-image: none !important;
+  border-bottom: 2px solid #fdb913;
+  display: flex !important;
   justify-content: center;
-
   align-items: center;
-
   text-align: center;
+  padding: 30px 15px;
 }
 
-.hero-content {
+.location-hero::before,
+.location-hero::after {
+  display: none !important;
+  content: none !important;
+}
+
+.location-hero .container {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.location-hero .hero-content {
+  width: 100% !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
   color: #fff;
 }
 
-.hero-content h1 {
-  font-size: clamp(2.8rem, 6vw, 4.5rem);
-
+.location-hero .hero-content h1 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 800;
-
-  margin-bottom: 15px;
+  line-height: 1.2;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.5px;
+  color: #fff;
+  text-align: center;
 }
 
-.hero-content p {
-  font-size: 18px;
+.location-hero .hero-content h1::after {
+  display: none !important;
 }
 
-.hero-content span {
+.location-hero .hero-content p {
+  font-size: 14px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.location-hero .hero-content span {
   color: #fdb913;
-
   margin: 0 8px;
 }
 
@@ -95,70 +128,56 @@ body {
 
 .location-details {
   background: #fff;
+  padding: 38px 0;
 }
 
 .location-card {
   background: #fff;
-
-  border-radius: 20px;
-
-  padding: 40px;
-
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 16px rgba(0, 33, 71, 0.08);
+  border: 1px solid #edf2f7;
   height: 100%;
 }
 
 .location-card h2 {
-  color: #0a2e5c;
-
+  color: #002147;
   font-weight: 700;
-
-  margin-bottom: 30px;
+  font-size: 1.45rem;
+  margin-bottom: 18px;
 }
 
 .info-item {
   display: flex;
-
   align-items: flex-start;
-
-  gap: 18px;
-
-  margin-bottom: 25px;
-
+  gap: 14px;
+  margin-bottom: 14px;
   color: #555;
-
-  font-size: 16px;
-
-  line-height: 1.7;
+  font-size: 14.5px;
+  line-height: 1.6;
 }
 
 .info-item svg {
   color: #fdb913;
-
-  font-size: 22px;
-
+  font-size: 18px;
   margin-top: 3px;
+  min-width: 18px;
 }
 
 .location-card button {
-  background: #fdb913;
-
-  color: #0a2e5c;
-
+  background: #002147;
+  color: #fff;
   border: none;
-
   font-weight: 600;
-
-  padding: 12px 30px;
-
-  transition: 0.35s;
+  padding: 10px 24px;
+  transition: 0.3s;
+  margin-top: 10px !important;
 }
 
 .location-card button:hover {
-  background: #0a2e5c;
-
+  background: #00152e;
   color: #fff;
+  transform: translateY(-2px);
 }
 
 /* ===========================================
@@ -166,20 +185,16 @@ body {
 ===========================================*/
 
 .map-wrapper {
-  border-radius: 20px;
-
+  border-radius: 16px;
   overflow: hidden;
-
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-
-  height: 500px;
+  box-shadow: 0 4px 16px rgba(0, 33, 71, 0.1);
+  border: 1px solid #edf2f7;
+  height: 380px;
 }
 
 .map-wrapper iframe {
   width: 100%;
-
   height: 100%;
-
   border: none;
 }
 
@@ -189,74 +204,56 @@ body {
 
 .travel-section {
   background: #f8f9fb;
+  padding: 38px 0;
 }
 
 .travel-card {
   background: #fff;
-
-  border-radius: 20px;
-
-  padding: 35px 25px;
-
+  border-radius: 16px;
+  padding: 24px 20px;
   text-align: center;
-
   transition: 0.35s;
-
   height: 100%;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #edf2f7;
+  box-shadow: 0 4px 16px rgba(0, 33, 71, 0.08);
 }
 
 .travel-card:hover {
-  transform: translateY(-10px);
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 33, 71, 0.14);
 }
 
 .travel-icon {
-  width: 80px;
-
-  height: 80px;
-
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-
-  background: #0a2e5c;
-
+  background: #002147;
   color: #fff;
-
   display: flex;
-
   justify-content: center;
-
   align-items: center;
-
-  margin: auto;
-
-  font-size: 32px;
-
-  margin-bottom: 25px;
-
+  margin: 0 auto 15px auto;
+  font-size: 24px;
   transition: 0.35s;
 }
 
 .travel-card:hover .travel-icon {
   background: #fdb913;
-
-  color: #0a2e5c;
+  color: #002147;
 }
 
 .travel-card h4 {
-  color: #0a2e5c;
-
+  color: #002147;
   font-weight: 700;
-
-  margin-bottom: 15px;
+  font-size: 1.15rem;
+  margin-bottom: 8px;
 }
 
 .travel-card p {
   color: #666;
-
-  line-height: 1.8;
+  font-size: 13.5px;
+  line-height: 1.6;
+  margin: 0;
 }
 
 /* ===========================================
@@ -265,237 +262,156 @@ body {
 
 .landmark-section {
   background: #ffffff;
+  padding: 38px 0;
 }
 
 .landmark-card {
   background: #fff;
-
-  border-radius: 20px;
-
+  border-radius: 16px;
   overflow: hidden;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
+  box-shadow: 0 4px 16px rgba(0, 33, 71, 0.08);
+  border: 1px solid #edf2f7;
   transition: 0.35s;
-
   height: 100%;
 }
 
 .landmark-card:hover {
-  transform: translateY(-10px);
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 33, 71, 0.14);
 }
 
 .landmark-img {
   width: 100%;
-
-  height: 240px;
-
+  height: 200px;
   object-fit: cover;
-
   transition: 0.5s;
 }
 
 .landmark-card:hover .landmark-img {
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 
 .landmark-body {
-  padding: 22px;
-
+  padding: 18px;
   text-align: center;
 }
 
 .landmark-body h4 {
-  color: #0a2e5c;
-
+  color: #002147;
   font-weight: 700;
-
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .landmark-body span {
   display: inline-block;
-
   background: #fdb913;
-
-  color: #0a2e5c;
-
-  padding: 6px 18px;
-
-  border-radius: 30px;
-
+  color: #002147;
+  padding: 4px 14px;
+  border-radius: 20px;
   font-weight: 600;
-
-  font-size: 14px;
+  font-size: 13px;
 }
 
-/* ===========================================
-   Contact Section
-===========================================*/
 /* ===========================================
    Contact Information Section
 ===========================================*/
 
 .contact-section {
   background: #f8f9fb;
+  padding: 38px 0;
 }
 
 .contact-card {
-  background: #0a2e5c;
-
-  border-radius: 20px;
-
-  padding: 35px 25px;
-
+  background: #002147;
+  border-radius: 16px;
+  padding: 24px 20px;
   text-align: center;
-
   transition: all 0.35s ease;
-
   height: 100%;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 33, 71, 0.1);
 }
 
 .contact-card:hover {
-  transform: translateY(-8px);
-
-  background: #123f7a;
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 33, 71, 0.16);
 }
 
-/* Icon */
-
 .contact-card .contact-icon {
-  width: 75px;
-
-  height: 75px;
-
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
-
   background: #fdb913;
-
-  color: #0a2e5c;
-
+  color: #002147;
   display: flex;
-
   justify-content: center;
-
   align-items: center;
-
-  margin: 0 auto 20px;
-
-  font-size: 28px;
-
+  margin: 0 auto 12px auto;
+  font-size: 22px;
   transition: all 0.35s ease;
 }
 
 .contact-card:hover .contact-icon {
   background: #fff;
-
-  color: #0a2e5c;
-
-  transform: translateY(-5px);
+  color: #002147;
+  transform: translateY(-3px);
 }
-
-/* Heading */
 
 .contact-card h4 {
   color: #fff !important;
-
   font-weight: 700;
-
-  margin-bottom: 15px;
+  font-size: 1.15rem;
+  margin-bottom: 6px;
 }
-
-/* Text */
 
 .contact-card p {
-  color: #fff !important;
-
+  color: rgba(255, 255, 255, 0.85) !important;
   margin: 0;
-
-  line-height: 1.8;
-
-  font-size: 16px;
+  line-height: 1.6;
+  font-size: 14px;
 }
+
 /* ===========================================
-   CTA
+   CTA (Solid Footer Theme #002147)
 ===========================================*/
 
 .cta-section {
-  background: linear-gradient(135deg, #0a2e5c, #123f7a);
-
-  padding: 80px 0;
-
+  background: #002147 !important;
+  background-image: none !important;
+  padding: 38px 0;
   color: #fff;
+  border-top: 2px solid #fdb913;
+  border-bottom: 2px solid #fdb913;
 }
 
 .cta-section h2 {
-  font-size: clamp(2rem, 5vw, 3rem);
-
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
   font-weight: 800;
-
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 
 .cta-section p {
-  color: #ddd;
-
-  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  font-size: 14.5px;
+  margin: 0;
 }
 
 .cta-section .btn {
-  padding: 12px 28px;
-
+  padding: 10px 24px;
   font-weight: 600;
-
   transition: 0.35s;
 }
 
 .cta-section .btn-warning {
   background: #fdb913;
-
-  color: #0a2e5c;
-
+  color: #002147;
   border: none;
 }
 
 .cta-section .btn-warning:hover {
   background: #fff;
-
-  color: #0a2e5c;
-
-  transform: translateY(-4px);
-}
-
-.cta-section .btn-outline-light {
-  border: 2px solid #fff;
-}
-
-.cta-section .btn-outline-light:hover {
-  background: #fff;
-
-  color: #0a2e5c;
-
-  transform: translateY(-4px);
-}
-
-/* ===========================================
-   Hover Animation
-===========================================*/
-
-.landmark-card,
-.travel-card,
-.contact-card,
-.location-card {
-  transition: all 0.35s ease;
-}
-
-img {
-  transition: 0.5s;
+  color: #002147;
+  transform: translateY(-3px);
 }
 
 /* ===========================================
@@ -504,21 +420,25 @@ img {
 
 @media (max-width: 992px) {
   .location-hero {
-    height: 320px;
+    min-height: 160px;
+    padding: 25px 15px;
   }
 
-  .hero-content h1 {
-    font-size: 3rem;
+  .location-details,
+  .travel-section,
+  .contact-section,
+  .landmark-section,
+  .cta-section {
+    padding: 30px 0 !important;
   }
 
   .location-card {
-    margin-bottom: 35px;
-
-    padding: 30px;
+    margin-bottom: 25px;
+    padding: 24px;
   }
 
   .map-wrapper {
-    height: 400px;
+    height: 340px;
   }
 
   .cta-section {
@@ -528,86 +448,34 @@ img {
 
 @media (max-width: 768px) {
   .location-hero {
-    height: 260px;
+    min-height: 150px;
+    padding: 20px 15px;
   }
 
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero-content p {
-    font-size: 15px;
+  .location-hero .hero-content h1 {
+    font-size: 1.8rem;
   }
 
   .location-card {
-    padding: 25px;
-  }
-
-  .info-item {
-    font-size: 15px;
+    padding: 20px;
   }
 
   .map-wrapper {
-    height: 320px;
-  }
-
-  .travel-card {
-    padding: 25px 18px;
-  }
-
-  .travel-icon {
-    width: 70px;
-
-    height: 70px;
-
-    font-size: 28px;
-  }
-
-  .landmark-img {
-    height: 200px;
-  }
-
-  .contact-card {
-    padding: 25px;
-  }
-
-  .contact-icon {
-    width: 65px;
-
-    height: 65px;
-
-    font-size: 24px;
-  }
-
-  .cta-section {
-    padding: 60px 20px;
+    height: 280px;
   }
 
   .cta-section .btn {
     width: 100%;
-
     margin-top: 12px;
   }
 }
 
 @media (max-width: 576px) {
-  .hero-content h1 {
-    font-size: 2rem;
+  .section-title {
+    font-size: 1.6rem;
   }
 
   .location-card h2 {
-    font-size: 26px;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .landmark-body h4 {
-    font-size: 20px;
-  }
-
-  .contact-card h4 {
-    font-size: 20px;
+    font-size: 1.3rem;
   }
 }
