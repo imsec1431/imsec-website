@@ -146,7 +146,7 @@ const Campus = () => {
 
       <section id="campus-overview" className="campus-overview-section">
         <Container>
-          <Row className="align-items-center g-5">
+          <Row className="align-items-center g-4">
             {/* IMAGE */}
 
             <Col lg={6} className="campus-overview-image-col">
@@ -285,7 +285,7 @@ const Campus = () => {
 
       <section className="campus-tour-section">
         <Container>
-          <Row className="align-items-center g-5">
+          <Row className="align-items-center g-4">
             <Col lg={6}>
               {campus.tourImage && (
                 <div className="campus-tour-image-wrapper">
@@ -404,12 +404,7 @@ const Campus = () => {
           CTA
       ================================================= */}
 
-      <section
-        className="campus-cta-section"
-        style={{
-          backgroundColor: "#FDB913",
-        }}
-      >
+      <section className="campus-cta-section">
         <Container>
           <div className="campus-cta-content text-center">
             <h2>{campus.ctaTitle}</h2>

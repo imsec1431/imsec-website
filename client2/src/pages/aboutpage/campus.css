@@ -10,163 +10,78 @@
 }
 
 /* =========================================================
-   CAMPUS HERO
+   CAMPUS HERO (Solid Footer Theme #002147)
 ========================================================= */
 
 .campus-hero-section {
   position: relative;
-  min-height: 500px;
-
-  display: flex;
+  min-height: 180px;
+  display: flex !important;
   align-items: center;
-
+  justify-content: center;
+  text-align: center;
   overflow: hidden;
-
-  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 55%, #2563eb 100%);
+  background: #002147 !important;
+  background-image: none !important;
+  border-bottom: 2px solid #fdb913;
+  padding: 30px 15px;
 }
 
-.campus-hero-section::before {
-  content: "";
-
-  position: absolute;
-
-  width: 420px;
-  height: 420px;
-
-  right: -120px;
-  top: -150px;
-
-  border-radius: 50%;
-
-  background: rgba(255, 255, 255, 0.08);
-}
-
+.campus-hero-section::before,
 .campus-hero-section::after {
-  content: "";
-
-  position: absolute;
-
-  width: 300px;
-  height: 300px;
-
-  left: -100px;
-  bottom: -150px;
-
-  border-radius: 50%;
-
-  background: rgba(255, 255, 255, 0.06);
+  display: none !important;
+  content: none !important;
 }
 
 .campus-hero-overlay {
   position: relative;
   z-index: 2;
-
   width: 100%;
-
-  padding: 100px 0;
+  padding: 0;
 }
 
 .campus-hero-content {
-  max-width: 850px;
-
+  max-width: 900px;
   margin: 0 auto;
-
   text-align: center;
-
   color: #ffffff;
 }
 
 .campus-hero-tag {
   display: inline-block;
-
-  margin-bottom: 20px;
-
-  padding: 8px 18px;
-
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 30px;
-
-  font-size: 12px;
+  margin-bottom: 10px;
+  padding: 4px 14px;
+  border: 1px solid rgba(253, 185, 19, 0.4);
+  border-radius: 20px;
+  font-size: 11px;
   font-weight: 700;
-
-  letter-spacing: 2px;
-
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-
-  color: #ffffff;
-
-  background: rgba(255, 255, 255, 0.08);
+  color: #fdb913;
+  background: rgba(0, 33, 71, 0.5);
 }
 
 .campus-hero-content h1 {
-  margin: 0 0 25px;
-
-  font-size: 60px;
+  margin: 0 0 10px;
+  font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 800;
-
-  line-height: 1.1;
-
+  line-height: 1.2;
   color: #ffffff;
+  text-align: center;
 }
 
 .campus-hero-content h1 span {
   display: inline-block;
-
   color: #fdb913;
 }
 
 .campus-hero-content p {
-  max-width: 720px;
-
-  margin: 0 auto 35px;
-
-  font-size: 18px;
-
-  line-height: 1.8;
-
-  color: rgba(255, 255, 255, 0.85);
-}
-
-.campus-hero-actions {
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-}
-
-.campus-hero-button {
-  display: inline-flex !important;
-
-  align-items: center;
-  justify-content: center;
-
-  gap: 10px;
-
-  padding: 14px 28px !important;
-
-  border: none !important;
-  border-radius: 8px !important;
-
-  background: #fdb913 !important;
-
-  color: #111827 !important;
-
-  font-size: 15px !important;
-  font-weight: 700 !important;
-
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease;
-}
-
-.campus-hero-button:hover {
-  transform: translateY(-3px);
-
-  background: #ffffff !important;
-
-  color: #1d4ed8 !important;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
 }
 
 /* =========================================================
@@ -175,17 +90,12 @@
 
 .campus-section-tag {
   display: inline-block;
-
-  margin-bottom: 14px;
-
+  margin-bottom: 8px;
   font-size: 13px;
   font-weight: 700;
-
-  letter-spacing: 1.8px;
-
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-
-  color: #2563eb;
+  color: #fdb913;
 }
 
 .campus-section-content h1,
@@ -194,144 +104,95 @@
 .campus-green-content h2,
 .campus-cta-content h2 {
   margin-top: 0;
-  margin-bottom: 20px;
-
-  font-weight: 700;
-
+  margin-bottom: 12px;
+  font-weight: 800;
   line-height: 1.2;
-
-  color: #111827;
-}
-
-.campus-section-content h1 {
-  font-size: 46px;
-}
-
-.campus-section-content h2 {
-  font-size: 40px;
-}
-
-.campus-section-heading h2 {
-  font-size: 40px;
+  color: #002147;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
 }
 
 .campus-section-description {
-  margin-bottom: 28px;
-
-  font-size: 17px;
-
-  line-height: 1.8;
-
-  color: #6b7280;
+  margin-bottom: 18px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
 }
 
 .campus-section-heading {
   max-width: 750px;
-
-  margin: 0 auto 50px;
+  margin: 0 auto 28px;
+  text-align: center;
 }
 
 .campus-section-heading p {
   margin: 0;
-
-  font-size: 16px;
-
-  line-height: 1.8;
-
-  color: #6b7280;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #666;
 }
 
 /* =========================================================
-   LOADING
+   LOADING & ERROR
 ========================================================= */
 
 .campus-page-loading {
-  min-height: 450px;
-
+  min-height: 300px;
   display: flex;
-
   flex-direction: column;
-
   justify-content: center;
   align-items: center;
-
   gap: 15px;
 }
 
 .campus-page-loading p {
   margin: 0;
-
   color: #6b7280;
 }
 
-/* =========================================================
-   ERROR
-========================================================= */
-
 .campus-page-error {
-  padding: 100px 20px;
-
+  padding: 60px 20px;
   text-align: center;
 }
 
 .campus-page-error h3 {
-  margin-bottom: 12px;
-
-  font-size: 28px;
-
-  color: #111827;
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #002147;
 }
 
 .campus-page-error p {
   margin: 0;
-
   color: #6b7280;
 }
 
 /* =========================================================
    CAMPUS OVERVIEW
-   FULL IMAGE - NO CROPPING
 ========================================================= */
 
 .campus-overview-section {
-  padding: 100px 0;
-
+  padding: 38px 0;
   background: #ffffff;
 }
 
 .campus-overview-image-wrapper {
   width: 100%;
-  height: 500px;
-
+  height: 380px;
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   overflow: hidden;
-
-  border-radius: 24px;
-
-  background: #f3f4f6;
-
-  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+  border-radius: 18px;
+  background: #f8fafc;
+  border: 1px solid #edf2f7;
+  box-shadow: 0 4px 16px rgba(0, 33, 71, 0.08);
 }
 
 .campus-overview-image {
   display: block;
-
   width: 100%;
   height: 100%;
-
-  /*
-     IMPORTANT:
-     contain = complete image visible
-     cover = image gets cropped
-  */
   object-fit: contain;
-
   object-position: center;
-
   transition: transform 0.5s ease;
 }
 
@@ -344,7 +205,7 @@
 ========================================================= */
 
 .campus-stats-row {
-  margin-top: 35px;
+  margin-top: 20px;
 }
 
 .campus-stat {
@@ -353,84 +214,59 @@
 
 .campus-stat strong {
   display: block;
-
-  margin-bottom: 5px;
-
-  font-size: 30px;
+  margin-bottom: 3px;
+  font-size: 26px;
   font-weight: 800;
-
-  color: #2563eb;
+  color: #002147;
 }
 
 .campus-stat span {
   display: block;
-
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
-
-  color: #6b7280;
+  color: #666;
 }
 
 /* =========================================================
    GALLERY
-   FULL IMAGE - NO CROPPING
 ========================================================= */
 
 .campus-gallery-section {
-  padding: 100px 0;
-
+  padding: 38px 0;
   background: #f8fafc;
 }
 
 .campus-gallery-card {
   height: 100%;
-
   overflow: hidden;
-
-  border-radius: 18px;
-
+  border-radius: 16px;
   background: #ffffff;
-
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  border: 1px solid #edf2f7;
+  box-shadow: 0 4px 16px rgba(0, 33, 71, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .campus-gallery-card:hover {
-  transform: translateY(-7px);
-
-  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.14);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 33, 71, 0.14);
 }
 
 .campus-gallery-image-wrapper {
   width: 100%;
-  height: 300px;
-
+  height: 240px;
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   overflow: hidden;
-
   background: #f3f4f6;
 }
 
 .campus-gallery-image {
   display: block;
-
   width: 100%;
   height: 100%;
-
-  /*
-     Entire gallery image remains visible
-  */
   object-fit: contain;
-
   object-position: center;
-
   transition: transform 0.5s ease;
 }
 
@@ -439,16 +275,14 @@
 }
 
 .campus-gallery-content {
-  padding: 20px 22px;
+  padding: 14px 18px;
 }
 
 .campus-gallery-content h4 {
   margin: 0;
-
-  font-size: 19px;
+  font-size: 16px;
   font-weight: 700;
-
-  color: #111827;
+  color: #002147;
 }
 
 /* =========================================================
@@ -456,189 +290,123 @@
 ========================================================= */
 
 .campus-facilities-section {
-  padding: 100px 0;
-
+  padding: 38px 0;
   background: #ffffff;
 }
 
 .campus-facility-card {
   height: 100%;
-
-  padding: 35px 25px;
-
+  padding: 22px 18px;
   text-align: center;
-
-  border: 1px solid #e5e7eb;
-
-  border-radius: 18px;
-
+  border: 1px solid #edf2f7;
+  border-radius: 16px;
   background: #ffffff;
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    border-color 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 33, 71, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .campus-facility-card:hover {
-  transform: translateY(-6px);
-
-  border-color: #bfdbfe;
-
-  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.09);
+  transform: translateY(-5px);
+  border-color: #fdb913;
+  box-shadow: 0 12px 28px rgba(0, 33, 71, 0.12);
 }
 
 .campus-facility-icon {
-  width: 70px;
-  height: 70px;
-
-  margin: 0 auto 20px;
-
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 12px;
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   border-radius: 50%;
-
-  background: #eff6ff;
-
-  color: #2563eb;
-
-  font-size: 28px;
+  background: #e6eef7;
+  color: #002147;
+  font-size: 24px;
 }
 
 .campus-facility-card h4 {
   margin: 0;
-
-  font-size: 19px;
+  font-size: 16px;
   font-weight: 700;
-
-  color: #111827;
+  color: #002147;
 }
 
 /* =========================================================
    VIRTUAL CAMPUS TOUR
-   FULL IMAGE - NO CROPPING
 ========================================================= */
 
 .campus-tour-section {
-  padding: 100px 0;
-
+  padding: 38px 0;
   background: #f8fafc;
 }
 
 .campus-tour-image-wrapper {
   position: relative;
-
   width: 100%;
-  height: 450px;
-
+  height: 360px;
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   overflow: hidden;
-
-  border-radius: 24px;
-
-  background: #e5e7eb;
-
-  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+  border-radius: 18px;
+  background: #edf2f7;
+  box-shadow: 0 4px 16px rgba(0, 33, 71, 0.08);
 }
 
 .campus-tour-image {
   display: block;
-
   width: 100%;
   height: 100%;
-
-  /*
-     Entire tour image remains visible
-  */
   object-fit: contain;
-
   object-position: center;
 }
 
 .campus-tour-play-button {
   position: absolute;
-
   top: 50%;
   left: 50%;
-
-  width: 76px;
-  height: 76px;
-
+  width: 60px;
+  height: 60px;
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   transform: translate(-50%, -50%);
-
   border-radius: 50%;
-
   background: #ffffff;
-
-  color: #2563eb;
-
-  font-size: 23px;
-
+  color: #002147;
+  font-size: 18px;
   text-decoration: none;
-
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
-
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .campus-tour-play-button:hover {
   transform: translate(-50%, -50%) scale(1.08);
-
-  background: #eff6ff;
-
-  color: #1d4ed8;
+  background: #fdb913;
+  color: #002147;
 }
 
 .campus-tour-play-button svg {
-  margin-left: 4px;
+  margin-left: 3px;
 }
-
-/* =========================================================
-   PRIMARY BUTTON
-========================================================= */
 
 .campus-primary-button {
   display: inline-flex !important;
-
   align-items: center;
-
   gap: 10px;
-
-  padding: 13px 24px !important;
-
+  padding: 10px 22px !important;
   border: none !important;
-
   border-radius: 8px !important;
-
-  background: #2563eb !important;
-
+  background: #002147 !important;
   font-weight: 600 !important;
-
+  font-size: 14px !important;
   box-shadow: none !important;
-
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .campus-primary-button:hover {
   transform: translateY(-2px);
-
-  background: #1d4ed8 !important;
+  background: #00152e !important;
 }
 
 /* =========================================================
@@ -646,78 +414,60 @@
 ========================================================= */
 
 .campus-green-section {
-  padding: 100px 0;
-
-  background: #f0fdf4;
+  padding: 38px 0;
+  background: #f8fafc;
 }
 
 .campus-green-content {
   max-width: 850px;
-
   margin: 0 auto;
 }
 
 .campus-green-icon {
-  width: 76px;
-  height: 76px;
-
-  margin: 0 auto 20px;
-
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 14px;
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   border-radius: 50%;
-
   background: #dcfce7;
-
   color: #16a34a;
-
-  font-size: 30px;
+  font-size: 24px;
 }
 
 .campus-green-content h2 {
-  font-size: 40px;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
 }
 
 .campus-green-content > p {
   max-width: 750px;
-
-  margin: 0 auto 35px;
-
-  font-size: 17px;
-
-  line-height: 1.8;
-
-  color: #64748b;
+  margin: 0 auto 20px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
 }
 
 .campus-green-card {
-  padding: 30px;
-
-  border-radius: 18px;
-
+  padding: 20px 24px;
+  border-radius: 16px;
   background: #ffffff;
-
-  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+  border: 1px solid #edf2f7;
+  box-shadow: 0 4px 16px rgba(0, 33, 71, 0.08);
 }
 
 .campus-green-card h3 {
-  margin-bottom: 10px;
-
-  font-size: 22px;
+  margin-bottom: 8px;
+  font-size: 18px;
   font-weight: 700;
-
   color: #166534;
 }
 
 .campus-green-card p {
   margin: 0;
-
-  line-height: 1.7;
-
-  color: #6b7280;
+  line-height: 1.6;
+  font-size: 14px;
+  color: #666;
 }
 
 /* =========================================================
@@ -725,113 +475,85 @@
 ========================================================= */
 
 .campus-student-life-section {
-  padding: 100px 0;
-
+  padding: 38px 0;
   background: #ffffff;
 }
 
 .campus-student-life-card {
   position: relative;
-
   height: 100%;
-  min-height: 145px;
-
-  padding: 30px;
-
+  min-height: auto;
+  padding: 20px 18px;
   overflow: hidden;
-
-  border: 1px solid #e5e7eb;
-
-  border-radius: 18px;
-
+  border: 1px solid #edf2f7;
+  border-radius: 16px;
   background: #ffffff;
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 33, 71, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .campus-student-life-card:hover {
-  transform: translateY(-5px);
-
-  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.09);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 33, 71, 0.12);
 }
 
 .campus-student-life-card span {
   display: block;
-
-  margin-bottom: 18px;
-
+  margin-bottom: 10px;
   font-size: 14px;
   font-weight: 800;
-
   letter-spacing: 1px;
-
-  color: #2563eb;
+  color: #fdb913;
 }
 
 .campus-student-life-card h4 {
   margin: 0;
-
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
-
-  color: #111827;
+  color: #002147;
 }
 
 /* =========================================================
-   CTA
+   CTA (Solid Footer Theme #002147)
 ========================================================= */
 
 .campus-cta-section {
-  padding: 90px 0;
+  padding: 38px 0 !important;
+  background: #002147 !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  border-top: 2px solid #fdb913;
+  border-bottom: 2px solid #fdb913;
+  margin-bottom: 35px;
 }
 
 .campus-cta-content {
   max-width: 800px;
-
   margin: 0 auto;
 }
 
 .campus-cta-content h2 {
-  margin-bottom: 18px;
-
-  font-size: 42px;
-
-  color: #111827;
+  margin-bottom: 8px !important;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem) !important;
+  color: #ffffff !important;
 }
 
 .campus-cta-content p {
   max-width: 700px;
-
-  margin: 0 auto;
-
-  font-size: 17px;
-
-  line-height: 1.8;
-
-  color: #374151;
+  margin: 0 auto !important;
+  font-size: 14.5px !important;
+  line-height: 1.6 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
 /* =========================================================
-   TABLET
+   TABLET & MOBILE
 ========================================================= */
 
 @media (max-width: 991px) {
   .campus-hero-section {
-    min-height: 440px;
-  }
-
-  .campus-hero-overlay {
-    padding: 80px 0;
-  }
-
-  .campus-hero-content h1 {
-    font-size: 48px;
-  }
-
-  .campus-hero-content p {
-    font-size: 17px;
+    min-height: 160px;
+    padding: 25px 15px;
   }
 
   .campus-overview-section,
@@ -839,195 +561,32 @@
   .campus-facilities-section,
   .campus-tour-section,
   .campus-green-section,
-  .campus-student-life-section {
-    padding: 75px 0;
-  }
-
-  .campus-section-content h1 {
-    font-size: 38px;
-  }
-
-  .campus-section-content h2,
-  .campus-section-heading h2,
-  .campus-green-content h2 {
-    font-size: 34px;
+  .campus-student-life-section,
+  .campus-cta-section {
+    padding: 30px 0 !important;
   }
 
   .campus-overview-image-wrapper {
-    height: 420px;
+    height: 340px;
   }
 
   .campus-tour-image-wrapper {
-    height: 400px;
+    height: 320px;
   }
 
   .campus-gallery-image-wrapper {
-    height: 270px;
-  }
-
-  .campus-cta-content h2 {
-    font-size: 36px;
+    height: 220px;
   }
 }
-
-/* =========================================================
-   MOBILE
-========================================================= */
 
 @media (max-width: 767px) {
   .campus-hero-section {
-    min-height: 420px;
-  }
-
-  .campus-hero-overlay {
-    padding: 70px 20px;
-  }
-
-  .campus-hero-tag {
-    font-size: 10px;
-
-    letter-spacing: 1.5px;
+    min-height: 150px;
+    padding: 20px 15px;
   }
 
   .campus-hero-content h1 {
-    font-size: 38px;
-  }
-
-  .campus-hero-content p {
-    font-size: 15px;
-
-    line-height: 1.7;
-  }
-
-  .campus-hero-button {
-    width: 100%;
-
-    max-width: 230px;
-  }
-
-  .campus-overview-section,
-  .campus-gallery-section,
-  .campus-facilities-section,
-  .campus-tour-section,
-  .campus-green-section,
-  .campus-student-life-section {
-    padding: 60px 0;
-  }
-
-  .campus-cta-section {
-    padding: 65px 0;
-  }
-
-  .campus-section-tag {
-    font-size: 11px;
-
-    letter-spacing: 1.4px;
-  }
-
-  .campus-section-content h1 {
-    font-size: 32px;
-  }
-
-  .campus-section-content h2,
-  .campus-section-heading h2,
-  .campus-green-content h2 {
-    font-size: 30px;
-  }
-
-  .campus-section-description {
-    font-size: 15px;
-
-    line-height: 1.7;
-  }
-
-  .campus-section-heading {
-    margin-bottom: 35px;
-  }
-
-  .campus-section-heading p {
-    font-size: 15px;
-  }
-
-  .campus-overview-image-wrapper {
-    height: 300px;
-  }
-
-  .campus-stats-row {
-    margin-top: 25px;
-  }
-
-  .campus-stat strong {
-    font-size: 24px;
-  }
-
-  .campus-stat span {
-    font-size: 11px;
-  }
-
-  .campus-gallery-image-wrapper {
-    height: 230px;
-  }
-
-  .campus-facility-card {
-    padding: 28px 20px;
-  }
-
-  .campus-facility-icon {
-    width: 60px;
-    height: 60px;
-
-    font-size: 24px;
-  }
-
-  .campus-facility-card h4 {
-    font-size: 17px;
-  }
-
-  .campus-tour-image-wrapper {
-    height: 300px;
-  }
-
-  .campus-tour-play-button {
-    width: 62px;
-    height: 62px;
-
-    font-size: 19px;
-  }
-
-  .campus-green-card {
-    padding: 25px 20px;
-  }
-
-  .campus-student-life-card {
-    min-height: auto;
-
-    padding: 25px;
-  }
-
-  .campus-student-life-card h4 {
-    font-size: 18px;
-  }
-
-  .campus-cta-content h2 {
-    font-size: 30px;
-  }
-
-  .campus-cta-content p {
-    font-size: 15px;
-  }
-}
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media (max-width: 480px) {
-  .campus-hero-section {
-    min-height: 390px;
-  }
-
-  .campus-hero-content h1 {
-    font-size: 32px;
+    font-size: 1.8rem;
   }
 
   .campus-hero-content p {
@@ -1035,28 +594,20 @@
   }
 
   .campus-overview-image-wrapper {
-    height: 250px;
+    height: 260px;
   }
 
   .campus-tour-image-wrapper {
-    height: 250px;
+    height: 260px;
   }
 
   .campus-gallery-image-wrapper {
-    height: 200px;
+    height: 190px;
   }
+}
 
-  .campus-stat strong {
-    font-size: 21px;
-  }
-
-  .campus-stat span {
-    font-size: 10px;
-  }
-
-  .campus-primary-button {
-    width: 100%;
-
-    justify-content: center;
+@media (max-width: 480px) {
+  .campus-hero-content h1 {
+    font-size: 1.6rem;
   }
 }
