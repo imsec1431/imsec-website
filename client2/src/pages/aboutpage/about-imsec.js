@@ -121,11 +121,14 @@ const AboutImsec = () => {
 
       <section className="overview-hero">
         <Container>
-          <div className="hero-content">
-            <h1>{about.heroTitle}</h1>
+          <div className="hero-content text-center">
+            <h1 className="text-center">{about.heroTitle}</h1>
             <p
+              className="text-center"
               style={{
                 color: "white",
+                margin: 0,
+                textAlign: "center",
               }}
             >
               {about.heroBreadcrumb?.split("/").map((item, index, arr) => (
