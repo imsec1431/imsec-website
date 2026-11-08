@@ -274,15 +274,6 @@ const AboutImsec = () => {
       <section className="facility-section">
         <Container>
           <div className="text-center mb-4">
-            <h6
-              className="section-tag"
-              style={{
-                color: "#fdb913",
-              }}
-            >
-              {about.facilityTag}
-            </h6>
-
             <h2 className="section-title">{about.facilityTitle}</h2>
 
             <p

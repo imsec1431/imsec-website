@@ -23,6 +23,9 @@ body {
 
 .section-tag {
   color: #fdb913;
+  background: transparent !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
 
   font-size: 14px;
 

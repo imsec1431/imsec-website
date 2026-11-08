@@ -138,7 +138,12 @@
   transform: scale(1.02);
 }
 
-.section-tag {
+.library-about .section-tag,
+.library-stats-section .section-tag,
+.library-facilities .section-tag,
+.library-gallery .section-tag,
+.library-rules .section-tag,
+.library-librarian .section-tag {
   display: inline-block;
 
   background: #fdb913;
