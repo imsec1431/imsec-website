@@ -126,8 +126,8 @@ const Campus = () => {
               </span>
 
               <h1>
-                Experience the
-                <span> IMSEC Campus</span>
+                Experience the IMSEC Campus
+                <span> </span>
               </h1>
 
               <p style={{ color: "white" }}>
@@ -165,7 +165,7 @@ const Campus = () => {
 
             <Col lg={6}>
               <div className="campus-section-content">
-                <span className="campus-section-tag">{campus.overviewTag}</span>
+                <span className="campus-section-tag"></span>
 
                 <h1>{campus.overviewTitle}</h1>
 
@@ -206,7 +206,7 @@ const Campus = () => {
         <section className="campus-gallery-section">
           <Container>
             <div className="campus-section-heading text-center">
-              <span className="campus-section-tag">CAMPUS GALLERY</span>
+              {/* <span className="campus-section-tag">CAMPUS GALLERY</span> */}
 
               <h2>Explore Our Campus</h2>
 
@@ -250,7 +250,7 @@ const Campus = () => {
         <section className="campus-facilities-section">
           <Container>
             <div className="campus-section-heading text-center">
-              <span className="campus-section-tag">CAMPUS FACILITIES</span>
+              {/* <span className="campus-section-tag">CAMPUS FACILITIES</span> */}
 
               <h2>Everything You Need to Learn</h2>
 
@@ -312,7 +312,7 @@ const Campus = () => {
 
             <Col lg={6}>
               <div className="campus-section-content">
-                <span className="campus-section-tag">{campus.tourTag}</span>
+                {/* <span className="campus-section-tag">{campus.tourTag}</span> */}
 
                 <h2>{campus.tourTitle}</h2>
 
@@ -351,7 +351,7 @@ const Campus = () => {
                   <FaLeaf />
                 </div>
 
-                <span className="campus-section-tag">{campus.greenTag}</span>
+                {/* <span className="campus-section-tag">{campus.greenTag}</span> */}
 
                 <h2>{campus.greenTitle}</h2>
 
@@ -377,7 +377,7 @@ const Campus = () => {
           <Container>
             <div className="campus-section-heading text-center">
               <span className="campus-section-tag">
-                {campus.studentLifeTag}
+                {/* {campus.studentLifeTag} */}
               </span>
 
               <h2>{campus.studentLifeTitle}</h2>
