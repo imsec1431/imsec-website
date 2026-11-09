@@ -116,8 +116,6 @@ const IMSGroup = () => {
         <div className="ims-group-hero-overlay" />
 
         <div className="ims-group-hero-content">
-          <span className="ims-group-eyebrow">About Us</span>
-
           <h1>{group.title}</h1>
 
           {group.subtitle && <p>{group.subtitle}</p>}
@@ -131,8 +129,6 @@ const IMSGroup = () => {
       <section className="ims-group-introduction">
         <div className="ims-group-container">
           <div className="ims-group-section-heading">
-            <span>IMS Group</span>
-
             <h2>Excellence in Education</h2>
           </div>
 
@@ -217,8 +213,6 @@ const IMSGroup = () => {
       <section className="ims-group-institutions">
         <div className="ims-group-container">
           <div className="ims-group-section-heading">
-            <span>Our Institutions</span>
-
             <h2>Institutions Under IMS Group</h2>
 
             <p>
