@@ -67,10 +67,10 @@ body {
 .executive-hero {
   position: relative;
   min-height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
   color: #fff;
   overflow: hidden;
   background: #002147 !important;
@@ -87,21 +87,38 @@ body {
 
 /* Hero Content */
 .executive-hero .container {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
   position: relative;
   z-index: 2;
 }
 
 .executive-hero .hero-content {
-  width: 100%;
+  width: 100% !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #ffffff !important;
+  padding: 0 !important;
 }
 
 .executive-hero .hero-content h1 {
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  font-weight: 800;
-  line-height: 1.2;
-  color: #fff;
-  margin: 0;
+  font-size: clamp(2rem, 4vw, 2.8rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  color: #fff !important;
+  margin: 0 0 10px 0 !important;
   letter-spacing: -0.5px;
+  text-align: center !important;
+  width: 100% !important;
 }
 
 .executive-hero .hero-content h1::after {
@@ -110,15 +127,21 @@ body {
 
 /* Breadcrumb */
 .executive-hero .hero-content p {
-  margin: 8px 0 0;
-  font-size: 14px;
+  margin: 0 auto !important;
+  font-size: 14px !important;
   color: rgba(255, 255, 255, 0.85) !important;
-  line-height: 1.5;
+  line-height: 1.5 !important;
+  text-align: center !important;
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
 }
 
 .executive-hero .hero-content span {
-  color: #fdb913;
-  margin: 0 8px;
+  color: #fdb913 !important;
+  margin: 0 8px !important;
 }
 
 /* ===========================================

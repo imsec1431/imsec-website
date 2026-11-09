@@ -40,14 +40,30 @@ const ExecutiveCouncil = () => {
       {/* ================= Hero ================= */}
       <section className="executive-hero">
         <Container>
-          <div className="hero-content">
-            <h1>Executive Council</h1>
+          <div className="hero-content text-center">
+            <h1
+              className="text-center"
+              style={{ textAlign: "center", width: "100%", margin: 0 }}
+            >
+              Executive Council
+            </h1>
 
-            <p style={{ color: "white" }}>
+            <p
+              className="text-center"
+              style={{
+                color: "white",
+                margin: "0 auto",
+                textAlign: "center",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexWrap: "wrap",
+              }}
+            >
               Home
-              <span>/</span>
+              <span style={{ color: "#fdb913", margin: "0 8px" }}>/</span>
               About
-              <span>/</span>
+              <span style={{ color: "#fdb913", margin: "0 8px" }}>/</span>
               Executive Council
             </p>
           </div>
@@ -60,12 +76,12 @@ const ExecutiveCouncil = () => {
           <Row className="align-items-center g-4">
             <Col lg={12}>
               <h6 className="section-tag" style={{ color: "black" }}>
-                LEADERSHIP TEAM
+                {/* LEADERSHIP TEAM */}
               </h6>
 
               <h2 className="section-title">
                 Executive
-                <span> Council</span>
+                {/* <span> Council</span> */}
               </h2>
 
               <p>
