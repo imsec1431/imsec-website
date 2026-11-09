@@ -66,11 +66,11 @@ Hero Banner (Clean Solid Footer Theme #002147)
   position: relative;
   min-height: 180px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 
-  text-align: center;
+  text-align: center !important;
   color: #fff;
 
   background: #002147 !important;
@@ -89,21 +89,38 @@ Hero Banner (Clean Solid Footer Theme #002147)
 }
 
 .chairman-hero .container {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
   position: relative;
   z-index: 2;
 }
 
-.hero-content {
-  width: 100%;
+.chairman-hero .hero-content {
+  width: 100% !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #ffffff !important;
+  padding: 0 !important;
 }
 
-.hero-content h1 {
-  font-size: clamp(28px, 4vw, 42px);
-  font-weight: 800;
-  line-height: 1.15;
+.chairman-hero .hero-content h1 {
+  font-size: clamp(28px, 4vw, 42px) !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
   letter-spacing: -0.5px;
-  color: #fff;
-  margin: 0 0 10px;
+  color: #ffffff !important;
+  margin: 0 0 10px 0 !important;
+  text-align: center !important;
+  width: 100% !important;
 }
 
 .chairman-hero .hero-content h1::after {
@@ -111,17 +128,23 @@ Hero Banner (Clean Solid Footer Theme #002147)
   display: none !important;
 }
 
-.hero-content p {
-  font-size: 15px;
+.chairman-hero .hero-content p {
+  font-size: 15px !important;
   font-weight: 500;
-  color: #fff !important;
-  margin: 0;
-  line-height: 1.6;
+  color: #ffffff !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  line-height: 1.6 !important;
 }
 
-.hero-content span {
-  color: #fdb913;
-  padding: 0 6px;
+.chairman-hero .hero-content span {
+  color: #fdb913 !important;
+  padding: 0 8px !important;
 }
 
 /*===========================================

@@ -82,8 +82,8 @@ const DirectorMessage = () => {
 
       <section className="chairman-hero">
         <Container>
-          <div className="hero-content">
-            <h1>Director's Message</h1>
+          <div className="hero-content text-center">
+            <h1 className="text-center">Director's Message</h1>
           </div>
         </Container>
       </section>

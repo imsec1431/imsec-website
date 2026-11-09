@@ -81,10 +81,17 @@ const ChairmanMessage = () => {
 
       <section className="chairman-hero">
         <Container>
-          <div className="hero-content">
-            <h1>Chairman's Message</h1>
+          <div className="hero-content text-center">
+            <h1 className="text-center">Chairman's Message</h1>
 
-            <p style={{ color: "white" }}>
+            <p
+              className="text-center"
+              style={{
+                color: "white",
+                margin: 0,
+                textAlign: "center",
+              }}
+            >
               Home
               <span>/</span>
               About
