@@ -47,7 +47,7 @@ const GoverningCouncil = () => {
         <Container>
           <div className="hero-content text-center">
             <h1 className="text-center" style={{ textAlign: "center" }}>
-              Governing Council
+              Governing Body
             </h1>
 
             <p
@@ -65,7 +65,7 @@ const GoverningCouncil = () => {
               <span style={{ color: "#fdb913", margin: "0 8px" }}>/</span>
               About
               <span style={{ color: "#fdb913", margin: "0 8px" }}>/</span>
-              Governing Council
+              Governing Body
             </p>
           </div>
         </Container>
@@ -76,17 +76,15 @@ const GoverningCouncil = () => {
         <Container>
           <Row className="align-items-center g-4">
             <Col lg={12}>
-              <h6 className="section-tag" style={{ color: "black" }}>
-                GOVERNANCE
-              </h6>
-
-              <h2 className="section-title">
-                Governing
-                <span> Council</span>
-              </h2>
+              <div className="text-center mb-4">
+                <h2 className="section-title text-center">
+                  Governing Body
+                  <span> </span>
+                </h2>
+              </div>
 
               <p>
-                The Governing Council provides strategic direction, policy
+                The Governing Body provides strategic direction, policy
                 guidance and administrative oversight for IMS Engineering
                 College.
               </p>
@@ -106,8 +104,8 @@ const GoverningCouncil = () => {
         <Container fluid="lg">
           <div className="text-center mb-4">
             <h2 className="section-title">
-              Governing
-              <span> Council Members</span>
+              Governing Council Members
+              <span> </span>
             </h2>
           </div>
 
@@ -160,7 +158,7 @@ const GoverningCouncil = () => {
         <Container fluid="lg">
           <div className="text-center mb-4">
             <h2 className="section-title">
-              Roles &<span> Responsibilities</span>
+              Roles & Responsibilities<span> </span>
             </h2>
           </div>
 
@@ -202,7 +200,7 @@ const GoverningCouncil = () => {
               to academic excellence, innovation and ethical leadership.
             </h2>
 
-            <h5>Governing Council</h5>
+            <h5>Governing Body</h5>
           </div>
         </Container>
       </section>

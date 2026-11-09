@@ -144,6 +144,14 @@ body {
   padding: 38px 0;
 }
 
+.governing-intro .section-title {
+  text-align: center;
+}
+
+.governing-intro .section-title::after {
+  margin: 10px auto 0;
+}
+
 .governing-intro p {
   color: #555;
   line-height: 1.8;
