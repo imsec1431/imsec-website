@@ -321,8 +321,8 @@ const AboutImsec = () => {
 
       <section className="cta-section about-imsec-cta">
         <Container>
-          <Row className="align-items-center">
-            <Col lg={8}>
+          <Row className="justify-content-center text-center">
+            <Col lg={10} md={12} className="text-center">
               <h2>{about.ctaTitle}</h2>
 
               <p>{about.ctaDescription}</p>
