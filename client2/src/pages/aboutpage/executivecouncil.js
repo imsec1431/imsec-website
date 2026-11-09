@@ -38,12 +38,35 @@ const ExecutiveCouncil = () => {
   return (
     <>
       {/* ================= Hero ================= */}
-      <section className="executive-hero">
-        <Container>
-          <div className="hero-content text-center">
+      <section className="executive-hero" style={{ textAlign: "center" }}>
+        <Container
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <div
+            className="hero-content text-center"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              textAlign: "center",
+              width: "100%",
+              margin: "0 auto",
+            }}
+          >
             <h1
               className="text-center"
-              style={{ textAlign: "center", width: "100%", margin: 0 }}
+              style={{
+                textAlign: "center",
+                width: "100%",
+                margin: "0 0 10px 0",
+                color: "#ffffff",
+              }}
             >
               Executive Council
             </h1>
@@ -58,6 +81,7 @@ const ExecutiveCouncil = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 flexWrap: "wrap",
+                width: "100%",
               }}
             >
               Home
@@ -73,8 +97,8 @@ const ExecutiveCouncil = () => {
       {/* ================= Introduction ================= */}
       <section className="executive-intro">
         <Container>
-          <Row className="align-items-center g-4">
-            <Col lg={12}>
+          <Row className="justify-content-center text-center">
+            <Col lg={10} md={12} className="text-center">
               <div className="text-center mb-4">
                 <h2 className="section-title text-center">
                   Executive
@@ -82,14 +106,28 @@ const ExecutiveCouncil = () => {
                 </h2>
               </div>
 
-              <p>
+              <p
+                className="text-center"
+                style={{
+                  textAlign: "center",
+                  maxWidth: "900px",
+                  margin: "0 auto 14px",
+                }}
+              >
                 The Executive Council of IMS Engineering College comprises
                 experienced academicians and administrators committed to
                 academic excellence, innovation, institutional growth and
                 student success.
               </p>
 
-              <p>
+              <p
+                className="text-center"
+                style={{
+                  textAlign: "center",
+                  maxWidth: "900px",
+                  margin: "0 auto",
+                }}
+              >
                 Their collective vision and leadership guide the institution
                 towards continuous improvement, quality education and global
                 recognition.
@@ -104,8 +142,8 @@ const ExecutiveCouncil = () => {
         <Container fluid="lg">
           <div className="text-center mb-4">
             <h2 className="section-title">
-              Meet Our
-              <span> Executive Council</span>
+              Meet Our  Executive Council
+              <span></span>
             </h2>
           </div>
 
@@ -156,8 +194,9 @@ const ExecutiveCouncil = () => {
               Strong leadership inspires innovation, builds character and
               creates opportunities for every student to achieve excellence.
             </h2>
+            <span className="quote-icon">"</span>
 
-            <h5>Executive Council</h5>
+            {/* <h5>Executive Council</h5> */}
           </div>
         </Container>
       </section>
