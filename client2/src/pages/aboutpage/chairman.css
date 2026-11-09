@@ -364,6 +364,7 @@ CTA Section (Footer Theme #002147)
   border-top: 3px solid #fdb913 !important;
   margin-top: 35px !important;
   margin-bottom: 35px !important;
+  text-align: center !important;
 }
 
 .chairman-cta-section h2,
@@ -373,6 +374,7 @@ CTA Section (Footer Theme #002147)
   font-weight: 800 !important;
   margin-bottom: 10px !important;
   color: #ffffff !important;
+  text-align: center !important;
 }
 
 .chairman-cta-section p,
@@ -381,7 +383,9 @@ CTA Section (Footer Theme #002147)
   color: #cbd5e1 !important;
   line-height: 1.75 !important;
   font-size: 15.5px !important;
-  margin-bottom: 0 !important;
+  margin: 0 auto !important;
+  max-width: 850px !important;
+  text-align: center !important;
 }
 
 .chairman-cta-section .btn,

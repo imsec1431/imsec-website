@@ -133,11 +133,11 @@ const ChairmanMessage = () => {
 
             <Col lg={8}>
               <div className="message-box">
-                <h6 className="section-tag">CHAIRMAN'S MESSAGE</h6>
+                {/* <h6 className="section-tag">CHAIRMAN'S MESSAGE</h6> */}
 
                 <h2 className="section-title">
                   Building Future
-                  <span> Leaders</span>
+                  {/* <span> Leaders</span> */}
                 </h2>
 
                 {chairman?.message?.split("\n").map((para, index) => (
@@ -158,7 +158,7 @@ const ChairmanMessage = () => {
           <div className="text-center mb-4">
             <h2 className="section-title">
               Our Guiding
-              <span> Principles</span>
+              {/* <span> Principles</span> */}
             </h2>
           </div>
 
@@ -198,8 +198,8 @@ const ChairmanMessage = () => {
 
       <section className="cta-section chairman-cta-section">
         <Container>
-          <Row className="align-items-center">
-            <Col lg={8}>
+          <Row className="justify-content-center text-center">
+            <Col lg={10} md={12} className="text-center">
               <h2>Become a Part of IMSEC</h2>
 
               <p>

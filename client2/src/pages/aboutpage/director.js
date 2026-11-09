@@ -140,11 +140,9 @@ const DirectorMessage = () => {
 
             <Col lg={8}>
               <div className="message-box">
-                <h6 className="section-tag">DIRECTOR'S MESSAGE</h6>
 
                 <h2 className="section-title">
                   Building Future
-                  <span> Leaders</span>
                 </h2>
 
                 {director?.message?.split("\n").map((para, index) => (
@@ -163,11 +161,10 @@ const DirectorMessage = () => {
       <section className="principle-section py-5">
         <Container>
           <div className="text-center mb-5">
-            <h6 className="section-tag">LEADERSHIP PRINCIPLES</h6>
 
             <h2 className="section-title">
               Our Guiding
-              <span> Principles</span>
+              {/* <span> Principles</span> */}
             </h2>
           </div>
 
@@ -206,8 +203,8 @@ const DirectorMessage = () => {
 
       <section className="cta-section director-cta-section chairman-cta-section">
         <Container>
-          <Row className="align-items-center">
-            <Col lg={8}>
+          <Row className="justify-content-center text-center">
+            <Col lg={10} md={12} className="text-center">
               <h2>Become a Part of IMSEC</h2>
 
               <p>

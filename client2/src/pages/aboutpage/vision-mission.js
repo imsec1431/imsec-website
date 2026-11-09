@@ -31,7 +31,7 @@ const VisionMission = () => {
 
         setError(
           err?.response?.data?.message ||
-            "Unable to load Vision & Mission information.",
+          "Unable to load Vision & Mission information.",
         );
       } finally {
         setLoading(false);
@@ -172,7 +172,7 @@ const VisionMission = () => {
               <h2 className="section-title">
                 {data.introTitle || "Inspiring Future Leaders"}{" "}
                 {data.introTitleHighlight && (
-                  <span>{data.introTitleHighlight}</span>
+                  <span></span>
                 )}
               </h2>
 
@@ -240,14 +240,11 @@ const VisionMission = () => {
       <section className="mission-section">
         <Container>
           <div className="text-center mb-4">
-            <h6 className="section-tag" style={{ color: "#fdb913" }}>
-              {data.missionSectionTag || "OUR MISSION"}
-            </h6>
 
             <h2 className="section-title">
               {data.missionSectionTitle || "What We"}{" "}
               {data.missionSectionHighlight && (
-                <span>{data.missionSectionHighlight}</span>
+                <span></span>
               )}
             </h2>
           </div>
@@ -344,7 +341,7 @@ const VisionMission = () => {
             <h2 className="section-title">
               {data.valuesSectionTitle || "Core Values"}{" "}
               {data.valuesSectionHighlight && (
-                <span>{data.valuesSectionHighlight}</span>
+                <span></span>
               )}
             </h2>
           </div>
