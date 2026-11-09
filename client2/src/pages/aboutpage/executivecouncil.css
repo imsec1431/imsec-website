@@ -153,6 +153,14 @@ body {
   padding: 38px 0;
 }
 
+.executive-intro .section-title {
+  text-align: center;
+}
+
+.executive-intro .section-title::after {
+  margin: 10px auto 0;
+}
+
 .executive-image {
   width: 100%;
   border-radius: 20px;

@@ -75,14 +75,12 @@ const ExecutiveCouncil = () => {
         <Container>
           <Row className="align-items-center g-4">
             <Col lg={12}>
-              <h6 className="section-tag" style={{ color: "black" }}>
-                {/* LEADERSHIP TEAM */}
-              </h6>
-
-              <h2 className="section-title">
-                Executive
-                {/* <span> Council</span> */}
-              </h2>
+              <div className="text-center mb-4">
+                <h2 className="section-title text-center">
+                  Executive
+                  {/* <span> Council</span> */}
+                </h2>
+              </div>
 
               <p>
                 The Executive Council of IMS Engineering College comprises
