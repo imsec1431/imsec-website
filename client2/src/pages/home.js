@@ -1287,6 +1287,7 @@ const Home = () => {
           backgroundColor: "#002147",
           background: "#002147",
           padding: "55px 0 65px",
+          marginBottom: "35px",
         }}
       >
         <Container>
