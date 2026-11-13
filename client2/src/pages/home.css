@@ -1765,9 +1765,9 @@
 }
 
 .hero-slide {
-  height: 75vh;
-  min-height: 580px;
-  max-height: 720px;
+  height: 70vh;
+  min-height: 520px;
+  max-height: 660px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
