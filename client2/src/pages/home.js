@@ -463,24 +463,6 @@ const Home = () => {
                         <span className="hero-dot">|</span>
                         <span>Holistic Development</span>
                       </div>
-                      <div className="hero-cta-buttons">
-                        <Button
-                          as={Link}
-                          to="/Admissions/ApplyforAdmission"
-                          className="hero-btn-primary"
-                        >
-                          <FaPenToSquare className="me-2" /> Apply Now <FaArrowRight className="ms-2" />
-                        </Button>
-                        <Button
-                          as="a"
-                          href="http://imsec.ac.in/assets/images/virtual-tour/index.htm"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="hero-btn-outline"
-                        >
-                          <FaCompass className="me-2" /> Virtual Campus Tour
-                        </Button>
-                      </div>
                     </div>
                   </Container>
                 </div>
@@ -939,7 +921,6 @@ const Home = () => {
           loop
           autoplay={{
             delay: 2500,
-            disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}
           spaceBetween={20}

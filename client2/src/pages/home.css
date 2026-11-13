@@ -1765,9 +1765,9 @@
 }
 
 .hero-slide {
-  height: 48vh;
-  min-height: 340px;
-  max-height: 410px;
+  height: 60vh;
+  min-height: 460px;
+  max-height: 560px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1775,8 +1775,8 @@
 }
 
 .hero-banner-content {
-  max-width: 650px;
-  padding: 16px 0 40px;
+  max-width: 680px;
+  padding: 30px 0 50px;
   z-index: 5;
 }
 
