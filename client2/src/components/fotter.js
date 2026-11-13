@@ -147,7 +147,7 @@ const Footer = () => {
                 path: "/Grievance/InternalGrievanceCommittee",
               },
               {
-                title: "CAREERS",
+                title: "Career",
                 path: "/career",
               },
             ].map((item) => (
@@ -210,15 +210,15 @@ const Footer = () => {
                 path: "/iqac/naac",
               },
               {
-                title: "Anti Ragging Committee",
+                title: "ANTI RAGGING  COMMITTEE ",
                 path: "/all-committees",
               },
               {
-                title: "Mandatory Disclosure",
+                title: "MANDATORY DISCLOSURE",
                 path: "/mandatory-disclosure",
               },
               {
-                title: "All Committees",
+                title: "IMPORTANT COMMITTEES",
                 path: "/all-committees",
               },
             ].map((item) => (

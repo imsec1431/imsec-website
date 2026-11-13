@@ -5,7 +5,13 @@ const placementStatSchema = new mongoose.Schema(
     type: {
       type: String,
       required: true,
-      enum: ["highest-package", "average-ctc", "recruiters", "placements"],
+      enum: [
+        "highest-package",
+        "average-ctc",
+        "recruiters",
+        "placements",
+        "company",
+      ],
       unique: true,
     },
 

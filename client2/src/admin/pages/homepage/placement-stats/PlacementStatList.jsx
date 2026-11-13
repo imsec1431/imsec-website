@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import {
   getPlacementStats,
-  
+
 } from "../../../../services/placementStatService";
 
 const labels = {
@@ -12,6 +12,8 @@ const labels = {
   "average-ctc": "Average CTC (CSE/IT)",
   recruiters: "Corporate Recruiter Visits",
   placements: "Total Selective Placements",
+  company: "Company Visits",
+
 };
 
 const PlacementStatList = () => {
@@ -30,7 +32,7 @@ const PlacementStatList = () => {
     fetchStats();
   }, []);
 
- 
+
 
   return (
     <Container fluid className="py-4">
@@ -72,13 +74,13 @@ const PlacementStatList = () => {
               </td>
 
               <td>
-  <Link
-    to={`/imsec-control-center/homepage/placement-stats/edit/${item._id}`}
-    className="btn btn-warning btn-sm"
-  >
-    Edit
-  </Link>
-</td>
+                <Link
+                  to={`/imsec-control-center/homepage/placement-stats/edit/${item._id}`}
+                  className="btn btn-warning btn-sm"
+                >
+                  Edit
+                </Link>
+              </td>
 
             </tr>
           ))}

@@ -62,7 +62,7 @@ const AllCommittee = () => {
 
           <span>INSTITUTIONAL GOVERNANCE</span>
 
-          <h1>All Committees</h1>
+          <h1>Important Committees</h1>
 
           <p>
             View the official committees and related documents of IMS

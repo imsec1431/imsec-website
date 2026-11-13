@@ -733,13 +733,13 @@
 }
 
 .highlight-swiper .swiper-pagination-bullet {
-  background: rgba(255, 255, 255, 0.5) !important;
+  background: rgba(0, 33, 71, 0.25) !important;
   opacity: 1 !important;
   transition: all 0.3s ease;
 }
 
 .highlight-swiper .swiper-pagination-bullet-active {
-  background: #fdb913 !important;
+  background: #002147 !important;
   width: 22px;
   border-radius: 8px;
 }
@@ -1281,13 +1281,13 @@
 }
 
 .rank-swiper .swiper-pagination-bullet {
-  background: rgba(0, 33, 71, 0.25) !important;
+  background: rgba(255, 255, 255, 0.45) !important;
   opacity: 1 !important;
   transition: all 0.3s ease;
 }
 
 .rank-swiper .swiper-pagination-bullet-active {
-  background: #002147 !important;
+  background: #fdb913 !important;
   width: 22px;
   border-radius: 8px;
 }
@@ -1540,12 +1540,12 @@
 }
 
 .achievements-swiper .swiper-pagination-bullet {
-  background: rgba(255, 255, 255, 0.5) !important;
+  background: rgba(0, 33, 71, 0.25) !important;
   opacity: 1 !important;
 }
 
 .achievements-swiper .swiper-pagination-bullet-active {
-  background: #fdb913 !important;
+  background: #002147 !important;
   width: 22px;
   border-radius: 8px;
 }
@@ -1740,13 +1740,13 @@
 }
 
 .alumni-swiper .swiper-pagination-bullet {
-  background: rgba(0, 33, 71, 0.25) !important;
+  background: rgba(255, 255, 255, 0.45) !important;
   opacity: 1 !important;
   transition: all 0.3s ease;
 }
 
 .alumni-swiper .swiper-pagination-bullet-active {
-  background: #002147 !important;
+  background: #fdb913 !important;
   width: 22px;
   border-radius: 8px;
 }

@@ -183,8 +183,9 @@ const Home = () => {
   const placementLabels = {
     "highest-package": "Highest Package Offered",
     "average-ctc": "Average CTC",
-    recruiters: "Corporate Recruiter Visits",
+    recruiters: "Company Visits",
     placements: "Total Selective Placements",
+    company: "Company Visits",
   };
 
   const getPillarIcon = (icon) => {
@@ -771,7 +772,8 @@ const Home = () => {
       </div>
 
       {/* PLACEMENT PERFORMANCE DASHBOARD */}
-      <Container className="py-4 mt-2">
+      <div style={{ background: "#ffffff", padding: "45px 0 35px" }}>
+        <Container className="mt-2">
         <Row className="justify-content-center mb-4 text-center">
           <Col md={12}>
             <h2
@@ -885,35 +887,50 @@ const Home = () => {
           </Swiper>
         )}
       </Container>
+      </div>
 
       {/* UNIVERSITY RANK HOLDERS */}
-      <Container className="py-4">
-        <div className="text-center mb-4">
-          <h6
-            style={{
-              color: "#FDB913",
-              letterSpacing: "2px",
-              fontWeight: "700",
-            }}
-          >
-            {/* ACADEMIC EXCELLENCE */}
-          </h6>
+      <div
+        style={{
+          backgroundColor: "#002147",
+          background: "#002147",
+          padding: "50px 0",
+        }}
+      >
+        <Container>
+          <div className="text-center mb-4">
+            <h6
+              style={{
+                color: "#FDB913",
+                letterSpacing: "2px",
+                fontWeight: "700",
+              }}
+            >
+              {/* ACADEMIC EXCELLENCE */}
+            </h6>
 
-          <h2
-            style={{
-              color: "#002147",
-              fontWeight: "800",
-              fontSize: "clamp(1.85rem, 3.6vw, 2.65rem)",
-              lineHeight: "1.2",
-            }}
-          >
-            University Rank Holders<span style={{ color: "#FDB913" }}></span>
-          </h2>
+            <h2
+              style={{
+                color: "#ffffff",
+                fontWeight: "800",
+                fontSize: "clamp(1.85rem, 3.6vw, 2.65rem)",
+                lineHeight: "1.2",
+              }}
+            >
+              University Rank Holders<span style={{ color: "#FDB913" }}></span>
+            </h2>
 
-          <b><p className="text-muted">
-            Celebrating students who secured top ranks in AKTU University.
-          </p></b>
-        </div>
+            <p
+              style={{
+                color: "#cbd5e1",
+                maxWidth: "700px",
+                margin: "10px auto 0",
+                fontWeight: "500",
+              }}
+            >
+              Celebrating students who secured top ranks in AKTU University.
+            </p>
+          </div>
 
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
@@ -969,41 +986,32 @@ const Home = () => {
           ))}
         </Swiper>
       </Container>
+      </div>
 
       {/* CAMPUS HIGHLIGHTS */}
-      <Container
-        fluid="xl"
-        className="py-4"
-        style={{
-          backgroundColor: "#002147",
-          background: "#002147",
-          marginTop: "15px",
-          marginBottom: "15px",
-          borderRadius: "16px",
-          boxShadow: "0 10px 30px rgba(0, 33, 71, 0.25)",
-        }}
-      >
-        <div className="text-center mb-4">
-          <h6
-            style={{
-              color: "#FDB913",
-              fontWeight: "700",
-              letterSpacing: "2px",
-              textTransform: "uppercase",
-            }}
-          >
-            {/* CAMPUS HAPPENINGS */}
-          </h6>
-          <h2
-            style={{
-              color: "#ffffff",
-              fontWeight: "800",
-              fontSize: "clamp(1.85rem, 3.6vw, 2.65rem)",
-              lineHeight: "1.2",
-            }}
-          >
-            Campus Highlights
-          </h2>
+      <div style={{ background: "#ffffff", padding: "50px 0" }}>
+        <Container>
+          <div className="text-center mb-4">
+            <h6
+              style={{
+                color: "#FDB913",
+                fontWeight: "700",
+                letterSpacing: "2px",
+                textTransform: "uppercase",
+              }}
+            >
+              {/* CAMPUS HAPPENINGS */}
+            </h6>
+            <h2
+              style={{
+                color: "#002147",
+                fontWeight: "800",
+                fontSize: "clamp(1.85rem, 3.6vw, 2.65rem)",
+                lineHeight: "1.2",
+              }}
+            >
+              Campus Highlights
+            </h2>
           <p
             style={{
               maxWidth: "650px",
@@ -1130,11 +1138,74 @@ const Home = () => {
           ))}
         </Swiper>
       </Container>
+      </div>
 
       {/* LIFE @ IMSEC */}
-      <Container className="py-4">
-        <Row className="mb-4">
-          <Col lg={12} className="text-center">
+      <div
+        style={{
+          backgroundColor: "#002147",
+          background: "#002147",
+          padding: "55px 0",
+        }}
+      >
+        <Container>
+          <Row className="mb-4">
+            <Col lg={12} className="text-center">
+              <h6
+                style={{
+                  color: "#FDB913",
+                  fontWeight: "700",
+                  letterSpacing: "2px",
+                }}
+              >
+                {/* CAMPUS EXPERIENCE */}
+              </h6>
+
+              <h2
+                style={{
+                  fontSize: "clamp(1.85rem, 3.6vw, 2.65rem)",
+                  fontWeight: "800",
+                  lineHeight: "1.2",
+                  color: "#ffffff",
+                }}
+              >
+                Life @ IMSEC<span style={{ color: "#FDB913" }}></span>
+              </h2>
+
+              <p
+                style={{
+                  maxWidth: "700px",
+                  margin: "12px auto 0",
+                  color: "#cbd5e1",
+                  fontWeight: "500",
+                }}
+              >
+                Discover innovation, sports, culture and unforgettable student
+                experiences.
+              </p>
+            </Col>
+          </Row>
+
+          <Row className="g-4">
+            {campusLife.map((item) => (
+              <Col xl={4} lg={4} md={6} sm={6} xs={12} key={item.id}>
+                <div className="life-card">
+                  <img src={item.image} alt={item.title} className="life-img" />
+
+                  <div className="life-overlay">
+                    <h5>{item.title}</h5>
+                  </div>
+                </div>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </div>
+
+      {/* ACHIEVEMENTS & RECOGNITION */}
+      <div style={{ background: "#ffffff", padding: "50px 0" }}>
+        <Container>
+          <div className="text-center mb-4">
             <h6
               style={{
                 color: "#FDB913",
@@ -1142,162 +1213,118 @@ const Home = () => {
                 letterSpacing: "2px",
               }}
             >
-              {/* CAMPUS EXPERIENCE */}
+              {/* OUR PRIDE */}
             </h6>
 
             <h2
               style={{
-                fontSize: "clamp(1.85rem, 3.6vw, 2.65rem)",
-                fontWeight: "800",
-                lineHeight: "1.2",
                 color: "#002147",
+                fontWeight: "800",
+                fontSize: "clamp(1.85rem, 3.6vw, 2.65rem)",
+                lineHeight: "1.2",
               }}
             >
-              Life @ IMSEC<span style={{ color: "#FDB913" }}></span>
+              Achievements & Recognition<span> </span>
             </h2>
 
-            <b><p
-              className="text-muted mt-3"
-              style={{ maxWidth: "700px", margin: "auto" }}
+            <p
+              className="text-muted"
+              style={{
+                maxWidth: "700px",
+                margin: "12px auto",
+                fontWeight: "500",
+              }}
             >
-              Discover innovation, sports, culture and unforgettable student
-              experiences.
-            </p></b>
-          </Col>
-        </Row>
+              Celebrating excellence through awards, rankings, accreditations,
+              research and student success.
+            </p>
+          </div>
 
-        <Row className="g-4">
-          {campusLife.map((item) => (
-            <Col xl={4} lg={4} md={6} sm={6} xs={12} key={item.id}>
-              <div className="life-card">
-                <img src={item.image} alt={item.title} className="life-img" />
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            navigation
+            pagination={{ clickable: true }}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            loop
+            spaceBetween={25}
+            breakpoints={{
+              320: { slidesPerView: 1 },
+              576: { slidesPerView: 2 },
+              768: { slidesPerView: 3 },
+              992: { slidesPerView: 4 },
+              1200: { slidesPerView: 5 },
+            }}
+            className="achievements-swiper"
+          >
+            {achievements.map((item) => (
+              <SwiperSlide key={item._id} className="h-auto">
+                <Card className="achievement-card">
+                  <div className="achievement-img-wrapper">
+                    <Card.Img
+                      variant="top"
+                      src={item.image}
+                      alt={item.title}
+                      className="achievement-img"
+                    />
+                  </div>
 
-                <div className="life-overlay">
-                  <h5>{item.title}</h5>
-                </div>
-              </div>
-            </Col>
-          ))}
-        </Row>
-      </Container>
+                  <Card.Body className="achievement-body">
+                    <Card.Title className="achievement-title">{item.title}</Card.Title>
+                  </Card.Body>
+                </Card>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </Container>
+      </div>
 
-      {/* ACHIEVEMENTS & RECOGNITION */}
-      <Container
-        fluid="xl"
-        className="py-4"
+      {/* TESTIMONIALS / ALUMNI SPOTLIGHT */}
+      <div
         style={{
           backgroundColor: "#002147",
           background: "#002147",
-          marginTop: "15px",
-          marginBottom: "15px",
-          borderRadius: "12px",
+          padding: "55px 0 65px",
         }}
       >
-        <div className="text-center mb-4">
-          <h6
-            style={{
-              color: "#FDB913",
-              fontWeight: "700",
-              letterSpacing: "2px",
-            }}
-          >
-            {/* OUR PRIDE */}
-          </h6>
+        <Container>
+          <div className="text-center mb-4">
+            <h6
+              className="text-uppercase fw-bold"
+              style={{
+                color: "#FDB913",
+                letterSpacing: "2px",
+              }}
+            >
+              {/* ALUMNI SPOTLIGHT */}
+            </h6>
 
-          <h2
-            style={{
-              color: "#ffffff",
-              fontWeight: "800",
-              fontSize: "clamp(1.85rem, 3.6vw, 2.65rem)",
-              lineHeight: "1.2",
-            }}
-          >
-            Achievements & Recognition<span > </span>
-          </h2>
+            <h2
+              style={{
+                fontWeight: "800",
+                fontSize: "clamp(1.85rem, 3.6vw, 2.65rem)",
+                lineHeight: "1.2",
+                color: "#ffffff",
+              }}
+            >
+              Our Proud Alumni
+            </h2>
 
-          <p
-            style={{
-              maxWidth: "700px",
-              margin: "15px auto",
-              color: "#e2e8f0",
-              fontWeight: "500",
-            }}
-          >
-            Celebrating excellence through awards, rankings, accreditations,
-            research and student success.
-          </p>
-        </div>
+            <p
+              style={{
+                color: "#cbd5e1",
+                maxWidth: "700px",
+                margin: "12px auto 0",
+                fontWeight: "500",
+              }}
+            >
+              Our alumni are the driving force behind innovation and excellence.
+            </p>
+          </div>
 
-        <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
-          navigation
-          pagination={{ clickable: true }}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          loop
-          spaceBetween={25}
-          breakpoints={{
-            320: { slidesPerView: 1 },
-            576: { slidesPerView: 2 },
-            768: { slidesPerView: 3 },
-            992: { slidesPerView: 4 },
-            1200: { slidesPerView: 5 },
-          }}
-          className="achievements-swiper"
-        >
-          {achievements.map((item) => (
-            <SwiperSlide key={item._id} className="h-auto">
-              <Card className="achievement-card">
-                <div className="achievement-img-wrapper">
-                  <Card.Img
-                    variant="top"
-                    src={item.image}
-                    alt={item.title}
-                    className="achievement-img"
-                  />
-                </div>
-
-                <Card.Body className="achievement-body">
-                  <Card.Title className="achievement-title">{item.title}</Card.Title>
-                </Card.Body>
-              </Card>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </Container>
-
-      {/* TESTIMONIALS / ALUMNI SPOTLIGHT */}
-      <Container className="pt-4 pb-2">
-        <div className="text-center mb-4">
-          <h6
-            className="text-uppercase fw-bold"
-            style={{
-              color: "#FDB913",
-              letterSpacing: "2px",
-            }}
-          >
-            {/* ALUMNI SPOTLIGHT */}
-          </h6>
-
-          <h2
-            style={{
-              fontWeight: "800",
-              fontSize: "clamp(1.85rem, 3.6vw, 2.65rem)",
-              lineHeight: "1.2",
-              color: "#002147",
-            }}
-          >
-            Our Proud Alumni
-          </h2>
-
-          <b><p className="text-muted">
-            Our alumni are the driving force behind innovation and excellence.
-          </p></b>
-        </div>
-
-        <Swiper
+          <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={25}
           loop={true}
@@ -1347,6 +1374,7 @@ const Home = () => {
           ))}
         </Swiper>
       </Container>
+      </div>
     </>
   );
 };

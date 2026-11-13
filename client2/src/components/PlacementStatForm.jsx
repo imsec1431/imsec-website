@@ -55,6 +55,10 @@ const PlacementStatForm = ({
                 Average CTC (CSE/IT)
               </option>
 
+              <option value="company">
+                Company Visits
+              </option>
+
               <option value="recruiters">
                 Corporate Recruiter Visits
               </option>

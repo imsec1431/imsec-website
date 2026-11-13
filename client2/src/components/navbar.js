@@ -398,7 +398,7 @@ const NavigationBar = () => {
               <div className="mid-wreath-badge">
                 <LaurelLeft />
                 <div className="mid-badge-content">
-                  <span className="mid-badge-value">23+</span>
+                  <span className="mid-badge-value">24</span>
                   <span className="mid-badge-label">Years of<br />Academic Excellence</span>
                 </div>
                 <LaurelRight />
@@ -408,21 +408,21 @@ const NavigationBar = () => {
               <div className="mid-wreath-badge">
                 <LaurelLeft />
                 <div className="mid-badge-content">
-                  <span className="mid-badge-value">4000+</span>
-                  <span className="mid-badge-label">Students</span>
+                  <span className="mid-badge-value">15000+</span>
+                  <span className="mid-badge-label">Alumni  </span>
                 </div>
                 <LaurelRight />
               </div>
 
               {/* Badge 3: 350+ Faculty Members */}
-              <div className="mid-wreath-badge d-none d-xl-inline-flex">
+              {/* <div className="mid-wreath-badge d-none d-xl-inline-flex">
                 <LaurelLeft />
                 <div className="mid-badge-content">
                   <span className="mid-badge-value">350+</span>
                   <span className="mid-badge-label">Faculty Members</span>
                 </div>
                 <LaurelRight />
-              </div>
+              </div> */}
 
               {/* Badge 4: 500+ Recruiters */}
               <div className="mid-wreath-badge">
