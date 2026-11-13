@@ -444,27 +444,10 @@ const Home = () => {
                 <div
                   className="hero-slide"
                   style={{
-                    backgroundImage: `linear-gradient(90deg, rgba(0, 18, 45, 0.82) 0%, rgba(0, 24, 55, 0.65) 45%, rgba(0, 24, 55, 0.25) 100%), url(${slide.image})`,
+                    backgroundImage: `linear-gradient(90deg, rgba(0, 18, 45, 0) 0%, rgba(0, 24, 55,0) 45%, rgba(0, 24, 55, 0) 100%), url(${slide.image})`,
                   }}
                 >
-                  <Container className="h-100 d-flex align-items-center">
-                    <div className="hero-banner-content">
-                      <h1 className="hero-main-heading">
-                        Where<br />
-                        Engineering Education<br />
-                        Meets <span className="hero-highlight-gold">Industry &amp; Innovation</span>
-                      </h1>
-                      <div className="hero-sub-tags">
-                        <span>Industry-Aligned Programmes</span>
-                        <span className="hero-dot">|</span>
-                        <span>Experiential Learning</span>
-                        <span className="hero-dot">|</span>
-                        <span>Research &amp; Innovation</span>
-                        <span className="hero-dot">|</span>
-                        <span>Holistic Development</span>
-                      </div>
-                    </div>
-                  </Container>
+
                 </div>
               </Carousel.Item>
             ))}
@@ -756,119 +739,119 @@ const Home = () => {
       {/* PLACEMENT PERFORMANCE DASHBOARD */}
       <div style={{ background: "#ffffff", padding: "45px 0 35px" }}>
         <Container className="mt-2">
-        <Row className="justify-content-center mb-4 text-center">
-          <Col md={12}>
-            <h2
-              className="fw-extrabold m-0"
-              style={{
-                fontWeight: "800",
-                fontSize: "clamp(1.85rem, 3.6vw, 2.65rem)",
-                lineHeight: "1.2",
-                color: "#002147",
-              }}
-            >
-              Placement Achievements
-            </h2>
-          </Col>
-        </Row>
-
-        <Row className="g-4">
-          {placementStats.map((stat) => (
-            <Col key={stat._id} lg={3} md={6} xs={12}>
-              <Card className="placement-card text-white p-4">
-                <Card.Body className="p-0">
-                  <div
-                    className="display-6 fw-bold mb-2"
-                    style={{ color: "#002147" }}
-                  >
-                    {stat.figure}
-                  </div>
-
-                  <div className="small opacity-75" style={{ color: "black" }}>
-                    <strong>{placementLabels[stat.type]}</strong>
-                  </div>
-                </Card.Body>
-              </Card>
+          <Row className="justify-content-center mb-4 text-center">
+            <Col md={12}>
+              <h2
+                className="fw-extrabold m-0"
+                style={{
+                  fontWeight: "800",
+                  fontSize: "clamp(1.85rem, 3.6vw, 2.65rem)",
+                  lineHeight: "1.2",
+                  color: "#002147",
+                }}
+              >
+                Placement Achievements
+              </h2>
             </Col>
-          ))}
-        </Row>
+          </Row>
 
-        {/* ==============================
+          <Row className="g-4">
+            {placementStats.map((stat) => (
+              <Col key={stat._id} lg={3} md={6} xs={12}>
+                <Card className="placement-card text-white p-4">
+                  <Card.Body className="p-0">
+                    <div
+                      className="display-6 fw-bold mb-2"
+                      style={{ color: "#002147" }}
+                    >
+                      {stat.figure}
+                    </div>
+
+                    <div className="small opacity-75" style={{ color: "black" }}>
+                      <strong>{placementLabels[stat.type]}</strong>
+                    </div>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+
+          {/* ==============================
             PLACEMENT SWIPER - FIXED
             ============================== */}
-        {placements.length > 0 && (
-          <Swiper
-            key={`placement-swiper-${placements.length}`}
-            style={{
-              paddingTop: "25px",
-              width: "87%",
-            }}
-            modules={[Navigation, Pagination, Autoplay]}
-            navigation={placements.length > 1}
-            pagination={placements.length > 1 ? { clickable: true } : false}
-            loop={placements.length > 4}
-            spaceBetween={1}
-            autoplay={
-              placements.length > 1
-                ? {
-                  delay: 2500,
-                  disableOnInteraction: false,
-                }
-                : false
-            }
-            breakpoints={{
-              320: {
-                slidesPerView: 1.1,
-                spaceBetween: 10,
-              },
-              576: {
-                slidesPerView: 1.5,
-                spaceBetween: 12,
-              },
-              768: {
-                slidesPerView: 2.2,
-                spaceBetween: 15,
-              },
-              992: {
-                slidesPerView: 3,
-                spaceBetween: 18,
-              },
-              1200: {
-                slidesPerView: 4,
-                spaceBetween: 20,
-              },
-            }}
-          >
-            {placements.map((student) => (
-              <SwiperSlide key={student._id}>
-                <div className="placement-card">
-                  <img
-                    src={student.image}
-                    alt={student.studentName}
-                    className="placement-img"
-                  />
+          {placements.length > 0 && (
+            <Swiper
+              key={`placement-swiper-${placements.length}`}
+              style={{
+                paddingTop: "25px",
+                width: "87%",
+              }}
+              modules={[Navigation, Pagination, Autoplay]}
+              navigation={placements.length > 1}
+              pagination={placements.length > 1 ? { clickable: true } : false}
+              loop={placements.length > 4}
+              spaceBetween={1}
+              autoplay={
+                placements.length > 1
+                  ? {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                  }
+                  : false
+              }
+              breakpoints={{
+                320: {
+                  slidesPerView: 1.1,
+                  spaceBetween: 10,
+                },
+                576: {
+                  slidesPerView: 1.5,
+                  spaceBetween: 12,
+                },
+                768: {
+                  slidesPerView: 2.2,
+                  spaceBetween: 15,
+                },
+                992: {
+                  slidesPerView: 3,
+                  spaceBetween: 18,
+                },
+                1200: {
+                  slidesPerView: 4,
+                  spaceBetween: 20,
+                },
+              }}
+            >
+              {placements.map((student) => (
+                <SwiperSlide key={student._id}>
+                  <div className="placement-card">
+                    <img
+                      src={student.image}
+                      alt={student.studentName}
+                      className="placement-img"
+                    />
 
-                  <div className="placement-body">
-                    <h5 style={{ color: "black" }}>{student.studentName}</h5>
+                    <div className="placement-body">
+                      <h5 style={{ color: "black" }}>{student.studentName}</h5>
 
-                    <p style={{ color: "black" }}>
-                      <strong>{student.course}</strong>
-                    </p>
+                      <p style={{ color: "black" }}>
+                        <strong>{student.course}</strong>
+                      </p>
 
-                    <p style={{ color: "black" }}>
-                      <strong>Batch : {student.batch}</strong>
-                    </p>
+                      <p style={{ color: "black" }}>
+                        <strong>Batch : {student.batch}</strong>
+                      </p>
 
-                    <div className="company-box">💼 {student.company}</div>
+                      <div className="company-box">💼 {student.company}</div>
 
-                    <div className="package-box">{student.package} LPA</div>
+                      <div className="package-box">{student.package} LPA</div>
+                    </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        )}
-      </Container>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          )}
+        </Container>
       </div>
 
       {/* UNIVERSITY RANK HOLDERS */}
@@ -914,59 +897,59 @@ const Home = () => {
             </p>
           </div>
 
-        <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
-          navigation
-          pagination={{ clickable: true }}
-          loop
-          autoplay={{
-            delay: 2500,
-            pauseOnMouseEnter: true,
-          }}
-          spaceBetween={20}
-          breakpoints={{
-            320: { slidesPerView: 1 },
-            576: { slidesPerView: 2 },
-            992: { slidesPerView: 3 },
-            1200: { slidesPerView: 4 },
-          }}
-          className="rank-swiper"
-        >
-          {sortedRankers.map((student) => (
-            <SwiperSlide key={student._id} className="h-auto">
-              <div className="rank-card">
-                <div className="rank-card-top-accent"></div>
-                <div className="rank-card-body">
-                  <div className="rank-photo-wrapper">
-                    <img
-                      src={student.image}
-                      alt={student.studentName}
-                      className="rank-photo"
-                      onError={(e) => {
-                        e.target.onerror = null;
-                        e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(student.studentName || "Ranker")}&background=002147&color=ffffff&size=200&bold=true`;
-                      }}
-                    />
-                    <span className="rank-medal-badge" title="Rank Holder">🎖️</span>
-                  </div>
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            navigation
+            pagination={{ clickable: true }}
+            loop
+            autoplay={{
+              delay: 2500,
+              pauseOnMouseEnter: true,
+            }}
+            spaceBetween={20}
+            breakpoints={{
+              320: { slidesPerView: 1 },
+              576: { slidesPerView: 2 },
+              992: { slidesPerView: 3 },
+              1200: { slidesPerView: 4 },
+            }}
+            className="rank-swiper"
+          >
+            {sortedRankers.map((student) => (
+              <SwiperSlide key={student._id} className="h-auto">
+                <div className="rank-card">
+                  <div className="rank-card-top-accent"></div>
+                  <div className="rank-card-body">
+                    <div className="rank-photo-wrapper">
+                      <img
+                        src={student.image}
+                        alt={student.studentName}
+                        className="rank-photo"
+                        onError={(e) => {
+                          e.target.onerror = null;
+                          e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(student.studentName || "Ranker")}&background=002147&color=ffffff&size=200&bold=true`;
+                        }}
+                      />
+                      <span className="rank-medal-badge" title="Rank Holder">🎖️</span>
+                    </div>
 
-                  <div className="rank-badge">🏆 Rank #{student.rank}</div>
+                    <div className="rank-badge">🏆 Rank #{student.rank}</div>
 
-                  <h5 className="rank-name">{student.studentName}</h5>
+                    <h5 className="rank-name">{student.studentName}</h5>
 
-                  <div className="rank-course">{student.course}</div>
+                    <div className="rank-course">{student.course}</div>
 
-                  <div className="rank-batch">Batch {student.batch}</div>
+                    <div className="rank-batch">Batch {student.batch}</div>
 
-                  <div className="rank-cgpa">
-                    <span>⭐</span> CGPA <strong>{student.cgpa}</strong>
+                    <div className="rank-cgpa">
+                      <span>⭐</span> CGPA <strong>{student.cgpa}</strong>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </Container>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </Container>
       </div>
 
       {/* CAMPUS HIGHLIGHTS */}
@@ -993,132 +976,132 @@ const Home = () => {
             >
               Campus Highlights
             </h2>
-          <p
-            style={{
-              maxWidth: "650px",
-              margin: "12px auto 0",
-              color: "#e2e8f0",
-              fontSize: "1rem",
-              fontWeight: "500",
+            <p
+              style={{
+                maxWidth: "650px",
+                margin: "12px auto 0",
+                color: "#e2e8f0",
+                fontSize: "1rem",
+                fontWeight: "500",
+              }}
+            >
+              {/* Catch up on the latest events, student initiatives, achievements, and vibrant college moments. */}
+            </p>
+          </div>
+
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            spaceBetween={20}
+            navigation
+            pagination={{ clickable: true }}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
             }}
+            loop={true}
+            breakpoints={{
+              320: { slidesPerView: 1 },
+              576: { slidesPerView: 1.2 },
+              768: { slidesPerView: 2 },
+              992: { slidesPerView: 3 },
+              1200: { slidesPerView: 4 },
+            }}
+            className="highlight-swiper"
           >
-            {/* Catch up on the latest events, student initiatives, achievements, and vibrant college moments. */}
-          </p>
-        </div>
-
-        <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={20}
-          navigation
-          pagination={{ clickable: true }}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
-          loop={true}
-          breakpoints={{
-            320: { slidesPerView: 1 },
-            576: { slidesPerView: 1.2 },
-            768: { slidesPerView: 2 },
-            992: { slidesPerView: 3 },
-            1200: { slidesPerView: 4 },
-          }}
-          className="highlight-swiper"
-        >
-          {campusHighlights.map((item) => (
-            <SwiperSlide key={item._id} className="h-auto">
-              <div className="highlight-premium-card">
-                <div className="highlight-img-wrapper">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="highlight-img"
-                  />
-                  <span
-                    className={`highlight-badge ${item.eventType === "News" ? "badge-news" : "badge-event"}`}
-                  >
-                    {item.eventType === "News" ? "📰 News" : "🎉 Event"}
-                  </span>
-                </div>
-
-                <div className="highlight-content">
-                  <div className="highlight-date">
-                    <span>📅</span>
-                    {new Date(item.date).toLocaleDateString("en-IN", {
-                      day: "2-digit",
-                      month: "short",
-                      year: "numeric",
-                    })}
+            {campusHighlights.map((item) => (
+              <SwiperSlide key={item._id} className="h-auto">
+                <div className="highlight-premium-card">
+                  <div className="highlight-img-wrapper">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="highlight-img"
+                    />
+                    <span
+                      className={`highlight-badge ${item.eventType === "News" ? "badge-news" : "badge-event"}`}
+                    >
+                      {item.eventType === "News" ? "📰 News" : "🎉 Event"}
+                    </span>
                   </div>
 
-                  <h5 className="highlight-title" title={item.title}>
-                    {item.title}
-                  </h5>
+                  <div className="highlight-content">
+                    <div className="highlight-date">
+                      <span>📅</span>
+                      {new Date(item.date).toLocaleDateString("en-IN", {
+                        day: "2-digit",
+                        month: "short",
+                        year: "numeric",
+                      })}
+                    </div>
 
-                  <p className="highlight-desc">
-                    {item.description}
-                  </p>
+                    <h5 className="highlight-title" title={item.title}>
+                      {item.title}
+                    </h5>
 
-                  <div className="highlight-footer">
-                    {item.readMore ? (
-                      <a
-                        href={item.readMore}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="highlight-btn"
-                      >
-                        Read More →
-                      </a>
-                    ) : (
-                      <span className="highlight-btn disabled">
-                        Read More →
-                      </span>
-                    )}
+                    <p className="highlight-desc">
+                      {item.description}
+                    </p>
 
-                    <div className="highlight-socials">
-                      {item.facebook && (
+                    <div className="highlight-footer">
+                      {item.readMore ? (
                         <a
-                          href={item.facebook}
+                          href={item.readMore}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="highlight-social-icon"
-                          title="Facebook"
+                          className="highlight-btn"
                         >
-                          <FaFacebookF />
+                          Read More →
                         </a>
+                      ) : (
+                        <span className="highlight-btn disabled">
+                          Read More →
+                        </span>
                       )}
 
-                      {item.instagram && (
-                        <a
-                          href={item.instagram}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="highlight-social-icon"
-                          title="Instagram"
-                        >
-                          <FaInstagram />
-                        </a>
-                      )}
+                      <div className="highlight-socials">
+                        {item.facebook && (
+                          <a
+                            href={item.facebook}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="highlight-social-icon"
+                            title="Facebook"
+                          >
+                            <FaFacebookF />
+                          </a>
+                        )}
 
-                      {item.linkedin && (
-                        <a
-                          href={item.linkedin}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="highlight-social-icon"
-                          title="LinkedIn"
-                        >
-                          <FaLinkedinIn />
-                        </a>
-                      )}
+                        {item.instagram && (
+                          <a
+                            href={item.instagram}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="highlight-social-icon"
+                            title="Instagram"
+                          >
+                            <FaInstagram />
+                          </a>
+                        )}
+
+                        {item.linkedin && (
+                          <a
+                            href={item.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="highlight-social-icon"
+                            title="LinkedIn"
+                          >
+                            <FaLinkedinIn />
+                          </a>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </Container>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </Container>
       </div>
 
       {/* LIFE @ IMSEC */}
@@ -1307,55 +1290,55 @@ const Home = () => {
           </div>
 
           <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={25}
-          loop={true}
-          navigation={true}
-          pagination={{ clickable: true }}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          breakpoints={{
-            320: { slidesPerView: 1 },
-            576: { slidesPerView: 2 },
-            992: { slidesPerView: 3 },
-            1200: { slidesPerView: 4 },
-          }}
-          className="alumni-swiper"
-        >
-          {alumni.map((student) => (
-            <SwiperSlide key={student._id}>
-              <div className="alumni-card">
-                <div className="alumni-card-top-accent"></div>
-                <div className="alumni-card-body">
-                  <div className="alumni-avatar-wrapper">
-                    <img
-                      src={student.image}
-                      alt={student.name}
-                      className="alumni-avatar"
-                      onError={(e) => {
-                        e.target.onerror = null;
-                        e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(student.name || "Alumni")}&background=002147&color=ffffff&size=200&bold=true`;
-                      }}
-                    />
-                    <span className="alumni-grad-cap" title="Graduate">🎓</span>
-                  </div>
+            modules={[Navigation, Pagination, Autoplay]}
+            spaceBetween={25}
+            loop={true}
+            navigation={true}
+            pagination={{ clickable: true }}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              320: { slidesPerView: 1 },
+              576: { slidesPerView: 2 },
+              992: { slidesPerView: 3 },
+              1200: { slidesPerView: 4 },
+            }}
+            className="alumni-swiper"
+          >
+            {alumni.map((student) => (
+              <SwiperSlide key={student._id}>
+                <div className="alumni-card">
+                  <div className="alumni-card-top-accent"></div>
+                  <div className="alumni-card-body">
+                    <div className="alumni-avatar-wrapper">
+                      <img
+                        src={student.image}
+                        alt={student.name}
+                        className="alumni-avatar"
+                        onError={(e) => {
+                          e.target.onerror = null;
+                          e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(student.name || "Alumni")}&background=002147&color=ffffff&size=200&bold=true`;
+                        }}
+                      />
+                      <span className="alumni-grad-cap" title="Graduate">🎓</span>
+                    </div>
 
-                  <div className="alumni-info">
-                    <h5 className="alumni-name">{student.name}</h5>
-                    <p className="alumni-course">{student.course}</p>
-                  </div>
+                    <div className="alumni-info">
+                      <h5 className="alumni-name">{student.name}</h5>
+                      <p className="alumni-course">{student.course}</p>
+                    </div>
 
-                  <div className="alumni-badge">
-                    <span className="alumni-badge-text">💼 Placed at <strong>{student.company}</strong></span>
+                    <div className="alumni-badge">
+                      <span className="alumni-badge-text">💼 Placed at <strong>{student.company}</strong></span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </Container>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </Container>
       </div>
     </>
   );
