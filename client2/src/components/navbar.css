@@ -292,12 +292,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: clamp(24px, 3.2vw, 48px);
-  padding-right: clamp(18px, 2.2vw, 36px);
+  padding-left: clamp(20px, 2.5vw, 40px);
+  padding-right: clamp(24px, 3.2vw, 48px);
   gap: 16px;
 }
 
-/* Mid Nav Branding (Logo & College Name) */
+/* Mid Nav Branding (Logo & College Name - Right Side) */
 .mid-nav-brand {
   display: inline-flex;
   align-items: center;
@@ -305,6 +305,7 @@
   text-decoration: none !important;
   color: inherit !important;
   flex-shrink: 0;
+  margin-left: auto;
   transition: transform 0.2s ease;
 }
 
@@ -374,12 +375,11 @@
   letter-spacing: 0.25px;
 }
 
-/* Mid Nav Badges (Golden Laurel Wreaths) */
+/* Mid Nav Badges (Golden Laurel Wreaths - Left Side) */
 .mid-nav-badges {
   display: flex;
   align-items: center;
   gap: clamp(6px, 1vw, 20px);
-  margin-left: auto;
   flex-shrink: 0;
 }
 
@@ -1538,5 +1538,15 @@
     bottom: 50% !important;
 
     transform: translateY(50%) !important;
+  }
+
+  .imsec-mid-container {
+    justify-content: center;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .mid-nav-brand {
+    margin: 0 auto;
   }
 }

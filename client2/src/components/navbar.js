@@ -382,11 +382,54 @@ const NavigationBar = () => {
         </Navbar>
 
         {/* =====================================================
-            MID NAVBAR: COLLEGE BRANDING & STATS BADGES (WHITE BACKGROUND)
+            MID NAVBAR: STATS BADGES (LEFT) & COLLEGE BRANDING (RIGHT)
         ===================================================== */}
         <div className="imsec-mid-navbar">
           <Container fluid className="imsec-mid-container">
-            {/* Left: Logo & College Branding */}
+            {/* Left: Academic Achievement Badges (Laurel Wreaths) */}
+            <div className="mid-nav-badges d-none d-lg-flex">
+              {/* Badge 1: 24 Years of Academic Excellence */}
+              <div className="mid-wreath-badge">
+                <LaurelLeft />
+                <div className="mid-badge-content">
+                  <span className="mid-badge-value">24</span>
+                  <span className="mid-badge-label">Years of<br />Academic Excellence</span>
+                </div>
+                <LaurelRight />
+              </div>
+
+              {/* Badge 2: 15000+ Alumni */}
+              <div className="mid-wreath-badge">
+                <LaurelLeft />
+                <div className="mid-badge-content">
+                  <span className="mid-badge-value">15000+</span>
+                  <span className="mid-badge-label">Alumni</span>
+                </div>
+                <LaurelRight />
+              </div>
+
+              {/* Badge 3: 500+ Recruiters */}
+              <div className="mid-wreath-badge">
+                <LaurelLeft />
+                <div className="mid-badge-content">
+                  <span className="mid-badge-value">500+</span>
+                  <span className="mid-badge-label">Recruiters</span>
+                </div>
+                <LaurelRight />
+              </div>
+
+              {/* Badge 4: Excellent Industry Collaborations */}
+              <div className="mid-wreath-badge d-none d-xl-inline-flex">
+                <LaurelLeft />
+                <div className="mid-badge-content">
+                  <span className="mid-badge-value text-gold-accent">Excellent</span>
+                  <span className="mid-badge-label">Industry<br />Collaborations</span>
+                </div>
+                <LaurelRight />
+              </div>
+            </div>
+
+            {/* Right: Logo & College Branding */}
             <Link to="/" className="mid-nav-brand" onClick={handleNavClick}>
               <img
                 src={imsecEmblem}
@@ -403,59 +446,6 @@ const NavigationBar = () => {
                 </div>
               </div>
             </Link>
-
-            {/* Right: Academic Achievement Badges (Laurel Wreaths) */}
-            <div className="mid-nav-badges d-none d-lg-flex">
-              {/* Badge 1: 23+ Years of Academic Excellence */}
-              <div className="mid-wreath-badge">
-                <LaurelLeft />
-                <div className="mid-badge-content">
-                  <span className="mid-badge-value">24</span>
-                  <span className="mid-badge-label">Years of<br />Academic Excellence</span>
-                </div>
-                <LaurelRight />
-              </div>
-
-              {/* Badge 2: 4000+ Students */}
-              <div className="mid-wreath-badge">
-                <LaurelLeft />
-                <div className="mid-badge-content">
-                  <span className="mid-badge-value">15000+</span>
-                  <span className="mid-badge-label">Alumni  </span>
-                </div>
-                <LaurelRight />
-              </div>
-
-              {/* Badge 3: 350+ Faculty Members */}
-              {/* <div className="mid-wreath-badge d-none d-xl-inline-flex">
-                <LaurelLeft />
-                <div className="mid-badge-content">
-                  <span className="mid-badge-value">350+</span>
-                  <span className="mid-badge-label">Faculty Members</span>
-                </div>
-                <LaurelRight />
-              </div> */}
-
-              {/* Badge 4: 500+ Recruiters */}
-              <div className="mid-wreath-badge">
-                <LaurelLeft />
-                <div className="mid-badge-content">
-                  <span className="mid-badge-value">500+</span>
-                  <span className="mid-badge-label">Recruiters</span>
-                </div>
-                <LaurelRight />
-              </div>
-
-              {/* Badge 5: Excellent Industry Collaborations */}
-              <div className="mid-wreath-badge d-none d-xl-inline-flex">
-                <LaurelLeft />
-                <div className="mid-badge-content">
-                  <span className="mid-badge-value text-gold-accent">Excellent</span>
-                  <span className="mid-badge-label">Industry<br />Collaborations</span>
-                </div>
-                <LaurelRight />
-              </div>
-            </div>
           </Container>
         </div>
 
