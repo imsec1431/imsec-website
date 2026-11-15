@@ -136,29 +136,21 @@ const AcademicCalendar = () => {
 
   return (
     <div className="academic-calendar-page">
-      <div className="academic-calendar-container">
-        {/* =========================
-            BREADCRUMB
-        ========================= */}
+      {/* =========================
+          HEADER (FULL WIDTH)
+      ========================= */}
 
-        <div className="academic-calendar-breadcrumb">
-          <span>Academics</span>
-          <span>/</span>
-          <strong>Academic Calendar</strong>
-        </div>
-
-        {/* =========================
-            HEADER
-        ========================= */}
-
-        <div className="academic-calendar-header">
+      <div className="academic-calendar-header">
+        <div className="academic-calendar-header-container">
           <span className="academic-calendar-eyebrow">ACADEMICS</span>
 
           <h1>Academic Calendar</h1>
 
           <p>Academic calendars for students, faculty and staff.</p>
         </div>
+      </div>
 
+      <div className="academic-calendar-container">
         {/* =========================
             EMPTY
         ========================= */}
