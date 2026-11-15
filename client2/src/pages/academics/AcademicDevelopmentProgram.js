@@ -66,7 +66,7 @@ const AcademicDevelopmentProgram = () => {
 
       <section className="adp-hero">
         <div className="adpHeroContainer">
-          <span className="adpEyebrow">ACADEMICS</span>
+          {/* <span className="adpEyebrow">ACADEMICS</span> */}
 
           <h1>Academic Development Programs</h1>
 
@@ -96,134 +96,134 @@ const AcademicDevelopmentProgram = () => {
                   ACADEMIC EXCELLENCE
                 </h6>
 
+                <h2 className="section-title">
+                  Academic Development
+                  <span> Programs</span>
+                </h2>
+
+                <p>
+                  Academic Development Programs are designed to enhance teaching
+                  quality, research capability, innovation, leadership and
+                  professional skills among faculty members and academic
+                  professionals.
+                </p>
+
+                <p>
+                  These initiatives promote continuous learning, modern pedagogy,
+                  industry collaboration and excellence in higher education.
+                </p>
+              </Col>
+            </Row>
+          </Container>
+        </section>
+
+        {/* ================= Programs ================= */}
+
+        <section className="program-section py-5">
+          <Container>
+            <div className="text-center mb-5">
+              <h6 className="section-tag">PROGRAMS</h6>
+
               <h2 className="section-title">
-                Academic Development
-                <span> Programs</span>
+                Upcoming &<span> Completed Programs</span>
               </h2>
+            </div>
 
-              <p>
-                Academic Development Programs are designed to enhance teaching
-                quality, research capability, innovation, leadership and
-                professional skills among faculty members and academic
-                professionals.
-              </p>
+            <Row className="g-4">
+              {programs.map((item) => (
+                <Col lg={3} md={6} key={item._id}>
+                  <div className="program-card">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="img-fluid rounded mb-3"
+                      style={{
+                        height: "180px",
+                        width: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
 
-              <p>
-                These initiatives promote continuous learning, modern pedagogy,
-                industry collaboration and excellence in higher education.
-              </p>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+                    <span
+                      className={
+                        item.status === "Upcoming" ? "upcoming" : "completed"
+                      }
+                    >
+                      {item.status}
+                    </span>
 
-      {/* ================= Programs ================= */}
+                    <h4>{item.title}</h4>
 
-      <section className="program-section py-5">
-        <Container>
-          <div className="text-center mb-5">
-            <h6 className="section-tag">PROGRAMS</h6>
+                    <p>
+                      <FaCalendarAlt /> {new Date(item.date).toLocaleDateString()}
+                    </p>
 
-            <h2 className="section-title">
-              Upcoming &<span> Completed Programs</span>
-            </h2>
-          </div>
+                    <p>
+                      <FaBookOpen className="program-icon" />
+                      <FaMapMarkerAlt /> {item.venue}
+                      <FaBookOpen className="program-icon" />
+                    </p>
 
-          <Row className="g-4">
-            {programs.map((item) => (
-              <Col lg={3} md={6} key={item._id}>
-                <div className="program-card">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="img-fluid rounded mb-3"
-                    style={{
-                      height: "180px",
-                      width: "100%",
-                      objectFit: "cover",
-                    }}
-                  />
+                    {item.status === "Upcoming" ? (
+                      <div className="d-flex justify-content-center gap-2 mt-3 flex-wrap">
+                        {item.detailsLink && (
+                          <a
+                            href={item.detailsLink}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="btn btn-outline-primary rounded-pill"
+                          >
+                            View Details
+                          </a>
+                        )}
 
-                  <span
-                    className={
-                      item.status === "Upcoming" ? "upcoming" : "completed"
-                    }
-                  >
-                    {item.status}
-                  </span>
+                        {item.registrationLink && (
+                          <a
+                            href={item.registrationLink}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="btn btn-warning rounded-pill"
+                          >
+                            Register Now
+                          </a>
+                        )}
+                      </div>
+                    ) : (
+                      <div className="program-social mt-3">
+                        {item.facebookLink && (
+                          <a
+                            href={item.facebookLink}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="facebook"
+                          >
+                            <FaFacebookF />
+                          </a>
+                        )}
 
-                  <h4>{item.title}</h4>
+                        {item.instagramLink && (
+                          <a
+                            href={item.instagramLink}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="instagram"
+                          >
+                            <FaInstagram />
+                          </a>
+                        )}
 
-                  <p>
-                    <FaCalendarAlt /> {new Date(item.date).toLocaleDateString()}
-                  </p>
+                        {item.linkedinLink && (
+                          <a
+                            href={item.linkedinLink}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="linkedin"
+                          >
+                            <FaLinkedinIn />
+                          </a>
+                        )}
 
-                  <p>
-                    <FaBookOpen className="program-icon" />
-                    <FaMapMarkerAlt /> {item.venue}
-                    <FaBookOpen className="program-icon" />
-                  </p>
-
-                  {item.status === "Upcoming" ? (
-                    <div className="d-flex justify-content-center gap-2 mt-3 flex-wrap">
-                      {item.detailsLink && (
-                        <a
-                          href={item.detailsLink}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="btn btn-outline-primary rounded-pill"
-                        >
-                          View Details
-                        </a>
-                      )}
-
-                      {item.registrationLink && (
-                        <a
-                          href={item.registrationLink}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="btn btn-warning rounded-pill"
-                        >
-                          Register Now
-                        </a>
-                      )}
-                    </div>
-                  ) : (
-                    <div className="program-social mt-3">
-                      {item.facebookLink && (
-                        <a
-                          href={item.facebookLink}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="facebook"
-                        >
-                          <FaFacebookF />
-                        </a>
-                      )}
-
-                      {item.instagramLink && (
-                        <a
-                          href={item.instagramLink}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="instagram"
-                        >
-                          <FaInstagram />
-                        </a>
-                      )}
-
-                      {item.linkedinLink && (
-                        <a
-                          href={item.linkedinLink}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="linkedin"
-                        >
-                          <FaLinkedinIn />
-                        </a>
-                      )}
-
-                      {/* {item.youtubeLink && (
+                        {/* {item.youtubeLink && (
                         <a
                           href={item.youtubeLink}
                           target="_blank"
@@ -234,101 +234,101 @@ const AcademicDevelopmentProgram = () => {
                         </a>
                       )} */}
 
-                      {item.twitterLink && (
-                        <a
-                          href={item.twitterLink}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="twitter"
-                        >
-                          <FaXTwitter />
-                        </a>
-                      )}
-                    </div>
-                  )}
+                        {item.twitterLink && (
+                          <a
+                            href={item.twitterLink}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="twitter"
+                          >
+                            <FaXTwitter />
+                          </a>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                </Col>
+              ))}
+            </Row>
+          </Container>
+        </section>
+        {/* ================= Objectives ================= */}
+
+        <section className="objective-section py-5">
+          <Container>
+            <div className="text-center mb-5">
+              <h6 className="section-tag">OBJECTIVES</h6>
+
+              <h2 className="section-title">
+                Program
+                <span> Objectives</span>
+              </h2>
+            </div>
+
+            <Row className="g-4">
+              <Col lg={3} md={6}>
+                <div className="objective-card">
+                  <FaChalkboardTeacher className="objective-icon" />
+
+                  <h4>Teaching Excellence</h4>
+
+                  <p>Enhance innovative teaching and learning methodologies.</p>
                 </div>
               </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
-      {/* ================= Objectives ================= */}
 
-      <section className="objective-section py-5">
-        <Container>
-          <div className="text-center mb-5">
-            <h6 className="section-tag">OBJECTIVES</h6>
+              <Col lg={3} md={6}>
+                <div className="objective-card">
+                  <FaBookOpen className="objective-icon" />
 
-            <h2 className="section-title">
-              Program
-              <span> Objectives</span>
-            </h2>
-          </div>
+                  <h4>Research</h4>
 
-          <Row className="g-4">
-            <Col lg={3} md={6}>
-              <div className="objective-card">
-                <FaChalkboardTeacher className="objective-icon" />
+                  <p>Encourage quality research, innovation and publications.</p>
+                </div>
+              </Col>
 
-                <h4>Teaching Excellence</h4>
+              <Col lg={3} md={6}>
+                <div className="objective-card">
+                  <FaUsers className="objective-icon" />
 
-                <p>Enhance innovative teaching and learning methodologies.</p>
-              </div>
-            </Col>
+                  <h4>Leadership</h4>
 
-            <Col lg={3} md={6}>
-              <div className="objective-card">
-                <FaBookOpen className="objective-icon" />
+                  <p>
+                    Develop academic leadership and professional competencies.
+                  </p>
+                </div>
+              </Col>
 
-                <h4>Research</h4>
+              <Col lg={3} md={6}>
+                <div className="objective-card">
+                  <FaCalendarAlt className="objective-icon" />
 
-                <p>Encourage quality research, innovation and publications.</p>
-              </div>
-            </Col>
+                  <h4>Continuous Learning</h4>
 
-            <Col lg={3} md={6}>
-              <div className="objective-card">
-                <FaUsers className="objective-icon" />
+                  <p>Promote lifelong learning and faculty development.</p>
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        </section>
 
-                <h4>Leadership</h4>
+        {/* ================= CTA ================= */}
 
-                <p>
-                  Develop academic leadership and professional competencies.
+        <section className="adp-cta">
+          <Container>
+            <Row className="align-items-center">
+              <Col lg={8}>
+                <h2 style={{ color: "white" }}>
+                  Join Our Academic Development Programs
+                </h2>
+
+                <p style={{ color: "white" }}>
+                  Enhance your academic excellence, research capabilities and
+                  teaching skills through our development programs.
                 </p>
-              </div>
-            </Col>
-
-            <Col lg={3} md={6}>
-              <div className="objective-card">
-                <FaCalendarAlt className="objective-icon" />
-
-                <h4>Continuous Learning</h4>
-
-                <p>Promote lifelong learning and faculty development.</p>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
-      {/* ================= CTA ================= */}
-
-      <section className="adp-cta">
-        <Container>
-          <Row className="align-items-center">
-            <Col lg={8}>
-              <h2 style={{ color: "white" }}>
-                Join Our Academic Development Programs
-              </h2>
-
-              <p style={{ color: "white" }}>
-                Enhance your academic excellence, research capabilities and
-                teaching skills through our development programs.
-              </p>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+              </Col>
+            </Row>
+          </Container>
+        </section>
       </div>
     </div>
   );

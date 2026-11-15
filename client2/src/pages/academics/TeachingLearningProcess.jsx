@@ -39,7 +39,7 @@ const TeachingLearningProcess = () => {
 
       setError(
         err?.response?.data?.message ||
-          "Unable to load teaching learning process.",
+        "Unable to load teaching learning process.",
       );
     } finally {
       setLoading(false);
@@ -100,7 +100,7 @@ const TeachingLearningProcess = () => {
 
       <section className="publicTeachingLearningHero">
         <div className="publicTeachingLearningHeroContainer">
-          <span className="publicTeachingLearningEyebrow">ACADEMICS</span>
+          {/* <span className="publicTeachingLearningEyebrow">ACADEMICS</span> */}
 
           <h1>Teaching Learning Process</h1>
 
@@ -117,82 +117,82 @@ const TeachingLearningProcess = () => {
         ===================================================== */}
 
         <section className="publicTeachingLearningSection">
-        {/* ===================================================
+          {/* ===================================================
             LOADING
         =================================================== */}
 
-        {loading && (
-          <div className="publicTeachingLearningLoading">
-            <div className="publicTeachingLearningSpinner"></div>
+          {loading && (
+            <div className="publicTeachingLearningLoading">
+              <div className="publicTeachingLearningSpinner"></div>
 
-            <p>Loading teaching learning activities...</p>
-          </div>
-        )}
+              <p>Loading teaching learning activities...</p>
+            </div>
+          )}
 
-        {/* ===================================================
+          {/* ===================================================
             ERROR
         =================================================== */}
 
-        {!loading && error && (
-          <div className="publicTeachingLearningError">
-            <FaBookOpen />
+          {!loading && error && (
+            <div className="publicTeachingLearningError">
+              <FaBookOpen />
 
-            <p>{error}</p>
-          </div>
-        )}
+              <p>{error}</p>
+            </div>
+          )}
 
-        {/* ===================================================
+          {/* ===================================================
             EMPTY
         =================================================== */}
 
-        {!loading && !error && items.length === 0 && (
-          <div className="publicTeachingLearningEmpty">
-            <FaBookOpen />
+          {!loading && !error && items.length === 0 && (
+            <div className="publicTeachingLearningEmpty">
+              <FaBookOpen />
 
-            <h3>No Activities Available</h3>
+              <h3>No Activities Available</h3>
 
-            <p>Teaching learning process activities will be displayed here.</p>
-          </div>
-        )}
+              <p>Teaching learning process activities will be displayed here.</p>
+            </div>
+          )}
 
-        {/* ===================================================
+          {/* ===================================================
             GALLERY
         =================================================== */}
 
-        {!loading && !error && items.length > 0 && (
-          <div className="publicTeachingLearningGrid">
-            {items.map((item, index) => (
-              <article
-                className="publicTeachingLearningCard"
-                key={item._id}
-                onClick={() => setSelectedImage(item.image)}
-              >
-                <div className="publicTeachingLearningImage">
-                  <img
-                    src={item.image}
-                    alt={`Teaching Learning Process ${index + 1}`}
-                    loading="lazy"
-                  />
+          {!loading && !error && items.length > 0 && (
+            <div className="publicTeachingLearningGrid">
+              {items.map((item, index) => (
+                <article
+                  className="publicTeachingLearningCard"
+                  key={item._id}
+                  onClick={() => setSelectedImage(item.image)}
+                >
+                  <div className="publicTeachingLearningImage">
+                    <img
+                      src={item.image}
+                      alt={`Teaching Learning Process ${index + 1}`}
+                      loading="lazy"
+                    />
 
-                  <div className="publicTeachingLearningImageOverlay">
-                    <div className="publicTeachingLearningExpand">
-                      <FaExpand />
+                    <div className="publicTeachingLearningImageOverlay">
+                      <div className="publicTeachingLearningExpand">
+                        <FaExpand />
+                      </div>
+
+                      <span>View Image</span>
                     </div>
-
-                    <span>View Image</span>
                   </div>
-                </div>
 
-                <div className="publicTeachingLearningCardBottom">
-                  <span>Academic Activity</span>
+                  <div className="publicTeachingLearningCardBottom">
+                    <span>Academic Activity</span>
 
-                  <h3>Teaching Learning Process</h3>
-                </div>
-              </article>
-            ))}
-          </div>
-        )}
-      </section>
+                    <h3>Teaching Learning Process</h3>
+                  </div>
+                </article>
+              ))}
+            </div>
+          )}
+        </section>
       </div>
 
       {/* =====================================================
