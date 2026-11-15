@@ -14,6 +14,7 @@ import {
   FaGlobe,
 } from "react-icons/fa6";
 import axios from "axios";
+import "./fotter.css";
 
 const Footer = () => {
   const [socialMedia, setSocialMedia] = useState([]);
@@ -68,235 +69,153 @@ const Footer = () => {
   };
 
   return (
-    <footer
-      style={{
-        background: "#002147",
-        color: "#fff",
-        height: "auto",
-      }}
-    >
+    <footer className="imsec-main-footer">
       <Container className="py-5">
-        <Row>
+        <Row className="gy-4">
           {/* =====================================================
               LOGO
           ===================================================== */}
-
           <Col
             lg={3}
             md={6}
             xs={12}
-            className="mb-4 d-flex align-items-center justify-content-center"
-            style={{
-              backgroundColor: "#ffffff",
-              padding: "20px",
-              borderRadius: "8px",
-            }}
+            className="d-flex align-items-center justify-content-center justify-content-lg-start"
           >
-            <img
-              src={footerlogo}
-              alt="IMSEC"
-              style={{
-                width: "100%",
-                maxWidth: "230px",
-                maxHeight: "100%",
-                objectFit: "contain",
-                margin: "auto",
-                display: "block",
-                filter: "brightness(0) saturate(100%) invert(8%) sepia(87%) saturate(3755%) hue-rotate(204deg) brightness(94%) contrast(106%)",
-              }}
-            />
+            <div className="footer-logo-card">
+              <img
+                src={footerlogo}
+                alt="IMSEC"
+                className="footer-logo-img"
+              />
+            </div>
           </Col>
 
           {/* =====================================================
               IMPORTANT LINKS
           ===================================================== */}
+          <Col lg={3} md={6} xs={6} className="footer-col-mobile">
+            <h5 className="footer-heading">Important</h5>
 
-          <Col lg={3} md={6} xs={6} className="mb-4 text-center text-lg-start">
-            <h5
-              className="mb-3"
-              style={{
-                color: "#FDB913",
-                fontWeight: "700",
-                borderBottom: "2px solid #FDB913",
-                display: "inline-block",
-                paddingBottom: "6px",
-              }}
-            >
-              Important
-            </h5>
-
-            {[
-              {
-                title: "Accreditations",
-                path: "/accreditations/accreditations",
-              },
-              {
-                title: "Rankings, Ratings and Awards",
-                path: "/accreditations/recognition",
-              },
-              {
-                title: "Student Grievance",
-                path: "/Grievance/StudentGrievance",
-              },
-              {
-                title: "Employee Grievance",
-                path: "/Grievance/EmployeeGrievance",
-              },
-              {
-                title: "Internal Complaint Committee",
-                path: "/Grievance/InternalGrievanceCommittee",
-              },
-              {
-                title: "Career",
-                path: "/career",
-              },
-            ].map((item) => (
-              <NavLink
-                key={item.title}
-                to={item.path}
-                style={{
-                  textDecoration: "none",
-                  color: "#ffffff",
-                  marginBottom: "12px",
-                  display: "flex",
-                  alignItems: "center",
-                  transition: "all 0.3s ease",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.color = "#FDB913";
-                  e.currentTarget.style.transform = "translateX(8px)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.color = "#ffffff";
-                  e.currentTarget.style.transform = "translateX(0)";
-                }}
-              >
-                <span style={{ marginRight: "8px" }}>➜</span>
-
-                {item.title}
-              </NavLink>
-            ))}
+            <div className="footer-links-list">
+              {[
+                {
+                  title: "Accreditations",
+                  path: "/accreditations/accreditations",
+                },
+                {
+                  title: "Rankings, Ratings and Awards",
+                  path: "/accreditations/recognition",
+                },
+                {
+                  title: "Student Grievance",
+                  path: "/Grievance/StudentGrievance",
+                },
+                {
+                  title: "Employee Grievance",
+                  path: "/Grievance/EmployeeGrievance",
+                },
+                {
+                  title: "Internal Complaint Committee",
+                  path: "/Grievance/InternalGrievanceCommittee",
+                },
+                {
+                  title: "Career",
+                  path: "/career",
+                },
+              ].map((item) => (
+                <NavLink
+                  key={item.title}
+                  to={item.path}
+                  className="footer-link-item"
+                >
+                  <span className="footer-link-arrow">➜</span>
+                  <span className="footer-link-text">{item.title}</span>
+                </NavLink>
+              ))}
+            </div>
           </Col>
 
           {/* =====================================================
               QUICK LINKS
           ===================================================== */}
+          <Col lg={3} md={6} xs={6} className="footer-col-mobile">
+            <h5 className="footer-heading">Quick Links</h5>
 
-          <Col lg={3} md={6} xs={6} className="mb-4 text-center text-lg-start">
-            <h5
-              className="mb-3"
-              style={{
-                color: "#FDB913",
-                fontWeight: "700",
-                borderBottom: "2px solid #FDB913",
-                display: "inline-block",
-                paddingBottom: "6px",
-              }}
-            >
-              Quick Links
-            </h5>
-
-            {[
-              {
-                title: "NIRF",
-                path: "/iqac/nirf",
-              },
-              {
-                title: "NBA",
-                path: "/iqac/nba",
-              },
-              {
-                title: "NAAC",
-                path: "/iqac/naac",
-              },
-              {
-                title: "ANTI RAGGING  COMMITTEE ",
-                path: "/all-committees",
-              },
-              {
-                title: "MANDATORY DISCLOSURE",
-                path: "/mandatory-disclosure",
-              },
-              {
-                title: "IMPORTANT COMMITTEES",
-                path: "/all-committees",
-              },
-            ].map((item) => (
-              <NavLink
-                key={item.title}
-                to={item.path}
-                style={{
-                  textDecoration: "none",
-                  color: "#ffffff",
-                  marginBottom: "12px",
-                  display: "flex",
-                  alignItems: "center",
-                  transition: "all 0.3s ease",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.color = "#FDB913";
-                  e.currentTarget.style.transform = "translateX(8px)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.color = "#ffffff";
-                  e.currentTarget.style.transform = "translateX(0)";
-                }}
-              >
-                <span style={{ marginRight: "8px" }}>➜</span>
-
-                {item.title}
-              </NavLink>
-            ))}
+            <div className="footer-links-list">
+              {[
+                {
+                  title: "NIRF",
+                  path: "/iqac/nirf",
+                },
+                {
+                  title: "NBA",
+                  path: "/iqac/nba",
+                },
+                {
+                  title: "NAAC",
+                  path: "/iqac/naac",
+                },
+                {
+                  title: "Anti-Ragging Committee",
+                  path: "/all-committees",
+                },
+                {
+                  title: "Mandatory Disclosure",
+                  path: "/mandatory-disclosure",
+                },
+                {
+                  title: "Important Committees",
+                  path: "/all-committees",
+                },
+              ].map((item) => (
+                <NavLink
+                  key={item.title}
+                  to={item.path}
+                  className="footer-link-item"
+                >
+                  <span className="footer-link-arrow">➜</span>
+                  <span className="footer-link-text">{item.title}</span>
+                </NavLink>
+              ))}
+            </div>
           </Col>
 
           {/* =====================================================
-              CONTACT
+              CONTACT US
           ===================================================== */}
+          <Col lg={3} md={6} xs={12} className="footer-col-mobile">
+            <h5 className="footer-heading">Contact Us</h5>
 
-          <Col lg={3} md={6} xs={12}>
-            <h5
-              className="mb-3"
-              style={{
-                color: "#FDB913",
-                fontWeight: "700",
-              }}
-            >
-              Contact Us
-            </h5>
+            <div className="footer-contact-list">
+              <p className="footer-contact-item">
+                <FaLocationDot className="footer-contact-icon" />
+                <span>Ghaziabad, Uttar Pradesh</span>
+              </p>
 
-            <p style={{ color: "white" }}>
-              <FaLocationDot className="me-2" />
-              Ghaziabad, Uttar Pradesh
-            </p>
+              <p className="footer-contact-item">
+                <FaPhone className="footer-contact-icon" />
+                <span>0120-4940000</span>
+              </p>
 
-            <p style={{ color: "white" }}>
-              <FaPhone className="me-2" />
-              0120-4940000
-            </p>
+              <p className="footer-contact-item">
+                <FaEnvelope className="footer-contact-icon" />
+                <span>imsec@imsec.ac.in</span>
+              </p>
 
-            <p style={{ color: "white" }}>
-              <FaEnvelope className="me-2" />
-              imsec@imsec.ac.in
-            </p>
-
-            <p style={{ color: "white" }}>
-              <FaGlobe className="me-2" />
-              www.imsec.ac.in
-            </p>
+              <p className="footer-contact-item">
+                <FaGlobe className="footer-contact-icon" />
+                <span>www.imsec.ac.in</span>
+              </p>
+            </div>
           </Col>
         </Row>
 
-        <hr
-          style={{
-            borderColor: "rgba(255,255,255,.2)",
-          }}
-        />
+        <hr style={{ borderColor: "rgba(255,255,255,.2)" }} className="my-4" />
 
         {/* =====================================================
             DYNAMIC SOCIAL ICONS
         ===================================================== */}
-
-        <div className="d-flex justify-content-center gap-3 mb-3">
+        <div className="d-flex justify-content-center flex-wrap gap-3 mb-3">
           {socialMedia.map((item) => {
             const icon = getSocialIcon(item.platform);
 
@@ -313,60 +232,35 @@ const Footer = () => {
             );
           })}
         </div>
-        <hr
-          style={{
-            borderColor: "rgba(255,255,255,.2)",
-          }}
-        />
-        <div className="d-flex justify-content-center gap-3 mb-3">
-          <p
-            style={{
-              color: "#ffffff",
-              fontSize: "14px",
-              marginBottom: "12px",
-              whiteSpace: "nowrap",
-            }}
-          >
-            An IMS Group Institution&nbsp;&nbsp;|&nbsp;&nbsp;
+
+        <hr style={{ borderColor: "rgba(255,255,255,.2)" }} className="my-3" />
+
+        {/* =====================================================
+            GROUP INSTITUTION
+        ===================================================== */}
+        <div className="d-flex justify-content-center px-2 mb-3 text-center">
+          <p className="footer-group-text">
+            <span>An IMS Group Institution</span>
+            <span className="d-none d-sm-inline" style={{ opacity: 0.6 }}>|</span>
             <a
               href="https://www.imsgroup.ac.in"
               target="_blank"
               rel="noopener noreferrer"
-              style={{
-                color: "#FDB913",
-                textDecoration: "none",
-                fontWeight: "600",
-                transition: "all 0.3s ease",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.color = "#ffffff";
-                e.currentTarget.style.textDecoration = "underline";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.color = "#FDB913";
-                e.currentTarget.style.textDecoration = "none";
-              }}
+              className="footer-group-link"
             >
               www.imsgroup.ac.in
             </a>
           </p>
         </div>
-        <hr
-          style={{
-            borderColor: "rgba(255,255,255,.2)",
-          }}
-        />
+
+        <hr style={{ borderColor: "rgba(255,255,255,.2)" }} className="my-3" />
 
         {/* =====================================================
-            BOTTOM
+            BOTTOM COPYRIGHT
         ===================================================== */}
-
-        <div className="d-flex flex-column flex-lg-row justify-content-between align-items-center">
+        <div className="d-flex flex-column flex-md-row justify-content-between align-items-center text-center text-md-start gap-2">
           <small>© 2026 IMS Engineering College. All Rights Reserved.</small>
-
-          <div className="d-flex gap-3 mt-2 mt-lg-0">
-            <small>Design & Development by Team-IT-IMSEC</small>
-          </div>
+          <small>Design & Development by Team-IT-IMSEC</small>
         </div>
       </Container>
     </footer>
@@ -383,28 +277,7 @@ const SocialIcon = ({ href, icon }) => (
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Social media"
-    style={{
-      width: "42px",
-      height: "42px",
-      borderRadius: "50%",
-      background: "#002147",
-      color: "#fff",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      cursor: "pointer",
-      transition: "0.3s",
-      fontSize: "18px",
-      textDecoration: "none",
-    }}
-    onMouseEnter={(e) => {
-      e.currentTarget.style.background = "#FDB913";
-      e.currentTarget.style.color = "#002147";
-    }}
-    onMouseLeave={(e) => {
-      e.currentTarget.style.background = "#002147";
-      e.currentTarget.style.color = "#fff";
-    }}
+    className="footer-social-icon"
   >
     {icon}
   </a>

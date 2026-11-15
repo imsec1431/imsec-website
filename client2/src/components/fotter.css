@@ -1,0 +1,220 @@
+/* =========================================================
+   FOOTER STYLING & MOBILE RESPONSIVENESS
+========================================================= */
+
+.imsec-main-footer {
+  background: #002147;
+  color: #ffffff;
+  height: auto;
+  position: relative;
+  z-index: 10;
+}
+
+/* Logo Card */
+.footer-logo-card {
+  background-color: #ffffff;
+  padding: 16px 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .footer-logo-card {
+    margin: 0;
+  }
+}
+
+.footer-logo-img {
+  width: 100%;
+  max-width: 210px;
+  max-height: 85px;
+  object-fit: contain;
+  display: block;
+  filter: brightness(0) saturate(100%) invert(8%) sepia(87%) saturate(3755%) hue-rotate(204deg) brightness(94%) contrast(106%);
+}
+
+/* Headings */
+.footer-heading {
+  color: #FDB913;
+  font-weight: 700;
+  font-size: 17px;
+  border-bottom: 2px solid #FDB913;
+  display: inline-block;
+  padding-bottom: 6px;
+  margin-bottom: 16px;
+  letter-spacing: 0.3px;
+}
+
+/* Links List & Items */
+.footer-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-link-item {
+  text-decoration: none !important;
+  color: #ffffff !important;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+  transition: all 0.25s ease;
+}
+
+.footer-link-item:hover {
+  color: #FDB913 !important;
+  transform: translateX(5px);
+}
+
+.footer-link-arrow {
+  color: #FDB913;
+  font-size: 11px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.footer-link-text {
+  flex: 1;
+}
+
+/* Contact Items */
+.footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-contact-item {
+  color: #ffffff;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+.footer-contact-icon {
+  color: #FDB913;
+  font-size: 14px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+/* Social Icon */
+.footer-social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  text-decoration: none !important;
+}
+
+.footer-social-icon:hover {
+  background: #FDB913;
+  color: #002147;
+  border-color: #FDB913;
+  transform: translateY(-2px);
+}
+
+/* Group Institution banner */
+.footer-group-text {
+  color: #ffffff;
+  font-size: 14px;
+  margin-bottom: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.footer-group-link {
+  color: #FDB913;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.footer-group-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* =========================================================
+   MOBILE RESPONSIVENESS (< 768px and < 576px)
+========================================================= */
+
+@media (max-width: 767.98px) {
+  .footer-col-mobile {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .footer-heading {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .footer-links-list {
+    gap: 8px;
+  }
+
+  .footer-link-item {
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  .footer-contact-item {
+    font-size: 13px;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .footer-col-mobile {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .footer-link-item {
+    font-size: 12.5px;
+    gap: 6px;
+  }
+
+  .footer-link-arrow {
+    font-size: 10px;
+    margin-top: 3px;
+  }
+
+  .footer-contact-item {
+    font-size: 12.5px;
+  }
+
+  .footer-social-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+  }
+
+  .footer-group-text {
+    font-size: 13px;
+  }
+}
