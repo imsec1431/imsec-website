@@ -65,25 +65,21 @@ const RulesRegulations = () => {
   }
   return (
     <div className="rulesRegulationsPage">
-      <div className="rulesContainer">
-        {/* ================= Hero ================= */}
+      {/* ================= Hero (FULL WIDTH) ================= */}
 
-        <div className="rulesBreadcrumb">
-          <span>Academics</span>
-          <span>/</span>
-          <strong>Rules & Regulations</strong>
-        </div>
-
-        <section className="rules-hero">
-          <span className="rulesEyebrow">ACADEMICS</span>
+      <section className="rules-hero">
+        <div className="rulesHeroContainer">
+          {/* <span className="rulesEyebrow">ACADEMICS</span> */}
 
           <h1>Rules & Regulations</h1>
 
           <p>
             Comprehensive policies, code of conduct, academic guidelines, and regulations of IMSEC.
           </p>
-        </section>
+        </div>
+      </section>
 
+      <div className="rulesContainer">
         {/* ================= About ================= */}
 
         <section className="rules-about py-4">
