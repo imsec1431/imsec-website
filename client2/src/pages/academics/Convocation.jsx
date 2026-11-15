@@ -79,27 +79,20 @@ const Convocation = () => {
 
   return (
     <div className="convocationPage">
-      <div className="convocationContainer">
-        {/* ==========================================
-            Breadcrumb
-        ========================================== */}
-        <div className="convocationBreadcrumb">
-          <span>Academics</span>
-          <span>/</span>
-          <strong>Convocation</strong>
-        </div>
-
-        {/* ==========================================
-            Hero
-        ========================================== */}
-        <section className="convocationHero">
-          <span className="convocationEyebrow">ACADEMICS</span>
+      {/* ==========================================
+          Hero (FULL WIDTH)
+      ========================================== */}
+      <section className="convocationHero">
+        <div className="convocationHeroContainer">
+          {/* <span className="convocationEyebrow">ACADEMICS</span> */}
           <h1>Convocation</h1>
           <p>
             Celebrating academic excellence, achievements, and milestones at IMSEC.
           </p>
-        </section>
+        </div>
+      </section>
 
+      <div className="convocationContainer">
         {/* ==========================================
             Content Section
         ========================================== */}
