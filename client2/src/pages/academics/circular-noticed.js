@@ -78,25 +78,21 @@ const CircularNotice = () => {
 
   return (
     <div className="circularNoticePage">
-      <div className="circularNoticeContainer">
-        {/* ================= Hero ================= */}
+      {/* ================= Hero (FULL WIDTH) ================= */}
 
-        <div className="circularNoticeBreadcrumb">
-          <span>Academics</span>
-          <span>/</span>
-          <strong>Circulars & Notices</strong>
-        </div>
-
-        <section className="notice-hero">
-          <span className="noticeEyebrow">ACADEMICS</span>
+      <section className="notice-hero">
+        <div className="noticeHeroContainer">
+          {/* <span className="noticeEyebrow">ACADEMICS</span> */}
 
           <h1>Circulars & Notices</h1>
 
           <p>
             Official circulars, academic notices, and important institutional announcements.
           </p>
-        </section>
+        </div>
+      </section>
 
+      <div className="circularNoticeContainer">
         {/* ================= Search ================= */}
 
         <section className="search-section mb-4">
