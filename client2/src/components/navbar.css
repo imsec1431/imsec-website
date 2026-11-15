@@ -342,11 +342,11 @@
 
 .mid-nav-name-city {
   font-family: "Poppins", "Segoe UI", sans-serif;
-  font-size: clamp(11.5px, 0.9vw, 13.5px);
-  font-weight: 600;
+  font-size: clamp(10.5px, 0.8vw, 12.5px);
+  font-weight: 500;
   color: #4a5568;
-  letter-spacing: 0.5px;
-  margin-top: 1px;
+  letter-spacing: 0.25px;
+  margin-top: 2px;
 }
 
 .mid-nav-divider {
@@ -832,6 +832,7 @@
 ========================================================= */
 
 @media (min-width: 1400px) {
+
   .imsec-top-container,
   .main-nav-container {
     max-width: 1550px;
@@ -871,10 +872,12 @@
     padding-left: 20px;
     padding-right: 20px;
   }
+
   .logo-img {
     max-width: 360px;
     height: 56px;
   }
+
   .top-links .nav-link,
   .top-virtual-tour-link {
     font-size: 11px;
@@ -882,6 +885,7 @@
     line-height: 28px;
     height: 28px;
   }
+
   .social-icon {
     width: 20px;
     height: 20px;
@@ -908,6 +912,7 @@
     padding-left: 15px;
     padding-right: 15px;
   }
+
   .logo-img {
     max-width: 330px;
 
