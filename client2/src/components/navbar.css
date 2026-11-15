@@ -313,11 +313,11 @@
 }
 
 .mid-nav-logo-img {
-  width: clamp(50px, 4.2vw, 64px);
-  height: clamp(50px, 4.2vw, 64px);
+  width: clamp(48px, 4.2vw, 62px);
+  height: clamp(48px, 4.2vw, 62px);
   object-fit: contain;
   flex-shrink: 0;
-  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.08));
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 .mid-nav-title-block {
