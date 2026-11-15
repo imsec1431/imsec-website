@@ -292,8 +292,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: clamp(10px, 1.5vw, 24px);
-  padding-right: clamp(10px, 1.5vw, 24px);
+  padding-left: clamp(28px, 4vw, 65px);
+  padding-right: clamp(20px, 2.5vw, 40px);
   gap: 16px;
 }
 
@@ -301,7 +301,7 @@
 .mid-nav-brand {
   display: inline-flex;
   align-items: center;
-  gap: clamp(10px, 1.2vw, 16px);
+  gap: clamp(14px, 1.5vw, 20px);
   text-decoration: none !important;
   color: inherit !important;
   flex-shrink: 0;
