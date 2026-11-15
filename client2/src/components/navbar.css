@@ -282,7 +282,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   position: relative;
   z-index: 1031;
-  padding: 6px 0;
+  padding: 8px 0;
 }
 
 .imsec-mid-container {
@@ -292,8 +292,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: clamp(28px, 4vw, 65px);
-  padding-right: clamp(20px, 2.5vw, 40px);
+  padding-left: clamp(24px, 3.2vw, 48px);
+  padding-right: clamp(18px, 2.2vw, 36px);
   gap: 16px;
 }
 
@@ -301,7 +301,7 @@
 .mid-nav-brand {
   display: inline-flex;
   align-items: center;
-  gap: clamp(14px, 1.5vw, 20px);
+  gap: clamp(14px, 1.4vw, 18px);
   text-decoration: none !important;
   color: inherit !important;
   flex-shrink: 0;
@@ -313,56 +313,65 @@
 }
 
 .mid-nav-logo-img {
-  width: clamp(48px, 4.2vw, 62px);
-  height: clamp(48px, 4.2vw, 62px);
+  width: clamp(50px, 4.2vw, 64px);
+  height: clamp(50px, 4.2vw, 64px);
   object-fit: contain;
   flex-shrink: 0;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.08));
 }
 
 .mid-nav-title-block {
   display: flex;
   align-items: center;
-  gap: clamp(10px, 1.2vw, 16px);
 }
 
 .mid-nav-college-name {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .mid-nav-name-main {
   font-family: "Merriweather", "Georgia", "Times New Roman", serif;
-  font-size: clamp(18px, 1.6vw, 25px);
+  font-size: clamp(19px, 1.65vw, 25px);
   font-weight: 800;
-  color: #0b1e3f;
+  color: #002147;
   line-height: 1.15;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.3px;
 }
 
-.mid-nav-name-city {
+.mid-nav-name-subtitle {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 3px;
   font-family: "Poppins", "Segoe UI", sans-serif;
-  font-size: clamp(10.5px, 0.8vw, 12.5px);
-  font-weight: 500;
-  color: #4a5568;
-  letter-spacing: 0.25px;
-  margin-top: 2px;
+  font-size: clamp(11px, 0.82vw, 12.5px);
+  line-height: 1.35;
 }
 
-.mid-nav-divider {
-  width: 1.5px;
-  height: clamp(30px, 2.5vw, 38px);
-  background: #cbd5e1;
+.mid-nav-name-subtitle::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #fdb913;
   flex-shrink: 0;
+  margin-right: 2px;
 }
 
-.mid-nav-society-badge {
-  font-family: "Poppins", "Segoe UI", sans-serif;
-  font-size: clamp(12px, 0.92vw, 14px);
-  font-weight: 600;
-  color: #1e293b;
-  white-space: nowrap;
+.mid-nav-sub-prefix {
+  color: #64748b;
+  font-weight: 500;
   letter-spacing: 0.2px;
+}
+
+.mid-nav-sub-society {
+  color: #002147;
+  font-weight: 700;
+  letter-spacing: 0.25px;
 }
 
 /* Mid Nav Badges (Golden Laurel Wreaths) */

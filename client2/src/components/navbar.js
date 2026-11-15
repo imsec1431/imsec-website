@@ -396,9 +396,10 @@ const NavigationBar = () => {
               <div className="mid-nav-title-block">
                 <div className="mid-nav-college-name">
                   <span className="mid-nav-name-main">IMS Engineering College</span>
-                  <span className="mid-nav-name-city">
-                    (Under the Aegis of IMS Society, Ghaziabad)
-                  </span>
+                  <div className="mid-nav-name-subtitle">
+                    <span className="mid-nav-sub-prefix">Under the Aegis of</span>
+                    <strong className="mid-nav-sub-society">IMS Society, Ghaziabad</strong>
+                  </div>
                 </div>
               </div>
             </Link>
