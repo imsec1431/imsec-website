@@ -58,22 +58,12 @@ const LearningDevelopmentCentre = () => {
 
   return (
     <div className="publicLearningDevelopmentCentre">
-      <div className="ldcContainer">
-        {/* =====================================================
-            BREADCRUMB
-        ===================================================== */}
+      {/* =====================================================
+          HERO (FULL WIDTH)
+      ===================================================== */}
 
-        <div className="ldcBreadcrumb">
-          <span>Academics</span>
-          <span>/</span>
-          <strong>Learning Development Centre</strong>
-        </div>
-
-        {/* =====================================================
-            HERO
-        ===================================================== */}
-
-        <section className="ldcHero">
+      <section className="ldcHero">
+        <div className="ldcHeroContainer">
           <span className="ldcEyebrow">ACADEMICS</span>
 
           <h1>Learning Development Centre</h1>
@@ -82,8 +72,10 @@ const LearningDevelopmentCentre = () => {
             Access important Learning Development Centre documents, guidelines
             and resources provided by IMSEC.
           </p>
-        </section>
+        </div>
+      </section>
 
+      <div className="ldcContainer">
         {/* =====================================================
             MAIN CONTENT
         ===================================================== */}
