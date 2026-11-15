@@ -114,24 +114,12 @@ const PaymentProcedure = () => {
 
   return (
     <div className="payment-procedure-public-page">
-      <div className="payment-procedure-public-container">
-        {/* ===================================================
-            BREADCRUMB
-        =================================================== */}
+      {/* ===================================================
+          HERO (FULL WIDTH)
+      =================================================== */}
 
-        <div className="payment-procedure-public-breadcrumb">
-          <span>Admissions</span>
-
-          <span>/</span>
-
-          <strong>Payment Procedure</strong>
-        </div>
-
-        {/* ===================================================
-            HEADER
-        =================================================== */}
-
-        <section className="payment-procedure-public-hero">
+      <section className="payment-procedure-public-hero">
+        <div className="payment-procedure-public-hero-container">
           <span className="payment-public-eyebrow">ADMISSIONS</span>
 
           <h1>Payment Procedure</h1>
@@ -140,8 +128,10 @@ const PaymentProcedure = () => {
             Follow the payment instructions below for making your academic or
             hostel fee payment.
           </p>
-        </section>
+        </div>
+      </section>
 
+      <div className="payment-procedure-public-container">
         {/* ===================================================
             ONLINE TRANSACTION
         =================================================== */}

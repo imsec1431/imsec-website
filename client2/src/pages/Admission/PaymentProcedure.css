@@ -4,22 +4,15 @@
 
 .payment-procedure-public-page {
   min-height: 100vh;
-  padding: 16px 20px 45px;
+  padding: 0 0 50px;
   background: #f6f8fb;
   color: #202938;
 }
 
 .payment-procedure-public-container {
   width: 90%;
-  max-width: 90%;
-  margin: 0 auto;
-}
-
-.payment-procedure-public-breadcrumb,
-.payment-procedure-public-hero {
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 /* =========================================================
@@ -44,19 +37,24 @@
 }
 
 /* =========================================================
-   HERO
+   HERO (FULL WIDTH)
 ========================================================= */
 
 .payment-procedure-public-hero {
-  padding: 28px 32px;
-
+  width: 100%;
+  padding: 38px 0 42px;
+  margin-bottom: 24px;
   background: #002147;
-
   border: none;
-  border-radius: 14px;
-
-  box-shadow: 0 6px 20px rgba(0, 33, 71, 0.18);
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
   color: #ffffff;
+}
+
+.payment-procedure-public-hero-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .payment-public-eyebrow {
@@ -432,6 +430,7 @@
   gap: 18px;
 
   margin-top: 18px;
+  margin-bottom: 24px;
   padding: 18px 22px;
 
   background: #ffffff;
@@ -646,7 +645,7 @@
   }
 
   .payment-procedure-public-hero {
-    padding: 22px 20px;
+    padding: 32px 0 36px;
   }
 }
 
@@ -655,17 +654,18 @@
 ========================================================= */
 
 @media (max-width: 700px) {
-  .payment-procedure-public-container {
-    width: 95%;
-    max-width: 95%;
+  .payment-procedure-public-container,
+  .payment-procedure-public-hero-container {
+    width: 94%;
+    max-width: 94%;
   }
 
   .payment-procedure-public-page {
-    padding: 14px 10px 35px;
+    padding: 0 0 40px;
   }
 
   .payment-procedure-public-hero {
-    padding: 20px 16px;
+    padding: 26px 0 30px;
   }
 
   .payment-procedure-public-hero h1 {
@@ -703,15 +703,17 @@
 
 @media (max-width: 450px) {
   .payment-procedure-public-page {
-    padding: 17px 9px 35px;
+    padding: 0 0 35px;
   }
 
-  .payment-procedure-public-breadcrumb {
-    font-size: 10px;
+  .payment-procedure-public-container,
+  .payment-procedure-public-hero-container {
+    width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
   }
 
   .payment-procedure-public-hero {
-    padding: 23px 16px;
+    padding: 24px 0 28px;
   }
 
   .payment-procedure-public-hero h1 {
