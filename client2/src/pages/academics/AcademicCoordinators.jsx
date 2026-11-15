@@ -36,7 +36,7 @@ const AcademicCoordinators = () => {
       {/* PAGE HEADER (FULL WIDTH) */}
       <div className="academic-coordinators-header">
         <div className="academic-coordinators-header-container">
-          <span className="academic-coordinators-eyebrow">ACADEMICS</span>
+          {/* <span className="academic-coordinators-eyebrow">ACADEMICS</span> */}
 
           <h1>Academic Coordinators</h1>
 
