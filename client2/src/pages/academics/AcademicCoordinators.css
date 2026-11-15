@@ -6,95 +6,94 @@
 .academic-coordinators-page {
   width: 100%;
   min-height: 100vh;
-  padding: 65px 20px 80px;
+  padding: 16px 20px 45px;
   box-sizing: border-box;
-
-  background:
-    radial-gradient(
-      circle at 10% 10%,
-      rgba(209, 154, 50, 0.06),
-      transparent 28%
-    ),
-    radial-gradient(circle at 90% 80%, rgba(23, 32, 51, 0.05), transparent 30%),
-    #f6f8fb;
+  background: #f6f8fb;
 }
 
 .academic-coordinators-container {
-  width: 100%;
-  max-width: 1180px;
+  width: 90%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
+.academic-coordinators-breadcrumb,
+.academic-coordinators-header {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .academic-coordinators-container {
+    width: 95%;
+    max-width: 95%;
+  }
+}
+
 /* =========================================================
-   HEADER
+   BREADCRUMB
+========================================================= */
+
+.academic-coordinators-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 14px;
+  color: #7b8492;
+  font-size: 13px;
+}
+
+.academic-coordinators-breadcrumb strong {
+  color: #002147;
+  font-weight: 650;
+}
+
+/* =========================================================
+   HEADER (HERO)
 ========================================================= */
 
 .academic-coordinators-header {
-  text-align: center;
-  margin-bottom: 50px;
+  padding: 28px 32px;
+  margin-bottom: 22px;
+  background: #002147;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 33, 71, 0.18);
+  color: #ffffff;
+  text-align: left;
+}
+
+.academic-coordinators-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  margin-bottom: 10px;
+  padding: 3px 10px;
+  color: #002147;
+  background: #fdb913;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
 }
 
 .academic-coordinators-header h1 {
-  position: relative;
-
-  display: inline-block;
-
   margin: 0;
-  padding: 0 0 17px;
-
-  color: #182235;
-
-  font-size: 36px;
+  padding: 0;
+  color: #ffffff;
+  font-size: clamp(26px, 3.5vw, 36px);
   font-weight: 750;
-
-  letter-spacing: -0.7px;
-}
-
-.academic-coordinators-header h1::before {
-  content: "";
-
-  position: absolute;
-
-  left: 50%;
-  bottom: 0;
-
-  width: 75px;
-  height: 4px;
-
-  transform: translateX(-50%);
-
-  border-radius: 10px;
-
-  background: #c99532;
-}
-
-.academic-coordinators-header h1::after {
-  content: "";
-
-  position: absolute;
-
-  left: 50%;
-  bottom: 0;
-
-  width: 25px;
-  height: 4px;
-
-  transform: translateX(-50%);
-
-  border-radius: 10px;
-
-  background: #182235;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
 }
 
 .academic-coordinators-header p {
-  max-width: 700px;
-
-  margin: 20px auto 0;
-
-  color: #697386;
-
-  font-size: 15px;
-  line-height: 1.8;
+  max-width: 720px;
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 13.5px;
+  line-height: 1.6;
 }
 
 /* =========================================================
@@ -105,7 +104,7 @@
   display: flex;
   flex-direction: column;
 
-  gap: 25px;
+  gap: 18px;
 }
 
 /* =========================================================
@@ -122,20 +121,18 @@
 
   overflow: hidden;
 
-  background: rgba(255, 255, 255, 0.96);
+  background: #ffffff;
 
   border: 1px solid rgba(226, 231, 239, 0.9);
 
-  border-radius: 18px;
+  border-radius: 12px;
 
-  box-shadow:
-    0 8px 25px rgba(24, 34, 53, 0.055),
-    0 2px 6px rgba(24, 34, 53, 0.035);
+  box-shadow: 0 4px 16px rgba(24, 34, 53, 0.05);
 
   transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease,
-    border-color 0.35s ease;
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 
 /* GOLD VERTICAL LINE */
@@ -151,25 +148,23 @@
   width: 4px;
   height: 100%;
 
-  background: linear-gradient(to bottom, #b98425, #e0b45a, #b98425);
+  background: #fdb913;
 
   transform: scaleY(0);
 
   transform-origin: center;
 
-  transition: transform 0.35s ease;
+  transition: transform 0.3s ease;
 
   z-index: 5;
 }
 
 .academic-coordinator-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
 
-  border-color: rgba(201, 149, 50, 0.25);
+  border-color: rgba(0, 33, 71, 0.2);
 
-  box-shadow:
-    0 18px 42px rgba(24, 34, 53, 0.11),
-    0 5px 12px rgba(24, 34, 53, 0.05);
+  box-shadow: 0 12px 30px rgba(0, 33, 71, 0.1);
 }
 
 .academic-coordinator-card:hover::before {
@@ -183,10 +178,10 @@
 .academic-coordinator-photo {
   position: relative;
 
-  flex: 0 0 270px;
+  flex: 0 0 250px;
 
-  width: 270px;
-  height: 220px;
+  width: 250px;
+  height: 210px;
 
   display: flex;
   align-items: center;
@@ -194,25 +189,9 @@
 
   overflow: hidden;
 
-  background: linear-gradient(135deg, #f1f3f7, #e9edf3);
+  background: #f8fafc;
 
-  border-right: 1px solid #e8ecf2;
-}
-
-/* SUBTLE PHOTO FRAME */
-
-.academic-coordinator-photo::after {
-  content: "";
-
-  position: absolute;
-
-  inset: 12px;
-
-  border: 1px solid rgba(201, 149, 50, 0.2);
-
-  border-radius: 10px;
-
-  pointer-events: none;
+  border-right: 1px solid #edf0f4;
 }
 
 .academic-coordinator-photo img {
@@ -249,7 +228,7 @@
   flex-direction: column;
   justify-content: center;
 
-  padding: 32px 42px;
+  padding: 22px 28px;
 }
 
 /* SMALL LABEL */
@@ -261,20 +240,18 @@
 
   width: fit-content;
 
-  margin-bottom: 11px;
+  margin-bottom: 8px;
 
-  padding: 5px 11px;
+  padding: 3px 9px;
 
-  color: #a8751e;
+  color: #002147;
 
-  background: rgba(201, 149, 50, 0.09);
+  background: rgba(0, 33, 71, 0.08);
 
-  border: 1px solid rgba(201, 149, 50, 0.16);
+  border-radius: 4px;
 
-  border-radius: 20px;
-
-  font-size: 10px;
-  font-weight: 750;
+  font-size: 9.5px;
+  font-weight: 800;
 
   letter-spacing: 1.1px;
 }
@@ -282,11 +259,11 @@
 /* NAME */
 
 .academic-coordinator-content h2 {
-  margin: 0 0 17px;
+  margin: 0 0 12px;
 
-  color: #182235;
+  color: #002147;
 
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 750;
 
   line-height: 1.35;
@@ -299,16 +276,16 @@
 .academic-coordinator-content h4 {
   position: relative;
 
-  margin: 0 0 9px;
+  margin: 0 0 7px;
 
-  padding-left: 13px;
+  padding-left: 12px;
 
-  color: #a8751e;
+  color: #002147;
 
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 750;
 
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
 
   text-transform: uppercase;
 }
@@ -322,11 +299,11 @@
   top: 2px;
 
   width: 3px;
-  height: 14px;
+  height: 13px;
 
-  border-radius: 5px;
+  border-radius: 4px;
 
-  background: #c99532;
+  background: #fdb913;
 }
 
 /* RESPONSIBILITIES */
@@ -336,35 +313,21 @@
 
   margin: 0;
 
-  color: #687386;
+  color: #5a6578;
 
-  font-size: 14.5px;
+  font-size: 13.5px;
 
-  line-height: 1.8;
+  line-height: 1.65;
 
   white-space: pre-line;
 }
 
 /* =========================================================
-   DECORATIVE CORNER
+   DECORATIVE CORNER (REMOVED)
 ========================================================= */
 
 .academic-coordinator-card::after {
-  content: "";
-
-  position: absolute;
-
-  right: -45px;
-  bottom: -55px;
-
-  width: 130px;
-  height: 130px;
-
-  border: 1px solid rgba(201, 149, 50, 0.12);
-
-  border-radius: 50%;
-
-  pointer-events: none;
+  display: none;
 }
 
 /* =========================================================
@@ -395,7 +358,7 @@
 ========================================================= */
 
 .academic-coordinators-empty {
-  padding: 60px 25px;
+  padding: 40px 25px;
 
   text-align: center;
 
@@ -403,9 +366,9 @@
 
   border: 1px solid #e6eaf0;
 
-  border-radius: 16px;
+  border-radius: 12px;
 
-  box-shadow: 0 8px 25px rgba(24, 34, 53, 0.05);
+  box-shadow: 0 4px 16px rgba(24, 34, 53, 0.05);
 }
 
 .academic-coordinators-empty p {
@@ -422,26 +385,30 @@
 
 @media (max-width: 992px) {
   .academic-coordinators-page {
-    padding: 50px 20px 65px;
+    padding: 16px 18px 45px;
+  }
+
+  .academic-coordinators-header {
+    padding: 24px 26px;
   }
 
   .academic-coordinators-header h1 {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   .academic-coordinator-photo {
-    flex: 0 0 235px;
+    flex: 0 0 220px;
 
-    width: 235px;
-    height: 205px;
+    width: 220px;
+    height: 195px;
   }
 
   .academic-coordinator-content {
-    padding: 28px 30px;
+    padding: 20px 24px;
   }
 
   .academic-coordinator-content h2 {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -451,38 +418,35 @@
 
 @media (max-width: 768px) {
   .academic-coordinators-page {
-    padding: 45px 18px 60px;
+    padding: 14px 16px 40px;
   }
 
   .academic-coordinators-header {
-    margin-bottom: 38px;
+    margin-bottom: 20px;
+    padding: 20px 22px;
   }
 
   .academic-coordinators-header h1 {
-    font-size: 30px;
-  }
-
-  .academic-coordinator-card {
-    border-radius: 15px;
+    font-size: 26px;
   }
 
   .academic-coordinator-photo {
-    flex: 0 0 205px;
+    flex: 0 0 190px;
 
-    width: 205px;
-    height: 190px;
+    width: 190px;
+    height: 180px;
   }
 
   .academic-coordinator-content {
-    padding: 24px 25px;
+    padding: 18px 20px;
   }
 
   .academic-coordinator-content h2 {
-    font-size: 21px;
+    font-size: 19px;
   }
 
   .academic-coordinator-content p {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
@@ -492,23 +456,29 @@
 
 @media (max-width: 600px) {
   .academic-coordinators-page {
-    padding: 35px 15px 50px;
+    padding: 12px 12px 35px;
+  }
+
+  .academic-coordinators-breadcrumb {
+    margin-bottom: 12px;
+    font-size: 11px;
   }
 
   .academic-coordinators-header {
-    margin-bottom: 30px;
+    margin-bottom: 18px;
+    padding: 18px 16px;
   }
 
   .academic-coordinators-header h1 {
-    font-size: 27px;
+    font-size: 24px;
   }
 
   .academic-coordinators-header p {
-    margin-top: 16px;
+    margin-top: 6px;
 
-    font-size: 14px;
+    font-size: 13px;
 
-    line-height: 1.7;
+    line-height: 1.55;
   }
 
   /*
@@ -520,12 +490,12 @@
   .academic-coordinator-card {
     flex-direction: column;
 
-    border-radius: 14px;
+    border-radius: 12px;
   }
 
   .academic-coordinator-photo {
     width: 100%;
-    height: 215px;
+    height: 200px;
 
     flex: none;
 
@@ -533,22 +503,18 @@
     border-bottom: 1px solid #e8ecf2;
   }
 
-  .academic-coordinator-photo::after {
-    inset: 10px;
-  }
-
   .academic-coordinator-content {
-    padding: 22px 20px 25px;
+    padding: 18px 16px 20px;
   }
 
   .academic-coordinator-content::before {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   .academic-coordinator-content h2 {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 
-    font-size: 20px;
+    font-size: 19px;
   }
 
   .academic-coordinator-content h4 {
@@ -556,9 +522,9 @@
   }
 
   .academic-coordinator-content p {
-    font-size: 14px;
+    font-size: 13px;
 
-    line-height: 1.7;
+    line-height: 1.6;
   }
 }
 
@@ -568,23 +534,23 @@
 
 @media (max-width: 400px) {
   .academic-coordinators-page {
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .academic-coordinators-header h1 {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .academic-coordinator-photo {
-    height: 195px;
+    height: 180px;
   }
 
   .academic-coordinator-content {
-    padding: 20px 18px 23px;
+    padding: 16px 14px 18px;
   }
 
   .academic-coordinator-content h2 {
-    font-size: 19px;
+    font-size: 18px;
   }
 }

@@ -138,18 +138,20 @@ const ActivityCalendar = () => {
 
   return (
     <div className="activity-calendar-page">
+      {/* BREADCRUMB */}
+      <div className="activity-calendar-breadcrumb">
+        <span>Academics</span>
+        <span>/</span>
+        <strong>Activity Calendar</strong>
+      </div>
+
       {/* HEADER */}
-
       <div className="activity-calendar-header">
-        <div>
-          <div className="activity-calendar-title">
-            <FaCalendarDays />
+        <span className="activity-calendar-eyebrow">ACADEMICS</span>
 
-            <h1>Activity Calendar</h1>
-          </div>
+        <h1>Activity Calendar</h1>
 
-          <p>Academic activity calendars semester-wise.</p>
-        </div>
+        <p>Academic activity calendars semester-wise.</p>
       </div>
 
       {/* ERROR */}

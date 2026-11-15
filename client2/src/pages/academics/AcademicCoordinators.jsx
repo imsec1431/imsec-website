@@ -34,8 +34,17 @@ const AcademicCoordinators = () => {
   return (
     <div className="academic-coordinators-page">
       <div className="academic-coordinators-container">
+        {/* BREADCRUMB */}
+        <div className="academic-coordinators-breadcrumb">
+          <span>Academics</span>
+          <span>/</span>
+          <strong>Academic Coordinators</strong>
+        </div>
+
         {/* PAGE HEADER */}
         <div className="academic-coordinators-header">
+          <span className="academic-coordinators-eyebrow">ACADEMICS</span>
+
           <h1>Academic Coordinators</h1>
 
           <p>

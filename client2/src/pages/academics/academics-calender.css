@@ -5,37 +5,94 @@
 .academic-calendar-page {
   width: 100%;
   min-height: 100vh;
-  padding: 35px 20px 50px;
-  background: #f7f9fc;
+  padding: 16px 20px 45px;
+  background: #f6f8fb;
   box-sizing: border-box;
 }
 
 .academic-calendar-container {
-  width: 100%;
-  max-width: 1100px;
+  width: 90%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
+.academic-calendar-breadcrumb,
+.academic-calendar-header {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .academic-calendar-container {
+    width: 95%;
+    max-width: 95%;
+  }
+}
+
 /* =========================================
-   HEADER
+   BREADCRUMB
+========================================= */
+
+.academic-calendar-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 14px;
+  color: #7b8492;
+  font-size: 13px;
+}
+
+.academic-calendar-breadcrumb strong {
+  color: #002147;
+  font-weight: 650;
+}
+
+/* =========================================
+   HEADER (HERO)
 ========================================= */
 
 .academic-calendar-header {
-  text-align: center;
-  margin-bottom: 30px;
+  padding: 28px 32px;
+  margin-bottom: 22px;
+  background: #002147;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 33, 71, 0.18);
+  color: #ffffff;
+  text-align: left;
+}
+
+.academic-calendar-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  margin-bottom: 10px;
+  padding: 3px 10px;
+  color: #002147;
+  background: #fdb913;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
 }
 
 .academic-calendar-header h1 {
-  margin: 0 0 8px;
-  font-size: 32px;
-  font-weight: 700;
-  color: #1f2937;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-size: clamp(26px, 3.5vw, 36px);
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
 }
 
 .academic-calendar-header p {
-  margin: 0;
-  font-size: 15px;
-  color: #6b7280;
+  max-width: 720px;
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 13.5px;
+  line-height: 1.6;
 }
 
 /* =========================================
@@ -45,7 +102,7 @@
 .academic-calendar-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
 
 /* =========================================
@@ -54,18 +111,20 @@
 
 .academic-calendar-card {
   background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  padding: 20px 22px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e6eb;
+  border-radius: 12px;
+  padding: 18px 22px;
+  box-shadow: 0 4px 16px rgba(0, 33, 71, 0.04);
   transition:
     transform 0.2s ease,
+    border-color 0.2s ease,
     box-shadow 0.2s ease;
 }
 
 .academic-calendar-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 33, 71, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 33, 71, 0.08);
 }
 
 .academic-calendar-card-content {
@@ -89,14 +148,14 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .academic-calendar-title-row h2 {
   margin: 0;
-  font-size: 20px;
-  font-weight: 650;
-  color: #1f2937;
+  font-size: 18.5px;
+  font-weight: 700;
+  color: #002147;
 }
 
 /* =========================================
@@ -107,21 +166,22 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 52px;
-  padding: 5px 10px;
+  min-width: 50px;
+  padding: 4px 10px;
   border-radius: 20px;
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.3px;
 }
 
 .academic-semester-badge.even {
-  background: #eff6ff;
-  color: #1d4ed8;
+  background: rgba(0, 33, 71, 0.08);
+  color: #002147;
 }
 
 .academic-semester-badge.odd {
-  background: #fff7ed;
-  color: #c2410c;
+  background: rgba(253, 185, 19, 0.2);
+  color: #925805;
 }
 
 /* =========================================
@@ -135,14 +195,14 @@
 }
 
 .session-label {
-  font-size: 13px;
-  color: #6b7280;
+  font-size: 12.5px;
+  color: #7b8492;
 }
 
 .session-value {
-  font-size: 14px;
-  font-weight: 600;
-  color: #374151;
+  font-size: 13.5px;
+  font-weight: 650;
+  color: #002147;
 }
 
 /* =========================================
@@ -152,26 +212,30 @@
 .academic-calendar-pdf-button {
   flex-shrink: 0;
   min-width: 105px;
-  padding: 10px 16px;
-  border: none;
-  border-radius: 6px;
-  background: #2563eb;
+  min-height: 38px;
+  padding: 8px 18px;
+  border: 1px solid #002147;
+  border-radius: 7px;
+  background: #002147;
   color: #ffffff;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 12.5px;
+  font-weight: 650;
   cursor: pointer;
   transition:
     background 0.2s ease,
+    border-color 0.2s ease,
     transform 0.15s ease;
 }
 
 .academic-calendar-pdf-button:hover {
-  background: #1d4ed8;
+  background: #f15b20;
+  border-color: #f15b20;
   transform: translateY(-1px);
 }
 
 .academic-calendar-pdf-button:disabled {
   background: #d1d5db;
+  border-color: #d1d5db;
   cursor: not-allowed;
   transform: none;
 }
@@ -183,21 +247,22 @@
 .academic-calendar-empty {
   background: #ffffff;
   border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  padding: 50px 20px;
+  border-radius: 12px;
+  padding: 40px 20px;
   text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 33, 71, 0.04);
 }
 
 .academic-calendar-empty h3 {
   margin: 0 0 8px;
-  font-size: 19px;
-  color: #374151;
+  font-size: 18px;
+  color: #002147;
 }
 
 .academic-calendar-empty p {
   margin: 0;
   color: #6b7280;
-  font-size: 14px;
+  font-size: 13.5px;
 }
 
 /* =========================================
@@ -207,14 +272,14 @@
 .academic-calendar-loading {
   background: #ffffff;
   border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  padding: 50px 20px;
+  border-radius: 12px;
+  padding: 40px 20px;
   text-align: center;
 }
 
 .academic-calendar-loading h3 {
   margin: 0;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 500;
   color: #6b7280;
 }
@@ -226,21 +291,21 @@
 .academic-calendar-error {
   background: #ffffff;
   border: 1px solid #fecaca;
-  border-radius: 10px;
-  padding: 40px 20px;
+  border-radius: 12px;
+  padding: 35px 20px;
   text-align: center;
 }
 
 .academic-calendar-error h3 {
   margin: 0 0 8px;
   color: #b91c1c;
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .academic-calendar-error p {
   margin: 0;
   color: #6b7280;
-  font-size: 14px;
+  font-size: 13.5px;
 }
 
 /* =========================================
@@ -249,33 +314,40 @@
 
 @media (max-width: 768px) {
   .academic-calendar-page {
-    padding: 28px 15px 40px;
+    padding: 14px 16px 40px;
+  }
+
+  .academic-calendar-header {
+    padding: 22px 20px;
+    margin-bottom: 18px;
   }
 
   .academic-calendar-header h1 {
-    font-size: 27px;
+    font-size: 26px;
   }
 
   .academic-calendar-card {
-    padding: 17px;
-  }
-
-  .academic-calendar-card-content {
-    align-items: flex-start;
+    padding: 16px 18px;
   }
 
   .academic-calendar-title-row h2 {
-    font-size: 18px;
+    font-size: 17.5px;
   }
 }
 
 @media (max-width: 576px) {
   .academic-calendar-page {
-    padding: 22px 12px 35px;
+    padding: 12px 12px 35px;
+  }
+
+  .academic-calendar-breadcrumb {
+    margin-bottom: 12px;
+    font-size: 11px;
   }
 
   .academic-calendar-header {
-    margin-bottom: 22px;
+    padding: 18px 16px;
+    margin-bottom: 16px;
   }
 
   .academic-calendar-header h1 {
@@ -288,7 +360,8 @@
 
   .academic-calendar-card-content {
     flex-direction: column;
-    gap: 15px;
+    align-items: flex-start;
+    gap: 14px;
   }
 
   .academic-calendar-info {

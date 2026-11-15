@@ -45,13 +45,13 @@
 ========================================= */
 
 .ims-society-content {
-  padding: 28px 20px 45px;
+  padding: 28px 0 45px;
   background: #f8fafc;
 }
 
 .ims-society-container {
-  width: 100%;
-  max-width: 1000px;
+  width: 90%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -164,8 +164,8 @@
 
 @media (max-width: 900px) {
   .ims-society-container {
-    max-width: 100%;
-    padding: 0 10px;
+    width: 92%;
+    max-width: 92%;
   }
 }
 
@@ -180,7 +180,7 @@
   }
 
   .ims-society-content {
-    padding: 20px 14px 30px;
+    padding: 20px 0 30px;
   }
 
   .ims-society-introduction {

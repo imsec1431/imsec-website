@@ -139,6 +139,34 @@ body {
         Contact Cards
 ===========================================*/
 
+/* ===========================================
+   Content Width: 90% for all sections except Hero
+===========================================*/
+
+.contact-info .container,
+.contact-form-section .container,
+.contact-cta .container,
+.department-section .container,
+.faq-section .container,
+.social-section .container {
+  width: 90% !important;
+  max-width: 90% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (max-width: 768px) {
+  .contact-info .container,
+  .contact-form-section .container,
+  .contact-cta .container,
+  .department-section .container,
+  .faq-section .container,
+  .social-section .container {
+    width: 92% !important;
+    max-width: 92% !important;
+  }
+}
+
 .contact-info {
   background: #fff;
   padding: 38px 0;

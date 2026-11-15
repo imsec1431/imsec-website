@@ -32,6 +32,11 @@ import Hostel from "./images/Hostel.jpg";
 import studenclubs from "./images/studentsclubs.png";
 import ModernLibrary from "./images/ModernLibrary.jpg";
 
+import collabCdac from "./images/collab-cdac.png";
+import collabMongodb from "./images/collab-mongodb.png";
+import collabRedhat from "./images/collab-redhat.png";
+import collabSmartbridge from "./images/collab-smartbridge.png";
+
 import {
   Container,
   Row,
@@ -160,6 +165,29 @@ const INDUSTRY_PARTNERS = [
     id: 8,
     name: "IMSEC",
     logo: a8,
+  },
+];
+
+const RECENT_COLLABORATIONS = [
+  {
+    id: 1,
+    name: "सी-डैक CDAC",
+    logo: collabCdac,
+  },
+  {
+    id: 2,
+    name: "MongoDB",
+    logo: collabMongodb,
+  },
+  {
+    id: 3,
+    name: "Red Hat Academy",
+    logo: collabRedhat,
+  },
+  {
+    id: 4,
+    name: "SmartBridge",
+    logo: collabSmartbridge,
   },
 ];
 
@@ -684,11 +712,28 @@ const Home = () => {
               <span>Recent Collaborations</span>
             </div>
 
-            <div className="collab-partners-logos">
-              <div className="collab-partner-badge">सी-डैक CDAC</div>
-              <div className="collab-partner-badge">MongoDB</div>
-              <div className="collab-partner-badge">Red Hat Academy</div>
-              <div className="collab-partner-badge">SmartBridge</div>
+            <div className="collab-marquee-wrapper">
+              <div className="collab-marquee-track">
+                {[
+                  ...RECENT_COLLABORATIONS,
+                  ...RECENT_COLLABORATIONS,
+                  ...RECENT_COLLABORATIONS,
+                  ...RECENT_COLLABORATIONS,
+                ].map((item, index) => (
+                  <div
+                    className="collab-logo-card"
+                    key={`collab-${item.id}-${index}`}
+                  >
+                    <img
+                      src={item.logo}
+                      alt={item.name}
+                      title={item.name}
+                      className="collab-logo-img"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </Container>
@@ -953,40 +998,20 @@ const Home = () => {
       </div>
 
       {/* CAMPUS HIGHLIGHTS */}
-      <div style={{ background: "#ffffff", padding: "50px 0" }}>
+      <div style={{ background: "#ffffff", padding: "20px 0 45px" }}>
         <Container>
           <div className="text-center mb-4">
-            <h6
-              style={{
-                color: "#FDB913",
-                fontWeight: "700",
-                letterSpacing: "2px",
-                textTransform: "uppercase",
-              }}
-            >
-              {/* CAMPUS HAPPENINGS */}
-            </h6>
             <h2
               style={{
                 color: "#002147",
                 fontWeight: "800",
                 fontSize: "clamp(1.85rem, 3.6vw, 2.65rem)",
                 lineHeight: "1.2",
+                margin: 0,
               }}
             >
               Campus Highlights
             </h2>
-            <p
-              style={{
-                maxWidth: "650px",
-                margin: "12px auto 0",
-                color: "#e2e8f0",
-                fontSize: "1rem",
-                fontWeight: "500",
-              }}
-            >
-              {/* Catch up on the latest events, student initiatives, achievements, and vibrant college moments. */}
-            </p>
           </div>
 
           <Swiper

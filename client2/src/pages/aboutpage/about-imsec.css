@@ -73,6 +73,36 @@ body {
 }
 
 /* ==========================================
+   Content Width: 90% for all sections except Hero
+==========================================*/
+
+.about-section .container,
+.highlight-section .container,
+.vision-section .container,
+.why-imsec .container,
+.facility-section .container,
+.about-imsec-cta .container,
+.cta-section .container {
+  width: 90% !important;
+  max-width: 90% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (max-width: 768px) {
+  .about-section .container,
+  .highlight-section .container,
+  .vision-section .container,
+  .why-imsec .container,
+  .facility-section .container,
+  .about-imsec-cta .container,
+  .cta-section .container {
+    width: 92% !important;
+    max-width: 92% !important;
+  }
+}
+
+/* ==========================================
    Hero Banner (Clean Solid Footer Theme #002147)
 ==========================================*/
 

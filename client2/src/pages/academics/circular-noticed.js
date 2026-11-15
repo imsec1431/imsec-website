@@ -77,63 +77,64 @@ const CircularNotice = () => {
   }
 
   return (
-    <>
-      {/* ================= Hero ================= */}
+    <div className="circularNoticePage">
+      <div className="circularNoticeContainer">
+        {/* ================= Hero ================= */}
 
-      <section className="notice-hero">
-        <Container>
-          <div className="hero-content">
-            <h1>Circulars & Notices</h1>
+        <div className="circularNoticeBreadcrumb">
+          <span>Academics</span>
+          <span>/</span>
+          <strong>Circulars & Notices</strong>
+        </div>
 
-            <p style={{ color: "white" }}>
-              Home
-              <span>/</span>
-              Academics
-              <span>/</span>
-              Circulars & Notices
-            </p>
-          </div>
-        </Container>
-      </section>
+        <section className="notice-hero">
+          <span className="noticeEyebrow">ACADEMICS</span>
 
-      {/* ================= Search ================= */}
+          <h1>Circulars & Notices</h1>
 
-      <section className="search-section py-5">
-        <Container>
-          <Row className="g-4">
-            <Col lg={8}>
-              <div className="search-box">
-                <FaSearch />
+          <p>
+            Official circulars, academic notices, and important institutional announcements.
+          </p>
+        </section>
 
-                <Form.Control
-                  type="text"
-                  placeholder="Search Circular or Notice..."
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                />
-              </div>
-            </Col>
+        {/* ================= Search ================= */}
 
-            <Col lg={4}>
-              <Form.Select
-                value={category}
-                onChange={(e) => setCategory(e.target.value)}
-              >
-                {categories.map((item, index) => (
-                  <option key={index} value={item}>
-                    {item}
-                  </option>
-                ))}
-              </Form.Select>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+        <section className="search-section mb-4">
+          <Container fluid className="px-0">
+            <Row className="g-3">
+              <Col lg={8}>
+                <div className="search-box">
+                  <FaSearch />
 
-      {/* ================= Notices ================= */}
+                  <Form.Control
+                    type="text"
+                    placeholder="Search Circular or Notice..."
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                  />
+                </div>
+              </Col>
 
-      <section className="notice-section pb-5">
-        <Container>
+              <Col lg={4}>
+                <Form.Select
+                  value={category}
+                  onChange={(e) => setCategory(e.target.value)}
+                >
+                  {categories.map((item, index) => (
+                    <option key={index} value={item}>
+                      {item}
+                    </option>
+                  ))}
+                </Form.Select>
+              </Col>
+            </Row>
+          </Container>
+        </section>
+
+        {/* ================= Notices ================= */}
+
+        <section className="notice-section pb-4">
+          <Container fluid className="px-0">
           <div className="text-center mb-5">
             <h2 className="section-title">
               Circulars &<span> Notices</span>
@@ -205,14 +206,14 @@ const CircularNotice = () => {
       {/* ================= CTA ================= */}
 
       <section className="notice-cta">
-        <Container>
+        <Container fluid className="px-0">
           <Row className="align-items-center">
-            <Col lg={8}>
-              <h2 style={{ color: "white" }}>
+            <Col lg={12}>
+              <h2>
                 Stay Updated With Every Announcement
               </h2>
 
-              <p style={{ color: "white" }}>
+              <p>
                 Check the latest circulars, notices, office orders and academic
                 announcements regularly.
               </p>
@@ -220,7 +221,8 @@ const CircularNotice = () => {
           </Row>
         </Container>
       </section>
-    </>
+      </div>
+    </div>
   );
 };
 

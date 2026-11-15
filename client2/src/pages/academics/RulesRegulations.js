@@ -64,110 +64,111 @@ const RulesRegulations = () => {
     );
   }
   return (
-    <>
-      {/* ================= Hero ================= */}
+    <div className="rulesRegulationsPage">
+      <div className="rulesContainer">
+        {/* ================= Hero ================= */}
 
-      <section className="rules-hero">
-        <Container>
-          <div className="hero-content">
-            <h1>Rules & Regulations</h1>
+        <div className="rulesBreadcrumb">
+          <span>Academics</span>
+          <span>/</span>
+          <strong>Rules & Regulations</strong>
+        </div>
 
-            <p style={{ color: "white" }}>
-              Home
-              <span>/</span>
-              Academics
-              <span>/</span>
-              Rules & Regulations
-            </p>
-          </div>
-        </Container>
-      </section>
+        <section className="rules-hero">
+          <span className="rulesEyebrow">ACADEMICS</span>
 
-      {/* ================= About ================= */}
+          <h1>Rules & Regulations</h1>
 
-      <section className="rules-about py-5">
-        <Container>
-          <Row className="align-items-center g-5">
-            <Col lg={6}>
-              <img
-                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80"
-                alt="Person using laptop on desk"
-                className="img-fluid rules-image"
-              />
-            </Col>
+          <p>
+            Comprehensive policies, code of conduct, academic guidelines, and regulations of IMSEC.
+          </p>
+        </section>
 
-            <Col lg={6}>
-              <h6 className="section-tag" style={{ color: "black" }}>
-                STUDENT HANDBOOK
+        {/* ================= About ================= */}
+
+        <section className="rules-about py-4">
+          <Container fluid className="px-0">
+            <Row className="align-items-center g-4">
+              <Col lg={6}>
+                <img
+                  src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80"
+                  alt="Person using laptop on desk"
+                  className="img-fluid rules-image"
+                />
+              </Col>
+
+              <Col lg={6}>
+                <h6 className="section-tag">
+                  STUDENT HANDBOOK
+                </h6>
+
+                <h2 className="section-title">
+                  Institute
+                  <span> Rules & Regulations</span>
+                </h2>
+
+                <p>
+                  The Rules & Regulations are designed to maintain discipline,
+                  academic excellence, professional ethics and a healthy learning
+                  environment for every student.
+                </p>
+
+                <p>
+                  Every student is expected to read and strictly follow the
+                  institute policies throughout the academic session.
+                </p>
+              </Col>
+            </Row>
+          </Container>
+        </section>
+
+        {/* ================= Search ================= */}
+
+        <section className="rules-search mb-4">
+          <Container fluid className="px-0">
+            <Row className="g-3">
+              <Col lg={8}>
+                <div className="search-box">
+                  <FaSearch />
+
+                  <Form.Control
+                    type="text"
+                    placeholder="Search Rules..."
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                  />
+                </div>
+              </Col>
+
+              <Col lg={4}>
+                <Form.Select
+                  value={category}
+                  onChange={(e) => setCategory(e.target.value)}
+                >
+                  {categories.map((item, index) => (
+                    <option key={index} value={item}>
+                      {item}
+                    </option>
+                  ))}
+                </Form.Select>
+              </Col>
+            </Row>
+          </Container>
+        </section>
+
+        {/* ================= Rules Accordion ================= */}
+
+        <section className="rules-section pb-4">
+          <Container fluid className="px-0">
+            <div className="text-center mb-4">
+              <h6 className="section-tag">
+                STUDENT GUIDELINES
               </h6>
 
               <h2 className="section-title">
-                Institute
-                <span> Rules & Regulations</span>
+                Rules &<span> Regulations</span>
               </h2>
-
-              <p>
-                The Rules & Regulations are designed to maintain discipline,
-                academic excellence, professional ethics and a healthy learning
-                environment for every student.
-              </p>
-
-              <p>
-                Every student is expected to read and strictly follow the
-                institute policies throughout the academic session.
-              </p>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
-      {/* ================= Search ================= */}
-
-      <section className="rules-search py-4">
-        <Container>
-          <Row className="g-4">
-            <Col lg={8}>
-              <div className="search-box">
-                <FaSearch />
-
-                <Form.Control
-                  type="text"
-                  placeholder="Search Rules..."
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                />
-              </div>
-            </Col>
-
-            <Col lg={4}>
-              <Form.Select
-                value={category}
-                onChange={(e) => setCategory(e.target.value)}
-              >
-                {categories.map((item, index) => (
-                  <option key={index} value={item}>
-                    {item}
-                  </option>
-                ))}
-              </Form.Select>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
-      {/* ================= Rules Accordion ================= */}
-
-      <section className="rules-section py-5">
-        <Container>
-          <div className="text-center mb-5">
-            <h6 className="section-tag" style={{ color: "black" }}>
-              STUDENT GUIDELINES
-            </h6>
-
-            <h2 className="section-title">
-              Rules &<span> Regulations</span>
-            </h2>
-          </div>
+            </div>
 
           <Accordion flush>
             {filteredRules.map((rule, index) => (
@@ -212,10 +213,10 @@ const RulesRegulations = () => {
 
       {/* ================= Important Guidelines ================= */}
 
-      <section className="guidelines-section py-5">
-        <Container>
-          <div className="text-center mb-5">
-            <h6 className="section-tag" style={{ color: "black" }}>
+      <section className="guidelines-section pb-4">
+        <Container fluid className="px-0">
+          <div className="text-center mb-4">
+            <h6 className="section-tag">
               IMPORTANT
             </h6>
 
@@ -270,8 +271,8 @@ const RulesRegulations = () => {
 
       {/* ================= FAQ ================= */}
 
-      <section className="faq-section py-5">
-        <Container>
+      <section className="faq-section pb-4">
+        <Container fluid className="px-0">
           <div className="faq-card">
             <h5>What is the minimum attendance required?</h5>
 
@@ -304,12 +305,12 @@ const RulesRegulations = () => {
       {/* ================= CTA ================= */}
 
       <section className="rules-cta">
-        <Container>
+        <Container fluid className="px-0">
           <Row className="align-items-center">
-            <Col lg={8}>
-              <h2 style={{ color: "white" }}>Need More Information?</h2>
+            <Col lg={12}>
+              <h2>Need More Information?</h2>
 
-              <p style={{ color: "white" }}>
+              <p>
                 For clarification regarding institute rules and regulations,
                 please contact the Academic Office.
               </p>
@@ -317,7 +318,8 @@ const RulesRegulations = () => {
           </Row>
         </Container>
       </section>
-    </>
+      </div>
+    </div>
   );
 };
 

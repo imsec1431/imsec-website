@@ -260,20 +260,18 @@ const NavigationBar = () => {
             {/* =================================================
                 TOP LEFT INFO: LOCATION & AFFILIATION / ACCREDITATIONS
             ================================================= */}
-            <div className="imsec-top-left-info">
+            {/* <div className="imsec-top-left-info">
               <Link to="/" className="top-clg-identity" onClick={handleNavClick}>
                 <FaLocationDot className="top-pin-icon" />
                 <span>IMS Engineering College, Ghaziabad (AKTU, Lucknow Affiliated)</span>
               </Link>
               <span className="top-info-divider d-none d-xl-inline">|</span>
-              <span className="top-accreditation-tag d-none d-xl-inline">
-                NBA (In Process)
-              </span>
+
               <span className="top-info-divider d-none d-xl-inline">|</span>
               <span className="top-accreditation-tag d-none d-xl-inline">
                 NAAC (Planned 2027)
               </span>
-            </div>
+            </div> */}
 
             {/* =================================================
                 DESKTOP RIGHT AREA
@@ -336,6 +334,21 @@ const NavigationBar = () => {
               >
                 <FaUser className="erp-btn-icon" />
                 <span>ERP Login</span>
+              </a>
+
+              <span className="top-info-divider">|</span>
+
+              {/* =================================================
+                  VIRTUAL TOUR LINK (LIKE CONTACT US)
+              ================================================= */}
+              <a
+                href="https://imsec.ac.in/assets/images/virtual-tour/index.htm"
+                className="top-virtual-tour-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Virtual Tour"
+              >
+                Virtual Tour
               </a>
 
               {/* =================================================

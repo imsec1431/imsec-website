@@ -379,50 +379,28 @@ const ClassroomLabs = () => {
 
   return (
     <main className="classroom-lab-page">
-      {/* ===================================================
-          HERO
-      =================================================== */}
+      <div className="classroomLabsContainer">
+        {/* ===================================================
+            BREADCRUMB & HERO
+        =================================================== */}
 
-      <section
-        className="classroom-lab-hero"
-        style={
-          heroImage
-            ? {
-                backgroundImage: `
-                  linear-gradient(
-                    rgba(7, 29, 58, 0.84),
-                    rgba(10, 46, 92, 0.90)
-                  ),
-                  url("${heroImage}")
-                `,
-              }
-            : undefined
-        }
-      >
-        <div className="classroom-lab-hero-glow"></div>
-
-        <div className="classroom-lab-hero-circle"></div>
-
-        <div className="container">
-          <div className="classroom-lab-hero-content">
-            <span className="classroom-lab-hero-small">LIFE @ IMSEC</span>
-
-            <h1>{data.hero.title}</h1>
-
-            <div className="classroom-lab-hero-line"></div>
-
-            <p>{data.hero.subtitle}</p>
-
-            <div className="classroom-lab-breadcrumb">
-              {data.hero.breadcrumb}
-            </div>
-          </div>
+        <div className="classroomLabsBreadcrumb">
+          <span>Academics</span>
+          <span>/</span>
+          <strong>Class Rooms & Labs</strong>
         </div>
-      </section>
 
-      {/* ===================================================
-          ABOUT
-      =================================================== */}
+        <section className="classroom-lab-hero">
+          <span className="classroomLabsEyebrow">ACADEMICS</span>
+
+          <h1>{data.hero.title}</h1>
+
+          <p>{data.hero.subtitle}</p>
+        </section>
+
+        {/* ===================================================
+            ABOUT
+        =================================================== */}
 
       <section className="classroom-lab-about">
         <div className="container">
@@ -644,6 +622,7 @@ const ClassroomLabs = () => {
           </div>
         </div>
       </section>
+      </div>
     </main>
   );
 };

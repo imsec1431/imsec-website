@@ -61,42 +61,46 @@ const AcademicDevelopmentProgram = () => {
     );
   }
   return (
-    <>
-      {/* ================= Hero ================= */}
+    <div className="academicDevelopmentProgramPage">
+      <div className="adpContainer">
+        {/* ================= Breadcrumb ================= */}
 
-      <section className="adp-hero">
-        <Container>
-          <div className="hero-content">
-            <h1>Academic Development Programs</h1>
+        <div className="adpBreadcrumb">
+          <span>Academics</span>
+          <span>/</span>
+          <strong>Academic Development Programs</strong>
+        </div>
 
-            <p style={{ color: "white" }}>
-              Home
-              <span>/</span>
-              Academics
-              <span>/</span>
-              Academic Development Programs
-            </p>
-          </div>
-        </Container>
-      </section>
+        {/* ================= Hero ================= */}
 
-      {/* ================= About ================= */}
+        <section className="adp-hero">
+          <span className="adpEyebrow">ACADEMICS</span>
 
-      <section className="adp-about py-5">
-        <Container>
-          <Row className="align-items-center g-5">
-            <Col lg={6}>
-              <img
-                src={featuredProgram.image}
-                alt=""
-                className="img-fluid adp-image"
-              />
-            </Col>
+          <h1>Academic Development Programs</h1>
 
-            <Col lg={6}>
-              <h6 className="section-tag" style={{ color: "black" }}>
-                ACADEMIC EXCELLENCE
-              </h6>
+          <p>
+            Enhancing teaching quality, research capability, innovation, and
+            professional excellence among faculty members and academic professionals.
+          </p>
+        </section>
+
+        {/* ================= About ================= */}
+
+        <section className="adp-about py-4">
+          <Container fluid className="px-0">
+            <Row className="align-items-center g-4">
+              <Col lg={6}>
+                <img
+                  src={featuredProgram.image}
+                  alt=""
+                  className="img-fluid adp-image"
+                />
+              </Col>
+
+              <Col lg={6}>
+                <h6 className="section-tag">
+                  ACADEMIC EXCELLENCE
+                </h6>
 
               <h2 className="section-title">
                 Academic Development
@@ -331,7 +335,8 @@ const AcademicDevelopmentProgram = () => {
           </Row>
         </Container>
       </section>
-    </>
+      </div>
+    </div>
   );
 };
 

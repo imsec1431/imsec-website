@@ -53,19 +53,23 @@ const StudentHandbook = () => {
 
   return (
     <div className="publicStudentHandbookPage">
-      {/* =====================================================
-          HERO
-      ===================================================== */}
+      <div className="publicStudentHandbookContainer">
+        {/* =====================================================
+            BREADCRUMB
+        ===================================================== */}
 
-      <section className="publicStudentHandbookHero">
-        <div className="publicStudentHandbookHeroOverlay"></div>
+        <div className="publicStudentHandbookBreadcrumb">
+          <span>Academics</span>
+          <span>/</span>
+          <strong>Student Handbook</strong>
+        </div>
 
-        <div className="publicStudentHandbookHeroContent">
-          <div className="publicStudentHandbookHeroIcon">
-            <FaBook />
-          </div>
+        {/* =====================================================
+            HERO
+        ===================================================== */}
 
-          <span>STUDENT SERVICES</span>
+        <section className="publicStudentHandbookHero">
+          <span className="publicStudentHandbookEyebrow">ACADEMICS</span>
 
           <h1>Student Handbook</h1>
 
@@ -73,14 +77,13 @@ const StudentHandbook = () => {
             Access the official student handbook and important academic
             information provided by IMSEC.
           </p>
-        </div>
-      </section>
+        </section>
 
-      {/* =====================================================
-          CONTENT
-      ===================================================== */}
+        {/* =====================================================
+            CONTENT
+        ===================================================== */}
 
-      <section className="publicStudentHandbookSection">
+        <section className="publicStudentHandbookSection">
         {/* ===================================================
             LOADING
         =================================================== */}
@@ -194,6 +197,7 @@ const StudentHandbook = () => {
           </div>
         )}
       </section>
+      </div>
     </div>
   );
 };

@@ -58,21 +58,23 @@ const LearningDevelopmentCentre = () => {
 
   return (
     <div className="publicLearningDevelopmentCentre">
-      {/* =====================================================
-          HERO
-      ===================================================== */}
+      <div className="ldcContainer">
+        {/* =====================================================
+            BREADCRUMB
+        ===================================================== */}
 
-      <section className="ldcHero">
-        <div className="ldcHeroShape ldcHeroShapeOne"></div>
+        <div className="ldcBreadcrumb">
+          <span>Academics</span>
+          <span>/</span>
+          <strong>Learning Development Centre</strong>
+        </div>
 
-        <div className="ldcHeroShape ldcHeroShapeTwo"></div>
+        {/* =====================================================
+            HERO
+        ===================================================== */}
 
-        <div className="ldcHeroContent">
-          <div className="ldcHeroIcon">
-            <FaBookOpen />
-          </div>
-
-          <span>STUDENT DEVELOPMENT</span>
+        <section className="ldcHero">
+          <span className="ldcEyebrow">ACADEMICS</span>
 
           <h1>Learning Development Centre</h1>
 
@@ -80,14 +82,13 @@ const LearningDevelopmentCentre = () => {
             Access important Learning Development Centre documents, guidelines
             and resources provided by IMSEC.
           </p>
-        </div>
-      </section>
+        </section>
 
-      {/* =====================================================
-          MAIN CONTENT
-      ===================================================== */}
+        {/* =====================================================
+            MAIN CONTENT
+        ===================================================== */}
 
-      <section className="ldcSection">
+        <section className="ldcSection">
         {/* ===================================================
             LOADING
         =================================================== */}
@@ -208,6 +209,7 @@ const LearningDevelopmentCentre = () => {
           </div>
         )}
       </section>
+      </div>
     </div>
   );
 };

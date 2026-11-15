@@ -138,10 +138,22 @@ const AcademicCalendar = () => {
     <div className="academic-calendar-page">
       <div className="academic-calendar-container">
         {/* =========================
+            BREADCRUMB
+        ========================= */}
+
+        <div className="academic-calendar-breadcrumb">
+          <span>Academics</span>
+          <span>/</span>
+          <strong>Academic Calendar</strong>
+        </div>
+
+        {/* =========================
             HEADER
         ========================= */}
 
         <div className="academic-calendar-header">
+          <span className="academic-calendar-eyebrow">ACADEMICS</span>
+
           <h1>Academic Calendar</h1>
 
           <p>Academic calendars for students, faculty and staff.</p>

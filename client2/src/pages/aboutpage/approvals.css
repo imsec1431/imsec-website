@@ -18,6 +18,26 @@ body {
 }
 
 /* ===========================================
+   Content Width: 90% for all sections except Hero
+===========================================*/
+
+.approvals-content-section .container,
+.approvals-container {
+  width: 90% !important;
+  max-width: 90% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (max-width: 768px) {
+  .approvals-content-section .container,
+  .approvals-container {
+    width: 92% !important;
+    max-width: 92% !important;
+  }
+}
+
+/* ===========================================
             Common
 ===========================================*/
 

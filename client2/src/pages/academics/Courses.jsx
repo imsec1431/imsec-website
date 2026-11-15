@@ -116,27 +116,35 @@ const Courses = () => {
 
   return (
     <main className="coursesPage">
-      {/* ===================================================
-          HERO
-      =================================================== */}
+      <div className="coursesContainer">
+        {/* ===================================================
+            BREADCRUMB
+        =================================================== */}
 
-      <section className="coursesHero">
-        <div className="coursesHeroContent">
-          <div className="coursesHeroIcon">
-            <FaGraduationCap />
-          </div>
+        <div className="coursesBreadcrumb">
+          <span>Academics</span>
+          <span>/</span>
+          <strong>Courses</strong>
+        </div>
 
-          <span>ACADEMIC PROGRAMMES</span>
+        {/* ===================================================
+            HERO
+        =================================================== */}
+
+        <section className="coursesHero">
+          <span className="coursesEyebrow">ACADEMICS</span>
 
           <h1>Courses</h1>
-        </div>
-      </section>
 
-      {/* ===================================================
-          CATEGORY TABS
-      =================================================== */}
+          <p>
+            Explore our academic programmes, degree structures, and curriculum.
+          </p>
+        </section>
 
-      <section className="coursesContainer">
+        {/* ===================================================
+            CATEGORY TABS
+        =================================================== */}
+
         <div className="coursesTabs">
           <button
             type="button"
@@ -145,7 +153,7 @@ const Courses = () => {
           >
             <FaGraduationCap />
 
-            <span style={{ color: "black" }}>Undergraduate</span>
+            <span>Undergraduate</span>
           </button>
 
           <button
@@ -155,7 +163,7 @@ const Courses = () => {
           >
             <FaBookOpen />
 
-            <span style={{ color: "black" }}>Postgraduate</span>
+            <span>Postgraduate</span>
           </button>
         </div>
 
@@ -272,7 +280,7 @@ const Courses = () => {
             ))}
           </div>
         )}
-      </section>
+      </div>
     </main>
   );
 };

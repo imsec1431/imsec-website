@@ -94,19 +94,23 @@ const TeachingLearningProcess = () => {
 
   return (
     <div className="publicTeachingLearningPage">
-      {/* =====================================================
-          HERO
-      ===================================================== */}
+      <div className="publicTeachingLearningContainer">
+        {/* =====================================================
+            BREADCRUMB
+        ===================================================== */}
 
-      <section className="publicTeachingLearningHero">
-        <div className="publicTeachingLearningHeroOverlay"></div>
+        <div className="publicTeachingLearningBreadcrumb">
+          <span>Academics</span>
+          <span>/</span>
+          <strong>Teaching Learning Process</strong>
+        </div>
 
-        <div className="publicTeachingLearningHeroContent">
-          <div className="publicTeachingLearningHeroIcon">
-            <FaBookOpen />
-          </div>
+        {/* =====================================================
+            HERO
+        ===================================================== */}
 
-          <span>ACADEMIC EXCELLENCE</span>
+        <section className="publicTeachingLearningHero">
+          <span className="publicTeachingLearningEyebrow">ACADEMICS</span>
 
           <h1>Teaching Learning Process</h1>
 
@@ -114,14 +118,13 @@ const TeachingLearningProcess = () => {
             Explore the teaching and learning practices that support academic
             excellence, innovation and holistic development at IMSEC.
           </p>
-        </div>
-      </section>
+        </section>
 
-      {/* =====================================================
-          CONTENT
-      ===================================================== */}
+        {/* =====================================================
+            CONTENT
+        ===================================================== */}
 
-      <section className="publicTeachingLearningSection">
+        <section className="publicTeachingLearningSection">
         {/* ===================================================
             LOADING
         =================================================== */}
@@ -198,6 +201,7 @@ const TeachingLearningProcess = () => {
           </div>
         )}
       </section>
+      </div>
 
       {/* =====================================================
           FULL IMAGE MODAL

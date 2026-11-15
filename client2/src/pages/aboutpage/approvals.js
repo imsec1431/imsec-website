@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import axios from "axios";
+import "./approvals.css";
 
 const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
 
@@ -106,12 +107,20 @@ const Approvals = () => {
 
       {/* Main Content */}
       <section
+        className="approvals-content-section"
         style={{
           padding: "38px 20px 50px",
           background: "#f7f9fc",
         }}
       >
-        <div className="container">
+        <div
+          className="container approvals-container"
+          style={{
+            width: "90%",
+            maxWidth: "90%",
+            margin: "0 auto",
+          }}
+        >
           {/* Filter Buttons */}
           <div
             style={{

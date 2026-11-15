@@ -148,6 +148,34 @@ body {
         Introduction
 ===========================================*/
 
+/* ===========================================
+   Content Width: 90% for all sections except Hero
+===========================================*/
+
+.executive-intro .container,
+.executive-members .container,
+.executive-members .container-lg,
+.leadership-quote .container,
+.leadership-stats .container,
+.executive-cta .container {
+  width: 90% !important;
+  max-width: 90% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (max-width: 768px) {
+  .executive-intro .container,
+  .executive-members .container,
+  .executive-members .container-lg,
+  .leadership-quote .container,
+  .leadership-stats .container,
+  .executive-cta .container {
+    width: 92% !important;
+    max-width: 92% !important;
+  }
+}
+
 .executive-intro {
   background: #fff;
   padding: 38px 0;

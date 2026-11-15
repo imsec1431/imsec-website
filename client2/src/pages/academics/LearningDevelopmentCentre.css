@@ -1,11 +1,12 @@
 /* =========================================================
    LEARNING DEVELOPMENT CENTRE — PUBLIC
+   INSTITUTIONAL THEME REDESIGN
 ========================================================= */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
 /* =========================================================
-   RESET
+   RESET & BASE
 ========================================================= */
 
 .publicLearningDevelopmentCentre,
@@ -13,19 +14,56 @@
   box-sizing: border-box;
 }
 
-/* =========================================================
-   PAGE
-========================================================= */
-
 .publicLearningDevelopmentCentre {
   width: 100%;
   min-height: 100vh;
-
-  background: #f5f7fb;
-
+  background: #f6f8fb;
   font-family: "Poppins", sans-serif;
+  color: #263238;
+}
 
-  color: #26384a;
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.ldcContainer {
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 16px 20px 45px;
+}
+
+.ldcBreadcrumb,
+.ldcHero {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .ldcContainer {
+    width: 95%;
+    max-width: 95%;
+  }
+}
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.ldcBreadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 14px;
+  color: #7b8492;
+  font-size: 13px;
+}
+
+.ldcBreadcrumb strong {
+  color: #002147;
+  font-weight: 650;
 }
 
 /* =========================================================
@@ -33,186 +71,54 @@
 ========================================================= */
 
 .ldcHero {
-  position: relative;
-
-  width: 100%;
-
-  min-height: 380px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  padding: 65px 25px;
-
-  overflow: hidden;
-
-  background: linear-gradient(135deg, #063b82, #1565c0, #1976d2);
-
+  padding: 28px 32px;
+  margin-bottom: 22px;
+  background: #002147;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 33, 71, 0.18);
   color: #ffffff;
+  text-align: left;
 }
 
-.ldcHeroShape {
-  position: absolute;
-
-  border-radius: 50%;
-
-  pointer-events: none;
-}
-
-.ldcHeroShapeOne {
-  width: 430px;
-  height: 430px;
-
-  top: -220px;
-  right: -90px;
-
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.ldcHeroShapeTwo {
-  width: 330px;
-  height: 330px;
-
-  bottom: -210px;
-  left: -80px;
-
-  background: rgba(255, 255, 255, 0.06);
-}
-
-.ldcHeroContent {
-  position: relative;
-
-  z-index: 2;
-
-  width: 100%;
-
-  max-width: 850px;
-
-  text-align: center;
-}
-
-.ldcHeroIcon {
-  width: 68px;
-  height: 68px;
-
-  display: flex;
-
+.ldcEyebrow {
+  display: inline-flex;
   align-items: center;
-
-  justify-content: center;
-
-  margin: 0 auto 16px;
-
-  border-radius: 18px;
-
-  background: rgba(255, 255, 255, 0.13);
-
-  border: 1px solid rgba(255, 255, 255, 0.23);
-
-  font-size: 27px;
-}
-
-.ldcHeroContent > span {
-  display: block;
-
-  margin-bottom: 8px;
-
+  min-height: 24px;
+  margin-bottom: 10px;
+  padding: 3px 10px;
+  color: #002147;
+  background: #fdb913;
+  border-radius: 4px;
   font-size: 10px;
-
-  font-weight: 700;
-
-  letter-spacing: 2px;
-
-  opacity: 0.9;
-}
-
-.ldcHeroContent h1 {
-  margin: 0 0 14px;
-
-  font-size: 44px;
-
-  line-height: 1.2;
-
   font-weight: 800;
+  letter-spacing: 1.2px;
 }
 
-.ldcHeroContent p {
-  max-width: 700px;
+.ldcHero h1 {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-size: clamp(26px, 3.5vw, 36px);
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
 
-  margin: auto;
-
-  color: rgba(255, 255, 255, 0.9);
-
-  font-size: 14px;
-
-  line-height: 1.8;
+.ldcHero p {
+  max-width: 720px;
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 13.5px;
+  line-height: 1.6;
 }
 
 /* =========================================================
-   SECTION
+   MAIN SECTION
 ========================================================= */
 
 .ldcSection {
   width: 100%;
-
-  max-width: 1200px;
-
-  margin: auto;
-
-  padding: 70px 30px 90px;
-}
-
-/* =========================================================
-   SECTION HEADING
-========================================================= */
-
-.ldcSectionHeading {
-  max-width: 800px;
-
-  margin: 0 auto 45px;
-
-  text-align: center;
-}
-
-.ldcSectionHeading > span {
-  display: block;
-
-  margin-bottom: 7px;
-
-  color: #1565c0;
-
-  font-size: 10px;
-
-  font-weight: 700;
-
-  letter-spacing: 1.7px;
-}
-
-.ldcSectionHeading h2 {
-  margin: 0 0 12px;
-
-  color: #173a5c;
-
-  font-size: 34px;
-
-  line-height: 1.3;
-
-  font-weight: 700;
-}
-
-.ldcSectionHeading p {
-  max-width: 700px;
-
-  margin: auto;
-
-  color: #748292;
-
-  font-size: 13px;
-
-  line-height: 1.8;
+  padding: 0;
 }
 
 /* =========================================================
@@ -221,12 +127,9 @@
 
 .ldcDocumentList {
   width: 100%;
-
   display: flex;
-
   flex-direction: column;
-
-  gap: 16px;
+  gap: 12px;
 }
 
 /* =========================================================
@@ -235,43 +138,22 @@
 
 .ldcDocumentCard {
   width: 100%;
-
-  min-height: 105px;
-
   display: grid;
-
-  grid-template-columns:
-    45px
-    60px
-    minmax(0, 1fr)
-    auto;
-
+  grid-template-columns: 36px 44px minmax(0, 1fr) auto;
   align-items: center;
-
-  gap: 18px;
-
-  padding: 18px 22px;
-
-  border: 1px solid #e3e9ef;
-
-  border-radius: 17px;
-
+  gap: 16px;
+  padding: 14px 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
   background: #ffffff;
-
-  box-shadow: 0 9px 28px rgba(0, 0, 0, 0.055);
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    border-color 0.25s ease;
+  box-shadow: 0 4px 16px rgba(0, 33, 71, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .ldcDocumentCard:hover {
-  transform: translateY(-3px);
-
-  border-color: #c8d9ec;
-
-  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.09);
+  transform: translateY(-2px);
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 24px rgba(0, 33, 71, 0.08);
 }
 
 /* =========================================================
@@ -279,12 +161,10 @@
 ========================================================= */
 
 .ldcDocumentNumber {
-  color: #9aa8b6;
-
+  color: #002147;
+  opacity: 0.5;
   font-size: 13px;
-
   font-weight: 700;
-
   text-align: center;
 }
 
@@ -293,22 +173,15 @@
 ========================================================= */
 
 .ldcDocumentIcon {
-  width: 60px;
-  height: 60px;
-
+  width: 44px;
+  height: 44px;
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
-  border-radius: 15px;
-
-  background: linear-gradient(135deg, #e8f1fc, #dceafa);
-
-  color: #1565c0;
-
-  font-size: 22px;
+  border-radius: 10px;
+  background: rgba(0, 33, 71, 0.06);
+  color: #002147;
+  font-size: 18px;
 }
 
 /* =========================================================
@@ -320,35 +193,26 @@
 }
 
 .ldcDocumentInfo > span {
-  display: block;
-
-  margin-bottom: 5px;
-
-  color: #1565c0;
-
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 4px;
+  color: #fdb913;
+  background: #002147;
+  padding: 2px 7px;
+  border-radius: 3px;
   font-size: 9px;
-
   font-weight: 700;
-
-  letter-spacing: 1.3px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
 }
 
 .ldcDocumentInfo h3 {
   margin: 0;
-
-  overflow: hidden;
-
-  color: #173a5c;
-
-  font-size: 17px;
-
-  line-height: 1.45;
-
-  font-weight: 650;
-
-  text-overflow: ellipsis;
-
-  white-space: nowrap;
+  color: #002147;
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 600;
+  word-break: break-word;
 }
 
 /* =========================================================
@@ -357,101 +221,69 @@
 
 .ldcDocumentActions {
   display: flex;
-
   align-items: center;
-
   justify-content: flex-end;
-
   gap: 8px;
+  flex-shrink: 0;
 }
 
 .ldcDocumentActions a {
-  min-height: 39px;
-
+  min-height: 34px;
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
-
-  gap: 7px;
-
-  padding: 9px 14px;
-
-  border-radius: 9px;
-
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 6px;
   font-family: inherit;
-
   font-size: 11px;
-
   font-weight: 600;
-
   text-decoration: none;
-
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background 0.2s ease;
+  transition: all 0.2s ease;
 }
-
-.ldcDocumentActions a:hover {
-  transform: translateY(-1px);
-}
-
-/* =========================================================
-   VIEW
-========================================================= */
 
 .ldcViewButton {
-  border: 1px solid #b9d2ed;
-
-  background: #edf5fd;
-
-  color: #1565c0;
+  border: 1px solid #002147;
+  background: #002147;
+  color: #ffffff;
 }
 
 .ldcViewButton:hover {
-  background: #e0effc;
-
-  box-shadow: 0 6px 16px rgba(21, 101, 192, 0.12);
+  background: #f15b20;
+  border-color: #f15b20;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(241, 91, 32, 0.2);
 }
 
-/* =========================================================
-   DOWNLOAD
-========================================================= */
-
 .ldcDownloadButton {
-  border: none;
-
-  background: linear-gradient(135deg, #0d47a1, #1976d2);
-
-  color: #ffffff;
-
-  box-shadow: 0 6px 16px rgba(21, 101, 192, 0.18);
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #002147;
 }
 
 .ldcDownloadButton:hover {
-  box-shadow: 0 9px 21px rgba(21, 101, 192, 0.28);
+  background: #002147;
+  border-color: #002147;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 33, 71, 0.15);
 }
 
-/* =========================================================
-   EXTERNAL
-========================================================= */
-
 .ldcExternalButton {
-  width: 39px;
-
-  padding: 9px !important;
-
-  border: 1px solid #dbe3eb;
-
+  width: 34px;
+  height: 34px;
+  padding: 0 !important;
+  border: 1px solid #cbd5e1;
   background: #ffffff;
-
-  color: #687989;
+  color: #002147;
 }
 
 .ldcExternalButton:hover {
-  background: #f4f7fa;
+  background: #002147;
+  border-color: #002147;
+  color: #ffffff;
+  transform: translateY(-1px);
 }
 
 /* =========================================================
@@ -459,29 +291,21 @@
 ========================================================= */
 
 .ldcLoading {
-  min-height: 280px;
-
+  min-height: 240px;
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
-
   justify-content: center;
+  color: #64748b;
+  gap: 12px;
 }
 
 .ldcSpinner {
-  width: 42px;
-  height: 42px;
-
-  margin-bottom: 15px;
-
-  border: 4px solid #dce7f3;
-
-  border-top-color: #1565c0;
-
+  width: 38px;
+  height: 38px;
+  border: 3px solid #e2e8f0;
+  border-top-color: #002147;
   border-radius: 50%;
-
   animation: ldcSpin 0.8s linear infinite;
 }
 
@@ -493,9 +317,7 @@
 
 .ldcLoading p {
   margin: 0;
-
-  color: #718096;
-
+  color: #64748b;
   font-size: 13px;
 }
 
@@ -504,46 +326,31 @@
 ========================================================= */
 
 .ldcError {
-  min-height: 250px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  justify-content: center;
-
-  padding: 30px;
-
-  border-radius: 18px;
-
-  background: #ffffff;
-
-  color: #c62828;
-
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 14px 18px;
+  border: 1px solid #fecdd3;
+  border-radius: 8px;
+  background: #fff1f2;
+  color: #be123c;
+  font-size: 13px;
+  font-weight: 600;
   text-align: center;
 }
 
 .ldcError svg {
-  margin-bottom: 12px;
-
-  font-size: 35px;
+  margin-bottom: 8px;
+  font-size: 24px;
 }
 
 .ldcError h3 {
-  margin: 0 0 7px;
-
-  color: #a91f1f;
-
-  font-size: 18px;
+  margin: 0 0 4px;
+  color: #be123c;
+  font-size: 16px;
 }
 
 .ldcError p {
   margin: 0;
-
-  color: #777;
-
   font-size: 12px;
 }
 
@@ -552,251 +359,97 @@
 ========================================================= */
 
 .ldcEmpty {
-  min-height: 280px;
-
+  max-width: 600px;
+  min-height: 240px;
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
-
   justify-content: center;
-
-  padding: 30px;
-
-  border-radius: 18px;
-
+  margin: 0 auto;
+  padding: 35px 25px;
   background: #ffffff;
-
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
   text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 33, 71, 0.04);
 }
 
 .ldcEmptyIcon {
-  width: 65px;
-  height: 65px;
-
+  width: 60px;
+  height: 60px;
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
-  margin-bottom: 15px;
-
-  border-radius: 17px;
-
-  background: #eaf2fc;
-
-  color: #1565c0;
-
-  font-size: 28px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  background: rgba(0, 33, 71, 0.06);
+  color: #002147;
+  font-size: 24px;
 }
 
 .ldcEmpty h3 {
-  margin: 0 0 8px;
-
-  color: #173a5c;
-
+  margin: 0 0 6px;
+  color: #002147;
   font-size: 20px;
+  font-weight: 700;
 }
 
 .ldcEmpty p {
   max-width: 500px;
-
   margin: 0;
-
-  color: #7a8795;
-
+  color: #64748b;
   font-size: 13px;
-
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 /* =========================================================
-   TABLET
+   RESPONSIVE
 ========================================================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 992px) {
   .ldcDocumentCard {
-    grid-template-columns:
-      40px
-      55px
-      minmax(0, 1fr);
-
+    grid-template-columns: 36px 44px minmax(0, 1fr);
     align-items: start;
   }
 
   .ldcDocumentActions {
     grid-column: 3 / -1;
-
     justify-content: flex-start;
-
     padding-top: 4px;
   }
 }
 
-/* =========================================================
-   MOBILE
-========================================================= */
-
 @media (max-width: 768px) {
+  .ldcContainer {
+    padding: 14px 14px 35px;
+  }
+
   .ldcHero {
-    min-height: 320px;
-
-    padding: 50px 20px;
+    padding: 22px 20px;
+    margin-bottom: 20px;
   }
 
-  .ldcHeroIcon {
-    width: 58px;
-    height: 58px;
-
-    font-size: 23px;
-  }
-
-  .ldcHeroContent h1 {
-    font-size: 34px;
-  }
-
-  .ldcHeroContent p {
-    font-size: 13px;
-
-    line-height: 1.7;
-  }
-
-  .ldcSection {
-    padding: 50px 15px 65px;
-  }
-
-  .ldcSectionHeading {
-    margin-bottom: 32px;
-  }
-
-  .ldcSectionHeading h2 {
-    font-size: 28px;
-  }
-
-  /* -----------------------------------------
-     CARD
-  ----------------------------------------- */
-
-  .ldcDocumentCard {
-    grid-template-columns:
-      42px
-      minmax(0, 1fr);
-
-    gap: 12px;
-
-    padding: 16px;
-  }
-
-  .ldcDocumentNumber {
-    grid-column: 1;
-
-    grid-row: 1;
-
-    align-self: start;
-  }
-
-  .ldcDocumentIcon {
-    grid-column: 1;
-
-    grid-row: 2;
-
-    width: 42px;
-    height: 42px;
-
-    font-size: 17px;
-
-    border-radius: 11px;
-  }
-
-  .ldcDocumentInfo {
-    grid-column: 2;
-
-    grid-row: 1 / span 2;
-  }
-
-  .ldcDocumentInfo h3 {
-    white-space: normal;
-
-    overflow: visible;
-
-    text-overflow: clip;
-
-    font-size: 15px;
-  }
-
-  /* -----------------------------------------
-     ACTIONS
-  ----------------------------------------- */
-
-  .ldcDocumentActions {
-    grid-column: 1 / -1;
-
-    grid-row: 3;
-
-    width: 100%;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr auto;
-
-    gap: 7px;
-
-    padding-top: 6px;
-  }
-
-  .ldcDocumentActions a {
-    width: 100%;
-
-    min-height: 41px;
-  }
-
-  .ldcExternalButton {
-    width: 41px !important;
-  }
-}
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media (max-width: 480px) {
-  .ldcHero {
-    min-height: 290px;
-
-    padding: 45px 15px;
-  }
-
-  .ldcHeroIcon {
-    width: 52px;
-    height: 52px;
-
-    margin-bottom: 14px;
-
-    font-size: 20px;
-  }
-
-  .ldcHeroContent h1 {
-    font-size: 27px;
-  }
-
-  .ldcHeroContent p {
-    font-size: 12px;
-  }
-
-  .ldcSection {
-    padding: 40px 10px 55px;
-  }
-
-  .ldcSectionHeading h2 {
+  .ldcHero h1 {
     font-size: 24px;
   }
 
   .ldcDocumentCard {
-    padding: 14px;
+    grid-template-columns: 36px 1fr;
+    gap: 12px;
+    padding: 14px 16px;
+  }
 
-    border-radius: 13px;
+  .ldcDocumentNumber {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .ldcDocumentIcon {
+    display: none;
+  }
+
+  .ldcDocumentInfo {
+    grid-column: 2;
   }
 
   .ldcDocumentInfo h3 {
@@ -804,35 +457,39 @@
   }
 
   .ldcDocumentActions {
-    grid-template-columns: 1fr 1fr;
+    grid-column: 1 / -1;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 8px;
+    padding-top: 6px;
   }
 
-  .ldcViewButton,
-  .ldcDownloadButton {
-    font-size: 10px !important;
+  .ldcDocumentActions a {
+    width: 100%;
+    min-height: 36px;
+  }
+
+  .ldcExternalButton {
+    width: 36px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .ldcHero {
+    padding: 18px 16px;
+  }
+
+  .ldcHero h1 {
+    font-size: 22px;
+  }
+
+  .ldcDocumentActions {
+    grid-template-columns: 1fr 1fr;
   }
 
   .ldcExternalButton {
     grid-column: 1 / -1;
-
     width: 100% !important;
-  }
-}
-
-/* =========================================================
-   VERY SMALL MOBILE
-========================================================= */
-
-@media (max-width: 360px) {
-  .ldcHeroContent h1 {
-    font-size: 24px;
-  }
-
-  .ldcDocumentActions {
-    grid-template-columns: 1fr;
-  }
-
-  .ldcExternalButton {
-    grid-column: auto;
   }
 }

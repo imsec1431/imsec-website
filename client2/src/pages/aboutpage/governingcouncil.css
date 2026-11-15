@@ -139,6 +139,34 @@ body {
         Introduction
 ===========================================*/
 
+/* ===========================================
+   Content Width: 90% for all sections except Hero
+===========================================*/
+
+.governing-intro .container,
+.governing-members .container,
+.governing-members .container-lg,
+.governing-responsibilities .container,
+.governing-responsibilities .container-lg,
+.governing-quote .container {
+  width: 90% !important;
+  max-width: 90% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (max-width: 768px) {
+  .governing-intro .container,
+  .governing-members .container,
+  .governing-members .container-lg,
+  .governing-responsibilities .container,
+  .governing-responsibilities .container-lg,
+  .governing-quote .container {
+    width: 92% !important;
+    max-width: 92% !important;
+  }
+}
+
 .governing-intro {
   background: #fff;
   padding: 38px 0;

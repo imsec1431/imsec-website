@@ -10,8 +10,8 @@
 }
 
 .apply-admission-container {
-  width: 100%;
-  max-width: 1100px;
+  width: 90%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -20,7 +20,8 @@
 ========================================================= */
 
 .apply-admission-header {
-  margin-bottom: 30px;
+  max-width: 1100px;
+  margin: 0 auto 30px;
   text-align: center;
 }
 
@@ -409,6 +410,11 @@
 ========================================================= */
 
 @media (max-width: 576px) {
+  .apply-admission-container {
+    width: 95%;
+    max-width: 95%;
+  }
+
   .apply-admission-page {
     padding: 25px 10px 45px;
   }

@@ -1,39 +1,139 @@
-/*=========================================================
-                Rules & Regulations Page
-=========================================================*/
+/* =========================================================
+   RULES & REGULATIONS PAGE
+   INSTITUTIONAL THEME REDESIGN
+========================================================= */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
-* {
+/* =========================================================
+   PAGE SCOPE & CONTAINER
+========================================================= */
+
+.rulesRegulationsPage {
+  width: 100%;
+  min-height: 100vh;
+  background: #f6f8fb;
+  font-family: "Poppins", sans-serif;
+  color: #263238;
+}
+
+.rulesRegulationsPage * {
+  box-sizing: border-box;
+}
+
+.rulesContainer {
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 16px 20px 45px;
+}
+
+.rulesBreadcrumb,
+.rules-hero {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .rulesContainer {
+    width: 95%;
+    max-width: 95%;
+  }
+}
+
+.rulesContainer .container,
+.rulesContainer .container-fluid {
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.rulesBreadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 14px;
+  color: #7b8492;
+  font-size: 13px;
+}
+
+.rulesBreadcrumb strong {
+  color: #002147;
+  font-weight: 650;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.rules-hero {
+  padding: 28px 32px;
+  margin-bottom: 22px;
+  background: #002147;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 33, 71, 0.18);
+  color: #ffffff;
+  text-align: left;
+}
+
+.rulesEyebrow {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  margin-bottom: 10px;
+  padding: 3px 10px;
+  color: #002147;
+  background: #fdb913;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.rules-hero h1 {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  font-size: clamp(26px, 3.5vw, 36px);
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
 }
 
-body {
-  overflow-x: hidden;
-  background: #fff;
+.rules-hero p {
+  max-width: 720px;
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 13.5px;
+  line-height: 1.6;
 }
 
-/*=========================================================
-                Common
-=========================================================*/
+/* =========================================================
+   SECTION HEADINGS & TAGS
+========================================================= */
 
 .section-tag {
-  color: #fdb913;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 2px;
+  display: inline-block;
+  color: #002147;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .section-title {
-  font-size: clamp(2rem, 5vw, 3.4rem);
-  font-weight: 800;
-  color: #0a2e5c;
-  margin-bottom: 20px;
+  font-size: clamp(20px, 3vw, 24px);
+  font-weight: 750;
+  color: #002147;
+  margin-bottom: 18px;
+  line-height: 1.3;
 }
 
 .section-title span {
@@ -43,570 +143,374 @@ body {
 .section-title::after {
   content: "";
   display: block;
-  width: 90px;
-  height: 4px;
+  width: 44px;
+  height: 3px;
   background: #fdb913;
-  border-radius: 50px;
-  margin-top: 15px;
+  border-radius: 10px;
+  margin-top: 8px;
 }
 
 .text-center .section-title::after {
-  margin: 15px auto 0;
+  margin: 8px auto 0;
 }
 
-/*=========================================================
-                Hero Section
-=========================================================*/
-
-.rules-hero {
-  height: 430px;
-
-  background:
-    linear-gradient(rgba(10, 46, 92, 0.88), rgba(10, 46, 92, 0.88)),
-    url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1600&q=80");
-
-  background-size: cover;
-  background-position: center;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-  color: #fff;
-}
-
-.hero-content h1 {
-  font-size: clamp(2.8rem, 6vw, 4.8rem);
-
-  font-weight: 800;
-}
-
-.hero-content p {
-  margin-top: 15px;
-
-  font-size: 18px;
-}
-
-.hero-content span {
-  color: #fdb913;
-
-  margin: 0 8px;
-}
-
-/*=========================================================
-                About Section
-=========================================================*/
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
 
 .rules-about {
-  background: #fff;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 16px rgba(0, 33, 71, 0.04);
+  margin-bottom: 22px;
 }
 
 .rules-image {
   width: 100%;
-
-  border-radius: 25px;
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-
-  transition: 0.35s;
-}
-
-.rules-image:hover {
-  transform: scale(1.03);
+  max-height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
 .rules-about p {
-  color: #666;
-
-  line-height: 1.9;
-
-  text-align: justify;
+  color: #556980;
+  font-size: 13.5px;
+  line-height: 1.7;
 }
 
-/*=========================================================
-                Search
-=========================================================*/
+/* =========================================================
+   SEARCH SECTION
+========================================================= */
 
 .rules-search {
-  background: #f8f9fb;
+  background: transparent;
 }
 
 .search-box {
-  background: #fff;
-
-  border-radius: 50px;
-
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
   display: flex;
-
   align-items: center;
+  padding: 0 16px;
+  height: 46px;
+  box-shadow: 0 4px 16px rgba(0, 33, 71, 0.04);
+  transition: border-color 0.2s ease;
+}
 
-  height: 60px;
-
-  padding: 0 20px;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+.search-box:focus-within {
+  border-color: #002147;
 }
 
 .search-box svg {
-  color: #0a2e5c;
-
-  margin-right: 15px;
-
-  font-size: 18px;
+  color: #002147;
+  font-size: 16px;
+  margin-right: 12px;
+  flex-shrink: 0;
 }
 
 .search-box input {
   border: none !important;
-
   box-shadow: none !important;
+  font-size: 14px;
+  font-family: inherit;
+  color: #263238;
+  width: 100%;
+  padding: 0;
+}
 
-  font-size: 16px;
+.search-box input:focus {
+  outline: none;
 }
 
 .rules-search .form-select {
-  height: 60px;
-
-  border-radius: 50px;
-
-  border: none;
-
+  height: 46px;
+  border-radius: 10px;
   font-weight: 600;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  font-size: 13.5px;
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 33, 71, 0.04);
+  color: #002147;
+  transition: border-color 0.2s ease;
 }
 
-/*=========================================================
-                Rules Accordion
-=========================================================*/
+.rules-search .form-select:focus {
+  border-color: #002147;
+  box-shadow: none;
+}
+
+/* =========================================================
+   RULES ACCORDION
+========================================================= */
 
 .rules-section {
-  background: #fff;
+  background: transparent;
 }
 
 .rule-item {
-  margin-bottom: 20px;
-
-  border: none !important;
-
-  border-radius: 18px !important;
-
+  background: #ffffff;
+  margin-bottom: 12px;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 12px !important;
   overflow: hidden;
-
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 33, 71, 0.04);
 }
 
 .rule-item .accordion-button {
-  background: #fff;
-
-  padding: 22px;
-
-  font-weight: 700;
-
-  color: #0a2e5c;
-
+  background: #ffffff;
+  padding: 16px 20px;
+  font-weight: 650;
+  font-size: 15px;
+  color: #002147;
   box-shadow: none !important;
+  border-radius: 12px !important;
+  transition: all 0.2s ease;
 }
 
 .rule-item .accordion-button:not(.collapsed) {
-  background: #0a2e5c;
-
-  color: #fff;
+  background: #002147;
+  color: #ffffff;
 }
 
-.rule-item .accordion-button::after {
+.rule-item .accordion-button:not(.collapsed)::after {
   filter: brightness(0) invert(1);
 }
 
 .rule-header {
   display: flex;
-
   align-items: center;
-
   width: 100%;
+  gap: 10px;
 }
 
 .rule-header svg {
-  color: #fdb913;
+  color: #002147;
+  font-size: 16px;
+  flex-shrink: 0;
+}
 
-  font-size: 18px;
+.rule-item .accordion-button:not(.collapsed) .rule-header svg {
+  color: #fdb913;
 }
 
 .important-badge {
   margin-left: auto;
-
-  display: flex;
-
+  display: inline-flex;
   align-items: center;
-
-  gap: 8px;
-
-  background: #dc3545;
-
-  color: #fff;
-
-  padding: 6px 14px;
-
-  border-radius: 30px;
-
-  font-size: 12px;
-
-  font-weight: 600;
+  gap: 5px;
+  background: #dc2626;
+  color: #ffffff;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
 }
 
 .rule-category {
   display: inline-block;
-
-  background: #fdb913;
-
-  color: #0a2e5c;
-
-  padding: 6px 18px;
-
-  border-radius: 30px;
-
-  font-size: 13px;
-
+  background: #002147;
+  color: #fdb913;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 10px;
   font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
 }
 
 .rule-item .accordion-body {
-  padding: 25px;
+  padding: 18px 20px;
+  background: #ffffff;
+  border-top: 1px solid #edf0f4;
 }
 
 .rule-item .accordion-body p {
-  color: #666;
-
-  line-height: 1.9;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
 }
 
-.rule-item .btn {
+.rule-item .btn-warning {
+  border: 1px solid #002147;
+  background: #002147;
+  color: #ffffff;
+  font-size: 11px;
   font-weight: 600;
-}
-/*=========================================================
-                Rule Book Section
-=========================================================*/
-
-.rulebook-section {
-  background: #f8f9fb;
-}
-
-.rulebook-card {
-  background: #fff;
-
-  border-radius: 25px;
-
-  padding: 35px;
-
-  display: flex;
-
-  justify-content: space-between;
-
+  padding: 6px 14px;
+  border-radius: 6px !important;
+  display: inline-flex;
   align-items: center;
-
-  gap: 30px;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  transition: 0.35s;
+  gap: 6px;
+  transition: all 0.2s ease;
 }
 
-.rulebook-card:hover {
-  transform: translateY(-8px);
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+.rule-item .btn-warning:hover {
+  background: #f15b20;
+  border-color: #f15b20;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(241, 91, 32, 0.2);
 }
 
-.rulebook-card h3 {
-  color: #0a2e5c;
-
-  font-weight: 700;
-
-  margin-bottom: 15px;
-}
-
-.rulebook-card p {
-  color: #666;
-
-  line-height: 1.8;
-
-  margin-bottom: 0;
-}
-
-.rulebook-card .btn {
-  padding: 12px 30px;
-
-  font-weight: 600;
-
-  white-space: nowrap;
-}
-
-/*=========================================================
-                Guidelines
-=========================================================*/
+/* =========================================================
+   GUIDELINES SECTION
+========================================================= */
 
 .guidelines-section {
-  background: #fff;
+  background: transparent;
 }
 
 .guide-card {
-  background: #fff;
-
-  padding: 35px 25px;
-
-  border-radius: 20px;
-
+  background: #ffffff;
+  padding: 22px 18px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
   text-align: center;
-
   height: 100%;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  transition: 0.35s;
+  box-shadow: 0 4px 16px rgba(0, 33, 71, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .guide-card:hover {
-  transform: translateY(-10px);
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 24px rgba(0, 33, 71, 0.08);
 }
 
 .guide-icon {
-  font-size: 55px;
-
-  color: #fdb913;
-
-  margin-bottom: 20px;
-}
-
-.guide-card h4 {
-  color: #0a2e5c;
-
-  font-weight: 700;
-
-  margin-bottom: 15px;
-}
-
-.guide-card p {
-  color: #666;
-
-  line-height: 1.8;
-}
-
-/*=========================================================
-                FAQ
-=========================================================*/
-
-.faq-section {
-  background: #f8f9fb;
-}
-
-.faq-card {
-  background: #fff;
-
-  padding: 35px;
-
-  border-radius: 20px;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
-
-.faq-card h5 {
-  color: #0a2e5c;
-
-  font-weight: 700;
-
+  font-size: 32px;
+  color: #002147;
   margin-bottom: 12px;
 }
 
-.faq-card p {
-  color: #666;
+.guide-card h4 {
+  color: #002147;
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
 
-  line-height: 1.8;
+.guide-card p {
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =========================================================
+   FAQ SECTION
+========================================================= */
+
+.faq-section {
+  background: transparent;
+}
+
+.faq-card {
+  background: #ffffff;
+  padding: 24px 28px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 16px rgba(0, 33, 71, 0.04);
+}
+
+.faq-card h5 {
+  color: #002147;
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.faq-card p {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
 }
 
 .faq-card hr {
-  margin: 25px 0;
+  margin: 16px 0;
+  border-color: #edf0f4;
+  opacity: 1;
 }
 
-/*=========================================================
-                CTA
-=========================================================*/
+/* =========================================================
+   CTA SECTION
+========================================================= */
 
 .rules-cta {
-  background: linear-gradient(135deg, #0a2e5c, #123f7a);
-
-  color: #fff;
-
-  padding: 90px 0;
+  background: #002147;
+  color: #ffffff;
+  padding: 28px 32px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 33, 71, 0.18);
+  text-align: left;
+  margin-top: 8px;
 }
 
 .rules-cta h2 {
-  font-size: clamp(2rem, 5vw, 3rem);
-
-  font-weight: 800;
-
-  margin-bottom: 18px;
+  font-size: clamp(20px, 3vw, 24px);
+  font-weight: 750;
+  margin-bottom: 6px;
+  color: #ffffff;
 }
 
 .rules-cta p {
-  color: #ddd;
-
-  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
 }
 
-.rules-cta .btn {
-  padding: 12px 30px;
+/* =========================================================
+   RESPONSIVE
+========================================================= */
 
-  font-weight: 600;
-
-  transition: 0.35s;
-}
-
-.rules-cta .btn-warning {
-  background: #fdb913;
-
-  color: #0a2e5c;
-
-  border: none;
-}
-
-.rules-cta .btn-warning:hover {
-  background: #fff;
-
-  color: #0a2e5c;
-
-  transform: translateY(-5px);
-}
-
-.rules-cta .btn-outline-light {
-  border: 2px solid #fff;
-}
-
-.rules-cta .btn-outline-light:hover {
-  background: #fff;
-
-  color: #0a2e5c;
-
-  transform: translateY(-5px);
-}
-
-/*=========================================================
-                Animation
-=========================================================*/
-
-.rulebook-card,
-.guide-card,
-.rule-item {
-  transition: all 0.35s ease;
-}
-
-/*=========================================================
-                Responsive
-=========================================================*/
-
-@media (max-width: 992px) {
-  .rules-hero {
-    height: 320px;
+@media (max-width: 768px) {
+  .rulesContainer {
+    padding: 14px 14px 35px;
   }
 
-  .rulebook-card {
-    flex-direction: column;
+  .rules-hero {
+    padding: 22px 20px;
+    margin-bottom: 20px;
+  }
 
-    text-align: center;
+  .rules-hero h1 {
+    font-size: 24px;
+  }
+
+  .rules-about {
+    padding: 18px 16px;
   }
 
   .rules-cta {
+    padding: 22px 18px;
     text-align: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .rules-hero {
-    height: 260px;
-  }
-
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero-content p {
-    font-size: 15px;
-  }
-
-  .search-box {
-    height: 55px;
-  }
-
-  .rules-search .form-select {
-    height: 55px;
-  }
-
-  .rule-item .accordion-button {
-    padding: 18px;
-  }
-
-  .important-badge {
-    font-size: 11px;
-
-    padding: 5px 10px;
-  }
-
-  .rulebook-card {
-    padding: 25px;
-  }
-
-  .rulebook-card .btn {
-    width: 100%;
-  }
-
-  .guide-card {
-    padding: 25px;
-  }
-
-  .guide-icon {
-    font-size: 45px;
   }
 
   .faq-card {
-    padding: 25px;
-  }
-
-  .rules-cta {
-    padding: 60px 20px;
-  }
-
-  .rules-cta .btn {
-    width: 100%;
-
-    margin-top: 12px;
+    padding: 18px 16px;
   }
 }
 
-@media (max-width: 576px) {
-  .hero-content h1 {
-    font-size: 2rem;
+@media (max-width: 480px) {
+  .rules-hero {
+    padding: 18px 16px;
   }
 
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .rules-image {
-    margin-bottom: 20px;
+  .rules-hero h1 {
+    font-size: 22px;
   }
 
   .rule-header {
     flex-wrap: wrap;
-
-    gap: 10px;
   }
 
   .important-badge {
     margin-left: 0;
-  }
-
-  .faq-card {
-    padding: 20px;
   }
 }

@@ -136,6 +136,32 @@ body {
    Location Details
 ===========================================*/
 
+/* ===========================================
+   Content Width: 90% for all sections except Hero
+===========================================*/
+
+.location-details .container,
+.travel-section .container,
+.contact-section .container,
+.landmark-section .container,
+.cta-section .container {
+  width: 90% !important;
+  max-width: 90% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (max-width: 768px) {
+  .location-details .container,
+  .travel-section .container,
+  .contact-section .container,
+  .landmark-section .container,
+  .cta-section .container {
+    width: 92% !important;
+    max-width: 92% !important;
+  }
+}
+
 .location-details {
   background: #fff;
   padding: 38px 0;
