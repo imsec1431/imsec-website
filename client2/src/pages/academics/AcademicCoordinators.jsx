@@ -33,16 +33,9 @@ const AcademicCoordinators = () => {
 
   return (
     <div className="academic-coordinators-page">
-      <div className="academic-coordinators-container">
-        {/* BREADCRUMB */}
-        <div className="academic-coordinators-breadcrumb">
-          <span>Academics</span>
-          <span>/</span>
-          <strong>Academic Coordinators</strong>
-        </div>
-
-        {/* PAGE HEADER */}
-        <div className="academic-coordinators-header">
+      {/* PAGE HEADER (FULL WIDTH) */}
+      <div className="academic-coordinators-header">
+        <div className="academic-coordinators-header-container">
           <span className="academic-coordinators-eyebrow">ACADEMICS</span>
 
           <h1>Academic Coordinators</h1>
@@ -52,7 +45,9 @@ const AcademicCoordinators = () => {
             responsibilities.
           </p>
         </div>
+      </div>
 
+      <div className="academic-coordinators-container">
         {/* COORDINATORS */}
         {coordinators.length === 0 ? (
           <div className="academic-coordinators-empty">
