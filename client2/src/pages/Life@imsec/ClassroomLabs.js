@@ -379,25 +379,21 @@ const ClassroomLabs = () => {
 
   return (
     <main className="classroom-lab-page">
-      <div className="classroomLabsContainer">
-        {/* ===================================================
-            BREADCRUMB & HERO
-        =================================================== */}
+      {/* ===================================================
+          HERO (FULL WIDTH)
+      =================================================== */}
 
-        <div className="classroomLabsBreadcrumb">
-          <span>Academics</span>
-          <span>/</span>
-          <strong>Class Rooms & Labs</strong>
-        </div>
-
-        <section className="classroom-lab-hero">
-          <span className="classroomLabsEyebrow">ACADEMICS</span>
+      <section className="classroom-lab-hero">
+        <div className="classroomLabsHeroContainer">
+          {/* <span className="classroomLabsEyebrow">ACADEMICS</span> */}
 
           <h1>{data.hero.title}</h1>
 
           <p>{data.hero.subtitle}</p>
-        </section>
+        </div>
+      </section>
 
+      <div className="classroomLabsContainer">
         {/* ===================================================
             ABOUT
         =================================================== */}

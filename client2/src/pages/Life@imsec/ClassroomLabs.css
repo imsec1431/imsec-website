@@ -8,9 +8,11 @@
 .classroom-lab-page {
   width: 100%;
   min-height: 100vh;
+  padding: 0 0 50px;
   background: #f6f8fb;
   color: #263238;
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
 .classroom-lab-page *,
@@ -27,20 +29,13 @@
   width: 90%;
   max-width: 90%;
   margin: 0 auto;
-  padding: 16px 20px 45px;
-}
-
-.classroomLabsBreadcrumb,
-.classroom-lab-hero {
-  max-width: 1180px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 @media (max-width: 768px) {
-  .classroomLabsContainer {
-    width: 95%;
-    max-width: 95%;
+  .classroomLabsContainer,
+  .classroomLabsHeroContainer {
+    width: 94%;
+    max-width: 94%;
   }
 }
 
@@ -66,18 +61,25 @@
 }
 
 /* =========================================================
-   HERO
+   HERO (FULL WIDTH)
 ========================================================= */
 
 .classroom-lab-hero {
-  padding: 28px 32px;
-  margin-bottom: 22px;
+  width: 100%;
+  padding: 38px 0 42px;
+  margin-bottom: 24px;
   background: #002147;
-  border-radius: 14px;
-  box-shadow: 0 6px 20px rgba(0, 33, 71, 0.18);
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
   color: #ffffff;
   text-align: left;
   min-height: auto;
+}
+
+.classroomLabsHeroContainer {
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 .classroomLabsEyebrow {
@@ -586,12 +588,8 @@
 ========================================================= */
 
 @media (max-width: 768px) {
-  .classroomLabsContainer {
-    padding: 14px 14px 35px;
-  }
-
   .classroom-lab-hero {
-    padding: 22px 20px;
+    padding: 24px 0 28px;
     margin-bottom: 20px;
   }
 
@@ -623,8 +621,15 @@
 }
 
 @media (max-width: 480px) {
+  .classroomLabsContainer,
+  .classroomLabsHeroContainer {
+    width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
+  }
+
   .classroom-lab-hero {
-    padding: 18px 16px;
+    padding: 20px 0 24px;
+    margin-bottom: 16px;
   }
 
   .classroom-lab-hero h1 {
