@@ -1116,11 +1116,17 @@
 
   overflow: hidden;
 
-  padding: 48px 0;
+  padding: 55px 0 65px;
+
+  margin-bottom: 40px;
 
   background: #002147;
 
   color: #ffffff;
+}
+
+.admissionCTAContent .admissionPrimaryButton {
+  margin-top: 24px;
 }
 
 .admissionCTAContent {
@@ -1390,7 +1396,8 @@
   }
 
   .admissionBottomCTA {
-    padding: 38px 0;
+    padding: 44px 0 54px;
+    margin-bottom: 30px;
   }
 
   .admissionCTAContent h2 {

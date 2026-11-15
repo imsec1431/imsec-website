@@ -201,20 +201,6 @@ const AdmissionProcess = () => {
   return (
     <main className="admissionProcessPage">
       {/* =================================================
-          BREADCRUMB
-      ================================================= */}
-
-      <div className="admissionProcessContainer">
-        <div className="admissionBreadcrumb">
-          <span>Admissions</span>
-
-          <FaArrowRight />
-
-          <strong>Admission Process</strong>
-        </div>
-      </div>
-
-      {/* =================================================
           HERO
       ================================================= */}
 
