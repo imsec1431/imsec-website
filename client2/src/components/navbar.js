@@ -382,11 +382,29 @@ const NavigationBar = () => {
         </Navbar>
 
         {/* =====================================================
-            MID NAVBAR: STATS BADGES (LEFT) & COLLEGE BRANDING (RIGHT)
+            MID NAVBAR: COLLEGE BRANDING & STATS BADGES (WHITE BACKGROUND)
         ===================================================== */}
         <div className="imsec-mid-navbar">
           <Container fluid className="imsec-mid-container">
-            {/* Left: Academic Achievement Badges (Laurel Wreaths) */}
+            {/* Left: Logo & College Branding */}
+            <Link to="/" className="mid-nav-brand" onClick={handleNavClick}>
+              <img
+                src={imsecEmblem}
+                alt="IMS Engineering College Logo"
+                className="mid-nav-logo-img"
+              />
+              <div className="mid-nav-title-block">
+                <div className="mid-nav-college-name">
+                  <span className="mid-nav-name-main">IMS Engineering College</span>
+                  <div className="mid-nav-name-subtitle">
+                    <span className="mid-nav-sub-prefix">Under the Aegis of</span>
+                    <strong className="mid-nav-sub-society">IMS Society, Ghaziabad</strong>
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Right: Academic Achievement Badges (Laurel Wreaths) */}
             <div className="mid-nav-badges d-none d-lg-flex">
               {/* Badge 1: 24 Years of Academic Excellence */}
               <div className="mid-wreath-badge">
@@ -408,7 +426,17 @@ const NavigationBar = () => {
                 <LaurelRight />
               </div>
 
-              {/* Badge 3: 500+ Recruiters */}
+              {/* Badge 3: 350+ Faculty Members */}
+              {/* <div className="mid-wreath-badge d-none d-xl-inline-flex">
+                <LaurelLeft />
+                <div className="mid-badge-content">
+                  <span className="mid-badge-value">350+</span>
+                  <span className="mid-badge-label">Faculty Members</span>
+                </div>
+                <LaurelRight />
+              </div> */}
+
+              {/* Badge 4: 500+ Recruiters */}
               <div className="mid-wreath-badge">
                 <LaurelLeft />
                 <div className="mid-badge-content">
@@ -418,7 +446,7 @@ const NavigationBar = () => {
                 <LaurelRight />
               </div>
 
-              {/* Badge 4: Excellent Industry Collaborations */}
+              {/* Badge 5: Excellent Industry Collaborations */}
               <div className="mid-wreath-badge d-none d-xl-inline-flex">
                 <LaurelLeft />
                 <div className="mid-badge-content">
@@ -428,24 +456,6 @@ const NavigationBar = () => {
                 <LaurelRight />
               </div>
             </div>
-
-            {/* Right: Logo & College Branding */}
-            <Link to="/" className="mid-nav-brand" onClick={handleNavClick}>
-              <img
-                src={imsecEmblem}
-                alt="IMS Engineering College Logo"
-                className="mid-nav-logo-img"
-              />
-              <div className="mid-nav-title-block">
-                <div className="mid-nav-college-name">
-                  <span className="mid-nav-name-main">IMS Engineering College</span>
-                  <div className="mid-nav-name-subtitle">
-                    <span className="mid-nav-sub-prefix">Under the Aegis of</span>
-                    <strong className="mid-nav-sub-society">IMS Society, Ghaziabad</strong>
-                  </div>
-                </div>
-              </div>
-            </Link>
           </Container>
         </div>
 
