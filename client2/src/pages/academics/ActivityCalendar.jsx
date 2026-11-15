@@ -93,8 +93,8 @@ const ActivityCalendar = () => {
 
       setError(
         err.response?.data?.message ||
-          err.message ||
-          "Failed to load activity calendars.",
+        err.message ||
+        "Failed to load activity calendars.",
       );
     } finally {
       setLoading(false);
@@ -143,7 +143,7 @@ const ActivityCalendar = () => {
       {/* HEADER (FULL WIDTH) */}
       <div className="activity-calendar-header">
         <div className="activity-calendar-header-container">
-          <span className="activity-calendar-eyebrow">ACADEMICS</span>
+          {/* <span className="activity-calendar-eyebrow">ACADEMICS</span> */}
 
           <h1>Activity Calendar</h1>
 
@@ -172,54 +172,53 @@ const ActivityCalendar = () => {
 
         {calendars.length > 0 && (
           <div className="activity-calendar-list">
-          {calendars.map((calendar) => (
-            <div className="activity-calendar-card" key={calendar._id}>
-              {/* CARD HEADER */}
+            {calendars.map((calendar) => (
+              <div className="activity-calendar-card" key={calendar._id}>
+                {/* CARD HEADER */}
 
-              <div className="activity-calendar-card-header">
-                <div className="activity-calendar-session">
-                  <FaCalendarDays />
+                <div className="activity-calendar-card-header">
+                  <div className="activity-calendar-session">
+                    <FaCalendarDays />
 
-                  <div>
-                    <span>Academic Session</span>
+                    <div>
+                      <span>Academic Session</span>
 
-                    <h2>{calendar.academicSession}</h2>
+                      <h2>{calendar.academicSession}</h2>
+                    </div>
                   </div>
+
+                  <span
+                    className={`activity-calendar-semester ${String(calendar.semester || "").toLowerCase() === "even"
+                        ? "even"
+                        : "odd"
+                      }`}
+                  >
+                    {calendar.semester}
+                  </span>
                 </div>
 
-                <span
-                  className={`activity-calendar-semester ${
-                    String(calendar.semester || "").toLowerCase() === "even"
-                      ? "even"
-                      : "odd"
-                  }`}
-                >
-                  {calendar.semester}
-                </span>
+                {/* CARD CONTENT */}
+
+                <div className="activity-calendar-card-content">
+                  <h3>{calendar.calendarName}</h3>
+
+                  {/* PDF BUTTON */}
+
+                  {calendar.pdfUrl && (
+                    <button
+                      type="button"
+                      className="activity-calendar-pdf-btn"
+                      onClick={() => handleViewPdf(calendar.pdfUrl)}
+                    >
+                      View Activity Calendar PDF
+                      <FaArrowUpRightFromSquare />
+                    </button>
+                  )}
+                </div>
               </div>
-
-              {/* CARD CONTENT */}
-
-              <div className="activity-calendar-card-content">
-                <h3>{calendar.calendarName}</h3>
-
-                {/* PDF BUTTON */}
-
-                {calendar.pdfUrl && (
-                  <button
-                    type="button"
-                    className="activity-calendar-pdf-btn"
-                    onClick={() => handleViewPdf(calendar.pdfUrl)}
-                  >
-                    View Activity Calendar PDF
-                    <FaArrowUpRightFromSquare />
-                  </button>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

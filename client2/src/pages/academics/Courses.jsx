@@ -116,22 +116,12 @@ const Courses = () => {
 
   return (
     <main className="coursesPage">
-      <div className="coursesContainer">
-        {/* ===================================================
-            BREADCRUMB
-        =================================================== */}
+      {/* ===================================================
+          HERO (FULL WIDTH)
+      =================================================== */}
 
-        <div className="coursesBreadcrumb">
-          <span>Academics</span>
-          <span>/</span>
-          <strong>Courses</strong>
-        </div>
-
-        {/* ===================================================
-            HERO
-        =================================================== */}
-
-        <section className="coursesHero">
+      <section className="coursesHero">
+        <div className="coursesHeroContainer">
           <span className="coursesEyebrow">ACADEMICS</span>
 
           <h1>Courses</h1>
@@ -139,8 +129,10 @@ const Courses = () => {
           <p>
             Explore our academic programmes, degree structures, and curriculum.
           </p>
-        </section>
+        </div>
+      </section>
 
+      <div className="coursesContainer">
         {/* ===================================================
             CATEGORY TABS
         =================================================== */}
