@@ -122,7 +122,7 @@ const Courses = () => {
 
       <section className="coursesHero">
         <div className="coursesHeroContainer">
-          <span className="coursesEyebrow">ACADEMICS</span>
+          {/* <span className="coursesEyebrow">ACADEMICS</span> */}
 
           <h1>Courses</h1>
 
