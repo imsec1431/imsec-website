@@ -522,7 +522,7 @@ const ApplyAdmission = () => {
             onClick={() => setShowInfoModal(false)}
             aria-label="Close"
           >
-            &times;
+            ✕
           </button>
         </Modal.Header>
 
