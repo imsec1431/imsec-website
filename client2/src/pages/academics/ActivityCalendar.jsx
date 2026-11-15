@@ -124,9 +124,11 @@ const ActivityCalendar = () => {
   if (loading) {
     return (
       <div className="activity-calendar-page">
-        <div className="activity-calendar-loading">
-          <FaCalendarDays />
-          <p>Loading activity calendars...</p>
+        <div className="activity-calendar-container">
+          <div className="activity-calendar-loading">
+            <FaCalendarDays />
+            <p>Loading activity calendars...</p>
+          </div>
         </div>
       </div>
     );
@@ -138,42 +140,38 @@ const ActivityCalendar = () => {
 
   return (
     <div className="activity-calendar-page">
-      {/* BREADCRUMB */}
-      <div className="activity-calendar-breadcrumb">
-        <span>Academics</span>
-        <span>/</span>
-        <strong>Activity Calendar</strong>
-      </div>
-
-      {/* HEADER */}
+      {/* HEADER (FULL WIDTH) */}
       <div className="activity-calendar-header">
-        <span className="activity-calendar-eyebrow">ACADEMICS</span>
+        <div className="activity-calendar-header-container">
+          <span className="activity-calendar-eyebrow">ACADEMICS</span>
 
-        <h1>Activity Calendar</h1>
+          <h1>Activity Calendar</h1>
 
-        <p>Academic activity calendars semester-wise.</p>
+          <p>Academic activity calendars semester-wise.</p>
+        </div>
       </div>
 
-      {/* ERROR */}
+      <div className="activity-calendar-container">
+        {/* ERROR */}
 
-      {error && <div className="activity-calendar-alert error">{error}</div>}
+        {error && <div className="activity-calendar-alert error">{error}</div>}
 
-      {/* EMPTY */}
+        {/* EMPTY */}
 
-      {!error && calendars.length === 0 && (
-        <div className="activity-calendar-empty">
-          <FaCalendarDays />
+        {!error && calendars.length === 0 && (
+          <div className="activity-calendar-empty">
+            <FaCalendarDays />
 
-          <h3>No Activity Calendar Available</h3>
+            <h3>No Activity Calendar Available</h3>
 
-          <p>Activity calendars will appear here when published.</p>
-        </div>
-      )}
+            <p>Activity calendars will appear here when published.</p>
+          </div>
+        )}
 
-      {/* CALENDARS */}
+        {/* CALENDARS */}
 
-      {calendars.length > 0 && (
-        <div className="activity-calendar-list">
+        {calendars.length > 0 && (
+          <div className="activity-calendar-list">
           {calendars.map((calendar) => (
             <div className="activity-calendar-card" key={calendar._id}>
               {/* CARD HEADER */}
@@ -222,6 +220,7 @@ const ActivityCalendar = () => {
           ))}
         </div>
       )}
+      </div>
     </div>
   );
 };
