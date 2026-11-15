@@ -53,23 +53,13 @@ const StudentHandbook = () => {
 
   return (
     <div className="publicStudentHandbookPage">
-      <div className="publicStudentHandbookContainer">
-        {/* =====================================================
-            BREADCRUMB
-        ===================================================== */}
+      {/* =====================================================
+          HERO (FULL WIDTH)
+      ===================================================== */}
 
-        <div className="publicStudentHandbookBreadcrumb">
-          <span>Academics</span>
-          <span>/</span>
-          <strong>Student Handbook</strong>
-        </div>
-
-        {/* =====================================================
-            HERO
-        ===================================================== */}
-
-        <section className="publicStudentHandbookHero">
-          <span className="publicStudentHandbookEyebrow">ACADEMICS</span>
+      <section className="publicStudentHandbookHero">
+        <div className="publicStudentHandbookHeroContainer">
+          {/* <span className="publicStudentHandbookEyebrow">ACADEMICS</span> */}
 
           <h1>Student Handbook</h1>
 
@@ -77,8 +67,10 @@ const StudentHandbook = () => {
             Access the official student handbook and important academic
             information provided by IMSEC.
           </p>
-        </section>
+        </div>
+      </section>
 
+      <div className="publicStudentHandbookContainer">
         {/* =====================================================
             CONTENT
         ===================================================== */}

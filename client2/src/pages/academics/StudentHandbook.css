@@ -17,9 +17,11 @@
 .publicStudentHandbookPage {
   width: 100%;
   min-height: 100vh;
+  padding: 0 0 50px;
   background: #f6f8fb;
   font-family: "Poppins", sans-serif;
   color: #263238;
+  box-sizing: border-box;
 }
 
 /* =========================================================
@@ -30,20 +32,13 @@
   width: 90%;
   max-width: 90%;
   margin: 0 auto;
-  padding: 16px 20px 45px;
-}
-
-.publicStudentHandbookBreadcrumb,
-.publicStudentHandbookHero {
-  max-width: 1180px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 @media (max-width: 768px) {
-  .publicStudentHandbookContainer {
-    width: 95%;
-    max-width: 95%;
+  .publicStudentHandbookContainer,
+  .publicStudentHandbookHeroContainer {
+    width: 94%;
+    max-width: 94%;
   }
 }
 
@@ -67,17 +62,24 @@
 }
 
 /* =========================================================
-   HERO
+   HERO (FULL WIDTH)
 ========================================================= */
 
 .publicStudentHandbookHero {
-  padding: 28px 32px;
-  margin-bottom: 22px;
+  width: 100%;
+  padding: 38px 0 42px;
+  margin-bottom: 24px;
   background: #002147;
-  border-radius: 14px;
-  box-shadow: 0 6px 20px rgba(0, 33, 71, 0.18);
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
   color: #ffffff;
   text-align: left;
+}
+
+.publicStudentHandbookHeroContainer {
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 .publicStudentHandbookEyebrow {
@@ -407,12 +409,8 @@
 }
 
 @media (max-width: 768px) {
-  .publicStudentHandbookContainer {
-    padding: 14px 14px 35px;
-  }
-
   .publicStudentHandbookHero {
-    padding: 22px 20px;
+    padding: 24px 0 28px;
     margin-bottom: 20px;
   }
 
@@ -463,8 +461,15 @@
 }
 
 @media (max-width: 480px) {
+  .publicStudentHandbookContainer,
+  .publicStudentHandbookHeroContainer {
+    width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
+  }
+
   .publicStudentHandbookHero {
-    padding: 18px 16px;
+    padding: 20px 0 24px;
+    margin-bottom: 16px;
   }
 
   .publicStudentHandbookHero h1 {
