@@ -110,24 +110,12 @@ const FeeStructure = () => {
 
   return (
     <div className="publicFeePage">
-      <div className="publicFeeContainer">
-        {/* =================================================
-            BREADCRUMB
-        ================================================= */}
+      {/* =================================================
+          HERO (FULL WIDTH)
+      ================================================= */}
 
-        <div className="publicFeeBreadcrumb">
-          <span>Admissions</span>
-
-          <span>/</span>
-
-          <strong>Fee Structure</strong>
-        </div>
-
-        {/* =================================================
-            HERO
-        ================================================= */}
-
-        <section className="publicFeeHero">
+      <section className="publicFeeHero">
+        <div className="publicFeeHeroContainer">
           <div className="publicFeeHeroContent">
             <span className="publicFeeEyebrow">
               {feeStructure.heroLabel || "ADMISSIONS"}
@@ -159,8 +147,10 @@ const FeeStructure = () => {
 
             <small>IMS Engineering College</small>
           </div>
-        </section>
+        </div>
+      </section>
 
+      <div className="publicFeeContainer">
         {/* =================================================
             GENERAL NOTE
         ================================================= */}

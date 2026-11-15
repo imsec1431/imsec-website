@@ -27,8 +27,7 @@
   padding: 16px 0 45px;
 }
 
-.publicFeeBreadcrumb,
-.publicFeeHero {
+.publicFeeBreadcrumb {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -58,16 +57,22 @@
 
 .publicFeeHero {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.7fr);
-  gap: 30px;
-  min-height: 200px;
-  margin-bottom: 20px;
-  padding: 30px 34px;
+  width: 100%;
   overflow: hidden;
   color: #ffffff;
   background: #002147;
-  border-radius: 14px;
+  padding: 38px 0 42px;
+  margin-bottom: 24px;
+}
+
+.publicFeeHeroContainer {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.7fr);
+  gap: 30px;
+  align-items: center;
 }
 
 .publicFeeHeroContent {
@@ -742,9 +747,9 @@
     max-width: 92%;
   }
 
-  .publicFeeHero {
+  .publicFeeHeroContainer {
     grid-template-columns: 1fr;
-    padding: 38px;
+    gap: 24px;
   }
 
   .publicFeeHeroCard {
@@ -779,9 +784,12 @@
 
   .publicFeeHero {
     min-height: auto;
+    padding: 26px 0 30px;
+  }
+
+  .publicFeeHeroContainer {
+    width: 94%;
     gap: 20px;
-    padding: 22px 18px;
-    border-radius: 12px;
   }
 
   .publicFeeHero h1 {
@@ -876,7 +884,11 @@
   }
 
   .publicFeeHero {
-    padding: 25px 18px;
+    padding: 24px 0 28px;
+  }
+
+  .publicFeeHeroContainer {
+    width: calc(100% - 24px);
   }
 
   .publicFeeHero h1 {
