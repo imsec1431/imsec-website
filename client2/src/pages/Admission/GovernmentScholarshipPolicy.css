@@ -4,14 +4,14 @@
 
 .government-scholarship-public-page {
   min-height: 100vh;
-  padding: 16px 20px 45px;
+  padding: 0 0 50px;
   background: #f6f8fb;
   color: #202938;
 }
 
 .government-scholarship-container {
-  width: 100%;
-  max-width: 1250px;
+  width: 90%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -35,24 +35,28 @@
 }
 
 /* =========================================================
-   HERO
+   HERO (FULL WIDTH)
 ========================================================= */
 
 .government-scholarship-hero {
+  width: 100%;
+  padding: 38px 0 42px;
+  margin-bottom: 24px;
+  background: #002147;
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
+  color: #ffffff;
+}
+
+.government-scholarship-hero-container {
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 30px;
-
-  padding: 28px 32px;
-
-  background: #002147;
-
-  border: none;
-  border-radius: 14px;
-
-  box-shadow: 0 6px 20px rgba(0, 33, 71, 0.18);
-  color: #ffffff;
 }
 
 .government-scholarship-hero-content {
@@ -423,6 +427,7 @@
   gap: 15px;
 
   margin-top: 18px;
+  margin-bottom: 24px;
   padding: 18px 22px;
 
   background: #ffffff;
@@ -570,10 +575,14 @@
 ========================================================= */
 
 @media (max-width: 1000px) {
-  .government-scholarship-hero {
+  .government-scholarship-hero-container {
     align-items: stretch;
     flex-direction: column;
-    padding: 24px 20px;
+    gap: 20px;
+  }
+
+  .government-scholarship-hero {
+    padding: 30px 0 34px;
   }
 
   .government-scholarship-document {
@@ -592,7 +601,13 @@
 
 @media (max-width: 700px) {
   .government-scholarship-public-page {
-    padding: 14px 10px 35px;
+    padding: 0 0 40px;
+  }
+
+  .government-scholarship-container,
+  .government-scholarship-hero-container {
+    width: 94%;
+    max-width: 94%;
   }
 
   .government-scholarship-breadcrumb {
@@ -602,10 +617,8 @@
 
   .government-scholarship-hero {
     gap: 20px;
-
-    padding: 20px 16px;
-
-    border-radius: 12px;
+    padding: 24px 0 28px;
+    border-radius: 0;
   }
 
   .government-scholarship-hero h1 {
@@ -659,11 +672,17 @@
 
 @media (max-width: 420px) {
   .government-scholarship-public-page {
-    padding: 15px 9px 30px;
+    padding: 0 0 30px;
+  }
+
+  .government-scholarship-container,
+  .government-scholarship-hero-container {
+    width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
   }
 
   .government-scholarship-hero {
-    padding: 21px 15px;
+    padding: 22px 0 26px;
   }
 
   .government-scholarship-hero h1 {

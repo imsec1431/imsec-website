@@ -193,24 +193,12 @@ const GovernmentScholarshipPolicy = () => {
 
   return (
     <div className="government-scholarship-public-page">
-      <div className="government-scholarship-container">
-        {/* =================================================
-            BREADCRUMB
-        ================================================= */}
+      {/* =================================================
+          HERO (FULL WIDTH)
+      ================================================= */}
 
-        <div className="government-scholarship-breadcrumb">
-          <span>Admissions</span>
-
-          <span>/</span>
-
-          <strong>Government Scholarship Policies</strong>
-        </div>
-
-        {/* =================================================
-            HERO
-        ================================================= */}
-
-        <section className="government-scholarship-hero">
+      <section className="government-scholarship-hero">
+        <div className="government-scholarship-hero-container">
           <div className="government-scholarship-hero-content">
             <span className="government-scholarship-eyebrow">ADMISSIONS</span>
 
@@ -257,8 +245,10 @@ const GovernmentScholarshipPolicy = () => {
               <span>Official Government Scholarship Policy</span>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
+      <div className="government-scholarship-container">
         {/* =================================================
             ERROR
         ================================================= */}
