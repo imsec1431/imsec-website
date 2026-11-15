@@ -282,7 +282,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   position: relative;
   z-index: 1031;
-  padding: 8px 0;
+  padding: 6px 0;
 }
 
 .imsec-mid-container {
@@ -313,8 +313,8 @@
 }
 
 .mid-nav-logo-img {
-  width: clamp(48px, 4.2vw, 62px);
-  height: clamp(48px, 4.2vw, 62px);
+  width: clamp(64px, 5vw, 76px);
+  height: clamp(64px, 5vw, 76px);
   object-fit: contain;
   flex-shrink: 0;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
@@ -1105,6 +1105,11 @@
 @media (max-width: 768px) {
   .imsec-top-navbar {
     display: none;
+  }
+
+  .mid-nav-logo-img {
+    width: clamp(48px, 11vw, 58px);
+    height: clamp(48px, 11vw, 58px);
   }
 
   .navbar-dark-blue {
