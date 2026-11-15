@@ -62,18 +62,10 @@ const AcademicDevelopmentProgram = () => {
   }
   return (
     <div className="academicDevelopmentProgramPage">
-      <div className="adpContainer">
-        {/* ================= Breadcrumb ================= */}
+      {/* ================= Hero (FULL WIDTH) ================= */}
 
-        <div className="adpBreadcrumb">
-          <span>Academics</span>
-          <span>/</span>
-          <strong>Academic Development Programs</strong>
-        </div>
-
-        {/* ================= Hero ================= */}
-
-        <section className="adp-hero">
+      <section className="adp-hero">
+        <div className="adpHeroContainer">
           <span className="adpEyebrow">ACADEMICS</span>
 
           <h1>Academic Development Programs</h1>
@@ -82,8 +74,10 @@ const AcademicDevelopmentProgram = () => {
             Enhancing teaching quality, research capability, innovation, and
             professional excellence among faculty members and academic professionals.
           </p>
-        </section>
+        </div>
+      </section>
 
+      <div className="adpContainer">
         {/* ================= About ================= */}
 
         <section className="adp-about py-4">
