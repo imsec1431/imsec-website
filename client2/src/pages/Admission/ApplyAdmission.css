@@ -277,6 +277,10 @@
 ========================================================= */
 
 .admission-info-modal-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 18px 22px;
   color: #ffffff;
   background: linear-gradient(135deg, #071d3a 0%, #0a2e5c 50%, #123f7a 100%);
@@ -286,6 +290,38 @@
 .admission-info-modal-header .modal-title {
   font-size: 19px;
   font-weight: 700;
+  padding-right: 42px;
+}
+
+.admission-info-modal-close {
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 26px;
+  line-height: 1;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+.admission-info-modal-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #fdb913;
+  border-color: #fdb913;
+  transform: translateY(-50%) scale(1.08);
 }
 
 .admission-info-modal-header .btn-close {
@@ -477,7 +513,14 @@
 
   .admission-info-modal-header .modal-title {
     font-size: 16px;
-    padding-right: 8px;
+    padding-right: 38px;
+  }
+
+  .admission-info-modal-close {
+    right: 14px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
   }
 
   .admission-info-modal-header + .modal-body {

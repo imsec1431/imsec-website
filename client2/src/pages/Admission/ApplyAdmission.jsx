@@ -513,11 +513,17 @@ const ApplyAdmission = () => {
         onHide={() => setShowInfoModal(false)}
         centered
         size="lg"
-        backdrop="static"
-        keyboard={false}
       >
-        <Modal.Header closeButton className="admission-info-modal-header">
+        <Modal.Header className="admission-info-modal-header">
           <Modal.Title>Important Information Before Applying</Modal.Title>
+          <button
+            type="button"
+            className="admission-info-modal-close"
+            onClick={() => setShowInfoModal(false)}
+            aria-label="Close"
+          >
+            &times;
+          </button>
         </Modal.Header>
 
         <Modal.Body>
