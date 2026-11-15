@@ -254,7 +254,7 @@ const NavigationBar = () => {
 
         <Navbar
           expand="lg"
-          className="imsec-top-navbar"
+          className="imsec-top-navbar d-none d-lg-block"
         >
           <Container fluid className="imsec-top-container">
             {/* =================================================

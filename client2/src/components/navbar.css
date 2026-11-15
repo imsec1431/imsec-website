@@ -980,20 +980,7 @@
 
 @media (max-width: 991.98px) {
   .imsec-top-navbar {
-    min-height: 28px !important;
-    height: 28px;
-    padding: 0 !important;
-  }
-
-  .imsec-top-container {
-    min-height: 28px !important;
-    height: 28px;
-    max-width: 100%;
-    padding-left: 12px;
-    padding-right: 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: none !important;
   }
 
   .logo-img {
