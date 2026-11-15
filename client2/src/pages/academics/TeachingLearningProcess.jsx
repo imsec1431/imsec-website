@@ -94,22 +94,12 @@ const TeachingLearningProcess = () => {
 
   return (
     <div className="publicTeachingLearningPage">
-      <div className="publicTeachingLearningContainer">
-        {/* =====================================================
-            BREADCRUMB
-        ===================================================== */}
+      {/* =====================================================
+          HERO (FULL WIDTH)
+      ===================================================== */}
 
-        <div className="publicTeachingLearningBreadcrumb">
-          <span>Academics</span>
-          <span>/</span>
-          <strong>Teaching Learning Process</strong>
-        </div>
-
-        {/* =====================================================
-            HERO
-        ===================================================== */}
-
-        <section className="publicTeachingLearningHero">
+      <section className="publicTeachingLearningHero">
+        <div className="publicTeachingLearningHeroContainer">
           <span className="publicTeachingLearningEyebrow">ACADEMICS</span>
 
           <h1>Teaching Learning Process</h1>
@@ -118,8 +108,10 @@ const TeachingLearningProcess = () => {
             Explore the teaching and learning practices that support academic
             excellence, innovation and holistic development at IMSEC.
           </p>
-        </section>
+        </div>
+      </section>
 
+      <div className="publicTeachingLearningContainer">
         {/* =====================================================
             CONTENT
         ===================================================== */}
