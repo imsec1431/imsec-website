@@ -3,9 +3,34 @@
 ========================================================= */
 
 .placement-policy-page {
+  width: 100%;
   min-height: 100vh;
-  background: #f7f9fc;
+  padding: 0 0 50px;
+  background: #f6f8fb;
   color: #172033;
+  box-sizing: border-box;
+}
+
+.placement-policy-container {
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .placement-policy-container,
+  .placement-policy-hero-container {
+    width: 94%;
+    max-width: 94%;
+  }
+}
+
+@media (max-width: 480px) {
+  .placement-policy-container,
+  .placement-policy-hero-container {
+    width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
+  }
 }
 
 /* =========================================================
@@ -14,52 +39,52 @@
 
 .placement-policy-hero {
   position: relative;
-  overflow: hidden;
-  padding: 90px 0 85px;
-  background: linear-gradient(135deg, #062d5c 0%, #0b4b88 55%, #1764aa 100%);
+  width: 100%;
+  padding: 38px 0 42px;
+  margin-bottom: 24px;
+  background: #002147;
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
+  color: #ffffff;
+  text-align: left;
 }
 
 .placement-policy-hero::after {
-  content: "";
-  position: absolute;
-  width: 380px;
-  height: 380px;
-  right: -140px;
-  top: -170px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.06);
+  display: none;
+}
+
+.placement-policy-hero-container {
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 .placement-policy-hero-content {
   position: relative;
   z-index: 2;
-  max-width: 750px;
+  text-align: left;
+  max-width: 900px;
 }
 
 .placement-policy-hero span {
-  display: inline-block;
-  margin-bottom: 12px;
-  color: #fdb913;
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
+  display: none;
 }
 
 .placement-policy-hero h1 {
   margin: 0;
-  color: #fff;
-  font-size: clamp(36px, 5vw, 58px);
-  font-weight: 800;
-  line-height: 1.1;
+  color: #ffffff;
+  font-size: clamp(26px, 3.5vw, 36px);
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
 }
 
 .placement-policy-hero p {
-  max-width: 650px;
-  margin: 18px 0 0;
+  max-width: 750px;
+  margin: 8px 0 0;
   color: rgba(255, 255, 255, 0.88);
-  font-size: 16px;
-  line-height: 1.8;
+  font-size: 13.5px;
+  line-height: 1.6;
 }
 
 /* =========================================================
@@ -67,12 +92,13 @@
 ========================================================= */
 
 .placement-policy-section {
-  padding: 75px 0 90px;
+  padding: 10px 0 45px;
+  background: transparent;
 }
 
 .placement-policy-heading {
   max-width: 720px;
-  margin: 0 auto 45px;
+  margin: 0 auto 24px;
   text-align: center;
 }
 
@@ -89,15 +115,15 @@
 .placement-policy-heading h2 {
   margin: 0;
   color: #102d57;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 800;
 }
 
 .placement-policy-heading p {
-  margin: 12px 0 0;
+  margin: 10px 0 0;
   color: #667085;
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 /* =========================================================
@@ -105,7 +131,8 @@
 ========================================================= */
 
 .placement-policy-list {
-  max-width: 1000px;
+  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -300,19 +327,25 @@
 
 @media (max-width: 768px) {
   .placement-policy-hero {
-    padding: 65px 0;
+    min-height: auto;
+    padding: 24px 0 28px;
+    margin-bottom: 20px;
   }
 
   .placement-policy-hero h1 {
-    font-size: 38px;
+    font-size: 24px;
+  }
+
+  .placement-policy-hero p {
+    font-size: 13px;
   }
 
   .placement-policy-section {
-    padding: 55px 0 65px;
+    padding: 10px 0 35px;
   }
 
   .placement-policy-heading h2 {
-    font-size: 29px;
+    font-size: 26px;
   }
 
   .placement-policy-card-header {
@@ -343,15 +376,13 @@
 
 @media (max-width: 480px) {
   .placement-policy-hero {
-    padding: 50px 0;
+    min-height: auto;
+    padding: 20px 0 24px;
+    margin-bottom: 16px;
   }
 
   .placement-policy-hero h1 {
-    font-size: 32px;
-  }
-
-  .placement-policy-hero p {
-    font-size: 14px;
+    font-size: 22px;
   }
 
   .placement-policy-card-header {

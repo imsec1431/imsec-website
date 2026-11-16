@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import "./PlacementPolicy.css";
 
-import { Container, Spinner, Button } from "react-bootstrap";
+import { Spinner, Button } from "react-bootstrap";
 
 import {
   FaFilePdf,
@@ -98,13 +98,15 @@ const PlacementPolicy = () => {
     return (
       <main className="placement-policy-page">
         <section className="placement-policy-hero">
-          <Container>
-            <h1>Placement Policy</h1>
+          <div className="placement-policy-hero-container">
+            <div className="placement-policy-hero-content">
+              <h1>Placement Policy</h1>
 
-            <p>
-              Important guidelines and policies related to campus placements.
-            </p>
-          </Container>
+              <p>
+                Important guidelines and policies related to campus placements.
+              </p>
+            </div>
+          </div>
         </section>
 
         <section className="placement-policy-status">
@@ -125,20 +127,20 @@ const PlacementPolicy = () => {
   return (
     <main className="placement-policy-page">
       {/* ===================================================
-          HERO
+          HERO (FULL WIDTH)
       =================================================== */}
 
       <section className="placement-policy-hero">
-        <Container>
+        <div className="placement-policy-hero-container">
           <div className="placement-policy-hero-content">
             <h1>Placement Policy</h1>
 
-            <p style={{ color: "white" }}>
+            <p>
               Guidelines, rules and important information governing the
               placement process at IMSEC.
             </p>
           </div>
-        </Container>
+        </div>
       </section>
 
       {/* ===================================================
@@ -146,7 +148,7 @@ const PlacementPolicy = () => {
       =================================================== */}
 
       <section className="placement-policy-section">
-        <Container>
+        <div className="placement-policy-container">
           <div className="placement-policy-list">
             {policies.map((policy) => (
               <article className="placement-policy-card" key={policy._id}>
@@ -226,7 +228,7 @@ const PlacementPolicy = () => {
               </article>
             ))}
           </div>
-        </Container>
+        </div>
       </section>
     </main>
   );
