@@ -5,73 +5,86 @@
 .tp-public-page {
   width: 100%;
   min-height: 100vh;
-  background: #fff;
+  padding: 0 0 50px;
+  background: #f6f8fb;
   color: #172033;
+  box-sizing: border-box;
+}
+
+.tp-public-container {
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.tp-public-hero-container {
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .tp-public-container,
+  .tp-public-hero-container {
+    width: 94%;
+    max-width: 94%;
+  }
+}
+
+@media (max-width: 480px) {
+  .tp-public-container,
+  .tp-public-hero-container {
+    width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
+  }
 }
 
 /* =========================================================
-   HERO
+   HERO (FULL WIDTH)
 ========================================================= */
 
 .tp-public-hero {
   position: relative;
-  min-height: 330px;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  padding: 70px 0;
-  background: linear-gradient(135deg, #071b3d 0%, #0d3972 55%, #1764aa 100%);
-  color: #fff;
+  width: 100%;
+  padding: 38px 0 42px;
+  margin-bottom: 24px;
+  background: #002147;
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
+  color: #ffffff;
+  text-align: left;
 }
 
 .tp-public-hero-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(
-      circle at 12% 25%,
-      rgba(255, 255, 255, 0.11),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at 85% 75%,
-      rgba(255, 255, 255, 0.08),
-      transparent 32%
-    );
+  display: none;
 }
 
 .tp-public-hero-content {
   position: relative;
   z-index: 2;
-  max-width: 780px;
-  text-align: center;
-  margin: auto;
+  text-align: left;
+  max-width: 900px;
 }
 
 .tp-public-hero-content span {
-  display: inline-block;
-  margin-bottom: 12px;
-  color: rgba(255, 255, 255, 0.82);
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 1.3px;
-  text-transform: uppercase;
+  display: none;
 }
 
 .tp-public-hero-content h1 {
   margin: 0;
-  color: #fff;
-  font-size: clamp(35px, 5vw, 56px);
-  line-height: 1.15;
-  font-weight: 800;
+  color: #ffffff;
+  font-size: clamp(26px, 3.5vw, 36px);
+  line-height: 1.2;
+  font-weight: 750;
+  letter-spacing: -0.5px;
 }
 
 .tp-public-hero-content p {
-  max-width: 650px;
-  margin: 15px auto 0;
-  color: rgba(255, 255, 255, 0.84);
-  font-size: 14px;
-  line-height: 1.8;
+  max-width: 750px;
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 13.5px;
+  line-height: 1.6;
 }
 
 /* =========================================================
@@ -79,8 +92,8 @@
 ========================================================= */
 
 .tp-public-content {
-  padding: 70px 0 85px;
-  background: #fff;
+  padding: 10px 0 40px;
+  background: transparent;
 }
 
 /* =========================================================
@@ -91,13 +104,13 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 30px;
-  margin-bottom: 35px;
+  gap: 20px;
+  margin-bottom: 24px;
 }
 
 .tp-public-section-heading span {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   color: #1764aa;
   font-size: 11px;
   font-weight: 800;
@@ -108,7 +121,7 @@
 .tp-public-section-heading h2 {
   margin: 0;
   color: #102d57;
-  font-size: 29px;
+  font-size: 28px;
   line-height: 1.3;
   font-weight: 800;
 }
@@ -386,25 +399,29 @@
 ========================================================= */
 
 .tp-public-empty {
-  min-height: 55vh;
+  min-height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 50px 20px;
+  padding: 40px 20px;
+  border: 1px solid #e2e7ee;
+  border-radius: 12px;
+  background: #ffffff;
   text-align: center;
+  margin: 20px 0;
 }
 
 .tp-public-empty > svg {
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   color: #1764aa;
-  font-size: 42px;
+  font-size: 38px;
 }
 
 .tp-public-empty h2 {
   margin: 0;
   color: #102d57;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 800;
 }
 
@@ -419,12 +436,12 @@
 ========================================================= */
 
 .tp-public-status {
-  min-height: 65vh;
+  min-height: 40vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px;
+  padding: 30px 20px;
   text-align: center;
 }
 
@@ -807,12 +824,21 @@
 
 @media (max-width: 768px) {
   .tp-public-hero {
-    min-height: 275px;
-    padding: 55px 15px;
+    min-height: auto;
+    padding: 24px 0 28px;
+    margin-bottom: 20px;
+  }
+
+  .tp-public-hero-content h1 {
+    font-size: 24px;
+  }
+
+  .tp-public-hero-content p {
+    font-size: 13px;
   }
 
   .tp-public-content {
-    padding: 50px 15px 65px;
+    padding: 10px 0 35px;
   }
 
   .tp-public-section-heading h2 {
@@ -855,12 +881,26 @@
 ========================================================= */
 
 @media (max-width: 480px) {
+  .tp-public-hero {
+    min-height: auto;
+    padding: 20px 0 24px;
+    margin-bottom: 16px;
+  }
+
   .tp-public-hero-content h1 {
-    font-size: 34px;
+    font-size: 22px;
   }
 
   .tp-public-hero-content p {
     font-size: 12px;
+  }
+
+  .tp-public-content {
+    padding: 8px 0 30px;
+  }
+
+  .tp-public-section-heading h2 {
+    font-size: 20px;
   }
 
   .tp-activity-public-card h3 {

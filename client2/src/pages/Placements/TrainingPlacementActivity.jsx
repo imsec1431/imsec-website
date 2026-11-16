@@ -5,7 +5,6 @@ import {
   Button,
   Card,
   Col,
-  Container,
   Modal,
   Row,
   Spinner,
@@ -158,12 +157,26 @@ const TrainingPlacementActivity = () => {
 
   if (loading) {
     return (
-      <div className="tp-public-status">
-        <Spinner animation="border" className="tp-public-spinner" />
+      <div className="tp-public-page">
+        <section className="tp-public-hero">
+          <div className="tp-public-hero-container">
+            <div className="tp-public-hero-content">
+              <h1>T&amp;P Activities</h1>
+              <p>
+                Training, industry interaction, career development and placement
+                activities at IMSEC.
+              </p>
+            </div>
+          </div>
+        </section>
 
-        <h2>Loading T&amp;P Activities</h2>
+        <div className="tp-public-status">
+          <Spinner animation="border" className="tp-public-spinner" />
 
-        <p>Please wait while we load the latest activities.</p>
+          <h2>Loading T&amp;P Activities</h2>
+
+          <p>Please wait while we load the latest activities.</p>
+        </div>
       </div>
     );
   }
@@ -174,8 +187,22 @@ const TrainingPlacementActivity = () => {
 
   if (error) {
     return (
-      <div className="tp-public-status">
-        <Alert variant="danger">{error}</Alert>
+      <div className="tp-public-page">
+        <section className="tp-public-hero">
+          <div className="tp-public-hero-container">
+            <div className="tp-public-hero-content">
+              <h1>T&amp;P Activities</h1>
+              <p>
+                Training, industry interaction, career development and placement
+                activities at IMSEC.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="tp-public-status">
+          <Alert variant="danger">{error}</Alert>
+        </div>
       </div>
     );
   }
@@ -188,12 +215,8 @@ const TrainingPlacementActivity = () => {
     return (
       <div className="tp-public-page">
         <section className="tp-public-hero">
-          <div className="tp-public-hero-overlay" />
-
-          <Container>
+          <div className="tp-public-hero-container">
             <div className="tp-public-hero-content">
-              <span>Training &amp; Placement</span>
-
               <h1>T&amp;P Activities</h1>
 
               <p>
@@ -201,15 +224,17 @@ const TrainingPlacementActivity = () => {
                 activities at IMSEC.
               </p>
             </div>
-          </Container>
+          </div>
         </section>
 
-        <div className="tp-public-empty">
-          <FaImages />
+        <div className="tp-public-container">
+          <div className="tp-public-empty">
+            <FaImages />
 
-          <h2>No Activities Available</h2>
+            <h2>No Activities Available</h2>
 
-          <p>T&amp;P activities will be published here soon.</p>
+            <p>T&amp;P activities will be published here soon.</p>
+          </div>
         </div>
       </div>
     );
@@ -222,19 +247,19 @@ const TrainingPlacementActivity = () => {
   return (
     <div className="tp-public-page">
       {/* =====================================================
-          HERO
+          HERO (FULL WIDTH)
       ===================================================== */}
 
       <section className="tp-public-hero">
-        <div className="tp-public-hero-overlay" />
-
-        <Container>
+        <div className="tp-public-hero-container">
           <div className="tp-public-hero-content">
-            <span>Training &amp; Placement</span>
-
             <h1>T&amp;P Activities</h1>
+            <p>
+              Training, industry interaction, career development and placement
+              activities at IMSEC.
+            </p>
           </div>
-        </Container>
+        </div>
       </section>
 
       {/* =====================================================
@@ -242,7 +267,7 @@ const TrainingPlacementActivity = () => {
       ===================================================== */}
 
       <section className="tp-public-content">
-        <Container>
+        <div className="tp-public-container">
           <div className="tp-public-section-heading">
             <div>
               <span>Corporate Development Cell</span>
@@ -397,7 +422,7 @@ const TrainingPlacementActivity = () => {
               </Col>
             ))}
           </Row>
-        </Container>
+        </div>
       </section>
 
       {/* =====================================================
