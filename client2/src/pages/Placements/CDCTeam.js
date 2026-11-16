@@ -2,12 +2,10 @@ import React, { useEffect, useState, useMemo } from "react";
 import "./CDCTeam.css";
 
 import {
-  Container,
   Row,
   Col,
   Card,
   Button,
-  Breadcrumb,
   Modal,
   Spinner,
 } from "react-bootstrap";
@@ -214,24 +212,23 @@ function CDCTeam() {
 
   return (
     <main className="cdc-team-page">
-      {/* HERO */}
+      {/* HERO (FULL WIDTH) */}
       <section className="cdc-hero">
-        <Container>
-          <Breadcrumb className="cdc-breadcrumb" />
+        <div className="cdc-hero-container">
           <div className="hero-content">
-            <span></span>
+            {/* <span className="cdc-eyebrow">PLACEMENTS</span> */}
             <h1>Corporate Development Cell</h1>
-            <p style={{ color: "white" }}>
+            <p>
               Empowering Students through Training, Corporate Collaboration,
               Internships, Skill Development and Campus Placements.
             </p>
           </div>
-        </Container>
+        </div>
       </section>
 
       {/* PRIORITY-ORDERED HORIZONTAL ROW */}
-      <section className="team-section" aria-labelledby="cdc-team-heading">
-        <Container>
+      <div className="cdc-team-container">
+        <section className="team-section" aria-labelledby="cdc-team-heading">
           <div className="section-title">
             <span>Corporate Development Cell</span>
             <h2 id="cdc-team-heading">CDC Members</h2>
@@ -246,8 +243,8 @@ function CDCTeam() {
               ))}
             </Row>
           </div>
-        </Container>
-      </section>
+        </section>
+      </div>
 
       {/* PROFILE MODAL */}
       <Modal

@@ -5,8 +5,24 @@
 .cdc-team-page {
   width: 100%;
   min-height: 100vh;
-  background: #ffffff;
+  padding: 0 0 50px;
+  background: #f6f8fb;
   color: #172033;
+  box-sizing: border-box;
+}
+
+.cdc-team-container {
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .cdc-team-container,
+  .cdc-hero-container {
+    width: 94%;
+    max-width: 94%;
+  }
 }
 
 /* =========================================================
@@ -15,36 +31,20 @@
 
 .cdc-hero {
   position: relative;
-  min-height: 330px;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  padding: 70px 0;
-  background: linear-gradient(135deg, #071b3d 0%, #0d3972 55%, #1764aa 100%);
+  width: 100%;
+  padding: 38px 0 42px;
+  margin-bottom: 24px;
+  background: #002147;
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
   color: #ffffff;
+  text-align: left;
 }
 
-.cdc-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(
-      circle at 15% 20%,
-      rgba(255, 255, 255, 0.12),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at 85% 80%,
-      rgba(255, 255, 255, 0.08),
-      transparent 30%
-    );
-}
-
-.cdc-breadcrumb {
-  position: relative;
-  z-index: 2;
-  margin-bottom: 25px;
+.cdc-hero-container {
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 .hero-content {
@@ -66,18 +66,18 @@
 .hero-content h1 {
   margin: 0;
   color: #ffffff;
-  font-size: clamp(38px, 5vw, 60px);
-  line-height: 1.15;
-  font-weight: 800;
-  letter-spacing: -1px;
+  font-size: clamp(26px, 3.5vw, 36px);
+  line-height: 1.2;
+  font-weight: 750;
+  letter-spacing: -0.5px;
 }
 
 .hero-content p {
   max-width: 750px;
-  margin: 15px 0 0;
+  margin: 8px 0 0;
   color: rgba(255, 255, 255, 0.88);
-  font-size: 16px;
-  line-height: 1.8;
+  font-size: 13.5px;
+  line-height: 1.6;
 }
 
 /* =========================================================
@@ -85,8 +85,8 @@
 ========================================================= */
 
 .team-section {
-  padding: 45px 0;
-  background: #ffffff;
+  padding: 10px 0 45px;
+  background: transparent;
 }
 
 /* =========================================================
@@ -508,20 +508,20 @@
 
 @media (max-width: 768px) {
   .cdc-hero {
-    min-height: 280px;
-    padding: 55px 0;
+    padding: 24px 0 28px;
+    margin-bottom: 20px;
   }
 
   .hero-content h1 {
-    font-size: 38px;
+    font-size: 24px;
   }
 
   .hero-content p {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .team-section {
-    padding: 35px 0;
+    padding: 10px 0 35px;
   }
 
   .section-title {
@@ -549,6 +549,21 @@
 }
 
 @media (max-width: 480px) {
+  .cdc-team-container,
+  .cdc-hero-container {
+    width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
+  }
+
+  .cdc-hero {
+    padding: 20px 0 24px;
+    margin-bottom: 16px;
+  }
+
+  .hero-content h1 {
+    font-size: 22px;
+  }
+
   .team-column {
     flex: 0 0 285px !important;
     width: 285px !important;
