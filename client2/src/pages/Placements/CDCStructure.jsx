@@ -102,20 +102,21 @@ const CDCStructure = () => {
   return (
     <main className="cdc-public-page">
       {/* =====================================
-          HERO
+          HERO (FULL WIDTH)
       ===================================== */}
 
       <section className="cdc-public-hero">
-        <div className="cdc-public-hero-overlay" />
-
-        <div className="container">
+        <div className="cdc-hero-container">
           <div className="cdc-public-hero-content">
-            <span>
+            {/* <span>
               <FaSitemap />
               Career Development Centre
-            </span>
+            </span> */}
 
             <h1>{page.title || "CDC Structure"}</h1>
+            <p>
+              Organizational hierarchy and functional structure of the Career Development Centre.
+            </p>
           </div>
         </div>
       </section>
@@ -125,7 +126,7 @@ const CDCStructure = () => {
       ===================================== */}
 
       <section className="cdc-public-content">
-        <div className="container">
+        <div className="cdc-structure-container">
           <div className="cdc-public-card">
             <div className="cdc-public-card-header">
               <div>

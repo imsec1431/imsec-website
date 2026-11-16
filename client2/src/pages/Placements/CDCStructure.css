@@ -5,10 +5,32 @@
 .cdc-public-page {
   width: 100%;
   min-height: 100vh;
-
-  background: #ffffff;
-
+  padding: 0 0 45px;
+  background: #f6f8fb;
   color: #172033;
+  box-sizing: border-box;
+}
+
+.cdc-structure-container {
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .cdc-structure-container,
+  .cdc-hero-container {
+    width: 94%;
+    max-width: 94%;
+  }
+}
+
+@media (max-width: 480px) {
+  .cdc-structure-container,
+  .cdc-hero-container {
+    width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
+  }
 }
 
 /* =========================================
@@ -17,78 +39,60 @@
 
 .cdc-public-hero {
   position: relative;
-
-  min-height: 300px;
-
-  display: flex;
-
-  align-items: center;
-
-  padding: 65px 0;
-
-  overflow: hidden;
-
-  background: linear-gradient(135deg, #071b3d 0%, #0d3972 55%, #1764aa 100%);
-
+  width: 100%;
+  padding: 38px 0 42px;
+  margin-bottom: 20px;
+  background: #002147;
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
   color: #ffffff;
+  text-align: left;
+}
+
+.cdc-hero-container {
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 .cdc-public-hero-overlay {
-  position: absolute;
-
-  inset: 0;
-
-  background:
-    radial-gradient(
-      circle at 15% 25%,
-      rgba(255, 255, 255, 0.1),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at 85% 75%,
-      rgba(255, 255, 255, 0.08),
-      transparent 30%
-    );
+  display: none;
 }
 
 .cdc-public-hero-content {
   position: relative;
-
   z-index: 2;
-
-  text-align: center;
+  text-align: left;
+  max-width: 900px;
 }
 
 .cdc-public-hero-content span {
   display: inline-flex;
-
   align-items: center;
-
   gap: 8px;
-
-  margin-bottom: 13px;
-
+  margin-bottom: 10px;
   color: rgba(255, 255, 255, 0.82);
-
-  font-size: 13px;
-
+  font-size: 12px;
   font-weight: 700;
-
   letter-spacing: 1.2px;
-
   text-transform: uppercase;
 }
 
 .cdc-public-hero-content h1 {
   margin: 0;
-
   color: #ffffff;
+  font-size: clamp(26px, 3.5vw, 36px);
+  line-height: 1.2;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+}
 
-  font-size: clamp(35px, 5vw, 58px);
-
-  line-height: 1.15;
-
-  font-weight: 800;
+.cdc-public-hero-content p {
+  max-width: 750px;
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 13.5px;
+  line-height: 1.6;
 }
 
 /* =========================================
@@ -96,9 +100,8 @@
 ========================================= */
 
 .cdc-public-content {
-  padding: 65px 0 80px;
-
-  background: #ffffff;
+  padding: 10px 0 35px;
+  background: transparent;
 }
 
 /* =========================================
@@ -416,20 +419,26 @@
 
 @media (max-width: 768px) {
   .cdc-public-hero {
-    min-height: 260px;
+    min-height: auto;
+    padding: 24px 0 28px;
+    margin-bottom: 16px;
+  }
 
-    padding: 55px 0;
+  .cdc-public-hero-content h1 {
+    font-size: 24px;
+  }
+
+  .cdc-public-hero-content p {
+    font-size: 13px;
   }
 
   .cdc-public-content {
-    padding: 45px 15px 60px;
+    padding: 10px 0 25px;
   }
 
   .cdc-public-card-header {
     align-items: flex-start;
-
     flex-direction: column;
-
     padding: 20px;
   }
 
@@ -443,7 +452,6 @@
 
   .cdc-public-image {
     max-width: 90%;
-
     max-height: 450px;
   }
 }
@@ -453,8 +461,14 @@
 ========================================= */
 
 @media (max-width: 480px) {
+  .cdc-public-hero {
+    min-height: auto;
+    padding: 20px 0 24px;
+    margin-bottom: 16px;
+  }
+
   .cdc-public-hero-content h1 {
-    font-size: 34px;
+    font-size: 22px;
   }
 
   .cdc-public-card-header h2 {
@@ -467,7 +481,6 @@
 
   .cdc-public-image {
     max-width: 100%;
-
     max-height: 400px;
   }
 
@@ -477,7 +490,6 @@
 
   .cdc-modal-close {
     top: 10px;
-
     right: 10px;
   }
 }
