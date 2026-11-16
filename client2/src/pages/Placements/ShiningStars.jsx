@@ -100,10 +100,10 @@ const ShiningStars = () => {
   return (
     <>
       <main className="shining-stars-page">
-        {/* HERO */}
+        {/* HERO (FULL WIDTH) */}
 
         <section className="shining-stars-hero">
-          <div className="shining-stars-container">
+          <div className="shining-stars-hero-container">
             <div className="shining-stars-heading">
               <h1>Shining Stars</h1>
 
