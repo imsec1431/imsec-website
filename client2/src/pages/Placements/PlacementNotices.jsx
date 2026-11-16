@@ -72,6 +72,19 @@ const PlacementNotices = () => {
   if (loading) {
     return (
       <main className="placement-notices-page">
+        <section className="placement-notices-hero">
+          <div className="placement-notices-hero-container">
+            <div className="placement-notices-hero-content">
+              <h1>
+                <FaBullhorn /> Placement Notices
+              </h1>
+              <p>
+                Stay updated with the latest campus placement drives, schedules, and official announcements.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="placement-notices-status">
           <div className="placement-notices-spinner" />
 
@@ -90,6 +103,19 @@ const PlacementNotices = () => {
   if (error) {
     return (
       <main className="placement-notices-page">
+        <section className="placement-notices-hero">
+          <div className="placement-notices-hero-container">
+            <div className="placement-notices-hero-content">
+              <h1>
+                <FaBullhorn /> Placement Notices
+              </h1>
+              <p>
+                Stay updated with the latest campus placement drives, schedules, and official announcements.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="placement-notices-status">
           <FaInfoCircle />
 
@@ -108,18 +134,18 @@ const PlacementNotices = () => {
   return (
     <main className="placement-notices-page">
       {/* =====================================================
-          HERO
+          HERO (FULL WIDTH)
       ===================================================== */}
 
       <section className="placement-notices-hero">
-        <div className="placement-notices-hero-overlay" />
-
-        <div className="container">
+        <div className="placement-notices-hero-container">
           <div className="placement-notices-hero-content">
             <h1>
-              {" "}
               <FaBullhorn /> Placement Notices
             </h1>
+            <p>
+              Stay updated with the latest campus placement drives, schedules, and official announcements from the Corporate Development Cell.
+            </p>
           </div>
         </div>
       </section>
@@ -129,7 +155,7 @@ const PlacementNotices = () => {
       ===================================================== */}
 
       <section className="placement-notices-content">
-        <div className="container">
+        <div className="placement-notices-container">
           <div className="placement-notices-heading">
             <div>
               <span>Corporate Development Cell</span>
