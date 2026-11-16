@@ -4,7 +4,7 @@
 
 .training-public-page {
   min-height: 100vh;
-  padding: 0 0 50px;
+  padding: 0 0 35px;
   background: #f7f9fc;
   color: #172b3a;
   box-sizing: border-box;
@@ -30,7 +30,7 @@
   position: relative;
   width: 100%;
   padding: 38px 0 42px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   background: #002147;
   border-radius: 0;
   box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
@@ -93,7 +93,7 @@
 
 .training-section-heading {
   max-width: 760px;
-  margin-bottom: 42px;
+  margin-bottom: 22px;
 }
 
 .training-section-label {
@@ -136,9 +136,8 @@
 ========================================================= */
 
 .training-introduction {
-  padding: 72px 0 55px;
-
-  background: #ffffff;
+  padding: 10px 0 24px;
+  background: transparent;
 }
 
 .training-intro-content {
@@ -154,9 +153,8 @@
 ========================================================= */
 
 .training-team-section {
-  padding: 72px 0 82px;
-
-  background: #f7f9fc;
+  padding: 24px 0 32px;
+  background: transparent;
 }
 
 /* =========================================================
@@ -373,9 +371,8 @@
 ========================================================= */
 
 .training-details-section {
-  padding: 78px 0 85px;
-
-  background: #ffffff;
+  padding: 24px 0 32px;
+  background: transparent;
 }
 
 .training-details-grid {
@@ -488,9 +485,8 @@
 ========================================================= */
 
 .training-documents-section {
-  padding: 78px 0 82px;
-
-  background: #f7f9fc;
+  padding: 24px 0 32px;
+  background: transparent;
 }
 
 .training-document-grid {
@@ -659,9 +655,8 @@
 ========================================================= */
 
 .training-public-info {
-  padding: 0 0 82px;
-
-  background: #f7f9fc;
+  padding: 10px 0 20px;
+  background: transparent;
 }
 
 .training-info-box {
@@ -860,7 +855,7 @@
   .training-public-hero {
     min-height: auto;
     padding: 24px 0 28px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 
   .training-hero-content {
@@ -876,7 +871,7 @@
   }
 
   .training-introduction {
-    padding: 55px 0 45px;
+    padding: 10px 0 18px;
   }
 
   .training-intro-content {
@@ -886,7 +881,7 @@
   .training-team-section,
   .training-details-section,
   .training-documents-section {
-    padding: 58px 0 65px;
+    padding: 18px 0 24px;
   }
 
   .training-team-grid {
@@ -898,7 +893,7 @@
   }
 
   .training-section-heading {
-    margin-bottom: 30px;
+    margin-bottom: 16px;
   }
 
   .training-section-heading h2,
