@@ -10,117 +10,94 @@
 
 .iac-page {
   min-height: 100vh;
-  background: #f7f8fa;
+  padding: 0 0 50px;
+  background: #f6f8fb;
   color: #172033;
+  box-sizing: border-box;
   font-family: inherit;
 }
 
-.iac-container {
-  width: min(1180px, 92%);
+.iac-container,
+.iac-hero-container {
+  width: 90%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+  .iac-container,
+  .iac-hero-container {
+    width: 94%;
+    max-width: 94%;
+  }
+}
+
+@media (max-width: 480px) {
+  .iac-container,
+  .iac-hero-container {
+    width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
+  }
+}
+
 /* =========================================================
-   HERO
+   HERO (FULL WIDTH)
    ========================================================= */
 
 .iac-hero {
   position: relative;
-  min-height: 330px;
-
-  display: flex;
-  align-items: center;
-
-  overflow: hidden;
-
-  background: linear-gradient(135deg, #071837, #102d57 60%, #173d70);
-}
-
-.iac-hero::before {
-  content: "";
-
-  position: absolute;
-
-  width: 470px;
-  height: 470px;
-
-  right: -170px;
-  top: -200px;
-
-  border: 1px solid rgba(212, 169, 72, 0.28);
-
-  border-radius: 50%;
-}
-
-.iac-hero::after {
-  content: "";
-
-  position: absolute;
-
-  width: 300px;
-  height: 300px;
-
-  right: 60px;
-  bottom: -200px;
-
-  border: 1px solid rgba(255, 255, 255, 0.08);
-
-  border-radius: 50%;
-}
-
-.iac-hero-overlay {
-  position: relative;
-
-  z-index: 2;
-
   width: 100%;
+  padding: 38px 0 42px;
+  margin-bottom: 24px;
+  background: #002147;
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
+  color: #ffffff;
+  text-align: left;
+}
 
-  padding: 75px 0;
+.iac-hero::before,
+.iac-hero::after {
+  display: none;
+}
+
+.iac-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  max-width: 900px;
 }
 
 .iac-eyebrow {
   display: inline-block;
-
-  margin-bottom: 15px;
-
-  color: #d4a948;
-
-  font-size: 13px;
-  font-weight: 700;
-
-  letter-spacing: 2.5px;
-
+  margin-bottom: 8px;
+  color: #fdb913;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
 
 .iac-hero h1 {
   max-width: 900px;
-
   margin: 0;
-
   color: #ffffff;
+  font-size: clamp(26px, 3.5vw, 36px);
+  line-height: 1.2;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+}
 
-  font-size: clamp(32px, 5vw, 52px);
-
-  line-height: 1.15;
-
-  font-weight: 700;
+.iac-hero-subtitle {
+  max-width: 750px;
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 13.5px;
+  line-height: 1.6;
 }
 
 .iac-breadcrumb {
-  margin-top: 22px;
-
-  color: rgba(255, 255, 255, 0.72);
-
-  font-size: 14px;
-
-  line-height: 1.7;
-}
-
-.iac-breadcrumb span {
-  margin: 0 8px;
-
-  color: #d4a948;
+  display: none;
 }
 
 /* =========================================================
@@ -128,9 +105,8 @@
    ========================================================= */
 
 .iac-intro {
-  padding: 70px 0 55px;
-
-  background: #ffffff;
+  padding: 10px 0 20px;
+  background: transparent;
 }
 
 .iac-section-heading {
@@ -139,51 +115,35 @@
 
 .iac-section-heading > span {
   display: block;
-
-  color: #b3872d;
-
-  font-size: 12px;
-
-  font-weight: 700;
-
-  letter-spacing: 2px;
-
+  color: #1764aa;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 
 .iac-section-heading h2 {
-  margin: 10px 0 0;
-
+  margin: 6px 0 0;
   color: #10264a;
-
-  font-size: clamp(28px, 4vw, 38px);
-
+  font-size: clamp(24px, 3vw, 32px);
   line-height: 1.25;
-
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .iac-heading-line {
-  width: 58px;
+  width: 50px;
   height: 3px;
-
-  margin: 17px auto 0;
-
-  background: #d4a948;
+  margin: 12px auto 0;
+  background: #fdb913;
 }
 
 .iac-intro-text {
   max-width: 850px;
-
-  margin: 27px auto 0;
-
-  color: #626d7d;
-
+  margin: 16px auto 0;
+  color: #556987;
   text-align: center;
-
-  font-size: 16px;
-
-  line-height: 1.85;
+  font-size: 14.5px;
+  line-height: 1.7;
 }
 
 /* =========================================================
@@ -191,9 +151,8 @@
    ========================================================= */
 
 .iac-list-section {
-  padding: 65px 0 90px;
-
-  background: #f7f8fa;
+  padding: 10px 0 45px;
+  background: transparent;
 }
 
 /* =========================================================
@@ -799,40 +758,29 @@
    ========================================================= */
 
 .iac-loading {
-  min-height: 500px;
-
+  min-height: 40vh;
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
   justify-content: center;
-
   gap: 15px;
-
   color: #657084;
-
-  background: #f7f8fa;
-
+  background: transparent;
   text-align: center;
+  padding: 30px 20px;
 }
 
 .iac-loading p {
   margin: 0;
-
   font-size: 14px;
 }
 
 .iac-spinner {
-  width: 42px;
-  height: 42px;
-
+  width: 40px;
+  height: 40px;
   border: 4px solid #e1e5eb;
-
-  border-top-color: #d4a948;
-
+  border-top-color: #fdb913;
   border-radius: 50%;
-
   animation: iacSpin 0.8s linear infinite;
 }
 
@@ -848,40 +796,27 @@
 
 .iac-error {
   max-width: 650px;
-
-  margin: 80px auto;
-
-  padding: 40px;
-
+  margin: 30px auto;
+  padding: 30px;
   text-align: center;
-
   background: #ffffff;
-
   border: 1px solid #e5e9ef;
-
   border-radius: 12px;
-
-  box-shadow: 0 8px 25px rgba(16, 38, 74, 0.05);
+  box-shadow: 0 4px 18px rgba(16, 38, 74, 0.05);
 }
 
 .iac-error h3 {
   margin: 0;
-
   color: #10264a;
-
-  font-size: 22px;
-
+  font-size: 20px;
   font-weight: 700;
 }
 
 .iac-error p {
   margin: 10px 0 0;
-
   color: #6d7787;
-
-  font-size: 15px;
-
-  line-height: 1.7;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 /* =========================================================
@@ -891,8 +826,7 @@
 @media (max-width: 1050px) {
   .iac-card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    gap: 24px;
+    gap: 20px;
   }
 }
 
@@ -900,88 +834,64 @@
    MOBILE
    ========================================================= */
 
-@media (max-width: 650px) {
-  .iac-container {
-    width: 92%;
-  }
-
-  /* Hero */
-
+@media (max-width: 768px) {
   .iac-hero {
-    min-height: 280px;
-  }
-
-  .iac-hero-overlay {
-    padding: 55px 0;
+    min-height: auto;
+    padding: 24px 0 28px;
+    margin-bottom: 20px;
   }
 
   .iac-eyebrow {
-    font-size: 11px;
-
-    letter-spacing: 2px;
-  }
-
-  .iac-hero h1 {
-    font-size: 31px;
-  }
-
-  .iac-breadcrumb {
-    font-size: 13px;
-  }
-
-  /* Intro */
-
-  .iac-intro {
-    padding: 55px 0 40px;
-  }
-
-  .iac-section-heading > span {
     font-size: 10px;
-
     letter-spacing: 1.5px;
   }
 
+  .iac-hero h1 {
+    font-size: 24px;
+  }
+
+  .iac-hero-subtitle {
+    font-size: 13px;
+  }
+
+  .iac-intro {
+    padding: 10px 0 16px;
+  }
+
   .iac-section-heading h2 {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .iac-intro-text {
-    font-size: 14px;
-
-    line-height: 1.75;
+    font-size: 13.5px;
+    line-height: 1.65;
   }
 
-  /* Cards */
-
   .iac-list-section {
-    padding: 45px 0 65px;
+    padding: 10px 0 35px;
   }
 
   .iac-card-grid {
     grid-template-columns: 1fr;
-
-    gap: 20px;
+    gap: 18px;
   }
 
   .iac-card-image {
-    height: 230px;
+    height: 220px;
   }
 
   .iac-card-content {
-    padding: 22px;
+    padding: 20px 18px;
   }
 
   .iac-card-content h3 {
     min-height: auto;
-
-    font-size: 18px;
+    font-size: 17px;
   }
 
   /* Modal */
-
   .iac-modal .modal-dialog {
     max-height: calc(100vh - 20px);
-
     margin: 10px;
   }
 
@@ -991,7 +901,6 @@
 
   .iac-modal .modal-body {
     max-height: calc(100vh - 130px);
-
     overflow-y: auto;
   }
 
@@ -1025,15 +934,12 @@
 
   .iac-description p {
     font-size: 14px;
-
     line-height: 1.7;
   }
 
   .iac-modal-actions {
     flex-direction: column;
-
     gap: 10px;
-
     margin-top: 20px;
   }
 
@@ -1046,7 +952,6 @@
   }
 
   /* Empty */
-
   .iac-empty {
     padding: 45px 20px;
   }
@@ -1056,29 +961,35 @@
    SMALL MOBILE
    ========================================================= */
 
-@media (max-width: 400px) {
-  .iac-container {
-    width: 94%;
-  }
-
+@media (max-width: 480px) {
   .iac-hero {
-    min-height: 260px;
+    min-height: auto;
+    padding: 20px 0 24px;
+    margin-bottom: 16px;
   }
 
   .iac-hero h1 {
-    font-size: 27px;
+    font-size: 22px;
+  }
+
+  .iac-hero-subtitle {
+    font-size: 12px;
+  }
+
+  .iac-section-heading h2 {
+    font-size: 20px;
   }
 
   .iac-card-image {
-    height: 210px;
+    height: 200px;
   }
 
   .iac-card-content {
-    padding: 19px;
+    padding: 18px 16px;
   }
 
   .iac-card-content h3 {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .iac-view-more {

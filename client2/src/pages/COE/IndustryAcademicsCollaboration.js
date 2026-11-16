@@ -65,10 +65,20 @@ const IndustryAcademicsCollaboration = () => {
 
   if (loading) {
     return (
-      <div className="iac-loading">
-        <div className="iac-spinner"></div>
-
-        <p>Loading Industry Academics Collaboration...</p>
+      <div className="iac-page">
+        <section className="iac-hero">
+          <div className="iac-hero-container">
+            <span className="iac-eyebrow">CENTRE OF EXCELLENCE</span>
+            <h1>Industry Academics Collaboration</h1>
+            <p className="iac-hero-subtitle">
+              Promoting innovation, practical training, and collaborative excellence between industry leaders and academia.
+            </p>
+          </div>
+        </section>
+        <div className="iac-loading">
+          <div className="iac-spinner"></div>
+          <p>Loading Industry Academics Collaboration...</p>
+        </div>
       </div>
     );
   }
@@ -79,10 +89,22 @@ const IndustryAcademicsCollaboration = () => {
 
   if (error) {
     return (
-      <div className="iac-error">
-        <h3>Unable to Load Information</h3>
-
-        <p>{error}</p>
+      <div className="iac-page">
+        <section className="iac-hero">
+          <div className="iac-hero-container">
+            <span className="iac-eyebrow">CENTRE OF EXCELLENCE</span>
+            <h1>Industry Academics Collaboration</h1>
+            <p className="iac-hero-subtitle">
+              Promoting innovation, practical training, and collaborative excellence between industry leaders and academia.
+            </p>
+          </div>
+        </section>
+        <div className="iac-container">
+          <div className="iac-error">
+            <h3>Unable to Load Information</h3>
+            <p>{error}</p>
+          </div>
+        </div>
       </div>
     );
   }
@@ -108,24 +130,18 @@ const IndustryAcademicsCollaboration = () => {
   return (
     <div className="iac-page">
       {/* =================================================
-          HERO
+          HERO (FULL WIDTH)
           ================================================= */}
 
       <section className="iac-hero">
-        <div className="iac-hero-overlay">
-          <div className="iac-container">
-            <span className="iac-eyebrow">CENTRE OF EXCELLENCE</span>
+        <div className="iac-hero-container">
+          <span className="iac-eyebrow">CENTRE OF EXCELLENCE</span>
 
-            <h1>{data.title || "Industry Academics Collaboration"}</h1>
+          <h1>{data.title || "Industry Academics Collaboration"}</h1>
 
-            <div className="iac-breadcrumb">
-              Home
-              <span>/</span>
-              COE
-              <span>/</span>
-              Industry Academics Collaboration
-            </div>
-          </div>
+          <p className="iac-hero-subtitle">
+            Promoting innovation, practical training, and collaborative excellence between industry leaders and academia.
+          </p>
         </div>
       </section>
 
