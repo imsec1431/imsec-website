@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { Container, Row, Col, Card, Spinner } from "react-bootstrap";
+import { Row, Col, Card, Spinner } from "react-bootstrap";
 
 import { FaBuilding, FaGlobe, FaExternalLinkAlt } from "react-icons/fa";
 
@@ -82,21 +82,19 @@ const OurRecruiters = () => {
   return (
     <main className="major-public-page">
       {/* =====================================================
-          HERO
+          HERO (FULL WIDTH)
       ===================================================== */}
 
       <section className="major-public-hero">
-        <div className="major-public-hero-overlay"></div>
-
-        <Container>
+        <div className="major-hero-container">
           <div className="major-public-hero-content">
             <h1>Major Recruiters</h1>
 
-            <p style={{ color: "white" }}>
+            <p>
               Our leading corporate recruiters and industry partners.
             </p>
           </div>
-        </Container>
+        </div>
       </section>
 
       {/* =====================================================
@@ -104,7 +102,7 @@ const OurRecruiters = () => {
       ===================================================== */}
 
       <section className="major-public-content">
-        <Container>
+        <div className="major-recruiters-container">
           <div className="major-public-section-heading">
             <span>Corporate Connect</span>
 
@@ -188,7 +186,7 @@ const OurRecruiters = () => {
               ))}
             </Row>
           )}
-        </Container>
+        </div>
       </section>
     </main>
   );
