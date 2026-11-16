@@ -5,7 +5,7 @@ import { getLibraryGallery } from "../../services/libraryGalleryPublicService";
 import { getLibraryGuidelines } from "../../services/libraryGuidelinePublicService";
 import { getLibraryTiming } from "../../services/libraryTimingPublicService";
 import { getLibrarianProfile } from "../../services/librarianProfilePublicService";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import "./Library.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
@@ -13,6 +13,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
 const Library = () => {
   const [statistics, setStatistics] = useState([]);
   const [gallery, setGallery] = useState([]);
@@ -38,9 +39,7 @@ const Library = () => {
         ]);
 
       setStatistics(statisticsRes.data.data.filter((item) => item.active));
-
       setGallery(galleryRes.data.data.filter((item) => item.active));
-
       setGuidelines(guidelineRes.data.data.filter((item) => item.active));
 
       if (timingRes.data.success) {
@@ -54,6 +53,7 @@ const Library = () => {
       setLoading(false);
     }
   };
+
   const LIBRARY_FEATURES = [
     {
       id: 1,
@@ -122,53 +122,54 @@ const Library = () => {
 
   if (loading) {
     return (
-      <div className="text-center py-5">
-        <h3>Loading...</h3>
+      <div className="library-page">
+        <section className="library-hero">
+          <div className="library-hero-container">
+            <div className="library-hero-content">
+              <h1 className="library-title">
+                Central <span>Library</span>
+              </h1>
+              <p className="library-subtitle">
+                The Central Library is the academic knowledge hub of IMS Engineering College.
+              </p>
+            </div>
+          </div>
+        </section>
+        <div className="text-center py-5">
+          <h3>Loading...</h3>
+        </div>
       </div>
     );
   }
+
   return (
-    <>
-      {/* Hero Section */}
-      <section
-        className="library-hero"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1920&q=80')",
-        }}
-      >
-        <div className="library-overlay">
-          <Container>
-            <Row className="align-items-center min-vh-100">
-              <Col lg={7}>
-                <span className="library-tag">IMS Engineering College</span>
+    <div className="library-page">
+      {/* =====================================================
+          HERO SECTION (FULL WIDTH)
+      ===================================================== */}
+      <section className="library-hero">
+        <div className="library-hero-container">
+          <div className="library-hero-content">
+            <h1 className="library-title">
+              Central <span>Library</span>
+            </h1>
 
-                <h1 className="library-title">
-                  Central <span>Library</span>
-                </h1>
-
-                <p className="library-subtitle" style={{ color: "white" }}>
-                  The Central Library is the academic knowledge hub of IMS
-                  Engineering College, providing students and faculty with
-                  extensive collections of books, journals, reference materials,
-                  newspapers and a peaceful learning environment.
-                </p>
-
-                <div className="mt-4">
-                  <Button size="lg" className="library-btn">
-                    Explore Library
-                  </Button>
-                </div>
-              </Col>
-            </Row>
-          </Container>
+            <p className="library-subtitle">
+              The Central Library is the academic knowledge hub of IMS
+              Engineering College, providing students and faculty with
+              extensive collections of books, journals, reference materials,
+              newspapers and a peaceful learning environment.
+            </p>
+          </div>
         </div>
       </section>
-      {/* ABOUT LIBRARY */}
 
-      <section className="library-about py-5">
-        <Container>
-          <Row className="align-items-center g-5">
+      {/* =====================================================
+          ABOUT LIBRARY
+      ===================================================== */}
+      <section className="library-about library-section">
+        <div className="library-container">
+          <Row className="align-items-center g-4">
             <Col lg={5}>
               <img
                 src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1200&q=80"
@@ -178,7 +179,7 @@ const Library = () => {
             </Col>
 
             <Col lg={7}>
-              <span className="section-tag" style={{ color: "black" }}>
+              <span className="section-tag">
                 ABOUT LIBRARY
               </span>
 
@@ -198,15 +199,14 @@ const Library = () => {
                 learning.
               </p>
 
-              <Row className="mt-4 g-3">
+              <Row className="mt-3 g-3">
                 {LIBRARY_FEATURES.map((item) => (
-                  <Col md={6} key={item._id}>
+                  <Col md={6} key={item.id}>
                     <div className="library-feature">
                       <div className="feature-icon">{item.icon}</div>
 
                       <div>
                         <h5>{item.title}</h5>
-
                         <p>{item.desc}</p>
                       </div>
                     </div>
@@ -215,14 +215,16 @@ const Library = () => {
               </Row>
             </Col>
           </Row>
-        </Container>
+        </div>
       </section>
-      {/* ================= LIBRARY AT A GLANCE ================= */}
 
-      <section className="library-stats-section py-5">
-        <Container>
-          <div className="text-center mb-5">
-            <span className="section-tag" style={{ color: "black" }}>
+      {/* =====================================================
+          LIBRARY AT A GLANCE
+      ===================================================== */}
+      <section className="library-stats-section library-section">
+        <div className="library-container">
+          <div className="text-center mb-4">
+            <span className="section-tag">
               LIBRARY AT A GLANCE
             </span>
 
@@ -238,23 +240,22 @@ const Library = () => {
             {statistics.map((item) => (
               <Col lg={3} md={6} key={item._id}>
                 <div className="library-stat-card">
-                  {/* <div className="stat-icon">{item.icon}</div> */}
-
                   <h2>{item.value}</h2>
-
                   <p>{item.title}</p>
                 </div>
               </Col>
             ))}
           </Row>
-        </Container>
+        </div>
       </section>
-      {/* ================= LIBRARY FACILITIES ================= */}
 
-      <section className="library-facilities py-5">
-        <Container>
-          <div className="text-center mb-5">
-            <span className="section-tag" style={{ color: "black" }}>
+      {/* =====================================================
+          LIBRARY FACILITIES
+      ===================================================== */}
+      <section className="library-facilities library-section">
+        <div className="library-container">
+          <div className="text-center mb-4">
+            <span className="section-tag">
               OUR FACILITIES
             </span>
 
@@ -268,25 +269,25 @@ const Library = () => {
 
           <Row className="g-4">
             {LIBRARY_FACILITIES.map((item) => (
-              <Col lg={4} md={6} key={item._id}>
+              <Col lg={4} md={6} key={item.id}>
                 <div className="facility-card">
                   <div className="facility-icon">{item.icon}</div>
-
                   <h4>{item.title}</h4>
-
                   <p>{item.desc}</p>
                 </div>
               </Col>
             ))}
           </Row>
-        </Container>
+        </div>
       </section>
-      {/* ================= LIBRARY GALLERY ================= */}
 
-      <section className="library-gallery py-5">
-        <Container>
-          <div className="text-center mb-5">
-            <span className="section-tag" style={{ color: "black" }}>
+      {/* =====================================================
+          LIBRARY GALLERY
+      ===================================================== */}
+      <section className="library-gallery library-section">
+        <div className="library-container">
+          <div className="text-center mb-4">
+            <span className="section-tag">
               PHOTO GALLERY
             </span>
 
@@ -311,11 +312,8 @@ const Library = () => {
             }}
             breakpoints={{
               320: { slidesPerView: 1 },
-
               576: { slidesPerView: 2 },
-
               992: { slidesPerView: 3 },
-
               1200: { slidesPerView: 4 },
             }}
           >
@@ -335,27 +333,27 @@ const Library = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-        </Container>
+        </div>
       </section>
-      {/* ================= LIBRARY RULES ================= */}
 
-      <section className="library-rules py-5">
-        <Container>
+      {/* =====================================================
+          LIBRARY RULES & TIMINGS
+      ===================================================== */}
+      <section className="library-rules library-section">
+        <div className="library-container">
           <Row className="g-4">
             {/* Rules */}
-
             <Col lg={7}>
               <div className="rules-card">
-                <span className="section-tag" style={{ color: "black" }}>
+                <span className="section-tag">
                   LIBRARY RULES
                 </span>
 
-                <h2 className="section-title mb-4">Library Guidelines</h2>
+                <h2 className="section-title mb-3">Library Guidelines</h2>
 
                 {guidelines.map((item, index) => (
                   <div key={index} className="rule-item">
                     <div className="rule-check">✓</div>
-
                     <span>{item.guideline}</span>
                   </div>
                 ))}
@@ -363,14 +361,13 @@ const Library = () => {
             </Col>
 
             {/* Timings */}
-
             <Col lg={5}>
               <div className="timing-card">
-                <span className="section-tag" style={{ color: "black" }}>
+                <span className="section-tag">
                   WORKING HOURS
                 </span>
 
-                <h2 className="section-title mb-4">Library Timings</h2>
+                <h2 className="section-title mb-3">Library Timings</h2>
 
                 {timings && timings.active && (
                   <>
@@ -399,14 +396,16 @@ const Library = () => {
               </div>
             </Col>
           </Row>
-        </Container>
+        </div>
       </section>
-      {/* ================= LIBRARIAN PROFILE ================= */}
 
-      <section className="library-librarian py-5">
-        <Container>
-          <div className="text-center mb-5">
-            <span className="section-tag" style={{ color: "black" }}>
+      {/* =====================================================
+          LIBRARIAN PROFILE
+      ===================================================== */}
+      <section className="library-librarian library-section">
+        <div className="library-container">
+          <div className="text-center mb-4">
+            <span className="section-tag">
               LIBRARIAN PROFILE
             </span>
 
@@ -416,7 +415,7 @@ const Library = () => {
           </div>
 
           {librarian && librarian.active && (
-            <Row className="align-items-center g-5">
+            <Row className="align-items-center g-4">
               <Col lg={4}>
                 <img
                   src={librarian.image}
@@ -424,7 +423,7 @@ const Library = () => {
                   className="img-fluid rounded shadow"
                   style={{
                     width: "100%",
-                    height: "450px",
+                    height: "400px",
                     objectFit: "cover",
                   }}
                 />
@@ -433,27 +432,27 @@ const Library = () => {
               <Col lg={8}>
                 <h3>{librarian.name}</h3>
 
-                <h5 className="text-primary mb-4">{librarian.designation}</h5>
+                <h5 className="text-primary mb-3">{librarian.designation}</h5>
 
                 <Row>
-                  <Col md={6} className="mb-3">
+                  <Col md={6} className="mb-2">
                     <strong>Qualification</strong>
-                    <p>{librarian.qualification}</p>
+                    <p className="mb-1">{librarian.qualification}</p>
                   </Col>
 
-                  <Col md={6} className="mb-3">
+                  <Col md={6} className="mb-2">
                     <strong>Experience</strong>
-                    <p>{librarian.experience}</p>
+                    <p className="mb-1">{librarian.experience}</p>
                   </Col>
 
-                  <Col md={6} className="mb-3">
+                  <Col md={6} className="mb-2">
                     <strong>Phone</strong>
-                    <p>{librarian.phone}</p>
+                    <p className="mb-1">{librarian.phone}</p>
                   </Col>
 
-                  <Col md={6} className="mb-3">
+                  <Col md={6} className="mb-2">
                     <strong>Email</strong>
-                    <p>{librarian.email}</p>
+                    <p className="mb-1">{librarian.email}</p>
                   </Col>
                 </Row>
 
@@ -463,9 +462,9 @@ const Library = () => {
               </Col>
             </Row>
           )}
-        </Container>
+        </div>
       </section>
-    </>
+    </div>
   );
 };
 
