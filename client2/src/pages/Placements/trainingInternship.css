@@ -4,8 +4,10 @@
 
 .training-public-page {
   min-height: 100vh;
+  padding: 0 0 50px;
   background: #f7f9fc;
   color: #172b3a;
+  box-sizing: border-box;
 }
 
 /* =========================================================
@@ -13,11 +15,11 @@
 ========================================================= */
 
 .training-public-container {
-  width: 100%;
-  max-width: 1200px;
+  width: 90%;
+  max-width: 90%;
   margin: 0 auto;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /* =========================================================
@@ -26,56 +28,27 @@
 
 .training-public-hero {
   position: relative;
-  min-height: 320px;
+  width: 100%;
+  padding: 38px 0 42px;
+  margin-bottom: 24px;
+  background: #002147;
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
+  color: #ffffff;
+  text-align: left;
+}
 
-  display: flex;
-  align-items: center;
-
-  overflow: hidden;
-
-  background:
-    radial-gradient(
-      circle at 85% 20%,
-      rgba(217, 164, 65, 0.14),
-      transparent 30%
-    ),
-    linear-gradient(135deg, #081f35 0%, #0b2942 48%, #123f63 100%);
-
-  box-shadow: 0 12px 35px rgba(5, 31, 52, 0.15);
+.training-hero-container {
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 /* Decorative circle */
 
-.training-public-hero::before {
-  content: "";
-
-  position: absolute;
-
-  width: 430px;
-  height: 430px;
-
-  right: -190px;
-  top: -230px;
-
-  border: 1px solid rgba(217, 164, 65, 0.17);
-
-  border-radius: 50%;
-}
-
+.training-public-hero::before,
 .training-public-hero::after {
-  content: "";
-
-  position: absolute;
-
-  width: 320px;
-  height: 320px;
-
-  left: -190px;
-  bottom: -230px;
-
-  border: 1px solid rgba(255, 255, 255, 0.08);
-
-  border-radius: 50%;
+  display: none;
 }
 
 /* =========================================================
@@ -85,57 +58,33 @@
 .training-hero-content {
   position: relative;
   z-index: 2;
-
-  padding: 48px 0;
+  padding: 0;
+  max-width: 900px;
 }
 
 .training-breadcrumb {
-  display: inline-block;
-
-  margin-bottom: 17px;
-
-  color: rgba(255, 255, 255, 0.72);
-
-  font-size: 14px;
-  font-weight: 500;
-
-  letter-spacing: 0.4px;
+  display: none;
 }
 
 .training-hero-content h1 {
   margin: 0;
-
   color: #ffffff;
-
-  font-size: clamp(38px, 5vw, 58px);
-  font-weight: 700;
-
-  line-height: 1.1;
-  letter-spacing: -1px;
+  font-size: clamp(26px, 3.5vw, 36px);
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
 }
 
 .training-hero-line {
-  width: 68px;
-  height: 4px;
-
-  margin: 22px 0 18px;
-
-  border-radius: 10px;
-
-  background: #d9a441;
-
-  box-shadow: 0 0 18px rgba(217, 164, 65, 0.4);
+  display: none;
 }
 
 .training-hero-content p {
-  max-width: 720px;
-
-  margin: 0;
-
-  color: rgba(255, 255, 255, 0.82);
-
-  font-size: 18px;
-  line-height: 1.7;
+  max-width: 750px;
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 13.5px;
+  line-height: 1.6;
 }
 
 /* =========================================================
@@ -889,10 +838,6 @@
     grid-template-columns: 1fr;
   }
 
-  .training-public-hero {
-    min-height: 290px;
-  }
-
   .training-section-heading h2,
   .training-intro-content h2 {
     font-size: 30px;
@@ -904,25 +849,30 @@
 ========================================================= */
 
 @media (max-width: 767px) {
-  .training-public-container {
-    padding-left: 18px;
-    padding-right: 18px;
+  .training-public-container,
+  .training-hero-container {
+    width: 94%;
+    max-width: 94%;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .training-public-hero {
-    min-height: 270px;
+    min-height: auto;
+    padding: 24px 0 28px;
+    margin-bottom: 20px;
   }
 
   .training-hero-content {
-    padding: 40px 0;
+    padding: 0;
   }
 
   .training-hero-content h1 {
-    font-size: 40px;
+    font-size: 24px;
   }
 
   .training-hero-content p {
-    font-size: 16px;
+    font-size: 13px;
   }
 
   .training-introduction {
@@ -997,21 +947,20 @@
 ========================================================= */
 
 @media (max-width: 480px) {
+  .training-public-container,
+  .training-hero-container {
+    width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
+  }
+
   .training-public-hero {
-    min-height: 250px;
+    min-height: auto;
+    padding: 20px 0 24px;
+    margin-bottom: 16px;
   }
 
   .training-hero-content h1 {
-    font-size: 34px;
-  }
-
-  .training-breadcrumb {
-    font-size: 12px;
-  }
-
-  .training-hero-line {
-    width: 52px;
-    height: 3px;
+    font-size: 22px;
   }
 
   .training-team-photo {

@@ -113,16 +113,9 @@ const TrainingInternship = () => {
     return (
       <div className="training-public-page">
         <section className="training-public-hero">
-          <div className="training-public-container">
+          <div className="training-hero-container">
             <div className="training-hero-content">
-              <span className="training-breadcrumb">
-                {data.hero.breadcrumb}
-              </span>
-
               <h1>{data.hero.title}</h1>
-
-              <div className="training-hero-line" />
-
               <p>{data.hero.subtitle}</p>
             </div>
           </div>
@@ -142,18 +135,13 @@ const TrainingInternship = () => {
   return (
     <div className="training-public-page">
       {/* =====================================================
-          HERO
+          HERO (FULL WIDTH)
       ===================================================== */}
 
       <section className="training-public-hero">
-        <div className="training-public-container">
+        <div className="training-hero-container">
           <div className="training-hero-content">
-            <span className="training-breadcrumb">{data.hero.breadcrumb}</span>
-
             <h1>{data.hero.title}</h1>
-
-            <div className="training-hero-line" />
-
             <p>{data.hero.subtitle}</p>
           </div>
         </div>
