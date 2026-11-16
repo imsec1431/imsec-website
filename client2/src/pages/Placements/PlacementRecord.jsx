@@ -158,18 +158,12 @@ const PlacementRecord = () => {
   return (
     <div className="placement-record-page">
       {/* ====================================================
-          PAGE HEADER
+          PAGE HEADER (FULL WIDTH)
       ==================================================== */}
 
       <section className="placement-record-header">
-        <div className="placement-record-header-overlay">
-          <div className="placement-container">
-            <div className="placement-breadcrumb">
-              Home
-              <span>/</span>
-              Placements
-            </div>
-
+        <div className="placement-hero-container">
+          <div className="placement-hero-content">
             <h1>Placements</h1>
 
             <p>Building careers and creating opportunities for our students.</p>

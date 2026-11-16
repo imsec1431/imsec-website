@@ -9,15 +9,12 @@
   width: 100%;
   min-height: 100vh;
   margin: 0;
-  padding: 0;
-
-  background: #ffffff;
-
+  padding: 0 0 45px;
+  background: #f6f8fb;
   color: #172033;
-
   font-family: "Inter", "Segoe UI", Arial, sans-serif;
-
   overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 /* =========================================================
@@ -25,162 +22,89 @@
 ========================================================= */
 
 .placement-container {
-  width: min(1180px, calc(100% - 40px));
+  width: 90%;
+  max-width: 90%;
   margin: 0 auto;
-
   box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .placement-container,
+  .placement-hero-container {
+    width: 94%;
+    max-width: 94%;
+  }
+}
+
+@media (max-width: 480px) {
+  .placement-container,
+  .placement-hero-container {
+    width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
+  }
 }
 
 /* =========================================================
    HERO
-   SAME PROJECT THEME AS OTHER PLACEMENT PAGES
 ========================================================= */
 
 .placement-record-header {
   position: relative;
-
   width: 100%;
-  min-height: 320px;
-
-  display: flex;
-  align-items: center;
-
-  overflow: hidden;
-
-  background: linear-gradient(135deg, #071b3d 0%, #0d3972 55%, #1764aa 100%);
-
+  padding: 38px 0 42px;
+  margin-bottom: 24px;
+  background: #002147;
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
   color: #ffffff;
+  text-align: left;
 }
 
-/* Decorative project-style background */
-
-.placement-record-header::before {
-  content: "";
-
-  position: absolute;
-
-  width: 430px;
-  height: 430px;
-
-  right: -180px;
-  top: -220px;
-
-  border-radius: 50%;
-
-  border: 1px solid rgba(255, 255, 255, 0.1);
-
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.07),
-    transparent 65%
-  );
+.placement-hero-container {
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
+.placement-record-header::before,
 .placement-record-header::after {
-  content: "";
-
-  position: absolute;
-
-  width: 280px;
-  height: 280px;
-
-  left: -150px;
-  bottom: -170px;
-
-  border-radius: 50%;
-
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: none;
 }
-
-/* =========================================================
-   HERO OVERLAY
-========================================================= */
 
 .placement-record-header-overlay {
-  position: relative;
-
-  z-index: 2;
-
-  width: 100%;
-  min-height: 320px;
-
-  display: flex;
-  align-items: center;
-
-  padding: 65px 0;
-
-  box-sizing: border-box;
+  display: none;
 }
 
-/* =========================================================
-   BREADCRUMB
-========================================================= */
+.placement-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  max-width: 900px;
+}
 
 .placement-breadcrumb {
-  display: flex;
-  align-items: center;
-
-  gap: 10px;
-
-  margin-bottom: 15px;
-
-  color: rgba(255, 255, 255, 0.78);
-
-  font-size: 13px;
-  font-weight: 600;
-
-  letter-spacing: 0.2px;
+  display: none;
 }
-
-.placement-breadcrumb span {
-  color: rgba(255, 255, 255, 0.45);
-}
-
-/* =========================================================
-   HERO TITLE
-========================================================= */
 
 .placement-record-header h1 {
   margin: 0;
-
   color: #ffffff;
-
-  font-size: clamp(38px, 5vw, 58px);
-
-  font-weight: 800;
-
-  line-height: 1.12;
-
-  letter-spacing: -1px;
+  font-size: clamp(26px, 3.5vw, 36px);
+  line-height: 1.2;
+  font-weight: 750;
+  letter-spacing: -0.5px;
 }
 
-/* Gold accent under title */
-
 .placement-record-header h1::after {
-  content: "";
-
-  display: block;
-
-  width: 55px;
-  height: 4px;
-
-  margin-top: 17px;
-
-  border-radius: 5px;
-
-  background: #fdb913;
+  display: none;
 }
 
 .placement-record-header p {
-  max-width: 700px;
-
-  margin: 17px 0 0;
-
-  color: rgba(255, 255, 255, 0.86);
-
-  font-size: 15px;
-
-  line-height: 1.8;
+  max-width: 750px;
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 13.5px;
+  line-height: 1.6;
 }
 
 /* =========================================================
@@ -201,37 +125,25 @@
 
 .placement-section-heading {
   max-width: 760px;
-
-  margin: 0 auto 42px;
-
+  margin: 0 auto 24px;
   text-align: center;
 }
 
 .placement-section-heading span {
   display: block;
-
   margin-bottom: 8px;
-
   color: #1764aa;
-
   font-size: 11px;
-
   font-weight: 800;
-
   letter-spacing: 1.5px;
-
   text-transform: uppercase;
 }
 
 .placement-section-heading h2 {
   margin: 0;
-
   color: #102d57;
-
-  font-size: clamp(28px, 4vw, 36px);
-
+  font-size: clamp(26px, 3.5vw, 34px);
   font-weight: 800;
-
   line-height: 1.25;
 }
 
@@ -239,29 +151,20 @@
 
 .placement-section-heading h2::after {
   content: "";
-
   display: block;
-
   width: 45px;
   height: 3px;
-
   margin: 11px auto 0;
-
   border-radius: 4px;
-
   background: #fdb913;
 }
 
 .placement-section-heading p {
   max-width: 680px;
-
-  margin: 13px auto 0;
-
+  margin: 10px auto 0;
   color: #667085;
-
   font-size: 14px;
-
-  line-height: 1.8;
+  line-height: 1.6;
 }
 
 /* =========================================================
@@ -269,9 +172,8 @@
 ========================================================= */
 
 .placement-statistics-section {
-  padding: 75px 0 40px;
-
-  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  padding: 10px 0 30px;
+  background: transparent;
 }
 
 .placement-statistics-grid {
@@ -424,9 +326,8 @@
 ========================================================= */
 
 .placement-highlights-section {
-  padding: 65px 0 55px;
-
-  background: #ffffff;
+  padding: 10px 0 30px;
+  background: transparent;
 }
 
 .placement-highlights-grid {
@@ -581,11 +482,9 @@
 ========================================================= */
 
 .placement-records-section {
-  padding: 65px 0 80px;
-
-  background: #f7f9fc;
-
-  border-top: 1px solid #edf1f5;
+  padding: 10px 0 35px;
+  background: transparent;
+  border-top: none;
 }
 
 /* =========================================================
@@ -767,21 +666,13 @@
 
 .placement-record-footer {
   position: relative;
-
-  margin: 0 0 75px;
-
-  padding: 55px 35px;
-
+  margin: 10px 0 35px;
+  padding: 38px 25px;
   box-sizing: border-box;
-
   overflow: hidden;
-
   border-radius: 14px;
-
   background: linear-gradient(135deg, #071b3d 0%, #0d3972 55%, #1764aa 100%);
-
   box-shadow: 0 12px 35px rgba(20, 43, 75, 0.12);
-
   text-align: center;
 }
 
@@ -1027,39 +918,35 @@
   /* Hero */
 
   .placement-record-header {
-    min-height: 255px;
-  }
-
-  .placement-record-header-overlay {
-    min-height: 255px;
-
-    padding: 55px 0;
+    min-height: auto;
+    padding: 24px 0 28px;
+    margin-bottom: 20px;
   }
 
   .placement-record-header h1 {
-    font-size: 36px;
+    font-size: 24px;
   }
 
   .placement-record-header p {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   /* Section spacing */
 
   .placement-statistics-section {
-    padding: 55px 0 30px;
+    padding: 10px 0 25px;
   }
 
   .placement-highlights-section {
-    padding: 48px 0 40px;
+    padding: 10px 0 25px;
   }
 
   .placement-records-section {
-    padding: 48px 0 55px;
+    padding: 10px 0 25px;
   }
 
   .placement-section-heading {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   .placement-section-heading h2 {
@@ -1124,31 +1011,14 @@
 ========================================================= */
 
 @media (max-width: 480px) {
-  .placement-container {
-    width: calc(100% - 28px);
-  }
-
   .placement-record-header {
-    min-height: 225px;
-  }
-
-  .placement-record-header-overlay {
-    min-height: 225px;
-
-    padding: 45px 0;
-  }
-
-  .placement-breadcrumb {
-    font-size: 12px;
+    min-height: auto;
+    padding: 20px 0 24px;
+    margin-bottom: 16px;
   }
 
   .placement-record-header h1 {
-    font-size: 30px;
-  }
-
-  .placement-record-header h1::after {
-    width: 42px;
-    height: 3px;
+    font-size: 22px;
   }
 
   .placement-record-header p {
