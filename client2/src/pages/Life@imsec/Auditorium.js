@@ -359,27 +359,19 @@ const Auditorium = () => {
   }
 
   return (
-    <>
+    <div className="auditorium-page">
       {/* ================================================================ */}
       {/* HERO */}
       {/* ================================================================ */}
 
       <section className="auditorium-hero">
-        <div className="auditorium-hero-overlay" />
-
-        <Container>
+        <div className="auditorium-hero-container">
           <div className="auditorium-hero-content">
             <span className="auditorium-hero-tag">LIFE @ IMSEC</span>
 
             <h1>{data.hero?.title || "Auditorium"}</h1>
-
-            <div className="auditorium-hero-line" />
-
-            <p style={{ color: "white" }}>
-              {data.hero?.breadcrumb || "Home / Life @ IMSEC / Auditorium"}
-            </p>
           </div>
-        </Container>
+        </div>
       </section>
 
       {/* ================================================================ */}
@@ -729,7 +721,7 @@ const Auditorium = () => {
           </div>
         </Container>
       </section>
-    </>
+    </div>
   );
 };
 
