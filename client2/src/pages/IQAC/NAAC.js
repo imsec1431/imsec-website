@@ -76,14 +76,8 @@ const NAAC = () => {
       <section className="naac-public-hero">
         <div className="container">
           <div className="naac-hero-content">
-            <div className="naac-breadcrumb">
-              {hero.breadcrumb || "Home / IQAC / NAAC"}
-            </div>
-
+            <span className="naac-hero-tag">INTERNAL QUALITY ASSURANCE CELL</span>
             <h1>{hero.title || "NAAC"}</h1>
-
-            <div className="naac-hero-line"></div>
-
             <p>
               {hero.subtitle || "National Assessment and Accreditation Council"}
             </p>
