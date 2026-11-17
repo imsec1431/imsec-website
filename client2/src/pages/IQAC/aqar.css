@@ -1,95 +1,113 @@
+/* =========================================================
+   AQAR PUBLIC PAGE
+   IMSEC - Institutional Navy & Gold Design
+========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* =========================================================
+   PAGE SCOPE
+========================================================= */
+
 .aqar-public-page {
+  width: 100%;
   min-height: 100vh;
-  background: #f7f8fa;
-  color: #26384d;
+  background: #ffffff;
+  color: #172033;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  padding-bottom: 55px;
 }
+
+/* =========================================================
+   CONTAINER (90% FLUID)
+========================================================= */
 
 .aqar-container {
-  width: min(1120px, calc(100% - 40px));
-  margin: 0 auto;
+  width: 90% !important;
+  max-width: 90% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
-/* HERO */
+@media (max-width: 768px) {
+  .aqar-container {
+    width: 94% !important;
+    max-width: 94% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .aqar-container {
+    width: calc(100% - 24px) !important;
+    max-width: calc(100% - 24px) !important;
+  }
+}
+
+/* =========================================================
+   HERO (FULL WIDTH #002147)
+========================================================= */
 
 .aqar-public-hero {
-  min-height: 330px;
-  background: linear-gradient(
-    135deg,
-    rgba(5, 22, 45, 0.97),
-    rgba(13, 43, 76, 0.92)
-  );
-  display: flex;
-  align-items: center;
   position: relative;
-  overflow: hidden;
-}
-
-.aqar-public-hero::before {
-  content: "";
-  position: absolute;
-  width: 420px;
-  height: 420px;
-  border: 1px solid rgba(214, 173, 96, 0.22);
-  border-radius: 50%;
-  right: -100px;
-  top: -150px;
-}
-
-.aqar-public-hero::after {
-  content: "";
-  position: absolute;
-  width: 260px;
-  height: 260px;
-  border: 1px solid rgba(214, 173, 96, 0.16);
-  border-radius: 50%;
-  right: 80px;
-  bottom: -180px;
-}
-
-.aqar-hero-overlay {
   width: 100%;
-  position: relative;
-  z-index: 1;
+  padding: 38px 0 42px;
+  margin-bottom: 24px;
+  background: #002147;
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
+  color: #ffffff;
+  text-align: left;
+}
+
+.aqar-hero-content {
+  text-align: left;
+  color: #ffffff;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
 }
 
 .aqar-hero-label {
   display: inline-block;
-  color: #d6ad60;
-  font-size: 13px;
-  font-weight: 700;
+  margin-bottom: 8px;
+  color: #fdb913;
+  font-size: 11px;
+  font-weight: 750;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 12px;
 }
 
 .aqar-public-hero h1 {
-  color: #fff;
-  font-size: clamp(36px, 5vw, 58px);
-  line-height: 1.1;
   margin: 0;
-  font-weight: 700;
+  color: #ffffff;
+  font-size: clamp(26px, 3.5vw, 36px);
+  line-height: 1.2;
+  font-weight: 750;
+  letter-spacing: -0.5px;
 }
 
 .aqar-public-hero p {
-  margin: 12px 0 22px;
-  color: #dbe4ef;
-  font-size: 18px;
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14.5px;
+  line-height: 1.6;
 }
 
-.aqar-breadcrumb {
-  color: #d6ad60;
-  font-size: 13px;
-}
-
-/* CONTENT */
+/* =========================================================
+   CONTENT
+========================================================= */
 
 .aqar-content {
-  padding: 70px 0;
+  padding: 16px 0 40px;
 }
 
 .aqar-document-section {
-  max-width: 850px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
 }
 
 .aqar-section-heading {
@@ -97,76 +115,87 @@
   align-items: center;
   gap: 16px;
   justify-content: center;
-  margin-bottom: 35px;
+  margin-bottom: 28px;
 }
 
 .aqar-section-heading span {
-  height: 1px;
+  height: 2px;
   flex: 1;
-  max-width: 130px;
-  background: #d6ad60;
+  max-width: 80px;
+  background: #fdb913;
+  border-radius: 2px;
 }
 
 .aqar-section-heading h2 {
   margin: 0;
-  color: #0b1f3a;
-  font-size: 28px;
-  font-weight: 700;
+  color: #002147;
+  font-size: 24px;
+  font-weight: 750;
+  letter-spacing: -0.3px;
 }
 
-/* DOCUMENT CARD */
+/* =========================================================
+   DOCUMENT CARD
+========================================================= */
 
 .aqar-document-card {
-  background: #fff;
-  border: 1px solid #e4e8ee;
-  border-radius: 16px;
-  padding: 30px;
+  width: 100%;
+  max-width: 100%;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 24px 28px;
   display: flex;
   align-items: center;
   gap: 24px;
-  box-shadow: 0 12px 35px rgba(11, 31, 58, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 33, 71, 0.05);
   transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .aqar-document-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 42px rgba(11, 31, 58, 0.12);
+  transform: translateY(-3px);
+  border-color: #bfdbfe;
+  box-shadow: 0 12px 28px rgba(0, 33, 71, 0.09);
 }
 
 .aqar-pdf-icon {
-  width: 82px;
-  height: 82px;
-  min-width: 82px;
-  border-radius: 15px;
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fff1f1;
-  color: #c0392b;
-  font-size: 37px;
+  background: #fff1f2;
+  color: #dc2626;
+  font-size: 28px;
 }
 
 .aqar-document-info {
   flex: 1;
+  min-width: 0;
 }
 
 .aqar-document-info h3 {
   margin: 0;
-  color: #0b1f3a;
-  font-size: 22px;
+  color: #002147;
+  font-size: 20px;
+  font-weight: 750;
 }
 
 .aqar-document-info p {
-  margin: 7px 0 20px;
-  color: #718096;
-  font-size: 14px;
+  margin: 6px 0 16px;
+  color: #64748b;
+  font-size: 13.5px;
+  line-height: 1.6;
 }
 
 .aqar-document-actions {
   display: flex;
-  gap: 11px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
@@ -176,123 +205,168 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 11px 17px;
+  min-height: 38px;
+  padding: 0 18px;
   border-radius: 8px;
   text-decoration: none;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 700;
   transition: 0.25s ease;
 }
 
 .aqar-view-button {
-  background: #0b1f3a;
-  color: #fff;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #002147;
 }
 
 .aqar-view-button:hover {
-  background: #17375f;
-  color: #fff;
+  background: #dbeafe;
+  color: #002147;
+  transform: translateY(-1px);
 }
 
 .aqar-download-button {
-  background: #d6ad60;
-  color: #0b1f3a;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #15803d;
 }
 
 .aqar-download-button:hover {
-  background: #c79d4e;
-  color: #0b1f3a;
+  background: #dcfce7;
+  color: #15803d;
+  transform: translateY(-1px);
 }
 
-/* EMPTY */
+/* =========================================================
+   EMPTY & ERROR
+========================================================= */
 
 .aqar-empty-section {
-  max-width: 650px;
+  width: 100%;
+  max-width: 600px;
   margin: 0 auto;
   text-align: center;
-  background: #fff;
+  background: #ffffff;
   border-radius: 16px;
-  border: 1px solid #e4e8ee;
-  padding: 55px 30px;
-  box-shadow: 0 10px 30px rgba(11, 31, 58, 0.06);
+  border: 1px dashed #cbd5e1;
+  padding: 45px 30px;
 }
 
 .aqar-empty-icon {
-  width: 70px;
-  height: 70px;
-  margin: 0 auto 18px;
-  border-radius: 50%;
-  background: #f2f4f7;
-  color: #8a94a3;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px;
+  border-radius: 14px;
+  background: #eef4fb;
+  color: #002147;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 28px;
+  font-size: 26px;
 }
 
 .aqar-empty-section h2 {
-  color: #0b1f3a;
+  color: #002147;
+  font-size: 20px;
+  font-weight: 750;
   margin: 0 0 8px;
 }
 
 .aqar-empty-section p {
-  color: #718096;
+  color: #64748b;
+  font-size: 13.5px;
   margin: 0;
 }
 
 .aqar-error {
-  max-width: 800px;
-  margin: 0 auto 30px;
-  padding: 15px 18px;
-  border-radius: 9px;
-  background: #fff3f3;
-  border: 1px solid #f0cccc;
-  color: #b42318;
+  max-width: 100%;
+  margin: 0 0 20px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  color: #be123c;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
 }
 
 .aqar-public-loading {
-  min-height: 500px;
+  min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0b1f3a;
+  color: #002147;
   font-weight: 600;
+  font-size: 14px;
 }
 
-/* RESPONSIVE */
+/* =========================================================
+   RESPONSIVE
+========================================================= */
 
-@media (max-width: 700px) {
-  .aqar-container {
-    width: min(100% - 28px, 1120px);
-  }
-
+@media (max-width: 768px) {
   .aqar-public-hero {
-    min-height: 280px;
+    padding: 30px 0 34px;
+    margin-bottom: 18px;
   }
 
   .aqar-public-hero h1 {
-    font-size: 38px;
+    font-size: 26px;
   }
 
   .aqar-content {
-    padding: 45px 0;
+    padding: 14px 0 32px;
   }
 
   .aqar-document-card {
-    padding: 22px;
+    padding: 20px;
     flex-direction: column;
     text-align: center;
+    gap: 16px;
   }
 
   .aqar-document-actions {
     justify-content: center;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .aqar-view-button,
+  .aqar-download-button {
+    width: 100%;
   }
 
   .aqar-section-heading h2 {
-    font-size: 23px;
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aqar-public-hero {
+    padding: 24px 0 28px;
+    margin-bottom: 14px;
   }
 
-  .aqar-section-heading span {
-    max-width: 55px;
+  .aqar-public-hero h1 {
+    font-size: 22px;
+  }
+
+  .aqar-document-card {
+    padding: 16px;
+  }
+
+  .aqar-pdf-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    font-size: 24px;
+  }
+
+  .aqar-document-info h3 {
+    font-size: 17px;
   }
 }
