@@ -55,19 +55,13 @@ const AllCommittee = () => {
       ================================================= */}
 
       <section className="publicCommitteeHero">
-        <div className="publicCommitteeHeroContent">
-          <div className="publicCommitteeHeroIcon">
-            <FaUsers />
+        <div className="publicCommitteeHeroContainer">
+          <div className="publicCommitteeHeroContent">
+            <span className="publicCommitteeHeroTag">
+              INSTITUTIONAL GOVERNANCE
+            </span>
+            <h1>Important Committees</h1>
           </div>
-
-          <span>INSTITUTIONAL GOVERNANCE</span>
-
-          <h1>Important Committees</h1>
-
-          <p>
-            View the official committees and related documents of IMS
-            Engineering College.
-          </p>
         </div>
       </section>
 
