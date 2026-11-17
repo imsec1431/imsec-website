@@ -69,19 +69,10 @@ const Gym = () => {
           ================================================= */}
 
       <section className="gym-hero">
-        <div className="container">
-          <div className="gym-breadcrumb">Home / Student Welfare / Gym</div>
-
+        <div className="gym-hero-container">
           <div className="gym-hero-content">
-            <div className="gym-hero-icon">
-              <FaDumbbell />
-            </div>
-
-            <h1>{data.title}</h1>
-
-            <p>
-              Fitness, health and well-being for a healthier campus community.
-            </p>
+            <span className="gym-hero-tag">STUDENT WELFARE</span>
+            <h1>{data.title || "Gym"}</h1>
           </div>
         </div>
       </section>
