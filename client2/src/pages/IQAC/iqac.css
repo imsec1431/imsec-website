@@ -1,74 +1,100 @@
 /* =========================================================
    IQAC PUBLIC PAGE
+   IMSEC - Institutional Navy & Gold Design
+========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* =========================================================
+   PAGE SCOPE
 ========================================================= */
 
 .iqac-page {
   width: 100%;
+  min-height: 100vh;
   background: #ffffff;
   color: #172033;
+  font-family: "Poppins", sans-serif;
   overflow: hidden;
-}
-
-.iqac-container {
-  width: min(1180px, calc(100% - 40px));
-  margin: 0 auto;
+  padding-bottom: 55px;
 }
 
 /* =========================================================
-   HERO
+   CONTAINER (90% FLUID)
+========================================================= */
+
+.iqac-container {
+  width: 90% !important;
+  max-width: 90% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .iqac-container {
+    width: 94% !important;
+    max-width: 94% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .iqac-container {
+    width: calc(100% - 24px) !important;
+    max-width: calc(100% - 24px) !important;
+  }
+}
+
+/* =========================================================
+   HERO (FULL WIDTH #002147)
 ========================================================= */
 
 .iqac-hero {
   position: relative;
-  min-height: 360px;
-  display: flex;
-  align-items: stretch;
-  background:
-    linear-gradient(115deg, rgba(5, 24, 54, 0.98), rgba(13, 45, 92, 0.91)),
-    url("https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1800&q=85")
-      center / cover no-repeat;
-}
-
-.iqac-hero-overlay {
   width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 80px 0;
-  background: radial-gradient(
-    circle at 85% 30%,
-    rgba(216, 180, 90, 0.16),
-    transparent 30%
-  );
+  padding: 38px 0 42px;
+  margin-bottom: 24px;
+  background: #002147;
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
+  color: #ffffff;
+  text-align: left;
 }
 
-.iqac-hero .iqac-container {
-  position: relative;
+.iqac-hero-content {
+  text-align: left;
+  color: #ffffff;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
 }
 
-.iqac-breadcrumb {
-  margin-bottom: 18px;
-  color: #d8b45a;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.4px;
+.iqac-hero-tag {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #fdb913;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-.iqac-hero h1 {
-  max-width: 850px;
+.iqac-hero-content h1 {
   margin: 0;
   color: #ffffff;
-  font-size: clamp(38px, 5vw, 62px);
-  line-height: 1.08;
+  font-size: clamp(26px, 3.5vw, 36px);
+  line-height: 1.2;
   font-weight: 750;
-  letter-spacing: -1.5px;
+  letter-spacing: -0.5px;
 }
 
-.iqac-hero p {
-  max-width: 650px;
-  margin: 18px 0 0;
-  color: rgba(255, 255, 255, 0.82);
-  font-size: 18px;
-  line-height: 1.65;
+.iqac-hero-content p {
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14.5px;
+  line-height: 1.6;
+  max-width: 750px;
 }
 
 /* =========================================================
@@ -76,30 +102,31 @@
 ========================================================= */
 
 .iqac-section {
-  padding: 82px 0;
+  padding: 24px 0 28px;
   background: #ffffff;
 }
 
 .iqac-light-section {
-  background: #f5f7fa;
+  background: #f8fafc;
 }
 
 .iqac-section-label {
   display: flex;
   align-items: center;
-  gap: 11px;
-  margin-bottom: 28px;
-  color: #0d2d5c;
+  gap: 10px;
+  margin-bottom: 16px;
+  color: #002147;
   font-size: 11px;
-  font-weight: 850;
+  font-weight: 800;
   letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .iqac-section-label span {
-  width: 38px;
-  height: 2px;
-  display: inline-block;
-  background: #d8b45a;
+  width: 30px;
+  height: 3px;
+  border-radius: 2px;
+  background: #fdb913;
 }
 
 /* =========================================================
@@ -109,70 +136,60 @@
 .iqac-intro-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.65fr) minmax(280px, 0.75fr);
-  gap: 60px;
+  gap: 28px;
   align-items: center;
 }
 
 .iqac-intro-content h2 {
-  margin: 0 0 20px;
-  color: #0b2852;
-  font-size: clamp(30px, 4vw, 44px);
-  line-height: 1.15;
+  margin: 0 0 12px;
+  color: #002147;
+  font-size: clamp(22px, 3vw, 28px);
+  line-height: 1.25;
   font-weight: 750;
 }
 
 .iqac-intro-content p {
-  max-width: 800px;
   margin: 0;
-  color: #687386;
-  font-size: 16px;
-  line-height: 1.9;
+  color: #475467;
+  font-size: 14.5px;
+  line-height: 1.75;
 }
 
 .iqac-intro-card {
   position: relative;
-  padding: 32px 28px;
+  padding: 26px 24px;
   border-radius: 14px;
-  background: #0d2d5c;
-  box-shadow: 0 18px 45px rgba(13, 45, 92, 0.16);
+  background: #002147;
+  box-shadow: 0 6px 20px rgba(0, 33, 71, 0.12);
+  color: #ffffff;
   overflow: hidden;
-}
-
-.iqac-intro-card::after {
-  content: "";
-  position: absolute;
-  width: 130px;
-  height: 130px;
-  right: -50px;
-  bottom: -50px;
-  border: 1px solid rgba(216, 180, 90, 0.25);
-  border-radius: 50%;
 }
 
 .iqac-intro-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
-  height: 52px;
-  margin-bottom: 22px;
-  border-radius: 11px;
-  background: #d8b45a;
-  color: #0d2d5c;
-  font-size: 21px;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  background: #fdb913;
+  color: #002147;
+  font-size: 20px;
 }
 
 .iqac-intro-card h3 {
-  margin: 0 0 11px;
+  margin: 0 0 8px;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .iqac-intro-card p {
   margin: 0;
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 13px;
-  line-height: 1.75;
+  line-height: 1.65;
 }
 
 /* =========================================================
@@ -181,41 +198,41 @@
 
 .iqac-content-card {
   display: grid;
-  grid-template-columns: 70px minmax(0, 1fr);
-  gap: 25px;
-  align-items: start;
-  padding: 32px;
-  border: 1px solid #e3e7ed;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 20px;
+  align-items: center;
+  padding: 22px 26px;
+  border: 1px solid #e2e8f0;
   border-radius: 14px;
   background: #ffffff;
-  box-shadow: 0 8px 28px rgba(18, 35, 60, 0.05);
+  box-shadow: 0 6px 20px rgba(0, 33, 71, 0.05);
 }
 
 .iqac-content-number {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 58px;
-  height: 58px;
+  width: 50px;
+  height: 50px;
   border-radius: 10px;
-  background: #0d2d5c;
-  color: #d8b45a;
-  font-size: 14px;
-  font-weight: 850;
+  background: #002147;
+  color: #fdb913;
+  font-size: 13px;
+  font-weight: 800;
 }
 
 .iqac-content-card h2 {
-  margin: 2px 0 12px;
-  color: #0d2d5c;
-  font-size: 27px;
-  line-height: 1.25;
+  margin: 0 0 6px;
+  color: #002147;
+  font-size: 20px;
+  font-weight: 750;
 }
 
 .iqac-content-card p {
   margin: 0;
-  color: #697487;
-  font-size: 15px;
-  line-height: 1.85;
+  color: #475467;
+  font-size: 14px;
+  line-height: 1.7;
 }
 
 /* =========================================================
@@ -226,18 +243,18 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
 .iqac-function-card {
   display: flex;
   align-items: flex-start;
-  gap: 15px;
-  min-height: 115px;
-  padding: 21px;
-  border: 1px solid #e4e8ee;
+  gap: 14px;
+  padding: 18px 20px;
+  border: 1px solid #e2e8f0;
   border-radius: 12px;
   background: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.04);
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
@@ -245,9 +262,9 @@
 }
 
 .iqac-function-card:hover {
-  transform: translateY(-4px);
-  border-color: #d5c084;
-  box-shadow: 0 12px 30px rgba(18, 35, 60, 0.08);
+  transform: translateY(-3px);
+  border-color: #bfdbfe;
+  box-shadow: 0 10px 25px rgba(0, 33, 71, 0.08);
 }
 
 .iqac-function-icon {
@@ -255,26 +272,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
+  width: 36px;
+  height: 36px;
   border-radius: 8px;
-  background: #edf3fa;
-  color: #0d2d5c;
+  background: #eff6ff;
+  color: #002147;
+  font-size: 16px;
 }
 
 .iqac-function-card span {
   display: block;
-  margin-bottom: 6px;
-  color: #b19347;
+  margin-bottom: 4px;
+  color: #b28a16;
   font-size: 10px;
-  font-weight: 850;
+  font-weight: 800;
   letter-spacing: 1px;
 }
 
 .iqac-function-card h3 {
   margin: 0;
-  color: #253249;
-  font-size: 14px;
+  color: #1e293b;
+  font-size: 13.5px;
+  font-weight: 650;
   line-height: 1.45;
 }
 
@@ -285,74 +304,77 @@
 .iqac-members-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-  margin-top: 25px;
+  gap: 16px;
+  margin-top: 20px;
 }
 
 .iqac-member-card {
-  padding: 25px;
-  border: 1px solid #e1e6ed;
-  border-radius: 13px;
+  padding: 22px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
   background: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 33, 71, 0.05);
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
 
 .iqac-member-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 13px 32px rgba(18, 35, 60, 0.08);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 33, 71, 0.09);
 }
 
 .iqac-member-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .iqac-member-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 45px;
-  height: 45px;
+  width: 42px;
+  height: 42px;
   border-radius: 10px;
-  background: #0d2d5c;
-  color: #d8b45a;
+  background: #002147;
+  color: #fdb913;
+  font-size: 17px;
 }
 
 .iqac-member-top > span {
-  color: #c0c6d0;
+  color: #94a3b8;
   font-size: 11px;
   font-weight: 800;
 }
 
 .iqac-member-card h3 {
-  margin: 0 0 6px;
-  color: #172b4d;
-  font-size: 17px;
+  margin: 0 0 5px;
+  color: #002147;
+  font-size: 16px;
+  font-weight: 700;
   line-height: 1.35;
 }
 
 .iqac-member-card > p {
   margin: 0;
-  color: #687386;
-  font-size: 13px;
+  color: #475467;
+  font-size: 12.5px;
   line-height: 1.5;
 }
 
 .iqac-member-role,
 .iqac-member-department {
   display: inline-block;
-  margin-top: 13px;
+  margin-top: 10px;
   margin-right: 6px;
-  padding: 5px 9px;
-  border-radius: 5px;
-  background: #f0f3f7;
-  color: #5d6878;
-  font-size: 10px;
-  font-weight: 700;
+  padding: 4px 9px;
+  border-radius: 6px;
+  background: #f1f5f9;
+  color: #334155;
+  font-size: 10.5px;
+  font-weight: 600;
 }
 
 /* =========================================================
@@ -362,11 +384,12 @@
 .iqac-meeting-card {
   display: flex;
   align-items: center;
-  gap: 25px;
-  padding: 32px;
+  gap: 22px;
+  padding: 26px 28px;
   border-radius: 14px;
-  background: linear-gradient(135deg, #0a254b, #0d2d5c);
-  box-shadow: 0 16px 40px rgba(13, 45, 92, 0.14);
+  background: #002147;
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 33, 71, 0.12);
 }
 
 .iqac-meeting-icon {
@@ -374,25 +397,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 62px;
-  height: 62px;
-  border-radius: 12px;
-  background: #d8b45a;
-  color: #0d2d5c;
-  font-size: 24px;
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  background: #fdb913;
+  color: #002147;
+  font-size: 22px;
 }
 
 .iqac-meeting-card h2 {
-  margin: 0 0 9px;
+  margin: 0 0 6px;
   color: #ffffff;
-  font-size: 26px;
+  font-size: 22px;
+  font-weight: 750;
 }
 
 .iqac-meeting-card p {
   margin: 0;
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 14px;
-  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13.5px;
+  line-height: 1.7;
 }
 
 /* =========================================================
@@ -402,16 +426,17 @@
 .iqac-initiatives-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  margin-top: 25px;
+  gap: 16px;
+  margin-top: 20px;
 }
 
 .iqac-initiative-card {
   position: relative;
-  padding: 27px;
-  border: 1px solid #e0e5ec;
-  border-radius: 13px;
+  padding: 24px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
   background: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 33, 71, 0.05);
   overflow: hidden;
   transition:
     transform 0.25s ease,
@@ -419,42 +444,44 @@
 }
 
 .iqac-initiative-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 13px 32px rgba(18, 35, 60, 0.08);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 33, 71, 0.09);
 }
 
 .iqac-initiative-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  margin-bottom: 20px;
-  border-radius: 9px;
-  background: #edf3fa;
-  color: #b19347;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  background: #fef9c3;
+  color: #b28a16;
+  font-size: 18px;
 }
 
 .iqac-initiative-card > span {
   position: absolute;
-  top: 22px;
-  right: 24px;
-  color: #d4d9e1;
-  font-size: 28px;
+  top: 20px;
+  right: 22px;
+  color: #e2e8f0;
+  font-size: 24px;
   font-weight: 800;
 }
 
 .iqac-initiative-card h3 {
-  margin: 0 0 9px;
-  color: #172b4d;
-  font-size: 18px;
+  margin: 0 0 8px;
+  color: #002147;
+  font-size: 17px;
+  font-weight: 700;
 }
 
 .iqac-initiative-card p {
   margin: 0;
-  color: #697487;
+  color: #475467;
   font-size: 13px;
-  line-height: 1.75;
+  line-height: 1.7;
 }
 
 /* =========================================================
@@ -464,59 +491,61 @@
 .iqac-documents-grid {
   display: flex;
   flex-direction: column;
-  gap: 13px;
-  margin-top: 25px;
+  gap: 12px;
+  margin-top: 20px;
 }
 
 .iqac-document-card {
   display: grid;
-  grid-template-columns: 55px minmax(0, 1fr) auto;
+  grid-template-columns: 48px minmax(0, 1fr) auto;
   align-items: center;
-  gap: 20px;
-  padding: 20px;
-  border: 1px solid #e1e6ed;
-  border-radius: 11px;
+  gap: 18px;
+  padding: 18px 22px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
   background: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 33, 71, 0.05);
   transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .iqac-document-card:hover {
-  transform: translateX(3px);
-  box-shadow: 0 8px 25px rgba(18, 35, 60, 0.07);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 33, 71, 0.08);
 }
 
 .iqac-document-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 51px;
-  height: 51px;
-  border-radius: 9px;
-  background: #fff0f0;
-  color: #c73b3b;
-  font-size: 21px;
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background: #fff1f2;
+  color: #dc2626;
+  font-size: 20px;
 }
 
 .iqac-document-number {
   display: block;
-  margin-bottom: 5px;
-  color: #b19347;
-  font-size: 9px;
-  font-weight: 850;
-  letter-spacing: 1.4px;
+  margin-bottom: 4px;
+  color: #b28a16;
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
 }
 
 .iqac-document-content h3 {
   margin: 0;
-  color: #172b4d;
-  font-size: 16px;
+  color: #002147;
+  font-size: 15.5px;
+  font-weight: 700;
 }
 
 .iqac-document-content p {
-  margin: 4px 0 0;
-  color: #7b8494;
+  margin: 3px 0 0;
+  color: #64748b;
   font-size: 12px;
 }
 
@@ -531,38 +560,38 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 37px;
-  padding: 0 13px;
-  border-radius: 7px;
-  text-decoration: none;
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 8px;
   font-size: 11px;
-  font-weight: 750;
-  transition:
-    transform 0.2s ease,
-    background 0.2s ease;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.25s ease;
 }
 
 .iqac-view-btn {
   gap: 6px;
-  background: #0d2d5c;
-  color: #ffffff;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #002147;
 }
 
 .iqac-view-btn:hover {
-  background: #153f73;
-  color: #ffffff;
+  background: #dbeafe;
+  color: #002147;
   transform: translateY(-1px);
 }
 
 .iqac-download-btn {
-  border: 1px solid #d8dee7;
-  background: #ffffff;
-  color: #0d2d5c;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #15803d;
 }
 
 .iqac-download-btn:hover {
-  background: #f1f4f8;
-  color: #0d2d5c;
+  background: #dcfce7;
+  color: #15803d;
+  transform: translateY(-1px);
 }
 
 /* =========================================================
@@ -573,41 +602,42 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
-  padding: 30px;
-  border: 1px solid #e0e5ec;
+  gap: 24px;
+  padding: 24px 28px;
+  border: 1px solid #e2e8f0;
   border-radius: 14px;
   background: #ffffff;
-  box-shadow: 0 9px 28px rgba(18, 35, 60, 0.05);
+  box-shadow: 0 6px 20px rgba(0, 33, 71, 0.05);
 }
 
 .iqac-coordinator-main {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 16px;
 }
 
 .iqac-coordinator-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 57px;
-  height: 57px;
-  border-radius: 11px;
-  background: #0d2d5c;
-  color: #d8b45a;
-  font-size: 21px;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: #002147;
+  color: #fdb913;
+  font-size: 20px;
 }
 
 .iqac-coordinator-main h2 {
-  margin: 0 0 5px;
-  color: #172b4d;
-  font-size: 20px;
+  margin: 0 0 4px;
+  color: #002147;
+  font-size: 18px;
+  font-weight: 750;
 }
 
 .iqac-coordinator-main p {
   margin: 0;
-  color: #737d8d;
+  color: #64748b;
   font-size: 12px;
 }
 
@@ -621,22 +651,23 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  min-height: 38px;
-  padding: 0 12px;
-  border-radius: 7px;
-  background: #f1f4f8;
-  color: #0d2d5c;
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 8px;
+  background: #f1f5f9;
+  color: #002147;
   text-decoration: none;
   font-size: 11px;
   font-weight: 700;
+  transition: 0.25s ease;
 }
 
 .iqac-coordinator-contact a:hover {
-  background: #e5ebf3;
+  background: #e2e8f0;
 }
 
 /* =========================================================
-   LOADING
+   LOADING & ERROR
 ========================================================= */
 
 .iqac-loading {
@@ -646,15 +677,16 @@
   justify-content: center;
   flex-direction: column;
   gap: 14px;
-  color: #687386;
-  font-size: 13px;
+  color: #002147;
+  font-size: 13.5px;
+  font-weight: 600;
 }
 
 .iqac-loading-spinner {
-  width: 38px;
-  height: 38px;
-  border: 3px solid #e3e7ed;
-  border-top-color: #0d2d5c;
+  width: 42px;
+  height: 42px;
+  border: 4px solid #e2e8f0;
+  border-top-color: #002147;
   border-radius: 50%;
   animation: iqac-public-spin 0.8s linear infinite;
 }
@@ -664,10 +696,6 @@
     transform: rotate(360deg);
   }
 }
-
-/* =========================================================
-   ERROR
-========================================================= */
 
 .iqac-error-page {
   min-height: 420px;
@@ -681,30 +709,26 @@
 
 .iqac-error-page h2 {
   margin: 0 0 8px;
-  color: #0d2d5c;
+  color: #002147;
 }
 
 .iqac-error-page p {
   margin: 0;
-  color: #727c8c;
+  color: #64748b;
 }
 
 /* =========================================================
-   RESPONSIVE — 1000px
+   RESPONSIVE — TABLET (1000px)
 ========================================================= */
 
 @media (max-width: 1000px) {
-  .iqac-section {
-    padding: 65px 0;
-  }
-
   .iqac-intro-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 22px;
   }
 
   .iqac-intro-card {
-    max-width: 520px;
+    max-width: 100%;
   }
 
   .iqac-function-grid {
@@ -718,36 +742,31 @@
   .iqac-coordinator-card {
     align-items: flex-start;
     flex-direction: column;
+    gap: 18px;
   }
 
   .iqac-coordinator-contact {
     flex-wrap: wrap;
+    width: 100%;
   }
 }
 
 /* =========================================================
-   RESPONSIVE — 700px
+   RESPONSIVE — MOBILE (768px)
 ========================================================= */
 
-@media (max-width: 700px) {
-  .iqac-container {
-    width: min(100% - 30px, 1180px);
-  }
-
+@media (max-width: 768px) {
   .iqac-hero {
-    min-height: 300px;
+    padding: 30px 0 34px;
+    margin-bottom: 18px;
   }
 
-  .iqac-hero-overlay {
-    padding: 60px 0;
+  .iqac-hero-content h1 {
+    font-size: 26px;
   }
 
-  .iqac-hero h1 {
-    font-size: 38px;
-  }
-
-  .iqac-hero p {
-    font-size: 15px;
+  .iqac-section {
+    padding: 20px 0 24px;
   }
 
   .iqac-function-grid,
@@ -758,76 +777,74 @@
 
   .iqac-content-card {
     grid-template-columns: 1fr;
-    gap: 17px;
-    padding: 24px;
+    gap: 14px;
+    padding: 20px;
   }
 
   .iqac-meeting-card {
     align-items: flex-start;
     flex-direction: column;
-    padding: 25px;
+    padding: 22px;
+    gap: 16px;
   }
 
   .iqac-document-card {
-    grid-template-columns: 48px minmax(0, 1fr);
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 14px;
+    padding: 16px;
   }
 
   .iqac-document-buttons {
     grid-column: 1 / -1;
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-top: 6px;
   }
 
   .iqac-view-btn,
   .iqac-download-btn {
-    flex: 1;
+    width: 100%;
+    min-height: 36px;
   }
 }
 
 /* =========================================================
-   RESPONSIVE — 480px
+   RESPONSIVE — SMALL MOBILE (480px)
 ========================================================= */
 
 @media (max-width: 480px) {
+  .iqac-hero {
+    padding: 24px 0 28px;
+    margin-bottom: 14px;
+  }
+
+  .iqac-hero-content h1 {
+    font-size: 22px;
+  }
+
   .iqac-section {
-    padding: 52px 0;
-  }
-
-  .iqac-hero h1 {
-    font-size: 32px;
-    letter-spacing: -0.7px;
-  }
-
-  .iqac-hero p {
-    font-size: 14px;
+    padding: 16px 0 20px;
   }
 
   .iqac-intro-content h2 {
-    font-size: 29px;
+    font-size: 22px;
   }
 
   .iqac-content-card {
-    padding: 20px;
-  }
-
-  .iqac-function-card {
-    min-height: auto;
-    padding: 18px;
+    padding: 16px;
   }
 
   .iqac-member-card {
-    padding: 20px;
+    padding: 18px;
   }
 
   .iqac-coordinator-card {
-    padding: 21px;
-  }
-
-  .iqac-coordinator-main {
-    align-items: flex-start;
+    padding: 18px;
   }
 
   .iqac-coordinator-contact {
-    width: 100%;
     flex-direction: column;
     align-items: stretch;
   }
@@ -837,6 +854,6 @@
   }
 
   .iqac-document-card {
-    padding: 15px;
+    padding: 14px;
   }
 }
