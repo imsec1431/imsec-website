@@ -5,9 +5,27 @@
   color: #243447;
 }
 
-.lcl-container {
-  width: min(1180px, calc(100% - 40px));
+.lcl-container,
+.lcl-hero-container {
+  width: 90%;
+  max-width: 90%;
   margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .lcl-container,
+  .lcl-hero-container {
+    width: 94%;
+    max-width: 94%;
+  }
+}
+
+@media (max-width: 480px) {
+  .lcl-container,
+  .lcl-hero-container {
+    width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
+  }
 }
 
 /* =========================
@@ -16,46 +34,20 @@
 
 .lcl-public-hero {
   position: relative;
-  min-height: 410px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-
-  background:
-    radial-gradient(
-      circle at 15% 25%,
-      rgba(38, 101, 170, 0.28),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at 85% 75%,
-      rgba(245, 196, 0, 0.12),
-      transparent 28%
-    ),
-    linear-gradient(135deg, #071d3a 0%, #0a2e5c 50%, #123f7a 100%);
+  width: 100%;
+  padding: 38px 0 42px;
+  margin-bottom: 24px;
+  background: #002147;
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
+  color: #ffffff;
+  text-align: left;
+  min-height: auto;
 }
 
-.lcl-public-hero::before {
-  content: "";
-  position: absolute;
-  width: 320px;
-  height: 320px;
-  right: -130px;
-  top: -120px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 50%;
-}
-
+.lcl-public-hero::before,
 .lcl-public-hero::after {
-  content: "";
-  position: absolute;
-  width: 220px;
-  height: 220px;
-  left: -100px;
-  bottom: -100px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
+  display: none;
 }
 
 .lcl-public-hero.has-image {
@@ -64,56 +56,49 @@
 }
 
 .lcl-hero-overlay {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  padding: 80px 20px;
+  display: none;
 }
 
 .lcl-hero-content {
-  max-width: 950px;
-  margin: 0 auto;
-  text-align: center;
+  max-width: 900px;
+  margin: 0;
+  text-align: left;
   color: #ffffff;
 }
 
 .lcl-hero-label {
   display: inline-block;
-  margin-bottom: 15px;
-  color: #f5c400;
-  font-size: 13px;
-  font-weight: 700;
+  margin-bottom: 8px;
+  color: #fdb913;
+  font-size: 11px;
+  font-weight: 750;
   letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .lcl-hero-content h1 {
   margin: 0;
   color: #ffffff;
-  font-size: clamp(34px, 5vw, 58px);
-  line-height: 1.15;
+  font-size: clamp(26px, 3.5vw, 36px);
+  line-height: 1.2;
   font-weight: 750;
+  letter-spacing: -0.5px;
 }
 
 .lcl-hero-line {
-  width: 65px;
-  height: 4px;
-  margin: 22px auto 18px;
-  background: #f5c400;
-  border-radius: 10px;
+  display: none;
 }
 
 .lcl-hero-content p {
-  max-width: 760px;
-  margin: 0 auto 18px;
-  color: #e7eef7;
-  font-size: 17px;
-  line-height: 1.7;
+  max-width: 750px;
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 13.5px;
+  line-height: 1.6;
 }
 
 .lcl-breadcrumb {
-  color: #ffffff;
-  font-size: 14px;
-  opacity: 0.9;
+  display: none;
 }
 
 /* =========================
@@ -121,14 +106,14 @@
 ========================= */
 
 .lcl-about-section {
-  padding: 90px 0;
+  padding: 36px 0 40px;
   background: #ffffff;
 }
 
 .lcl-about-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 65px;
+  gap: 50px;
   align-items: center;
 }
 
@@ -138,34 +123,34 @@
 
 .lcl-section-label {
   display: inline-block;
-  margin-bottom: 12px;
-  color: #0a4d8c;
-  font-size: 12px;
+  margin-bottom: 8px;
+  color: #002147;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: 1.8px;
 }
 
 .lcl-about-content h2 {
   margin: 0;
-  color: #102d4f;
-  font-size: clamp(28px, 4vw, 42px);
+  color: #002147;
+  font-size: clamp(24px, 3.5vw, 34px);
   line-height: 1.2;
   font-weight: 750;
 }
 
 .lcl-section-line {
-  width: 55px;
-  height: 4px;
-  margin: 18px 0 24px;
+  width: 45px;
+  height: 3px;
+  margin: 12px 0 18px;
   background: #f5c400;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 .lcl-about-content p {
   margin: 0;
   color: #4e5d6d;
-  font-size: 16px;
-  line-height: 1.85;
+  font-size: 15px;
+  line-height: 1.75;
 }
 
 .lcl-about-image {
@@ -198,17 +183,17 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
-  margin-top: 30px;
+  margin-top: 24px;
 }
 
 .lcl-about-points div {
-  min-height: 92px;
-  padding: 16px 12px;
+  min-height: 84px;
+  padding: 14px 12px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 9px;
+  gap: 8px;
   text-align: center;
   border: 1px solid #e4eaf1;
   border-radius: 10px;
@@ -216,7 +201,7 @@
 }
 
 .lcl-about-points svg {
-  color: #0a4d8c;
+  color: #002147;
   font-size: 20px;
 }
 
@@ -232,32 +217,32 @@
 ========================= */
 
 .lcl-features-section {
-  padding: 90px 0;
+  padding: 40px 0;
   background: #f5f8fc;
 }
 
 .lcl-section-heading {
   max-width: 750px;
-  margin: 0 auto 45px;
+  margin: 0 auto 30px;
   text-align: center;
 }
 
 .lcl-section-heading h2 {
   margin: 0;
-  color: #102d4f;
-  font-size: clamp(28px, 4vw, 40px);
+  color: #002147;
+  font-size: clamp(24px, 3.5vw, 34px);
   line-height: 1.25;
 }
 
 .lcl-section-line.center {
-  margin: 17px auto 20px;
+  margin: 12px auto 16px;
 }
 
 .lcl-section-heading p {
   margin: 0;
   color: #586879;
-  font-size: 16px;
-  line-height: 1.75;
+  font-size: 15px;
+  line-height: 1.7;
 }
 
 .lcl-feature-grid {
@@ -267,40 +252,40 @@
 }
 
 .lcl-feature-card {
-  min-height: 250px;
-  padding: 30px 23px;
+  min-height: auto;
+  padding: 26px 20px;
   text-align: center;
   background: #ffffff;
   border: 1px solid #e1e8f0;
-  border-radius: 14px;
-  box-shadow: 0 8px 25px rgba(20, 45, 75, 0.06);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(20, 45, 75, 0.05);
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
 
 .lcl-feature-card:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 16px 35px rgba(20, 45, 75, 0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(20, 45, 75, 0.1);
 }
 
 .lcl-feature-icon {
-  width: 62px;
-  height: 62px;
-  margin: 0 auto 20px;
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   background: #eaf2fa;
-  color: #0a4d8c;
-  font-size: 25px;
+  color: #002147;
+  font-size: 22px;
 }
 
 .lcl-feature-card h3 {
-  margin: 0 0 12px;
-  color: #153858;
-  font-size: 18px;
+  margin: 0 0 10px;
+  color: #002147;
+  font-size: 17px;
   line-height: 1.35;
   font-weight: 700;
 }
@@ -308,8 +293,8 @@
 .lcl-feature-card p {
   margin: 0;
   color: #596a7b;
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 13.5px;
+  line-height: 1.65;
 }
 
 /* =========================
@@ -318,26 +303,13 @@
 
 .lcl-public-cta {
   position: relative;
-  padding: 85px 0;
+  padding: 40px 0;
   overflow: hidden;
-  background:
-    radial-gradient(
-      circle at 90% 20%,
-      rgba(45, 112, 185, 0.2),
-      transparent 28%
-    ),
-    linear-gradient(135deg, #071d3a 0%, #0a2e5c 55%, #123f7a 100%);
+  background: #002147;
 }
 
 .lcl-public-cta::before {
-  content: "";
-  position: absolute;
-  width: 350px;
-  height: 350px;
-  right: -160px;
-  bottom: -190px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
+  display: none;
 }
 
 .lcl-cta-content {
@@ -349,29 +321,29 @@
 }
 
 .lcl-cta-content .lcl-section-label {
-  color: #f5c400;
+  color: #fdb913;
 }
 
 .lcl-cta-content h2 {
   margin: 0;
   color: #ffffff;
-  font-size: clamp(28px, 4vw, 42px);
+  font-size: clamp(24px, 3.5vw, 36px);
   line-height: 1.25;
 }
 
 .lcl-cta-line {
-  width: 60px;
-  height: 4px;
-  margin: 18px auto 22px;
-  background: #f5c400;
-  border-radius: 8px;
+  width: 45px;
+  height: 3px;
+  margin: 12px auto 16px;
+  background: #fdb913;
+  border-radius: 4px;
 }
 
 .lcl-cta-content p {
   margin: 0;
-  color: #e2ebf5;
-  font-size: 16px;
-  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 14.5px;
+  line-height: 1.7;
 }
 
 /* =========================
@@ -396,7 +368,7 @@
 @media (max-width: 1000px) {
   .lcl-about-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 35px;
   }
 
   .lcl-about-image {
@@ -415,51 +387,39 @@
 ========================= */
 
 @media (max-width: 640px) {
-  .lcl-container {
-    width: min(100% - 28px, 1180px);
-  }
-
   .lcl-public-hero {
-    min-height: 380px;
-  }
-
-  .lcl-hero-overlay {
-    padding: 65px 15px;
+    padding: 26px 0 30px;
   }
 
   .lcl-hero-content h1 {
-    font-size: 32px;
+    font-size: 26px;
   }
 
   .lcl-hero-content p {
-    font-size: 14px;
-    line-height: 1.65;
-  }
-
-  .lcl-breadcrumb {
-    font-size: 12px;
+    font-size: 13.5px;
+    line-height: 1.6;
   }
 
   .lcl-about-section,
   .lcl-features-section {
-    padding: 65px 0;
+    padding: 30px 0;
   }
 
   .lcl-about-content h2,
   .lcl-section-heading h2,
   .lcl-cta-content h2 {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .lcl-about-content p,
   .lcl-section-heading p,
   .lcl-cta-content p {
-    font-size: 14px;
+    font-size: 13.5px;
   }
 
   .lcl-about-image,
   .lcl-about-image img {
-    min-height: 270px;
+    min-height: 250px;
   }
 
   .lcl-about-points {
@@ -467,24 +427,34 @@
   }
 
   .lcl-about-points div {
-    min-height: 70px;
+    min-height: 60px;
     flex-direction: row;
     justify-content: flex-start;
     text-align: left;
-    padding: 13px 16px;
+    padding: 12px 14px;
   }
 
   .lcl-feature-grid {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 14px;
   }
 
   .lcl-feature-card {
     min-height: auto;
-    padding: 25px 20px;
+    padding: 22px 18px;
   }
 
   .lcl-public-cta {
-    padding: 65px 0;
+    padding: 32px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .lcl-public-hero {
+    padding: 22px 0 26px;
+  }
+
+  .lcl-hero-content h1 {
+    font-size: 23px;
   }
 }
