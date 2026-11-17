@@ -1,136 +1,99 @@
 /* =========================================================
    NBA PUBLIC PAGE
+   IMSEC - Institutional Navy & Gold Design
+========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* =========================================================
+   PAGE SCOPE
 ========================================================= */
 
 .nba-public-page {
-  background: #f7f9fc;
+  width: 100%;
   min-height: 100vh;
-  color: #172b3a;
+  background: #ffffff;
+  color: #172033;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  padding-bottom: 55px;
 }
 
 /* =========================================================
-   CONTAINER
+   CONTAINER (90% FLUID)
 ========================================================= */
 
 .nba-public-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-left: 24px;
-  padding-right: 24px;
+  width: 90% !important;
+  max-width: 90% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .nba-public-container {
+    width: 94% !important;
+    max-width: 94% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .nba-public-container {
+    width: calc(100% - 24px) !important;
+    max-width: calc(100% - 24px) !important;
+  }
 }
 
 /* =========================================================
-   HERO
+   HERO (FULL WIDTH #002147)
 ========================================================= */
 
 .nba-public-hero {
   position: relative;
-  min-height: 320px;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-
-  background:
-    radial-gradient(
-      circle at 85% 20%,
-      rgba(255, 193, 7, 0.12),
-      transparent 30%
-    ),
-    linear-gradient(135deg, #081f35 0%, #0b2942 45%, #123f63 100%);
-
-  box-shadow: 0 12px 35px rgba(5, 31, 52, 0.16);
+  width: 100%;
+  padding: 38px 0 42px;
+  margin-bottom: 24px;
+  background: #002147;
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
+  color: #ffffff;
+  text-align: left;
 }
-
-/* Decorative circles */
-
-.nba-public-hero::before {
-  content: "";
-  position: absolute;
-
-  width: 420px;
-  height: 420px;
-
-  right: -170px;
-  top: -220px;
-
-  border: 1px solid rgba(255, 193, 7, 0.15);
-  border-radius: 50%;
-}
-
-.nba-public-hero::after {
-  content: "";
-  position: absolute;
-
-  width: 300px;
-  height: 300px;
-
-  left: -170px;
-  bottom: -210px;
-
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 50%;
-}
-
-/* =========================================================
-   HERO CONTENT
-========================================================= */
 
 .nba-hero-content {
-  position: relative;
-  z-index: 2;
-
-  padding-top: 45px;
-  padding-bottom: 45px;
+  text-align: left;
+  color: #ffffff;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
 }
 
-.nba-breadcrumb {
+.nba-hero-tag {
   display: inline-block;
-
-  margin-bottom: 18px;
-
-  color: rgba(255, 255, 255, 0.72);
-
-  font-size: 14px;
-  font-weight: 500;
-
-  letter-spacing: 0.4px;
+  margin-bottom: 8px;
+  color: #fdb913;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .nba-hero-content h1 {
   margin: 0;
-
   color: #ffffff;
-
-  font-size: clamp(38px, 5vw, 58px);
-  font-weight: 700;
-
-  line-height: 1.1;
-  letter-spacing: -1px;
-}
-
-.nba-hero-line {
-  width: 65px;
-  height: 4px;
-
-  margin: 22px 0 18px;
-
-  background: #d9a441;
-
-  border-radius: 10px;
-
-  box-shadow: 0 0 18px rgba(217, 164, 65, 0.35);
+  font-size: clamp(26px, 3.5vw, 36px);
+  line-height: 1.2;
+  font-weight: 750;
+  letter-spacing: -0.5px;
 }
 
 .nba-hero-content p {
-  max-width: 700px;
-
-  margin: 0;
-
-  color: rgba(255, 255, 255, 0.82);
-
-  font-size: 18px;
-  line-height: 1.7;
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14.5px;
+  line-height: 1.6;
 }
 
 /* =========================================================
@@ -138,50 +101,37 @@
 ========================================================= */
 
 .nba-documents-section {
-  padding: 78px 0 82px;
+  padding: 16px 0 28px;
 }
 
-/* =========================================================
-   SECTION HEADING
-========================================================= */
-
 .nba-section-heading {
-  max-width: 760px;
-  margin-bottom: 42px;
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 30px;
 }
 
 .nba-section-label {
   display: inline-block;
-
-  margin-bottom: 10px;
-
-  color: #b7862c;
-
-  font-size: 13px;
-  font-weight: 700;
-
+  color: #b28a16;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  letter-spacing: 1.8px;
+  margin-bottom: 6px;
 }
 
 .nba-section-heading h2 {
-  margin: 0 0 14px;
-
-  color: #102c43;
-
-  font-size: 34px;
-  font-weight: 700;
-
-  line-height: 1.25;
+  margin: 0;
+  color: #002147;
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 750;
 }
 
 .nba-section-heading p {
-  margin: 0;
-
-  color: #687887;
-
-  font-size: 16px;
-  line-height: 1.75;
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 /* =========================================================
@@ -190,10 +140,8 @@
 
 .nba-document-grid {
   display: grid;
-
   grid-template-columns: repeat(2, minmax(0, 1fr));
-
-  gap: 24px;
+  gap: 18px;
 }
 
 /* =========================================================
@@ -202,47 +150,35 @@
 
 .nba-document-card {
   position: relative;
-
   display: flex;
-  align-items: stretch;
-
-  min-height: 205px;
-
-  overflow: hidden;
-
+  align-items: center;
+  gap: 20px;
   background: #ffffff;
-
-  border: 1px solid #e7edf3;
+  border: 1px solid #e2e8f0;
   border-radius: 14px;
-
-  box-shadow: 0 8px 25px rgba(20, 48, 72, 0.06);
-
+  padding: 22px 24px;
+  box-shadow: 0 6px 20px rgba(0, 33, 71, 0.05);
   transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    border-color 0.3s ease;
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .nba-document-card::before {
   content: "";
-
   position: absolute;
-
   left: 0;
-  top: 0;
-  bottom: 0;
-
-  width: 5px;
-
-  background: linear-gradient(to bottom, #d9a441, #b7862c);
+  top: 18px;
+  bottom: 18px;
+  width: 3px;
+  background: #fdb913;
+  border-radius: 0 4px 4px 0;
 }
 
 .nba-document-card:hover {
-  transform: translateY(-6px);
-
-  border-color: rgba(217, 164, 65, 0.45);
-
-  box-shadow: 0 18px 40px rgba(20, 48, 72, 0.12);
+  transform: translateY(-3px);
+  border-color: #bfdbfe;
+  box-shadow: 0 12px 28px rgba(0, 33, 71, 0.09);
 }
 
 /* =========================================================
@@ -250,29 +186,16 @@
 ========================================================= */
 
 .nba-document-icon {
-  flex: 0 0 82px;
-
+  flex: 0 0 54px;
+  width: 54px;
+  height: 54px;
+  background: #fff1f2;
+  color: #dc2626;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  margin: 26px 0 26px 20px;
-
-  border-radius: 12px;
-
-  background: linear-gradient(145deg, #fff5f5, #ffecec);
-
-  color: #d93434;
-
-  font-size: 29px;
-
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease;
-}
-
-.nba-document-card:hover .nba-document-icon {
-  transform: scale(1.05);
+  font-size: 24px;
 }
 
 /* =========================================================
@@ -281,41 +204,31 @@
 
 .nba-document-content {
   flex: 1;
-
-  padding: 27px 28px 27px 22px;
+  min-width: 0;
 }
 
 .nba-document-number {
   display: block;
-
-  margin-bottom: 8px;
-
-  color: #b7862c;
-
-  font-size: 12px;
-  font-weight: 700;
-
-  letter-spacing: 1.2px;
+  margin-bottom: 4px;
+  color: #b28a16;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
 }
 
 .nba-document-content h3 {
-  margin: 0 0 9px;
-
-  color: #14334c;
-
-  font-size: 20px;
+  margin: 0 0 5px;
+  color: #002147;
+  font-size: 17px;
   font-weight: 700;
-
-  line-height: 1.4;
+  line-height: 1.35;
 }
 
 .nba-document-content p {
-  margin: 0 0 20px;
-
-  color: #6c7c89;
-
-  font-size: 14px;
-  line-height: 1.65;
+  margin: 0 0 14px;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.55;
 }
 
 /* =========================================================
@@ -325,43 +238,28 @@
 .nba-document-btn {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
+  gap: 7px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #002147;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  transition: 0.25s ease;
+}
 
-  padding: 10px 15px;
-
-  color: #ffffff !important;
-
-  background: linear-gradient(135deg, #0b2942, #12486f);
-
-  border: 1px solid rgba(11, 41, 66, 0.15);
-  border-radius: 7px;
-
-  font-size: 13px;
-  font-weight: 600;
-
-  text-decoration: none !important;
-
-  box-shadow: 0 5px 14px rgba(11, 41, 66, 0.16);
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    background 0.25s ease;
+.nba-document-btn:hover {
+  background: #dbeafe;
+  color: #002147;
+  text-decoration: none;
+  transform: translateY(-1px);
 }
 
 .nba-document-btn svg:last-child {
   font-size: 10px;
-  opacity: 0.75;
-}
-
-.nba-document-btn:hover {
-  color: #ffffff !important;
-
-  background: linear-gradient(135deg, #123f63, #17618e);
-
-  transform: translateY(-2px);
-
-  box-shadow: 0 8px 18px rgba(11, 41, 66, 0.22);
+  margin-left: 2px;
 }
 
 /* =========================================================
@@ -369,38 +267,33 @@
 ========================================================= */
 
 .nba-no-records {
-  padding: 60px 25px;
-
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
   text-align: center;
-
   background: #ffffff;
-
-  border: 1px dashed #d7e0e8;
+  border: 1px dashed #cbd5e1;
   border-radius: 14px;
+  padding: 45px 25px;
 }
 
-.nba-no-records > svg {
-  margin-bottom: 18px;
-
-  color: #d93434;
-
-  font-size: 42px;
+.nba-no-records svg {
+  color: #b28a16;
+  font-size: 38px;
+  margin-bottom: 12px;
 }
 
 .nba-no-records h4 {
-  margin: 0 0 8px;
-
-  color: #17344c;
-
-  font-size: 20px;
+  margin: 0 0 6px;
+  color: #002147;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .nba-no-records p {
   margin: 0;
-
-  color: #788894;
-
-  font-size: 14px;
+  color: #64748b;
+  font-size: 13.5px;
 }
 
 /* =========================================================
@@ -408,112 +301,71 @@
 ========================================================= */
 
 .nba-info-section {
-  padding: 0 0 80px;
+  padding: 12px 0 28px;
 }
 
 .nba-info-box {
-  position: relative;
-
   display: flex;
   align-items: center;
-  gap: 24px;
-
-  padding: 32px 35px;
-
-  overflow: hidden;
-
-  background: linear-gradient(135deg, #ffffff, #f8fafc);
-
-  border: 1px solid #e1e8ef;
-  border-radius: 15px;
-
-  box-shadow: 0 8px 28px rgba(20, 48, 72, 0.06);
-}
-
-.nba-info-box::before {
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-  top: 0;
-  bottom: 0;
-
-  width: 4px;
-
-  background: #d9a441;
+  gap: 22px;
+  background: #002147;
+  border-radius: 14px;
+  padding: 24px 28px;
+  box-shadow: 0 6px 20px rgba(0, 33, 71, 0.12);
+  color: #ffffff;
 }
 
 .nba-info-icon {
-  flex: 0 0 58px;
-
-  width: 58px;
-  height: 58px;
-
+  flex: 0 0 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: #fdb913;
+  color: #002147;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  border-radius: 12px;
-
-  background: #102f49;
-
-  color: #d9a441;
-
-  font-size: 23px;
+  font-size: 22px;
 }
 
 .nba-info-box h3 {
-  margin: 0 0 8px;
-
-  color: #14334c;
-
-  font-size: 20px;
-  font-weight: 700;
+  margin: 0 0 5px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 750;
 }
 
 .nba-info-box p {
   margin: 0;
-
-  color: #6b7b88;
-
-  font-size: 14px;
-  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13.5px;
+  line-height: 1.6;
 }
 
 /* =========================================================
-   LOADING
+   LOADING & ERROR
 ========================================================= */
 
 .nba-public-loading {
-  min-height: 450px;
-
+  min-height: 420px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  color: #617280;
+  background: #ffffff;
+  color: #002147;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 .nba-loading-spinner {
   width: 42px;
   height: 42px;
-
-  margin-bottom: 18px;
-
-  border: 4px solid #e1e8ef;
-  border-top-color: #123f63;
-
+  border: 4px solid #e2e8f0;
+  border-top-color: #002147;
   border-radius: 50%;
-
   animation: nbaSpin 0.8s linear infinite;
-}
-
-.nba-public-loading p {
-  margin: 0;
-
-  font-size: 15px;
+  margin-bottom: 14px;
 }
 
 @keyframes nbaSpin {
@@ -522,186 +374,92 @@
   }
 }
 
-/* =========================================================
-   ERROR
-========================================================= */
-
 .nba-public-error {
-  margin: 60px auto;
-  padding: 35px;
-
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 24px;
   text-align: center;
-
-  background: #ffffff;
-
-  border: 1px solid #f0d6d6;
-  border-radius: 14px;
-
-  box-shadow: 0 8px 25px rgba(20, 48, 72, 0.05);
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  border-radius: 12px;
 }
 
 .nba-public-error h3 {
-  margin: 0 0 10px;
-
-  color: #b52b2b;
-
-  font-size: 20px;
+  margin: 0 0 8px;
+  color: #be123c;
+  font-size: 18px;
 }
 
 .nba-public-error p {
   margin: 0;
-
-  color: #71808c;
-
-  font-size: 14px;
+  color: #64748b;
+  font-size: 13px;
 }
 
 /* =========================================================
-   RESPONSIVE — TABLET
+   RESPONSIVE
 ========================================================= */
 
 @media (max-width: 991px) {
-  .nba-public-hero {
-    min-height: 290px;
-  }
-
-  .nba-documents-section {
-    padding: 65px 0 70px;
-  }
-
   .nba-document-grid {
     grid-template-columns: 1fr;
   }
-
-  .nba-section-heading h2 {
-    font-size: 30px;
-  }
 }
 
-/* =========================================================
-   RESPONSIVE — MOBILE
-========================================================= */
-
-@media (max-width: 767px) {
-  .nba-public-container {
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-
+@media (max-width: 768px) {
   .nba-public-hero {
-    min-height: 270px;
-  }
-
-  .nba-hero-content {
-    padding-top: 38px;
-    padding-bottom: 38px;
+    padding: 30px 0 34px;
+    margin-bottom: 18px;
   }
 
   .nba-hero-content h1 {
-    font-size: 40px;
-  }
-
-  .nba-hero-content p {
-    font-size: 16px;
+    font-size: 26px;
   }
 
   .nba-documents-section {
-    padding: 55px 0 60px;
+    padding: 14px 0 24px;
   }
 
   .nba-section-heading {
-    margin-bottom: 30px;
-  }
-
-  .nba-section-heading h2 {
-    font-size: 27px;
+    margin-bottom: 22px;
   }
 
   .nba-document-card {
-    min-height: auto;
+    padding: 18px;
+    gap: 16px;
   }
 
   .nba-document-icon {
-    flex: 0 0 65px;
-
-    width: 65px;
-    height: 65px;
-
-    margin: 22px 0 22px 16px;
-
-    font-size: 24px;
-  }
-
-  .nba-document-content {
-    padding: 22px 18px;
-  }
-
-  .nba-document-content h3 {
-    font-size: 18px;
-  }
-
-  .nba-info-section {
-    padding-bottom: 60px;
+    flex-basis: 46px;
+    width: 46px;
+    height: 46px;
+    font-size: 20px;
   }
 
   .nba-info-box {
     align-items: flex-start;
-
-    padding: 26px 23px;
-
-    gap: 17px;
+    padding: 20px;
+    gap: 16px;
   }
 }
 
-/* =========================================================
-   RESPONSIVE — SMALL MOBILE
-========================================================= */
-
 @media (max-width: 480px) {
   .nba-public-hero {
-    min-height: 250px;
+    padding: 24px 0 28px;
+    margin-bottom: 14px;
   }
 
   .nba-hero-content h1 {
-    font-size: 34px;
-  }
-
-  .nba-breadcrumb {
-    font-size: 12px;
-  }
-
-  .nba-hero-line {
-    width: 50px;
-    height: 3px;
+    font-size: 22px;
   }
 
   .nba-document-card {
-    display: block;
-
-    padding-top: 5px;
-  }
-
-  .nba-document-icon {
-    width: 58px;
-    height: 58px;
-
-    margin: 20px 20px 0;
-  }
-
-  .nba-document-content {
-    padding: 18px 20px 22px;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .nba-document-btn {
     width: 100%;
     justify-content: center;
-  }
-
-  .nba-info-box {
-    display: block;
-  }
-
-  .nba-info-icon {
-    margin-bottom: 18px;
   }
 }

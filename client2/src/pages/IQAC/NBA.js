@@ -81,13 +81,9 @@ const NBA = () => {
         <section className="nba-public-hero">
           <div className="nba-public-container">
             <div className="nba-hero-content">
-              <span className="nba-breadcrumb">{data.hero.breadcrumb}</span>
-
-              <h1>{data.hero.title}</h1>
-
-              <div className="nba-hero-line" />
-
-              <p>{data.hero.subtitle}</p>
+              <span className="nba-hero-tag">INTERNAL QUALITY ASSURANCE CELL</span>
+              <h1>{data.hero.title || "NBA"}</h1>
+              <p>{data.hero.subtitle || "National Board of Accreditation"}</p>
             </div>
           </div>
         </section>
@@ -116,13 +112,9 @@ const NBA = () => {
       <section className="nba-public-hero">
         <div className="nba-public-container">
           <div className="nba-hero-content">
-            <span className="nba-breadcrumb">{data.hero.breadcrumb}</span>
-
-            <h1>{data.hero.title}</h1>
-
-            <div className="nba-hero-line" />
-
-            <p>{data.hero.subtitle}</p>
+            <span className="nba-hero-tag">INTERNAL QUALITY ASSURANCE CELL</span>
+            <h1>{data.hero.title || "NBA"}</h1>
+            <p>{data.hero.subtitle || "National Board of Accreditation"}</p>
           </div>
         </div>
       </section>
