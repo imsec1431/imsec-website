@@ -14,83 +14,61 @@
 
 .student-clubs-public-hero {
   position: relative;
-  overflow: hidden;
-  padding: 85px 20px 80px;
-  background: linear-gradient(135deg, #071d3a 0%, #0a2e5c 50%, #123f7a 100%);
-  text-align: center;
+  width: 100%;
+  padding: 38px 0 42px;
+  margin-bottom: 24px;
+  background: #002147;
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
   color: #ffffff;
+  text-align: left;
 }
 
-.student-clubs-public-hero::before {
-  content: "";
-  position: absolute;
-  width: 430px;
-  height: 430px;
-  border-radius: 50%;
-  top: -240px;
-  left: -150px;
-  background: rgba(255, 255, 255, 0.06);
-}
-
+.student-clubs-public-hero::before,
 .student-clubs-public-hero::after {
-  content: "";
-  position: absolute;
-  width: 350px;
-  height: 350px;
-  border-radius: 50%;
-  right: -130px;
-  bottom: -220px;
-  background: rgba(255, 193, 7, 0.08);
+  display: none;
+}
+
+.student-clubs-public-hero-container {
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 .student-clubs-public-hero-content {
   position: relative;
   z-index: 2;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .student-clubs-public-hero-icon {
-  width: 64px;
-  height: 64px;
-  margin: 0 auto 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  font-size: 27px;
+  display: none;
 }
 
 .student-clubs-public-hero h1 {
   margin: 0;
-  font-size: 44px;
-  font-weight: 800;
+  font-size: clamp(26px, 3.5vw, 36px);
+  font-weight: 750;
   line-height: 1.2;
   letter-spacing: -0.5px;
+  color: #ffffff;
 }
 
 .student-clubs-public-hero-line {
-  width: 72px;
-  height: 4px;
-  margin: 18px auto 20px;
-  border-radius: 10px;
-  background: #ffc107;
+  display: none;
 }
 
 .student-clubs-public-hero-subtitle {
-  max-width: 720px;
-  margin: 0 auto 15px;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 17px;
-  line-height: 1.7;
+  max-width: 750px;
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 13.5px;
+  line-height: 1.6;
 }
 
 .student-clubs-public-breadcrumb {
-  margin-top: 12px;
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 14px;
+  display: none;
 }
 
 /* =========================================================
@@ -98,19 +76,20 @@
    ========================================================= */
 
 .student-clubs-public-content {
-  max-width: 1200px;
+  width: 90%;
+  max-width: 90%;
   margin: 0 auto;
-  padding: 65px 20px 80px;
+  padding: 0 0 50px;
 }
 
 .student-clubs-public-heading {
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 }
 
 .student-clubs-public-heading h2 {
   margin: 0 0 8px;
-  color: #102a4c;
-  font-size: 30px;
+  color: #002147;
+  font-size: 26px;
   font-weight: 800;
 }
 
@@ -118,8 +97,8 @@
   max-width: 850px;
   margin: 0;
   color: #6b7280;
-  font-size: 15px;
-  line-height: 1.7;
+  font-size: 14.5px;
+  line-height: 1.6;
 }
 
 /* =========================================================
@@ -130,8 +109,8 @@
   overflow: hidden;
   background: #ffffff;
   border: 1px solid #e5e9f0;
-  border-radius: 16px;
-  box-shadow: 0 10px 35px rgba(20, 38, 63, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 33, 71, 0.06);
 }
 
 .student-clubs-public-table-wrapper {
@@ -146,14 +125,14 @@
 }
 
 .student-clubs-public-table thead {
-  background: #102f57;
+  background: #002147;
 }
 
 .student-clubs-public-table th {
-  padding: 17px 18px;
+  padding: 14px 18px;
   color: #ffffff;
   border: none;
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 700;
   text-align: left;
   white-space: nowrap;
@@ -178,7 +157,7 @@
 }
 
 .student-clubs-public-table td {
-  padding: 18px;
+  padding: 14px 18px;
   color: #354052;
   font-size: 14px;
   vertical-align: middle;
@@ -186,13 +165,13 @@
 
 .student-clubs-public-sr {
   width: 70px;
-  color: #102f57 !important;
+  color: #002147 !important;
   font-weight: 700;
 }
 
 .student-clubs-public-club-name {
   min-width: 250px;
-  color: #102f57 !important;
+  color: #002147 !important;
   font-size: 15px !important;
   font-weight: 700;
 }
@@ -265,10 +244,10 @@
   align-items: center;
   justify-content: center;
   gap: 7px;
-  padding: 9px 15px;
-  border: 1px solid #123f7a;
-  border-radius: 8px;
-  background: #123f7a;
+  padding: 8px 14px;
+  border: 1px solid #002147;
+  border-radius: 6px;
+  background: #002147;
   color: #ffffff;
   font-size: 13px;
   font-weight: 600;
@@ -281,8 +260,9 @@
 }
 
 .student-clubs-public-details-btn:hover {
-  background: #0a2e5c;
-  box-shadow: 0 5px 15px rgba(10, 46, 92, 0.2);
+  background: #093266;
+  border-color: #093266;
+  box-shadow: 0 4px 12px rgba(0, 33, 71, 0.2);
   transform: translateY(-1px);
 }
 
@@ -666,16 +646,23 @@
    ========================================================= */
 
 @media (max-width: 900px) {
+  .student-clubs-public-content,
+  .student-clubs-public-hero-container {
+    width: 94%;
+    max-width: 94%;
+  }
+
   .student-clubs-public-hero {
-    padding: 70px 20px 65px;
+    padding: 30px 0 34px;
+    margin-bottom: 20px;
   }
 
   .student-clubs-public-hero h1 {
-    font-size: 36px;
+    font-size: 28px;
   }
 
   .student-clubs-public-content {
-    padding: 50px 16px 65px;
+    padding: 0 0 40px;
   }
 
   .student-clubs-public-main-image {
@@ -685,25 +672,19 @@
 
 @media (max-width: 650px) {
   .student-clubs-public-hero {
-    padding: 58px 16px 55px;
-  }
-
-  .student-clubs-public-hero-icon {
-    width: 56px;
-    height: 56px;
-    font-size: 23px;
+    padding: 26px 0 30px;
   }
 
   .student-clubs-public-hero h1 {
-    font-size: 30px;
+    font-size: 24px;
   }
 
   .student-clubs-public-hero-subtitle {
-    font-size: 15px;
+    font-size: 13.5px;
   }
 
   .student-clubs-public-heading h2 {
-    font-size: 25px;
+    font-size: 22px;
   }
 
   .student-clubs-public-modal-overlay {
@@ -748,13 +729,23 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
+  .student-clubs-public-content,
+  .student-clubs-public-hero-container {
+    width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
+  }
+
+  .student-clubs-public-hero {
+    padding: 22px 0 26px;
+  }
+
   .student-clubs-public-hero h1 {
-    font-size: 27px;
+    font-size: 22px;
   }
 
   .student-clubs-public-content {
-    padding: 40px 12px 55px;
+    padding: 0 0 30px;
   }
 
   .student-clubs-public-main-image {

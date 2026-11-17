@@ -130,21 +130,13 @@ const StudentClubs = () => {
     return (
       <div className="student-clubs-public-page">
         <section className="student-clubs-public-hero">
-          <div className="student-clubs-public-hero-content">
-            <div className="student-clubs-public-hero-icon">
-              <FaUsers />
-            </div>
+          <div className="student-clubs-public-hero-container">
+            <div className="student-clubs-public-hero-content">
+              <h1>{DEFAULT_HERO.title}</h1>
 
-            <h1>{DEFAULT_HERO.title}</h1>
-
-            <div className="student-clubs-public-hero-line"></div>
-
-            <p className="student-clubs-public-hero-subtitle">
-              {DEFAULT_HERO.subtitle}
-            </p>
-
-            <div className="student-clubs-public-breadcrumb">
-              {DEFAULT_HERO.breadcrumb}
+              <p className="student-clubs-public-hero-subtitle">
+                {DEFAULT_HERO.subtitle}
+              </p>
             </div>
           </div>
         </section>
@@ -167,21 +159,13 @@ const StudentClubs = () => {
     return (
       <div className="student-clubs-public-page">
         <section className="student-clubs-public-hero">
-          <div className="student-clubs-public-hero-content">
-            <div className="student-clubs-public-hero-icon">
-              <FaUsers />
-            </div>
+          <div className="student-clubs-public-hero-container">
+            <div className="student-clubs-public-hero-content">
+              <h1>{hero.title}</h1>
 
-            <h1>{hero.title}</h1>
-
-            <div className="student-clubs-public-hero-line"></div>
-
-            <p className="student-clubs-public-hero-subtitle">
-              {hero.subtitle}
-            </p>
-
-            <div className="student-clubs-public-breadcrumb">
-              {hero.breadcrumb}
+              <p className="student-clubs-public-hero-subtitle">
+                {hero.subtitle}
+              </p>
             </div>
           </div>
         </section>
@@ -200,19 +184,11 @@ const StudentClubs = () => {
           ===================================================== */}
 
       <section className="student-clubs-public-hero">
-        <div className="student-clubs-public-hero-content">
-          <div className="student-clubs-public-hero-icon">
-            <FaUsers />
-          </div>
+        <div className="student-clubs-public-hero-container">
+          <div className="student-clubs-public-hero-content">
+            <h1>{hero.title}</h1>
 
-          <h1>{hero.title}</h1>
-
-          <div className="student-clubs-public-hero-line"></div>
-
-          <p className="student-clubs-public-hero-subtitle">{hero.subtitle}</p>
-
-          <div className="student-clubs-public-breadcrumb">
-            {hero.breadcrumb}
+            <p className="student-clubs-public-hero-subtitle">{hero.subtitle}</p>
           </div>
         </div>
       </section>
