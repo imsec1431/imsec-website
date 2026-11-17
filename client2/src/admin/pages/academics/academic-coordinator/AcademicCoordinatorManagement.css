@@ -220,20 +220,20 @@
   overflow-x: auto;
 }
 
-table {
+.academic-coordinator-management table {
   width: 100%;
   border-collapse: collapse;
 }
 
-table th,
-table td {
+.academic-coordinator-management table th,
+.academic-coordinator-management table td {
   padding: 12px;
   border-bottom: 1px solid #eee;
   text-align: left;
   vertical-align: middle;
 }
 
-table th {
+.academic-coordinator-management table th {
   background: #f8f9fa;
   font-size: 14px;
 }

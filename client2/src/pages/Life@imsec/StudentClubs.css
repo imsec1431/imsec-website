@@ -125,17 +125,25 @@
 }
 
 .student-clubs-public-table thead {
-  background: #002147;
+  background: #002147 !important;
 }
 
-.student-clubs-public-table th {
+.student-clubs-public-table thead tr {
+  background: #002147 !important;
+}
+
+.student-clubs-public-table th,
+.student-clubs-public-table thead th {
   padding: 14px 18px;
-  color: #ffffff;
-  border: none;
+  background-color: #002147 !important;
+  background: #002147 !important;
+  color: #ffffff !important;
+  border: none !important;
   font-size: 13.5px;
   font-weight: 700;
   text-align: left;
   white-space: nowrap;
+  vertical-align: middle;
 }
 
 .student-clubs-public-table th:first-child,
