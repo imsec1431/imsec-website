@@ -626,25 +626,19 @@ const HostelMess = () => {
   ======================================================= */
 
   return (
-    <>
+    <div className="hostel-mess-page">
       {/* ==================================================
           HERO
       ================================================== */}
 
       <section className="hostel-hero">
-        <Container>
+        <div className="hostel-hero-container">
           <div className="hero-content">
-            <h1>{data.hero?.title || "Hostel & Mess"}</h1>
+            <span className="hostel-hero-tag">LIFE @ IMSEC</span>
 
-            <p
-              style={{
-                color: "white",
-              }}
-            >
-              {data.hero?.breadcrumb || "Home / Life @ IMSEC / Hostel & Mess"}
-            </p>
+            <h1>{data.hero?.title || "Hostel & Mess"}</h1>
           </div>
-        </Container>
+        </div>
       </section>
 
       {/* ==================================================
@@ -1145,7 +1139,7 @@ const HostelMess = () => {
           Hostel & Mess API unavailable
         </div>
       )}
-    </>
+    </div>
   );
 };
 
