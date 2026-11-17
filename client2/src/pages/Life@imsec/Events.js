@@ -879,22 +879,12 @@ const Events = () => {
     return (
       <main className="events-page">
         <section className="events-hero">
-          <div className="events-hero-glow events-hero-glow-one" />
-
-          <div className="events-hero-glow events-hero-glow-two" />
-
-          <div className="events-container events-hero-content">
-            <div className="events-hero-badge">LIFE @ IMSEC</div>
+          <div className="events-hero-container">
+            <span className="events-hero-badge">LIFE @ IMSEC</span>
 
             <h1>Events</h1>
 
-            <div className="events-hero-line" />
-
             <p>Discover events, activities and memorable moments at IMSEC</p>
-
-            <div className="events-breadcrumb">
-              Home / Life @ IMSEC / Events
-            </div>
           </div>
         </section>
 
@@ -917,22 +907,12 @@ const Events = () => {
     return (
       <main className="events-page">
         <section className="events-hero">
-          <div className="events-hero-glow events-hero-glow-one" />
-
-          <div className="events-hero-glow events-hero-glow-two" />
-
-          <div className="events-container events-hero-content">
-            <div className="events-hero-badge">LIFE @ IMSEC</div>
+          <div className="events-hero-container">
+            <span className="events-hero-badge">LIFE @ IMSEC</span>
 
             <h1>{data.hero?.title || "Events"}</h1>
 
-            <div className="events-hero-line" />
-
             <p>{data.hero?.subtitle || "Explore events at IMSEC"}</p>
-
-            <div className="events-breadcrumb">
-              {data.hero?.breadcrumb || "Home / Life @ IMSEC / Events"}
-            </div>
           </div>
         </section>
 
@@ -958,33 +938,19 @@ const Events = () => {
   return (
     <main className="events-page">
       {/* ===================================================
-          HERO
+          HERO (FULL WIDTH)
       =================================================== */}
 
       <section className="events-hero">
-        <div className="events-hero-glow events-hero-glow-one" />
-
-        <div className="events-hero-glow events-hero-glow-two" />
-
-        <div className="events-hero-circle events-hero-circle-one" />
-
-        <div className="events-hero-circle events-hero-circle-two" />
-
-        <div className="events-container events-hero-content">
-          <div className="events-hero-badge">LIFE @ IMSEC</div>
+        <div className="events-hero-container">
+          <span className="events-hero-badge">LIFE @ IMSEC</span>
 
           <h1>{data.hero?.title || "Events @ IMSEC"}</h1>
-
-          <div className="events-hero-line" />
 
           <p>
             {data.hero?.subtitle ||
               "Explore the vibrant events, activities and celebrations at IMSEC"}
           </p>
-
-          <div className="events-breadcrumb">
-            {data.hero?.breadcrumb || "Home / Life @ IMSEC / Events"}
-          </div>
         </div>
       </section>
 
