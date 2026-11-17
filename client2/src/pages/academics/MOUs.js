@@ -64,23 +64,16 @@ const MOUs = () => {
     );
   }
   return (
-    <>
+    <div className="mou-page">
       {/* ================= Hero ================= */}
 
       <section className="mou-hero">
-        <Container>
-          <div className="hero-content">
+        <div className="mou-hero-container">
+          <div className="mou-hero-content">
+            <span className="mou-hero-tag">CENTRE OF EXCELLENCE</span>
             <h1>Memorandums of Understanding</h1>
-
-            <p style={{ color: "white" }}>
-              Home
-              <span>/</span>
-              COE
-              <span>/</span>
-              MOUs
-            </p>
           </div>
-        </Container>
+        </div>
       </section>
 
       {/* ================= All Signing Ceremonies ================= */}
@@ -278,7 +271,7 @@ const MOUs = () => {
           </Row>
         </Container>
       </section>
-    </>
+    </div>
   );
 };
 
