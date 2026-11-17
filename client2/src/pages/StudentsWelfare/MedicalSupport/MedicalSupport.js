@@ -62,22 +62,10 @@ const MedicalSupport = () => {
     <div className="medical-support-page">
       {/* Hero */}
       <section className="medical-support-hero">
-        <div className="container">
-          <div className="medical-support-breadcrumb">
-            Home / Student Welfare / Medical Support
-          </div>
-
+        <div className="medical-support-hero-container">
           <div className="medical-support-hero-content">
-            <div className="medical-support-hero-icon">
-              <FaHeartbeat />
-            </div>
-
-            <h1>{data.title}</h1>
-
-            <p>
-              Supporting the health, safety and well-being of our students and
-              staff.
-            </p>
+            <span className="medical-support-hero-tag">STUDENT WELFARE</span>
+            <h1>{data.title || "Medical Support"}</h1>
           </div>
         </div>
       </section>
