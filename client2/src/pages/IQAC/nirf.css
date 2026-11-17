@@ -1,83 +1,105 @@
 /* =========================================================
    PUBLIC NIRF PAGE
+   IMSEC - Institutional Navy & Gold Design
+========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* =========================================================
+   PAGE SCOPE
 ========================================================= */
 
 .nirf-public-page {
-  background: #f7f9fc;
-  color: #243b53;
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #172033;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  padding-bottom: 55px;
 }
 
 /* =========================================================
-   HERO
+   CONTAINER (90% FLUID)
+========================================================= */
+
+.nirf-public-page .container,
+.nirf-hero-container,
+.nirf-container {
+  width: 90% !important;
+  max-width: 90% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .nirf-public-page .container,
+  .nirf-hero-container,
+  .nirf-container {
+    width: 94% !important;
+    max-width: 94% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .nirf-public-page .container,
+  .nirf-hero-container,
+  .nirf-container {
+    width: calc(100% - 24px) !important;
+    max-width: calc(100% - 24px) !important;
+  }
+}
+
+/* =========================================================
+   HERO (FULL WIDTH #002147)
 ========================================================= */
 
 .nirf-public-hero {
   position: relative;
-  background: linear-gradient(135deg, #0b2942 0%, #123f63 55%, #0d3455 100%);
-  min-height: 300px;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-}
-
-.nirf-public-hero::before {
-  content: "";
-  position: absolute;
-  width: 380px;
-  height: 380px;
-  right: -120px;
-  top: -180px;
-  border: 1px solid rgba(201, 162, 39, 0.25);
-  border-radius: 50%;
-}
-
-.nirf-public-hero::after {
-  content: "";
-  position: absolute;
-  width: 260px;
-  height: 260px;
-  left: -120px;
-  bottom: -170px;
-  border: 1px solid rgba(201, 162, 39, 0.2);
-  border-radius: 50%;
+  width: 100%;
+  padding: 38px 0 42px;
+  margin-bottom: 24px;
+  background: #002147;
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
+  color: #ffffff;
+  text-align: left;
 }
 
 .nirf-hero-content {
-  position: relative;
-  z-index: 2;
-  padding: 65px 0;
-  max-width: 850px;
+  text-align: left;
+  color: #ffffff;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
 }
 
-.nirf-breadcrumb {
-  color: #d9bd63;
-  font-size: 13px;
-  font-weight: 600;
-  margin-bottom: 15px;
-  letter-spacing: 0.3px;
+.nirf-hero-label {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #fdb913;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .nirf-hero-content h1 {
   margin: 0;
   color: #ffffff;
-  font-size: clamp(36px, 5vw, 58px);
+  font-size: clamp(26px, 3.5vw, 36px);
+  line-height: 1.2;
   font-weight: 750;
-  letter-spacing: -1px;
-}
-
-.nirf-hero-line {
-  width: 70px;
-  height: 3px;
-  background: #c9a227;
-  margin: 20px 0;
-  border-radius: 5px;
+  letter-spacing: -0.5px;
 }
 
 .nirf-hero-content p {
-  margin: 0;
-  color: #dce7f1;
-  font-size: 17px;
-  line-height: 1.7;
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14.5px;
+  line-height: 1.6;
 }
 
 /* =========================================================
@@ -85,37 +107,37 @@
 ========================================================= */
 
 .nirf-documents-section {
-  padding: 75px 0;
+  padding: 16px 0 28px;
 }
 
 .nirf-section-heading {
   text-align: center;
   max-width: 720px;
-  margin: 0 auto 45px;
+  margin: 0 auto 30px;
 }
 
 .nirf-section-label {
   display: inline-block;
-  color: #a98216;
-  font-size: 12px;
-  font-weight: 700;
+  color: #b28a16;
+  font-size: 11px;
+  font-weight: 800;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .nirf-section-heading h2 {
   margin: 0;
-  color: #102a43;
-  font-size: 34px;
+  color: #002147;
+  font-size: clamp(22px, 3vw, 28px);
   font-weight: 750;
 }
 
 .nirf-section-heading p {
-  margin: 12px 0 0;
-  color: #6b7c93;
-  font-size: 15px;
-  line-height: 1.7;
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 /* =========================================================
@@ -125,7 +147,7 @@
 .nirf-document-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+  gap: 18px;
 }
 
 /* =========================================================
@@ -135,12 +157,13 @@
 .nirf-document-card {
   position: relative;
   display: flex;
+  align-items: center;
   gap: 20px;
   background: #ffffff;
-  border: 1px solid #e3eaf1;
-  border-radius: 12px;
-  padding: 26px;
-  box-shadow: 0 5px 22px rgba(16, 42, 67, 0.06);
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 22px 24px;
+  box-shadow: 0 6px 20px rgba(0, 33, 71, 0.05);
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
@@ -151,17 +174,17 @@
   content: "";
   position: absolute;
   left: 0;
-  top: 20px;
-  bottom: 20px;
+  top: 18px;
+  bottom: 18px;
   width: 3px;
-  background: #c9a227;
+  background: #fdb913;
   border-radius: 0 4px 4px 0;
 }
 
 .nirf-document-card:hover {
-  transform: translateY(-4px);
-  border-color: #d9c47c;
-  box-shadow: 0 12px 30px rgba(16, 42, 67, 0.11);
+  transform: translateY(-3px);
+  border-color: #bfdbfe;
+  box-shadow: 0 12px 28px rgba(0, 33, 71, 0.09);
 }
 
 /* =========================================================
@@ -169,16 +192,16 @@
 ========================================================= */
 
 .nirf-document-icon {
-  flex: 0 0 58px;
-  width: 58px;
-  height: 68px;
-  background: #fff2f0;
-  color: #c0392b;
-  border-radius: 9px;
+  flex: 0 0 54px;
+  width: 54px;
+  height: 54px;
+  background: #fff1f2;
+  color: #dc2626;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 27px;
+  font-size: 24px;
 }
 
 /* =========================================================
@@ -191,18 +214,18 @@
 }
 
 .nirf-document-content h3 {
-  margin: 2px 0 8px;
-  color: #102a43;
-  font-size: 19px;
+  margin: 0 0 5px;
+  color: #002147;
+  font-size: 17px;
   font-weight: 700;
-  line-height: 1.4;
+  line-height: 1.35;
 }
 
 .nirf-document-content p {
-  margin: 0 0 18px;
-  color: #6b7c93;
-  font-size: 14px;
-  line-height: 1.65;
+  margin: 0 0 14px;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.55;
 }
 
 /* =========================================================
@@ -212,26 +235,28 @@
 .nirf-document-btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background: #123c63;
-  color: #ffffff;
+  gap: 7px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #002147;
   text-decoration: none;
-  padding: 10px 15px;
-  border-radius: 7px;
-  font-size: 13px;
-  font-weight: 600;
-  transition: 0.2s ease;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  transition: 0.25s ease;
 }
 
 .nirf-document-btn:hover {
-  background: #0c2e4c;
-  color: #ffffff;
+  background: #dbeafe;
+  color: #002147;
   text-decoration: none;
+  transform: translateY(-1px);
 }
 
 .nirf-document-btn svg:last-child {
   font-size: 10px;
-  margin-left: 3px;
+  margin-left: 2px;
 }
 
 /* =========================================================
@@ -239,31 +264,33 @@
 ========================================================= */
 
 .nirf-no-records {
-  max-width: 650px;
+  width: 100%;
+  max-width: 600px;
   margin: 0 auto;
   text-align: center;
   background: #ffffff;
-  border: 1px dashed #d5dee8;
-  border-radius: 12px;
-  padding: 55px 25px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 14px;
+  padding: 45px 25px;
 }
 
 .nirf-no-records svg {
-  color: #c9a227;
-  font-size: 42px;
-  margin-bottom: 15px;
+  color: #b28a16;
+  font-size: 38px;
+  margin-bottom: 12px;
 }
 
 .nirf-no-records h4 {
-  margin: 0 0 7px;
-  color: #243b53;
-  font-size: 19px;
+  margin: 0 0 6px;
+  color: #002147;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .nirf-no-records p {
   margin: 0;
-  color: #829ab1;
-  font-size: 14px;
+  color: #64748b;
+  font-size: 13.5px;
 }
 
 /* =========================================================
@@ -271,89 +298,71 @@
 ========================================================= */
 
 .nirf-public-info {
-  padding: 0 0 75px;
+  padding: 12px 0 28px;
 }
 
 .nirf-info-box {
   display: flex;
   align-items: center;
   gap: 22px;
-  background: #102a43;
-  border-radius: 12px;
-  padding: 30px 35px;
-  position: relative;
-  overflow: hidden;
-}
-
-.nirf-info-box::after {
-  content: "";
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  right: -70px;
-  top: -70px;
-  border: 1px solid rgba(201, 162, 39, 0.3);
-  border-radius: 50%;
+  background: #002147;
+  border-radius: 14px;
+  padding: 24px 28px;
+  box-shadow: 0 6px 20px rgba(0, 33, 71, 0.12);
+  color: #ffffff;
 }
 
 .nirf-info-icon {
-  flex: 0 0 55px;
-  width: 55px;
-  height: 55px;
-  border-radius: 9px;
-  background: rgba(201, 162, 39, 0.15);
-  color: #d9bd63;
+  flex: 0 0 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: #fdb913;
+  color: #002147;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .nirf-info-box h3 {
-  position: relative;
-  z-index: 2;
-  margin: 0 0 7px;
+  margin: 0 0 5px;
   color: #ffffff;
-  font-size: 19px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 750;
 }
 
 .nirf-info-box p {
-  position: relative;
-  z-index: 2;
   margin: 0;
-  color: #c9d6e3;
-  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13.5px;
   line-height: 1.6;
 }
 
 /* =========================================================
-   LOADING
+   LOADING & ERROR
 ========================================================= */
 
 .nirf-public-loading {
-  min-height: 500px;
+  min-height: 420px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #f7f9fc;
-  color: #486581;
+  background: #ffffff;
+  color: #002147;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 .nirf-loading-spinner {
-  width: 38px;
-  height: 38px;
-  border: 3px solid #dce4ec;
-  border-top-color: #123c63;
+  width: 42px;
+  height: 42px;
+  border: 4px solid #e2e8f0;
+  border-top-color: #002147;
   border-radius: 50%;
   animation: nirf-spin 0.8s linear infinite;
   margin-bottom: 14px;
-}
-
-.nirf-public-loading p {
-  margin: 0;
-  font-size: 14px;
 }
 
 @keyframes nirf-spin {
@@ -362,28 +371,26 @@
   }
 }
 
-/* =========================================================
-   ERROR
-========================================================= */
-
 .nirf-public-error {
-  max-width: 700px;
-  margin: 80px auto;
-  padding: 35px;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 24px;
   text-align: center;
-  background: #ffffff;
-  border: 1px solid #ead7d5;
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
   border-radius: 12px;
 }
 
 .nirf-public-error h3 {
   margin: 0 0 8px;
-  color: #a93226;
+  color: #be123c;
+  font-size: 18px;
 }
 
 .nirf-public-error p {
   margin: 0;
-  color: #6b7c93;
+  color: #64748b;
+  font-size: 13px;
 }
 
 /* =========================================================
@@ -394,58 +401,58 @@
   .nirf-document-grid {
     grid-template-columns: 1fr;
   }
-
-  .nirf-public-hero {
-    min-height: 260px;
-  }
-
-  .nirf-hero-content {
-    padding: 55px 0;
-  }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+  .nirf-public-hero {
+    padding: 30px 0 34px;
+    margin-bottom: 18px;
+  }
+
+  .nirf-public-hero h1 {
+    font-size: 26px;
+  }
+
   .nirf-documents-section {
-    padding: 55px 0;
+    padding: 14px 0 24px;
   }
 
   .nirf-section-heading {
-    margin-bottom: 32px;
-  }
-
-  .nirf-section-heading h2 {
-    font-size: 28px;
+    margin-bottom: 22px;
   }
 
   .nirf-document-card {
-    padding: 21px;
-    gap: 14px;
+    padding: 18px;
+    gap: 16px;
   }
 
   .nirf-document-icon {
-    flex-basis: 48px;
-    width: 48px;
-    height: 58px;
-    font-size: 22px;
-  }
-
-  .nirf-document-content h3 {
-    font-size: 17px;
+    flex-basis: 46px;
+    width: 46px;
+    height: 46px;
+    font-size: 20px;
   }
 
   .nirf-info-box {
     align-items: flex-start;
-    padding: 25px;
+    padding: 20px;
+    gap: 16px;
   }
 }
 
 @media (max-width: 480px) {
-  .nirf-document-card {
-    flex-direction: column;
+  .nirf-public-hero {
+    padding: 24px 0 28px;
+    margin-bottom: 14px;
   }
 
-  .nirf-document-icon {
-    width: 48px;
+  .nirf-public-hero h1 {
+    font-size: 22px;
+  }
+
+  .nirf-document-card {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .nirf-document-btn {
