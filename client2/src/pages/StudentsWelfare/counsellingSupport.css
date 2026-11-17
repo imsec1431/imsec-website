@@ -3,6 +3,8 @@
 ========================================================= */
 
 .counselling-public-page {
+  width: 100%;
+  overflow: hidden;
   background: #f7f9fc;
   color: #26384d;
 }
@@ -11,9 +13,33 @@
    COMMON CONTAINER
 ========================================================= */
 
-.counselling-container {
-  width: min(1180px, calc(100% - 40px));
-  margin: 0 auto;
+.counselling-hero-container,
+.counselling-container,
+.counselling-public-page .container {
+  width: 90% !important;
+  max-width: 90% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .counselling-hero-container,
+  .counselling-container,
+  .counselling-public-page .container {
+    width: 94% !important;
+    max-width: 94% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .counselling-hero-container,
+  .counselling-container,
+  .counselling-public-page .container {
+    width: calc(100% - 24px) !important;
+    max-width: calc(100% - 24px) !important;
+  }
 }
 
 /* =========================================================
@@ -22,90 +48,49 @@
 
 .counselling-public-hero {
   position: relative;
-  min-height: 320px;
-
-  display: flex;
-  align-items: center;
-
+  width: 100%;
+  padding: 38px 0 42px;
+  margin-bottom: 24px;
+  background: #002147;
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
+  color: #ffffff;
+  text-align: left;
+  min-height: auto;
   overflow: hidden;
+}
 
-  background: linear-gradient(135deg, #0b2942 0%, #123f63 55%, #0d3455 100%);
+.counselling-hero-circle,
+.counselling-hero-line,
+.counselling-breadcrumb {
+  display: none;
 }
 
 .counselling-hero-content {
-  position: relative;
-  z-index: 2;
-
-  width: min(1180px, calc(100% - 40px));
-  margin: 0 auto;
-
-  padding: 55px 0;
+  text-align: left;
+  color: #ffffff;
+  padding: 0;
+  max-width: 900px;
+  margin: 0;
 }
 
-.counselling-breadcrumb {
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 18px;
-}
-
-.counselling-hero-line {
-  width: 58px;
-  height: 4px;
-  border-radius: 4px;
-  background: #d2a24c;
-  margin-bottom: 22px;
+.counselling-hero-tag {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #fdb913;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .counselling-hero-content h1 {
-  margin: 0 0 12px;
-
-  color: #ffffff;
-
-  font-size: clamp(38px, 5vw, 58px);
-  line-height: 1.1;
-  font-weight: 800;
-  letter-spacing: -1px;
-}
-
-.counselling-hero-content p {
   margin: 0;
-
-  color: rgba(255, 255, 255, 0.82);
-
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-/* =========================================================
-   HERO DECORATION
-========================================================= */
-
-.counselling-hero-circle {
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.counselling-circle-one {
-  width: 360px;
-  height: 360px;
-
-  right: -110px;
-  top: -140px;
-
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.025);
-}
-
-.counselling-circle-two {
-  width: 230px;
-  height: 230px;
-
-  right: 130px;
-  bottom: -145px;
-
-  border: 1px solid rgba(210, 162, 76, 0.18);
+  color: #ffffff;
+  font-size: clamp(26px, 3.5vw, 36px);
+  line-height: 1.2;
+  font-weight: 750;
+  letter-spacing: -0.5px;
 }
 
 /* =========================================================
@@ -113,31 +98,26 @@
 ========================================================= */
 
 .counselling-intro-section {
-  padding: 75px 0 35px;
+  padding: 16px 0 24px;
 }
 
 .counselling-section-heading {
-  margin-bottom: 30px;
+  margin-bottom: 18px;
 }
 
 .counselling-section-heading span {
   display: block;
-
-  margin-bottom: 8px;
-
-  color: #c99a3e;
-
-  font-size: 12px;
+  margin-bottom: 6px;
+  color: #002147;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: 2px;
 }
 
 .counselling-section-heading h2 {
   margin: 0;
-
-  color: #0b2942;
-
-  font-size: clamp(28px, 4vw, 40px);
+  color: #002147;
+  font-size: clamp(24px, 3.5vw, 34px);
   line-height: 1.2;
   font-weight: 750;
 }
@@ -145,42 +125,31 @@
 .counselling-intro-content {
   display: flex;
   align-items: flex-start;
-  gap: 24px;
-
-  padding: 30px;
-
+  gap: 20px;
+  padding: 24px 28px;
   background: #ffffff;
-
   border: 1px solid #e5eaf0;
-  border-radius: 16px;
-
-  box-shadow: 0 12px 35px rgba(10, 46, 92, 0.07);
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(10, 46, 92, 0.05);
 }
 
 .counselling-intro-icon {
-  width: 58px;
-  height: 58px;
-
+  width: 50px;
+  height: 50px;
   flex-shrink: 0;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  border-radius: 14px;
-
+  border-radius: 12px;
   color: #ffffff;
-  background: linear-gradient(135deg, #0a2e5c, #174e7d);
-
-  font-size: 24px;
+  background: #002147;
+  font-size: 22px;
 }
 
 .counselling-intro-content p {
   margin: 0;
-
   color: #536273;
-
-  font-size: 16px;
+  font-size: 15.5px;
   line-height: 1.8;
 }
 
@@ -189,51 +158,36 @@
 ========================================================= */
 
 .counselling-support-section {
-  padding: 35px 0 75px;
+  padding: 0 0 24px;
 }
 
 .counselling-support-card {
   position: relative;
-
   display: flex;
   align-items: center;
-
-  gap: 30px;
-
-  padding: 35px;
-
+  gap: 26px;
+  padding: 28px 32px;
   background: #ffffff;
-
   border: 1px solid #e2e8ef;
-  border-radius: 18px;
-
-  box-shadow: 0 15px 40px rgba(10, 46, 92, 0.08);
-
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(10, 46, 92, 0.06);
   overflow: hidden;
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .counselling-support-card::before {
   content: "";
-
   position: absolute;
-
   left: 0;
   top: 0;
   bottom: 0;
-
   width: 5px;
-
-  background: linear-gradient(180deg, #c99a3e, #0a2e5c);
+  background: linear-gradient(180deg, #c99a3e, #002147);
 }
 
 .counselling-support-card:hover {
-  transform: translateY(-5px);
-
-  box-shadow: 0 22px 50px rgba(10, 46, 92, 0.12);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 38px rgba(10, 46, 92, 0.1);
 }
 
 /* =========================================================
@@ -241,24 +195,17 @@
 ========================================================= */
 
 .counselling-person-icon {
-  width: 105px;
-  height: 105px;
-
+  width: 90px;
+  height: 90px;
   flex-shrink: 0;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   border-radius: 50%;
-
   color: #ffffff;
-
-  background: linear-gradient(135deg, #0a2e5c, #174e7d);
-
-  font-size: 43px;
-
-  box-shadow: 0 10px 25px rgba(10, 46, 92, 0.18);
+  background: #002147;
+  font-size: 38px;
+  box-shadow: 0 8px 20px rgba(0, 33, 71, 0.18);
 }
 
 /* =========================================================
@@ -271,31 +218,24 @@
 
 .counselling-card-label {
   display: block;
-
-  margin-bottom: 7px;
-
+  margin-bottom: 6px;
   color: #c99a3e;
-
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 1.7px;
 }
 
 .counselling-person-content h3 {
-  margin: 0 0 6px;
-
-  color: #0a2e5c;
-
-  font-size: 27px;
+  margin: 0 0 4px;
+  color: #002147;
+  font-size: 24px;
   font-weight: 750;
 }
 
 .counselling-designation {
-  margin: 0 0 18px;
-
+  margin: 0 0 14px;
   color: #667585;
-
-  font-size: 15px;
+  font-size: 14.5px;
 }
 
 /* =========================================================
@@ -312,20 +252,13 @@
   display: inline-flex;
   align-items: center;
   gap: 9px;
-
-  padding: 9px 13px;
-
+  padding: 8px 14px;
   border-radius: 8px;
-
   background: #f4f7fa;
-
-  color: #294762;
-
+  color: #002147;
   text-decoration: none;
-
-  font-size: 14px;
-  font-weight: 550;
-
+  font-size: 13.5px;
+  font-weight: 600;
   transition: all 0.2s ease;
 }
 
@@ -334,75 +267,59 @@
 }
 
 .counselling-contact-item:hover {
-  color: #0a2e5c;
+  color: #002147;
   background: #eaf0f5;
   transform: translateY(-1px);
 }
 
 /* =========================================================
-   INFORMATION
+   INFORMATION / CTA
 ========================================================= */
 
 .counselling-info-section {
-  padding: 0 0 80px;
+  padding: 0 0 40px;
 }
 
 .counselling-info-box {
   position: relative;
-
-  padding: 38px 40px 38px 45px;
-
-  background: linear-gradient(135deg, #0b2942, #123f63);
-
-  border-radius: 18px;
-
+  padding: 28px 32px 28px 36px;
+  background: #002147;
+  border-radius: 14px;
   overflow: hidden;
-
-  box-shadow: 0 15px 40px rgba(10, 46, 92, 0.13);
+  box-shadow: 0 12px 35px rgba(0, 33, 71, 0.16);
 }
 
 .counselling-info-accent {
   position: absolute;
-
   left: 0;
   top: 0;
   bottom: 0;
-
-  width: 6px;
-
+  width: 5px;
   background: #d2a24c;
 }
 
 .counselling-info-box > span {
   display: block;
-
-  margin-bottom: 8px;
-
+  margin-bottom: 6px;
   color: #d2a24c;
-
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 2px;
 }
 
 .counselling-info-box h2 {
-  margin: 0 0 12px;
-
+  margin: 0 0 10px;
   color: #ffffff;
-
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 750;
 }
 
 .counselling-info-box p {
   max-width: 850px;
-
   margin: 0;
-
-  color: rgba(255, 255, 255, 0.78);
-
-  font-size: 15px;
-  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 14.5px;
+  line-height: 1.7;
 }
 
 /* =========================================================
@@ -411,32 +328,25 @@
 
 .counselling-public-loading {
   min-height: 500px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  color: #0a2e5c;
+  color: #002147;
 }
 
 .counselling-loading-spinner {
   width: 42px;
   height: 42px;
-
   margin-bottom: 15px;
-
   border: 4px solid #e0e6ec;
-  border-top-color: #0a2e5c;
-
+  border-top-color: #002147;
   border-radius: 50%;
-
   animation: counsellingSpin 0.8s linear infinite;
 }
 
 .counselling-public-loading p {
   margin: 0;
-
   font-size: 15px;
   font-weight: 600;
 }
@@ -453,30 +363,22 @@
 
 .counselling-public-error {
   width: min(700px, calc(100% - 40px));
-
-  margin: 80px auto;
-
-  padding: 35px;
-
+  margin: 60px auto;
+  padding: 30px;
   text-align: center;
-
   background: #ffffff;
-
   border: 1px solid #f0cccc;
   border-radius: 14px;
-
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
 
 .counselling-public-error h3 {
   margin: 0 0 10px;
-
   color: #a52a2a;
 }
 
 .counselling-public-error p {
   margin: 0;
-
   color: #687583;
 }
 
@@ -484,40 +386,54 @@
    TABLET
 ========================================================= */
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .counselling-public-hero {
-    min-height: 280px;
+    padding: 30px 0 34px;
+    margin-bottom: 18px;
   }
 
-  .counselling-hero-content {
-    padding: 45px 0;
+  .counselling-hero-content h1 {
+    font-size: 26px;
   }
 
   .counselling-intro-section {
-    padding-top: 55px;
+    padding: 14px 0 20px;
   }
 
   .counselling-intro-content {
-    padding: 25px;
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .counselling-support-section {
+    padding-bottom: 20px;
   }
 
   .counselling-support-card {
-    padding: 28px;
-    gap: 22px;
+    padding: 22px 24px;
+    gap: 20px;
   }
 
   .counselling-person-icon {
-    width: 85px;
-    height: 85px;
-    font-size: 35px;
+    width: 76px;
+    height: 76px;
+    font-size: 32px;
   }
 
   .counselling-person-content h3 {
-    font-size: 23px;
+    font-size: 21px;
+  }
+
+  .counselling-info-section {
+    padding-bottom: 30px;
   }
 
   .counselling-info-box {
-    padding: 30px 30px 30px 35px;
+    padding: 24px 24px 24px 28px;
+  }
+
+  .counselling-info-box h2 {
+    font-size: 21px;
   }
 }
 
@@ -526,63 +442,53 @@
 ========================================================= */
 
 @media (max-width: 520px) {
-  .counselling-container,
-  .counselling-hero-content {
-    width: min(100% - 28px, 1180px);
-  }
-
   .counselling-public-hero {
-    min-height: 260px;
+    padding: 24px 0 28px;
+    margin-bottom: 14px;
   }
 
   .counselling-hero-content h1 {
-    font-size: 36px;
-  }
-
-  .counselling-hero-content p {
-    font-size: 15px;
-  }
-
-  .counselling-breadcrumb {
-    font-size: 12px;
+    font-size: 22px;
   }
 
   .counselling-intro-section {
-    padding: 45px 0 25px;
+    padding: 12px 0 18px;
   }
 
   .counselling-intro-content {
     flex-direction: column;
-    padding: 22px;
+    padding: 18px;
   }
 
   .counselling-intro-icon {
-    width: 52px;
-    height: 52px;
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
   }
 
   .counselling-intro-content p {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .counselling-support-section {
-    padding: 25px 0 55px;
+    padding-bottom: 18px;
   }
 
   .counselling-support-card {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 30px 20px;
+    padding: 22px 18px;
   }
 
   .counselling-person-icon {
-    width: 90px;
-    height: 90px;
+    width: 72px;
+    height: 72px;
+    font-size: 30px;
   }
 
   .counselling-person-content h3 {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .counselling-contact-list {
@@ -590,14 +496,18 @@
   }
 
   .counselling-info-section {
-    padding-bottom: 55px;
+    padding-bottom: 24px;
   }
 
   .counselling-info-box {
-    padding: 28px 22px 28px 30px;
+    padding: 20px 18px 20px 22px;
   }
 
   .counselling-info-box h2 {
-    font-size: 23px;
+    font-size: 19px;
+  }
+
+  .counselling-info-box p {
+    font-size: 13.5px;
   }
 }

@@ -104,20 +104,11 @@ const CounsellingSupport = () => {
       ===================================================== */}
 
       <section className="counselling-public-hero">
-        <div className="counselling-hero-circle counselling-circle-one"></div>
-
-        <div className="counselling-hero-circle counselling-circle-two"></div>
-
-        <div className="counselling-hero-content">
-          <div className="counselling-breadcrumb">
-            Home / Student Welfare / Counselling Support
+        <div className="counselling-hero-container">
+          <div className="counselling-hero-content">
+            <span className="counselling-hero-tag">STUDENT WELFARE</span>
+            <h1>{data.title || "Counselling Support"}</h1>
           </div>
-
-          <div className="counselling-hero-line"></div>
-
-          <h1>{data.title}</h1>
-
-          <p>Student Welfare &amp; Support Services</p>
         </div>
       </section>
 
