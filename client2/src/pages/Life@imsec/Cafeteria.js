@@ -97,35 +97,12 @@ const Cafeteria = () => {
           HERO
       ================================================= */}
 
-      <section
-        className="cafeteria-hero"
-        style={{
-          backgroundImage: `
-            linear-gradient(
-              135deg,
-              rgba(7, 29, 58, 0.94),
-              rgba(10, 46, 92, 0.88),
-              rgba(18, 63, 122, 0.82)
-            ),
-            url("${data.hero.image.url}")
-          `,
-        }}
-      >
-        <div className="cafeteria-hero-glow cafeteria-glow-one" />
-        <div className="cafeteria-hero-glow cafeteria-glow-two" />
-
-        <div className="cafeteria-hero-circle" />
-
-        <div className="cafeteria-hero-content">
-          <div className="cafeteria-hero-icon">
-            <FaUtensils />
+      <section className="cafeteria-hero">
+        <div className="cafeteria-hero-container">
+          <div className="cafeteria-hero-content">
+            <span className="cafeteria-hero-tag">LIFE @ IMSEC</span>
+            <h1>{data.hero?.title || "Cafeteria"}</h1>
           </div>
-
-          <h1>{data.hero.title}</h1>
-
-          <div className="cafeteria-yellow-line" />
-
-          <p>{data.hero.breadcrumb}</p>
         </div>
       </section>
 
