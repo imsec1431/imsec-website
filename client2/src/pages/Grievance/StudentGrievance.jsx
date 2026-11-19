@@ -1,13 +1,10 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Form, Button, Modal } from "react-bootstrap";
+import { Row, Col, Form, Button, Modal } from "react-bootstrap";
 import {
-  FaUserGraduate,
   FaEnvelope,
   FaPhone,
-  FaBook,
   FaClipboardList,
   FaPaperclip,
-  FaSignInAlt,
 } from "react-icons/fa";
 
 import { addStudentGrievance } from "../../services/studentGrievanceService";
@@ -28,10 +25,9 @@ const StudentGrievance = () => {
   });
 
   const [attachment, setAttachment] = useState(null);
-
   const [error, setError] = useState("");
+  const [, setSuccess] = useState("");
 
-  const [success, setSuccess] = useState("");
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -44,13 +40,11 @@ const StudentGrievance = () => {
       setError("Only IMSEC Email ID is allowed.");
       setSuccess("");
       setShowErrorModal(true);
-
       return false;
     }
 
     setError("");
     setSuccess("");
-
     return true;
   };
 
@@ -80,7 +74,6 @@ const StudentGrievance = () => {
       setSuccess(
         res.data.message || "Student Grievance Submitted Successfully.",
       );
-
       setError("");
 
       // Show success popup
@@ -102,13 +95,10 @@ const StudentGrievance = () => {
 
       // Reset file input
       const fileInput = document.getElementById("student-grievance-file");
-
       if (fileInput) {
         fileInput.value = "";
       }
     } catch (err) {
-      // console.log(err);
-
       const errorMessage =
         err.response?.data?.message ||
         "Something went wrong. Please try again.";
@@ -122,28 +112,37 @@ const StudentGrievance = () => {
   };
 
   return (
-    <>
+    <div className="studentGrievancePage">
       {/*==================== HERO ====================*/}
 
-      <section className="grievance-hero">
-        <Container>
-          <div className="hero-content">
+      <section className="studentGrievanceHero">
+        <div className="studentGrievanceHeroContainer">
+          <div className="studentGrievanceHeroContent">
+            <span className="studentGrievanceHeroTag">
+              STUDENT SUPPORT &amp; REDRESSAL
+            </span>
+
             <h1>Student Grievance Portal</h1>
+
+            <p>
+              Submit and track grievances with transparency, fairness, and
+              timely resolution.
+            </p>
           </div>
-        </Container>
+        </div>
       </section>
 
       {/*==================== COMPLAINT FORM ====================*/}
 
-      <section className="complaint-section py-5">
-        <Container>
-          <div className="section-heading text-center">
-            <h6>REGISTER COMPLAINT</h6>
+      <section className="complaint-section">
+        <div className="studentGrievanceContainer">
+          <div className="studentGrievanceSectionHeading">
+            <span>REGISTER COMPLAINT</span>
 
             <h2>Student Complaint Form</h2>
           </div>
 
-          <Form onSubmit={handleSubmit}>
+          <Form onSubmit={handleSubmit} className="studentGrievanceForm">
             <Row>
               <Col md={6}>
                 <Form.Group className="mb-4">
@@ -154,6 +153,7 @@ const StudentGrievance = () => {
                     value={formData.studentName}
                     onChange={handleChange}
                     placeholder="Enter Full Name"
+                    required
                   />
                 </Form.Group>
               </Col>
@@ -167,6 +167,7 @@ const StudentGrievance = () => {
                     value={formData.enrollmentNo}
                     onChange={handleChange}
                     placeholder="Enter Enrollment No."
+                    required
                   />
                 </Form.Group>
               </Col>
@@ -184,6 +185,7 @@ const StudentGrievance = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
+                    required
                   />
                 </Form.Group>
               </Col>
@@ -200,6 +202,7 @@ const StudentGrievance = () => {
                     value={formData.mobile}
                     onChange={handleChange}
                     placeholder="Enter Mobile Number"
+                    required
                   />
                 </Form.Group>
               </Col>
@@ -212,20 +215,20 @@ const StudentGrievance = () => {
                     name="department"
                     value={formData.department}
                     onChange={handleChange}
+                    required
                   >
-                    <option placeholder="Select Department"></option>
-
-                    <option>CSE</option>
-                    <option>AIML</option>
-                    <option>CS</option>
-                    <option>BT</option>
-                    <option>ECE</option>
-                    <option>IT</option>
-                    <option>ASH</option>
-                    <option>MCA</option>
-                    <option>MBA</option>
-                    <option>M.Tech</option>
-                    <option>OTHER</option>
+                    <option value="">Select Department</option>
+                    <option value="CSE">CSE</option>
+                    <option value="AIML">AIML</option>
+                    <option value="CS">CS</option>
+                    <option value="BT">BT</option>
+                    <option value="ECE">ECE</option>
+                    <option value="IT">IT</option>
+                    <option value="ASH">ASH</option>
+                    <option value="MCA">MCA</option>
+                    <option value="MBA">MBA</option>
+                    <option value="M.Tech">M.Tech</option>
+                    <option value="OTHER">OTHER</option>
                   </Form.Select>
                 </Form.Group>
               </Col>
@@ -238,24 +241,17 @@ const StudentGrievance = () => {
                     name="category"
                     value={formData.category}
                     onChange={handleChange}
+                    required
                   >
-                    <option>Select Category</option>
-
-                    <option>Academic</option>
-
-                    <option>Examination</option>
-
-                    <option>Library</option>
-
-                    <option>Hostel</option>
-
-                    <option>Transport</option>
-
-                    <option>Placement</option>
-
-                    <option>Accounts</option>
-
-                    <option>Other</option>
+                    <option value="">Select Category</option>
+                    <option value="Academic">Academic</option>
+                    <option value="Examination">Examination</option>
+                    <option value="Library">Library</option>
+                    <option value="Hostel">Hostel</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Placement">Placement</option>
+                    <option value="Accounts">Accounts</option>
+                    <option value="Other">Other</option>
                   </Form.Select>
                 </Form.Group>
               </Col>
@@ -269,6 +265,7 @@ const StudentGrievance = () => {
                     value={formData.title}
                     onChange={handleChange}
                     placeholder="Enter Complaint Title"
+                    required
                   />
                 </Form.Group>
               </Col>
@@ -287,6 +284,7 @@ const StudentGrievance = () => {
                     value={formData.description}
                     onChange={handleChange}
                     placeholder="Describe your grievance clearly."
+                    required
                   />
                 </Form.Group>
               </Col>
@@ -308,21 +306,21 @@ const StudentGrievance = () => {
               </Col>
 
               <Col md={12}>
-                <Button type="submit" className="submit-btn">
+                <Button type="submit" className="studentGrievanceSubmitBtn">
                   Submit Complaint
                 </Button>
               </Col>
             </Row>
           </Form>
-        </Container>
+        </div>
       </section>
 
       {/*==================== STATUS GUIDE ====================*/}
 
-      <section className="status-guide py-5">
-        <Container>
-          <div className="section-heading text-center">
-            <h6>STATUS GUIDE</h6>
+      <section className="status-guide">
+        <div className="studentGrievanceContainer">
+          <div className="studentGrievanceSectionHeading">
+            <span>STATUS GUIDE</span>
 
             <h2>Complaint Workflow</h2>
           </div>
@@ -334,7 +332,7 @@ const StudentGrievance = () => {
 
                 <h5>Submitted</h5>
 
-                <p>Complaint received successfully.</p>
+                <p>Complaint received successfully in portal.</p>
               </div>
             </Col>
 
@@ -354,7 +352,7 @@ const StudentGrievance = () => {
 
                 <h5>Processing</h5>
 
-                <p>Necessary action is being taken.</p>
+                <p>Necessary action is being investigated.</p>
               </div>
             </Col>
 
@@ -364,29 +362,28 @@ const StudentGrievance = () => {
 
                 <h5>Resolved</h5>
 
-                <p>Complaint successfully resolved.</p>
+                <p>Complaint successfully addressed &amp; resolved.</p>
               </div>
             </Col>
           </Row>
-        </Container>
+        </div>
       </section>
 
       {/*==================== CTA ====================*/}
 
-      <section className="cta-section">
-        <Container>
-          <Row className="align-items-center">
-            <Col lg={8}>
-              <h2>Your Voice Matters</h2>
+      <section className="studentGrievanceCTA">
+        <div className="studentGrievanceContainer">
+          <div className="studentGrievanceCTABox">
+            <h2>Your Voice Matters</h2>
 
-              <p>
-                We are committed to providing a transparent, fair and timely
-                grievance redressal process for every student.
-              </p>
-            </Col>
-          </Row>
-        </Container>
+            <p>
+              We are committed to providing a transparent, fair and timely
+              grievance redressal process for every student.
+            </p>
+          </div>
+        </div>
       </section>
+
       {/* ==================== SUCCESS MODAL ==================== */}
 
       <Modal
@@ -415,6 +412,7 @@ const StudentGrievance = () => {
           </Button>
         </Modal.Footer>
       </Modal>
+
       {/* ==================== ERROR MODAL ==================== */}
 
       <Modal
@@ -440,7 +438,7 @@ const StudentGrievance = () => {
           </Button>
         </Modal.Footer>
       </Modal>
-    </>
+    </div>
   );
 };
 
