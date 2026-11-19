@@ -401,7 +401,7 @@
   height: clamp(52px, 4.2vw, 62px);
   object-fit: contain;
   flex-shrink: 0;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  filter: brightness(0) saturate(100%) invert(8%) sepia(87%) saturate(3755%) hue-rotate(204deg) brightness(94%) contrast(106%) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
 }
 
 .mid-nav-title-block {
