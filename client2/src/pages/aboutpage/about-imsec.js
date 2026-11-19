@@ -114,7 +114,7 @@ const AboutImsec = () => {
   );
 
   return (
-    <>
+    <div className="about-imsec-page">
       {/* =====================================================
           HERO BANNER
       ===================================================== */}
@@ -330,7 +330,7 @@ const AboutImsec = () => {
           </Row>
         </Container>
       </section>
-    </>
+    </div>
   );
 };
 
