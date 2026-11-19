@@ -86,7 +86,7 @@
 }
 
 /* =========================================================
-   TOP LEFT INFO (LOCATION & ACCREDITATION)
+   TOP LEFT INFO (ADMISSION BADGE & HELPLINE)
 ========================================================= */
 
 .imsec-top-left-info {
@@ -94,8 +94,91 @@
   align-items: center;
   gap: 6px;
   min-width: 0;
-  flex-shrink: 1;
+  flex-shrink: 0;
   line-height: 1;
+}
+
+.top-admission-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 999px;
+  padding: 2px 3px 2px 10px;
+  height: 27px;
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+}
+
+.top-admission-badge:hover {
+  border-color: rgba(253, 185, 19, 0.55);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.top-admission-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none !important;
+  color: #ffffff;
+  font-size: clamp(11px, 0.76vw, 12px);
+  line-height: 1;
+  cursor: pointer;
+}
+
+.top-admission-phone-icon {
+  color: var(--imsec-gold);
+  font-size: 11.5px;
+  flex-shrink: 0;
+  transform: rotate(-10deg);
+}
+
+.top-admission-label {
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.15px;
+}
+
+.top-admission-number {
+  color: var(--imsec-gold);
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  transition: color 0.2s ease;
+}
+
+.top-admission-call:hover .top-admission-number {
+  color: #ffffff;
+}
+
+.top-admission-apply-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #ffffff;
+  color: #002147 !important;
+  font-weight: 750;
+  font-size: clamp(10px, 0.68vw, 11px);
+  padding: 2px 11px;
+  border-radius: 999px;
+  text-decoration: none !important;
+  line-height: 1;
+  height: 21px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.top-admission-apply-btn:hover {
+  background: var(--imsec-gold);
+  color: #002147 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(253, 185, 19, 0.45);
+}
+
+.top-admission-apply-icon {
+  font-size: 9px;
+  color: #002147;
 }
 
 .top-clg-identity {
