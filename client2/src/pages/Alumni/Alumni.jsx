@@ -65,30 +65,25 @@ const Alumni = () => {
     <main className="alumni-page">
       {/* ================= HERO ================= */}
       <section className="alumni-hero">
-        <div className="alumni-hero-glow alumni-glow-one" />
-        <div className="alumni-hero-glow alumni-glow-two" />
+        <div className="alumni-hero-container">
+          <div className="alumni-hero-content">
+            <span className="alumni-hero-tag">IMSEC ALUMNI ASSOCIATION</span>
 
-        <div className="alumni-hero-content">
-          <span className="alumni-hero-line" />
+            <h1>{hero.title || "IMSEC Alumni"}</h1>
 
-          <h1>{hero.title || "IMSEC Alumni"}</h1>
+            <p>
+              {hero.subtitle || "Connecting the IMSEC family beyond the campus"}
+            </p>
 
-          <p>
-            {hero.subtitle || "Connecting the IMSEC family beyond the campus"}
-          </p>
-
-          <div className="alumni-breadcrumb">
-            {hero.breadcrumb || "Home / Alumni"}
+            {hero.buttonText && (
+              <a
+                href={hero.buttonLink || "#alumni-network"}
+                className="alumni-hero-btn"
+              >
+                {hero.buttonText}
+              </a>
+            )}
           </div>
-
-          {hero.buttonText && (
-            <a
-              href={hero.buttonLink || "#alumni-network"}
-              className="alumni-primary-btn"
-            >
-              {hero.buttonText}
-            </a>
-          )}
         </div>
       </section>
 
