@@ -265,8 +265,10 @@
      ========================================== */
 @media (max-width: 768px) {
   .hero-slide {
-    height: 45vh;
-    min-height: 320px;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
   .hero-title {
     font-size: 2rem !important;
@@ -1380,16 +1382,33 @@
 }
 
 @media (max-width: 768px) {
+  .hero-banner-container,
+  .hero-carousel {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
   .hero-slide {
     width: 100%;
-    height: auto;
-    min-height: 0;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
     aspect-ratio: 16 / 9;
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-color: #1b4568;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
     overflow: hidden;
+  }
+
+  .homepage-ticker-wrapper {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .quick-access-wrapper {
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
   }
 
   .hero-slide .container {
@@ -2335,9 +2354,11 @@
     flex: 1 0 50%;
   }
   .hero-slide {
-    height: auto;
-    min-height: 280px;
-    padding: 20px 0;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    aspect-ratio: 16 / 9;
   }
   .hero-main-heading {
     font-size: 1.55rem;
