@@ -1523,29 +1523,71 @@
   display: flex;
   flex-direction: column;
   background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
+  border: 1px solid rgba(0, 33, 71, 0.1);
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 33, 71, 0.06);
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.achievement-card-top-bar {
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #002147 0%, #0a2e5c 60%, #fdb913 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  transition: height 0.3s ease;
 }
 
 .achievement-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 33, 71, 0.15);
-  border-color: #cbd5e1;
+  transform: translateY(-6px);
+  border-color: rgba(253, 185, 19, 0.6);
+  box-shadow: 0 14px 30px rgba(0, 33, 71, 0.12);
+}
+
+.achievement-card:hover .achievement-card-top-bar {
+  height: 5px;
 }
 
 .achievement-img-wrapper {
   width: 100%;
-  height: 140px;
+  height: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 12px;
-  background: #f8fafc;
+  background: radial-gradient(circle at center, #ffffff 45%, #f8fafc 100%);
   border-bottom: 1px solid #f1f5f9;
+  position: relative;
   overflow: hidden;
+}
+
+.achievement-pill-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 33, 71, 0.88);
+  color: #fdb913;
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  letter-spacing: 0.3px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 6px rgba(0, 33, 71, 0.18);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.achievement-card:hover .achievement-pill-badge {
+  background: #fdb913;
+  color: #002147;
 }
 
 .achievement-img {
@@ -1554,7 +1596,8 @@
   width: auto;
   height: auto;
   object-fit: contain;
-  transition: transform 0.3s ease;
+  transition: transform 0.35s ease;
+  filter: drop-shadow(0 4px 10px rgba(0, 33, 71, 0.08));
 }
 
 .achievement-card:hover .achievement-img {
@@ -1562,45 +1605,56 @@
 }
 
 .achievement-body {
-  flex: 1;
+  padding: 10px 12px 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 12px;
   text-align: center;
   background: #ffffff;
 }
 
 .achievement-title {
-  font-size: 14.5px;
+  font-size: 12.5px;
   font-weight: 600;
   color: #002147;
   margin: 0;
   line-height: 1.4;
-  word-break: break-word;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.achievement-card:hover .achievement-title {
+  color: #002147;
 }
 
 .achievements-swiper .swiper-button-prev,
 .achievements-swiper .swiper-button-next {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   background: #ffffff;
   border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
   color: #002147 !important;
-  transition: all 0.2s ease;
+  border: 1px solid rgba(0, 33, 71, 0.1);
+  transition: all 0.25s ease;
 }
 
 .achievements-swiper .swiper-button-prev::after,
 .achievements-swiper .swiper-button-next::after {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
 }
 
 .achievements-swiper .swiper-button-prev:hover,
 .achievements-swiper .swiper-button-next:hover {
-  background: #fdb913;
-  color: #002147 !important;
+  background: #002147;
+  color: #ffffff !important;
+  border-color: #002147;
+  transform: scale(1.08);
 }
 
 .achievements-swiper .swiper-button-prev {
@@ -1614,6 +1668,7 @@
 .achievements-swiper .swiper-pagination-bullet {
   background: rgba(0, 33, 71, 0.25) !important;
   opacity: 1 !important;
+  transition: all 0.3s ease;
 }
 
 .achievements-swiper .swiper-pagination-bullet-active {
