@@ -1,304 +1,422 @@
-/* =========================================
-   HERO
-========================================= */
+/* =========================================================
+   INTERNAL GRIEVANCE COMMITTEE - INSTITUTIONAL REDESIGN
+   ========================================================= */
+
+.igc-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #172033;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  padding-bottom: 55px;
+}
+
+/* =========================================================
+   CONTAINER (90% FLUID)
+   ========================================================= */
+
+.igc-container,
+.igc-hero-container {
+  width: 90% !important;
+  max-width: 90% !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+/* =========================================================
+   HERO (SOLID NAVY INSTITUTIONAL HEADER)
+   ========================================================= */
 
 .igc-hero {
-  min-height: 420px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  text-align: center;
-
-  background:
-    linear-gradient(rgba(10, 46, 92, 0.9), rgba(10, 46, 92, 0.9)),
-    url("https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1600&q=80");
-
-  background-size: cover;
-  background-position: center;
-
-  color: #fff;
+  position: relative;
+  width: 100%;
+  padding: 38px 0 42px;
+  margin-bottom: 24px;
+  background: #002147;
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
+  color: #ffffff;
+  text-align: left;
 }
 
 .igc-hero-content {
-  max-width: 850px;
-  margin: auto;
+  position: relative;
+  z-index: 2;
+  padding: 0;
+}
+
+.igc-hero-tag {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #fdb913;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .igc-hero-content h1 {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  font-weight: 800;
-  margin-bottom: 20px;
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(26px, 3.5vw, 36px);
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  font-weight: 750;
 }
 
 .igc-hero-content p {
-  font-size: 18px;
-  line-height: 1.8;
-  margin: auto;
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14.5px;
+  line-height: 1.6;
+  max-width: 700px;
 }
 
-/* =========================================
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.igc-section-heading {
+  margin: 0 0 24px;
+  text-align: left;
+}
+
+.igc-section-heading > span {
+  display: block;
+  margin-bottom: 4px;
+  color: #b28a16;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.igc-section-heading h2 {
+  margin: 0;
+  color: #002147;
+  font-size: 26px;
+  font-weight: 750;
+  line-height: 1.25;
+}
+
+.igc-section-heading p {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+/* =========================================================
    ABOUT
-========================================= */
+   ========================================================= */
 
 .igc-about {
-  background: #f8fafc;
-}
-
-.igc-about-content {
-  padding-right: 30px;
+  padding: 16px 0 32px;
+  background: #ffffff;
 }
 
 .igc-about-content h3 {
-  color: #0a2e5c;
-  font-size: 32px;
-  font-weight: 800;
-  margin-bottom: 20px;
-}
-
-.igc-about-content p {
-  color: #666;
-  line-height: 1.8;
-  margin-bottom: 15px;
-}
-
-.igc-highlight {
-  padding: 45px;
-  border-radius: 20px;
-  background: #fff;
-
-  text-align: center;
-
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-}
-
-.igc-highlight-icon {
-  width: 80px;
-  height: 80px;
-
-  margin: 0 auto 20px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-
-  background: #fdb913;
-  color: #0a2e5c;
-
-  font-size: 32px;
-}
-
-.igc-highlight h4 {
-  color: #0a2e5c;
+  color: #002147;
+  font-size: 20px;
   font-weight: 700;
   margin-bottom: 12px;
 }
 
-.igc-highlight p {
-  color: #666;
-  line-height: 1.7;
+.igc-about-content p {
+  color: #64748b;
+  line-height: 1.65;
+  font-size: 14px;
+  margin-bottom: 12px;
 }
 
-/* =========================================
+.igc-highlight {
+  padding: 32px 24px;
+  border-radius: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 33, 71, 0.04);
+}
+
+.igc-highlight-icon {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #eff6ff;
+  color: #002147;
+  border: 1px solid #bfdbfe;
+  font-size: 22px;
+}
+
+.igc-highlight h4 {
+  color: #002147;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.igc-highlight p {
+  color: #64748b;
+  line-height: 1.6;
+  font-size: 13.5px;
+  margin: 0;
+}
+
+/* =========================================================
    MEMBERS
-========================================= */
+   ========================================================= */
 
 .igc-members {
-  background: #fff;
+  padding: 16px 0 32px;
+  background: #ffffff;
+}
+
+.igc-table-wrap {
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 33, 71, 0.04);
+  background: #ffffff;
 }
 
 .igc-member-table {
-  background: #fff;
-
-  border-radius: 12px;
-  overflow: hidden;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  margin-bottom: 0;
 }
 
 .igc-member-table thead th {
-  background: #0a2e5c;
-  color: #fff;
-
-  padding: 16px;
-
+  background: #002147 !important;
+  color: #ffffff !important;
+  font-size: 13px;
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 14px 18px;
+  border: none;
 }
 
 .igc-member-table tbody td {
-  padding: 16px;
-
-  color: #555;
-
+  padding: 14px 18px;
+  border-color: #f1f5f9;
+  font-size: 13.5px;
+  color: #334155;
   vertical-align: middle;
+}
+
+.igc-member-table tbody tr:hover {
+  background-color: #f8fafc;
 }
 
 .igc-role {
   display: inline-block;
-
-  padding: 7px 15px;
-
-  border-radius: 30px;
-
-  background: #fff3cd;
-  color: #856404;
-
-  font-size: 13px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #002147;
+  border: 1px solid #bfdbfe;
+  font-size: 12px;
   font-weight: 600;
 }
 
-/* =========================================
+.igc-loading-state,
+.igc-empty-state {
+  padding: 40px 20px;
+  text-align: center;
+  background: #f8fafc;
+  border: 1.5px dashed #cbd5e1;
+  border-radius: 14px;
+}
+
+.igc-empty-state p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* =========================================================
    RESPONSIBILITIES
-========================================= */
+   ========================================================= */
 
 .igc-responsibilities {
-  background: #f8fafc;
+  padding: 16px 0 32px;
+  background: #ffffff;
 }
 
 .igc-card {
   height: 100%;
-
-  border: none;
-
-  border-radius: 18px;
-
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 24px 20px;
+  background: #ffffff;
   text-align: center;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
-
-  transition: 0.3s;
+  box-shadow: 0 2px 8px rgba(0, 33, 71, 0.04);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .igc-card:hover {
-  transform: translateY(-8px);
-
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 24px rgba(0, 33, 71, 0.08);
 }
 
 .igc-card-icon {
-  width: 70px;
-  height: 70px;
-
-  margin: 30px auto 10px;
-
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  border-radius: 50%;
-
-  background: #fdb913;
-  color: #0a2e5c;
-
-  font-size: 28px;
+  border-radius: 12px;
+  background: #eff6ff;
+  color: #002147;
+  border: 1px solid #bfdbfe;
+  font-size: 20px;
 }
 
 .igc-card h5 {
-  color: #0a2e5c;
+  color: #002147;
+  font-size: 16px;
   font-weight: 700;
-
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .igc-card p {
-  color: #666;
-
-  line-height: 1.7;
-
-  margin-bottom: 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 0;
 }
 
-/* =========================================
+/* =========================================================
    CONTACT
-========================================= */
+   ========================================================= */
 
 .igc-contact {
-  background: #fdb913;
+  padding: 16px 0 0;
+  background: transparent;
 }
 
-.igc-contact h2 {
-  color: #0a2e5c;
-
-  font-size: 38px;
-
-  font-weight: 800;
-
-  margin-bottom: 15px;
+.igc-contact-box {
+  background: #002147;
+  border-radius: 14px;
+  padding: 34px 28px;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
 }
 
-.igc-contact p {
-  color: #333;
+.igc-contact-box h2 {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 750;
+  margin-bottom: 8px;
+}
 
-  font-size: 17px;
+.igc-contact-box p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
 
-  line-height: 1.7;
+.igc-contact-info {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .igc-contact-info p {
-  display: flex;
-
+  display: inline-flex;
   align-items: center;
-
-  gap: 12px;
-
-  margin-bottom: 10px;
-
+  gap: 10px;
+  color: #ffffff;
+  font-size: 14px;
   font-weight: 600;
+  padding: 10px 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  margin: 0;
 }
 
 .igc-contact-info svg {
-  color: #0a2e5c;
+  color: #fdb913;
+  font-size: 16px;
 }
 
-/* =========================================
+/* =========================================================
    RESPONSIVE
-========================================= */
+   ========================================================= */
 
 @media (max-width: 991px) {
-  .igc-about-content {
-    padding-right: 0;
-    margin-bottom: 30px;
-  }
-
-  .igc-contact {
-    text-align: center;
-  }
-
   .igc-contact-info {
-    margin-top: 25px;
-  }
-
-  .igc-contact-info p {
-    justify-content: center;
+    justify-content: flex-start;
+    margin-top: 10px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
+  .igc-container,
+  .igc-hero-container {
+    width: 94% !important;
+    max-width: 94% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .igc-container,
+  .igc-hero-container {
+    width: calc(100% - 24px) !important;
+    max-width: calc(100% - 24px) !important;
+  }
+
   .igc-hero {
-    min-height: 340px;
-    padding: 40px 20px;
+    padding: 30px 0 34px;
+    margin-bottom: 18px;
   }
 
   .igc-hero-content h1 {
-    font-size: 34px;
+    font-size: 24px;
   }
 
   .igc-hero-content p {
-    font-size: 16px;
+    font-size: 13.5px;
   }
 
-  .igc-about-content h3 {
-    font-size: 28px;
+  .igc-section-heading h2 {
+    font-size: 22px;
+  }
+
+  .igc-about,
+  .igc-members,
+  .igc-responsibilities {
+    padding: 12px 0 24px;
   }
 
   .igc-highlight {
-    padding: 30px 20px;
+    padding: 24px 16px;
   }
 
-  .igc-contact h2 {
-    font-size: 30px;
+  .igc-card {
+    padding: 20px 16px;
+  }
+
+  .igc-contact-box {
+    padding: 24px 16px;
+  }
+
+  .igc-contact-box h2 {
+    font-size: 19px;
+  }
+
+  .igc-contact-info p {
+    width: 100%;
+    justify-content: center;
   }
 }

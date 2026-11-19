@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {
-  Container,
   Row,
   Col,
-  Card,
   Table,
   Spinner,
   Alert,
@@ -13,7 +11,6 @@ import {
   FaUsers,
   FaBalanceScale,
   FaClipboardCheck,
-  FaEnvelope,
   FaPhone,
 } from "react-icons/fa";
 
@@ -58,9 +55,7 @@ const responsibilities = [
 
 const InternalGrievanceCommittee = () => {
   const [committeeMembers, setCommitteeMembers] = useState([]);
-
   const [loading, setLoading] = useState(true);
-
   const [error, setError] = useState("");
 
   /* ==========================================
@@ -72,28 +67,26 @@ const InternalGrievanceCommittee = () => {
       setLoading(true);
 
       const res = await getCommitteeMembers();
-
       const allMembers = res.data.data || [];
 
       // Show only ACTIVE members
       const activeMembers = allMembers.filter(
-        (member) => member.status === "Active"
+        (member) => member.status === "Active",
       );
 
       // Priority wise
       activeMembers.sort(
-        (a, b) => Number(a.priority) - Number(b.priority)
+        (a, b) => Number(a.priority) - Number(b.priority),
       );
 
       setCommitteeMembers(activeMembers);
-
       setError("");
     } catch (err) {
       console.error(err);
 
       setError(
         err.response?.data?.message ||
-          "Unable to load Internal Grievance Committee."
+          "Unable to load Internal Grievance Committee.",
       );
     } finally {
       setLoading(false);
@@ -109,131 +102,107 @@ const InternalGrievanceCommittee = () => {
   }, []);
 
   return (
-    <>
+    <div className="igc-page">
       {/* =========================================
           HERO
       ========================================= */}
 
       <section className="igc-hero">
-        <Container>
+        <div className="igc-hero-container">
           <div className="igc-hero-content">
+            <span className="igc-hero-tag">INSTITUTIONAL COMMITTEE</span>
+
             <h1>Internal Grievance Committee</h1>
 
-            <p style={{color:"white"}}>
-              Ensuring a fair, transparent and timely grievance
-              redressal mechanism at IMSEC.
+            <p>
+              Ensuring a fair, transparent and timely grievance redressal
+              mechanism at IMSEC.
             </p>
           </div>
-        </Container>
+        </div>
       </section>
 
       {/* =========================================
           ABOUT COMMITTEE
       ========================================= */}
 
-      <section className="igc-about py-5">
-        <Container>
-
-          <div className="section-heading text-center mb-5">
-
-            <h6>GRIEVANCE REDRESSAL</h6>
+      <section className="igc-about">
+        <div className="igc-container">
+          <div className="igc-section-heading">
+            <span>GRIEVANCE REDRESSAL</span>
 
             <h2>Internal Grievance Committee</h2>
 
             <p>
-              The Internal Grievance Committee provides an
-              institutional mechanism for addressing grievances
-              and ensuring a supportive and respectful
-              environment.
+              The Internal Grievance Committee provides an institutional
+              mechanism for addressing grievances and ensuring a supportive and
+              respectful environment.
             </p>
-
           </div>
 
-          <Row className="align-items-center">
-
-            <Col lg={6}>
-
+          <Row className="align-items-center g-4">
+            <Col lg={7}>
               <div className="igc-about-content">
-
-                <h3>
-                  About the Committee
-                </h3>
+                <h3>About the Committee</h3>
 
                 <p>
-                  The Internal Grievance Committee is responsible
-                  for receiving, reviewing and addressing grievances
-                  raised within the institution.
+                  The Internal Grievance Committee is responsible for receiving,
+                  reviewing and addressing grievances raised within the
+                  institution.
                 </p>
 
                 <p>
-                  The committee works to ensure that grievances are
-                  considered objectively and that appropriate action
-                  is recommended to the concerned authority.
+                  The committee works to ensure that grievances are considered
+                  objectively and that appropriate action is recommended to the
+                  concerned authority.
                 </p>
 
                 <p>
-                  All complaints are handled with due
-                  confidentiality and sensitivity.
+                  All complaints are handled with due confidentiality and
+                  sensitivity to ensure an impartial and supportive atmosphere.
                 </p>
-
               </div>
-
             </Col>
 
-            <Col lg={6}>
-
+            <Col lg={5}>
               <div className="igc-highlight">
-
                 <div className="igc-highlight-icon">
                   <FaUsers />
                 </div>
 
-                <h4>
-                  Fair & Transparent Process
-                </h4>
+                <h4>Fair &amp; Transparent Process</h4>
 
                 <p>
-                  Every grievance is considered through a structured
-                  and transparent redressal process.
+                  Every grievance is considered through a structured, objective,
+                  and timely redressal process.
                 </p>
-
               </div>
-
             </Col>
-
           </Row>
-
-        </Container>
+        </div>
       </section>
 
       {/* =========================================
           COMMITTEE MEMBERS
       ========================================= */}
 
-      <section className="igc-members py-5">
-
-        <Container>
-
-          <div className="section-heading text-center mb-5">
-
-            <h6>COMMITTEE</h6>
+      <section className="igc-members">
+        <div className="igc-container">
+          <div className="igc-section-heading">
+            <span>MEMBERSHIP</span>
 
             <h2>Committee Members</h2>
 
             <p>
-              Members responsible for grievance redressal
-              and committee proceedings.
+              Members responsible for grievance redressal and committee
+              proceedings.
             </p>
-
           </div>
 
           {/* ERROR */}
 
           {error && (
-            <Alert
-              variant="danger"
-              className="text-center"
-            >
+            <Alert variant="danger" className="text-center">
               {error}
             </Alert>
           )}
@@ -241,200 +210,111 @@ const InternalGrievanceCommittee = () => {
           {/* LOADING */}
 
           {loading ? (
-
-            <div className="text-center py-5">
-
+            <div className="igc-loading-state">
               <Spinner animation="border" />
-
-              <p className="mt-3">
-                Loading Committee Members...
-              </p>
-
+              <p className="mt-3">Loading Committee Members...</p>
             </div>
-
           ) : (
-
             <>
               {committeeMembers.length === 0 ? (
-
-                <Alert
-                  variant="info"
-                  className="text-center"
-                >
-                  No active committee members available.
-                </Alert>
-
+                <div className="igc-empty-state">
+                  <p>No active committee members available at the moment.</p>
+                </div>
               ) : (
-
-                <div className="table-responsive">
-
-                  <Table
-                    bordered
-                    hover
-                    className="igc-member-table"
-                  >
-
+                <div className="table-responsive igc-table-wrap">
+                  <Table bordered hover className="igc-member-table">
                     <thead>
-
                       <tr>
-                        <th>S.N.</th>
+                        <th style={{ width: "80px" }}>S.N.</th>
                         <th>Name</th>
                         <th>Designation</th>
-                        <th>Role</th>
+                        <th style={{ width: "220px" }}>Role</th>
                       </tr>
-
                     </thead>
 
                     <tbody>
+                      {committeeMembers.map((member, index) => (
+                        <tr key={member._id}>
+                          <td>{index + 1}</td>
 
-                      {committeeMembers.map(
-                        (member, index) => (
+                          <td>
+                            <strong>{member.name}</strong>
+                          </td>
 
-                          <tr key={member._id}>
+                          <td>{member.designation}</td>
 
-                            <td>
-                              {index + 1}
-                            </td>
-
-                            <td>
-                              <strong>
-                                {member.name}
-                              </strong>
-                            </td>
-
-                            <td>
-                              {member.designation}
-                            </td>
-
-                            <td>
-
-                              <span className="igc-role">
-                                {member.role}
-                              </span>
-
-                            </td>
-
-                          </tr>
-
-                        )
-                      )}
-
+                          <td>
+                            <span className="igc-role">{member.role}</span>
+                          </td>
+                        </tr>
+                      ))}
                     </tbody>
-
                   </Table>
-
                 </div>
-
               )}
             </>
-
           )}
-
-        </Container>
-
+        </div>
       </section>
 
       {/* =========================================
           RESPONSIBILITIES
       ========================================= */}
 
-      <section className="igc-responsibilities py-5">
-
-        <Container>
-
-          <div className="section-heading text-center mb-5">
-
-            <h6>WHAT WE DO</h6>
+      <section className="igc-responsibilities">
+        <div className="igc-container">
+          <div className="igc-section-heading">
+            <span>WHAT WE DO</span>
 
             <h2>Committee Responsibilities</h2>
-
           </div>
 
           <Row className="g-4">
+            {responsibilities.map((item, index) => (
+              <Col lg={3} md={6} key={index}>
+                <div className="igc-card">
+                  <div className="igc-card-icon">{item.icon}</div>
 
-            {responsibilities.map(
-              (item, index) => (
+                  <h5>{item.title}</h5>
 
-                <Col
-                  lg={3}
-                  md={6}
-                  key={index}
-                >
-
-                  <Card className="igc-card">
-
-                    <div className="igc-card-icon">
-                      {item.icon}
-                    </div>
-
-                    <Card.Body>
-
-                      <h5>
-                        {item.title}
-                      </h5>
-
-                      <p>
-                        {item.description}
-                      </p>
-
-                    </Card.Body>
-
-                  </Card>
-
-                </Col>
-
-              )
-            )}
-
+                  <p>{item.description}</p>
+                </div>
+              </Col>
+            ))}
           </Row>
-
-        </Container>
-
+        </div>
       </section>
 
       {/* =========================================
           CONTACT
       ========================================= */}
 
-      <section className="igc-contact py-5">
+      <section className="igc-contact">
+        <div className="igc-container">
+          <div className="igc-contact-box">
+            <Row className="align-items-center g-3">
+              <Col lg={8}>
+                <h2>Need to Raise a Grievance?</h2>
 
-        <Container>
-
-          <Row className="align-items-center">
-
-            <Col lg={8}>
-
-              <h2>
-                Need to Raise a Grievance?
-              </h2>
-
-              <p>
-                Students and employees can submit their grievance
-                through the appropriate grievance portal.
-              </p>
-
-            </Col>
-
-            <Col lg={4}>
-
-              <div className="igc-contact-info">
-
-                
                 <p>
-                  <FaPhone />
-                  Contact the concerned authority
+                  Students and employees can submit their grievance through the
+                  appropriate grievance portal for swift resolution.
                 </p>
+              </Col>
 
-              </div>
-
-            </Col>
-
-          </Row>
-
-        </Container>
-
+              <Col lg={4}>
+                <div className="igc-contact-info">
+                  <p>
+                    <FaPhone />
+                    Contact the concerned authority
+                  </p>
+                </div>
+              </Col>
+            </Row>
+          </div>
+        </div>
       </section>
-    </>
+    </div>
   );
 };
 
