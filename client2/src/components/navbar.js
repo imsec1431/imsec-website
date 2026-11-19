@@ -265,13 +265,13 @@ const NavigationBar = () => {
             <div className="imsec-top-left-info">
               <div className="top-admission-badge">
                 <a
-                  href="tel:9821396581"
+                  href="tel:7840090830"
                   className="top-admission-call"
-                  title="Call for Admission"
+                  title="Call for Admission: 7840090830"
                 >
                   <FaPhone className="top-admission-phone-icon" />
                   <span className="top-admission-label">Admission:</span>
-                  <span className="top-admission-number">9821396581</span>
+                  <span className="top-admission-number">7840090830</span>
                 </a>
                 <Link
                   to="/Admissions/ApplyforAdmission"
