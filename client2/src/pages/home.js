@@ -1192,36 +1192,36 @@ const Home = () => {
       </div>
 
       {/* ACHIEVEMENTS & RECOGNITION */}
-      <div style={{ background: "#ffffff", padding: "50px 0" }}>
+      <div style={{ background: "#ffffff", padding: "36px 0 45px" }}>
         <Container>
           <div className="text-center mb-4">
-            <h6
-              style={{
-                color: "#FDB913",
-                fontWeight: "700",
-                letterSpacing: "2px",
-              }}
-            >
-              {/* OUR PRIDE */}
-            </h6>
-
             <h2
               style={{
                 color: "#002147",
                 fontWeight: "800",
-                fontSize: "clamp(1.85rem, 3.6vw, 2.65rem)",
+                fontSize: "clamp(1.85rem, 3.2vw, 2.4rem)",
                 lineHeight: "1.2",
+                margin: 0,
               }}
             >
-              Achievements & Recognition<span> </span>
+              Achievements & Recognition
             </h2>
-
+            <div
+              style={{
+                width: "48px",
+                height: "3px",
+                background: "#fdb913",
+                borderRadius: "2px",
+                margin: "8px auto 12px",
+              }}
+            />
             <p
               className="text-muted"
               style={{
-                maxWidth: "700px",
-                margin: "12px auto",
+                maxWidth: "650px",
+                margin: "0 auto",
                 fontWeight: "500",
+                fontSize: "14px",
               }}
             >
               Celebrating excellence through awards, rankings, accreditations,
@@ -1234,24 +1234,29 @@ const Home = () => {
             navigation
             pagination={{ clickable: true }}
             autoplay={{
-              delay: 2500,
+              delay: 3000,
               disableOnInteraction: false,
+              pauseOnMouseEnter: true,
             }}
             loop
-            spaceBetween={25}
+            spaceBetween={20}
             breakpoints={{
               320: { slidesPerView: 1 },
               576: { slidesPerView: 2 },
               768: { slidesPerView: 3 },
               992: { slidesPerView: 4 },
-              1200: { slidesPerView: 5 },
+              1200: { slidesPerView: 4 },
             }}
             className="achievements-swiper"
           >
             {achievements.map((item) => (
               <SwiperSlide key={item._id} className="h-auto">
                 <Card className="achievement-card">
+                  <div className="achievement-card-top-bar" />
                   <div className="achievement-img-wrapper">
+                    <span className="achievement-pill-badge">
+                      <FaAward /> Award
+                    </span>
                     <Card.Img
                       variant="top"
                       src={item.image}
@@ -1261,7 +1266,9 @@ const Home = () => {
                   </div>
 
                   <Card.Body className="achievement-body">
-                    <Card.Title className="achievement-title">{item.title}</Card.Title>
+                    <Card.Title className="achievement-title" title={item.title}>
+                      {item.title}
+                    </Card.Title>
                   </Card.Body>
                 </Card>
               </SwiperSlide>
