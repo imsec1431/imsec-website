@@ -365,7 +365,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   position: relative;
   z-index: 1031;
-  padding: 6px 0;
+  padding: 3px 0;
 }
 
 .imsec-mid-container {
@@ -396,8 +396,8 @@
 }
 
 .mid-nav-logo-img {
-  width: clamp(64px, 5vw, 76px);
-  height: clamp(64px, 5vw, 76px);
+  width: clamp(52px, 4.2vw, 62px);
+  height: clamp(52px, 4.2vw, 62px);
   object-fit: contain;
   flex-shrink: 0;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
@@ -416,7 +416,7 @@
 
 .mid-nav-name-main {
   font-family: "Merriweather", "Georgia", "Times New Roman", serif;
-  font-size: clamp(19px, 1.65vw, 25px);
+  font-size: clamp(17px, 1.45vw, 22px);
   font-weight: 800;
   color: #002147;
   line-height: 1.15;
@@ -428,10 +428,10 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 5px;
-  margin-top: 3px;
+  margin-top: 1px;
   font-family: "Poppins", "Segoe UI", sans-serif;
-  font-size: clamp(11px, 0.82vw, 12.5px);
-  line-height: 1.35;
+  font-size: clamp(10.5px, 0.78vw, 11.5px);
+  line-height: 1.3;
 }
 
 .mid-nav-name-subtitle::before {
@@ -482,8 +482,8 @@
 }
 
 .wreath-branch {
-  width: clamp(18px, 1.4vw, 24px);
-  height: clamp(42px, 3.4vw, 54px);
+  width: clamp(16px, 1.25vw, 21px);
+  height: clamp(36px, 2.9vw, 46px);
   flex-shrink: 0;
   filter: drop-shadow(0 1px 2px rgba(184, 134, 11, 0.25));
 }
@@ -493,15 +493,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 4px;
-  margin: 0 -4px;
-  min-width: clamp(52px, 4.5vw, 76px);
+  padding: 0 3px;
+  margin: 0 -3px;
+  min-width: clamp(48px, 4.2vw, 68px);
   z-index: 1;
 }
 
 .mid-badge-value {
   font-family: "Poppins", "Segoe UI", sans-serif;
-  font-size: clamp(13.5px, 1.1vw, 16.5px);
+  font-size: clamp(12.5px, 0.98vw, 15px);
   font-weight: 800;
   color: #0b1e3f;
   line-height: 1.1;
@@ -510,12 +510,12 @@
 
 .text-gold-accent {
   color: #b8860b !important;
-  font-size: clamp(12px, 0.95vw, 14.5px) !important;
+  font-size: clamp(11px, 0.88vw, 13.5px) !important;
 }
 
 .mid-badge-label {
   font-family: "Poppins", "Segoe UI", sans-serif;
-  font-size: clamp(8px, 0.65vw, 9.5px);
+  font-size: clamp(7.5px, 0.6vw, 9px);
   font-weight: 600;
   color: #334155;
   line-height: 1.15;
@@ -1191,8 +1191,8 @@
   }
 
   .mid-nav-logo-img {
-    width: clamp(48px, 11vw, 58px);
-    height: clamp(48px, 11vw, 58px);
+    width: clamp(42px, 9.5vw, 50px);
+    height: clamp(42px, 9.5vw, 50px);
   }
 
   .navbar-dark-blue {
