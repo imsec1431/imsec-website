@@ -388,6 +388,7 @@
   text-decoration: none !important;
   color: inherit !important;
   flex-shrink: 0;
+  margin-left: 5%;
   transition: transform 0.2s ease;
 }
 
@@ -1188,6 +1189,10 @@
 @media (max-width: 768px) {
   .imsec-top-navbar {
     display: none;
+  }
+
+  .mid-nav-brand {
+    margin-left: 0;
   }
 
   .mid-nav-logo-img {
