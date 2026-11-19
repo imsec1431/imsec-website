@@ -6,7 +6,6 @@ import {
   FaDownload,
   FaSearch,
   FaCalendarAlt,
-  FaArrowRight,
   FaFilePdf,
 } from "react-icons/fa";
 
@@ -46,18 +45,6 @@ const Newsletter = () => {
         }
 
         const result = await response.json();
-
-        // console.log("Newsletter API response:", result);
-
-        /*
-          Expected backend response:
-
-          {
-            success: true,
-            count: 1,
-            data: [...]
-          }
-        */
 
         if (Array.isArray(result)) {
           setNewsletters(result);
@@ -103,26 +90,8 @@ const Newsletter = () => {
   FEATURED NEWSLETTER
   =========================================*/
 
-  /*
-    If admin selected one newsletter as featured,
-    display that newsletter.
-
-    Otherwise use the first newsletter returned
-    by the backend.
-  */
-
   const featuredNewsletter =
     newsletters.find((item) => item.isFeatured === true) || newsletters[0];
-
-  /*=========================================
-  LATEST EDITION BUTTON
-  =========================================*/
-
-  const handleLatestEdition = () => {
-    document.getElementById("newsletter-archive")?.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
 
   /*=========================================
   RENDER
@@ -135,271 +104,220 @@ const Newsletter = () => {
       =====================================*/}
 
       <section className="newsletterHero">
-        <div className="heroContent">
-          <span>
-            <FaBookOpen />
-            Monthly Publications
-          </span>
+        <div className="newsletterHeroContainer">
+          <div className="newsletterHeroContent">
+            <span className="newsletterHeroTag">PUBLICATIONS &amp; MEDIA</span>
 
-          <h1>
-            IMSEC
-            <strong> Newsletter</strong>
-          </h1>
+            <h1>IMSEC Newsletter</h1>
 
-          <p>
-            Explore our monthly newsletters featuring academic excellence,
-            student achievements, placement highlights, workshops, research
-            activities and departmental events.
-          </p>
+            <p>
+              Explore our monthly newsletters featuring academic excellence,
+              student achievements, placement highlights, workshops, research
+              activities and departmental events.
+            </p>
+          </div>
         </div>
       </section>
 
       {/*=====================================
-      SEARCH
+      MAIN CONTAINER (90% FLUID)
       =====================================*/}
 
-      <section className="newsletterSearch">
-        <div className="searchBox">
-          <FaSearch />
+      <div className="newsletterContainer">
+        {/*=====================================
+        SEARCH
+        =====================================*/}
 
-          <input
-            type="text"
-            placeholder="Search by month or year..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-        </div>
-      </section>
+        <section className="newsletterSearch">
+          <div className="searchBox">
+            <FaSearch />
 
-      {/*=====================================
-      LOADING
-      =====================================*/}
+            <input
+              type="text"
+              placeholder="Search by month, year, or topic..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
+          </div>
+        </section>
 
-      {loading && (
-        <section className="featuredSection">
-          <div className="sectionHeading">
-            <span>Newsletter</span>
+        {/*=====================================
+        LOADING
+        =====================================*/}
 
-            <h2>Loading Newsletters...</h2>
-
+        {loading && (
+          <section className="newsletterStatus">
+            <div className="newsletterLoadingSpinner" />
+            <h3>Loading Newsletters...</h3>
             <p>Please wait while we load the latest publications.</p>
-          </div>
-        </section>
-      )}
+          </section>
+        )}
 
-      {/*=====================================
-      ERROR
-      =====================================*/}
+        {/*=====================================
+        ERROR
+        =====================================*/}
 
-      {!loading && error && (
-        <section className="featuredSection">
-          <div className="sectionHeading">
-            <span>Newsletter</span>
-
-            <h2>Unable to Load Newsletters</h2>
-
+        {!loading && error && (
+          <section className="newsletterStatus">
+            <h3>Unable to Load Newsletters</h3>
             <p>{error}</p>
-          </div>
-        </section>
-      )}
+          </section>
+        )}
 
-      {/*=====================================
-      FEATURED NEWSLETTER
-      =====================================*/}
+        {/*=====================================
+        FEATURED NEWSLETTER
+        =====================================*/}
 
-      {!loading && !error && featuredNewsletter && (
-        <section className="featuredSection">
-          <div className="sectionHeading">
-            <span>Latest Edition</span>
-
-            <h2>Featured Newsletter</h2>
-          </div>
-
-          <div className="featuredCard">
-            {/*=================================
-              NO COVER PHOTO
-
-              The cover field from the database
-              is intentionally NOT used.
-              =================================*/}
-
-            <div className="featuredImage">
-              <FaFilePdf />
-
-              <span>
-                {featuredNewsletter.month}
-                <br />
-                {featuredNewsletter.year}
-              </span>
-            </div>
-
-            {/*=================================
-              FEATURED CONTENT
-              =================================*/}
-
-            <div className="featuredContent">
-              <h5>
-                {featuredNewsletter.month} {featuredNewsletter.year}
-              </h5>
-
-              <h2>{featuredNewsletter.title}</h2>
-
-              <p>{featuredNewsletter.description}</p>
-
-              <div className="featuredButtons">
-                {/* READ ONLINE */}
-
-                <a
-                  href={featuredNewsletter.drive}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaBookOpen />
-                  Read Online
-                </a>
-
-                {/* DOWNLOAD */}
-
-                <a
-                  href={featuredNewsletter.drive}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaDownload />
-                  Download
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/*=====================================
-      NO NEWSLETTERS
-      =====================================*/}
-
-      {!loading && !error && newsletters.length === 0 && (
-        <section className="featuredSection">
-          <div className="sectionHeading">
-            <span>Newsletter Archive</span>
-
-            <h2>No Newsletters Available</h2>
-
-            <p>There are currently no newsletters published.</p>
-          </div>
-        </section>
-      )}
-
-      {/*=====================================
-      NEWSLETTER ARCHIVE
-      =====================================*/}
-
-      {!loading && !error && newsletters.length > 0 && (
-        <section className="archiveSection" id="newsletter-archive">
-          <div className="sectionHeading">
-            {/* <span>Newsletter Archive</span> */}
-
-            <h2>Browse All Editions</h2>
-
-            {/* <p>
-              Discover our monthly publications featuring academic excellence,
-              placement achievements, technical events, faculty contributions,
-              student accomplishments and departmental milestones.
-            </p> */}
-          </div>
-
-          {/*=================================
-            NO SEARCH RESULTS
-            =================================*/}
-
-          {filteredNewsletters.length === 0 && (
+        {!loading && !error && featuredNewsletter && (
+          <section className="featuredSection">
             <div className="sectionHeading">
-              <h3>No newsletters found</h3>
+              <span>LATEST EDITION</span>
 
-              <p>Try searching for another month or year.</p>
+              <h2>Featured Newsletter</h2>
             </div>
-          )}
 
-          {/*=================================
-            NEWSLETTER GRID
-            =================================*/}
+            <div className="featuredCard">
+              <div className="featuredImage">
+                <FaFilePdf />
 
-          <div className="newsletterGrid">
-            {filteredNewsletters.map((item) => (
-              <div className="newsletterCard" key={item._id || item.id}>
-                {/*=================================
-                  PDF DISPLAY
+                <span>
+                  {featuredNewsletter.month}
+                  <br />
+                  {featuredNewsletter.year}
+                </span>
+              </div>
 
-                  NO COVER PHOTO
-                  =================================*/}
+              <div className="featuredContent">
+                <h5>
+                  {featuredNewsletter.month} {featuredNewsletter.year}
+                </h5>
 
-                <div className="newsletterCover">
-                  <FaFilePdf />
+                <h2>{featuredNewsletter.title}</h2>
 
-                  <div className="monthBadge">{item.month}</div>
-                </div>
+                <p>{featuredNewsletter.description}</p>
 
-                {/*=================================
-                  NEWSLETTER CONTENT
-                  =================================*/}
+                <div className="featuredButtons">
+                  <a
+                    href={featuredNewsletter.drive}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="readButton"
+                  >
+                    <FaBookOpen />
+                    Read Online
+                  </a>
 
-                <div className="newsletterContent">
-                  <div className="newsletterDate">
-                    <FaCalendarAlt />
-                    {item.month} {item.year}
-                  </div>
-
-                  <h3>{item.title}</h3>
-
-                  <p>{item.description}</p>
-
-                  {/*=================================
-                    ACTION BUTTONS
-                    =================================*/}
-
-                  <div className="newsletterActions">
-                    <a
-                      href={item.drive}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FaBookOpen />
-                      Read
-                    </a>
-
-                    <a
-                      href={item.drive}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FaDownload />
-                      Download
-                    </a>
-                  </div>
+                  <a
+                    href={featuredNewsletter.drive}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="downloadButton"
+                  >
+                    <FaDownload />
+                    Download
+                  </a>
                 </div>
               </div>
-            ))}
+            </div>
+          </section>
+        )}
+
+        {/*=====================================
+        NO NEWSLETTERS
+        =====================================*/}
+
+        {!loading && !error && newsletters.length === 0 && (
+          <section className="newsletterStatus">
+            <h3>No Newsletters Available</h3>
+            <p>There are currently no newsletters published.</p>
+          </section>
+        )}
+
+        {/*=====================================
+        NEWSLETTER ARCHIVE
+        =====================================*/}
+
+        {!loading && !error && newsletters.length > 0 && (
+          <section className="archiveSection" id="newsletter-archive">
+            <div className="sectionHeading">
+              <span>ALL EDITIONS</span>
+
+              <h2>Browse Newsletter Archive</h2>
+            </div>
+
+            {filteredNewsletters.length === 0 && (
+              <div className="noSearchResults">
+                <h3>No newsletters found</h3>
+
+                <p>Try searching for another month or year.</p>
+              </div>
+            )}
+
+            <div className="newsletterGrid">
+              {filteredNewsletters.map((item) => (
+                <div className="newsletterCard" key={item._id || item.id}>
+                  <div className="newsletterCover">
+                    <FaFilePdf />
+
+                    <div className="monthBadge">{item.month}</div>
+                  </div>
+
+                  <div className="newsletterContent">
+                    <div className="newsletterDate">
+                      <FaCalendarAlt />
+                      {item.month} {item.year}
+                    </div>
+
+                    <h3>{item.title}</h3>
+
+                    <p>{item.description}</p>
+
+                    <div className="newsletterActions">
+                      <a
+                        href={item.drive}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cardReadButton"
+                      >
+                        <FaBookOpen />
+                        Read
+                      </a>
+
+                      <a
+                        href={item.drive}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cardDownloadButton"
+                      >
+                        <FaDownload />
+                        Download
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/*=====================================
+        CALL TO ACTION
+        =====================================*/}
+
+        <section className="newsletterCTA">
+          <div className="ctaBox">
+            <FaFilePdf className="ctaIcon" />
+
+            <h2>Never Miss a Newsletter</h2>
+
+            <p>
+              Explore every monthly edition and stay updated with department
+              achievements, research, placements, workshops and student success
+              stories.
+            </p>
           </div>
         </section>
-      )}
-
-      {/*=====================================
-      CALL TO ACTION
-      =====================================*/}
-
-      <section className="newsletterCTA">
-        <div className="ctaBox">
-          <FaFilePdf className="ctaIcon" />
-
-          <h2>Never Miss a Newsletter</h2>
-
-          <p>
-            Explore every monthly edition and stay updated with department
-            achievements, research, placements, workshops and student success
-            stories.
-          </p>
-        </div>
-      </section>
+      </div>
     </div>
   );
 };
