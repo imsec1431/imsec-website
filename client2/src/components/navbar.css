@@ -323,25 +323,25 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 4px;
+  gap: 5px;
   margin-left: 0;
   flex-shrink: 0;
 }
 
 .social-icons .social-icon,
 .social-icon {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   border-radius: 50%;
   color: #ffffff !important;
-  background: rgba(255, 255, 255, 0.12) !important;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.14) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22);
   box-shadow: none !important;
-  font-size: 9.5px;
+  font-size: 12.5px;
   text-decoration: none;
   transition: all 0.25s ease;
 }
@@ -948,9 +948,9 @@
   }
 
   .social-icon {
-    width: 20px;
-    height: 20px;
-    font-size: 10px;
+    width: 26px;
+    height: 26px;
+    font-size: 13px;
   }
 }
 
@@ -979,9 +979,9 @@
   }
 
   .social-icon {
-    width: 20px;
-    height: 20px;
-    font-size: 9.5px;
+    width: 25px;
+    height: 25px;
+    font-size: 12.5px;
   }
 
   .navbar-dark-blue .nav-link,
@@ -1030,13 +1030,13 @@
   }
 
   .social-icons {
-    gap: 3px;
+    gap: 4px;
   }
 
   .social-icon {
-    width: 19px;
-    height: 19px;
-    font-size: 9px;
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
   }
 
   .navbar-dark-blue .nav-link,
