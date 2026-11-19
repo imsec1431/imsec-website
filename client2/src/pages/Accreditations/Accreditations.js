@@ -61,7 +61,8 @@ const Accreditations = () => {
     return (
       <div className="public-accreditations-page">
         <div className="public-accreditations-loading">
-          Loading Accreditations...
+          <div className="public-accreditations-spinner" />
+          <p>Loading Accreditations...</p>
         </div>
       </div>
     );
@@ -74,7 +75,9 @@ const Accreditations = () => {
   if (error) {
     return (
       <div className="public-accreditations-page">
-        <div className="public-accreditations-error">{error}</div>
+        <div className="public-accreditations-error">
+          <p>{error}</p>
+        </div>
       </div>
     );
   }
@@ -102,28 +105,18 @@ const Accreditations = () => {
       ===================================================== */}
 
       <section className="public-accreditations-hero">
-        <div className="public-accreditations-hero-overlay" />
-
         <div className="public-accreditations-container">
           <div className="public-accreditations-hero-content">
             <span className="public-accreditations-eyebrow">
               INSTITUTIONAL RECOGNITION
             </span>
 
-            <h1>{data.title}</h1>
-
-            <div className="public-accreditations-gold-line" />
+            <h1>{data.title || "Accreditations"}</h1>
 
             <p>
               {data.description ||
                 "Institutional accreditations and recognitions of IMSEC."}
             </p>
-
-            <div className="public-accreditations-breadcrumb">
-              Home
-              <span>/</span>
-              Accreditations
-            </div>
           </div>
         </div>
       </section>
