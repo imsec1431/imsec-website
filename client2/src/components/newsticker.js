@@ -65,7 +65,7 @@ const NewsTicker = () => {
         }
 
         .ticker-label{
-          background:#1b4568;
+          background:#002147;
           color:#fff;
           min-width:180px;
           height:45px;
@@ -104,7 +104,7 @@ const NewsTicker = () => {
 
           margin-right:80px;
 
-          color:#1b4568;
+          color:#002147;
 
           font-weight:600;
 
@@ -114,7 +114,7 @@ const NewsTicker = () => {
         }
 
         .ticker-item:hover{
-          color:#c99508;
+          color:#fdb913;
           text-decoration:underline;
         }
 
@@ -201,7 +201,7 @@ const NewsTicker = () => {
 
           padding:15px 20px;
 
-          background:#1b4568;
+          background:#002147;
 
           color:#fff;
         }
@@ -243,7 +243,7 @@ const NewsTicker = () => {
 
         .news-modal-news-title{
 
-          color:#1b4568;
+          color:#002147;
 
           font-size:22px;
 
@@ -276,7 +276,7 @@ const NewsTicker = () => {
 
           padding:9px 18px;
 
-          background:#1b4568;
+          background:#002147;
 
           color:#fff;
 
@@ -291,7 +291,7 @@ const NewsTicker = () => {
 
         .news-view-button:hover{
 
-          background:#12334e;
+          background:#001733;
 
           color:#fff;
         }
