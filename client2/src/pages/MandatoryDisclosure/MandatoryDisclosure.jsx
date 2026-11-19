@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Container, Button, Spinner, Alert } from "react-bootstrap";
+import { Alert } from "react-bootstrap";
+import { FaFilePdf, FaDownload } from "react-icons/fa";
 
 import { getMandatoryDisclosure } from "../../services/mandatoryDisclosureService";
 
@@ -41,71 +42,105 @@ const MandatoryDisclosure = () => {
 
   return (
     <div className="mandatory-disclosure-page">
-      <Container className="py-5">
-        {/* PAGE TITLE */}
-        <div className="mandatory-disclosure-heading">
-          <h1>Mandatory Disclosure</h1>
+      {/* =========================================
+          HERO
+      ========================================= */}
+
+      <section className="mandatoryHero">
+        <div className="mandatoryHeroContainer">
+          <div className="mandatoryHeroContent">
+            <span className="mandatoryHeroTag">STATUTORY DISCLOSURES</span>
+
+            <h1>Mandatory Disclosure</h1>
+
+            <p>
+              Statutory disclosures, approvals, regulatory reports, and
+              institutional documentation as per regulatory requirements.
+            </p>
+          </div>
         </div>
+      </section>
 
-        {/* LOADING */}
-        {loading && (
-          <div className="text-center py-5">
-            <Spinner animation="border" />
+      {/* =========================================
+          CONTENT SECTION
+      ========================================= */}
+
+      <section className="mandatoryContentSection">
+        <div className="mandatoryContainer">
+          <div className="mandatorySectionHeading">
+            <span>OFFICIAL DOCUMENTS</span>
+
+            <h2>Statutory &amp; Regulatory Disclosures</h2>
           </div>
-        )}
 
-        {/* ERROR */}
-        {!loading && error && <Alert variant="danger">{error}</Alert>}
+          {/* LOADING */}
+          {loading && (
+            <div className="mandatoryLoading">
+              <div className="mandatorySpinner" />
+              <p>Loading Mandatory Disclosure documents...</p>
+            </div>
+          )}
 
-        {/* TABLE */}
-        {!loading && !error && (
-          <div className="mandatory-disclosure-table-wrapper">
-            {disclosures.length === 0 ? (
-              <div className="text-center py-5 text-muted">
-                No disclosure documents are currently available.
-              </div>
-            ) : (
-              <table className="mandatory-disclosure-table">
-                <thead>
-                  <tr>
-                    <th className="serial-column">S. No.</th>
+          {/* ERROR */}
+          {!loading && error && (
+            <Alert variant="danger" className="mandatoryAlert">
+              {error}
+            </Alert>
+          )}
 
-                    <th>Title</th>
+          {/* TABLE */}
+          {!loading && !error && (
+            <div className="mandatoryTableWrapper">
+              {disclosures.length === 0 ? (
+                <div className="mandatoryEmpty">
+                  <FaFilePdf className="emptyIcon" />
+                  <h3>No Documents Available</h3>
+                  <p>No disclosure documents are currently published.</p>
+                </div>
+              ) : (
+                <div className="table-responsive">
+                  <table className="mandatoryTable">
+                    <thead>
+                      <tr>
+                        <th className="serialColumn">S. No.</th>
+                        <th>Document Title</th>
+                        <th className="downloadColumn">Download</th>
+                      </tr>
+                    </thead>
 
-                    <th className="download-column">Download</th>
-                  </tr>
-                </thead>
+                    <tbody>
+                      {disclosures.map((disclosure, index) => (
+                        <tr key={disclosure._id}>
+                          <td className="serialColumn">{index + 1}</td>
 
-                <tbody>
-                  {disclosures.map((disclosure, index) => (
-                    <tr key={disclosure._id}>
-                      <td className="serial-column">{index + 1}</td>
+                          <td className="titleCell">
+                            <span className="titleText">
+                              {disclosure.title}
+                            </span>
+                          </td>
 
-                      <td className="disclosure-title-cell">
-                        {disclosure.title}
-                      </td>
-
-                      <td className="download-column">
-                        <Button
-                          as="a"
-                          href={disclosure.pdfLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          download
-                          variant="dark"
-                          className="mandatory-download-btn"
-                        >
-                          Download PDF
-                        </Button>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            )}
-          </div>
-        )}
-      </Container>
+                          <td className="downloadColumn">
+                            <a
+                              href={disclosure.pdfLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              download
+                              className="mandatoryDownloadBtn"
+                            >
+                              <FaDownload className="btnIcon" />
+                              Download PDF
+                            </a>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      </section>
     </div>
   );
 };

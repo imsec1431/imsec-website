@@ -1,92 +1,319 @@
+/* =========================================================
+   MANDATORY DISCLOSURE - INSTITUTIONAL REDESIGN
+   ========================================================= */
+
 .mandatory-disclosure-page {
   width: 100%;
-  min-height: 60vh;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #172033;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  padding-bottom: 55px;
+}
+
+/* =========================================================
+   CONTAINER (90% FLUID)
+   ========================================================= */
+
+.mandatoryContainer,
+.mandatoryHeroContainer {
+  width: 90% !important;
+  max-width: 90% !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+/* =========================================================
+   HERO (SOLID NAVY INSTITUTIONAL HEADER)
+   ========================================================= */
+
+.mandatoryHero {
+  position: relative;
+  width: 100%;
+  padding: 38px 0 42px;
+  margin-bottom: 24px;
+  background: #002147;
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
+  color: #ffffff;
+  text-align: left;
+}
+
+.mandatoryHeroContent {
+  position: relative;
+  z-index: 2;
+  padding: 0;
+}
+
+.mandatoryHeroTag {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #fdb913;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.mandatoryHeroContent h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(26px, 3.5vw, 36px);
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  font-weight: 750;
+}
+
+.mandatoryHeroContent p {
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14.5px;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+/* =========================================================
+   CONTENT SECTION
+   ========================================================= */
+
+.mandatoryContentSection {
+  padding: 16px 0 40px;
   background: #ffffff;
 }
 
-.mandatory-disclosure-heading {
-  text-align: center;
-  margin-bottom: 35px;
+.mandatorySectionHeading {
+  margin: 0 0 24px;
+  text-align: left;
 }
 
-.mandatory-disclosure-heading h1 {
+.mandatorySectionHeading > span {
+  display: block;
+  margin-bottom: 4px;
+  color: #b28a16;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.mandatorySectionHeading h2 {
   margin: 0;
-  color: #0a2e5c;
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  font-weight: 800;
+  color: #002147;
+  font-size: 26px;
+  font-weight: 750;
+  line-height: 1.25;
 }
 
-.mandatory-disclosure-table-wrapper {
-  width: 100%;
-  overflow-x: auto;
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.mandatoryTableWrapper {
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 33, 71, 0.04);
+  background: #ffffff;
 }
 
-.mandatory-disclosure-table {
+.mandatoryTable {
   width: 100%;
   border-collapse: collapse;
-  background: #ffffff;
-  border: 1px solid #dee2e6;
+  margin-bottom: 0;
 }
 
-.mandatory-disclosure-table th {
-  background: #0a2e5c;
+.mandatoryTable thead th {
+  background: #002147;
   color: #ffffff;
-  padding: 16px 18px;
-  font-size: 15px;
-  font-weight: 700;
-  text-align: left;
-  border: 1px solid #0a2e5c;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 14px 18px;
+  border: none;
 }
 
-.mandatory-disclosure-table td {
-  padding: 16px 18px;
-  border: 1px solid #dee2e6;
-  color: #333333;
+.mandatoryTable tbody td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 13.5px;
+  color: #334155;
   vertical-align: middle;
 }
 
-.mandatory-disclosure-table tbody tr:nth-child(even) {
-  background: #f8f9fa;
+.mandatoryTable tbody tr:last-child td {
+  border-bottom: none;
 }
 
-.mandatory-disclosure-table tbody tr:hover {
-  background: #f1f4f8;
+.mandatoryTable tbody tr:hover {
+  background-color: #f8fafc;
 }
 
-.serial-column {
-  width: 100px;
+.serialColumn {
+  width: 90px;
+  text-align: center !important;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.downloadColumn {
+  width: 220px;
   text-align: center !important;
 }
 
-.download-column {
-  width: 200px;
-  text-align: center !important;
-}
-
-.disclosure-title-cell {
+.titleCell {
   font-weight: 600;
-  color: #0a2e5c !important;
 }
 
-.mandatory-download-btn {
-  min-width: 145px;
-  padding: 9px 18px;
-  border-radius: 5px;
+.titleCell .titleText {
+  color: #002147;
+  font-size: 14px;
+}
+
+/* =========================================================
+   DOWNLOAD BUTTON
+   ========================================================= */
+
+.mandatoryDownloadBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 0 16px;
+  border-radius: 7px;
+  background: #002147;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-size: 12.5px;
   font-weight: 600;
-  text-decoration: none;
+  border: 1px solid #002147;
+  transition: all 0.2s ease;
 }
 
-@media (max-width: 576px) {
-  .mandatory-disclosure-heading {
-    margin-bottom: 25px;
+.mandatoryDownloadBtn:hover {
+  background: #0b3266;
+  border-color: #0b3266;
+  box-shadow: 0 4px 10px rgba(0, 33, 71, 0.2);
+  transform: translateY(-1px);
+}
+
+.mandatoryDownloadBtn .btnIcon {
+  font-size: 12px;
+  color: #fdb913;
+}
+
+/* =========================================================
+   EMPTY & LOADING
+   ========================================================= */
+
+.mandatoryEmpty {
+  padding: 50px 20px;
+  text-align: center;
+  background: #f8fafc;
+}
+
+.mandatoryEmpty .emptyIcon {
+  font-size: 42px;
+  color: #b28a16;
+  margin-bottom: 14px;
+}
+
+.mandatoryEmpty h3 {
+  margin: 0 0 6px;
+  color: #002147;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.mandatoryEmpty p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13.5px;
+}
+
+.mandatoryLoading {
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.mandatorySpinner {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 14px;
+  border: 3px solid #e2e8f0;
+  border-top-color: #002147;
+  border-radius: 50%;
+  animation: mandatorySpin 0.8s linear infinite;
+}
+
+@keyframes mandatorySpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.mandatoryAlert {
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 850px) {
+  .mandatoryContainer,
+  .mandatoryHeroContainer {
+    width: 94% !important;
+    max-width: 94% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .mandatoryContainer,
+  .mandatoryHeroContainer {
+    width: calc(100% - 24px) !important;
+    max-width: calc(100% - 24px) !important;
   }
 
-  .mandatory-disclosure-table {
-    min-width: 650px;
+  .mandatoryHero {
+    padding: 30px 0 34px;
+    margin-bottom: 18px;
   }
 
-  .mandatory-disclosure-table th,
-  .mandatory-disclosure-table td {
-    padding: 12px;
+  .mandatoryHeroContent h1 {
+    font-size: 24px;
+  }
+
+  .mandatoryHeroContent p {
+    font-size: 13.5px;
+  }
+
+  .mandatoryContentSection {
+    padding: 12px 0 30px;
+  }
+
+  .mandatorySectionHeading h2 {
+    font-size: 22px;
+  }
+
+  .mandatoryTable thead th,
+  .mandatoryTable tbody td {
+    padding: 10px 12px;
+    font-size: 12.5px;
+  }
+
+  .mandatoryDownloadBtn {
+    padding: 0 12px;
+    font-size: 11.5px;
+    min-height: 34px;
   }
 }
