@@ -1,4 +1,18 @@
 /* =====================================
+   Vision & Mission Page Wrapper
+===================================== */
+
+.vm-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #172033;
+  overflow-x: hidden;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  padding-bottom: 55px;
+}
+
+/* =====================================
    Vision & Mission Page
 ===================================== */
 
@@ -6,23 +20,29 @@
    Vision & Mission Hero (Clean Solid Footer Theme #002147)
 ===================================== */
 
+/* =====================================
+   FIRST SECTION: HERO (FULL WIDTH)
+===================================== */
+
 .vm-hero {
   position: relative;
+  width: 100% !important;
   min-height: 180px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 
-  text-align: center;
+  text-align: center !important;
 
-  color: #fff;
+  color: #ffffff !important;
 
   background: #002147 !important;
   background-image: none !important;
 
-  border-bottom: 2px solid #fdb913;
-  padding: 30px 15px;
+  border-bottom: 2px solid #fdb913 !important;
+  padding: 35px 20px !important;
+  margin-bottom: 20px;
 }
 
 .vm-hero::before,
@@ -36,6 +56,9 @@
 .vm-hero .container {
   position: relative;
   z-index: 2;
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
 }
 
 .vm-hero h1 {
@@ -63,19 +86,25 @@
 }
 
 /* ==========================================
-   Section Spacing (Reduced Gaps)
+   ALL SECTIONS EXCEPT HERO (90% WIDTH)
 ==========================================*/
 
 .vm-intro-section,
 .vision-section,
 .mission-section,
 .vm-values-section,
-.vm-philosophy-section {
-  padding: 38px 0;
+.vm-philosophy-section,
+.vm-cta-section,
+.cta-section {
+  width: 90% !important;
+  max-width: 90% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
 }
 
 /* ==========================================
-   Content Width: 90% for all sections except Hero
+   INNER CONTAINER (FILLS 100% OF 90% SECTION)
 ==========================================*/
 
 .vm-intro-section .container,
@@ -83,23 +112,53 @@
 .mission-section .container,
 .vm-values-section .container,
 .vm-philosophy-section .container,
-.vm-cta-section .container {
-  width: 90% !important;
-  max-width: 90% !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+.vm-cta-section .container,
+.cta-section .container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box !important;
 }
 
-@media (max-width: 768px) {
-  .vm-intro-section .container,
-  .vision-section .container,
-  .mission-section .container,
-  .vm-values-section .container,
-  .vm-philosophy-section .container,
-  .vm-cta-section .container {
-    width: 92% !important;
-    max-width: 92% !important;
-  }
+/* ==========================================
+   SECTION SPACING & CARD STYLES
+==========================================*/
+
+.vm-intro-section {
+  background: #ffffff;
+  padding: 24px 0 20px !important;
+}
+
+.vision-section {
+  background: #ffffff;
+  padding: 24px 0 28px !important;
+}
+
+.mission-section {
+  margin-top: 18px !important;
+  margin-bottom: 24px !important;
+  padding: 28px 24px !important;
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 2px 8px rgba(20, 43, 75, 0.04) !important;
+}
+
+.vm-values-section {
+  background: #ffffff;
+  padding: 24px 0 28px !important;
+}
+
+.vm-philosophy-section {
+  margin-top: 18px !important;
+  margin-bottom: 24px !important;
+  padding: 32px 24px !important;
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 2px 8px rgba(20, 43, 75, 0.04) !important;
 }
 
 /* ==========================================
@@ -339,10 +398,15 @@
 .cta-section.vm-cta-section,
 .cta-section {
   background: #002147 !important;
-  color: #fff !important;
-  padding: 42px 0 46px !important;
-  border-top: 3px solid #fdb913 !important;
-  margin-bottom: 25px !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  padding: 36px 28px !important;
+  margin-top: 24px !important;
+  margin-bottom: 35px !important;
+  border: none !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12) !important;
+  text-align: center !important;
 }
 
 .vm-cta-section h2,
@@ -459,5 +523,55 @@ img:hover {
   .vm-cta-section h2,
   .cta-section h2 {
     font-size: 24px !important;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE (90% WIDTH SYSTEM)
+==========================================*/
+
+@media (max-width: 850px) {
+  .vm-intro-section,
+  .vision-section,
+  .mission-section,
+  .vm-values-section,
+  .vm-philosophy-section,
+  .vm-cta-section,
+  .cta-section {
+    width: 94% !important;
+    max-width: 94% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .vm-intro-section,
+  .vision-section,
+  .mission-section,
+  .vm-values-section,
+  .vm-philosophy-section,
+  .vm-cta-section,
+  .cta-section {
+    width: calc(100% - 24px) !important;
+    max-width: calc(100% - 24px) !important;
+  }
+
+  .mission-section {
+    padding: 20px 14px !important;
+    margin-top: 14px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .vm-philosophy-section {
+    padding: 24px 14px !important;
+    margin-top: 16px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .vm-cta-section,
+  .cta-section.vm-cta-section,
+  .cta-section {
+    padding: 28px 18px !important;
+    margin-top: 18px !important;
+    margin-bottom: 25px !important;
   }
 }

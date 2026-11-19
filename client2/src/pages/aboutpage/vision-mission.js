@@ -136,7 +136,7 @@ const VisionMission = () => {
   };
 
   return (
-    <>
+    <div className="vm-page">
       {/* =====================================================
           HERO
       ====================================================== */}
@@ -420,7 +420,7 @@ const VisionMission = () => {
           </p>
         </Container>
       </section>
-    </>
+    </div>
   );
 };
 
