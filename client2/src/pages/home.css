@@ -1402,10 +1402,10 @@
   }
 
   .homepage-ticker-wrapper {
-    width: 90% !important;
-    max-width: 90% !important;
-    margin: 5px auto 0 auto !important;
+    margin-top: 5px !important;
+    margin-bottom: 0 !important;
     padding: 0 !important;
+    width: 100% !important;
   }
 
   .quick-access-wrapper {
@@ -1890,17 +1890,17 @@
 
 /* --- HOMEPAGE NEWS TICKER (BETWEEN HERO AND QUICK ACCESS) --- */
 .homepage-ticker-wrapper {
-  width: 90% !important;
-  max-width: 90% !important;
-  margin: 5px auto 0 auto !important;
+  margin-top: 5px;
+  margin-bottom: 0;
   position: relative;
   z-index: 20;
+  width: 100%;
 }
 
 .homepage-ticker-wrapper .ticker-container {
   border: 1px solid #dce5ee !important;
   border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0, 33, 71, 0.08);
+  overflow: hidden;
 }
 
 /* --- FLOATING QUICK ACCESS BAR (8 ACTION CARDS) --- */

@@ -486,7 +486,9 @@ const Home = () => {
 
       {/* NEWS TICKER (DISPLAYED AFTER HERO SLIDER ON HOMEPAGE) */}
       <div className="homepage-ticker-wrapper">
-        <NewsTicker />
+        <Container fluid className="px-lg-5">
+          <NewsTicker />
+        </Container>
       </div>
 
       {/* QUICK ACCESS BAR (8 ACTION CARDS - DISPLAYED AFTER NEWS TICKER) */}
