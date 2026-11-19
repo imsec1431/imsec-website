@@ -78,17 +78,17 @@ const Career = () => {
       ================================================= */}
 
       <section className="careerHero">
-        <div className="careerHeroOverlay" />
+        <div className="careerHeroContainer">
+          <div className="careerHeroContent">
+            <span className="careerHeroLabel">CAREERS AT IMSEC</span>
 
-        <div className="careerHeroContent">
-          <span className="careerHeroLabel">CAREERS AT IMSEC</span>
+            <h1>Build Your Future With IMSEC</h1>
 
-          <h1>Build Your Future With IMSEC</h1>
-
-          <p>
-            Join our academic and professional community and contribute to
-            excellence in education.
-          </p>
+            <p>
+              Join our academic and professional community and contribute to
+              excellence in education.
+            </p>
+          </div>
         </div>
       </section>
 
