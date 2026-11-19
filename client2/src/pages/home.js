@@ -481,89 +481,89 @@ const Home = () => {
               </Carousel.Item>
             ))}
           </Carousel>
-
-          {/* FLOATING QUICK ACCESS BAR (8 ACTION CARDS OVERLAPPING HERO) */}
-          <div className="quick-access-wrapper">
-            <Container fluid className="px-lg-5">
-              <div className="quick-access-bar">
-                <Link to="/Admissions/ApplyforAdmission" className="quick-access-item">
-                  <div className="quick-access-icon-wrap">
-                    <FaGraduationCap />
-                  </div>
-                  <span className="quick-access-label">Admission<br />Enquiry</span>
-                </Link>
-
-                <div className="quick-access-divider" />
-
-                <Link to="/Academics/courses" className="quick-access-item">
-                  <div className="quick-access-icon-wrap">
-                    <FaBookOpen />
-                  </div>
-                  <span className="quick-access-label">Explore<br />Programmes</span>
-                </Link>
-
-                <div className="quick-access-divider" />
-
-                <Link to="/Placements/PlacementsRecords" className="quick-access-item">
-                  <div className="quick-access-icon-wrap">
-                    <FaBriefcase />
-                  </div>
-                  <span className="quick-access-label">Placement<br />Highlights</span>
-                </Link>
-
-                <div className="quick-access-divider" />
-
-                <Link to="/coe/industry-academics-collaboration" className="quick-access-item">
-                  <div className="quick-access-icon-wrap">
-                    <FaHandshake />
-                  </div>
-                  <span className="quick-access-label">Industry<br />Collaborations</span>
-                </Link>
-
-                <div className="quick-access-divider" />
-
-                <Link to="/coe/MOUs" className="quick-access-item">
-                  <div className="quick-access-icon-wrap">
-                    <FaBuildingColumns />
-                  </div>
-                  <span className="quick-access-label">Centres of<br />Excellence</span>
-                </Link>
-
-                <div className="quick-access-divider" />
-
-                <Link to="/Academics/AcademicCalendar" className="quick-access-item">
-                  <div className="quick-access-icon-wrap">
-                    <FaCalendarDays />
-                  </div>
-                  <span className="quick-access-label">Academic<br />Calendar</span>
-                </Link>
-
-                <div className="quick-access-divider" />
-
-                <Link to="/Announcements" className="quick-access-item">
-                  <div className="quick-access-icon-wrap">
-                    <FaBullhorn />
-                  </div>
-                  <span className="quick-access-label">Notices &amp;<br />Announcements</span>
-                </Link>
-
-                <div className="quick-access-divider" />
-
-                <Link to="/iqac/naac" className="quick-access-item">
-                  <div className="quick-access-icon-wrap">
-                    <FaAward />
-                  </div>
-                  <span className="quick-access-label">NBA / NAAC<br />Accreditation</span>
-                </Link>
-              </div>
-            </Container>
-          </div>
         </div>
       )}
 
-      {/* NEWS TICKER (DISPLAYED AFTER FIRST SECTION ON HOMEPAGE) */}
-      <div className="homepage-ticker-wrapper mt-3">
+      {/* NEWS TICKER (DISPLAYED AFTER HERO SLIDER ON HOMEPAGE) */}
+      <div className="homepage-ticker-wrapper">
         <NewsTicker />
+      </div>
+
+      {/* QUICK ACCESS BAR (8 ACTION CARDS - DISPLAYED AFTER NEWS TICKER) */}
+      <div className="quick-access-wrapper">
+        <Container fluid className="px-lg-5">
+          <div className="quick-access-bar">
+            <Link to="/Admissions/ApplyforAdmission" className="quick-access-item">
+              <div className="quick-access-icon-wrap">
+                <FaGraduationCap />
+              </div>
+              <span className="quick-access-label">Admission<br />Enquiry</span>
+            </Link>
+
+            <div className="quick-access-divider" />
+
+            <Link to="/Academics/courses" className="quick-access-item">
+              <div className="quick-access-icon-wrap">
+                <FaBookOpen />
+              </div>
+              <span className="quick-access-label">Explore<br />Programmes</span>
+            </Link>
+
+            <div className="quick-access-divider" />
+
+            <Link to="/Placements/PlacementsRecords" className="quick-access-item">
+              <div className="quick-access-icon-wrap">
+                <FaBriefcase />
+              </div>
+              <span className="quick-access-label">Placement<br />Highlights</span>
+            </Link>
+
+            <div className="quick-access-divider" />
+
+            <Link to="/coe/industry-academics-collaboration" className="quick-access-item">
+              <div className="quick-access-icon-wrap">
+                <FaHandshake />
+              </div>
+              <span className="quick-access-label">Industry<br />Collaborations</span>
+            </Link>
+
+            <div className="quick-access-divider" />
+
+            <Link to="/coe/MOUs" className="quick-access-item">
+              <div className="quick-access-icon-wrap">
+                <FaBuildingColumns />
+              </div>
+              <span className="quick-access-label">Centres of<br />Excellence</span>
+            </Link>
+
+            <div className="quick-access-divider" />
+
+            <Link to="/Academics/AcademicCalendar" className="quick-access-item">
+              <div className="quick-access-icon-wrap">
+                <FaCalendarDays />
+              </div>
+              <span className="quick-access-label">Academic<br />Calendar</span>
+            </Link>
+
+            <div className="quick-access-divider" />
+
+            <Link to="/Announcements" className="quick-access-item">
+              <div className="quick-access-icon-wrap">
+                <FaBullhorn />
+              </div>
+              <span className="quick-access-label">Notices &amp;<br />Announcements</span>
+            </Link>
+
+            <div className="quick-access-divider" />
+
+            <Link to="/iqac/naac" className="quick-access-item">
+              <div className="quick-access-icon-wrap">
+                <FaAward />
+              </div>
+              <span className="quick-access-label">NBA / NAAC<br />Accreditation</span>
+            </Link>
+          </div>
+        </Container>
       </div>
 
       {/* TWO-COLUMN SECTION: OUR PROGRAMMES & WHY IMSEC? */}

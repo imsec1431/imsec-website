@@ -1864,7 +1864,8 @@
 
 /* --- FLOATING QUICK ACCESS BAR (8 ACTION CARDS) --- */
 .quick-access-wrapper {
-  margin-top: -38px;
+  margin-top: 20px;
+  margin-bottom: 12px;
   position: relative;
   z-index: 25;
   width: 100%;
