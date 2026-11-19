@@ -912,38 +912,30 @@ const Home = () => {
         style={{
           backgroundColor: "#002147",
           background: "#002147",
-          padding: "50px 0",
+          padding: "24px 0 28px",
         }}
       >
         <Container>
-          <div className="text-center mb-4">
-            <h6
-              style={{
-                color: "#FDB913",
-                letterSpacing: "2px",
-                fontWeight: "700",
-              }}
-            >
-              {/* ACADEMIC EXCELLENCE */}
-            </h6>
-
+          <div className="text-center mb-3">
             <h2
               style={{
                 color: "#ffffff",
                 fontWeight: "800",
-                fontSize: "clamp(1.85rem, 3.6vw, 2.65rem)",
+                fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
                 lineHeight: "1.2",
+                margin: 0,
               }}
             >
-              University Rank Holders<span style={{ color: "#FDB913" }}></span>
+              University Rank Holders
             </h2>
 
             <p
               style={{
                 color: "#cbd5e1",
                 maxWidth: "700px",
-                margin: "10px auto 0",
+                margin: "6px auto 0",
                 fontWeight: "500",
+                fontSize: "14px",
               }}
             >
               Celebrating students who secured top ranks in AKTU University.
