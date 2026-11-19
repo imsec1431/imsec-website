@@ -5,6 +5,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import axios from "axios";
 
 import HomepagePopup from "../components/HomepagePopup/HomepagePopup";
+import NewsTicker from "../components/newsticker";
 
 import { getUniversityRankHolders } from "../services/universityRankHolderService";
 import { getAlumni } from "../services/alumniService";
@@ -559,6 +560,11 @@ const Home = () => {
           </div>
         </div>
       )}
+
+      {/* NEWS TICKER (DISPLAYED AFTER FIRST SECTION ON HOMEPAGE) */}
+      <div className="homepage-ticker-wrapper mt-3">
+        <NewsTicker />
+      </div>
 
       {/* TWO-COLUMN SECTION: OUR PROGRAMMES & WHY IMSEC? */}
       <section className="programmes-why-section py-4">

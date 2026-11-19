@@ -143,12 +143,13 @@ import AdminApp from "./admin/AdminApp";
 function Layout() {
   const location = useLocation();
   const isAdmin = location.pathname.startsWith("/imsec-control-center");
+  const isHomePage = location.pathname === "/";
 
   return (
     <>
       <ScrollToTop />
       {!isAdmin && <NavigationBar />}
-      {!isAdmin && <NewsTicker />}
+      {!isAdmin && !isHomePage && <NewsTicker />}
 
       <Routes>
         {/* Admin Route */}
