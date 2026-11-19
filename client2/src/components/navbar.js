@@ -328,16 +328,6 @@ const NavigationBar = () => {
                 >
                   Newsletter
                 </Nav.Link>
-
-                <span className="top-info-divider">|</span>
-
-                <Nav.Link
-                  as={Link}
-                  to="/about/ContactUs"
-                  onClick={handleNavClick}
-                >
-                  Contact Us
-                </Nav.Link>
               </div>
 
               {/* =================================================
@@ -368,6 +358,20 @@ const NavigationBar = () => {
               >
                 Virtual Tour
               </a>
+
+              <span className="top-info-divider">|</span>
+
+              {/* =================================================
+                  CONTACT US LINK
+              ================================================= */}
+              <Link
+                to="/about/ContactUs"
+                className="top-virtual-tour-link"
+                onClick={handleNavClick}
+                title="Contact Us"
+              >
+                Contact Us
+              </Link>
 
               {/* =================================================
                   SOCIAL ICONS
