@@ -452,7 +452,7 @@ const Home = () => {
       {loading ? (
         <div
           style={{
-            height: "75vh",
+            height: "58vh",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
