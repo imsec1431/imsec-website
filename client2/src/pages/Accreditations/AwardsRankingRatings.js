@@ -61,19 +61,23 @@ const AwardsRankingRatings = () => {
 
   if (loading) {
     return (
-      <div className="arr-loading">
-        <div className="arr-loader"></div>
-        <p>Loading information...</p>
+      <div className="arr-page">
+        <div className="arr-loading">
+          <div className="arr-loader"></div>
+          <p>Loading information...</p>
+        </div>
       </div>
     );
   }
 
   if (error) {
     return (
-      <div className="arr-error">
-        <h3>Unable to Load Information</h3>
-        <p>{error}</p>
-        <button onClick={loadData}>Try Again</button>
+      <div className="arr-page">
+        <div className="arr-error">
+          <h3>Unable to Load Information</h3>
+          <p>{error}</p>
+          <button onClick={loadData}>Try Again</button>
+        </div>
       </div>
     );
   }
@@ -92,9 +96,9 @@ const AwardsRankingRatings = () => {
     <div className="arr-page">
       {/* Hero */}
       <section className="arr-hero">
-        <div className="arr-hero-overlay">
-          <div className="container">
-            <span className="arr-eyebrow">Institutional Recognition</span>
+        <div className="arr-hero-container">
+          <div className="arr-hero-content">
+            <span className="arr-eyebrow">INSTITUTIONAL RECOGNITION</span>
 
             <h1>{data.title || "Awards, Rankings & Ratings"}</h1>
 
@@ -102,17 +106,18 @@ const AwardsRankingRatings = () => {
               {data.description ||
                 "Awards, rankings and ratings received by the institution."}
             </p>
-
-            <div className="arr-breadcrumb">
-              Home / Accreditations / Awards, Rankings & Ratings
-            </div>
           </div>
         </div>
       </section>
 
       {/* Content */}
       <section className="arr-content">
-        <div className="container">
+        <div className="arr-container">
+          <div className="arr-section-heading">
+            <span>HONOURS &amp; ACHIEVEMENTS</span>
+            <h2>Awards, Rankings &amp; Ratings</h2>
+          </div>
+
           {records.length === 0 ? (
             <div className="arr-empty">
               <FaAward />
