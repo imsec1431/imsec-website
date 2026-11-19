@@ -281,6 +281,12 @@ const NavigationBar = () => {
                   TOP LINKS
               ================================================= */}
               <div className="top-links">
+                <Nav.Link as={Link} to="/coe/MOUs" onClick={handleNavClick}>
+                  MoU
+                </Nav.Link>
+
+                <span className="top-info-divider">|</span>
+
                 <Nav.Link as={Link} to="/Alumni" onClick={handleNavClick}>
                   Alumni
                 </Nav.Link>
