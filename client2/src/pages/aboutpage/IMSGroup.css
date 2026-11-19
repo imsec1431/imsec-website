@@ -9,26 +9,16 @@
   color: #172033;
   overflow-x: hidden;
   font-family: "Poppins", "Segoe UI", sans-serif;
+  padding-bottom: 55px;
 }
 
 /* =========================================
-   CONTAINER
-========================================= */
-
-.ims-group-container {
-  width: 90%;
-  max-width: 90%;
-  margin: 0 auto;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* =========================================
-   HERO (SOLID FOOTER THEME #002147, NO GRADIENT)
+   FIRST SECTION: HERO (FULL WIDTH)
 ========================================= */
 
 .ims-group-hero {
   position: relative;
+  width: 100%;
   min-height: 180px;
   display: flex;
   align-items: center;
@@ -39,6 +29,7 @@
   border-bottom: 2px solid #fdb913;
   color: #ffffff;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .ims-group-hero-overlay {
@@ -79,11 +70,38 @@
 }
 
 /* =========================================
-   INTRODUCTION (COMPACT GAPS)
+   ALL SECTIONS EXCEPT HERO (90% WIDTH)
+========================================= */
+
+.ims-group-introduction,
+.ims-group-stats,
+.ims-group-institutions,
+.ims-group-cta {
+  width: 90% !important;
+  max-width: 90% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+}
+
+/* =========================================
+   INNER CONTAINER (FILLS 100% OF 90% SECTION)
+========================================= */
+
+.ims-group-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* =========================================
+   INTRODUCTION
 ========================================= */
 
 .ims-group-introduction {
-  padding: 32px 0 24px;
+  padding: 24px 0 20px !important;
   background: #ffffff;
 }
 
@@ -129,14 +147,17 @@
 }
 
 /* =========================================
-   STATS (COMPACT GAPS)
+   STATS (90% CARD LAYOUT)
 ========================================= */
 
 .ims-group-stats {
-  padding: 28px 0;
-  background: linear-gradient(135deg, #f8fafc, #f1f5f9);
-  border-top: 1px solid #e2e8f0;
-  border-bottom: 1px solid #e2e8f0;
+  margin-top: 16px !important;
+  margin-bottom: 24px !important;
+  padding: 24px !important;
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 2px 8px rgba(20, 43, 75, 0.04) !important;
 }
 
 .ims-group-stats-grid {
@@ -152,7 +173,9 @@
   background: #ffffff;
   text-align: center;
   box-shadow: 0 4px 15px rgba(20, 43, 75, 0.04);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .ims-group-stat-card:hover {
@@ -190,11 +213,11 @@
 }
 
 /* =========================================
-   INSTITUTIONS (COMPACT GAPS)
+   INSTITUTIONS
 ========================================= */
 
 .ims-group-institutions {
-  padding: 34px 0 38px;
+  padding: 24px 0 32px !important;
   background: #ffffff;
 }
 
@@ -214,7 +237,9 @@
   background: #ffffff;
   box-shadow: 0 4px 18px rgba(20, 43, 75, 0.05);
   overflow: hidden;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .ims-group-institution-card::before {
@@ -336,7 +361,9 @@
   font-size: 13px;
   font-weight: 700;
   text-decoration: none;
-  transition: color 0.2s ease, gap 0.2s ease;
+  transition:
+    color 0.2s ease,
+    gap 0.2s ease;
 }
 
 .ims-group-institution-link:hover {
@@ -349,15 +376,18 @@
 }
 
 /* =========================================
-   CTA (COMPACT GAPS WITH SOLID FOOTER THEME #002147)
+   CTA (90% CARD LAYOUT)
 ========================================= */
 
 .ims-group-cta {
-  padding: 42px 0 54px;
-  margin-bottom: 35px;
+  padding: 36px 28px !important;
+  margin-top: 24px !important;
+  margin-bottom: 35px !important;
   background: #002147 !important;
   background-image: none !important;
-  border-top: 3px solid #fdb913;
+  border: none !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12) !important;
   color: #ffffff;
 }
 
@@ -385,12 +415,13 @@
   font-size: clamp(24px, 3.2vw, 34px);
   line-height: 1.25;
   font-weight: 800;
+  color: #ffffff;
 }
 
 .ims-group-cta p {
   max-width: 700px;
   margin: 10px auto 0;
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 14.5px;
   line-height: 1.7;
 }
@@ -452,15 +483,27 @@
   }
 }
 
+@media (max-width: 850px) {
+  .ims-group-introduction,
+  .ims-group-stats,
+  .ims-group-institutions,
+  .ims-group-cta {
+    width: 94% !important;
+    max-width: 94% !important;
+  }
+}
+
 /* =========================================
    MOBILE
 ========================================= */
 
-@media (max-width: 650px) {
-  .ims-group-container {
-    width: 92%;
-    max-width: 92%;
-    padding: 0;
+@media (max-width: 600px) {
+  .ims-group-introduction,
+  .ims-group-stats,
+  .ims-group-institutions,
+  .ims-group-cta {
+    width: calc(100% - 24px) !important;
+    max-width: calc(100% - 24px) !important;
   }
 
   .ims-group-hero {
@@ -477,7 +520,7 @@
   }
 
   .ims-group-introduction {
-    padding: 24px 0 18px;
+    padding: 20px 0 16px !important;
   }
 
   .ims-group-intro-text {
@@ -485,7 +528,9 @@
   }
 
   .ims-group-stats {
-    padding: 22px 0;
+    padding: 16px 12px !important;
+    margin-top: 12px !important;
+    margin-bottom: 20px !important;
   }
 
   .ims-group-stats-grid {
@@ -513,7 +558,7 @@
   }
 
   .ims-group-institutions {
-    padding: 24px 0 28px;
+    padding: 20px 0 24px !important;
   }
 
   .ims-group-institution-card {
@@ -521,8 +566,9 @@
   }
 
   .ims-group-cta {
-    padding: 30px 0 42px;
-    margin-bottom: 25px;
+    padding: 28px 18px !important;
+    margin-top: 20px !important;
+    margin-bottom: 25px !important;
   }
 }
 
