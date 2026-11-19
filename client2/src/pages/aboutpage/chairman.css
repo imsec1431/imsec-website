@@ -12,6 +12,20 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* ===========================================
+   Chairman Page Wrapper
+=========================================== */
+
+.chairman-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #172033;
+  overflow-x: hidden;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  padding-bottom: 55px;
+}
+
 body {
   overflow-x: hidden;
   background: #ffffff;
@@ -62,8 +76,13 @@ Common Styles
 Hero Banner (Clean Solid Footer Theme #002147)
 ===========================================*/
 
+/*===========================================
+FIRST SECTION: HERO (FULL WIDTH)
+===========================================*/
+
 .chairman-hero {
   position: relative;
+  width: 100% !important;
   min-height: 180px;
 
   display: flex !important;
@@ -76,8 +95,9 @@ Hero Banner (Clean Solid Footer Theme #002147)
   background: #002147 !important;
   background-image: none !important;
 
-  border-bottom: 2px solid #fdb913;
-  padding: 30px 15px;
+  border-bottom: 2px solid #fdb913 !important;
+  padding: 35px 20px !important;
+  margin-bottom: 20px;
 }
 
 .chairman-hero::before,
@@ -90,6 +110,8 @@ Hero Banner (Clean Solid Footer Theme #002147)
 
 .chairman-hero .container {
   width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
@@ -152,7 +174,24 @@ Chairman Section (Reduced Gaps)
 ===========================================*/
 
 /* ==========================================
-   Content Width: 90% for all sections except Hero
+   ALL SECTIONS EXCEPT HERO (90% WIDTH)
+==========================================*/
+
+.chairman-wrapper,
+.principle-section,
+.quote-section,
+.chairman-cta-section,
+.director-cta-section,
+.cta-section {
+  width: 90% !important;
+  max-width: 90% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+}
+
+/* ==========================================
+   INNER CONTAINER (FILLS 100% OF 90% SECTION)
 ==========================================*/
 
 .chairman-wrapper .container,
@@ -161,27 +200,43 @@ Chairman Section (Reduced Gaps)
 .chairman-cta-section .container,
 .director-cta-section .container,
 .cta-section .container {
-  width: 90% !important;
-  max-width: 90% !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box !important;
 }
 
-@media (max-width: 768px) {
-  .chairman-wrapper .container,
-  .principle-section .container,
-  .quote-section .container,
-  .chairman-cta-section .container,
-  .director-cta-section .container,
-  .cta-section .container {
-    width: 92% !important;
-    max-width: 92% !important;
-  }
-}
+/* ==========================================
+   SECTION SPACING & CARD STYLES
+==========================================*/
 
 .chairman-wrapper {
   background: #fff;
-  padding: 38px 0;
+  padding: 24px 0 20px !important;
+}
+
+.principle-section {
+  margin-top: 18px !important;
+  margin-bottom: 24px !important;
+  padding: 28px 24px !important;
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 2px 8px rgba(20, 43, 75, 0.04) !important;
+}
+
+.quote-section {
+  margin-top: 24px !important;
+  margin-bottom: 24px !important;
+  padding: 36px 28px !important;
+  background: #002147 !important;
+  border: none !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12) !important;
+  position: relative;
+  overflow: hidden;
 }
 
 .chairman-card {
@@ -303,10 +358,7 @@ Chairman Section (Reduced Gaps)
 Leadership Principles (Reduced Gaps)
 ===========================================*/
 
-.principle-section {
-  background: #f8f9fb;
-  padding: 38px 0;
-}
+
 
 .principle-card {
   background: #fff;
@@ -357,14 +409,7 @@ Leadership Principles (Reduced Gaps)
 Quote Section (Reduced Padding)
 ===========================================*/
 
-.quote-section {
-  padding: 45px 0;
-  background: #002147;
-  border-top: 2px solid #fdb913;
-  border-bottom: 2px solid #fdb913;
-  position: relative;
-  overflow: hidden;
-}
+
 
 .quote-box {
   position: relative;
@@ -409,12 +454,15 @@ CTA Section (Footer Theme #002147)
 .cta-section.chairman-cta-section,
 .cta-section.director-cta-section,
 .cta-section {
-  padding: 42px 0 46px !important;
-  background: #002147 !important;
-  color: #fff !important;
-  border-top: 3px solid #fdb913 !important;
-  margin-top: 35px !important;
+  padding: 36px 28px !important;
+  margin-top: 24px !important;
   margin-bottom: 35px !important;
+  background: #002147 !important;
+  background-image: none !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12) !important;
   text-align: center !important;
 }
 
@@ -548,5 +596,53 @@ Responsive
   .chairman-cta-section h2,
   .cta-section h2 {
     font-size: 24px !important;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE (90% WIDTH SYSTEM)
+==========================================*/
+
+@media (max-width: 850px) {
+  .chairman-wrapper,
+  .principle-section,
+  .quote-section,
+  .chairman-cta-section,
+  .director-cta-section,
+  .cta-section {
+    width: 94% !important;
+    max-width: 94% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .chairman-wrapper,
+  .principle-section,
+  .quote-section,
+  .chairman-cta-section,
+  .director-cta-section,
+  .cta-section {
+    width: calc(100% - 24px) !important;
+    max-width: calc(100% - 24px) !important;
+  }
+
+  .principle-section {
+    padding: 20px 14px !important;
+    margin-top: 14px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .quote-section {
+    padding: 28px 18px !important;
+    margin-top: 18px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .chairman-cta-section,
+  .director-cta-section,
+  .cta-section {
+    padding: 28px 18px !important;
+    margin-top: 18px !important;
+    margin-bottom: 25px !important;
   }
 }

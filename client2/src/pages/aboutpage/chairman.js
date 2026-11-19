@@ -76,7 +76,7 @@ const ChairmanMessage = () => {
     );
   }
   return (
-    <>
+    <div className="chairman-page">
       {/* ================= Hero ================= */}
 
       <section className="chairman-hero">
@@ -218,7 +218,7 @@ const ChairmanMessage = () => {
           </Row>
         </Container>
       </section>
-    </>
+    </div>
   );
 };
 
