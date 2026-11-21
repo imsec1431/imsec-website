@@ -1366,9 +1366,8 @@
     height: auto;
     min-height: 0;
     aspect-ratio: 16 / 9;
-    background-size: contain;
+    background-size: 100% 100% !important;
     background-position: center center;
-    background-color: #1b4568;
   }
 
   .hero-overlay {
@@ -1392,7 +1391,7 @@
     aspect-ratio: 16 / 9;
     height: auto;
     min-height: 0;
-    background-size: contain;
+    background-size: 100% 100% !important;
   }
 }
 
@@ -1446,7 +1445,7 @@
     padding: 0 !important;
     margin: 0 !important;
     aspect-ratio: 16 / 9;
-    background-size: cover !important;
+    background-size: 100% 100% !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
     overflow: hidden;
@@ -1487,10 +1486,10 @@
 @media (max-width: 576px) {
   .hero-slide {
     aspect-ratio: 16 / 9;
-    height: auto;
-    min-height: 0;
-    background-size: contain;
-    background-position: center center;
+    height: auto !important;
+    min-height: 0 !important;
+    background-size: 100% 100% !important;
+    background-position: center center !important;
   }
 
   .hero-title {
@@ -2489,6 +2488,7 @@
     padding: 0 !important;
     margin: 0 !important;
     aspect-ratio: 16 / 9;
+    background-size: 100% 100% !important;
   }
 
   .hero-main-heading {
