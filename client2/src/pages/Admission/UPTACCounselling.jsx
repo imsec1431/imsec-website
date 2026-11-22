@@ -236,22 +236,22 @@ const UPTACCounselling = () => {
       ================================================= */}
 
       <section className="uptacPublicHero">
-        <div className="uptacPublicHeroContent">
+        <div className="uptacPublicHeroContent text-center">
           <div className="uptacPublicHeroIcon">
             <FaUniversity />
           </div>
 
           <span className="uptacPublicHeroLabel">ADMISSIONS</span>
 
-          <h1>{counselling.title || "UPTAC Counselling"}</h1>
+          <h1 className="text-center">{counselling.title || "UPTAC Counselling"}</h1>
 
-          <p>
+          <p className="text-center">
             {counselling.description ||
               "View the latest UPTAC counselling notification and admission information."}
           </p>
 
           <div className="uptacSession">
-            <span>Current Session</span>
+            <span>Current Session:</span>
 
             <strong>{counselling.session || "-"}</strong>
           </div>
