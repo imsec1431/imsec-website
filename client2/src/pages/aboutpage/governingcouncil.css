@@ -183,7 +183,8 @@ body {
 .governing-intro p {
   color: #555;
   line-height: 1.8;
-  text-align: justify;
+  text-align: justify !important;
+  text-justify: inter-word;
   margin-bottom: 12px;
 }
 
@@ -344,6 +345,8 @@ body {
   font-size: 13.5px;
   line-height: 1.6;
   margin: 0;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 /* ===========================================

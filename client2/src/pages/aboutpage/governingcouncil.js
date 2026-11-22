@@ -50,7 +50,7 @@ const GoverningCouncil = () => {
               Governing Body
             </h1>
 
-            <p
+            {/* <p
               className="text-center"
               style={{
                 color: "white",
@@ -66,7 +66,7 @@ const GoverningCouncil = () => {
               About
               <span style={{ color: "#fdb913", margin: "0 8px" }}>/</span>
               Governing Body
-            </p>
+            </p> */}
           </div>
         </Container>
       </section>
@@ -83,13 +83,13 @@ const GoverningCouncil = () => {
                 </h2>
               </div>
 
-              <p>
+              <p style={{ textAlign: "justify", textJustify: "inter-word" }}>
                 The Governing Body provides strategic direction, policy
                 guidance and administrative oversight for IMS Engineering
                 College.
               </p>
 
-              <p>
+              <p style={{ textAlign: "justify", textJustify: "inter-word" }}>
                 It consists of distinguished academicians, industry experts,
                 university nominees, management representatives and faculty
                 members committed to institutional excellence.
@@ -178,7 +178,7 @@ const GoverningCouncil = () => {
 
                   <h4>{item}</h4>
 
-                  <p>
+                  <p style={{ textAlign: "justify", textJustify: "inter-word" }}>
                     Ensuring continuous growth, quality education and effective
                     governance of the institution.
                   </p>
