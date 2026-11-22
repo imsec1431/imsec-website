@@ -69,6 +69,26 @@ const DirectorMessage = () => {
   useEffect(() => {
     fetchDirector();
   }, []);
+
+  const renderMessage = (text) => {
+    if (!text) return null;
+    const normalized = text.replace(/\r\n/g, "\n");
+    const hasDoubleNewline = /\n\s*\n/.test(normalized);
+
+    const paragraphs = hasDoubleNewline
+      ? normalized.split(/\n\s*\n/)
+      : normalized.split("\n");
+
+    return paragraphs
+      .map((p) => (hasDoubleNewline ? p.replace(/\n/g, " ") : p).trim())
+      .filter((p) => p.length > 0)
+      .map((para, index) => (
+        <p key={index} className="section-text" style={{ textAlign: "justify" }}>
+          {para}
+        </p>
+      ));
+  };
+
   if (loading) {
     return (
       <div className="text-center py-5">
@@ -139,17 +159,13 @@ const DirectorMessage = () => {
             {/* Right */}
 
             <Col lg={8}>
-              <div className="message-box">
+              <div className="message-box" style={{ textAlign: "justify" }}>
 
                 <h2 className="section-title">
                   Building Future
                 </h2>
 
-                {director?.message?.split("\n").map((para, index) => (
-                  <p key={index} className="section-text">
-                    {para}
-                  </p>
-                ))}
+                {renderMessage(director?.message)}
               </div>
             </Col>
           </Row>
