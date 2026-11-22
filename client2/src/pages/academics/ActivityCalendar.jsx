@@ -123,9 +123,9 @@ const ActivityCalendar = () => {
 
   if (loading) {
     return (
-      <div className="activity-calendar-page">
-        <div className="activity-calendar-container">
-          <div className="activity-calendar-loading">
+      <div className="pub-activity-calendar-page">
+        <div className="pub-activity-calendar-container">
+          <div className="pub-activity-calendar-loading">
             <FaCalendarDays />
             <p>Loading activity calendars...</p>
           </div>
@@ -139,11 +139,11 @@ const ActivityCalendar = () => {
      ===================================================== */
 
   return (
-    <div className="activity-calendar-page">
+    <div className="pub-activity-calendar-page">
       {/* HEADER (FULL WIDTH) */}
-      <div className="activity-calendar-header">
-        <div className="activity-calendar-header-container">
-          {/* <span className="activity-calendar-eyebrow">ACADEMICS</span> */}
+      <div className="pub-activity-calendar-header">
+        <div className="pub-activity-calendar-header-container">
+          {/* <span className="pub-activity-calendar-eyebrow">ACADEMICS</span> */}
 
           <h1>Activity Calendar</h1>
 
@@ -151,15 +151,15 @@ const ActivityCalendar = () => {
         </div>
       </div>
 
-      <div className="activity-calendar-container">
+      <div className="pub-activity-calendar-container">
         {/* ERROR */}
 
-        {error && <div className="activity-calendar-alert error">{error}</div>}
+        {error && <div className="pub-activity-calendar-alert error">{error}</div>}
 
         {/* EMPTY */}
 
         {!error && calendars.length === 0 && (
-          <div className="activity-calendar-empty">
+          <div className="pub-activity-calendar-empty">
             <FaCalendarDays />
 
             <h3>No Activity Calendar Available</h3>
@@ -171,13 +171,13 @@ const ActivityCalendar = () => {
         {/* CALENDARS */}
 
         {calendars.length > 0 && (
-          <div className="activity-calendar-list">
+          <div className="pub-activity-calendar-list">
             {calendars.map((calendar) => (
-              <div className="activity-calendar-card" key={calendar._id}>
+              <div className="pub-activity-calendar-card" key={calendar._id}>
                 {/* CARD HEADER */}
 
-                <div className="activity-calendar-card-header">
-                  <div className="activity-calendar-session">
+                <div className="pub-activity-calendar-card-header">
+                  <div className="pub-activity-calendar-session">
                     <FaCalendarDays />
 
                     <div>
@@ -188,7 +188,7 @@ const ActivityCalendar = () => {
                   </div>
 
                   <span
-                    className={`activity-calendar-semester ${String(calendar.semester || "").toLowerCase() === "even"
+                    className={`pub-activity-calendar-semester ${String(calendar.semester || "").toLowerCase() === "even"
                         ? "even"
                         : "odd"
                       }`}
@@ -199,7 +199,7 @@ const ActivityCalendar = () => {
 
                 {/* CARD CONTENT */}
 
-                <div className="activity-calendar-card-content">
+                <div className="pub-activity-calendar-card-content">
                   <h3>{calendar.calendarName}</h3>
 
                   {/* PDF BUTTON */}
@@ -207,7 +207,7 @@ const ActivityCalendar = () => {
                   {calendar.pdfUrl && (
                     <button
                       type="button"
-                      className="activity-calendar-pdf-btn"
+                      className="pub-activity-calendar-pdf-btn"
                       onClick={() => handleViewPdf(calendar.pdfUrl)}
                     >
                       View Activity Calendar PDF
