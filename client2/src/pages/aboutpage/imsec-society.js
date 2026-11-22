@@ -59,6 +59,25 @@ const IMSSociety = () => {
     );
   }
 
+  const renderParagraphs = (text) => {
+    if (!text) return null;
+    const normalized = text.replace(/\r\n/g, "\n");
+    const hasDoubleNewline = /\n\s*\n/.test(normalized);
+
+    const paragraphs = hasDoubleNewline
+      ? normalized.split(/\n\s*\n/)
+      : normalized.split("\n");
+
+    return paragraphs
+      .map((p) => (hasDoubleNewline ? p.replace(/\n/g, " ") : p).trim())
+      .filter((p) => p.length > 0)
+      .map((paragraph, index) => (
+        <p key={index} style={{ textAlign: "justify" }}>
+          {paragraph}
+        </p>
+      ));
+  };
+
   return (
     <main className="ims-society-page">
       <section className="ims-society-hero">
@@ -70,8 +89,8 @@ const IMSSociety = () => {
       <section className="ims-society-content">
         <div className="ims-society-container">
           {society.introduction && (
-            <div className="ims-society-introduction">
-              <p>{society.introduction}</p>
+            <div className="ims-society-introduction" style={{ textAlign: "justify" }}>
+              <p style={{ textAlign: "justify" }}>{society.introduction}</p>
             </div>
           )}
 
@@ -79,10 +98,8 @@ const IMSSociety = () => {
             <section className="ims-society-section">
               <h2>About IMS Society</h2>
 
-              <div className="ims-society-text">
-                {society.content.split("\n").map((paragraph, index) => (
-                  <p key={index}>{paragraph}</p>
-                ))}
+              <div className="ims-society-text" style={{ textAlign: "justify" }}>
+                {renderParagraphs(society.content)}
               </div>
             </section>
           )}
@@ -91,7 +108,7 @@ const IMSSociety = () => {
             <section className="ims-society-section">
               <h2>Vision</h2>
 
-              <p>{society.vision}</p>
+              <p style={{ textAlign: "justify" }}>{society.vision}</p>
             </section>
           )}
 
@@ -99,10 +116,8 @@ const IMSSociety = () => {
             <section className="ims-society-section">
               <h2>Mission</h2>
 
-              <div className="ims-society-text">
-                {society.mission.split("\n").map((point, index) => (
-                  <p key={index}>{point}</p>
-                ))}
+              <div className="ims-society-text" style={{ textAlign: "justify" }}>
+                {renderParagraphs(society.mission)}
               </div>
             </section>
           )}
