@@ -4,7 +4,7 @@
 
 .apply-admission-page {
   min-height: 100vh;
-  padding: 45px 20px 70px;
+  padding: 0 0 70px 0;
   background: #f5f7fa;
   color: #202938;
 }
@@ -16,38 +16,69 @@
 }
 
 /* =========================================================
-   HEADER
+   HERO / FIRST SECTION (Solid Footer Color #002147)
 ========================================================= */
 
-.apply-admission-header {
-  max-width: 1100px;
-  margin: 0 auto 30px;
-  text-align: center;
+.apply-admission-hero {
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  overflow: hidden;
+  background: #002147 !important;
+  border-bottom: 2px solid #fdb913;
+  margin-bottom: 35px;
+  padding: 40px 20px;
 }
 
-.apply-admission-header > span {
+.apply-admission-hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.apply-admission-hero-tag {
   display: inline-block;
-  margin-bottom: 8px;
-  color: #7d8794;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 2px;
+  margin-bottom: 10px;
+  padding: 4px 14px;
+  border: 1px solid rgba(253, 185, 19, 0.4);
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #fdb913;
+  background: rgba(0, 33, 71, 0.5);
 }
 
-.apply-admission-header h1 {
-  margin: 0;
-  color: #1d2736;
-  font-size: 36px;
-  font-weight: 750;
-  line-height: 1.2;
+.apply-admission-hero h1 {
+  margin: 0 0 10px 0 !important;
+  color: #ffffff !important;
+  font-size: clamp(2rem, 4vw, 2.8rem) !important;
+  line-height: 1.2 !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.5px;
+  text-align: center !important;
+  width: 100% !important;
 }
 
-.apply-admission-header p {
-  max-width: 650px;
-  margin: 10px auto 0;
-  color: #737e8b;
-  font-size: 14px;
+.apply-admission-hero p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
   line-height: 1.7;
+  text-align: center !important;
 }
 
 /* =========================================================
@@ -457,19 +488,21 @@
   }
 
   .apply-admission-page {
-    padding: 25px 10px 45px;
+    padding: 0 0 45px 0;
   }
 
-  .apply-admission-header {
+  .apply-admission-hero {
+    min-height: 160px;
+    padding: 28px 15px;
     margin-bottom: 22px;
   }
 
-  .apply-admission-header h1 {
-    font-size: 26px;
+  .apply-admission-hero h1 {
+    font-size: 1.8rem !important;
   }
 
-  .apply-admission-header p {
-    font-size: 12px;
+  .apply-admission-hero p {
+    font-size: 13.5px;
     line-height: 1.6;
   }
 
@@ -560,12 +593,13 @@
 
 @media (max-width: 380px) {
   .apply-admission-page {
-    padding-left: 7px;
-    padding-right: 7px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
+  .apply-admission-hero h1,
   .apply-admission-header h1 {
-    font-size: 23px;
+    font-size: 1.5rem !important;
   }
 
   .apply-admission-card .card-header,

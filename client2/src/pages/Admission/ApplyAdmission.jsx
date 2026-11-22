@@ -475,7 +475,7 @@ const ApplyAdmission = () => {
       setApplicationNo(submittedApplicationNo);
       setSuccess(
         response.data?.message ||
-          "Your admission application has been submitted successfully.",
+        "Your admission application has been submitted successfully.",
       );
       setFormData(INITIAL_FORM);
 
@@ -487,8 +487,8 @@ const ApplyAdmission = () => {
       console.error("Admission Application Submit Error:", err);
       setError(
         err?.response?.data?.message ||
-          err?.message ||
-          "Unable to submit admission application.",
+        err?.message ||
+        "Unable to submit admission application.",
       );
       window.scrollTo({
         top: 0,
@@ -596,18 +596,21 @@ const ApplyAdmission = () => {
       </Modal>
 
       <main className="apply-admission-page">
-        <div className="apply-admission-container">
-          {/* =================================================
-              HEADER
-          ================================================= */}
-          <div className="apply-admission-header">
-            <span>ADMISSIONS</span>
+        {/* =================================================
+            HERO / FIRST SECTION (Footer Theme #002147)
+        ================================================= */}
+        <section className="apply-admission-hero">
+          <div className="apply-admission-hero-content">
+            {/* <span className="apply-admission-hero-tag">ADMISSIONS</span> */}
             <h1>Apply for Admission</h1>
             <p>
               Please complete all required information carefully before
               submitting your application.
             </p>
           </div>
+        </section>
+
+        <div className="apply-admission-container">
 
           {/* =================================================
               SUCCESS
