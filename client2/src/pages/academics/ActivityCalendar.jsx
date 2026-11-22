@@ -142,12 +142,12 @@ const ActivityCalendar = () => {
     <div className="pub-activity-calendar-page">
       {/* HEADER (FULL WIDTH) */}
       <div className="pub-activity-calendar-header">
-        <div className="pub-activity-calendar-header-container">
+        <div className="pub-activity-calendar-header-container text-center">
           {/* <span className="pub-activity-calendar-eyebrow">ACADEMICS</span> */}
 
-          <h1>Activity Calendar</h1>
+          <h1 className="text-center">Activity Calendar</h1>
 
-          <p>Academic activity calendars semester-wise.</p>
+          <p className="text-center">Academic activity calendars semester-wise.</p>
         </div>
       </div>
 
