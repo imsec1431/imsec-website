@@ -100,8 +100,8 @@ const AdmissionProcess = () => {
 
       setError(
         err?.response?.data?.message ||
-          err?.message ||
-          "Unable to load Admission Process.",
+        err?.message ||
+        "Unable to load Admission Process.",
       );
     } finally {
       setLoading(false);
@@ -205,48 +205,33 @@ const AdmissionProcess = () => {
       ================================================= */}
 
       <section className="admissionHero">
-        <div className="admissionProcessContainer">
-          <div className="admissionHeroContent">
-            <span className="admissionHeroTag">{admissionProcess.heroTag || "Admissions Open"}</span>
+        <div className="admissionHeroOverlay">
+          <div className="admissionProcessContainer">
+            <div className="admissionHeroContent text-center">
+              <span className="admissionHeroTag">{admissionProcess.heroTag || "Admissions Open"}</span>
 
-            <h1>
-              {admissionProcess.heroTitle || "Admission"}
+              <h1>
+                {admissionProcess.heroTitle || "Admission"}
+                <span> {admissionProcess.heroTitleHighlight || "Process"}</span>
+              </h1>
 
-              <span> {admissionProcess.heroTitleHighlight || "Process"}</span>
-            </h1>
+              <p>{admissionProcess.heroDescription}</p>
 
-            <p style={{ textAlign: "justify", textJustify: "inter-word" }}>{admissionProcess.heroDescription}</p>
+              <div className="admissionHeroActions">
+                {/* React Router Navigation */}
+                <Link
+                  to="/Admissions/ApplyforAdmission"
+                  className="admissionPrimaryButton"
+                >
+                  {admissionProcess.applyButtonText || "Apply Now"}
 
-            <div className="admissionHeroActions">
-              {/* React Router Navigation */}
-              <Link
-                to="/Admissions/ApplyforAdmission"
-                className="admissionPrimaryButton"
-              >
-                {admissionProcess.applyButtonText || "Apply Now"}
+                  <FaArrowRight />
+                </Link>
 
-                <FaArrowRight />
-              </Link>
-
-              <button type="button" className="admissionSecondaryButton">
-                {admissionProcess.brochureButtonText || "Download Brochure"}
-              </button>
-            </div>
-          </div>
-
-          <div className="admissionHeroVisual">
-            <div className="admissionHeroCard">
-              <div className="admissionHeroCardIcon">
-                <FaClipboardCheck />
+                <button type="button" className="admissionSecondaryButton">
+                  {admissionProcess.brochureButtonText || "Download Brochure"}
+                </button>
               </div>
-
-              <span>ADMISSION</span>
-
-              <strong>Simple & Transparent</strong>
-
-              <div className="admissionHeroCardLine"></div>
-
-              <small>Follow the admission journey step by step.</small>
             </div>
           </div>
         </div>
@@ -259,7 +244,7 @@ const AdmissionProcess = () => {
       <section className="admissionJourneySection">
         <div className="admissionProcessContainer">
           <div className="admissionSectionHeading">
-            <span>{admissionProcess.journeyLabel || "Admission Journey"}</span>
+            {/* <span>{admissionProcess.journeyLabel || "Admission Journey"}</span> */}
 
             <h2>{admissionProcess.journeyTitle || "Your Admission in 6 Simple Steps"}</h2>
 
@@ -297,7 +282,7 @@ const AdmissionProcess = () => {
       <section className="admissionEligibilitySection">
         <div className="admissionProcessContainer">
           <div className="admissionSectionHeading">
-            <span>{admissionProcess.eligibilityLabel || "Eligibility"}</span>
+            {/* <span>{admissionProcess.eligibilityLabel || "Eligibility"}</span> */}
 
             <h2>{admissionProcess.eligibilityTitle || "Programme Eligibility Criteria"}</h2>
 
@@ -345,7 +330,7 @@ const AdmissionProcess = () => {
       <section className="admissionModesSection">
         <div className="admissionProcessContainer">
           <div className="admissionSectionHeading">
-            <span>{admissionProcess.admissionModeLabel || "Admission Modes"}</span>
+            {/* <span>{admissionProcess.admissionModeLabel || "Admission Modes"}</span> */}
 
             <h2>{admissionProcess.admissionModeTitle || "Choose Your Admission Path"}</h2>
 
@@ -386,7 +371,7 @@ const AdmissionProcess = () => {
         <div className="admissionProcessContainer">
           <div className="admissionDocumentsLayout">
             <div className="admissionDocumentsIntro">
-              <span>{admissionProcess.documentLabel || "Documents Required"}</span>
+              {/* <span>{admissionProcess.documentLabel || "Documents Required"}</span> */}
 
               <h2>{admissionProcess.documentTitle || "Admission Checklist"}</h2>
 
@@ -448,7 +433,7 @@ const AdmissionProcess = () => {
       <section className="admissionBottomCTA">
         <div className="admissionProcessContainer">
           <div className="admissionCTAContent">
-            <span>START YOUR JOURNEY</span>
+            {/* <span>START YOUR JOURNEY</span> */}
 
             <h2>Ready to Begin Your Admission Journey?</h2>
 

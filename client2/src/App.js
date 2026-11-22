@@ -160,6 +160,7 @@ function Layout() {
         <Route path="/" element={<Home />} />
 
         {/* About */}
+        <Route path="/about" element={<Navigate to="/about/aboutimsec" replace />} />
         <Route path="/about/IMSSociety" element={<IMSSociety />} />
 
         <Route path="/about/aboutimsec" element={<AboutImsec />} />
@@ -261,6 +262,9 @@ function Layout() {
         />
 
         {/* Admissions */}
+        <Route path="/Admissions" element={<Navigate to="/Admissions/AdmissionsProcess" replace />} />
+        <Route path="/admission" element={<Navigate to="/Admissions/AdmissionsProcess" replace />} />
+        <Route path="/admissions" element={<Navigate to="/Admissions/AdmissionsProcess" replace />} />
         <Route
           path="/Admission/UPTACCounselling"
           element={<UPTACCounselling />}

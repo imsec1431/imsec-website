@@ -193,35 +193,47 @@
    HERO
 ========================================================= */
 
+/* =========================================================
+   HERO (Solid Footer Theme #002147, Centered)
+========================================================= */
+
 .admissionHero {
   position: relative;
-
+  min-height: 200px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
   overflow: hidden;
-
-  padding: 42px 0 48px;
-
-  background: #002147;
-
+  padding: 40px 15px;
+  background: #002147 !important;
+  background-image: none !important;
   color: #ffffff;
-
   border-bottom: 2px solid #fdb913;
 }
 
-/* Hero container */
+.admissionHero::before,
+.admissionHero::after {
+  display: none !important;
+  content: none !important;
+}
+
+.admissionHeroOverlay {
+  width: 100%;
+}
 
 .admissionHero .admissionProcessContainer {
   position: relative;
   z-index: 2;
-
-  display: grid;
-
-  grid-template-columns:
-    minmax(0, 1.25fr)
-    minmax(300px, 0.75fr);
-
-  gap: 45px;
-
-  align-items: center;
+  width: 100% !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 0 !important;
 }
 
 /* =========================================================
@@ -229,66 +241,52 @@
 ========================================================= */
 
 .admissionHeroContent {
-  max-width: 720px;
+  width: 100% !important;
+  max-width: 850px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .admissionHeroTag {
-  display: inline-flex;
-
-  align-items: center;
-
-  margin-bottom: 12px;
-
-  padding: 6px 13px;
-
-  border: 1px solid rgba(255, 255, 255, 0.2);
-
-  border-radius: 30px;
-
-  background: rgba(255, 255, 255, 0.07);
-
-  color: #fdb913;
-
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 4px 14px;
+  border: 1px solid rgba(253, 185, 19, 0.4);
+  border-radius: 20px;
   font-size: 11px;
-
-  font-weight: 750;
-
-  letter-spacing: 1.6px;
-
+  font-weight: 700;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
+  color: #fdb913;
+  background: rgba(0, 33, 71, 0.5);
 }
 
 .admissionHero h1 {
-  margin: 0;
-
-  font-size: clamp(34px, 4.5vw, 54px);
-
-  line-height: 1.1;
-
-  font-weight: 760;
-
-  letter-spacing: -1.2px;
-
-  color: #ffffff;
+  margin: 0 0 10px 0 !important;
+  font-size: clamp(2rem, 4vw, 2.8rem) !important;
+  line-height: 1.2 !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.5px;
+  color: #ffffff !important;
+  text-align: center !important;
+  width: 100% !important;
 }
 
 .admissionHero h1 span {
   display: inline-block;
-
   color: #fdb913;
 }
 
 .admissionHeroContent > p {
-  max-width: 680px;
-
-  margin: 14px 0 0;
-
-  color: rgba(255, 255, 255, 0.95);
-
-  font-size: 15.5px;
-
+  max-width: 780px;
+  margin: 0 auto 18px auto;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
   line-height: 1.7;
-
   text-align: justify !important;
   text-justify: inter-word;
 }
@@ -299,171 +297,57 @@
 
 .admissionHeroActions {
   display: flex;
-
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-
-  gap: 12px;
-
-  margin-top: 22px;
+  gap: 14px;
+  margin-top: 6px;
 }
 
 .admissionPrimaryButton,
 .admissionSecondaryButton {
-  min-height: 48px;
-
+  min-height: 44px;
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
-
-  gap: 10px;
-
-  padding: 0 21px;
-
-  border-radius: 6px;
-
+  gap: 8px;
+  padding: 0 22px;
+  border-radius: 8px;
   font-family: inherit;
-
   font-size: 14px;
-
   font-weight: 700;
-
   text-decoration: none;
-
   cursor: pointer;
-
   transition:
-    transform 0.2s ease,
-    background 0.2s ease,
-    border-color 0.2s ease;
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
 }
 
 .admissionPrimaryButton {
-  border: 1px solid #d4aa4c;
-
-  background: #d4aa4c;
-
-  color: #10284b;
+  border: 1px solid #fdb913;
+  background: #fdb913;
+  color: #002147;
 }
 
 .admissionPrimaryButton:hover {
   transform: translateY(-2px);
-
-  background: #e1bb5e;
-
-  border-color: #e1bb5e;
-
-  color: #10284b;
+  background: #e5a70f;
+  border-color: #e5a70f;
+  color: #002147;
 }
 
 .admissionSecondaryButton {
-  border: 1px solid rgba(255, 255, 255, 0.3);
-
-  background: rgba(255, 255, 255, 0.06);
-
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
   color: #ffffff;
 }
 
 .admissionSecondaryButton:hover {
   transform: translateY(-2px);
-
-  background: rgba(255, 255, 255, 0.13);
-
-  border-color: rgba(255, 255, 255, 0.45);
-}
-
-/* =========================================================
-   HERO VISUAL
-========================================================= */
-
-.admissionHeroVisual {
-  display: flex;
-
-  justify-content: flex-end;
-}
-
-.admissionHeroCard {
-  position: relative;
-
-  width: min(100%, 310px);
-
-  padding: 22px;
-
-  border: 1px solid rgba(255, 255, 255, 0.16);
-
-  border-radius: 12px;
-
-  background: linear-gradient(
-    145deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.035)
-  );
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
-
-  backdrop-filter: blur(8px);
-}
-
-.admissionHeroCardIcon {
-  width: 48px;
-  height: 48px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin-bottom: 14px;
-
-  border-radius: 10px;
-
-  background: rgba(253, 185, 19, 0.15);
-
-  color: #fdb913;
-
-  font-size: 20px;
-}
-
-.admissionHeroCard > span {
-  display: block;
-
-  margin-bottom: 6px;
-
-  color: #fdb913;
-
-  font-size: 10px;
-
-  font-weight: 800;
-
-  letter-spacing: 2px;
-}
-
-.admissionHeroCard strong {
-  display: block;
-
-  color: #ffffff;
-
-  font-size: 21px;
-
-  line-height: 1.25;
-}
-
-.admissionHeroCardLine {
-  width: 45px;
-  height: 2px;
-
-  margin: 14px 0;
-
-  background: #fdb913;
-}
-
-.admissionHeroCard small {
-  display: block;
-
-  color: rgba(255, 255, 255, 0.85);
-
-  font-size: 13px;
-
-  line-height: 1.7;
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #ffffff;
 }
 
 /* =========================================================
@@ -472,53 +356,45 @@
 
 .admissionSectionHeading {
   max-width: 760px;
-
-  margin: 0 auto 30px;
-
+  margin: 0 auto 32px;
   text-align: center;
 }
 
 .admissionSectionHeading > span {
-  display: block;
-
-  margin-bottom: 7px;
-
-  color: #b2872f;
-
-  font-size: 11px;
-
-  font-weight: 800;
-
+  display: inline-block;
+  margin-bottom: 6px;
+  color: #fdb913;
+  font-size: 13px;
+  font-weight: 700;
   letter-spacing: 2px;
-
   text-transform: uppercase;
 }
 
 .admissionSectionHeading h2 {
   margin: 0;
-
-  color: #172033;
-
-  font-size: clamp(26px, 3.8vw, 36px);
-
+  color: #002147;
+  font-size: clamp(1.85rem, 3.5vw, 2.5rem);
   line-height: 1.2;
+  font-weight: 800;
+  position: relative;
+}
 
-  font-weight: 750;
-
-  letter-spacing: -0.7px;
+.admissionSectionHeading h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #fdb913;
+  margin: 10px auto 0;
+  border-radius: 20px;
 }
 
 .admissionSectionHeading p {
-  max-width: 690px;
-
-  margin: 12px auto 0;
-
-  color: #4b5563;
-
-  font-size: 14.5px;
-
-  line-height: 1.7;
-
+  max-width: 720px;
+  margin: 14px auto 0;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.75;
   text-align: justify !important;
   text-justify: inter-word;
 }
@@ -578,125 +454,97 @@
 
 .admissionStepCard {
   position: relative;
-
   height: 100%;
-
   min-height: auto;
-
   overflow: hidden;
-
-  padding: 27px;
-
-  border: 1px solid #e6eaf0;
-
-  border-radius: 12px;
-
+  padding: 26px 24px;
+  border: 1px solid #edf2f7;
+  border-radius: 16px;
   background: #ffffff;
-
-  box-shadow: 0 5px 20px rgba(20, 39, 72, 0.045);
-
+  box-shadow: 0 4px 16px rgba(0, 33, 71, 0.08);
+  border-bottom: 3px solid transparent;
   transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    border-color 0.25s ease;
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
 }
 
 .admissionStepCard:hover {
-  transform: translateY(-5px);
-
-  border-color: #d8e2f0;
-
-  box-shadow: 0 15px 35px rgba(20, 39, 72, 0.1);
+  transform: translateY(-6px);
+  border-bottom: 3px solid #fdb913;
+  box-shadow: 0 12px 28px rgba(0, 33, 71, 0.14);
 }
 
 .admissionStepTop {
   display: flex;
-
   align-items: center;
   justify-content: space-between;
-
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .admissionStepIcon {
-  width: 47px;
-  height: 47px;
-
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
+  background: #e6eef7;
+  color: #002147;
+  font-size: 20px;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
 
-  border-radius: 10px;
-
-  background: #edf4ff;
-
-  color: #174ea6;
-
-  font-size: 19px;
+.admissionStepCard:hover .admissionStepIcon {
+  background: #002147;
+  color: #fdb913;
+  transform: scale(1.08);
 }
 
 .admissionStepTop > span {
-  color: #002147;
-
+  display: inline-block;
+  background: #002147;
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: 20px;
   font-size: 11px;
-
-  font-weight: 800;
-
-  letter-spacing: 1.5px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .admissionStepCard h3 {
   position: relative;
   z-index: 2;
-
   margin: 0 0 10px;
-
-  color: #172033;
-
-  font-size: 19px;
-
+  color: #002147;
+  font-size: 1.15rem;
   line-height: 1.35;
-
-  font-weight: 720;
+  font-weight: 700;
 }
 
 .admissionStepCard p {
   position: relative;
   z-index: 2;
-
   max-width: 100%;
-
   margin: 0;
-
-  color: #4b5563;
-
-  font-size: 13.5px;
-
+  color: #555;
+  font-size: 14px;
   line-height: 1.7;
-
   text-align: justify !important;
   text-justify: inter-word;
 }
 
 .admissionStepNumber {
   position: absolute;
-
-  right: 17px;
+  right: 14px;
   bottom: -15px;
-
   color: #002147;
-  opacity: 0.06;
-
-  font-size: 82px;
-
+  opacity: 0.05;
+  font-size: 76px;
   line-height: 1;
-
   font-weight: 800;
-
   user-select: none;
-
   pointer-events: none;
-
   z-index: 1;
 }
 
@@ -705,9 +553,8 @@
 ========================================================= */
 
 .admissionEligibilitySection {
-  padding: 48px 0;
-
-  background: #f7f9fc;
+  padding: 45px 0;
+  background: #f8f9fb;
 }
 
 /* =========================================================
@@ -716,55 +563,37 @@
 
 .admissionEligibilityTableWrapper {
   overflow-x: auto;
-
-  border: 1px solid #e2e7ee;
-
-  border-radius: 12px;
-
+  border: 1px solid #edf2f7;
+  border-radius: 16px;
   background: #ffffff;
-
-  box-shadow: 0 6px 25px rgba(20, 39, 72, 0.045);
+  box-shadow: 0 4px 16px rgba(0, 33, 71, 0.08);
 }
 
 .admissionEligibilityTable {
   width: 100%;
-
   min-width: 720px;
-
   border-collapse: collapse;
 }
 
 .admissionEligibilityTable th {
-  padding: 17px 21px;
-
-  background: #102d55;
-
+  padding: 18px 24px;
+  background: #002147;
   color: #ffffff;
-
   text-align: left;
-
-  font-size: 11px;
-
-  font-weight: 750;
-
+  font-size: 13px;
+  font-weight: 700;
   letter-spacing: 0.6px;
-
   text-transform: uppercase;
+  border-bottom: 2px solid #fdb913;
 }
 
 .admissionEligibilityTable td {
-  padding: 18px 21px;
-
-  border-bottom: 1px solid #edf0f4;
-
-  color: #374151;
-
-  font-size: 13.5px;
-
+  padding: 18px 24px;
+  border-bottom: 1px solid #edf2f7;
+  color: #475569;
+  font-size: 14px;
   line-height: 1.65;
-
   vertical-align: top;
-
   text-align: justify !important;
   text-justify: inter-word;
 }
@@ -774,15 +603,13 @@
 }
 
 .admissionEligibilityTable tbody tr:hover {
-  background: #fbfcfe;
+  background: #f8fafc;
 }
 
 .admissionEligibilityTable td strong {
-  color: #173b70;
-
-  font-size: 14px;
-
-  font-weight: 750;
+  color: #002147;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 /* =========================================================
@@ -790,102 +617,83 @@
 ========================================================= */
 
 .admissionModesSection {
-  padding: 48px 0;
-
+  padding: 45px 0;
   background: #ffffff;
 }
 
 .admissionModesGrid {
   display: grid;
-
   grid-template-columns: repeat(4, minmax(0, 1fr));
-
-  gap: 17px;
+  gap: 20px;
 }
 
 .admissionModeCard {
   position: relative;
-
   height: 100%;
-
   min-height: auto;
-
-  padding: 25px;
-
-  border: 1px solid #e4e8ee;
-
-  border-radius: 12px;
-
+  padding: 24px 20px;
+  border: 1px solid #edf2f7;
+  border-radius: 16px;
   background: #ffffff;
-
+  box-shadow: 0 4px 16px rgba(0, 33, 71, 0.08);
+  border-bottom: 3px solid transparent;
   transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    border-color 0.25s ease;
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
 }
 
 .admissionModeCard:hover {
-  transform: translateY(-5px);
-
-  border-color: #d5dfed;
-
-  box-shadow: 0 15px 32px rgba(20, 39, 72, 0.09);
+  transform: translateY(-6px);
+  border-bottom: 3px solid #fdb913;
+  box-shadow: 0 12px 28px rgba(0, 33, 71, 0.14);
 }
 
 .admissionModeIcon {
-  width: 46px;
-  height: 46px;
-
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: #e6eef7;
+  color: #002147;
+  font-size: 20px;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
 
-  margin-bottom: 22px;
-
-  border-radius: 10px;
-
-  background: #f9f3e5;
-
-  color: #a77b25;
-
-  font-size: 18px;
+.admissionModeCard:hover .admissionModeIcon {
+  background: #002147;
+  color: #fdb913;
+  transform: scale(1.08);
 }
 
 .admissionModeCard > span {
-  display: block;
-
+  display: inline-block;
   margin-bottom: 8px;
-
-  color: #002147;
-
+  background: #002147;
+  color: #ffffff;
+  padding: 3px 12px;
+  border-radius: 20px;
   font-size: 11px;
-
-  font-weight: 800;
-
-  letter-spacing: 1.5px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .admissionModeCard h3 {
   margin: 0 0 10px;
-
   color: #002147;
-
-  font-size: 17px;
-
+  font-size: 1.15rem;
   line-height: 1.4;
-
-  font-weight: 720;
+  font-weight: 700;
 }
 
 .admissionModeCard p {
   margin: 0;
-
-  color: #4b5563;
-
-  font-size: 13.5px;
-
+  color: #555;
+  font-size: 14px;
   line-height: 1.7;
-
   text-align: justify !important;
   text-justify: inter-word;
 }
@@ -895,20 +703,14 @@
 ========================================================= */
 
 .admissionDocumentsSection {
-  padding: 48px 0;
-
-  background: #f7f9fc;
+  padding: 45px 0;
+  background: #f8f9fb;
 }
 
 .admissionDocumentsLayout {
   display: grid;
-
-  grid-template-columns:
-    0.75fr
-    1.25fr;
-
+  grid-template-columns: 0.8fr 1.2fr;
   gap: 40px;
-
   align-items: start;
 }
 
@@ -918,77 +720,65 @@
 
 .admissionDocumentsIntro {
   position: sticky;
-
   top: 30px;
 }
 
 .admissionDocumentsIntro > span {
-  display: block;
-
-  margin-bottom: 9px;
-
-  color: #b2872f;
-
-  font-size: 11px;
-
-  font-weight: 800;
-
+  display: inline-block;
+  color: #fdb913;
+  font-size: 13px;
+  font-weight: 700;
   letter-spacing: 2px;
-
   text-transform: uppercase;
+  margin-bottom: 8px;
 }
 
 .admissionDocumentsIntro h2 {
   margin: 0;
-
-  color: #172033;
-
-  font-size: 38px;
-
+  color: #002147;
+  font-size: clamp(1.85rem, 3.5vw, 2.5rem);
   line-height: 1.2;
+  font-weight: 800;
+  position: relative;
+}
 
-  font-weight: 750;
+.admissionDocumentsIntro h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #fdb913;
+  margin-top: 10px;
+  border-radius: 20px;
 }
 
 .admissionDocumentsIntro p {
-  margin: 18px 0 0;
-
-  color: #4b5563;
-
-  font-size: 14.5px;
-
+  margin: 16px 0 0;
+  color: #555;
+  font-size: 15px;
   line-height: 1.75;
-
   text-align: justify !important;
   text-justify: inter-word;
 }
 
 .admissionDocumentsBadge {
   display: inline-flex;
-
   align-items: center;
-
-  gap: 9px;
-
-  margin-top: 25px;
-
-  padding: 10px 13px;
-
-  border: 1px solid #e4e9ef;
-
-  border-radius: 7px;
-
+  gap: 10px;
+  margin-top: 24px;
+  padding: 10px 16px;
+  border: 1px solid #edf2f7;
+  border-radius: 25px;
   background: #ffffff;
-
-  color: #31547f;
-
-  font-size: 12px;
-
+  box-shadow: 0 4px 12px rgba(0, 33, 71, 0.06);
+  color: #002147;
+  font-size: 13px;
   font-weight: 650;
 }
 
 .admissionDocumentsBadge svg {
-  color: #b2872f;
+  color: #fdb913;
+  font-size: 16px;
 }
 
 /* =========================================================
@@ -997,61 +787,46 @@
 
 .admissionDocumentsList {
   display: flex;
-
   flex-direction: column;
-
-  gap: 10px;
+  gap: 12px;
 }
 
 .admissionDocumentRow {
   display: flex;
-
   align-items: center;
-
-  gap: 13px;
-
-  min-height: 58px;
-
-  padding: 10px 16px;
-
-  border: 1px solid #e4e8ee;
-
-  border-radius: 8px;
-
+  gap: 14px;
+  min-height: 52px;
+  padding: 14px 18px;
+  border: 1px solid #edf2f7;
+  border-radius: 14px;
   background: #ffffff;
-
+  box-shadow: 0 2px 8px rgba(0, 33, 71, 0.04);
   transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .admissionDocumentRow:hover {
-  transform: translateX(4px);
-
-  box-shadow: 0 7px 18px rgba(20, 39, 72, 0.06);
+  transform: translateX(6px);
+  border-color: #fdb913;
+  box-shadow: 0 6px 18px rgba(0, 33, 71, 0.08);
 }
 
 .admissionDocumentCheck {
   flex: 0 0 auto;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  color: #1d7a58;
-
-  font-size: 17px;
+  color: #16a34a;
+  font-size: 18px;
 }
 
 .admissionDocumentRow span {
-  color: #172033;
-
+  color: #002147;
   font-size: 14.5px;
-
   line-height: 1.5;
-
   font-weight: 600;
-
   word-break: break-word;
 }
 
@@ -1061,158 +836,111 @@
 
 .admissionDatesSection {
   padding: 40px 0;
-
   background: #ffffff;
 }
 
 .admissionDatesCard {
   display: flex;
-
   align-items: center;
-
-  gap: 20px;
-
-  padding: 22px 25px;
-
-  border: 1px solid #e2e7ee;
-
-  border-radius: 12px;
-
-  background: #f9fbfd;
+  gap: 22px;
+  padding: 24px 28px;
+  border: 1px solid #edf2f7;
+  border-radius: 16px;
+  background: #f8fafc;
+  box-shadow: 0 4px 16px rgba(0, 33, 71, 0.06);
+  border-left: 4px solid #fdb913;
 }
 
 .admissionDatesIcon {
-  width: 50px;
-  height: 50px;
-
-  flex: 0 0 50px;
-
+  width: 52px;
+  height: 52px;
+  flex: 0 0 52px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  border-radius: 10px;
-
-  background: rgba(0, 33, 71, 0.08);
-
-  color: #002147;
-
-  font-size: 20px;
+  border-radius: 50%;
+  background: #002147;
+  color: #fdb913;
+  font-size: 22px;
 }
 
 .admissionDatesCard > div:last-child > span {
-  display: block;
-
+  display: inline-block;
   margin-bottom: 4px;
-
-  color: #b2872f;
-
-  font-size: 10px;
-
+  color: #fdb913;
+  font-size: 11px;
   font-weight: 800;
-
-  letter-spacing: 1.7px;
-
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 
 .admissionDatesCard h2 {
   margin: 0;
-
-  color: #172033;
-
-  font-size: 21px;
-
-  font-weight: 720;
+  color: #002147;
+  font-size: 20px;
+  font-weight: 750;
 }
 
 .admissionDatesCard p {
-  margin: 5px 0 0;
-
-  color: #4b5563;
-
-  font-size: 13.5px;
-
+  margin: 6px 0 0;
+  color: #555;
+  font-size: 14px;
   line-height: 1.6;
-
   text-align: justify !important;
   text-justify: inter-word;
 }
 
 /* =========================================================
-   BOTTOM CTA
+   BOTTOM CTA (Solid Footer Theme #002147)
 ========================================================= */
 
 .admissionBottomCTA {
   position: relative;
-
   overflow: hidden;
-
-  padding: 55px 0 65px;
-
-  margin-bottom: 40px;
-
-  background: #002147;
-
-  color: #ffffff;
-
+  padding: 48px 20px !important;
+  margin-bottom: 35px;
+  background: #002147 !important;
+  color: #ffffff !important;
   border-top: 2px solid #fdb913;
   border-bottom: 2px solid #fdb913;
 }
 
 .admissionCTAContent .admissionPrimaryButton {
-  margin-top: 24px;
+  margin-top: 20px;
 }
 
 .admissionCTAContent {
   position: relative;
-
   z-index: 2;
-
   max-width: 760px;
-
   margin: 0 auto;
-
   text-align: center;
 }
 
 .admissionCTAContent > span {
-  display: block;
-
-  margin-bottom: 10px;
-
-  color: #e1bb5e;
-
-  font-size: 11px;
-
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #fdb913;
+  font-size: 12px;
   font-weight: 800;
-
   letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .admissionCTAContent h2 {
-  margin: 0;
-
+  margin: 0 0 10px 0;
   color: #ffffff;
-
-  font-size: clamp(28px, 4vw, 42px);
-
-  line-height: 1.2;
-
-  font-weight: 750;
+  font-size: clamp(1.85rem, 3.5vw, 2.5rem);
+  line-height: 1.25;
+  font-weight: 800;
 }
 
 .admissionCTAContent p {
-  max-width: 650px;
-
-  margin: 17px auto 0;
-
-  color: rgba(255, 255, 255, 0.95);
-
-  font-size: 14.5px;
-
-  line-height: 1.75;
-
+  max-width: 680px;
+  margin: 14px auto 0;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 15px;
+  line-height: 1.7;
   text-align: justify !important;
   text-justify: inter-word;
 }
@@ -1263,14 +991,6 @@
 ========================================================= */
 
 @media (max-width: 1050px) {
-  .admissionHero .admissionProcessContainer {
-    grid-template-columns:
-      minmax(0, 1fr)
-      minmax(260px, 0.7fr);
-
-    gap: 45px;
-  }
-
   .admissionStepsGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1280,7 +1000,7 @@
   }
 
   .admissionDocumentsLayout {
-    gap: 45px;
+    gap: 35px;
   }
 }
 
@@ -1290,27 +1010,15 @@
 
 @media (max-width: 800px) {
   .admissionHero {
-    padding: 65px 0 70px;
-  }
-
-  .admissionHero .admissionProcessContainer {
-    grid-template-columns: 1fr;
-  }
-
-  .admissionHeroVisual {
-    justify-content: flex-start;
-  }
-
-  .admissionHeroCard {
-    width: 100%;
-    max-width: 440px;
+    min-height: 170px;
+    padding: 30px 15px;
   }
 
   .admissionJourneySection,
   .admissionEligibilitySection,
   .admissionModesSection,
   .admissionDocumentsSection {
-    padding: 38px 0;
+    padding: 35px 0;
   }
 
   .admissionDocumentsLayout {
@@ -1322,7 +1030,7 @@
   }
 
   .admissionDocumentsIntro h2 {
-    font-size: 32px;
+    font-size: 28px;
   }
 }
 
@@ -1332,34 +1040,26 @@
 
 @media (max-width: 600px) {
   .admissionProcessContainer {
-    width: min(100% - 28px, 1180px);
-  }
-
-  .admissionBreadcrumb {
-    min-height: 36px;
-
-    font-size: 12px;
+    width: min(100% - 24px, 1180px);
   }
 
   .admissionHero {
-    padding: 28px 0 32px;
+    min-height: 160px;
+    padding: 25px 12px;
   }
 
   .admissionHero h1 {
-    font-size: 30px;
-
-    letter-spacing: -1px;
+    font-size: 1.8rem !important;
+    letter-spacing: -0.5px;
   }
 
   .admissionHeroContent > p {
     font-size: 13.5px;
-
     line-height: 1.6;
   }
 
   .admissionHeroActions {
     flex-direction: column;
-
     align-items: stretch;
   }
 
@@ -1368,16 +1068,12 @@
     width: 100%;
   }
 
-  .admissionHeroCard {
-    padding: 20px;
-  }
-
   .admissionSectionHeading {
     margin-bottom: 24px;
   }
 
   .admissionSectionHeading h2 {
-    font-size: 26px;
+    font-size: 1.6rem;
   }
 
   .admissionSectionHeading p {
@@ -1390,7 +1086,6 @@
 
   .admissionStepCard {
     min-height: auto;
-
     padding: 20px;
   }
 
@@ -1403,43 +1098,38 @@
   }
 
   .admissionDocumentsIntro h2 {
-    font-size: 26px;
+    font-size: 1.6rem;
   }
 
   .admissionDocumentRow {
     align-items: flex-start;
-
     padding: 12px;
   }
 
   .admissionDatesCard {
     align-items: flex-start;
-
     padding: 18px;
-
     gap: 14px;
   }
 
   .admissionDatesIcon {
     width: 42px;
     height: 42px;
-
     flex-basis: 42px;
-
     font-size: 17px;
   }
 
   .admissionDatesCard h2 {
-    font-size: 19px;
+    font-size: 18px;
   }
 
   .admissionBottomCTA {
-    padding: 44px 0 54px;
+    padding: 38px 15px !important;
     margin-bottom: 30px;
   }
 
   .admissionCTAContent h2 {
-    font-size: 26px;
+    font-size: 1.6rem;
   }
 }
 
@@ -1449,27 +1139,26 @@
 
 @media (max-width: 420px) {
   .admissionHero h1 {
-    font-size: 37px;
+    font-size: 1.6rem !important;
   }
 
   .admissionHeroTag {
     font-size: 9px;
-
     letter-spacing: 1.2px;
   }
 
   .admissionStepCard h3 {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .admissionStepCard p,
   .admissionModeCard p,
   .admissionDocumentRow span {
-    font-size: 12.5px;
+    font-size: 13px;
   }
 
   .admissionCTAContent h2 {
-    font-size: 27px;
+    font-size: 1.5rem;
   }
 }
 
