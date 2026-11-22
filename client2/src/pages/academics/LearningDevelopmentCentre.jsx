@@ -41,7 +41,7 @@ const LearningDevelopmentCentre = () => {
 
       setError(
         err?.response?.data?.message ||
-          "Unable to load Learning Development Centre documents.",
+        "Unable to load Learning Development Centre documents.",
       );
     } finally {
       setLoading(false);
@@ -63,12 +63,12 @@ const LearningDevelopmentCentre = () => {
       ===================================================== */}
 
       <section className="ldcHero">
-        <div className="ldcHeroContainer">
-          <span className="ldcEyebrow">ACADEMICS</span>
+        <div className="ldcHeroContainer text-center">
+          {/* <span className="ldcEyebrow">ACADEMICS</span> */}
 
-          <h1>Learning Development Centre</h1>
+          <h1 className="text-center">Learning Development Centre</h1>
 
-          <p>
+          <p className="text-center">
             Access important Learning Development Centre documents, guidelines
             and resources provided by IMSEC.
           </p>
@@ -81,126 +81,126 @@ const LearningDevelopmentCentre = () => {
         ===================================================== */}
 
         <section className="ldcSection">
-        {/* ===================================================
+          {/* ===================================================
             LOADING
         =================================================== */}
 
-        {loading && (
-          <div className="ldcLoading">
-            <div className="ldcSpinner"></div>
+          {loading && (
+            <div className="ldcLoading">
+              <div className="ldcSpinner"></div>
 
-            <p>Loading documents...</p>
-          </div>
-        )}
+              <p>Loading documents...</p>
+            </div>
+          )}
 
-        {/* ===================================================
+          {/* ===================================================
             ERROR
         =================================================== */}
 
-        {!loading && error && (
-          <div className="ldcError">
-            <FaBookOpen />
+          {!loading && error && (
+            <div className="ldcError">
+              <FaBookOpen />
 
-            <h3>Unable to Load Documents</h3>
+              <h3>Unable to Load Documents</h3>
 
-            <p>{error}</p>
-          </div>
-        )}
+              <p>{error}</p>
+            </div>
+          )}
 
-        {/* ===================================================
+          {/* ===================================================
             EMPTY
         =================================================== */}
 
-        {!loading && !error && documents.length === 0 && (
-          <div className="ldcEmpty">
-            <div className="ldcEmptyIcon">
-              <FaBookOpen />
+          {!loading && !error && documents.length === 0 && (
+            <div className="ldcEmpty">
+              <div className="ldcEmptyIcon">
+                <FaBookOpen />
+              </div>
+
+              <h3>No Documents Available</h3>
+
+              <p>
+                Learning Development Centre documents will be available here when
+                published.
+              </p>
             </div>
+          )}
 
-            <h3>No Documents Available</h3>
-
-            <p>
-              Learning Development Centre documents will be available here when
-              published.
-            </p>
-          </div>
-        )}
-
-        {/* ===================================================
+          {/* ===================================================
             DOCUMENTS
         =================================================== */}
 
-        {!loading && !error && documents.length > 0 && (
-          <div className="ldcDocumentList">
-            {documents.map((item, index) => (
-              <article className="ldcDocumentCard" key={item._id}>
-                {/* =======================================
+          {!loading && !error && documents.length > 0 && (
+            <div className="ldcDocumentList">
+              {documents.map((item, index) => (
+                <article className="ldcDocumentCard" key={item._id}>
+                  {/* =======================================
                         NUMBER
                     ======================================= */}
 
-                <div className="ldcDocumentNumber">
-                  {String(index + 1).padStart(2, "0")}
-                </div>
+                  <div className="ldcDocumentNumber">
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
 
-                {/* =======================================
+                  {/* =======================================
                         ICON
                     ======================================= */}
 
-                <div className="ldcDocumentIcon">
-                  <FaBookOpen />
-                </div>
+                  <div className="ldcDocumentIcon">
+                    <FaBookOpen />
+                  </div>
 
-                {/* =======================================
+                  {/* =======================================
                         INFORMATION
                     ======================================= */}
 
-                <div className="ldcDocumentInfo">
-                  <span>LEARNING DEVELOPMENT CENTRE</span>
+                  <div className="ldcDocumentInfo">
+                    <span>LEARNING DEVELOPMENT CENTRE</span>
 
-                  <h3>{item.title}</h3>
-                </div>
+                    <h3>{item.title}</h3>
+                  </div>
 
-                {/* =======================================
+                  {/* =======================================
                         ACTIONS
                     ======================================= */}
 
-                <div className="ldcDocumentActions">
-                  <a
-                    href={item.pdfLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="ldcViewButton"
-                  >
-                    <FaEye />
-                    View PDF
-                  </a>
+                  <div className="ldcDocumentActions">
+                    <a
+                      href={item.pdfLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ldcViewButton"
+                    >
+                      <FaEye />
+                      View PDF
+                    </a>
 
-                  <a
-                    href={item.pdfLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    download
-                    className="ldcDownloadButton"
-                  >
-                    <FaDownload />
-                    Download
-                  </a>
+                    <a
+                      href={item.pdfLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      download
+                      className="ldcDownloadButton"
+                    >
+                      <FaDownload />
+                      Download
+                    </a>
 
-                  <a
-                    href={item.pdfLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="ldcExternalButton"
-                    aria-label="Open PDF"
-                  >
-                    <FaExternalLinkAlt />
-                  </a>
-                </div>
-              </article>
-            ))}
-          </div>
-        )}
-      </section>
+                    <a
+                      href={item.pdfLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ldcExternalButton"
+                      aria-label="Open PDF"
+                    >
+                      <FaExternalLinkAlt />
+                    </a>
+                  </div>
+                </article>
+              ))}
+            </div>
+          )}
+        </section>
       </div>
     </div>
   );
