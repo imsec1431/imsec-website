@@ -35,12 +35,12 @@ const AcademicCoordinators = () => {
     <div className="academic-coordinators-page">
       {/* PAGE HEADER (FULL WIDTH) */}
       <div className="academic-coordinators-header">
-        <div className="academic-coordinators-header-container">
+        <div className="academic-coordinators-header-container text-center">
           {/* <span className="academic-coordinators-eyebrow">ACADEMICS</span> */}
 
-          <h1>Academic Coordinators</h1>
+          <h1 className="text-center">Academic Coordinators</h1>
 
-          <p>
+          <p className="text-center">
             Meet our academic coordinators and learn about their
             responsibilities.
           </p>
