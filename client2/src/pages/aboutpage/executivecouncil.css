@@ -203,7 +203,8 @@ body {
 .executive-intro p {
   color: #555;
   line-height: 1.8;
-  text-align: center;
+  text-align: justify !important;
+  text-justify: inter-word;
   margin-bottom: 12px;
 }
 

@@ -71,7 +71,7 @@ const ExecutiveCouncil = () => {
               Executive Council
             </h1>
 
-            <p
+            {/* <p
               className="text-center"
               style={{
                 color: "white",
@@ -89,7 +89,7 @@ const ExecutiveCouncil = () => {
               About
               <span style={{ color: "#fdb913", margin: "0 8px" }}>/</span>
               Executive Council
-            </p>
+            </p> */}
           </div>
         </Container>
       </section>
@@ -97,8 +97,8 @@ const ExecutiveCouncil = () => {
       {/* ================= Introduction ================= */}
       <section className="executive-intro">
         <Container>
-          <Row className="justify-content-center text-center">
-            <Col lg={10} md={12} className="text-center">
+          <Row className="justify-content-center">
+            <Col lg={10} md={12}>
               <div className="text-center mb-4">
                 <h2 className="section-title text-center">
                   Executive
@@ -107,9 +107,9 @@ const ExecutiveCouncil = () => {
               </div>
 
               <p
-                className="text-center"
                 style={{
-                  textAlign: "center",
+                  textAlign: "justify",
+                  textJustify: "inter-word",
                   maxWidth: "900px",
                   margin: "0 auto 14px",
                 }}
@@ -121,9 +121,9 @@ const ExecutiveCouncil = () => {
               </p>
 
               <p
-                className="text-center"
                 style={{
-                  textAlign: "center",
+                  textAlign: "justify",
+                  textJustify: "inter-word",
                   maxWidth: "900px",
                   margin: "0 auto",
                 }}
