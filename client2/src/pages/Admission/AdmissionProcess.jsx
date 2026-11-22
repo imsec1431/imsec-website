@@ -207,15 +207,15 @@ const AdmissionProcess = () => {
       <section className="admissionHero">
         <div className="admissionProcessContainer">
           <div className="admissionHeroContent">
-            <span className="admissionHeroTag">{admissionProcess.heroTag}</span>
+            <span className="admissionHeroTag">{admissionProcess.heroTag || "Admissions Open"}</span>
 
             <h1>
-              {admissionProcess.heroTitle}
+              {admissionProcess.heroTitle || "Admission"}
 
-              <span> {admissionProcess.heroTitleHighlight}</span>
+              <span> {admissionProcess.heroTitleHighlight || "Process"}</span>
             </h1>
 
-            <p>{admissionProcess.heroDescription}</p>
+            <p style={{ textAlign: "justify", textJustify: "inter-word" }}>{admissionProcess.heroDescription}</p>
 
             <div className="admissionHeroActions">
               {/* React Router Navigation */}
@@ -259,11 +259,11 @@ const AdmissionProcess = () => {
       <section className="admissionJourneySection">
         <div className="admissionProcessContainer">
           <div className="admissionSectionHeading">
-            <span>{admissionProcess.journeyLabel}</span>
+            <span>{admissionProcess.journeyLabel || "Admission Journey"}</span>
 
-            <h2>{admissionProcess.journeyTitle}</h2>
+            <h2>{admissionProcess.journeyTitle || "Your Admission in 6 Simple Steps"}</h2>
 
-            <p>{admissionProcess.journeyDescription}</p>
+            <p style={{ textAlign: "justify", textJustify: "inter-word" }}>{admissionProcess.journeyDescription}</p>
           </div>
 
           <div className="admissionStepsGrid">
@@ -279,7 +279,7 @@ const AdmissionProcess = () => {
 
                 <h3>{step.title}</h3>
 
-                <p>{step.description}</p>
+                <p style={{ textAlign: "justify", textJustify: "inter-word" }}>{step.description}</p>
 
                 <div className="admissionStepNumber">
                   {String(index + 1).padStart(2, "0")}
@@ -297,11 +297,11 @@ const AdmissionProcess = () => {
       <section className="admissionEligibilitySection">
         <div className="admissionProcessContainer">
           <div className="admissionSectionHeading">
-            <span>{admissionProcess.eligibilityLabel}</span>
+            <span>{admissionProcess.eligibilityLabel || "Eligibility"}</span>
 
-            <h2>{admissionProcess.eligibilityTitle}</h2>
+            <h2>{admissionProcess.eligibilityTitle || "Programme Eligibility Criteria"}</h2>
 
-            <p>{admissionProcess.eligibilityDescription}</p>
+            <p style={{ textAlign: "justify", textJustify: "inter-word" }}>{admissionProcess.eligibilityDescription}</p>
           </div>
 
           <div className="admissionEligibilityTableWrapper">
@@ -320,12 +320,16 @@ const AdmissionProcess = () => {
                 {eligibility.map((item, index) => (
                   <tr key={index}>
                     <td>
-                      <strong>{item.course}</strong>
+                      <strong>{item.course || item.programme || item.program}</strong>
                     </td>
 
-                    <td>{item.qualification}</td>
+                    <td style={{ textAlign: "justify", textJustify: "inter-word" }}>
+                      {item.qualification || item.eligibilityCriteria || item.criteria}
+                    </td>
 
-                    <td>{item.marks}</td>
+                    <td style={{ textAlign: "justify", textJustify: "inter-word" }}>
+                      {item.marks || item.requirement || item.percentage}
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -341,11 +345,11 @@ const AdmissionProcess = () => {
       <section className="admissionModesSection">
         <div className="admissionProcessContainer">
           <div className="admissionSectionHeading">
-            <span>{admissionProcess.admissionModeLabel}</span>
+            <span>{admissionProcess.admissionModeLabel || "Admission Modes"}</span>
 
-            <h2>{admissionProcess.admissionModeTitle}</h2>
+            <h2>{admissionProcess.admissionModeTitle || "Choose Your Admission Path"}</h2>
 
-            <p>{admissionProcess.admissionModeDescription}</p>
+            <p style={{ textAlign: "justify", textJustify: "inter-word" }}>{admissionProcess.admissionModeDescription}</p>
           </div>
 
           <div className="admissionModesGrid">
@@ -367,7 +371,7 @@ const AdmissionProcess = () => {
 
                 <h3>{item.title}</h3>
 
-                <p>{item.description}</p>
+                <p style={{ textAlign: "justify", textJustify: "inter-word" }}>{item.description}</p>
               </article>
             ))}
           </div>
@@ -382,11 +386,11 @@ const AdmissionProcess = () => {
         <div className="admissionProcessContainer">
           <div className="admissionDocumentsLayout">
             <div className="admissionDocumentsIntro">
-              <span>{admissionProcess.documentLabel}</span>
+              <span>{admissionProcess.documentLabel || "Documents Required"}</span>
 
-              <h2>{admissionProcess.documentTitle}</h2>
+              <h2>{admissionProcess.documentTitle || "Admission Checklist"}</h2>
 
-              <p>{admissionProcess.documentDescription}</p>
+              <p style={{ textAlign: "justify", textJustify: "inter-word" }}>{admissionProcess.documentDescription}</p>
 
               <div className="admissionDocumentsBadge">
                 <FaClipboardCheck />
@@ -402,7 +406,7 @@ const AdmissionProcess = () => {
                     <FaCheckCircle />
                   </div>
 
-                  <span>{item.title}</span>
+                  <span>{typeof item === "string" ? item : (item.title || item.name || item.document || "")}</span>
                 </div>
               ))}
             </div>
@@ -423,11 +427,11 @@ const AdmissionProcess = () => {
               </div>
 
               <div>
-                <span>{admissionProcess.importantDateLabel}</span>
+                <span>{admissionProcess.importantDateLabel || "Important Dates"}</span>
 
-                <h2>{admissionProcess.importantDateTitle}</h2>
+                <h2>{admissionProcess.importantDateTitle || "Admission Schedule"}</h2>
 
-                <p>
+                <p style={{ textAlign: "justify", textJustify: "inter-word" }}>
                   Please check the latest admission notifications for current
                   dates and deadlines.
                 </p>
@@ -448,7 +452,7 @@ const AdmissionProcess = () => {
 
             <h2>Ready to Begin Your Admission Journey?</h2>
 
-            <p>
+            <p style={{ textAlign: "justify", textJustify: "inter-word" }}>
               Take the next step toward your academic and professional future at
               IMS Engineering College.
             </p>
