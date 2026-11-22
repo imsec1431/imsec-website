@@ -33,8 +33,8 @@ const AboutImsec = () => {
 
         setError(
           err?.response?.data?.message ||
-            err.message ||
-            "Failed to load About IMSEC.",
+          err.message ||
+          "Failed to load About IMSEC.",
         );
       } finally {
         setLoading(false);
@@ -123,7 +123,7 @@ const AboutImsec = () => {
         <Container>
           <div className="hero-content text-center">
             <h1 className="text-center">{about.heroTitle}</h1>
-            <p
+            {/* <p
               className="text-center"
               style={{
                 color: "white",
@@ -138,7 +138,7 @@ const AboutImsec = () => {
                   {index < arr.length - 1 && <span> / </span>}
                 </React.Fragment>
               ))}
-            </p>
+            </p> */}
           </div>
         </Container>
       </section>
@@ -163,9 +163,9 @@ const AboutImsec = () => {
 
               <h2 className="section-title">{about.aboutTitle}</h2>
 
-              <p className="section-text">{about.aboutDescription1}</p>
+              <p className="section-text" style={{ textAlign: "justify" }}>{about.aboutDescription1}</p>
 
-              <p className="section-text">{about.aboutDescription2}</p>
+              <p className="section-text" style={{ textAlign: "justify" }}>{about.aboutDescription2}</p>
             </Col>
           </Row>
         </Container>
