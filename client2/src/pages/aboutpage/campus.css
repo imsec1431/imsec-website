@@ -116,6 +116,8 @@
   font-size: 15px;
   line-height: 1.7;
   color: #555;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 .campus-section-heading {
@@ -476,6 +478,8 @@
   font-size: 15px;
   line-height: 1.7;
   color: #555;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 .campus-green-card {
@@ -498,6 +502,8 @@
   line-height: 1.6;
   font-size: 14px;
   color: #666;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 /* =========================================================

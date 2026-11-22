@@ -169,7 +169,7 @@ const Campus = () => {
 
                 <h1>{campus.overviewTitle}</h1>
 
-                <p className="campus-section-description">
+                <p className="campus-section-description" style={{ textAlign: "justify", textJustify: "inter-word" }}>
                   {campus.overviewDescription}
                 </p>
 
@@ -316,7 +316,7 @@ const Campus = () => {
 
                 <h2>{campus.tourTitle}</h2>
 
-                <p className="campus-section-description">
+                <p className="campus-section-description" style={{ textAlign: "justify", textJustify: "inter-word" }}>
                   {campus.tourDescription}
                 </p>
 
@@ -355,12 +355,12 @@ const Campus = () => {
 
                 <h2>{campus.greenTitle}</h2>
 
-                <p>{campus.greenDescription}</p>
+                <p style={{ textAlign: "justify", textJustify: "inter-word" }}>{campus.greenDescription}</p>
 
                 <div className="campus-green-card">
                   <h3>{campus.greenCardTitle}</h3>
 
-                  <p>{campus.greenCardDescription}</p>
+                  <p style={{ textAlign: "justify", textJustify: "inter-word" }}>{campus.greenCardDescription}</p>
                 </div>
               </div>
             </Col>
