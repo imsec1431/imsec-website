@@ -121,12 +121,12 @@ const Courses = () => {
       =================================================== */}
 
       <section className="coursesHero">
-        <div className="coursesHeroContainer">
+        <div className="coursesHeroContainer text-center">
           {/* <span className="coursesEyebrow">ACADEMICS</span> */}
 
-          <h1>Courses</h1>
+          <h1 className="text-center">Courses</h1>
 
-          <p>
+          <p className="text-center">
             Explore our academic programmes, degree structures, and curriculum.
           </p>
         </div>
