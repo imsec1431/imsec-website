@@ -68,6 +68,26 @@ const ChairmanMessage = () => {
   useEffect(() => {
     fetchChairman();
   }, []);
+
+  const renderMessage = (text) => {
+    if (!text) return null;
+    const normalized = text.replace(/\r\n/g, "\n");
+    const hasDoubleNewline = /\n\s*\n/.test(normalized);
+
+    const paragraphs = hasDoubleNewline
+      ? normalized.split(/\n\s*\n/)
+      : normalized.split("\n");
+
+    return paragraphs
+      .map((p) => (hasDoubleNewline ? p.replace(/\n/g, " ") : p).trim())
+      .filter((p) => p.length > 0)
+      .map((para, index) => (
+        <p key={index} className="section-text" style={{ textAlign: "justify" }}>
+          {para}
+        </p>
+      ));
+  };
+
   if (loading) {
     return (
       <div className="text-center py-5">
@@ -84,7 +104,7 @@ const ChairmanMessage = () => {
           <div className="hero-content text-center">
             <h1 className="text-center">Chairman's Message</h1>
 
-            <p
+            {/* <p
               className="text-center"
               style={{
                 color: "white",
@@ -97,7 +117,7 @@ const ChairmanMessage = () => {
               About
               <span>/</span>
               Chairman's Message
-            </p>
+            </p> */}
           </div>
         </Container>
       </section>
@@ -139,7 +159,7 @@ const ChairmanMessage = () => {
             {/* Right */}
 
             <Col lg={8}>
-              <div className="message-box">
+              <div className="message-box" style={{ textAlign: "justify" }}>
                 {/* <h6 className="section-tag">CHAIRMAN'S MESSAGE</h6> */}
 
                 <h2 className="section-title">
@@ -147,11 +167,7 @@ const ChairmanMessage = () => {
                   {/* <span> Leaders</span> */}
                 </h2>
 
-                {chairman?.message?.split("\n").map((para, index) => (
-                  <p key={index} className="section-text">
-                    {para}
-                  </p>
-                ))}
+                {renderMessage(chairman?.message)}
               </div>
             </Col>
           </Row>
