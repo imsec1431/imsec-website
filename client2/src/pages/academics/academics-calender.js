@@ -141,12 +141,12 @@ const AcademicCalendar = () => {
       ========================= */}
 
       <div className="academic-calendar-header">
-        <div className="academic-calendar-header-container">
+        <div className="academic-calendar-header-container text-center">
           {/* <span className="academic-calendar-eyebrow">ACADEMICS</span> */}
 
-          <h1>Academic Calendar</h1>
+          <h1 className="text-center">Academic Calendar</h1>
 
-          <p>Academic calendars for students, faculty and staff.</p>
+          <p className="text-center">Academic calendars for students, faculty and staff.</p>
         </div>
       </div>
 
