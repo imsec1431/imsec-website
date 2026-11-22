@@ -99,12 +99,12 @@ const TeachingLearningProcess = () => {
       ===================================================== */}
 
       <section className="publicTeachingLearningHero">
-        <div className="publicTeachingLearningHeroContainer">
+        <div className="publicTeachingLearningHeroContainer text-center">
           {/* <span className="publicTeachingLearningEyebrow">ACADEMICS</span> */}
 
-          <h1>Teaching Learning Process</h1>
+          <h1 className="text-center">Teaching Learning Process</h1>
 
-          <p>
+          <p className="text-center">
             Explore the teaching and learning practices that support academic
             excellence, innovation and holistic development at IMSEC.
           </p>
