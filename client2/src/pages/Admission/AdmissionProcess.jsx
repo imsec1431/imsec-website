@@ -207,15 +207,15 @@ const AdmissionProcess = () => {
       <section className="admissionHero">
         <div className="admissionHeroOverlay">
           <div className="admissionProcessContainer">
-            <div className="admissionHeroContent text-center">
+            <div className="admissionHeroContent">
               <span className="admissionHeroTag">{admissionProcess.heroTag || "Admissions Open"}</span>
 
-              <h1>
+              <h1 className="text-center">
                 {admissionProcess.heroTitle || "Admission"}
                 <span> {admissionProcess.heroTitleHighlight || "Process"}</span>
               </h1>
 
-              <p>{admissionProcess.heroDescription}</p>
+              <p style={{ textAlign: "justify", textJustify: "inter-word" }}>{admissionProcess.heroDescription}</p>
 
               <div className="admissionHeroActions">
                 {/* React Router Navigation */}
@@ -391,7 +391,7 @@ const AdmissionProcess = () => {
                     <FaCheckCircle />
                   </div>
 
-                  <span>{typeof item === "string" ? item : (item.title || item.name || item.document || "")}</span>
+                  <span style={{ textAlign: "justify", textJustify: "inter-word" }}>{typeof item === "string" ? item : (item.title || item.name || item.document || "")}</span>
                 </div>
               ))}
             </div>
