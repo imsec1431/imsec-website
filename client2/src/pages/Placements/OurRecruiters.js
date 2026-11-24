@@ -86,11 +86,11 @@ const OurRecruiters = () => {
       ===================================================== */}
 
       <section className="major-public-hero">
-        <div className="major-hero-container">
-          <div className="major-public-hero-content">
-            <h1>Major Recruiters</h1>
+        <div className="major-hero-container text-center">
+          <div className="major-public-hero-content text-center">
+            <h1 className="text-center">Major Recruiters</h1>
 
-            <p>
+            <p className="text-center">
               Our leading corporate recruiters and industry partners.
             </p>
           </div>

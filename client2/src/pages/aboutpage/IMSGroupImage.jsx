@@ -100,7 +100,7 @@ const IMSGroupImage = () => {
           <div className="ims-group-image-hero-content text-center">
             <h1 className="text-center">{page.title}</h1>
 
-            <p
+            {/* <p
               className="text-center"
               style={{
                 color: "white",
@@ -117,7 +117,7 @@ const IMSGroupImage = () => {
               About
               <span style={{ color: "#fdb913", margin: "0 8px" }}>/</span>
               Organizational Chart
-            </p>
+            </p> */}
           </div>
         </div>
       </section>

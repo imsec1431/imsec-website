@@ -75,10 +75,10 @@ const NAAC = () => {
 
       <section className="naac-public-hero">
         <div className="container">
-          <div className="naac-hero-content">
+          <div className="naac-hero-content text-center">
             <span className="naac-hero-tag">INTERNAL QUALITY ASSURANCE CELL</span>
-            <h1>{hero.title || "NAAC"}</h1>
-            <p>
+            <h1 className="text-center">{hero.title || "NAAC"}</h1>
+            <p className="text-center">
               {hero.subtitle || "National Assessment and Accreditation Council"}
             </p>
           </div>

@@ -67,10 +67,10 @@ const IndustryAcademicsCollaboration = () => {
     return (
       <div className="iac-page">
         <section className="iac-hero">
-          <div className="iac-hero-container">
-            <span className="iac-eyebrow">CENTRE OF EXCELLENCE</span>
-            <h1>Industry Academics Collaboration</h1>
-            <p className="iac-hero-subtitle">
+          <div className="iac-hero-container text-center">
+            <span className="iac-eyebrow text-center">CENTRE OF EXCELLENCE</span>
+            <h1 className="text-center">Industry Academics Collaboration</h1>
+            <p className="iac-hero-subtitle text-center">
               Promoting innovation, practical training, and collaborative excellence between industry leaders and academia.
             </p>
           </div>
@@ -91,10 +91,10 @@ const IndustryAcademicsCollaboration = () => {
     return (
       <div className="iac-page">
         <section className="iac-hero">
-          <div className="iac-hero-container">
-            <span className="iac-eyebrow">CENTRE OF EXCELLENCE</span>
-            <h1>Industry Academics Collaboration</h1>
-            <p className="iac-hero-subtitle">
+          <div className="iac-hero-container text-center">
+            <span className="iac-eyebrow text-center">CENTRE OF EXCELLENCE</span>
+            <h1 className="text-center">Industry Academics Collaboration</h1>
+            <p className="iac-hero-subtitle text-center">
               Promoting innovation, practical training, and collaborative excellence between industry leaders and academia.
             </p>
           </div>
@@ -134,12 +134,12 @@ const IndustryAcademicsCollaboration = () => {
           ================================================= */}
 
       <section className="iac-hero">
-        <div className="iac-hero-container">
-          <span className="iac-eyebrow">CENTRE OF EXCELLENCE</span>
+        <div className="iac-hero-container text-center">
+          <span className="iac-eyebrow text-center">CENTRE OF EXCELLENCE</span>
 
-          <h1>{data.title || "Industry Academics Collaboration"}</h1>
+          <h1 className="text-center">{data.title || "Industry Academics Collaboration"}</h1>
 
-          <p className="iac-hero-subtitle">
+          <p className="iac-hero-subtitle text-center">
             Promoting innovation, practical training, and collaborative excellence between industry leaders and academia.
           </p>
         </div>

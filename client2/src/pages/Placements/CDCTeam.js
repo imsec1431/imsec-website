@@ -214,11 +214,11 @@ function CDCTeam() {
     <main className="cdc-team-page">
       {/* HERO (FULL WIDTH) */}
       <section className="cdc-hero">
-        <div className="cdc-hero-container">
-          <div className="hero-content">
+        <div className="cdc-hero-container text-center">
+          <div className="hero-content text-center">
             {/* <span className="cdc-eyebrow">PLACEMENTS</span> */}
-            <h1>Corporate Development Cell</h1>
-            <p>
+            <h1 className="text-center">Corporate Development Cell</h1>
+            <p className="text-center">
               Empowering Students through Training, Corporate Collaboration,
               Internships, Skill Development and Campus Placements.
             </p>

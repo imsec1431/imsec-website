@@ -879,12 +879,12 @@ const Events = () => {
     return (
       <main className="events-page">
         <section className="events-hero">
-          <div className="events-hero-container">
-            <span className="events-hero-badge">LIFE @ IMSEC</span>
+          <div className="events-hero-container text-center">
+            <span className="events-hero-badge text-center">LIFE @ IMSEC</span>
 
-            <h1>Events</h1>
+            <h1 className="text-center">Events</h1>
 
-            <p>Discover events, activities and memorable moments at IMSEC</p>
+            <p className="text-center">Discover events, activities and memorable moments at IMSEC</p>
           </div>
         </section>
 
@@ -907,12 +907,12 @@ const Events = () => {
     return (
       <main className="events-page">
         <section className="events-hero">
-          <div className="events-hero-container">
-            <span className="events-hero-badge">LIFE @ IMSEC</span>
+          <div className="events-hero-container text-center">
+            <span className="events-hero-badge text-center">LIFE @ IMSEC</span>
 
-            <h1>{data.hero?.title || "Events"}</h1>
+            <h1 className="text-center">{data.hero?.title || "Events"}</h1>
 
-            <p>{data.hero?.subtitle || "Explore events at IMSEC"}</p>
+            <p className="text-center">{data.hero?.subtitle || "Explore events at IMSEC"}</p>
           </div>
         </section>
 
@@ -942,12 +942,12 @@ const Events = () => {
       =================================================== */}
 
       <section className="events-hero">
-        <div className="events-hero-container">
-          <span className="events-hero-badge">LIFE @ IMSEC</span>
+        <div className="events-hero-container text-center">
+          <span className="events-hero-badge text-center">LIFE @ IMSEC</span>
 
-          <h1>{data.hero?.title || "Events @ IMSEC"}</h1>
+          <h1 className="text-center">{data.hero?.title || "Events @ IMSEC"}</h1>
 
-          <p>
+          <p className="text-center">
             {data.hero?.subtitle ||
               "Explore the vibrant events, activities and celebrations at IMSEC"}
           </p>

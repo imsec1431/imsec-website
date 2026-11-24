@@ -69,10 +69,10 @@ const Gym = () => {
           ================================================= */}
 
       <section className="gym-hero">
-        <div className="gym-hero-container">
-          <div className="gym-hero-content">
-            <span className="gym-hero-tag">STUDENT WELFARE</span>
-            <h1>{data.title || "Gym"}</h1>
+        <div className="gym-hero-container text-center">
+          <div className="gym-hero-content text-center">
+            <span className="gym-hero-tag text-center">STUDENT WELFARE</span>
+            <h1 className="text-center">{data.title || "Gym"}</h1>
           </div>
         </div>
       </section>

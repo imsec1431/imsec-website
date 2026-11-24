@@ -284,10 +284,10 @@ const Sports = () => {
     <div className="sports-page">
       {/* HERO */}
       <section className="sports-hero">
-        <div className="sports-hero-container">
-          <div className="sports-hero-content">
-            <span className="sports-hero-tag">STUDENT WELFARE</span>
-            <h1>{data.title || "Sports"}</h1>
+        <div className="sports-hero-container text-center">
+          <div className="sports-hero-content text-center">
+            <span className="sports-hero-tag text-center">STUDENT WELFARE</span>
+            <h1 className="text-center">{data.title || "Sports"}</h1>
           </div>
         </div>
       </section>

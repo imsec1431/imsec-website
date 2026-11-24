@@ -83,10 +83,10 @@ const Convocation = () => {
           Hero (FULL WIDTH)
       ========================================== */}
       <section className="convocationHero">
-        <div className="convocationHeroContainer">
+        <div className="convocationHeroContainer text-center">
           {/* <span className="convocationEyebrow">ACADEMICS</span> */}
-          <h1>Convocation</h1>
-          <p>
+          <h1 className="text-center">Convocation</h1>
+          <p className="text-center">
             Celebrating academic excellence, achievements, and milestones at IMSEC.
           </p>
         </div>

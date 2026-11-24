@@ -103,11 +103,11 @@ const ShiningStars = () => {
         {/* HERO (FULL WIDTH) */}
 
         <section className="shining-stars-hero">
-          <div className="shining-stars-hero-container">
-            <div className="shining-stars-heading">
-              <h1>Shining Stars</h1>
+          <div className="shining-stars-hero-container text-center">
+            <div className="shining-stars-heading text-center">
+              <h1 className="text-center">Shining Stars</h1>
 
-              <p>Celebrating the outstanding achievements of our students.</p>
+              <p className="text-center">Celebrating the outstanding achievements of our students.</p>
             </div>
           </div>
         </section>

@@ -146,7 +146,7 @@ const VisionMission = () => {
           <h1>{data.heroTitle || "Vision & Mission"}</h1>
 
           <p style={{ color: "white" }}>
-            {data.heroBreadcrumb || "Home / About / Vision & Mission"}
+            {/* {data.heroBreadcrumb || "Home / About / Vision & Mission"} */}
           </p>
         </Container>
       </section>

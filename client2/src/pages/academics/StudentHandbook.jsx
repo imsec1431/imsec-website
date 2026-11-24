@@ -58,12 +58,12 @@ const StudentHandbook = () => {
       ===================================================== */}
 
       <section className="publicStudentHandbookHero">
-        <div className="publicStudentHandbookHeroContainer">
+        <div className="publicStudentHandbookHeroContainer text-center">
           {/* <span className="publicStudentHandbookEyebrow">ACADEMICS</span> */}
 
-          <h1>Student Handbook</h1>
+          <h1 className="text-center">Student Handbook</h1>
 
-          <p>
+          <p className="text-center">
             Access the official student handbook and important academic
             information provided by IMSEC.
           </p>

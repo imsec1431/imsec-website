@@ -55,12 +55,12 @@ const AllCommittee = () => {
       ================================================= */}
 
       <section className="publicCommitteeHero">
-        <div className="publicCommitteeHeroContainer">
-          <div className="publicCommitteeHeroContent">
-            <span className="publicCommitteeHeroTag">
+        <div className="publicCommitteeHeroContainer text-center">
+          <div className="publicCommitteeHeroContent text-center">
+            <span className="publicCommitteeHeroTag text-center">
               INSTITUTIONAL GOVERNANCE
             </span>
-            <h1>Important Committees</h1>
+            <h1 className="text-center">Important Committees</h1>
           </div>
         </div>
       </section>

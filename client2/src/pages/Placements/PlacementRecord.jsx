@@ -162,11 +162,11 @@ const PlacementRecord = () => {
       ==================================================== */}
 
       <section className="placement-record-header">
-        <div className="placement-hero-container">
-          <div className="placement-hero-content">
-            <h1>Placements</h1>
+        <div className="placement-hero-container text-center">
+          <div className="placement-hero-content text-center">
+            <h1 className="text-center">Placements</h1>
 
-            <p>Building careers and creating opportunities for our students.</p>
+            <p className="text-center">Building careers and creating opportunities for our students.</p>
           </div>
         </div>
       </section>

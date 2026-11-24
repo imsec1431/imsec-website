@@ -104,10 +104,10 @@ const CounsellingSupport = () => {
       ===================================================== */}
 
       <section className="counselling-public-hero">
-        <div className="counselling-hero-container">
-          <div className="counselling-hero-content">
-            <span className="counselling-hero-tag">STUDENT WELFARE</span>
-            <h1>{data.title || "Counselling Support"}</h1>
+        <div className="counselling-hero-container text-center">
+          <div className="counselling-hero-content text-center">
+            <span className="counselling-hero-tag text-center">STUDENT WELFARE</span>
+            <h1 className="text-center">{data.title || "Counselling Support"}</h1>
           </div>
         </div>
       </section>

@@ -98,11 +98,11 @@ const PlacementPolicy = () => {
     return (
       <main className="placement-policy-page">
         <section className="placement-policy-hero">
-          <div className="placement-policy-hero-container">
-            <div className="placement-policy-hero-content">
-              <h1>Placement Policy</h1>
+          <div className="placement-policy-hero-container text-center">
+            <div className="placement-policy-hero-content text-center">
+              <h1 className="text-center">Placement Policy</h1>
 
-              <p>
+              <p className="text-center">
                 Important guidelines and policies related to campus placements.
               </p>
             </div>
@@ -131,11 +131,11 @@ const PlacementPolicy = () => {
       =================================================== */}
 
       <section className="placement-policy-hero">
-        <div className="placement-policy-hero-container">
-          <div className="placement-policy-hero-content">
-            <h1>Placement Policy</h1>
+        <div className="placement-policy-hero-container text-center">
+          <div className="placement-policy-hero-content text-center">
+            <h1 className="text-center">Placement Policy</h1>
 
-            <p>
+            <p className="text-center">
               Guidelines, rules and important information governing the
               placement process at IMSEC.
             </p>

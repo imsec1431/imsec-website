@@ -63,7 +63,7 @@ const Location = () => {
               Location
             </h1>
 
-            <p
+            {/* <p
               className="text-center"
               style={{
                 color: "white",
@@ -79,7 +79,7 @@ const Location = () => {
               Contact
               <span style={{ color: "#fdb913", margin: "0 8px" }}>/</span>
               Location
-            </p>
+            </p> */}
           </div>
         </Container>
       </section>

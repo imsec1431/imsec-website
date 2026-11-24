@@ -65,12 +65,12 @@ const AcademicDevelopmentProgram = () => {
       {/* ================= Hero (FULL WIDTH) ================= */}
 
       <section className="adp-hero">
-        <div className="adpHeroContainer">
+        <div className="adpHeroContainer text-center">
           {/* <span className="adpEyebrow">ACADEMICS</span> */}
 
-          <h1>Academic Development Programs</h1>
+          <h1 className="text-center">Academic Development Programs</h1>
 
-          <p>
+          <p className="text-center">
             Enhancing teaching quality, research capability, innovation, and
             professional excellence among faculty members and academic professionals.
           </p>
@@ -92,14 +92,15 @@ const AcademicDevelopmentProgram = () => {
               </Col>
 
               <Col lg={6}>
-                <h6 className="section-tag">
+                {/* <h6 className="section-tag">
                   ACADEMIC EXCELLENCE
-                </h6>
+                </h6> */}
 
-                <h2 className="section-title">
-                  Academic Development
-                  <span> Programs</span>
-                </h2>
+                <h5 className="section-title">
+                  ACADEMIC EXCELLENCE
+
+                  {/* <span> Programs</span> */}
+                </h5>
 
                 <p>
                   Academic Development Programs are designed to enhance teaching
@@ -122,10 +123,10 @@ const AcademicDevelopmentProgram = () => {
         <section className="program-section py-5">
           <Container>
             <div className="text-center mb-5">
-              <h6 className="section-tag">PROGRAMS</h6>
+              {/* <h6 className="section-tag">PROGRAMS</h6> */}
 
               <h2 className="section-title">
-                Upcoming &<span> Completed Programs</span>
+                Upcoming & Completed Programs<span> </span>
               </h2>
             </div>
 
@@ -257,11 +258,11 @@ const AcademicDevelopmentProgram = () => {
         <section className="objective-section py-5">
           <Container>
             <div className="text-center mb-5">
-              <h6 className="section-tag">OBJECTIVES</h6>
+              {/* <h6 className="section-tag">OBJECTIVES</h6> */}
 
               <h2 className="section-title">
-                Program
-                <span> Objectives</span>
+                Program Objectives
+                <span> </span>
               </h2>
             </div>
 

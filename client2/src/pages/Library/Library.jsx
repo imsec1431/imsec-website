@@ -124,12 +124,12 @@ const Library = () => {
     return (
       <div className="library-page">
         <section className="library-hero">
-          <div className="library-hero-container">
-            <div className="library-hero-content">
-              <h1 className="library-title">
+          <div className="library-hero-container text-center">
+            <div className="library-hero-content text-center">
+              <h1 className="library-title text-center">
                 Central <span>Library</span>
               </h1>
-              <p className="library-subtitle">
+              <p className="library-subtitle text-center">
                 The Central Library is the academic knowledge hub of IMS Engineering College.
               </p>
             </div>
@@ -148,13 +148,13 @@ const Library = () => {
           HERO SECTION (FULL WIDTH)
       ===================================================== */}
       <section className="library-hero">
-        <div className="library-hero-container">
-          <div className="library-hero-content">
-            <h1 className="library-title">
+        <div className="library-hero-container text-center">
+          <div className="library-hero-content text-center">
+            <h1 className="library-title text-center">
               Central <span>Library</span>
             </h1>
 
-            <p className="library-subtitle">
+            <p className="library-subtitle text-center">
               The Central Library is the academic knowledge hub of IMS
               Engineering College, providing students and faculty with
               extensive collections of books, journals, reference materials,

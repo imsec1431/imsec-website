@@ -130,11 +130,11 @@ const StudentClubs = () => {
     return (
       <div className="student-clubs-public-page">
         <section className="student-clubs-public-hero">
-          <div className="student-clubs-public-hero-container">
-            <div className="student-clubs-public-hero-content">
-              <h1>{DEFAULT_HERO.title}</h1>
+          <div className="student-clubs-public-hero-container text-center">
+            <div className="student-clubs-public-hero-content text-center">
+              <h1 className="text-center">{DEFAULT_HERO.title}</h1>
 
-              <p className="student-clubs-public-hero-subtitle">
+              <p className="student-clubs-public-hero-subtitle text-center">
                 {DEFAULT_HERO.subtitle}
               </p>
             </div>
@@ -159,11 +159,11 @@ const StudentClubs = () => {
     return (
       <div className="student-clubs-public-page">
         <section className="student-clubs-public-hero">
-          <div className="student-clubs-public-hero-container">
-            <div className="student-clubs-public-hero-content">
-              <h1>{hero.title}</h1>
+          <div className="student-clubs-public-hero-container text-center">
+            <div className="student-clubs-public-hero-content text-center">
+              <h1 className="text-center">{hero.title}</h1>
 
-              <p className="student-clubs-public-hero-subtitle">
+              <p className="student-clubs-public-hero-subtitle text-center">
                 {hero.subtitle}
               </p>
             </div>
@@ -184,11 +184,11 @@ const StudentClubs = () => {
           ===================================================== */}
 
       <section className="student-clubs-public-hero">
-        <div className="student-clubs-public-hero-container">
-          <div className="student-clubs-public-hero-content">
-            <h1>{hero.title}</h1>
+        <div className="student-clubs-public-hero-container text-center">
+          <div className="student-clubs-public-hero-content text-center">
+            <h1 className="text-center">{hero.title}</h1>
 
-            <p className="student-clubs-public-hero-subtitle">{hero.subtitle}</p>
+            <p className="student-clubs-public-hero-subtitle text-center">{hero.subtitle}</p>
           </div>
         </div>
       </section>

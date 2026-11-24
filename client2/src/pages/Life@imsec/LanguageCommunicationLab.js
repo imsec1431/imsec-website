@@ -114,13 +114,13 @@ const LanguageCommunicationLab = () => {
           HERO
       ========================= */}
       <section className="lcl-public-hero">
-        <div className="lcl-hero-container">
-          <div className="lcl-hero-content">
-            <span className="lcl-hero-label">LIFE @ IMSEC</span>
+        <div className="lcl-hero-container text-center">
+          <div className="lcl-hero-content text-center">
+            <span className="lcl-hero-label text-center">LIFE @ IMSEC</span>
 
-            <h1>{data.hero.title}</h1>
+            <h1 className="text-center">{data.hero.title}</h1>
 
-            <p>{data.hero.subtitle}</p>
+            <p className="text-center">{data.hero.subtitle}</p>
           </div>
         </div>
       </section>

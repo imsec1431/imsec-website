@@ -98,10 +98,10 @@ const Cafeteria = () => {
       ================================================= */}
 
       <section className="cafeteria-hero">
-        <div className="cafeteria-hero-container">
-          <div className="cafeteria-hero-content">
-            <span className="cafeteria-hero-tag">LIFE @ IMSEC</span>
-            <h1>{data.hero?.title || "Cafeteria"}</h1>
+        <div className="cafeteria-hero-container text-center">
+          <div className="cafeteria-hero-content text-center">
+            <span className="cafeteria-hero-tag text-center">LIFE @ IMSEC</span>
+            <h1 className="text-center">{data.hero?.title || "Cafeteria"}</h1>
           </div>
         </div>
       </section>

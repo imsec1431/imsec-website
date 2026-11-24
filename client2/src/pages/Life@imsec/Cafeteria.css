@@ -12,7 +12,6 @@
    CONTAINER
 ========================================================= */
 
-.cafeteria-hero-container,
 .cafeteria-container,
 .cafeteria-page .container {
   width: 90% !important;
@@ -24,7 +23,6 @@
 }
 
 @media (max-width: 768px) {
-  .cafeteria-hero-container,
   .cafeteria-container,
   .cafeteria-page .container {
     width: 94% !important;
@@ -33,7 +31,6 @@
 }
 
 @media (max-width: 480px) {
-  .cafeteria-hero-container,
   .cafeteria-container,
   .cafeteria-page .container {
     width: calc(100% - 24px) !important;
@@ -48,13 +45,17 @@
 .cafeteria-hero {
   position: relative;
   width: 100%;
-  padding: 38px 0 42px;
+  padding: 38px 20px 42px;
   margin-bottom: 24px;
   background: #002147;
+  border-bottom: 2px solid #fdb913;
   border-radius: 0;
   box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
   color: #ffffff;
-  text-align: left;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
   min-height: auto;
   overflow: hidden;
 }
@@ -66,32 +67,51 @@
   display: none;
 }
 
+.cafeteria-hero-container {
+  width: 100% !important;
+  max-width: 850px !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
 .cafeteria-hero-content {
-  text-align: left;
+  text-align: center !important;
   color: #ffffff;
   padding: 0;
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
+  width: 100% !important;
+  max-width: 850px !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .cafeteria-hero-tag {
   display: inline-block;
-  margin-bottom: 8px;
+  margin: 0 auto 8px auto !important;
   color: #fdb913;
   font-size: 11px;
   font-weight: 750;
   letter-spacing: 2px;
   text-transform: uppercase;
+  text-align: center !important;
 }
 
 .cafeteria-hero-content h1 {
-  margin: 0;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto !important;
   color: #ffffff;
   font-size: clamp(26px, 3.5vw, 36px);
   line-height: 1.2;
   font-weight: 750;
   letter-spacing: -0.5px;
+  text-align: center !important;
 }
 
 /* =========================================================

@@ -52,10 +52,10 @@ const AQAR = () => {
       {/* Hero */}
       <section className="aqar-public-hero">
         <div className="aqar-container">
-          <div className="aqar-hero-content">
+          <div className="aqar-hero-content text-center">
             <span className="aqar-hero-label">INTERNAL QUALITY ASSURANCE CELL</span>
-            <h1>{data.title || "AQAR"}</h1>
-            <p>Annual Quality Assurance Report (AQAR)</p>
+            <h1 className="text-center">{data.title || "AQAR"}</h1>
+            <p className="text-center">Annual Quality Assurance Report (AQAR)</p>
           </div>
         </div>
       </section>

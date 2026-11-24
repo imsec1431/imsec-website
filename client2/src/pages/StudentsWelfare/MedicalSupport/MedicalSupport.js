@@ -62,10 +62,10 @@ const MedicalSupport = () => {
     <div className="medical-support-page">
       {/* Hero */}
       <section className="medical-support-hero">
-        <div className="medical-support-hero-container">
-          <div className="medical-support-hero-content">
-            <span className="medical-support-hero-tag">STUDENT WELFARE</span>
-            <h1>{data.title || "Medical Support"}</h1>
+        <div className="medical-support-hero-container text-center">
+          <div className="medical-support-hero-content text-center">
+            <span className="medical-support-hero-tag text-center">STUDENT WELFARE</span>
+            <h1 className="text-center">{data.title || "Medical Support"}</h1>
           </div>
         </div>
       </section>

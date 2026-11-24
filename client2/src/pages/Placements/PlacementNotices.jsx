@@ -73,12 +73,12 @@ const PlacementNotices = () => {
     return (
       <main className="placement-notices-page">
         <section className="placement-notices-hero">
-          <div className="placement-notices-hero-container">
-            <div className="placement-notices-hero-content">
-              <h1>
+          <div className="placement-notices-hero-container text-center">
+            <div className="placement-notices-hero-content text-center">
+              <h1 className="text-center justify-content-center">
                 <FaBullhorn /> Placement Notices
               </h1>
-              <p>
+              <p className="text-center">
                 Stay updated with the latest campus placement drives, schedules, and official announcements.
               </p>
             </div>
@@ -104,12 +104,12 @@ const PlacementNotices = () => {
     return (
       <main className="placement-notices-page">
         <section className="placement-notices-hero">
-          <div className="placement-notices-hero-container">
-            <div className="placement-notices-hero-content">
-              <h1>
+          <div className="placement-notices-hero-container text-center">
+            <div className="placement-notices-hero-content text-center">
+              <h1 className="text-center justify-content-center">
                 <FaBullhorn /> Placement Notices
               </h1>
-              <p>
+              <p className="text-center">
                 Stay updated with the latest campus placement drives, schedules, and official announcements.
               </p>
             </div>
@@ -138,12 +138,12 @@ const PlacementNotices = () => {
       ===================================================== */}
 
       <section className="placement-notices-hero">
-        <div className="placement-notices-hero-container">
-          <div className="placement-notices-hero-content">
-            <h1>
+        <div className="placement-notices-hero-container text-center">
+          <div className="placement-notices-hero-content text-center">
+            <h1 className="text-center justify-content-center">
               <FaBullhorn /> Placement Notices
             </h1>
-            <p>
+            <p className="text-center">
               Stay updated with the latest campus placement drives, schedules, and official announcements from the Corporate Development Cell.
             </p>
           </div>

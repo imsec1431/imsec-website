@@ -46,8 +46,8 @@ const FAQ = () => {
 
       setError(
         err?.response?.data?.message ||
-          err?.message ||
-          "Unable to load frequently asked questions.",
+        err?.message ||
+        "Unable to load frequently asked questions.",
       );
     } finally {
       setLoading(false);
@@ -172,13 +172,13 @@ const FAQ = () => {
 
       <section className="publicFaqHero">
         <div className="publicFaqContainer">
-          <div className="publicFaqBreadcrumb">
+          {/* <div className="publicFaqBreadcrumb">
             <span>Admissions</span>
 
             <span>/</span>
 
             <strong>FAQ</strong>
-          </div>
+          </div> */}
 
           <div className="publicFaqHeroContent">
             <span className="publicFaqEyebrow">

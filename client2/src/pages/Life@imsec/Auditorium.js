@@ -365,11 +365,11 @@ const Auditorium = () => {
       {/* ================================================================ */}
 
       <section className="auditorium-hero">
-        <div className="auditorium-hero-container">
-          <div className="auditorium-hero-content">
-            <span className="auditorium-hero-tag">LIFE @ IMSEC</span>
+        <div className="auditorium-hero-container text-center">
+          <div className="auditorium-hero-content text-center">
+            <span className="auditorium-hero-tag text-center">LIFE @ IMSEC</span>
 
-            <h1>{data.hero?.title || "Auditorium"}</h1>
+            <h1 className="text-center">{data.hero?.title || "Auditorium"}</h1>
           </div>
         </div>
       </section>

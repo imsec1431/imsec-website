@@ -384,12 +384,12 @@ const ClassroomLabs = () => {
       =================================================== */}
 
       <section className="classroom-lab-hero">
-        <div className="classroomLabsHeroContainer">
+        <div className="classroomLabsHeroContainer text-center">
           {/* <span className="classroomLabsEyebrow">ACADEMICS</span> */}
 
-          <h1>{data.hero.title}</h1>
+          <h1 className="text-center">{data.hero.title}</h1>
 
-          <p>{data.hero.subtitle}</p>
+          <p className="text-center">{data.hero.subtitle}</p>
         </div>
       </section>
 

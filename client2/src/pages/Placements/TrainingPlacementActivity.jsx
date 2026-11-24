@@ -159,10 +159,10 @@ const TrainingPlacementActivity = () => {
     return (
       <div className="tp-public-page">
         <section className="tp-public-hero">
-          <div className="tp-public-hero-container">
-            <div className="tp-public-hero-content">
-              <h1>T&amp;P Activities</h1>
-              <p>
+          <div className="tp-public-hero-container text-center">
+            <div className="tp-public-hero-content text-center">
+              <h1 className="text-center">T&amp;P Activities</h1>
+              <p className="text-center">
                 Training, industry interaction, career development and placement
                 activities at IMSEC.
               </p>
@@ -189,10 +189,10 @@ const TrainingPlacementActivity = () => {
     return (
       <div className="tp-public-page">
         <section className="tp-public-hero">
-          <div className="tp-public-hero-container">
-            <div className="tp-public-hero-content">
-              <h1>T&amp;P Activities</h1>
-              <p>
+          <div className="tp-public-hero-container text-center">
+            <div className="tp-public-hero-content text-center">
+              <h1 className="text-center">T&amp;P Activities</h1>
+              <p className="text-center">
                 Training, industry interaction, career development and placement
                 activities at IMSEC.
               </p>
@@ -251,10 +251,10 @@ const TrainingPlacementActivity = () => {
       ===================================================== */}
 
       <section className="tp-public-hero">
-        <div className="tp-public-hero-container">
-          <div className="tp-public-hero-content">
-            <h1>T&amp;P Activities</h1>
-            <p>
+        <div className="tp-public-hero-container text-center">
+          <div className="tp-public-hero-content text-center">
+            <h1 className="text-center">T&amp;P Activities</h1>
+            <p className="text-center">
               Training, industry interaction, career development and placement
               activities at IMSEC.
             </p>

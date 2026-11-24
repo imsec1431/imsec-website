@@ -80,10 +80,10 @@ const NBA = () => {
       <div className="nba-public-page">
         <section className="nba-public-hero">
           <div className="nba-public-container">
-            <div className="nba-hero-content">
+            <div className="nba-hero-content text-center">
               <span className="nba-hero-tag">INTERNAL QUALITY ASSURANCE CELL</span>
-              <h1>{data.hero.title || "NBA"}</h1>
-              <p>{data.hero.subtitle || "National Board of Accreditation"}</p>
+              <h1 className="text-center">{data.hero.title || "NBA"}</h1>
+              <p className="text-center">{data.hero.subtitle || "National Board of Accreditation"}</p>
             </div>
           </div>
         </section>
@@ -111,10 +111,10 @@ const NBA = () => {
 
       <section className="nba-public-hero">
         <div className="nba-public-container">
-          <div className="nba-hero-content">
+          <div className="nba-hero-content text-center">
             <span className="nba-hero-tag">INTERNAL QUALITY ASSURANCE CELL</span>
-            <h1>{data.hero.title || "NBA"}</h1>
-            <p>{data.hero.subtitle || "National Board of Accreditation"}</p>
+            <h1 className="text-center">{data.hero.title || "NBA"}</h1>
+            <p className="text-center">{data.hero.subtitle || "National Board of Accreditation"}</p>
           </div>
         </div>
       </section>

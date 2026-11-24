@@ -54,21 +54,29 @@
 .shining-stars-hero {
   position: relative;
   width: 100%;
-  padding: 38px 0 42px;
+  padding: 38px 20px 42px;
   margin-bottom: 24px;
   background: #002147;
+  border-bottom: 2px solid #fdb913;
   border-radius: 0;
-  border-bottom: none;
   box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
   color: #ffffff;
-  text-align: left;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
   box-sizing: border-box;
 }
 
 .shining-stars-hero-container {
-  width: 90%;
-  max-width: 90%;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
 }
 
 /* =========================================================
@@ -78,8 +86,14 @@
 .shining-stars-heading {
   position: relative;
   z-index: 2;
-  text-align: left;
-  max-width: 900px;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
 }
 
 .shining-stars-heading > span {
@@ -87,23 +101,26 @@
 }
 
 .shining-stars-heading h1 {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   color: #ffffff;
   font-size: clamp(26px, 3.5vw, 36px);
   font-weight: 750;
   line-height: 1.2;
   letter-spacing: -0.5px;
+  text-align: center !important;
+  width: 100%;
 }
 
 .shining-stars-heading p {
   max-width: 750px;
-  margin: 8px 0 0;
+  margin: 8px auto 0 !important;
   padding: 0;
   color: rgba(255, 255, 255, 0.88);
   font-size: 13.5px;
   font-weight: 400;
   line-height: 1.6;
+  text-align: center !important;
 }
 
 /* =========================================================

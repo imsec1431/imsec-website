@@ -113,10 +113,10 @@ const TrainingInternship = () => {
     return (
       <div className="training-public-page">
         <section className="training-public-hero">
-          <div className="training-hero-container">
-            <div className="training-hero-content">
-              <h1>{data.hero.title}</h1>
-              <p>{data.hero.subtitle}</p>
+          <div className="training-hero-container text-center">
+            <div className="training-hero-content text-center">
+              <h1 className="text-center">{data.hero.title}</h1>
+              <p className="text-center">{data.hero.subtitle}</p>
             </div>
           </div>
         </section>
@@ -139,10 +139,10 @@ const TrainingInternship = () => {
       ===================================================== */}
 
       <section className="training-public-hero">
-        <div className="training-hero-container">
-          <div className="training-hero-content">
-            <h1>{data.hero.title}</h1>
-            <p>{data.hero.subtitle}</p>
+        <div className="training-hero-container text-center">
+          <div className="training-hero-content text-center">
+            <h1 className="text-center">{data.hero.title}</h1>
+            <p className="text-center">{data.hero.subtitle}</p>
           </div>
         </div>
       </section>

@@ -68,10 +68,10 @@ const MOUs = () => {
       {/* ================= Hero ================= */}
 
       <section className="mou-hero">
-        <div className="mou-hero-container">
-          <div className="mou-hero-content">
-            <span className="mou-hero-tag">CENTRE OF EXCELLENCE</span>
-            <h1>Memorandums of Understanding</h1>
+        <div className="mou-hero-container text-center">
+          <div className="mou-hero-content text-center">
+            <span className="mou-hero-tag text-center">CENTRE OF EXCELLENCE</span>
+            <h1 className="text-center">Memorandums of Understanding</h1>
           </div>
         </div>
       </section>

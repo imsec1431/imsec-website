@@ -38,8 +38,8 @@ const PaymentProcedure = () => {
 
       setError(
         err?.response?.data?.message ||
-          err?.message ||
-          "Unable to load payment procedure.",
+        err?.message ||
+        "Unable to load payment procedure.",
       );
     } finally {
       setLoading(false);
@@ -120,7 +120,7 @@ const PaymentProcedure = () => {
 
       <section className="payment-procedure-public-hero">
         <div className="payment-procedure-public-hero-container">
-          <span className="payment-public-eyebrow">ADMISSIONS</span>
+          {/* <span className="payment-public-eyebrow">ADMISSIONS</span> */}
 
           <h1>Payment Procedure</h1>
 
@@ -282,8 +282,8 @@ const PaymentProcedure = () => {
 
                           {index <
                             paymentProcedure.remarks.split("\n").length - 1 && (
-                            <br />
-                          )}
+                              <br />
+                            )}
                         </React.Fragment>
                       ))}
                   </td>

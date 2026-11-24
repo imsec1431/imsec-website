@@ -79,10 +79,10 @@ const NIRF = () => {
 
       <section className="nirf-public-hero">
         <div className="container">
-          <div className="nirf-hero-content">
+          <div className="nirf-hero-content text-center">
             <span className="nirf-hero-label">INTERNAL QUALITY ASSURANCE CELL</span>
-            <h1>{hero.title || "NIRF"}</h1>
-            <p>{hero.subtitle || "National Institutional Ranking Framework"}</p>
+            <h1 className="text-center">{hero.title || "NIRF"}</h1>
+            <p className="text-center">{hero.subtitle || "National Institutional Ranking Framework"}</p>
           </div>
         </div>
       </section>

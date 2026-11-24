@@ -118,7 +118,7 @@ const ContactUs = () => {
               Contact Us
             </h1>
 
-            <p
+            {/* <p
               className="text-center"
               style={{
                 color: "white",
@@ -132,7 +132,7 @@ const ContactUs = () => {
               Home
               <span style={{ color: "#fdb913", margin: "0 8px" }}>/</span>
               Contact Us
-            </p>
+            </p> */}
           </div>
         </Container>
       </section>

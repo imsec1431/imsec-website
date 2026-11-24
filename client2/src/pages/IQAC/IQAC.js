@@ -183,10 +183,10 @@ const IQAC = () => {
 
       <section className="iqac-hero">
         <div className="iqac-container">
-          <div className="iqac-hero-content">
+          <div className="iqac-hero-content text-center">
             <span className="iqac-hero-tag">INTERNAL QUALITY ASSURANCE CELL</span>
-            <h1>{data.title || "IQAC"}</h1>
-            {data.heroSubtitle && <p>{data.heroSubtitle}</p>}
+            <h1 className="text-center">{data.title || "IQAC"}</h1>
+            {data.heroSubtitle && <p className="text-center">{data.heroSubtitle}</p>}
           </div>
         </div>
       </section>

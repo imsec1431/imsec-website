@@ -81,12 +81,12 @@ const CircularNotice = () => {
       {/* ================= Hero (FULL WIDTH) ================= */}
 
       <section className="notice-hero">
-        <div className="noticeHeroContainer">
+        <div className="noticeHeroContainer text-center">
           {/* <span className="noticeEyebrow">ACADEMICS</span> */}
 
-          <h1>Circulars & Notices</h1>
+          <h1 className="text-center">Circulars & Notices</h1>
 
-          <p>
+          <p className="text-center">
             Official circulars, academic notices, and important institutional announcements.
           </p>
         </div>

@@ -106,15 +106,15 @@ const CDCStructure = () => {
       ===================================== */}
 
       <section className="cdc-public-hero">
-        <div className="cdc-hero-container">
-          <div className="cdc-public-hero-content">
+        <div className="cdc-hero-container text-center">
+          <div className="cdc-public-hero-content text-center">
             {/* <span>
               <FaSitemap />
               Career Development Centre
             </span> */}
 
-            <h1>{page.title || "CDC Structure"}</h1>
-            <p>
+            <h1 className="text-center">{page.title || "CDC Structure"}</h1>
+            <p className="text-center">
               Organizational hierarchy and functional structure of the Career Development Centre.
             </p>
           </div>

@@ -68,12 +68,12 @@ const RulesRegulations = () => {
       {/* ================= Hero (FULL WIDTH) ================= */}
 
       <section className="rules-hero">
-        <div className="rulesHeroContainer">
+        <div className="rulesHeroContainer text-center">
           {/* <span className="rulesEyebrow">ACADEMICS</span> */}
 
-          <h1>Rules & Regulations</h1>
+          <h1 className="text-center">Rules & Regulations</h1>
 
-          <p>
+          <p className="text-center">
             Comprehensive policies, code of conduct, academic guidelines, and regulations of IMSEC.
           </p>
         </div>
