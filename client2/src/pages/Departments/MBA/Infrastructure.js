@@ -210,7 +210,7 @@ const Infrastructure = () => {
           ABOUT INFRASTRUCTURE
       ===================================================== */}
 
-      <section className="container py-5">
+      <section className="container py-3">
         <div className="row align-items-center">
           {/* MAIN IMAGE */}
 

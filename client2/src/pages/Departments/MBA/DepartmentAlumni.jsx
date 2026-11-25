@@ -126,31 +126,6 @@ const DepartmentAlumni = () => {
   return (
     <div className="department-alumni-public">
       {/* =====================================================
-          HERO
-      ===================================================== */}
-
-      <section className="department-alumni-hero">
-        <div className="department-alumni-hero-overlay" />
-
-        <div className="department-alumni-container">
-          <div className="department-alumni-hero-content">
-            <span className="department-alumni-eyebrow">
-              {department?.shortName || department?.code || "MCA"} DEPARTMENT
-            </span>
-
-            <h1>Our Alumni</h1>
-
-            <p>
-              Celebrating the achievements and success of our alumni who
-              continue to make a difference in the industry and society.
-            </p>
-
-            <div className="department-alumni-hero-line" />
-          </div>
-        </div>
-      </section>
-
-      {/* =====================================================
           INTRODUCTION
       ===================================================== */}
 
@@ -162,7 +137,7 @@ const DepartmentAlumni = () => {
             </span>
 
             <h2>
-              {department?.name || "Master of Computer Applications"} Alumni
+              {department?.name || "Master of Business Administration"} Alumni
             </h2>
 
             <p>

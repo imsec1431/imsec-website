@@ -436,22 +436,14 @@ const DepartmentResearch = () => {
       ================================================= */}
 
       <section className="department-research-hero">
-        <div className="department-research-hero-overlay" />
-
         <div className="department-research-container">
           <div className="department-research-hero-content">
-            <span>
-              {department?.shortName || department?.code || "MCA"} DEPARTMENT
-            </span>
-
-            <h1>Research</h1>
+            <h1>Department Research</h1>
 
             <p>
               Explore the research activities, publications, innovations and
               academic contributions of our department.
             </p>
-
-            <div className="department-research-hero-line" />
           </div>
         </div>
       </section>

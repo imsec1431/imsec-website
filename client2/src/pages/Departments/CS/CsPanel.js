@@ -90,7 +90,7 @@ const CsPanel = () => {
   return (
     <div className="csPanel">
       {/* Department Title */}
-      <div className="csPanelTitle text-center py-3">
+      {/* <div className="csPanelTitle text-center py-3">
         <h2 className="fw-bold text-dark mb-1">CS Department</h2>
 
         <div
@@ -100,7 +100,7 @@ const CsPanel = () => {
             height: "4px",
           }}
         />
-      </div>
+      </div> */}
 
       {/* Horizontal Tab Bar - scrolls sideways on small screens instead
           of collapsing into a hamburger/sidebar drawer. */}

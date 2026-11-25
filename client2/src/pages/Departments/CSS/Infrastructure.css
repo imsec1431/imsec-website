@@ -139,7 +139,7 @@
 
 .sectionTitle h2 {
   font-size: 36px;
-  color: #1b4568;
+  color: #002147;
   font-weight: 700;
   position: relative;
   display: inline-block;
@@ -157,9 +157,14 @@
   border-radius: 20px;
 }
 
-p {
+.infrastructurePage p {
   line-height: 1.8;
   color: #555;
+  text-align: justify;
+}
+
+.infraCard p {
+  text-align: justify;
 }
 
 /* ==========================
@@ -192,7 +197,7 @@ p {
 }
 
 .infraCard h4 {
-  color: #1b4568;
+  color: #002147;
   margin-bottom: 15px;
   font-weight: 700;
 }
@@ -202,7 +207,7 @@ p {
 ========================== */
 
 .statistics {
-  background: #1b4568;
+  background: #002147;
   color: white;
   padding: 70px 0;
 }
@@ -242,7 +247,7 @@ p {
   width: 80px;
   height: 80px;
   margin: auto;
-  background: #1b4568;
+  background: #002147;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -253,7 +258,7 @@ p {
 }
 
 .labCard h4 {
-  color: #1b4568;
+  color: #002147;
   font-weight: bold;
 }
 
@@ -282,7 +287,7 @@ p {
 }
 
 .facilityCard:hover {
-  background: #1b4568;
+  background: #002147;
   color: white;
   transform: translateY(-8px);
 }
@@ -298,7 +303,7 @@ p {
 }
 
 .facilityCard h5 {
-  color: #1b4568;
+  color: #002147;
   font-weight: 600;
 }
 
@@ -328,14 +333,6 @@ p {
 ========================== */
 
 @media (max-width: 991px) {
-  .infraHero {
-    padding: 90px 0;
-  }
-
-  .infraHero h1 {
-    font-size: 40px;
-  }
-
   .sectionTitle h2 {
     font-size: 30px;
   }
@@ -346,18 +343,6 @@ p {
 }
 
 @media (max-width: 767px) {
-  .infraHero {
-    padding: 70px 20px;
-  }
-
-  .infraHero h1 {
-    font-size: 32px;
-  }
-
-  .infraHero p {
-    font-size: 16px;
-  }
-
   .sectionTitle h2 {
     font-size: 26px;
   }

@@ -88,24 +88,13 @@ const MbaPanel = () => {
   };
 
   return (
-    <div className="mbaPanel">
-      {/* Department Title */}
-      <div className="csPanelTitle text-center py-3">
-        <h2 className="fw-bold text-dark mb-1">MBA Department</h2>
-
-        <div
-          className="mx-auto bg-warning rounded"
-          style={{
-            width: "55px",
-            height: "4px",
-          }}
-        />
-      </div>
-
-      {/* Horizontal Tab Bar - scrolls sideways on small screens instead
-          of collapsing into a hamburger/sidebar drawer. */}
+    <div className="mcaPanel mbaPanel">
+      {/* Vertical Sidebar Tab Bar */}
       <div className="tabBarWrapper">
         <nav className="tabBar">
+          <div className="mcaPanelHeader">
+            <h2>MBA</h2>
+          </div>
           {TABS.map(({ key, label, icon: Icon }) => (
             <button
               type="button"
@@ -120,7 +109,7 @@ const MbaPanel = () => {
         </nav>
       </div>
 
-      {/* Optional nested routes (kept from original sidebar version) */}
+      {/* Optional nested routes */}
       <Outlet />
 
       {/* Main Content Area */}
@@ -132,9 +121,9 @@ const MbaPanel = () => {
         {show === "AcademicResults" && <AcademicResults />}
         {show === "DepartmentEvents" && <DepartmentEvents />}
         {show === "Infrastructure" && <Infrastructure />}
+        {show === "StudentCorner" && <StudentCorner />}
         {show === "Alumni" && <DepartmentAlumni />}
         {show === "Research" && <DepartmentResearch />}
-        {show === "StudentCorner" && <StudentCorner />}
       </main>
     </div>
   );

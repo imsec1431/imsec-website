@@ -108,14 +108,14 @@ const CSOverview = () => {
 
   const placementStatistics = Array.isArray(overview.placementStatistics)
     ? [...overview.placementStatistics].sort(
-        (a, b) => Number(a.priority || 1) - Number(b.priority || 1),
-      )
+      (a, b) => Number(a.priority || 1) - Number(b.priority || 1),
+    )
     : [];
 
   const gallery = Array.isArray(overview.departmentGallery)
     ? [...overview.departmentGallery].sort(
-        (a, b) => Number(a.priority || 1) - Number(b.priority || 1),
-      )
+      (a, b) => Number(a.priority || 1) - Number(b.priority || 1),
+    )
     : [];
 
   const hod = overview.headOfDepartment || null;
@@ -375,28 +375,28 @@ const CSOverview = () => {
       {(overview.joinDepartmentTitle ||
         overview.joinDepartmentDescription ||
         overview.joinDepartmentUrl) && (
-        <section className="ctaSection">
-          {overview.joinDepartmentTitle && (
-            <h2>{overview.joinDepartmentTitle}</h2>
-          )}
+          <section className="ctaSection">
+            {overview.joinDepartmentTitle && (
+              <h2>{overview.joinDepartmentTitle}</h2>
+            )}
 
-          {overview.joinDepartmentDescription && (
-            <p>{overview.joinDepartmentDescription}</p>
-          )}
+            {overview.joinDepartmentDescription && (
+              <p>{overview.joinDepartmentDescription}</p>
+            )}
 
-          {overview.joinDepartmentUrl && (
-            <a
-              href={overview.joinDepartmentUrl}
-              className="ctaButton"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Apply Now
-              <FaArrowRight />
-            </a>
-          )}
-        </section>
-      )}
+            {overview.joinDepartmentUrl && (
+              <a
+                href={overview.joinDepartmentUrl}
+                className="ctaButton"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Apply Now
+                <FaArrowRight />
+              </a>
+            )}
+          </section>
+        )}
     </div>
   );
 };

@@ -129,28 +129,6 @@ const MBAOverview = () => {
   return (
     <div className="overviewContainer">
       {/* =====================================================
-          DEPARTMENT HERO / BANNER
-      ===================================================== */}
-
-      <section className="overviewHero">
-        <div className="overviewHeroContent">
-          <span className="overviewEyebrow">MBA DEPARTMENT</span>
-
-          <h1>
-            {overview.bannerTitle ||
-              department?.name ||
-              "Master of Computer Applications"}
-          </h1>
-
-          <p>
-            {
-              "Empowering students with advanced knowledge, practical skills and industry-oriented education."
-            }
-          </p>
-        </div>
-      </section>
-
-      {/* =====================================================
           MAIN OVERVIEW IMAGE
       ===================================================== */}
 

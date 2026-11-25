@@ -193,7 +193,7 @@ const Faculty = () => {
       {/*======================================================
             SEARCH
       ======================================================*/}
-
+      {/* 
       <section className="searchSection">
         <div
           className="searchBox"
@@ -210,7 +210,7 @@ const Faculty = () => {
             onChange={(e) => setSearch(e.target.value)}
           />
         </div>
-      </section>
+      </section> */}
 
       {/*======================================================
             HOD

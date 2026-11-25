@@ -125,22 +125,7 @@ const DepartmentAlumni = () => {
 
   return (
     <div className="department-alumni-public">
-      {/* =====================================================
-          HERO
-      ===================================================== */}
 
-      <section className="department-alumni-hero">
-        <div className="department-alumni-container">
-          <div className="department-alumni-hero-content">
-            <h1>Our Alumni</h1>
-
-            <p>
-              Celebrating the achievements and success of our alumni who
-              continue to make a difference in the industry and society.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* =====================================================
           INTRODUCTION
