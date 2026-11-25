@@ -61,84 +61,55 @@
 
 .student-corner-hero {
   position: relative;
-  min-height: 260px;
+  min-height: auto;
   display: flex;
   align-items: center;
-  background: linear-gradient(
-    135deg,
-    var(--primary-navy-dark) 0%,
-    var(--primary-navy) 60%,
-    var(--primary-navy-light) 100%
-  );
+  justify-content: center;
+  background: #002147;
   overflow: hidden;
+  padding: 28px 20px;
+  border-radius: 0;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.student-corner-hero::before {
-  content: "";
-  position: absolute;
-  width: 450px;
-  height: 450px;
-  top: -280px;
-  right: -120px;
-  border: 75px solid rgba(253, 185, 19, 0.09);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.student-corner-hero::after {
-  content: "";
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  bottom: -220px;
-  left: -100px;
-  border: 50px solid rgba(255, 255, 255, 0.04);
-  border-radius: 50%;
-  pointer-events: none;
+.student-corner-hero::before,
+.student-corner-hero::after,
+.student-corner-hero-content span {
+  display: none !important;
 }
 
 .student-corner-overlay {
   position: relative;
   z-index: 2;
   width: 100%;
-  min-height: 260px;
+  min-height: auto;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .student-corner-hero-content {
   width: 100%;
-  max-width: 760px;
-}
-
-.student-corner-hero-content span {
-  display: inline-block;
-  padding: 5px 13px;
-  margin-bottom: 9px;
-  border: 1px solid var(--accent-gold-border);
-  background: var(--accent-gold-soft);
-  border-radius: var(--radius-pill);
-  color: var(--accent-gold);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .student-corner-hero-content h1 {
   margin: 0 0 8px;
   color: #ffffff;
-  font-size: 40px;
-  line-height: 1.15;
-  font-weight: 750;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
 }
 
 .student-corner-hero-content p {
-  max-width: 650px;
-  margin: 0;
-  color: rgba(255, 255, 255, 0.86);
-  font-size: 14px;
-  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #ffffff !important;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
 /* =========================================================
@@ -147,7 +118,7 @@
 
 .student-corner-intro {
   width: 100%;
-  padding: 55px 0 35px;
+  padding: 25px 0 20px;
   background: var(--bg-page);
 }
 
@@ -520,6 +491,22 @@
 }
 
 @media (max-width: 768px) {
+  .student-corner-hero {
+    min-height: auto;
+    padding: 20px 16px;
+    margin-bottom: 14px;
+    border-radius: 0;
+  }
+
+  .student-corner-hero-content h1 {
+    font-size: 22px;
+  }
+
+  .student-corner-hero-content p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
   .student-section-header {
     align-items: flex-start;
     flex-direction: column;
@@ -591,6 +578,20 @@
 }
 
 @media (max-width: 480px) {
+  .student-corner-hero {
+    min-height: auto;
+    padding: 16px 12px;
+    border-radius: 0;
+  }
+
+  .student-corner-hero-content h1 {
+    font-size: 20px;
+  }
+
+  .student-corner-hero-content p {
+    font-size: 12px;
+  }
+
   .student-section-title h2 {
     font-size: 20px;
   }

@@ -173,20 +173,20 @@ const Infrastructure = () => {
 
   const highlights = Array.isArray(infrastructure.highlights)
     ? [...infrastructure.highlights].sort(
-        (a, b) => (a.displayOrder || 0) - (b.displayOrder || 0),
-      )
+      (a, b) => (a.displayOrder || 0) - (b.displayOrder || 0),
+    )
     : [];
 
   const facilities = Array.isArray(infrastructure.facilities)
     ? [...infrastructure.facilities].sort(
-        (a, b) => (a.displayOrder || 0) - (b.displayOrder || 0),
-      )
+      (a, b) => (a.displayOrder || 0) - (b.displayOrder || 0),
+    )
     : [];
 
   const gallery = Array.isArray(infrastructure.gallery)
     ? [...infrastructure.gallery].sort(
-        (a, b) => (a.displayOrder || 0) - (b.displayOrder || 0),
-      )
+      (a, b) => (a.displayOrder || 0) - (b.displayOrder || 0),
+    )
     : [];
 
   return (
@@ -210,7 +210,7 @@ const Infrastructure = () => {
           ABOUT INFRASTRUCTURE
       ===================================================== */}
 
-      <section className="container py-5">
+      <section className="container py-3">
         <div className="row align-items-center">
           {/* MAIN IMAGE */}
 

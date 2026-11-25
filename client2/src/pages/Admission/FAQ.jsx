@@ -171,7 +171,7 @@ const FAQ = () => {
       ===================================================== */}
 
       <section className="publicFaqHero">
-        <div className="publicFaqContainer">
+        <div className="publicFaqContainer text-center">
           {/* <div className="publicFaqBreadcrumb">
             <span>Admissions</span>
 
@@ -180,18 +180,18 @@ const FAQ = () => {
             <strong>FAQ</strong>
           </div> */}
 
-          <div className="publicFaqHeroContent">
-            <span className="publicFaqEyebrow">
+          <div className="publicFaqHeroContent text-center">
+            <span className="publicFaqEyebrow text-center">
               {faqData.heroLabel || "ADMISSIONS"}
             </span>
 
-            <h1>
+            <h1 className="text-center">
               {faqData.heroTitle ||
                 faqData.title ||
                 "Frequently Asked Questions"}
             </h1>
 
-            <p>
+            <p className="text-center">
               {faqData.heroDescription ||
                 faqData.subtitle ||
                 "Find answers to frequently asked questions."}

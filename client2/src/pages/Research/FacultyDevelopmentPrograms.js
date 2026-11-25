@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Table, Form, Spinner } from "react-bootstrap";
+import { Row, Col, Spinner } from "react-bootstrap";
 import {
   FaSearch,
   FaExternalLinkAlt,
@@ -45,7 +45,7 @@ const FacultyDevelopmentPrograms = () => {
     (item) =>
       item.title?.toLowerCase().includes(search.toLowerCase()) ||
       item.department?.toLowerCase().includes(search.toLowerCase()) ||
-      item.speaker?.toLowerCase().includes(search.toLowerCase()),
+      item.speaker?.toLowerCase().includes(search.toLowerCase())
   );
 
   const defaultStats = [
@@ -77,188 +77,176 @@ const FacultyDevelopmentPrograms = () => {
     { year: "2024", count: "39 FDPs" },
   ];
 
+  if (loading) {
+    return (
+      <div className="fdp-page">
+        <div className="fdp-status-page">
+          <div className="text-center">
+            <Spinner
+              animation="border"
+              role="status"
+              style={{
+                width: "42px",
+                height: "42px",
+                color: "#002147",
+              }}
+            />
+            <p className="mt-3 text-muted">Loading FDP Repository...</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <>
-      {/*================ Hero =================*/}
+    <main className="fdp-page">
+      {/* ================= Hero Banner ================= */}
       <section className="fdp-hero">
-        <Container>
-          <div className="hero-content">
-            <h1>Faculty Development Programs</h1>
-            <p style={{ color: "white" }}>
-              Home <span>/</span> Research <span>/</span> Faculty Development
-              Programs
+        <div className="fdp-hero-content">
+          <h1>Faculty Development Programs</h1>
+        </div>
+      </section>
+
+      {/* ================= Content Area ================= */}
+      <section className="fdp-content">
+        <div className="fdp-container">
+          {/* Introduction Box */}
+          <div className="fdp-introduction" style={{ textAlign: "justify" }}>
+            <p style={{ textAlign: "justify" }}>
+              {content?.description1 ||
+                "IMS Engineering College regularly organizes Faculty Development Programs (FDPs), Short-Term Training Programs (STTPs), Workshops and Refresher Courses to enhance the teaching, research and professional competencies of faculty members."}
+            </p>
+            <p style={{ textAlign: "justify" }}>
+              {content?.description2 ||
+                "These programs bridge the gap between academia and industry by providing exposure to emerging technologies, innovative teaching methodologies, advanced research practices and academic leadership development."}
             </p>
           </div>
-        </Container>
-      </section>
 
-      {/*================ About =================*/}
-      <section className="fdp-about py-5">
-        <Container>
-          <Row className="align-items-center g-5">
-            <Col lg={6}>
-              <img
-                src={
-                  content?.aboutImage ||
-                  "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1200&q=80"
-                }
-                alt="Faculty Development Program"
-                className="img-fluid about-image"
-              />
-            </Col>
+          {/* Statistics */}
+          <section className="fdp-section">
+            <h2>Key FDP Statistics</h2>
+            <Row className="g-3 mt-1">
+              {(content?.stats?.length > 0 ? content.stats : defaultStats).map(
+                (item, idx) => (
+                  <Col lg={3} sm={6} key={idx}>
+                    <div className="fdp-stat-card">
+                      <h3>{item.number}</h3>
+                      <p>{item.title}</p>
+                    </div>
+                  </Col>
+                )
+              )}
+            </Row>
+          </section>
 
-            <Col lg={6}>
-              <h6 className="section-tag" style={{ color: "var(--primary)" }}>
-                {content?.sectionTag || "CONTINUOUS LEARNING"}
-              </h6>
-
-              <h2 className="section-title">
-                {content?.title || "Faculty Development Programs"}
-              </h2>
-
-              <p>
-                {content?.description1 ||
-                  "IMS Engineering College regularly organizes Faculty Development Programs (FDPs), Short-Term Training Programs (STTPs), Workshops and Refresher Courses to enhance the teaching, research and professional competencies of faculty members."}
-              </p>
-
-              <p>
-                {content?.description2 ||
-                  "These programs bridge the gap between academia and industry by providing exposure to emerging technologies, innovative teaching methodologies, research practices and leadership development."}
-              </p>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
-      {/*================ Statistics =================*/}
-      <section className="fdp-stats py-5">
-        <Container>
-          <Row className="g-4">
-            {(content?.stats?.length > 0 ? content.stats : defaultStats).map(
-              (item, idx) => (
-                <Col lg={3} md={6} key={idx}>
-                  <div className="stat-card">
-                    <h2>{item.number}</h2>
-                    <p>{item.title}</p>
+          {/* Annual Timeline */}
+          <section className="fdp-section">
+            <h2>Annual FDP Timeline</h2>
+            <Row className="g-3 mt-1">
+              {(content?.timeline?.length > 0
+                ? content.timeline
+                : defaultTimeline
+              ).map((item, index) => (
+                <Col lg={3} sm={6} key={index}>
+                  <div className="fdp-timeline-card">
+                    <div className="fdp-timeline-icon">
+                      <FaCalendarAlt />
+                    </div>
+                    <h4>{item.year}</h4>
+                    <p>{item.count}</p>
                   </div>
                 </Col>
-              ),
-            )}
-          </Row>
-        </Container>
-      </section>
-      {/*================ Annual Timeline =================*/}
-      <section className="fdp-timeline py-5">
-        <Container>
-          <div className="text-center mb-5">
-            <h6 className="section-tag" style={{ color: "black" }}>
-              YEAR WISE FDPs
-            </h6>
+              ))}
+            </Row>
+          </section>
 
-            <h2 className="section-title">
-              Annual <span>Timeline</span>
-            </h2>
-          </div>
+          {/* FDP Domains */}
+          <section className="fdp-section">
+            <h2>FDP Specialization Domains</h2>
+            <Row className="g-3 mt-1">
+              {(content?.categories?.length > 0
+                ? content.categories
+                : defaultCategories
+              ).map((item, index) => (
+                <Col lg={3} sm={6} key={index}>
+                  <div className="fdp-domain-card">
+                    <div className="fdp-domain-icon">
+                      <FaLaptop />
+                    </div>
+                    <h5>{item}</h5>
+                  </div>
+                </Col>
+              ))}
+            </Row>
+          </section>
 
-          <Row className="g-4">
-            {(content?.timeline?.length > 0
-              ? content.timeline
-              : defaultTimeline
-            ).map((item, index) => (
-              <Col lg={3} md={6} key={index}>
-                <div className="timeline-card">
-                  <FaCalendarAlt className="timeline-icon" />
-                  <h3>{item.year}</h3>
-                  <p>{item.count}</p>
-                </div>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
+          {/* FDP Table Section */}
+          <section className="fdp-section">
+            <h2>FDP Repository &amp; Directory</h2>
+            <p style={{ textAlign: "justify" }}>
+              Search and explore institutional faculty development programs,
+              pedagogical enrichment sessions, and technical training workshops
+              conducted at IMS Engineering College.
+            </p>
 
-      {/*================ FDP Categories =================*/}
-      <section className="fdp-category py-5">
-        <Container>
-          <div className="text-center mb-5">
-            <h2 className="section-title">
-              FDP <span>Domains</span>
-            </h2>
-          </div>
-
-          <Row className="g-4">
-            {(content?.categories?.length > 0
-              ? content.categories
-              : defaultCategories
-            ).map((item, index) => (
-              <Col lg={3} md={6} key={index}>
-                <div className="category-card">
-                  <FaLaptop className="category-icon" />
-                  <h5>{item}</h5>
-                </div>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
-      {/*================ Search =================*/}
-      <section className="search-section py-5">
-        <Container>
-          <Row className="justify-content-center">
-            <Col lg={8}>
-              <div className="search-box">
-                <FaSearch />
-                <Form.Control
-                  type="text"
-                  placeholder="Search by FDP Title, Department or Speaker..."
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                />
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-      {/*================ FDP Repository =================*/}
-      <section className="fdp-table-section pb-5">
-        <Container>
-          {loading ? (
-            <div className="text-center py-5">
-              <Spinner animation="border" variant="primary" />
-              <p className="mt-2 text-muted">Loading FDP Repository...</p>
+            {/* Search Bar */}
+            <div className="fdp-search-wrapper mt-3">
+              <Row>
+                <Col lg={6} md={8}>
+                  <div className="fdp-search-box">
+                    <FaSearch />
+                    <input
+                      type="text"
+                      placeholder="Search by FDP Title, Department or Resource Person..."
+                      value={search}
+                      onChange={(e) => setSearch(e.target.value)}
+                    />
+                  </div>
+                </Col>
+              </Row>
             </div>
-          ) : (
-            <div className="table-responsive">
-              <Table bordered hover className="fdp-table">
+
+            {/* Table */}
+            <div className="fdp-table-container mt-3">
+              <table className="fdp-table">
                 <thead>
                   <tr>
-                    <th>S.No.</th>
+                    <th className="text-center" style={{ width: "60px" }}>
+                      S.No.
+                    </th>
                     <th>FDP Title</th>
                     <th>Department</th>
                     <th>Resource Person</th>
-                    <th>Duration</th>
-                    <th>Mode</th>
-                    <th>Date</th>
+                    <th className="text-center" style={{ width: "100px" }}>
+                      Duration
+                    </th>
+                    <th className="text-center" style={{ width: "95px" }}>
+                      Mode
+                    </th>
+                    <th className="text-center" style={{ width: "115px" }}>
+                      Date
+                    </th>
                     <th>Organizer</th>
-                    <th>Brochure</th>
+                    <th className="text-center" style={{ width: "110px" }}>
+                      Brochure
+                    </th>
                   </tr>
                 </thead>
-
                 <tbody>
                   {filteredFDP.length > 0 ? (
                     filteredFDP.map((item, index) => (
                       <tr key={item._id || index}>
-                        <td>{index + 1}</td>
-                        <td>{item.title}</td>
+                        <td className="text-center">{index + 1}</td>
+                        <td className="fdp-title-cell">{item.title}</td>
                         <td>{item.department}</td>
                         <td>{item.speaker}</td>
-                        <td>{item.duration}</td>
-                        <td>
-                          <span className="mode-badge">{item.mode}</span>
+                        <td className="text-center">{item.duration}</td>
+                        <td className="text-center">
+                          <span className="fdp-mode-badge">{item.mode}</span>
                         </td>
-                        <td>{item.date}</td>
+                        <td className="text-center">{item.date}</td>
                         <td>{item.organizer}</td>
-                        <td>
+                        <td className="text-center">
                           {item.brochure && item.brochure !== "#" ? (
                             <a
                               href={
@@ -268,13 +256,13 @@ const FacultyDevelopmentPrograms = () => {
                               }
                               target="_blank"
                               rel="noreferrer"
-                              className="download-link"
+                              className="fdp-download-link"
                             >
-                              Download
-                              <FaExternalLinkAlt className="ms-2" />
+                              <span>Brochure</span>
+                              <FaExternalLinkAlt style={{ fontSize: "10px" }} />
                             </a>
                           ) : (
-                            <span className="text-muted">-</span>
+                            <span className="text-muted small">—</span>
                           )}
                         </td>
                       </tr>
@@ -282,60 +270,50 @@ const FacultyDevelopmentPrograms = () => {
                   ) : (
                     <tr>
                       <td colSpan={9} className="text-center py-4 text-muted">
-                        No faculty development programs match your search.
+                        No faculty development programs found matching your
+                        search.
                       </td>
                     </tr>
                   )}
                 </tbody>
-              </Table>
+              </table>
             </div>
-          )}
-        </Container>
+          </section>
+
+          {/* Benefits */}
+          <section className="fdp-section">
+            <h2>Why Attend Faculty Development Programs?</h2>
+            <Row className="g-3 mt-1">
+              {[
+                {
+                  icon: <FaChalkboardTeacher />,
+                  title: "Teaching Excellence",
+                },
+                {
+                  icon: <FaUsers />,
+                  title: "Professional Networking",
+                },
+                {
+                  icon: <FaLaptop />,
+                  title: "Latest Technologies",
+                },
+                {
+                  icon: <FaCalendarAlt />,
+                  title: "Career Development",
+                },
+              ].map((item, index) => (
+                <Col lg={3} sm={6} key={index}>
+                  <div className="fdp-domain-card">
+                    <div className="fdp-domain-icon">{item.icon}</div>
+                    <h5>{item.title}</h5>
+                  </div>
+                </Col>
+              ))}
+            </Row>
+          </section>
+        </div>
       </section>
-
-      {/*================ Benefits =================*/}
-      <section className="fdp-benefits py-5">
-        <Container>
-          <div className="text-center mb-5">
-            <h6 className="section-tag" style={{ color: "black" }}>
-              BENEFITS
-            </h6>
-
-            <h2 className="section-title">
-              Why Attend <span>FDPs?</span>
-            </h2>
-          </div>
-
-          <Row className="g-4">
-            {[
-              {
-                icon: <FaChalkboardTeacher />,
-                title: "Teaching Excellence",
-              },
-              {
-                icon: <FaUsers />,
-                title: "Professional Networking",
-              },
-              {
-                icon: <FaLaptop />,
-                title: "Latest Technologies",
-              },
-              {
-                icon: <FaCalendarAlt />,
-                title: "Career Development",
-              },
-            ].map((item, index) => (
-              <Col lg={3} md={6} key={index}>
-                <div className="benefit-card">
-                  <div className="benefit-icon">{item.icon}</div>
-                  <h5>{item.title}</h5>
-                </div>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
-    </>
+    </main>
   );
 };
 

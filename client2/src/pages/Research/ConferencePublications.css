@@ -1,636 +1,536 @@
-/*=========================================================
-                    Google Font
-=========================================================*/
+/* =========================================
+   CONFERENCE PUBLICATIONS PAGE
+   Styled in IMSEC Society Design Language
+========================================= */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
-* {
-  margin: 0;
-
-  padding: 0;
-
-  box-sizing: border-box;
-
-  font-family: "Poppins", sans-serif;
+.conference-publications-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  color: #1e293b;
+  font-family: "Poppins", "Segoe UI", sans-serif;
 }
 
-body {
-  overflow-x: hidden;
+/* =========================================
+   HERO BANNER
+========================================= */
 
-  background: #fff;
-}
-
-/*=========================================================
-                    Common
-=========================================================*/
-
-.section-tag {
-  color: #fdb913;
-
-  font-size: 15px;
-
-  font-weight: 700;
-
-  letter-spacing: 2px;
-
-  text-transform: uppercase;
-
-  margin-bottom: 12px;
-}
-
-.section-title {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-
-  font-weight: 800;
-
-  color: #0a2e5c;
-
-  margin-bottom: 20px;
-}
-
-.section-title span {
-  color: #fdb913;
-}
-
-.section-title::after {
-  content: "";
-
-  display: block;
-
-  width: 90px;
-
-  height: 4px;
-
-  background: #fdb913;
-
-  border-radius: 50px;
-
-  margin-top: 15px;
-}
-
-.text-center .section-title::after {
-  margin: 15px auto 0;
-}
-
-/*=========================================================
-                    Hero
-=========================================================*/
-
-.conference-hero {
-  height: 430px;
-
-  background:
-    linear-gradient(rgba(10, 46, 92, 0.88), rgba(10, 46, 92, 0.88)),
-    url("https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1600&q=80");
-
-  background-size: cover;
-
-  background-position: center;
-
+.conference-publications-hero {
+  min-height: 150px;
   display: flex;
-
+  align-items: center;
   justify-content: center;
-
-  align-items: center;
-
+  padding: 32px 24px;
+  background: #002147;
+  border-bottom: 2px solid #fdb913;
+  color: #ffffff;
   text-align: center;
-
-  color: #fff;
 }
 
-.hero-content h1 {
-  font-size: clamp(3rem, 6vw, 4.8rem);
-
-  font-weight: 800;
-
-  margin-bottom: 10px;
-}
-
-.hero-content p {
-  font-size: 18px;
-}
-
-.hero-content span {
-  margin: 0 8px;
-
-  color: #fdb913;
-}
-
-/*=========================================================
-                    About
-=========================================================*/
-
-.conference-about {
-  background: #fff;
-}
-
-.about-image {
+.conference-publications-hero-content {
   width: 100%;
-
-  border-radius: 20px;
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-
-  transition: 0.4s;
-}
-
-.about-image:hover {
-  transform: scale(1.03);
-}
-
-.conference-about p {
-  font-size: 16px;
-
-  line-height: 1.9;
-
-  color: #666;
-
-  text-align: justify;
-}
-
-/*=========================================================
-                    Statistics
-=========================================================*/
-
-.conference-stats {
-  background: #f7f9fc;
-}
-
-.stat-card {
-  background: #fff;
-
-  padding: 40px 20px;
-
-  border-radius: 20px;
-
+  max-width: 1050px;
   text-align: center;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  transition: 0.35s;
-
-  height: 100%;
 }
 
-.stat-card:hover {
-  transform: translateY(-10px);
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-}
-
-.stat-card h2 {
-  font-size: 42px;
-
-  font-weight: 800;
-
-  color: #0a2e5c;
-
-  margin-bottom: 10px;
-}
-
-.stat-card p {
-  font-size: 17px;
-
-  font-weight: 600;
-
-  color: #666;
-
+.conference-publications-hero-content h1 {
   margin: 0;
+  font-size: clamp(26px, 4vw, 38px);
+  line-height: 1.2;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.3px;
 }
 
-/*=========================================================
-                    Search
-=========================================================*/
+/* =========================================
+   CONTENT CONTAINER
+========================================= */
 
-.search-section {
-  background: #fff;
+.conference-publications-content {
+  padding: 28px 0 45px;
+  background: #f8fafc;
 }
 
-.search-box {
-  display: flex;
-
-  align-items: center;
-
-  padding: 16px 20px;
-
-  border-radius: 50px;
-
-  background: #fff;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+.conference-publications-container {
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
-.search-box svg {
-  font-size: 22px;
+/* =========================================
+   INTRODUCTION HIGHLIGHT BOX
+========================================= */
 
-  color: #fdb913;
-
-  margin-right: 15px;
+.conference-publications-introduction {
+  margin: 0 0 20px 0;
+  padding: 18px 24px;
+  border-left: 4px solid #fdb913;
+  border-top: 1px solid #e2e8f0;
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
-.search-box input {
-  border: none;
-
-  box-shadow: none !important;
-
+.conference-publications-introduction p {
+  margin: 0 0 10px 0;
+  color: #334155;
   font-size: 16px;
+  line-height: 1.7;
+  font-weight: 450;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
-.search-box input:focus {
-  border: none;
-}
-
-/*=========================================================
-                    Conference Table
-=========================================================*/
-
-.conference-table-section {
-  background: #fff;
-}
-
-.conference-table {
-  border-radius: 20px;
-
-  overflow: hidden;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
+.conference-publications-introduction p:last-child {
   margin-bottom: 0;
 }
 
-.conference-table thead {
-  background: #0a2e5c;
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
 
-  color: #fff;
+.conference-publications-section {
+  margin: 0 0 20px 0;
+  padding: 22px 26px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
-.conference-table th {
-  padding: 18px;
+.conference-publications-section:last-child {
+  margin-bottom: 0;
+}
 
+.conference-publications-section h2 {
+  margin: 0 0 12px 0;
+  padding: 0;
+  color: #002147;
+  font-size: 22px;
+  line-height: 1.25;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  text-align: left !important;
+}
+
+.conference-publications-section h2::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 3px;
+  margin: 8px 0 0;
+  background: #fdb913;
+  border-radius: 2px;
+}
+
+.conference-publications-section p {
+  margin: 0 0 12px 0;
+  padding: 0;
+  color: #475569;
   font-size: 15px;
+  line-height: 1.75;
+  text-align: justify !important;
+  text-justify: inter-word;
+}
 
-  font-weight: 600;
+.conference-publications-section p:last-child {
+  margin-bottom: 0;
+}
 
+/* =========================================
+   STATISTICS CARDS
+========================================= */
+
+.conf-stat-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 22px 18px;
   text-align: center;
+  transition: all 0.25s ease;
+  height: 100%;
+}
 
-  vertical-align: middle;
+.conf-stat-card:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 14px rgba(0, 33, 71, 0.08);
+  transform: translateY(-2px);
+}
 
+.conf-stat-card h3 {
+  font-size: clamp(28px, 3.2vw, 36px);
+  font-weight: 800;
+  color: #002147;
+  margin: 0 0 6px 0;
+  line-height: 1.15;
+}
+
+.conf-stat-card p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+  margin: 0;
+  text-align: center !important;
+}
+
+/* =========================================
+   TIMELINE CARDS
+========================================= */
+
+.conf-timeline-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px 16px;
+  text-align: center;
+  transition: all 0.25s ease;
+  height: 100%;
+}
+
+.conf-timeline-card:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 14px rgba(0, 33, 71, 0.08);
+  transform: translateY(-2px);
+}
+
+.conf-timeline-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: rgba(0, 33, 71, 0.06);
+  color: #002147;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin: 0 auto 12px;
+  transition: all 0.25s ease;
+}
+
+.conf-timeline-card:hover .conf-timeline-icon {
+  background: #002147;
+  color: #fdb913;
+}
+
+.conf-timeline-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #002147;
+  margin-bottom: 6px;
+}
+
+.conf-timeline-card p {
+  font-size: 13.5px;
+  color: #64748b;
+  margin: 0;
+  text-align: center !important;
+}
+
+/* =========================================
+   CATEGORY & DATABASE CARDS
+========================================= */
+
+.conf-category-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: all 0.25s ease;
+  height: 100%;
+}
+
+.conf-category-card:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 14px rgba(0, 33, 71, 0.08);
+  transform: translateY(-2px);
+}
+
+.conf-category-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background: rgba(0, 33, 71, 0.06);
+  color: #002147;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  flex-shrink: 0;
+}
+
+.conf-category-card:hover .conf-category-icon {
+  background: #002147;
+  color: #fdb913;
+}
+
+.conf-category-card h5 {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #002147;
+  margin: 0;
+}
+
+/* =========================================
+   SEARCH BAR
+========================================= */
+
+.conf-search-wrapper {
+  margin-bottom: 20px;
+}
+
+.conf-search-box {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.conf-search-box:focus-within {
+  border-color: #002147;
+  box-shadow: 0 0 0 3px rgba(0, 33, 71, 0.08);
+}
+
+.conf-search-box svg {
+  color: #64748b;
+  font-size: 16px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.conf-search-box input {
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0;
+  font-size: 14.5px;
+  color: #1e293b;
+  background: transparent;
+  width: 100%;
+}
+
+.conf-search-box input:focus {
+  outline: none;
+}
+
+/* =========================================
+   CONFERENCE TABLE
+========================================= */
+
+.conf-table-container {
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.conf-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  font-size: 14px;
+}
+
+.conf-table thead tr {
+  background: #002147;
+  color: #ffffff;
+}
+
+.conf-table th {
+  padding: 13px 14px;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-align: left;
+  letter-spacing: 0.2px;
+  border: none;
   white-space: nowrap;
 }
 
-.conference-table td {
-  padding: 16px;
+.conf-table th.text-center,
+.conf-table td.text-center {
+  text-align: center;
+}
 
-  font-size: 14px;
-
+.conf-table td {
+  padding: 12px 14px;
+  color: #334155;
+  border-top: 1px solid #e2e8f0;
   vertical-align: middle;
-
-  text-align: center;
 }
 
-.conference-table tbody tr {
-  transition: 0.3s;
+.conf-table tbody tr:hover {
+  background: #f8fafc;
 }
 
-.conference-table tbody tr:hover {
-  background: #fff8ea;
+.conf-title-cell {
+  font-weight: 600;
+  color: #002147;
+  min-width: 240px;
+  line-height: 1.45;
 }
 
-/*=========================================================
-                    Indexing Badge
-=========================================================*/
-
-.indexing-badge {
+.conf-badge {
   display: inline-block;
-
-  padding: 8px 16px;
-
-  border-radius: 30px;
-
-  background: #eaf4ff;
-
-  color: #0a2e5c;
-
-  font-size: 13px;
-
-  font-weight: 600;
-}
-
-/*=========================================================
-                    View Paper
-=========================================================*/
-
-.view-paper {
-  text-decoration: none;
-
-  font-weight: 600;
-
-  color: #0a2e5c;
-
-  transition: 0.3s;
-}
-
-.view-paper:hover {
-  color: #fdb913;
-}
-
-.view-paper svg {
-  margin-left: 6px;
-
-  font-size: 13px;
-}
-
-/*=========================================================
-                Timeline
-=========================================================*/
-
-.conference-timeline {
-  background: #fff;
-}
-
-.timeline-card {
-  background: #fff;
-
-  padding: 35px 20px;
-
-  text-align: center;
-
-  border-radius: 20px;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  transition: 0.35s;
-
-  height: 100%;
-}
-
-.timeline-card:hover {
-  transform: translateY(-10px);
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-}
-
-.timeline-icon {
-  font-size: 55px;
-
-  color: #fdb913;
-
-  margin-bottom: 20px;
-}
-
-.timeline-card h3 {
-  font-size: 34px;
-
+  padding: 3px 8px;
+  font-size: 11.5px;
   font-weight: 700;
-
-  color: #0a2e5c;
-
-  margin-bottom: 10px;
+  color: #002147;
+  background: #e2e8f0;
+  border-radius: 4px;
+  white-space: nowrap;
 }
 
-.timeline-card p {
-  margin: 0;
-
+.conf-view-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  font-size: 12.5px;
   font-weight: 600;
-
-  color: #666;
-}
-
-/*=========================================================
-                Conference Categories
-=========================================================*/
-
-.conference-category {
-  background: #f7f9fc;
-}
-
-.category-card {
-  background: #fff;
-
-  padding: 35px 25px;
-
-  border-radius: 20px;
-
-  text-align: center;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  transition: 0.35s;
-
-  height: 100%;
-
-  border-top: 4px solid transparent;
-}
-
-.category-card:hover {
-  transform: translateY(-10px);
-
-  border-top: 4px solid #fdb913;
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-}
-
-.category-icon {
-  font-size: 55px;
-
-  color: #fdb913;
-
-  margin-bottom: 18px;
-}
-
-.category-card h4 {
-  font-size: 21px;
-
-  font-weight: 700;
-
-  color: #0a2e5c;
-
-  margin: 0;
-}
-
-/*=========================================================
-                CTA
-=========================================================*/
-
-.conference-cta {
-  background: linear-gradient(135deg, #0a2e5c, #144a87);
-
-  padding: 90px 0;
-
-  color: #fff;
-}
-
-.conference-cta h2 {
-  font-size: clamp(2rem, 5vw, 3rem);
-
-  font-weight: 800;
-
-  margin-bottom: 20px;
-}
-
-.conference-cta p {
-  font-size: 17px;
-
-  line-height: 1.9;
-
-  color: #e5e5e5;
-}
-
-.conference-cta .btn {
-  padding: 12px 30px;
-
-  font-weight: 600;
-
-  transition: 0.35s;
-}
-
-.conference-cta .btn-warning {
   background: #fdb913;
-
-  border: none;
-
-  color: #0a2e5c;
+  color: #002147;
+  border-radius: 4px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.2s ease;
 }
 
-.conference-cta .btn-warning:hover {
-  background: #fff;
-
-  color: #0a2e5c;
-
-  transform: translateY(-5px);
+.conf-view-link:hover {
+  background: #002147;
+  color: #ffffff;
+  text-decoration: none;
 }
 
-.conference-cta .btn-outline-light:hover {
-  background: #fff;
+/* =========================================
+   PAGINATION
+========================================= */
 
-  color: #0a2e5c;
-
-  transform: translateY(-5px);
+.conf-pagination-wrapper .page-item.active .page-link {
+  background-color: #002147;
+  border-color: #002147;
+  color: #ffffff;
 }
 
-/*=========================================================
-                Smooth Animation
-=========================================================*/
-
-.stat-card,
-.featured-card,
-.timeline-card,
-.category-card,
-.gallery-card {
-  transition: all 0.35s ease;
+.conf-pagination-wrapper .page-link {
+  color: #002147;
+  font-size: 14px;
+  font-weight: 500;
+  border-color: #cbd5e1;
 }
 
-/*=========================================================
-                Responsive
-=========================================================*/
+.conf-pagination-wrapper .page-link:hover {
+  background-color: #f1f5f9;
+  color: #002147;
+}
 
-@media (max-width: 992px) {
-  .conference-hero {
-    height: 340px;
-  }
+/* =========================================
+   CTA SECTION
+========================================= */
 
-  .featured-card img {
-    height: 220px;
-  }
+.conf-cta-banner {
+  background: #002147;
+  border-left: 4px solid #fdb913;
+  border-radius: 8px;
+  padding: 24px 28px;
+  color: #ffffff;
+  margin-top: 20px;
+}
 
-  .conference-cta {
-    text-align: center;
+.conf-cta-banner h3 {
+  font-size: 20px;
+  font-weight: 750;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.conf-cta-banner p {
+  font-size: 14.5px;
+  color: #cbd5e1;
+  margin: 0;
+  line-height: 1.65;
+  text-align: left !important;
+}
+
+/* =========================================
+   STATUS
+========================================= */
+
+.conference-publications-status {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: #64748b;
+  font-size: 17px;
+  text-align: center;
+  background: #f8fafc;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .conference-publications-container {
+    width: 92%;
+    max-width: 92%;
   }
 }
 
 @media (max-width: 768px) {
-  .conference-hero {
-    height: 280px;
+  .conference-publications-hero {
+    min-height: 120px;
+    padding: 26px 18px 22px;
   }
 
-  .hero-content h1 {
-    font-size: 2.4rem;
+  .conference-publications-hero-content h1 {
+    font-size: 24px;
   }
 
-  .hero-content p {
+  .conference-publications-content {
+    padding: 20px 0 30px;
+  }
+
+  .conference-publications-introduction {
+    margin: 0 0 14px 0;
+    padding: 15px 16px;
+  }
+
+  .conference-publications-introduction p {
     font-size: 15px;
+    line-height: 1.65;
+    text-align: justify;
   }
 
-  .section-title {
-    font-size: 2rem;
+  .conference-publications-section {
+    margin: 0 0 14px 0;
+    padding: 16px 18px;
   }
 
-  .featured-content {
-    padding: 20px;
-  }
-
-  .featured-content h4 {
+  .conference-publications-section h2 {
     font-size: 20px;
   }
 
-  .timeline-card {
-    padding: 30px 20px;
-  }
-
-  .category-card {
-    padding: 30px 20px;
-  }
-
-  .gallery-card img {
-    height: 220px;
-  }
-
-  .conference-table {
-    font-size: 13px;
-  }
-
-  .conference-table th,
-  .conference-table td {
-    padding: 10px;
-  }
-
-  .search-box {
-    padding: 12px 18px;
-
-    border-radius: 15px;
-  }
-
-  .conference-cta {
-    padding: 70px 20px;
-  }
-
-  .conference-cta .btn {
-    width: 100%;
-
-    margin-top: 12px;
-  }
-}
-
-@media (max-width: 576px) {
-  .conference-hero {
-    height: 230px;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content p {
-    font-size: 14px;
-  }
-
-  .about-image {
-    margin-bottom: 25px;
-  }
-
-  .stat-card h2 {
-    font-size: 34px;
-  }
-
-  .timeline-card h3 {
-    font-size: 28px;
-  }
-
-  .category-card h4 {
-    font-size: 19px;
-  }
-
-  .gallery-card img {
-    height: 190px;
+  .conference-publications-section p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    text-align: justify;
   }
 }

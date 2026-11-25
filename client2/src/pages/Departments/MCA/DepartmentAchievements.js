@@ -443,85 +443,85 @@ const DepartmentAchievements = () => {
 
       {(activeFilter === "All" ||
         activeFilter === "Department Achievements") && (
-        <section className="tableCard">
-          <div className="tableTitle">
-            <FaBuilding />
+          <section className="tableCard">
+            <div className="tableTitle">
+              <FaBuilding />
 
-            <h2>Department Achievements</h2>
-          </div>
-
-          <div className="tableResponsive">
-            <table>
-              <thead>
-                <tr>
-                  <th>S.No.</th>
-                  <th>Title</th>
-                  <th>Description</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                {paginatedDepartmentAchievements.length > 0 ? (
-                  paginatedDepartmentAchievements.map((item, index) => (
-                    <tr key={item._id || index}>
-                      <td>
-                        {(departmentPage - 1) * ITEMS_PER_PAGE + index + 1}
-                      </td>
-
-                      <td>
-                        <strong>{item.title}</strong>
-                      </td>
-
-                      <td>{item.description}</td>
-                    </tr>
-                  ))
-                ) : (
-                  <tr>
-                    <td
-                      colSpan="3"
-                      style={{
-                        textAlign: "center",
-                      }}
-                    >
-                      No department achievements found.
-                    </td>
-                  </tr>
-                )}
-              </tbody>
-            </table>
-          </div>
-
-          {departmentTotalPages > 1 && (
-            <div className="achievementPagination">
-              <button
-                type="button"
-                disabled={departmentPage === 1}
-                onClick={() =>
-                  setDepartmentPage((page) => Math.max(1, page - 1))
-                }
-              >
-                Previous
-              </button>
-
-              <span>
-                Page {departmentPage} of {departmentTotalPages}
-              </span>
-
-              <button
-                type="button"
-                disabled={departmentPage === departmentTotalPages}
-                onClick={() =>
-                  setDepartmentPage((page) =>
-                    Math.min(departmentTotalPages, page + 1),
-                  )
-                }
-              >
-                Next
-              </button>
+              <h2>Department Achievements</h2>
             </div>
-          )}
-        </section>
-      )}
+
+            <div className="tableResponsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>S.No.</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  {paginatedDepartmentAchievements.length > 0 ? (
+                    paginatedDepartmentAchievements.map((item, index) => (
+                      <tr key={item._id || index}>
+                        <td>
+                          {(departmentPage - 1) * ITEMS_PER_PAGE + index + 1}
+                        </td>
+
+                        <td>
+                          <strong>{item.title}</strong>
+                        </td>
+
+                        <td>{item.description}</td>
+                      </tr>
+                    ))
+                  ) : (
+                    <tr>
+                      <td
+                        colSpan="3"
+                        style={{
+                          textAlign: "center",
+                        }}
+                      >
+                        No department achievements found.
+                      </td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
+
+            {departmentTotalPages > 1 && (
+              <div className="achievementPagination">
+                <button
+                  type="button"
+                  disabled={departmentPage === 1}
+                  onClick={() =>
+                    setDepartmentPage((page) => Math.max(1, page - 1))
+                  }
+                >
+                  Previous
+                </button>
+
+                <span>
+                  Page {departmentPage} of {departmentTotalPages}
+                </span>
+
+                <button
+                  type="button"
+                  disabled={departmentPage === departmentTotalPages}
+                  onClick={() =>
+                    setDepartmentPage((page) =>
+                      Math.min(departmentTotalPages, page + 1),
+                    )
+                  }
+                >
+                  Next
+                </button>
+              </div>
+            )}
+          </section>
+        )}
 
       {/* =====================================================
           2. FACULTY ACHIEVEMENTS

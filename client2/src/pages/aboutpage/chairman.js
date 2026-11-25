@@ -145,7 +145,7 @@ const ChairmanMessage = () => {
 
                   <h5>Chairman</h5>
 
-                  <p style={{ color: "white" }}>IMS Engineering College</p>
+                  <p style={{ color: "white" }}>IMS Society</p>
                 </div>
 
                 <hr />
@@ -162,10 +162,14 @@ const ChairmanMessage = () => {
               <div className="message-box" style={{ textAlign: "justify" }}>
                 {/* <h6 className="section-tag">CHAIRMAN'S MESSAGE</h6> */}
 
-                <h2 className="section-title">
-                  Building Future
-                  {/* <span> Leaders</span> */}
-                </h2>
+                <div className="chairman-quote-header">
+                  <h2 className="chairman-quote-text">
+                    "Develop a passion for learning.
+                    <br />
+                    If you do, you will never cease to grow."
+                  </h2>
+                  <p className="chairman-quote-author">-Anthony D'Angelo</p>
+                </div>
 
                 {renderMessage(chairman?.message)}
               </div>

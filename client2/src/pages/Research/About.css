@@ -1,1062 +1,374 @@
-/*=========================================================
-                Research About Page
-=========================================================*/
+/* =========================================
+   RESEARCH ABOUT PAGE
+   Styled in IMSEC Society Design Language
+========================================= */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+.research-about-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  color: #1e293b;
+  font-family: "Poppins", "Segoe UI", sans-serif;
 }
 
-body {
-  overflow-x: hidden;
-  background: #fff;
-}
+/* =========================================
+   HERO
+========================================= */
 
-/*=========================================================
-                Common
-=========================================================*/
-
-.section-tag {
-  color: #fdb913;
-
-  font-size: 15px;
-
-  font-weight: 700;
-
-  letter-spacing: 2px;
-
-  text-transform: uppercase;
-
-  margin-bottom: 10px;
-}
-
-.section-title {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-
-  font-weight: 800;
-
-  color: #0a2e5c;
-
-  margin-bottom: 20px;
-}
-
-.section-title span {
-  color: #fdb913;
-}
-
-.section-title::after {
-  content: "";
-
-  display: block;
-
-  width: 90px;
-
-  height: 4px;
-
-  background: #fdb913;
-
-  border-radius: 50px;
-
-  margin-top: 15px;
-}
-
-.text-center .section-title::after {
-  margin: 15px auto 0;
-}
-
-/*=========================================================
-                Hero
-=========================================================*/
-
-.research-hero {
-  height: 430px;
-
-  background:
-    linear-gradient(rgba(10, 46, 92, 1), rgba(10, 46, 92, 1)),
-    url("https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1600&q=80");
-
-  background-size: cover;
-
-  background-position: center;
-
+.research-about-hero {
+  min-height: 150px;
   display: flex;
-
-  justify-content: center;
-
   align-items: center;
-
+  justify-content: center;
+  padding: 32px 24px;
+  background: #002147;
+  border-bottom: 2px solid #fdb913;
+  color: #ffffff;
   text-align: center;
-
-  color: #fff;
 }
 
-.hero-content h1 {
-  font-size: clamp(2.8rem, 6vw, 4.8rem);
-
-  font-weight: 800;
-}
-
-.hero-content p {
-  margin-top: 15px;
-
-  font-size: 18px;
-}
-
-.hero-content span {
-  margin: 0 8px;
-
-  color: #fdb913;
-}
-
-/*=========================================================
-                About
-=========================================================*/
-
-.research-about {
-  background: #fff;
-}
-
-.about-image {
+.research-about-hero-content {
   width: 100%;
-
-  border-radius: 25px;
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-
-  transition: 0.35s;
+  max-width: 1050px;
+  text-align: center;
 }
 
-.about-image:hover {
-  transform: scale(1.03);
-}
-
-.research-about p {
-  color: #666;
-
-  line-height: 1.9;
-
-  text-align: justify;
-}
-
-.research-about .btn {
-  padding: 12px 30px;
-
-  font-weight: 600;
-}
-
-/*=========================================================
-                Vision & Mission
-=========================================================*/
-
-.vision-section {
-  background: #f8f9fb;
-}
-
-.vision-card {
-  background: #fff;
-
-  padding: 40px 35px;
-
-  border-radius: 20px;
-
-  height: 100%;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  transition: 0.35s;
-
-  border-top: 4px solid transparent;
-}
-
-.vision-card:hover {
-  transform: translateY(-10px);
-
-  border-top: 4px solid #fdb913;
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-}
-
-.vision-icon {
-  font-size: 60px;
-
-  color: #fdb913;
-
-  margin-bottom: 20px;
-}
-
-.vision-card h3 {
-  font-weight: 700;
-
-  color: #0a2e5c;
-
-  margin-bottom: 20px;
-}
-
-.vision-card p {
-  color: #666;
-
-  line-height: 1.9;
-}
-
-.vision-card ul {
-  padding-left: 20px;
-
+.research-about-hero-content h1 {
   margin: 0;
-}
-
-.vision-card li {
-  margin-bottom: 12px;
-
-  line-height: 1.8;
-
-  color: #555;
-}
-
-/*=========================================================
-                Philosophy
-=========================================================*/
-
-.philosophy-section {
-  background: #fff;
-}
-
-.philosophy-card {
-  background: #fff;
-
-  padding: 35px 20px;
-
-  text-align: center;
-
-  border-radius: 20px;
-
-  height: 100%;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  transition: 0.35s;
-
-  border-bottom: 4px solid transparent;
-}
-
-.philosophy-card:hover {
-  transform: translateY(-10px);
-
-  border-bottom: 4px solid #fdb913;
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-}
-
-.philosophy-icon {
-  font-size: 55px;
-
-  color: #fdb913;
-
-  margin-bottom: 20px;
-}
-
-.philosophy-card h5 {
-  font-weight: 700;
-
-  color: #0a2e5c;
-
-  margin: 0;
-}
-
-/*=========================================================
-                Research Ecosystem
-=========================================================*/
-
-.ecosystem-section {
-  background: #f8f9fb;
-}
-
-.ecosystem-card {
-  background: #fff;
-
-  padding: 35px 25px;
-
-  text-align: center;
-
-  border-radius: 20px;
-
-  height: 100%;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  transition: 0.35s;
-
-  border-top: 4px solid transparent;
-}
-
-.ecosystem-card:hover {
-  transform: translateY(-10px);
-
-  border-top: 4px solid #fdb913;
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-}
-
-.ecosystem-icon {
-  font-size: 55px;
-
-  color: #fdb913;
-
-  margin-bottom: 20px;
-}
-
-.ecosystem-card h4 {
-  font-weight: 700;
-
-  color: #0a2e5c;
-
-  margin-bottom: 15px;
-}
-
-.ecosystem-card p {
-  color: #666;
-
-  line-height: 1.8;
-}
-/*=========================================================
-                Research Focus Areas
-=========================================================*/
-
-.focus-section {
-  background: #fff;
-}
-
-.focus-card {
-  background: #fff;
-
-  padding: 35px 20px;
-
-  text-align: center;
-
-  border-radius: 20px;
-
-  height: 100%;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  transition: 0.35s;
-
-  border-bottom: 4px solid transparent;
-}
-
-.focus-card:hover {
-  transform: translateY(-10px);
-
-  border-bottom: 4px solid #fdb913;
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-}
-
-.focus-icon {
-  font-size: 55px;
-
-  color: #fdb913;
-
-  margin-bottom: 20px;
-}
-
-.focus-card h5 {
-  font-weight: 700;
-
-  color: #0a2e5c;
-
-  margin: 0;
-}
-
-/*=========================================================
-                Why Research
-=========================================================*/
-
-.why-section {
-  background: #f8f9fb;
-}
-
-.why-image {
-  width: 100%;
-
-  border-radius: 25px;
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-
-  transition: 0.35s;
-}
-
-.why-image:hover {
-  transform: scale(1.03);
-}
-
-.why-list {
-  padding-left: 20px;
-}
-
-.why-list li {
-  margin-bottom: 16px;
-
-  font-size: 17px;
-
-  color: #555;
-
-  line-height: 1.8;
-}
-
-/*=========================================================
-                Statistics
-=========================================================*/
-
-.stats-section {
-  background: #fff;
-}
-
-.stat-card {
-  background: #fff;
-
-  padding: 35px 20px;
-
-  text-align: center;
-
-  border-radius: 20px;
-
-  height: 100%;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  transition: 0.35s;
-
-  border-bottom: 4px solid transparent;
-}
-
-.stat-card:hover {
-  transform: translateY(-10px);
-
-  border-bottom: 4px solid #fdb913;
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-}
-
-.stat-card h2 {
-  font-size: 42px;
-
+  font-size: clamp(26px, 4vw, 38px);
+  line-height: 1.2;
   font-weight: 800;
-
-  color: #0a2e5c;
-
-  margin-bottom: 10px;
+  color: #ffffff;
+  letter-spacing: -0.3px;
 }
 
-.stat-card p {
-  color: #666;
+/* =========================================
+   CONTENT CONTAINER
+========================================= */
 
-  margin: 0;
-}
-
-/*=========================================================
-                Collaborations
-=========================================================*/
-/* =========================================================
-   INDUSTRY & ACADEMIC PARTNERS
-========================================================= */
-
-.collaboration-section {
+.research-about-content {
+  padding: 28px 0 45px;
   background: #f8fafc;
 }
 
-/* =========================================================
-   PARTNER CARD
-========================================================= */
+.research-about-container {
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
+}
 
-.partner-card {
-  position: relative;
+/* =========================================
+   INTRODUCTION HIGHLIGHT BOX
+========================================= */
 
-  height: 100%;
-
-  min-height: 210px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  justify-content: center;
-
-  text-align: center;
-
-  padding: 30px 25px;
-
+.research-about-introduction {
+  margin: 0 0 20px 0;
+  padding: 18px 24px;
+  border-left: 4px solid #fdb913;
+  border-top: 1px solid #e2e8f0;
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  border-radius: 6px;
   background: #ffffff;
-
-  border: 1px solid #e5e7eb;
-
-  border-radius: 16px;
-
-  overflow: hidden;
-
-  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.06);
-
-  transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease,
-    border-color 0.35s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
-/* Top gold line */
-
-.partner-card::before {
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-
-  left: 0;
-
-  width: 100%;
-
-  height: 4px;
-
-  background: #fdb913;
-
-  transform: scaleX(0);
-
-  transform-origin: center;
-
-  transition: transform 0.35s ease;
-}
-
-/* Background decoration */
-
-.partner-card::after {
-  content: "";
-
-  position: absolute;
-
-  width: 100px;
-
-  height: 100px;
-
-  right: -45px;
-
-  top: -45px;
-
-  border-radius: 50%;
-
-  background: rgba(209, 211, 214, 0.04);
-
-  transition: 0.35s ease;
-}
-
-/* Hover */
-
-.partner-card:hover {
-  transform: translateY(-8px);
-
-  border-color: rgba(10, 46, 92, 0.15);
-
-  box-shadow: 0 15px 35px rgba(162, 166, 172, 0.12);
-}
-
-.partner-card:hover::before {
-  transform: scaleX(1);
-}
-
-.partner-card:hover::after {
-  transform: scale(1.4);
-}
-
-/* =========================================================
-   PARTNER NAME
-========================================================= */
-
-.partner-card h4 {
-  position: relative;
-
-  z-index: 2;
-
-  color: #0a2e5c;
-
-  font-size: 21px;
-
-  font-weight: 700;
-
-  line-height: 1.4;
-
-  margin: 0 0 12px;
-
-  transition: color 0.3s ease;
-}
-
-.partner-card:hover h4 {
-  color: #202a37;
-}
-
-/* =========================================================
-   PARTNER TYPE
-========================================================= */
-
-.partner-card small {
-  position: relative;
-
-  z-index: 2;
-
-  display: inline-block;
-
-  padding: 5px 13px;
-
-  margin-bottom: 12px;
-
-  background: #fff7d6;
-
-  color: #856404;
-
-  border-radius: 30px;
-
-  font-size: 11px;
-
-  font-weight: 600;
-
-  text-transform: uppercase;
-
-  letter-spacing: 0.5px;
-}
-
-/* =========================================================
-   DESCRIPTION
-========================================================= */
-
-.partner-card p {
-  position: relative;
-
-  z-index: 2;
-
-  max-width: 340px;
-
-  color: #080b0f;
-
-  font-size: 13px;
-
+.research-about-introduction p {
+  margin: 0;
+  color: #334155;
+  font-size: 16px;
   line-height: 1.7;
-
-  margin: 0 0 17px;
+  font-weight: 450;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
-/* =========================================================
-   WEBSITE BUTTON
-========================================================= */
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
 
-.partner-card a {
-  position: relative;
-
-  z-index: 3;
-
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  padding: 8px 18px;
-
-  background: #0a2e5c;
-
-  color: #ffffff;
-
-  border-radius: 30px;
-
-  font-size: 12px;
-
-  font-weight: 600;
-
-  text-decoration: none;
-
-  transition:
-    background 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease;
+.research-about-section {
+  margin: 0 0 20px 0;
+  padding: 22px 26px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
-.partner-card a:hover {
+.research-about-section:last-child {
+  margin-bottom: 0;
+}
+
+.research-about-section h2 {
+  margin: 0 0 12px 0;
+  padding: 0;
+  color: #002147;
+  font-size: 22px;
+  line-height: 1.25;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  text-align: left !important;
+}
+
+.research-about-section h2::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 3px;
+  margin: 8px 0 0;
   background: #fdb913;
+  border-radius: 2px;
+}
 
-  color: #0a2e5c;
+.research-about-text {
+  text-align: justify !important;
+  text-justify: inter-word;
+}
 
+.research-about-section p,
+.research-about-text p {
+  margin: 0 0 12px 0;
+  padding: 0;
+  color: #475569;
+  font-size: 15px;
+  line-height: 1.75;
+  text-align: justify !important;
+  text-justify: inter-word;
+}
+
+.research-about-section p:last-child,
+.research-about-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================
+   GRID CARDS (PHILOSOPHY, ECOSYSTEM, FOCUS)
+========================================= */
+
+.research-grid-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px 16px;
+  height: 100%;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.research-grid-card:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 14px rgba(0, 33, 71, 0.08);
   transform: translateY(-2px);
 }
 
-/* =========================================================
-   EMPTY PARTNER STATE
-========================================================= */
-
-.collaboration-section .text-center p {
-  color: #64748b;
-
-  font-size: 15px;
-
-  margin: 0;
-
-  padding: 35px 20px;
-
-  background: #ffffff;
-
-  border: 1px dashed #cbd5e1;
-
-  border-radius: 12px;
-}
-
-/* =========================================================
-   PARTNER GRID
-========================================================= */
-
-.collaboration-section .row {
-  align-items: stretch;
-}
-
-.collaboration-section .row > div {
+.research-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: rgba(0, 33, 71, 0.06);
+  color: #002147;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 12px;
+  transition: background 0.25s ease, color 0.25s ease;
 }
 
-.collaboration-section .row > div .partner-card {
-  width: 100%;
+.research-grid-card:hover .research-card-icon {
+  background: #002147;
+  color: #fdb913;
 }
 
-/* =========================================================
-   RESPONSIVE
-========================================================= */
-
-@media (max-width: 991px) {
-  .partner-card {
-    min-height: 200px;
-
-    padding: 27px 20px;
-  }
-
-  .partner-card h4 {
-    font-size: 19px;
-  }
+.text-center .research-card-icon {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@media (max-width: 576px) {
-  .partner-card {
-    min-height: 190px;
-
-    padding: 25px 18px;
-
-    border-radius: 13px;
-  }
-
-  .partner-card h4 {
-    font-size: 18px;
-  }
-
-  .partner-card p {
-    font-size: 12px;
-  }
-
-  .partner-card a {
-    padding: 8px 16px;
-
-    font-size: 11px;
-  }
+.research-grid-card h4,
+.research-grid-card h5 {
+  color: #002147;
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 16px;
 }
 
-/*=========================================================
-                SDG
-=========================================================*/
-
-.sdg-section {
-  background: #fff;
+.research-grid-card p {
+  color: #64748b;
+  font-size: 13.5px;
+  line-height: 1.6;
+  margin: 0;
+  text-align: left !important;
 }
 
-.sdg-card {
-  background: #fff;
+/* =========================================
+   PARTNERS CARDS
+========================================= */
 
-  padding: 35px 20px;
-
-  border-radius: 20px;
-
-  text-align: center;
-
+.research-partner-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 18px 16px;
   height: 100%;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  transition: 0.35s;
-
-  border-top: 4px solid transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.25s ease;
 }
 
-.sdg-card:hover {
-  transform: translateY(-10px);
+.research-partner-card:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 14px rgba(0, 33, 71, 0.08);
+  transform: translateY(-2px);
+}
 
-  border-top: 4px solid #28a745;
+.research-partner-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #002147;
+  margin-bottom: 6px;
+}
 
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+.partner-type-badge {
+  display: inline-block;
+  font-size: 12px;
+  color: #475569;
+  background: #e2e8f0;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  width: fit-content;
+}
+
+.partner-link {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #002147;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s ease;
+}
+
+.partner-link:hover {
+  color: #f15b20;
+  text-decoration: underline;
+}
+
+/* =========================================
+   SDG CARDS
+========================================= */
+
+.research-sdg-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 100%;
+  transition: all 0.25s ease;
+}
+
+.research-sdg-card:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 14px rgba(0, 33, 71, 0.08);
+  transform: translateY(-2px);
 }
 
 .sdg-icon {
-  font-size: 55px;
-
-  color: #28a745;
-
-  margin-bottom: 20px;
+  font-size: 24px;
+  color: #16a34a;
+  flex-shrink: 0;
 }
 
-.sdg-card h5 {
+.research-sdg-card h5 {
+  font-size: 15.5px;
   font-weight: 700;
-
-  color: #0a2e5c;
-
+  color: #002147;
   margin: 0;
 }
 
-/*=========================================================
-                Gallery
-=========================================================*/
+/* =========================================
+   STATUS
+========================================= */
 
-.gallery-section {
-  background: #f8f9fb;
+.research-about-status {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: #64748b;
+  font-size: 17px;
+  text-align: center;
+  background: #f8fafc;
 }
 
-.gallery-card {
-  overflow: hidden;
+/* =========================================
+   RESPONSIVE
+========================================= */
 
-  border-radius: 20px;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  transition: 0.35s;
-
-  height: 100%;
-}
-
-.gallery-card:hover {
-  transform: translateY(-10px);
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-}
-
-.gallery-card img {
-  width: 100%;
-
-  height: 280px;
-
-  object-fit: cover;
-
-  transition: 0.5s;
-}
-
-.gallery-card:hover img {
-  transform: scale(1.08);
-}
-
-/*=========================================================
-                FAQ
-=========================================================*/
-
-.faq-section {
-  background: #fff;
-}
-
-.faq-card {
-  background: #f8f9fb;
-
-  padding: 35px;
-
-  border-radius: 20px;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
-
-.faq-card h5 {
-  font-weight: 700;
-
-  color: #0a2e5c;
-
-  margin-bottom: 12px;
-}
-
-.faq-card p {
-  color: #666;
-
-  line-height: 1.8;
-}
-
-.faq-card hr {
-  margin: 25px 0;
-}
-
-/*=========================================================
-                CTA
-=========================================================*/
-
-.research-cta {
-  background: linear-gradient(135deg, #0a2e5c, #123f7a);
-
-  padding: 90px 0;
-
-  color: #fff;
-}
-
-.research-cta h2 {
-  font-size: clamp(2rem, 5vw, 3rem);
-
-  font-weight: 800;
-
-  margin-bottom: 20px;
-}
-
-.research-cta p {
-  color: #ddd;
-
-  line-height: 1.8;
-}
-
-.research-cta .btn {
-  padding: 12px 30px;
-
-  font-weight: 600;
-
-  transition: 0.35s;
-}
-
-.research-cta .btn-warning {
-  background: #fdb913;
-
-  color: #0a2e5c;
-
-  border: none;
-}
-
-.research-cta .btn-warning:hover {
-  background: #fff;
-
-  color: #0a2e5c;
-
-  transform: translateY(-5px);
-}
-
-.research-cta .btn-outline-light {
-  border: 2px solid #fff;
-}
-
-.research-cta .btn-outline-light:hover {
-  background: #fff;
-
-  color: #0a2e5c;
-
-  transform: translateY(-5px);
-}
-
-/*=========================================================
-                Animation
-=========================================================*/
-
-.vision-card,
-.philosophy-card,
-.ecosystem-card,
-.focus-card,
-.partner-card,
-.sdg-card,
-.gallery-card,
-.stat-card {
-  transition: all 0.35s ease;
-}
-
-/*=========================================================
-                Responsive
-=========================================================*/
-
-@media (max-width: 992px) {
-  .research-hero {
-    height: 320px;
-  }
-
-  .research-cta {
-    text-align: center;
-  }
-
-  .why-image {
-    margin-bottom: 30px;
+@media (max-width: 900px) {
+  .research-about-container {
+    width: 92%;
+    max-width: 92%;
   }
 }
 
 @media (max-width: 768px) {
-  .research-hero {
-    height: 260px;
+  .research-about-hero {
+    min-height: 120px;
+    padding: 26px 18px 22px;
   }
 
-  .hero-content h1 {
-    font-size: 2.2rem;
+  .research-about-hero-content h1 {
+    font-size: 24px;
   }
 
-  .hero-content p {
+  .research-about-content {
+    padding: 20px 0 30px;
+  }
+
+  .research-about-introduction {
+    margin: 0 0 14px 0;
+    padding: 15px 16px;
+  }
+
+  .research-about-introduction p {
     font-size: 15px;
+    line-height: 1.65;
+    text-align: justify;
   }
 
-  .about-image {
-    margin-bottom: 25px;
+  .research-about-section {
+    margin: 0 0 14px 0;
+    padding: 16px 18px;
   }
 
-  .vision-card,
-  .ecosystem-card,
-  .focus-card,
-  .partner-card,
-  .sdg-card {
-    padding: 25px;
+  .research-about-section h2 {
+    font-size: 20px;
   }
 
-  .gallery-card img {
-    height: 220px;
-  }
-
-  .stat-card {
-    padding: 25px;
-  }
-
-  .stat-card h2 {
-    font-size: 34px;
-  }
-
-  .faq-card {
-    padding: 25px;
-  }
-
-  .research-cta {
-    padding: 60px 20px;
-  }
-
-  .research-cta .btn {
-    width: 100%;
-
-    margin-top: 12px;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .gallery-card img {
-    height: 200px;
-  }
-
-  .why-list li {
-    font-size: 15px;
-  }
-
-  .faq-card {
-    padding: 20px;
+  .research-about-section p,
+  .research-about-text p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    text-align: justify;
   }
 }

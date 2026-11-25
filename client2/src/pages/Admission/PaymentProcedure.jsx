@@ -119,12 +119,12 @@ const PaymentProcedure = () => {
       =================================================== */}
 
       <section className="payment-procedure-public-hero">
-        <div className="payment-procedure-public-hero-container">
-          {/* <span className="payment-public-eyebrow">ADMISSIONS</span> */}
+        <div className="payment-procedure-public-hero-container text-center">
+          {/* <span className="payment-public-eyebrow text-center">ADMISSIONS</span> */}
 
-          <h1>Payment Procedure</h1>
+          <h1 className="text-center">Payment Procedure</h1>
 
-          <p>
+          <p className="text-center">
             Follow the payment instructions below for making your academic or
             hostel fee payment.
           </p>

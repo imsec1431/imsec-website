@@ -194,7 +194,7 @@
 
 .rules-about p {
   color: #556980;
-  font-size: 13.5px;
+  font-size: 15px;
   line-height: 1.7;
 }
 
@@ -281,7 +281,7 @@
   background: #ffffff;
   padding: 16px 20px;
   font-weight: 650;
-  font-size: 15px;
+  font-size: 16px;
   color: #002147;
   box-shadow: none !important;
   border-radius: 12px !important;
@@ -331,9 +331,9 @@
   display: inline-block;
   background: #002147;
   color: #fdb913;
-  padding: 3px 10px;
+  padding: 4px 10px;
   border-radius: 4px;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.8px;
   text-transform: uppercase;
@@ -346,18 +346,18 @@
 }
 
 .rule-item .accordion-body p {
-  color: #64748b;
-  font-size: 13px;
-  line-height: 1.6;
+  color: #475569;
+  font-size: 15px;
+  line-height: 1.7;
 }
 
 .rule-item .btn-warning {
   border: 1px solid #002147;
   background: #002147;
   color: #ffffff;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 600;
-  padding: 6px 14px;
+  padding: 8px 18px;
   border-radius: 6px !important;
   display: inline-flex;
   align-items: center;
@@ -383,7 +383,7 @@
 
 .guide-card {
   background: #ffffff;
-  padding: 22px 18px;
+  padding: 24px 20px;
   border-radius: 12px;
   border: 1px solid #e2e8f0;
   text-align: center;
@@ -407,14 +407,14 @@
 .guide-card h4 {
   color: #002147;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 17px;
   margin-bottom: 8px;
 }
 
 .guide-card p {
-  color: #64748b;
-  font-size: 12px;
-  line-height: 1.6;
+  color: #556980;
+  font-size: 14.5px;
+  line-height: 1.65;
   margin: 0;
 }
 
@@ -437,14 +437,14 @@
 .faq-card h5 {
   color: #002147;
   font-weight: 700;
-  font-size: 15px;
-  margin-bottom: 6px;
+  font-size: 16.5px;
+  margin-bottom: 8px;
 }
 
 .faq-card p {
-  color: #64748b;
-  font-size: 13px;
-  line-height: 1.6;
+  color: #475569;
+  font-size: 15px;
+  line-height: 1.7;
   margin: 0;
 }
 
@@ -477,8 +477,8 @@
 
 .rules-cta p {
   color: rgba(255, 255, 255, 0.88);
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: 14.5px;
+  line-height: 1.65;
   margin: 0;
 }
 

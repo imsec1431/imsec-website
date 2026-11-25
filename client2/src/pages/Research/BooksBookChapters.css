@@ -1,682 +1,536 @@
-/*=========================================================
-                    Google Font
-=========================================================*/
+/* =========================================
+   BOOKS & BOOK CHAPTERS PAGE
+   Styled in IMSEC Society Design Language
+========================================= */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
-* {
-  margin: 0;
-
-  padding: 0;
-
-  box-sizing: border-box;
-
-  font-family: "Poppins", sans-serif;
+.books-chapters-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  color: #1e293b;
+  font-family: "Poppins", "Segoe UI", sans-serif;
 }
 
-body {
-  overflow-x: hidden;
+/* =========================================
+   HERO BANNER
+========================================= */
 
-  background: #fff;
-}
-
-/*=========================================================
-                    Common
-=========================================================*/
-
-.section-tag {
-  color: #fdb913;
-
-  font-size: 15px;
-
-  font-weight: 700;
-
-  letter-spacing: 2px;
-
-  text-transform: uppercase;
-
-  margin-bottom: 12px;
-}
-
-.section-title {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-
-  font-weight: 800;
-
-  color: #0a2e5c;
-
-  margin-bottom: 20px;
-}
-
-.section-title span {
-  color: #fdb913;
-}
-
-.section-title::after {
-  content: "";
-
-  display: block;
-
-  width: 90px;
-
-  height: 4px;
-
-  background: #fdb913;
-
-  border-radius: 50px;
-
-  margin-top: 15px;
-}
-
-.text-center .section-title::after {
-  margin: 15px auto 0;
-}
-
-/*=========================================================
-                    Hero
-=========================================================*/
-
-.books-hero {
-  height: 430px;
-
-  background:
-    linear-gradient(rgba(10, 46, 92, 0.9), rgba(10, 46, 92, 0.9)),
-    url("https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1600&q=80");
-
-  background-size: cover;
-
-  background-position: center;
-
+.books-chapters-hero {
+  min-height: 150px;
   display: flex;
-
+  align-items: center;
   justify-content: center;
-
-  align-items: center;
-
+  padding: 32px 24px;
+  background: #002147;
+  border-bottom: 2px solid #fdb913;
+  color: #ffffff;
   text-align: center;
-
-  color: #fff;
 }
 
-.hero-content h1 {
-  font-size: clamp(3rem, 6vw, 4.8rem);
-
-  font-weight: 800;
-
-  margin-bottom: 12px;
-}
-
-.hero-content p {
-  font-size: 18px;
-}
-
-.hero-content span {
-  margin: 0 8px;
-
-  color: #fdb913;
-}
-
-/*=========================================================
-                    About
-=========================================================*/
-
-.books-about {
-  background: #fff;
-}
-
-.about-image {
+.books-chapters-hero-content {
   width: 100%;
-
-  border-radius: 20px;
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-
-  transition: 0.4s;
-}
-
-.about-image:hover {
-  transform: scale(1.03);
-}
-
-.books-about p {
-  font-size: 16px;
-
-  line-height: 1.9;
-
-  color: #666;
-
-  text-align: justify;
-}
-
-/*=========================================================
-                    Statistics
-=========================================================*/
-
-.books-stats {
-  background: #f7f9fc;
-}
-
-.stat-card {
-  background: #fff;
-
-  padding: 40px 20px;
-
+  max-width: 1050px;
   text-align: center;
-
-  border-radius: 20px;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  transition: 0.35s;
-
-  height: 100%;
 }
 
-.stat-card:hover {
-  transform: translateY(-10px);
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-}
-
-.stat-card h2 {
-  font-size: 42px;
-
-  font-weight: 800;
-
-  color: #0a2e5c;
-
-  margin-bottom: 10px;
-}
-
-.stat-card p {
-  font-size: 17px;
-
-  font-weight: 600;
-
-  color: #666;
-
+.books-chapters-hero-content h1 {
   margin: 0;
+  font-size: clamp(26px, 4vw, 38px);
+  line-height: 1.2;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.3px;
 }
 
-/*=========================================================
-                    Search
-=========================================================*/
+/* =========================================
+   CONTENT CONTAINER
+========================================= */
 
-.search-section {
-  background: #fff;
+.books-chapters-content {
+  padding: 28px 0 45px;
+  background: #f8fafc;
 }
 
-.search-box {
-  display: flex;
-
-  align-items: center;
-
-  padding: 16px 20px;
-
-  background: #fff;
-
-  border-radius: 50px;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+.books-chapters-container {
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
-.search-box svg {
-  font-size: 22px;
+/* =========================================
+   INTRODUCTION HIGHLIGHT BOX
+========================================= */
 
-  color: #fdb913;
-
-  margin-right: 15px;
+.books-chapters-introduction {
+  margin: 0 0 20px 0;
+  padding: 18px 24px;
+  border-left: 4px solid #fdb913;
+  border-top: 1px solid #e2e8f0;
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
-.search-box input {
-  border: none;
-
-  box-shadow: none !important;
-
+.books-chapters-introduction p {
+  margin: 0 0 10px 0;
+  color: #334155;
   font-size: 16px;
+  line-height: 1.7;
+  font-weight: 450;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
-.search-box input:focus {
-  border: none;
-}
-
-/*=========================================================
-                    Books Table
-=========================================================*/
-
-.books-table-section {
-  background: #fff;
-}
-
-.books-table {
-  border-radius: 20px;
-
-  overflow: hidden;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
+.books-chapters-introduction p:last-child {
   margin-bottom: 0;
 }
 
-.books-table thead {
-  background: #0a2e5c;
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
 
-  color: #fff;
+.books-chapters-section {
+  margin: 0 0 20px 0;
+  padding: 22px 26px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
-.books-table th {
-  padding: 18px;
-
-  font-size: 15px;
-
-  font-weight: 600;
-
-  text-align: center;
-
-  vertical-align: middle;
-
-  white-space: nowrap;
-}
-
-.books-table td {
-  padding: 16px;
-
-  font-size: 14px;
-
-  text-align: center;
-
-  vertical-align: middle;
-}
-
-.books-table tbody tr {
-  transition: 0.3s;
-}
-
-.books-table tbody tr:hover {
-  background: #fff8ea;
-}
-
-/*=========================================================
-                Publication Type Badge
-=========================================================*/
-
-.publication-type {
-  display: inline-block;
-
-  padding: 8px 16px;
-
-  border-radius: 30px;
-
-  background: #eaf4ff;
-
-  color: #0a2e5c;
-
-  font-size: 13px;
-
-  font-weight: 600;
-}
-
-/*=========================================================
-                    View Book
-=========================================================*/
-
-.view-book {
-  text-decoration: none;
-
-  font-weight: 600;
-
-  color: #0a2e5c;
-
-  transition: 0.3s;
-}
-
-.view-book:hover {
-  color: #fdb913;
-}
-
-.view-book svg {
-  margin-left: 6px;
-
-  font-size: 13px;
-}
-/*=========================================================
-                    Google Font
-=========================================================*/
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
-
-* {
-  margin: 0;
-
-  padding: 0;
-
-  box-sizing: border-box;
-
-  font-family: "Poppins", sans-serif;
-}
-
-body {
-  overflow-x: hidden;
-
-  background: #fff;
-}
-
-/*=========================================================
-                    Common
-=========================================================*/
-
-.section-tag {
-  color: #fdb913;
-
-  font-size: 15px;
-
-  font-weight: 700;
-
-  letter-spacing: 2px;
-
-  text-transform: uppercase;
-
-  margin-bottom: 12px;
-}
-
-.section-title {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-
-  font-weight: 800;
-
-  color: #0a2e5c;
-
-  margin-bottom: 20px;
-}
-
-.section-title span {
-  color: #fdb913;
-}
-
-.section-title::after {
-  content: "";
-
-  display: block;
-
-  width: 90px;
-
-  height: 4px;
-
-  background: #fdb913;
-
-  border-radius: 50px;
-
-  margin-top: 15px;
-}
-
-.text-center .section-title::after {
-  margin: 15px auto 0;
-}
-
-/*=========================================================
-                    Hero
-=========================================================*/
-
-.books-hero {
-  height: 430px;
-
-  background:
-    linear-gradient(rgba(10, 46, 92, 0.9), rgba(10, 46, 92, 0.9)),
-    url("https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1600&q=80");
-
-  background-size: cover;
-
-  background-position: center;
-
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-
-  text-align: center;
-
-  color: #fff;
-}
-
-.hero-content h1 {
-  font-size: clamp(3rem, 6vw, 4.8rem);
-
-  font-weight: 800;
-
-  margin-bottom: 12px;
-}
-
-.hero-content p {
-  font-size: 18px;
-}
-
-.hero-content span {
-  margin: 0 8px;
-
-  color: #fdb913;
-}
-
-/*=========================================================
-                    About
-=========================================================*/
-
-.books-about {
-  background: #fff;
-}
-
-.about-image {
-  width: 100%;
-
-  border-radius: 20px;
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-
-  transition: 0.4s;
-}
-
-.about-image:hover {
-  transform: scale(1.03);
-}
-
-.books-about p {
-  font-size: 16px;
-
-  line-height: 1.9;
-
-  color: #666;
-
-  text-align: justify;
-}
-
-/*=========================================================
-                    Statistics
-=========================================================*/
-
-.books-stats {
-  background: #f7f9fc;
-}
-
-.stat-card {
-  background: #fff;
-
-  padding: 40px 20px;
-
-  text-align: center;
-
-  border-radius: 20px;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  transition: 0.35s;
-
-  height: 100%;
-}
-
-.stat-card:hover {
-  transform: translateY(-10px);
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-}
-
-.stat-card h2 {
-  font-size: 42px;
-
-  font-weight: 800;
-
-  color: #0a2e5c;
-
-  margin-bottom: 10px;
-}
-
-.stat-card p {
-  font-size: 17px;
-
-  font-weight: 600;
-
-  color: #666;
-
-  margin: 0;
-}
-
-/*=========================================================
-                    Search
-=========================================================*/
-
-.search-section {
-  background: #fff;
-}
-
-.search-box {
-  display: flex;
-
-  align-items: center;
-
-  padding: 16px 20px;
-
-  background: #fff;
-
-  border-radius: 50px;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
-
-.search-box svg {
-  font-size: 22px;
-
-  color: #fdb913;
-
-  margin-right: 15px;
-}
-
-.search-box input {
-  border: none;
-
-  box-shadow: none !important;
-
-  font-size: 16px;
-}
-
-.search-box input:focus {
-  border: none;
-}
-
-/*=========================================================
-                    Books Table
-=========================================================*/
-
-.books-table-section {
-  background: #fff;
-}
-
-.books-table {
-  border-radius: 20px;
-
-  overflow: hidden;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
+.books-chapters-section:last-child {
   margin-bottom: 0;
 }
 
-.books-table thead {
-  background: #0a2e5c;
-
-  color: #fff;
+.books-chapters-section h2 {
+  margin: 0 0 12px 0;
+  padding: 0;
+  color: #002147;
+  font-size: 22px;
+  line-height: 1.25;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  text-align: left !important;
 }
 
-.books-table th {
-  padding: 18px;
+.books-chapters-section h2::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 3px;
+  margin: 8px 0 0;
+  background: #fdb913;
+  border-radius: 2px;
+}
 
+.books-chapters-section p {
+  margin: 0 0 12px 0;
+  padding: 0;
+  color: #475569;
   font-size: 15px;
-
-  font-weight: 600;
-
-  text-align: center;
-
-  vertical-align: middle;
-
-  white-space: nowrap;
+  line-height: 1.75;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
-.books-table td {
-  padding: 16px;
+.books-chapters-section p:last-child {
+  margin-bottom: 0;
+}
 
+/* =========================================
+   STATISTICS CARDS
+========================================= */
+
+.book-stat-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 22px 18px;
+  text-align: center;
+  transition: all 0.25s ease;
+  height: 100%;
+}
+
+.book-stat-card:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 14px rgba(0, 33, 71, 0.08);
+  transform: translateY(-2px);
+}
+
+.book-stat-card h3 {
+  font-size: clamp(28px, 3.2vw, 36px);
+  font-weight: 800;
+  color: #002147;
+  margin: 0 0 6px 0;
+  line-height: 1.15;
+}
+
+.book-stat-card p {
   font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+  margin: 0;
+  text-align: center !important;
+}
 
+/* =========================================
+   TIMELINE CARDS
+========================================= */
+
+.book-timeline-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px 16px;
   text-align: center;
-
-  vertical-align: middle;
+  transition: all 0.25s ease;
+  height: 100%;
 }
 
-.books-table tbody tr {
-  transition: 0.3s;
+.book-timeline-card:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 14px rgba(0, 33, 71, 0.08);
+  transform: translateY(-2px);
 }
 
-.books-table tbody tr:hover {
-  background: #fff8ea;
+.book-timeline-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: rgba(0, 33, 71, 0.06);
+  color: #002147;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin: 0 auto 12px;
+  transition: all 0.25s ease;
 }
 
-/*=========================================================
-                Publication Type Badge
-=========================================================*/
-
-.publication-type {
-  display: inline-block;
-
-  padding: 8px 16px;
-
-  border-radius: 30px;
-
-  background: #eaf4ff;
-
-  color: #0a2e5c;
-
-  font-size: 13px;
-
-  font-weight: 600;
-}
-
-/*=========================================================
-                    View Book
-=========================================================*/
-
-.view-book {
-  text-decoration: none;
-
-  font-weight: 600;
-
-  color: #0a2e5c;
-
-  transition: 0.3s;
-}
-
-.view-book:hover {
+.book-timeline-card:hover .book-timeline-icon {
+  background: #002147;
   color: #fdb913;
 }
 
-.view-book svg {
-  margin-left: 6px;
+.book-timeline-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #002147;
+  margin-bottom: 6px;
+}
 
-  font-size: 13px;
+.book-timeline-card p {
+  font-size: 13.5px;
+  color: #64748b;
+  margin: 0;
+  text-align: center !important;
+}
+
+/* =========================================
+   CATEGORY CARDS
+========================================= */
+
+.book-category-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: all 0.25s ease;
+  height: 100%;
+}
+
+.book-category-card:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 14px rgba(0, 33, 71, 0.08);
+  transform: translateY(-2px);
+}
+
+.book-category-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background: rgba(0, 33, 71, 0.06);
+  color: #002147;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  flex-shrink: 0;
+}
+
+.book-category-card:hover .book-category-icon {
+  background: #002147;
+  color: #fdb913;
+}
+
+.book-category-card h5 {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #002147;
+  margin: 0;
+}
+
+/* =========================================
+   SEARCH BAR
+========================================= */
+
+.book-search-wrapper {
+  margin-bottom: 20px;
+}
+
+.book-search-box {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.book-search-box:focus-within {
+  border-color: #002147;
+  box-shadow: 0 0 0 3px rgba(0, 33, 71, 0.08);
+}
+
+.book-search-box svg {
+  color: #64748b;
+  font-size: 16px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.book-search-box input {
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0;
+  font-size: 14.5px;
+  color: #1e293b;
+  background: transparent;
+  width: 100%;
+}
+
+.book-search-box input:focus {
+  outline: none;
+}
+
+/* =========================================
+   BOOKS TABLE
+========================================= */
+
+.book-table-container {
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.book-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  font-size: 14px;
+}
+
+.book-table thead tr {
+  background: #002147;
+  color: #ffffff;
+}
+
+.book-table th {
+  padding: 13px 14px;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-align: left;
+  letter-spacing: 0.2px;
+  border: none;
+  white-space: nowrap;
+}
+
+.book-table th.text-center,
+.book-table td.text-center {
+  text-align: center;
+}
+
+.book-table td {
+  padding: 12px 14px;
+  color: #334155;
+  border-top: 1px solid #e2e8f0;
+  vertical-align: middle;
+}
+
+.book-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.book-title-cell {
+  font-weight: 600;
+  color: #002147;
+  min-width: 240px;
+  line-height: 1.45;
+}
+
+.book-type-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #002147;
+  background: #e2e8f0;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.book-view-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  font-size: 12.5px;
+  font-weight: 600;
+  background: #fdb913;
+  color: #002147;
+  border-radius: 4px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.book-view-link:hover {
+  background: #002147;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+.book-pagination-wrapper .page-item.active .page-link {
+  background-color: #002147;
+  border-color: #002147;
+  color: #ffffff;
+}
+
+.book-pagination-wrapper .page-link {
+  color: #002147;
+  font-size: 14px;
+  font-weight: 500;
+  border-color: #cbd5e1;
+}
+
+.book-pagination-wrapper .page-link:hover {
+  background-color: #f1f5f9;
+  color: #002147;
+}
+
+/* =========================================
+   CTA SECTION
+========================================= */
+
+.book-cta-banner {
+  background: #002147;
+  border-left: 4px solid #fdb913;
+  border-radius: 8px;
+  padding: 24px 28px;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.book-cta-banner h3 {
+  font-size: 20px;
+  font-weight: 750;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.book-cta-banner p {
+  font-size: 14.5px;
+  color: #cbd5e1;
+  margin: 0;
+  line-height: 1.65;
+  text-align: left !important;
+}
+
+/* =========================================
+   STATUS
+========================================= */
+
+.books-chapters-status {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: #64748b;
+  font-size: 17px;
+  text-align: center;
+  background: #f8fafc;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .books-chapters-container {
+    width: 92%;
+    max-width: 92%;
+  }
+}
+
+@media (max-width: 768px) {
+  .books-chapters-hero {
+    min-height: 120px;
+    padding: 26px 18px 22px;
+  }
+
+  .books-chapters-hero-content h1 {
+    font-size: 24px;
+  }
+
+  .books-chapters-content {
+    padding: 20px 0 30px;
+  }
+
+  .books-chapters-introduction {
+    margin: 0 0 14px 0;
+    padding: 15px 16px;
+  }
+
+  .books-chapters-introduction p {
+    font-size: 15px;
+    line-height: 1.65;
+    text-align: justify;
+  }
+
+  .books-chapters-section {
+    margin: 0 0 14px 0;
+    padding: 16px 18px;
+  }
+
+  .books-chapters-section h2 {
+    font-size: 20px;
+  }
+
+  .books-chapters-section p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    text-align: justify;
+  }
 }

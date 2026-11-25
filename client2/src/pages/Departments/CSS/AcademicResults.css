@@ -36,7 +36,7 @@
 
   width: 100%;
 
-  min-height: 330px;
+  min-height: auto;
 
   display: flex;
 
@@ -46,13 +46,13 @@
 
   align-items: center;
 
-  padding: 70px 30px;
+  padding: 28px 20px;
 
-  margin-bottom: 35px;
+  margin-bottom: 20px;
 
-  border-radius: 22px;
+  border-radius: 0;
 
-  background: linear-gradient(135deg, #1b4568, #2a5f8a);
+  background: #002147;
 
   color: #fff;
 
@@ -60,7 +60,7 @@
 
   overflow: hidden;
 
-  box-shadow: 0 20px 45px rgba(27, 69, 104, 0.2);
+  box-shadow: none;
 }
 
 .resultsHero h1 {
@@ -68,11 +68,11 @@
 
   z-index: 2;
 
-  margin: 0 0 15px;
+  margin: 0 0 8px;
 
   color: #fff;
 
-  font-size: clamp(32px, 5vw, 48px);
+  font-size: 30px;
 
   font-weight: 700;
 
@@ -86,49 +86,25 @@
 
   width: 100%;
 
-  max-width: 900px;
+  max-width: 800px;
 
-  margin: 0;
+  margin: 0 auto;
 
-  color: rgba(255, 255, 255, 0.92);
+  color: #ffffff !important;
 
-  font-size: 17px;
+  font-size: 15px;
 
-  line-height: 1.8;
+  line-height: 1.5;
 }
 
 /* =========================================================
    HERO DECORATIONS
 ========================================================= */
 
-.heroDecoration {
-  position: absolute;
-
-  border-radius: 50%;
-
-  background: rgba(255, 255, 255, 0.07);
-
-  pointer-events: none;
-}
-
-.heroDecorationOne {
-  width: 320px;
-
-  height: 320px;
-
-  top: -130px;
-
-  right: -90px;
-}
-
+.heroDecoration,
+.heroDecorationOne,
 .heroDecorationTwo {
-  width: 240px;
-
-  height: 240px;
-
-  bottom: -100px;
-
-  left: -80px;
+  display: none !important;
 }
 
 /* =========================================================
@@ -763,11 +739,13 @@
   }
 
   .resultsHero {
-    padding: 55px 25px;
+    padding: 24px 18px;
+    border-radius: 0;
+    margin-bottom: 16px;
   }
 
   .resultsHero h1 {
-    font-size: 36px;
+    font-size: 26px;
   }
 
   .academicChartContainer {
@@ -787,21 +765,23 @@
   }
 
   .resultsHero {
-    min-height: 300px;
+    min-height: auto;
 
-    padding: 45px 20px;
+    padding: 20px 16px;
 
-    border-radius: 17px;
+    border-radius: 0;
+
+    margin-bottom: 14px;
   }
 
   .resultsHero h1 {
-    font-size: 29px;
+    font-size: 22px;
   }
 
   .resultsHero p {
-    font-size: 14px;
+    font-size: 13px;
 
-    line-height: 1.7;
+    line-height: 1.5;
   }
 
   .filterSection {
@@ -871,17 +851,19 @@
   }
 
   .resultsHero {
-    min-height: 270px;
+    min-height: auto;
 
-    padding: 38px 15px;
+    padding: 16px 12px;
+
+    border-radius: 0;
   }
 
   .resultsHero h1 {
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .resultsHero p {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .searchBox {

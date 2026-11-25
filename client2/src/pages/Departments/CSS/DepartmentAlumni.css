@@ -34,79 +34,62 @@
 
   overflow: hidden;
 
-  padding: 52px 0 55px;
+  padding: 28px 20px;
 
-  background: linear-gradient(120deg, #153c5e 0%, #1b4568 55%, #2a5f8a 100%);
+  background: #002147;
 
   color: #ffffff;
+
+  text-align: center;
+
+  margin-bottom: 20px;
 }
 
 .department-alumni-hero-overlay {
-  position: absolute;
-
-  width: 420px;
-  height: 420px;
-
-  right: -170px;
-  top: -260px;
-
-  border-radius: 50%;
-
-  border: 70px solid rgba(255, 255, 255, 0.04);
+  display: none !important;
 }
 
 .department-alumni-hero-content {
   position: relative;
   z-index: 2;
 
-  max-width: 780px;
+  max-width: 800px;
+
+  margin: 0 auto;
+
+  text-align: center;
 }
 
 .department-alumni-eyebrow {
-  display: inline-block;
-
-  margin-bottom: 10px;
-
-  color: #f4b400;
-
-  font-size: 12px;
-
-  font-weight: 700;
-
-  letter-spacing: 2px;
+  display: none !important;
 }
 
 .department-alumni-hero h1 {
-  margin: 0 0 12px;
+  margin: 0 0 8px;
 
-  font-size: 42px;
+  font-size: 30px;
 
-  line-height: 1.15;
+  line-height: 1.2;
 
-  font-weight: 750;
+  font-weight: 700;
+
+  color: #ffffff;
 }
 
 .department-alumni-hero p {
-  max-width: 720px;
+  max-width: 800px;
 
-  margin: 0;
+  margin: 0 auto;
 
-  color: rgba(255, 255, 255, 0.82);
+  color: #ffffff !important;
 
-  font-size: 14px;
+  font-size: 15px;
 
-  line-height: 1.8;
+  line-height: 1.5;
 }
 
 .department-alumni-hero-line {
-  width: 55px;
-  height: 3px;
-
-  margin-top: 22px;
-
-  border-radius: 5px;
-
-  background: #f4b400;
+  display: none !important;
 }
 
 /* =========================================================
@@ -114,7 +97,7 @@
    ========================================================= */
 
 .department-alumni-intro {
-  padding: 35px 0;
+  padding: 20px 0;
 
   background: #ffffff;
 }
@@ -723,7 +706,7 @@
   margin: 0 auto;
 }
 
-.department-alumni-cta-content > span {
+.department-alumni-cta-content>span {
   display: block;
 
   margin-bottom: 10px;
@@ -785,17 +768,17 @@
   /* HERO */
 
   .department-alumni-hero {
-    padding: 40px 0 45px;
+    padding: 18px 0;
   }
 
   .department-alumni-hero h1 {
-    font-size: 32px;
+    font-size: 24px;
   }
 
   /* INTRO */
 
   .department-alumni-intro {
-    padding: 28px 0;
+    padding: 18px 0;
   }
 
   .department-alumni-intro .department-alumni-container {

@@ -72,8 +72,8 @@ const DepartmentAlumni = () => {
 
         setError(
           err?.response?.data?.message ||
-            err?.message ||
-            "Unable to load department alumni.",
+          err?.message ||
+          "Unable to load department alumni.",
         );
       } finally {
         setLoading(false);
@@ -130,22 +130,14 @@ const DepartmentAlumni = () => {
       ===================================================== */}
 
       <section className="department-alumni-hero">
-        <div className="department-alumni-hero-overlay" />
-
         <div className="department-alumni-container">
           <div className="department-alumni-hero-content">
-            <span className="department-alumni-eyebrow">
-              {department?.shortName || department?.code || "MCA"} DEPARTMENT
-            </span>
-
             <h1>Our Alumni</h1>
 
             <p>
               Celebrating the achievements and success of our alumni who
               continue to make a difference in the industry and society.
             </p>
-
-            <div className="department-alumni-hero-line" />
           </div>
         </div>
       </section>

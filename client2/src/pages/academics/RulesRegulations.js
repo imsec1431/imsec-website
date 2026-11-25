@@ -94,14 +94,14 @@ const RulesRegulations = () => {
               </Col>
 
               <Col lg={6}>
-                <h6 className="section-tag">
+                {/* <h6 className="section-tag">
                   STUDENT HANDBOOK
-                </h6>
+                </h6> */}
 
-                <h2 className="section-title">
-                  Institute
-                  <span> Rules & Regulations</span>
-                </h2>
+                <h4 className="section-title">
+                  Institute Rules & Regulations
+                  <span> </span>
+                </h4>
 
                 <p>
                   The Rules & Regulations are designed to maintain discipline,
@@ -158,162 +158,162 @@ const RulesRegulations = () => {
           <Container fluid className="px-0">
             <div className="text-center mb-4">
               <h6 className="section-tag">
-                STUDENT GUIDELINES
+
+              </h6>
+
+              <h3 className="section-title">
+                STUDENT GUIDELINES Rules & Regulations<span> </span>
+              </h3>
+            </div>
+
+            <Accordion flush>
+              {filteredRules.map((rule, index) => (
+                <Accordion.Item
+                  eventKey={index.toString()}
+                  key={rule._id}
+                  className="rule-item"
+                >
+                  <Accordion.Header>
+                    <div className="rule-header">
+                      <FaBook className="me-3" />
+
+                      <strong>{rule.title}</strong>
+
+                      {rule.important && (
+                        <span className="important-badge">
+                          <FaExclamationCircle />
+                          Important
+                        </span>
+                      )}
+                    </div>
+                  </Accordion.Header>
+
+                  <Accordion.Body>
+                    <span className="rule-category">{rule.category}</span>
+
+                    <p className="mt-3">{rule.description}</p>
+
+                    <a
+                      href={rule.pdfLink}
+                      className="btn btn-warning rounded-pill mt-3"
+                    >
+                      <FaDownload className="me-2" />
+                      Download PDF
+                    </a>
+                  </Accordion.Body>
+                </Accordion.Item>
+              ))}
+            </Accordion>
+          </Container>
+        </section>
+
+        {/* ================= Important Guidelines ================= */}
+
+        <section className="guidelines-section pb-4">
+          <Container fluid className="px-0">
+            <div className="text-center mb-4">
+              <h6 className="section-tag">
+
               </h6>
 
               <h2 className="section-title">
-                Rules &<span> Regulations</span>
+                Important General Guidelines
+                <span> </span>
               </h2>
             </div>
 
-          <Accordion flush>
-            {filteredRules.map((rule, index) => (
-              <Accordion.Item
-                eventKey={index.toString()}
-                key={rule._id}
-                className="rule-item"
-              >
-                <Accordion.Header>
-                  <div className="rule-header">
-                    <FaBook className="me-3" />
+            <Row className="g-4">
+              <Col lg={4} md={6}>
+                <div className="guide-card">
+                  <FaBook className="guide-icon" />
 
-                    <strong>{rule.title}</strong>
+                  <h4>Academic Discipline</h4>
 
-                    {rule.important && (
-                      <span className="important-badge">
-                        <FaExclamationCircle />
-                        Important
-                      </span>
-                    )}
-                  </div>
-                </Accordion.Header>
+                  <p>
+                    Attend classes regularly and follow the academic schedule
+                    prescribed by the institute.
+                  </p>
+                </div>
+              </Col>
 
-                <Accordion.Body>
-                  <span className="rule-category">{rule.category}</span>
+              <Col lg={4} md={6}>
+                <div className="guide-card">
+                  <FaExclamationCircle className="guide-icon" />
 
-                  <p className="mt-3">{rule.description}</p>
+                  <h4>Code of Conduct</h4>
 
-                  <a
-                    href={rule.pdfLink}
-                    className="btn btn-warning rounded-pill mt-3"
-                  >
-                    <FaDownload className="me-2" />
-                    Download PDF
-                  </a>
-                </Accordion.Body>
-              </Accordion.Item>
-            ))}
-          </Accordion>
-        </Container>
-      </section>
+                  <p>
+                    Maintain discipline, respect faculty, staff and fellow
+                    students at all times within the campus.
+                  </p>
+                </div>
+              </Col>
 
-      {/* ================= Important Guidelines ================= */}
+              <Col lg={4} md={6}>
+                <div className="guide-card">
+                  <FaDownload className="guide-icon" />
 
-      <section className="guidelines-section pb-4">
-        <Container fluid className="px-0">
-          <div className="text-center mb-4">
-            <h6 className="section-tag">
-              IMPORTANT
-            </h6>
+                  <h4>Important Documents</h4>
 
-            <h2 className="section-title">
-              General
-              <span> Guidelines</span>
-            </h2>
-          </div>
+                  <p>
+                    Keep your identity card, fee receipts and academic documents
+                    safely for future reference.
+                  </p>
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        </section>
 
-          <Row className="g-4">
-            <Col lg={4} md={6}>
-              <div className="guide-card">
-                <FaBook className="guide-icon" />
+        {/* ================= FAQ ================= */}
 
-                <h4>Academic Discipline</h4>
-
-                <p>
-                  Attend classes regularly and follow the academic schedule
-                  prescribed by the institute.
-                </p>
-              </div>
-            </Col>
-
-            <Col lg={4} md={6}>
-              <div className="guide-card">
-                <FaExclamationCircle className="guide-icon" />
-
-                <h4>Code of Conduct</h4>
-
-                <p>
-                  Maintain discipline, respect faculty, staff and fellow
-                  students at all times within the campus.
-                </p>
-              </div>
-            </Col>
-
-            <Col lg={4} md={6}>
-              <div className="guide-card">
-                <FaDownload className="guide-icon" />
-
-                <h4>Important Documents</h4>
-
-                <p>
-                  Keep your identity card, fee receipts and academic documents
-                  safely for future reference.
-                </p>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
-      {/* ================= FAQ ================= */}
-
-      <section className="faq-section pb-4">
-        <Container fluid className="px-0">
-          <div className="faq-card">
-            <h5>What is the minimum attendance required?</h5>
-
-            <p>
-              Students must maintain at least 75% attendance as per institute
-              and university regulations.
-            </p>
-
-            <hr />
-
-            <h5>Where can I download the Rule Book?</h5>
-
-            <p>
-              The latest Rule Book can be downloaded from the Download section
-              available on this page.
-            </p>
-
-            <hr />
-
-            <h5>What happens if institute rules are violated?</h5>
-
-            <p>
-              Any violation of institute rules may result in disciplinary action
-              according to the applicable regulations.
-            </p>
-          </div>
-        </Container>
-      </section>
-
-      {/* ================= CTA ================= */}
-
-      <section className="rules-cta">
-        <Container fluid className="px-0">
-          <Row className="align-items-center">
-            <Col lg={12}>
-              <h2>Need More Information?</h2>
+        <section className="faq-section pb-4">
+          <Container fluid className="px-0">
+            <div className="faq-card">
+              <h5>What is the minimum attendance required?</h5>
 
               <p>
-                For clarification regarding institute rules and regulations,
-                please contact the Academic Office.
+                Students must maintain at least 75% attendance as per institute
+                and university regulations.
               </p>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+
+              <hr />
+
+              <h5>Where can I download the Rule Book?</h5>
+
+              <p>
+                The latest Rule Book can be downloaded from the Download section
+                available on this page.
+              </p>
+
+              <hr />
+
+              <h5>What happens if institute rules are violated?</h5>
+
+              <p>
+                Any violation of institute rules may result in disciplinary action
+                according to the applicable regulations.
+              </p>
+            </div>
+          </Container>
+        </section>
+
+        {/* ================= CTA ================= */}
+
+        <section className="rules-cta">
+          <Container fluid className="px-0">
+            <Row className="align-items-center">
+              <Col lg={12}>
+                <h2>Need More Information?</h2>
+
+                <p>
+                  For clarification regarding institute rules and regulations,
+                  please contact the Academic Office.
+                </p>
+              </Col>
+            </Row>
+          </Container>
+        </section>
       </div>
     </div>
   );

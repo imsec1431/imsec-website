@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import {
   FaFlask,
   FaBullseye,
@@ -9,7 +9,6 @@ import {
   FaBalanceScale,
   FaLightbulb,
   FaUsers,
-  FaArrowRight,
   FaFilePdf,
   FaExternalLinkAlt,
 } from "react-icons/fa";
@@ -17,7 +16,7 @@ import { getResearchPolicies } from "../../services/researchPolicyService";
 import "./ResearchPolicy.css";
 
 /* ==========================================================
-                    Static Data
+   STATIC DATA
 ========================================================== */
 
 const objectives = [
@@ -37,17 +36,17 @@ const objectives = [
   },
   {
     id: 3,
-    title: "Innovation",
+    title: "Innovation & Startups",
     icon: <FaLightbulb />,
     description:
-      "Support innovative ideas, patents, startups and technology development.",
+      "Support innovative ideas, patents, startups and product technology development.",
   },
   {
     id: 4,
     title: "Industry Collaboration",
     icon: <FaUniversity />,
     description:
-      "Strengthen partnerships with industries and research organizations.",
+      "Strengthen partnerships with leading industries and research organizations.",
   },
 ];
 
@@ -57,28 +56,28 @@ const highlights = [
     title: "Faculty Research Support",
     icon: <FaBook />,
     description:
-      "Support publication, consultancy, funded research and innovation.",
+      "Support publication, consultancy, funded research and technological innovation.",
   },
   {
     id: 2,
     title: "Student Research",
     icon: <FaUsers />,
     description:
-      "Promote UG and PG student research through projects and mentorship.",
+      "Promote UG and PG student research through capstone projects and faculty mentorship.",
   },
   {
     id: 3,
     title: "Seed Funding",
     icon: <FaBullseye />,
     description:
-      "Provide institutional support for innovative research proposals.",
+      "Provide institutional seed grant support for promising, innovative research proposals.",
   },
   {
     id: 4,
     title: "Sponsored Projects",
     icon: <FaUniversity />,
     description:
-      "Encourage externally funded projects from government and industries.",
+      "Encourage externally funded research projects from government agencies and industry.",
   },
 ];
 
@@ -91,10 +90,29 @@ const ethics = [
   "Research Transparency",
 ];
 
+const iprAreas = [
+  "Patent Filing",
+  "Copyright Protection",
+  "Trademark Registration",
+  "Technology Transfer",
+  "Commercialization",
+  "Innovation Protection",
+];
+
+const roles = [
+  "Director",
+  "Dean R&D",
+  "Research Cell",
+  "Faculty Members",
+  "Research Scholars",
+  "Students",
+];
+
 const ResearchPolicy = () => {
   const [policies, setPolicies] = useState([]);
   const [loadingPolicies, setLoadingPolicies] = useState(true);
   const [policyError, setPolicyError] = useState("");
+
   useEffect(() => {
     const fetchPolicies = async () => {
       try {
@@ -102,18 +120,16 @@ const ResearchPolicy = () => {
         setPolicyError("");
 
         const response = await getResearchPolicies();
-
         const data = response.data?.data || [];
 
         // Show only Active policies
         const activePolicies = data.filter(
-          (policy) => policy.status === "Active",
+          (policy) => policy.status === "Active"
         );
 
         setPolicies(activePolicies);
       } catch (error) {
         console.error("Research Policy Fetch Error:", error);
-
         setPolicyError("Unable to load policy documents at present.");
       } finally {
         setLoadingPolicies(false);
@@ -122,360 +138,223 @@ const ResearchPolicy = () => {
 
     fetchPolicies();
   }, []);
+
   return (
-    <>
-      {/* ================= Hero ================= */}
+    <main className="research-policy-page">
+      {/* ================= Hero Banner ================= */}
+      <section className="research-policy-hero">
+        <div className="research-policy-hero-content">
+          <h1>Research Policy</h1>
+        </div>
+      </section>
 
-      <section className="policy-hero">
-        <Container>
-          <div className="hero-content">
-            <h1>Research Policy</h1>
-
-            <p style={{ color: "white" }}>
-              Home
-              <span>/</span>
-              Research
-              <span>/</span>
-              Research Policy
+      {/* ================= Content Area ================= */}
+      <section className="research-policy-content">
+        <div className="research-policy-container">
+          {/* Introduction Box */}
+          <div
+            className="research-policy-introduction"
+            style={{ textAlign: "justify" }}
+          >
+            <p style={{ textAlign: "justify" }}>
+              The Research Policy of IMS Engineering College aims to create a
+              vibrant research culture by encouraging innovation,
+              interdisciplinary collaboration, consultancy, publications,
+              patents and socially relevant research.
+            </p>
+            <p style={{ textAlign: "justify" }}>
+              The policy provides guidelines for faculty members, researchers
+              and students to undertake ethical, impactful and sustainable
+              research activities aligned with national priorities, statutory
+              standards and global academic benchmarks.
             </p>
           </div>
-        </Container>
-      </section>
 
-      {/* ================= About ================= */}
+          {/* Objectives */}
+          <section className="research-policy-section">
+            <h2>Research Policy Objectives</h2>
+            <Row className="g-3 mt-1">
+              {objectives.map((item) => (
+                <Col lg={3} sm={6} key={item.id}>
+                  <div className="policy-grid-card">
+                    <div className="policy-card-icon">{item.icon}</div>
+                    <h4>{item.title}</h4>
+                    <p>{item.description}</p>
+                  </div>
+                </Col>
+              ))}
+            </Row>
+          </section>
 
-      <section className="policy-about py-5">
-        <Container>
-          <Row className="align-items-center g-5">
-            <Col lg={12}>
-              <h6 className="section-tag" style={{ color: "var(--primary)" }}>
-                RESEARCH POLICY
-              </h6>
+          {/* Highlights */}
+          <section className="research-policy-section">
+            <h2>Key Features &amp; Highlights</h2>
+            <Row className="g-3 mt-1">
+              {highlights.map((item) => (
+                <Col lg={3} sm={6} key={item.id}>
+                  <div className="policy-grid-card">
+                    <div className="policy-card-icon">{item.icon}</div>
+                    <h4>{item.title}</h4>
+                    <p>{item.description}</p>
+                  </div>
+                </Col>
+              ))}
+            </Row>
+          </section>
 
-              <h2 className="section-title">
-                Building an
-                <span> Innovation Ecosystem</span>
-              </h2>
-
-              <p>
-                The Research Policy of IMS Engineering College aims to create a
-                vibrant research culture by encouraging innovation,
-                interdisciplinary collaboration, consultancy, publications,
-                patents and socially relevant research.
-              </p>
-
-              <p>
-                The policy provides guidelines for faculty, researchers and
-                students to undertake ethical, impactful and sustainable
-                research activities aligned with national and international
-                priorities.
-              </p>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
-      {/* ================= Objectives ================= */}
-
-      <section className="objective-section py-5">
-        <Container>
-          <div className="text-center mb-5">
-            <h6 className="section-tag" style={{ color: "var(--primary)" }}>
-              OBJECTIVES
-            </h6>
-
-            <h2 className="section-title">
-              Research Policy
-              <span> Objectives</span>
-            </h2>
-          </div>
-
-          <Row className="g-4">
-            {objectives.map((item) => (
-              <Col lg={3} md={6} key={item.id}>
-                <div className="objective-card">
-                  <div className="objective-icon">{item.icon}</div>
-
-                  <h4>{item.title}</h4>
-
-                  <p>{item.description}</p>
-                </div>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
-
-      {/* ================= Policy Highlights ================= */}
-
-      <section className="highlight-section py-5">
-        <Container>
-          <div className="text-center mb-5">
-            <h6 className="section-tag" style={{ color: "var(--primary)" }}>
-              POLICY HIGHLIGHTS
-            </h6>
-
-            <h2 className="section-title">
-              Key
-              <span> Features</span>
-            </h2>
-          </div>
-
-          <Row className="g-4">
-            {highlights.map((item) => (
-              <Col lg={3} md={6} key={item.id}>
-                <div className="highlight-card">
-                  <div className="highlight-icon">{item.icon}</div>
-
-                  <h4 style={{ color: "var(--primary)" }}>{item.title}</h4>
-
-                  <p style={{ color: "var(--primary)" }}>{item.description}</p>
-                </div>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
-
-      {/* ================= Research Ethics ================= */}
-
-      <section className="ethics-section py-5">
-        <Container>
-          <Row className="align-items-center g-5">
-            <Col lg={6}>
-              <div className="ethics-image">
+          {/* Ethical Research Practices */}
+          <section className="research-policy-section">
+            <h2>Ethical Research Practices</h2>
+            <Row className="align-items-center g-4 mt-1">
+              <Col lg={5}>
                 <img
                   src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=1200&q=80"
                   alt="Research Ethics"
-                  className="img-fluid"
+                  className="policy-ethics-image"
                 />
-              </div>
-            </Col>
-
-            <Col lg={6}>
-              <h6 className="section-tag" style={{ color: "black" }}>
-                RESEARCH ETHICS
-              </h6>
-
-              <h2 className="section-title">
-                Ethical
-                <span> Research Practices</span>
-              </h2>
-
-              <ul className="ethics-list">
-                {ethics.map((item, index) => (
-                  <li key={index}>
-                    <FaBalanceScale />
-
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
-      {/* ================= IPR ================= */}
-
-      <section className="ipr-section py-5">
-        <Container>
-          <div className="text-center mb-5">
-            <h6 className="section-tag" style={{ color: "black" }}>
-              IPR POLICY
-            </h6>
-
-            <h2 className="section-title">
-              Intellectual Property
-              <span> Rights</span>
-            </h2>
-          </div>
-
-          <Row className="g-4">
-            {[
-              "Patent Filing",
-
-              "Copyright",
-
-              "Trademark",
-
-              "Technology Transfer",
-
-              "Commercialization",
-
-              "Innovation Protection",
-            ].map((item, index) => (
-              <Col lg={4} md={6} key={index}>
-                <div className="ipr-card">
-                  <FaLightbulb className="ipr-icon" />
-
-                  <h5>{item}</h5>
+              </Col>
+              <Col lg={7}>
+                <p style={{ textAlign: "justify" }}>
+                  IMSEC strictly adheres to international principles of research
+                  integrity, ethical guidelines and intellectual honesty. Every
+                  research publication, grant proposal and thesis produced by
+                  scholars and faculty must comply with rigorous institutional
+                  standards.
+                </p>
+                <div className="policy-ethics-list">
+                  {ethics.map((item, index) => (
+                    <div className="policy-ethics-item" key={index}>
+                      <FaBalanceScale />
+                      <span>{item}</span>
+                    </div>
+                  ))}
                 </div>
               </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
+            </Row>
+          </section>
 
-      {/* ================= Roles ================= */}
-
-      <section className="roles-section py-5">
-        <Container>
-          <div className="text-center mb-5">
-            <h2 className="section-title">
-              Roles &<span> Responsibilities</span>
-            </h2>
-          </div>
-
-          <Row className="g-4">
-            {[
-              "Director",
-              "Dean R&D",
-              "Research Cell",
-              "Faculty Members",
-              "Research Scholars",
-              "Students",
-            ].map((item, index) => (
-              <Col lg={4} md={6} key={index}>
-                <div className="role-card">
-                  <FaUsers className="role-icon" />
-
-                  <h5>{item}</h5>
-                </div>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
-
-      {/* ================= Downloads ================= */}
-
-      <section className="download-section py-5">
-        <Container>
-          <div className="table-responsive">
-            <table className="table table-bordered download-table">
-              {/* ================= Downloads ================= */}
-
-              <section className="download-section py-5">
-                <Container>
-                  <div className="text-center mb-5">
-                    <h6 className="section-tag" style={{ color: "black" }}>
-                      DOWNLOADS
-                    </h6>
-
-                    <h2 className="section-title">
-                      Policy
-                      <span> Documents</span>
-                    </h2>
-
-                    <p className="mt-3">
-                      Access the official research policies, guidelines and
-                      institutional documents.
-                    </p>
+          {/* Intellectual Property Rights */}
+          <section className="research-policy-section">
+            <h2>Intellectual Property Rights (IPR)</h2>
+            <Row className="g-3 mt-1">
+              {iprAreas.map((item, index) => (
+                <Col lg={4} sm={6} key={index}>
+                  <div className="policy-grid-card text-center">
+                    <div className="policy-card-icon">
+                      <FaLightbulb />
+                    </div>
+                    <h5>{item}</h5>
                   </div>
+                </Col>
+              ))}
+            </Row>
+          </section>
 
-                  {/* ================= Loading ================= */}
-
-                  {loadingPolicies && (
-                    <div className="text-center py-5">
-                      <div
-                        className="spinner-border text-warning"
-                        role="status"
-                      />
-
-                      <p className="mt-3">Loading policy documents...</p>
+          {/* Roles & Responsibilities */}
+          <section className="research-policy-section">
+            <h2>Roles &amp; Responsibilities</h2>
+            <Row className="g-3 mt-1">
+              {roles.map((item, index) => (
+                <Col lg={4} sm={6} key={index}>
+                  <div className="policy-grid-card text-center">
+                    <div className="policy-card-icon">
+                      <FaUsers />
                     </div>
-                  )}
+                    <h5>{item}</h5>
+                  </div>
+                </Col>
+              ))}
+            </Row>
+          </section>
 
-                  {/* ================= Error ================= */}
+          {/* Downloads / Policy Documents */}
+          <section className="research-policy-section">
+            <h2>Policy Documents &amp; Downloads</h2>
+            <p style={{ textAlign: "justify" }}>
+              Access the official research policies, guidelines, code of conduct
+              and institutional framework documents.
+            </p>
 
-                  {!loadingPolicies && policyError && (
-                    <div className="alert alert-warning text-center">
-                      {policyError}
-                    </div>
-                  )}
+            {loadingPolicies && (
+              <div className="text-center py-4">
+                <div className="spinner-border text-primary" role="status" />
+                <p className="mt-2 text-muted">Loading policy documents...</p>
+              </div>
+            )}
 
-                  {/* ================= Policy Table ================= */}
+            {!loadingPolicies && policyError && (
+              <div className="alert alert-warning">{policyError}</div>
+            )}
 
-                  {!loadingPolicies && !policyError && policies.length > 0 && (
-                    <div className="table-responsive">
-                      <table className="table table-bordered download-table">
-                        <thead>
-                          <tr>
-                            <th>S.N.</th>
+            {!loadingPolicies && !policyError && policies.length > 0 && (
+              <div className="policy-table-container mt-3">
+                <table className="policy-table">
+                  <thead>
+                    <tr>
+                      <th className="text-center" style={{ width: "70px" }}>
+                        S.N.
+                      </th>
+                      <th>Document Title</th>
+                      <th className="text-center" style={{ width: "120px" }}>
+                        Format
+                      </th>
+                      <th className="text-center" style={{ width: "160px" }}>
+                        Action
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {policies.map((policy, index) => (
+                      <tr key={policy._id}>
+                        <td className="text-center">{index + 1}</td>
+                        <td>
+                          <div className="policy-doc-title">
+                            <FaFilePdf />
+                            <span>{policy.title}</span>
+                          </div>
+                        </td>
+                        <td className="text-center">
+                          <span className="policy-badge">PDF</span>
+                        </td>
+                        <td className="text-center">
+                          <a
+                            href={policy.pdfUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="policy-pdf-btn"
+                          >
+                            <FaFilePdf />
+                            <span>View PDF</span>
+                            <FaExternalLinkAlt style={{ fontSize: "11px" }} />
+                          </a>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
 
-                            <th>Document</th>
-
-                            <th>Format</th>
-
-                            <th>Action</th>
-                          </tr>
-                        </thead>
-
-                        <tbody>
-                          {policies.map((policy, index) => (
-                            <tr key={policy._id}>
-                              <td>{index + 1}</td>
-
-                              <td>
-                                <div className="public-policy-document">
-                                  <FaFilePdf />
-
-                                  <strong>{policy.title}</strong>
-                                </div>
-                              </td>
-
-                              <td>
-                                <span className="policy-format">PDF</span>
-                              </td>
-
-                              <td>
-                                <a
-                                  href={policy.pdfUrl}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="btn btn-sm btn-warning public-policy-btn"
-                                >
-                                  <FaFilePdf />
-                                  View PDF
-                                  <FaExternalLinkAlt />
-                                </a>
-                              </td>
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  )}
-
-                  {/* ================= Empty ================= */}
-
-                  {!loadingPolicies &&
-                    !policyError &&
-                    policies.length === 0 && (
-                      <div className="text-center py-5">
-                        <FaFilePdf
-                          style={{
-                            fontSize: "45px",
-                            color: "#94a3b8",
-                          }}
-                        />
-
-                        <h4 className="mt-3">No Policy Documents Available</h4>
-
-                        <p>
-                          Research policy documents will be published here when
-                          available.
-                        </p>
-                      </div>
-                    )}
-                </Container>
-              </section>
-            </table>
-          </div>
-        </Container>
+            {!loadingPolicies && !policyError && policies.length === 0 && (
+              <div className="text-center py-4">
+                <FaFilePdf
+                  style={{
+                    fontSize: "40px",
+                    color: "#94a3b8",
+                    marginBottom: "12px",
+                  }}
+                />
+                <h5 className="text-muted">No Policy Documents Available</h5>
+                <p className="text-muted small">
+                  Official research policy documents will be published here as
+                  they become available.
+                </p>
+              </div>
+            )}
+          </section>
+        </div>
       </section>
-    </>
+    </main>
   );
 };
 

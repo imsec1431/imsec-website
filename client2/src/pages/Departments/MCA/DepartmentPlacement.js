@@ -55,8 +55,8 @@ const DepartmentPlacement = () => {
 
         setError(
           err.response?.data?.message ||
-            err.message ||
-            "Failed to load placement information.",
+          err.message ||
+          "Failed to load placement information.",
         );
       } finally {
         setLoading(false);
@@ -101,8 +101,6 @@ const DepartmentPlacement = () => {
   const Hero = () => (
     <section className="placementHero">
       <div className="heroContent">
-        <span className="heroTag">DEPARTMENT OF MCA</span>
-
         <h1>Placement & Career Opportunities</h1>
 
         <p>
@@ -110,18 +108,6 @@ const DepartmentPlacement = () => {
           records through industry collaborations, career development programs,
           coding culture, internships and dedicated placement training.
         </p>
-      </div>
-
-      <div className="heroImage">
-        <div className="circle circle1"></div>
-
-        <div className="circle circle2"></div>
-
-        <div className="circle circle3"></div>
-
-        <div className="placementIcon">
-          <FaGraduationCap />
-        </div>
       </div>
     </section>
   );

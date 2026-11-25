@@ -89,22 +89,12 @@ const McaPanel = () => {
 
   return (
     <div className="mcaPanel">
-      {/* Department Title */}
-      <div className="csPanelTitle text-center py-3">
-        <h2 className="fw-bold text-dark mb-1">MCA Department</h2>
-
-        <div
-          className="mx-auto bg-warning rounded"
-          style={{
-            width: "55px",
-            height: "4px",
-          }}
-        />
-      </div>
-
-      {/* Horizontal Tab Bar */}
+      {/* Vertical Sidebar Tab Bar */}
       <div className="tabBarWrapper">
         <nav className="tabBar">
+          <div className="mcaPanelHeader">
+            <h2>MCA</h2>
+          </div>
           {TABS.map(({ key, label, icon: Icon }) => (
             <button
               type="button"

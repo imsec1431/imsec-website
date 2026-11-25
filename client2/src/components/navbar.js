@@ -187,7 +187,11 @@ const NavigationBar = () => {
     if (!element) return;
 
     const updateHeight = () => {
-      setNavHeight(element.offsetHeight);
+      const h = element.offsetHeight;
+      setNavHeight(h);
+      if (document.documentElement) {
+        document.documentElement.style.setProperty("--nav-height", `${h}px`);
+      }
     };
 
     updateHeight();

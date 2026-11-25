@@ -1,865 +1,486 @@
-/*=========================================================
-                    Google Font
-=========================================================*/
+/* =========================================
+   FACULTY DEVELOPMENT PROGRAMS PAGE
+   Styled in IMSEC Society Design Language
+========================================= */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
-* {
-  margin: 0;
-
-  padding: 0;
-
-  box-sizing: border-box;
-
-  font-family: "Poppins", sans-serif;
+.fdp-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  color: #1e293b;
+  font-family: "Poppins", "Segoe UI", sans-serif;
 }
 
-body {
-  overflow-x: hidden;
-
-  background: #fff;
-}
-
-/*=========================================================
-                    Common
-=========================================================*/
-
-.section-tag {
-  color: #fdb913;
-
-  font-size: 15px;
-
-  font-weight: 700;
-
-  letter-spacing: 2px;
-
-  text-transform: uppercase;
-
-  margin-bottom: 12px;
-}
-
-.section-title {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-
-  font-weight: 800;
-
-  color: #0a2e5c;
-
-  margin-bottom: 20px;
-}
-
-.section-title span {
-  color: #fdb913;
-}
-
-.section-title::after {
-  content: "";
-
-  display: block;
-
-  width: 90px;
-
-  height: 4px;
-
-  background: #fdb913;
-
-  border-radius: 50px;
-
-  margin-top: 15px;
-}
-
-.text-center .section-title::after {
-  margin: 15px auto 0;
-}
-
-/*=========================================================
-                    Hero
-=========================================================*/
+/* =========================================
+   HERO BANNER
+========================================= */
 
 .fdp-hero {
-  height: 430px;
-
-  background:
-    linear-gradient(rgba(10, 46, 92, 0.9), rgba(10, 46, 92, 0.9)),
-    url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1600&q=80");
-
-  background-size: cover;
-
-  background-position: center;
-
+  min-height: 150px;
   display: flex;
-
+  align-items: center;
   justify-content: center;
-
-  align-items: center;
-
+  padding: 32px 24px;
+  background: #002147;
+  border-bottom: 2px solid #fdb913;
+  color: #ffffff;
   text-align: center;
-
-  color: #fff;
 }
 
-.hero-content h1 {
-  font-size: clamp(3rem, 6vw, 4.8rem);
-
-  font-weight: 800;
-
-  margin-bottom: 10px;
-}
-
-.hero-content p {
-  font-size: 18px;
-}
-
-.hero-content span {
-  margin: 0 8px;
-
-  color: #fdb913;
-}
-
-/*=========================================================
-                    About
-=========================================================*/
-
-.fdp-about {
-  background: #fff;
-}
-
-.about-image {
+.fdp-hero-content {
   width: 100%;
-
-  border-radius: 20px;
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-
-  transition: 0.4s;
-}
-
-.about-image:hover {
-  transform: scale(1.03);
-}
-
-.fdp-about p {
-  font-size: 16px;
-
-  line-height: 1.9;
-
-  color: #666;
-
-  text-align: justify;
-}
-
-/*=========================================================
-                    Statistics
-=========================================================*/
-
-.fdp-stats {
-  background: #f7f9fc;
-}
-
-.stat-card {
-  background: #fff;
-
-  padding: 40px 20px;
-
+  max-width: 1050px;
   text-align: center;
-
-  border-radius: 20px;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  transition: 0.35s;
-
-  height: 100%;
 }
 
-.stat-card:hover {
-  transform: translateY(-10px);
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-}
-
-.stat-card h2 {
-  font-size: 42px;
-
-  font-weight: 800;
-
-  color: #0a2e5c;
-
-  margin-bottom: 10px;
-}
-
-.stat-card p {
-  font-size: 17px;
-
-  font-weight: 600;
-
-  color: #666;
-
+.fdp-hero-content h1 {
   margin: 0;
+  font-size: clamp(26px, 4vw, 38px);
+  line-height: 1.2;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.3px;
 }
 
-/*=========================================================
-                    Search
-=========================================================*/
+/* =========================================
+   CONTENT CONTAINER
+========================================= */
 
-.search-section {
-  background: #fff;
+.fdp-content {
+  padding: 28px 0 45px;
+  background: #f8fafc;
 }
 
-.search-box {
-  display: flex;
-
-  align-items: center;
-
-  padding: 16px 20px;
-
-  background: #fff;
-
-  border-radius: 50px;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+.fdp-container {
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
-.search-box svg {
-  font-size: 22px;
+/* =========================================
+   INTRODUCTION HIGHLIGHT BOX
+========================================= */
 
-  color: #fdb913;
-
-  margin-right: 15px;
+.fdp-introduction {
+  margin: 0 0 20px 0;
+  padding: 18px 24px;
+  border-left: 4px solid #fdb913;
+  border-top: 1px solid #e2e8f0;
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
-.search-box input {
-  border: none;
-
-  box-shadow: none !important;
-
+.fdp-introduction p {
+  margin: 0 0 10px 0;
+  color: #334155;
   font-size: 16px;
+  line-height: 1.7;
+  font-weight: 450;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
-.search-box input:focus {
-  border: none;
-}
-
-/*=========================================================
-                    FDP Table
-=========================================================*/
-
-.fdp-table-section {
-  background: #fff;
-}
-
-.fdp-table {
-  border-radius: 20px;
-
-  overflow: hidden;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
+.fdp-introduction p:last-child {
   margin-bottom: 0;
 }
 
-.fdp-table thead {
-  background: #0a2e5c;
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
 
-  color: #fff;
+.fdp-section {
+  margin: 0 0 20px 0;
+  padding: 22px 26px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  text-align: justify !important;
+  text-justify: inter-word;
+}
+
+.fdp-section:last-child {
+  margin-bottom: 0;
+}
+
+.fdp-section h2 {
+  margin: 0 0 12px 0;
+  padding: 0;
+  color: #002147;
+  font-size: 22px;
+  line-height: 1.25;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  text-align: left !important;
+}
+
+.fdp-section h2::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 3px;
+  margin: 8px 0 0;
+  background: #fdb913;
+  border-radius: 2px;
+}
+
+.fdp-section p {
+  margin: 0 0 12px 0;
+  padding: 0;
+  color: #475569;
+  font-size: 15px;
+  line-height: 1.75;
+  text-align: justify !important;
+  text-justify: inter-word;
+}
+
+.fdp-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================
+   STATISTICS CARDS
+========================================= */
+
+.fdp-stat-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 22px 18px;
+  text-align: center;
+  transition: all 0.25s ease;
+  height: 100%;
+}
+
+.fdp-stat-card:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 14px rgba(0, 33, 71, 0.08);
+  transform: translateY(-2px);
+}
+
+.fdp-stat-card h3 {
+  font-size: clamp(28px, 3.2vw, 36px);
+  font-weight: 800;
+  color: #002147;
+  margin: 0 0 6px 0;
+  line-height: 1.15;
+}
+
+.fdp-stat-card p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+  margin: 0;
+  text-align: center !important;
+}
+
+/* =========================================
+   TIMELINE CARDS
+========================================= */
+
+.fdp-timeline-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px 16px;
+  text-align: center;
+  transition: all 0.25s ease;
+  height: 100%;
+}
+
+.fdp-timeline-card:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 14px rgba(0, 33, 71, 0.08);
+  transform: translateY(-2px);
+}
+
+.fdp-timeline-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: rgba(0, 33, 71, 0.06);
+  color: #002147;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin: 0 auto 12px;
+  transition: all 0.25s ease;
+}
+
+.fdp-timeline-card:hover .fdp-timeline-icon {
+  background: #002147;
+  color: #fdb913;
+}
+
+.fdp-timeline-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #002147;
+  margin-bottom: 6px;
+}
+
+.fdp-timeline-card p {
+  font-size: 13.5px;
+  color: #64748b;
+  margin: 0;
+  text-align: center !important;
+}
+
+/* =========================================
+   DOMAINS & BENEFITS CARDS
+========================================= */
+
+.fdp-domain-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: all 0.25s ease;
+  height: 100%;
+}
+
+.fdp-domain-card:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 14px rgba(0, 33, 71, 0.08);
+  transform: translateY(-2px);
+}
+
+.fdp-domain-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background: rgba(0, 33, 71, 0.06);
+  color: #002147;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  flex-shrink: 0;
+}
+
+.fdp-domain-card:hover .fdp-domain-icon {
+  background: #002147;
+  color: #fdb913;
+}
+
+.fdp-domain-card h5 {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #002147;
+  margin: 0;
+}
+
+/* =========================================
+   SEARCH BAR
+========================================= */
+
+.fdp-search-wrapper {
+  margin-bottom: 20px;
+}
+
+.fdp-search-box {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.fdp-search-box:focus-within {
+  border-color: #002147;
+  box-shadow: 0 0 0 3px rgba(0, 33, 71, 0.08);
+}
+
+.fdp-search-box svg {
+  color: #64748b;
+  font-size: 16px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.fdp-search-box input {
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0;
+  font-size: 14.5px;
+  color: #1e293b;
+  background: transparent;
+  width: 100%;
+}
+
+.fdp-search-box input:focus {
+  outline: none;
+}
+
+/* =========================================
+   FDP TABLE
+========================================= */
+
+.fdp-table-container {
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.fdp-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  font-size: 14px;
+}
+
+.fdp-table thead tr {
+  background: #002147;
+  color: #ffffff;
 }
 
 .fdp-table th {
-  padding: 18px;
-
-  font-size: 15px;
-
-  font-weight: 600;
-
-  text-align: center;
-
-  vertical-align: middle;
-
+  padding: 13px 14px;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-align: left;
+  letter-spacing: 0.2px;
+  border: none;
   white-space: nowrap;
 }
 
-.fdp-table td {
-  padding: 16px;
-
-  font-size: 14px;
-
+.fdp-table th.text-center,
+.fdp-table td.text-center {
   text-align: center;
+}
 
+.fdp-table td {
+  padding: 12px 14px;
+  color: #334155;
+  border-top: 1px solid #e2e8f0;
   vertical-align: middle;
 }
 
-.fdp-table tbody tr {
-  transition: 0.3s;
-}
-
 .fdp-table tbody tr:hover {
-  background: #fff8ea;
+  background: #f8fafc;
 }
 
-/*=========================================================
-                    Mode Badge
-=========================================================*/
+.fdp-title-cell {
+  font-weight: 600;
+  color: #002147;
+  min-width: 220px;
+  line-height: 1.45;
+}
 
-.mode-badge {
+.fdp-mode-badge {
   display: inline-block;
-
-  padding: 8px 18px;
-
-  border-radius: 30px;
-
-  background: #eaf4ff;
-
-  color: #0a2e5c;
-
-  font-size: 13px;
-
-  font-weight: 600;
-}
-
-/*=========================================================
-                    Download Link
-=========================================================*/
-
-.download-link {
-  text-decoration: none;
-
-  font-weight: 600;
-
-  color: #0a2e5c;
-
-  transition: 0.3s;
-}
-
-.download-link:hover {
-  color: #fdb913;
-}
-
-.download-link svg {
-  margin-left: 6px;
-
-  font-size: 13px;
-}
-/*=========================================================
-                Featured FDP
-=========================================================*/
-
-.featured-fdp-section {
-  background: #f7f9fc;
-}
-
-.featured-card {
-  background: #fff;
-
-  border-radius: 20px;
-
-  overflow: hidden;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  transition: 0.35s;
-
-  height: 100%;
-}
-
-.featured-card:hover {
-  transform: translateY(-10px);
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-}
-
-.featured-card img {
-  width: 100%;
-
-  height: 250px;
-
-  object-fit: cover;
-
-  transition: 0.4s;
-}
-
-.featured-card:hover img {
-  transform: scale(1.08);
-}
-
-.featured-content {
-  padding: 25px;
-}
-
-.featured-content h4 {
-  font-size: 22px;
-
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 12px;
   font-weight: 700;
-
-  color: #0a2e5c;
-
-  margin: 18px 0;
-
-  line-height: 1.5;
+  white-space: nowrap;
+  background: #e2e8f0;
+  color: #002147;
 }
 
-.featured-content p {
-  font-size: 15px;
-
-  color: #666;
-
-  line-height: 1.8;
-
-  margin-bottom: 10px;
-}
-
-.featured-content .btn {
-  margin-top: 15px;
-
-  padding: 10px 28px;
-
-  font-weight: 600;
-}
-
-/*=========================================================
-                Timeline
-=========================================================*/
-
-.fdp-timeline {
-  background: #fff;
-}
-
-.timeline-card {
-  background: #fff;
-
-  padding: 35px 20px;
-
-  text-align: center;
-
-  border-radius: 20px;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  transition: 0.35s;
-
-  height: 100%;
-}
-
-.timeline-card:hover {
-  transform: translateY(-10px);
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-}
-
-.timeline-icon {
-  font-size: 55px;
-
-  color: #fdb913;
-
-  margin-bottom: 20px;
-}
-
-.timeline-card h3 {
-  font-size: 34px;
-
-  font-weight: 700;
-
-  color: #0a2e5c;
-
-  margin-bottom: 10px;
-}
-
-.timeline-card p {
-  margin: 0;
-
-  font-weight: 600;
-
-  color: #666;
-}
-
-/*=========================================================
-                FDP Categories
-=========================================================*/
-
-.fdp-category {
-  background: #f7f9fc;
-}
-
-.category-card {
-  background: #fff;
-
-  padding: 35px 20px;
-
-  text-align: center;
-
-  border-radius: 20px;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  transition: 0.35s;
-
-  height: 100%;
-
-  border-top: 4px solid transparent;
-}
-
-.category-card:hover {
-  transform: translateY(-10px);
-
-  border-top: 4px solid #fdb913;
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-}
-
-.category-icon {
-  font-size: 55px;
-
-  color: #fdb913;
-
-  margin-bottom: 18px;
-}
-
-.category-card h5 {
-  font-size: 18px;
-
-  font-weight: 700;
-
-  color: #0a2e5c;
-
-  margin: 0;
-
-  line-height: 1.5;
-}
-
-/*=========================================================
-                Benefits
-=========================================================*/
-
-.fdp-benefits {
-  background: #fff;
-}
-
-.benefit-card {
-  background: #fff;
-
-  padding: 35px 20px;
-
-  text-align: center;
-
-  border-radius: 20px;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  transition: 0.35s;
-
-  height: 100%;
-}
-
-.benefit-card:hover {
-  transform: translateY(-10px);
-
-  background: #0a2e5c;
-}
-
-.benefit-card:hover h5 {
-  color: #fff;
-}
-
-.benefit-card:hover .benefit-icon {
-  background: #fdb913;
-
-  color: #0a2e5c;
-}
-
-.benefit-icon {
-  width: 80px;
-
-  height: 80px;
-
-  margin: auto;
-
-  border-radius: 50%;
-
-  display: flex;
-
-  justify-content: center;
-
+.fdp-download-link {
+  display: inline-flex;
   align-items: center;
-
-  background: #0a2e5c;
-
-  color: #fff;
-
-  font-size: 32px;
-
-  transition: 0.35s;
-
-  margin-bottom: 20px;
-}
-
-.benefit-card h5 {
-  font-size: 20px;
-
-  font-weight: 700;
-
-  color: #0a2e5c;
-
-  transition: 0.35s;
-}
-
-/*=========================================================
-                Gallery
-=========================================================*/
-
-.fdp-gallery {
-  background: #f7f9fc;
-}
-
-.gallery-card {
-  overflow: hidden;
-
-  border-radius: 20px;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
-
-.gallery-card img {
-  width: 100%;
-
-  height: 260px;
-
-  object-fit: cover;
-
-  transition: 0.45s;
-}
-
-.gallery-card:hover img {
-  transform: scale(1.08);
-}
-
-/*=========================================================
-                FAQ
-=========================================================*/
-
-.fdp-faq {
-  background: #fff;
-}
-
-.accordion-item {
-  border: none;
-
-  border-radius: 15px !important;
-
-  overflow: hidden;
-
-  margin-bottom: 18px;
-
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-}
-
-.accordion-button {
+  gap: 5px;
+  padding: 5px 12px;
+  font-size: 12.5px;
   font-weight: 600;
-
-  color: #0a2e5c;
-
-  padding: 18px 22px;
-
-  background: #fff;
-
-  box-shadow: none !important;
-}
-
-.accordion-button:not(.collapsed) {
-  background: #0a2e5c;
-
-  color: #fff;
-}
-
-.accordion-body {
-  font-size: 15px;
-
-  line-height: 1.8;
-
-  color: #666;
-}
-
-/*=========================================================
-                CTA
-=========================================================*/
-
-.fdp-cta {
-  background: linear-gradient(135deg, #0a2e5c, #144a87);
-
-  padding: 90px 0;
-
-  color: #fff;
-}
-
-.fdp-cta h2 {
-  font-size: clamp(2rem, 5vw, 3rem);
-
-  font-weight: 800;
-
-  margin-bottom: 20px;
-}
-
-.fdp-cta p {
-  font-size: 17px;
-
-  line-height: 1.9;
-
-  color: #e5e5e5;
-}
-
-.fdp-cta .btn {
-  padding: 12px 30px;
-
-  font-weight: 600;
-
-  transition: 0.35s;
-}
-
-.fdp-cta .btn-warning {
   background: #fdb913;
-
-  border: none;
-
-  color: #0a2e5c;
+  color: #002147;
+  border-radius: 4px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.2s ease;
 }
 
-.fdp-cta .btn-warning:hover {
-  background: #fff;
-
-  color: #0a2e5c;
-
-  transform: translateY(-5px);
+.fdp-download-link:hover {
+  background: #002147;
+  color: #ffffff;
+  text-decoration: none;
 }
 
-.fdp-cta .btn-outline-light:hover {
-  background: #fff;
+/* =========================================
+   STATUS
+========================================= */
 
-  color: #0a2e5c;
-
-  transform: translateY(-5px);
+.fdp-status-page {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: #64748b;
+  font-size: 17px;
+  text-align: center;
+  background: #f8fafc;
 }
 
-/*=========================================================
-                Animation
-=========================================================*/
+/* =========================================
+   RESPONSIVE
+========================================= */
 
-.stat-card,
-.featured-card,
-.timeline-card,
-.category-card,
-.benefit-card,
-.gallery-card {
-  transition: all 0.35s ease;
-}
-
-/*=========================================================
-                Responsive
-=========================================================*/
-
-@media (max-width: 992px) {
-  .fdp-hero {
-    height: 340px;
-  }
-
-  .featured-card img {
-    height: 220px;
-  }
-
-  .fdp-cta {
-    text-align: center;
+@media (max-width: 900px) {
+  .fdp-container {
+    width: 92%;
+    max-width: 92%;
   }
 }
 
 @media (max-width: 768px) {
   .fdp-hero {
-    height: 280px;
+    min-height: 120px;
+    padding: 26px 18px 22px;
   }
 
-  .hero-content h1 {
-    font-size: 2.3rem;
+  .fdp-hero-content h1 {
+    font-size: 24px;
   }
 
-  .hero-content p {
+  .fdp-content {
+    padding: 20px 0 30px;
+  }
+
+  .fdp-introduction {
+    margin: 0 0 14px 0;
+    padding: 15px 16px;
+  }
+
+  .fdp-introduction p {
     font-size: 15px;
+    line-height: 1.65;
+    text-align: justify;
   }
 
-  .section-title {
-    font-size: 2rem;
+  .fdp-section {
+    margin: 0 0 14px 0;
+    padding: 16px 18px;
   }
 
-  .featured-content {
-    padding: 20px;
-  }
-
-  .featured-content h4 {
+  .fdp-section h2 {
     font-size: 20px;
   }
 
-  .timeline-card,
-  .category-card,
-  .benefit-card {
-    padding: 30px 20px;
-  }
-
-  .gallery-card img {
-    height: 220px;
-  }
-
-  .search-box {
-    padding: 12px 18px;
-
-    border-radius: 15px;
-  }
-
-  .fdp-table {
-    font-size: 13px;
-  }
-
-  .fdp-table th,
-  .fdp-table td {
-    padding: 10px;
-  }
-
-  .fdp-cta {
-    padding: 70px 20px;
-  }
-
-  .fdp-cta .btn {
-    width: 100%;
-
-    margin-top: 12px;
-  }
-}
-
-@media (max-width: 576px) {
-  .fdp-hero {
-    height: 230px;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content p {
-    font-size: 14px;
-  }
-
-  .about-image {
-    margin-bottom: 25px;
-  }
-
-  .stat-card h2 {
-    font-size: 34px;
-  }
-
-  .timeline-card h3 {
-    font-size: 28px;
-  }
-
-  .category-card h5,
-  .benefit-card h5 {
-    font-size: 18px;
-  }
-
-  .gallery-card img {
-    height: 190px;
+  .fdp-section p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    text-align: justify;
   }
 }

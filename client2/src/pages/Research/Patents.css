@@ -1,694 +1,452 @@
-/*=========================================================
-                    Google Font
-=========================================================*/
+/* =========================================
+   PATENTS PAGE
+   Styled in IMSEC Society Design Language
+========================================= */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+.patents-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  color: #1e293b;
+  font-family: "Poppins", "Segoe UI", sans-serif;
 }
 
-body {
-  overflow-x: hidden;
-  background: #fff;
-}
+/* =========================================
+   HERO BANNER
+========================================= */
 
-/*=========================================================
-                    Common
-=========================================================*/
-
-.section-tag {
-  color: #fdb913;
-
-  font-size: 15px;
-
-  font-weight: 700;
-
-  letter-spacing: 2px;
-
-  text-transform: uppercase;
-
-  margin-bottom: 12px;
-}
-
-.section-title {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-
-  font-weight: 800;
-
-  color: #0a2e5c;
-
-  margin-bottom: 20px;
-}
-
-.section-title span {
-  color: #fdb913;
-}
-
-.section-title::after {
-  content: "";
-
-  display: block;
-
-  width: 90px;
-
-  height: 4px;
-
-  background: #fdb913;
-
-  border-radius: 50px;
-
-  margin-top: 15px;
-}
-
-.text-center .section-title::after {
-  margin: 15px auto 0;
-}
-
-/*=========================================================
-                    Hero
-=========================================================*/
-
-.patent-hero {
-  height: 430px;
-
-  background:
-    linear-gradient(rgba(10, 46, 92, 0.88), rgba(10, 46, 92, 0.88)),
-    url("https://images.unsplash.com/photo-1581092335397-9583eb92d232?w=1600&q=80");
-
-  background-size: cover;
-
-  background-position: center;
-
+.patents-hero {
+  min-height: 150px;
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
+  padding: 32px 24px;
+  background: #002147;
+  border-bottom: 2px solid #fdb913;
+  color: #ffffff;
   text-align: center;
-
-  color: #fff;
 }
 
-.hero-content h1 {
-  font-size: clamp(3rem, 6vw, 4.8rem);
-
-  font-weight: 800;
-}
-
-.hero-content p {
-  margin-top: 15px;
-
-  font-size: 18px;
-}
-
-.hero-content span {
-  margin: 0 8px;
-
-  color: #fdb913;
-}
-
-/*=========================================================
-                    About
-=========================================================*/
-
-.patent-about {
-  background: #fff;
-}
-
-.about-image {
+.patents-hero-content {
   width: 100%;
-
-  border-radius: 25px;
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-
-  transition: 0.4s;
-}
-
-.about-image:hover {
-  transform: scale(1.03);
-}
-
-.patent-about p {
-  color: #666;
-
-  line-height: 1.9;
-
-  text-align: justify;
-}
-
-/*=========================================================
-                    Statistics
-=========================================================*/
-
-.stats-section {
-  background: #f7f9fc;
-}
-
-.stat-card {
-  background: #fff;
-
-  padding: 40px 25px;
-
-  border-radius: 20px;
-
+  max-width: 1050px;
   text-align: center;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  transition: 0.35s;
-
-  height: 100%;
 }
 
-.stat-card:hover {
-  transform: translateY(-10px);
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-}
-
-.stat-card h2 {
-  font-size: 42px;
-
-  font-weight: 800;
-
-  color: #0a2e5c;
-
-  margin-bottom: 10px;
-}
-
-.stat-card p {
-  font-size: 17px;
-
-  font-weight: 600;
-
-  color: #666;
-
+.patents-hero-content h1 {
   margin: 0;
+  font-size: clamp(26px, 4vw, 38px);
+  line-height: 1.2;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.3px;
 }
 
-/*=========================================================
-                    Search
-=========================================================*/
+/* =========================================
+   CONTENT CONTAINER
+========================================= */
 
-.search-section {
-  background: #fff;
+.patents-content {
+  padding: 28px 0 45px;
+  background: #f8fafc;
 }
 
-.search-box {
-  display: flex;
-
-  align-items: center;
-
-  background: #fff;
-
-  padding: 15px 20px;
-
-  border-radius: 50px;
-
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+.patents-container {
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
-.search-box svg {
-  font-size: 22px;
+/* =========================================
+   INTRODUCTION HIGHLIGHT BOX
+========================================= */
 
-  color: #fdb913;
-
-  margin-right: 15px;
+.patents-introduction {
+  margin: 0 0 20px 0;
+  padding: 18px 24px;
+  border-left: 4px solid #fdb913;
+  border-top: 1px solid #e2e8f0;
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
-.search-box input {
-  border: none;
-
-  box-shadow: none !important;
-
+.patents-introduction p {
+  margin: 0 0 10px 0;
+  color: #334155;
   font-size: 16px;
+  line-height: 1.7;
+  font-weight: 450;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
-.search-box input:focus {
-  border: none;
-}
-
-/*=========================================================
-                    Patent Table
-=========================================================*/
-
-.table-section {
-  background: #fff;
-}
-
-.patent-table {
-  border-radius: 20px;
-
-  overflow: hidden;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
+.patents-introduction p:last-child {
   margin-bottom: 0;
 }
 
-.patent-table thead {
-  background: #0a2e5c;
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
 
-  color: #fff;
+.patents-section {
+  margin: 0 0 20px 0;
+  padding: 22px 26px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  text-align: justify !important;
+  text-justify: inter-word;
+}
+
+.patents-section:last-child {
+  margin-bottom: 0;
+}
+
+.patents-section h2 {
+  margin: 0 0 12px 0;
+  padding: 0;
+  color: #002147;
+  font-size: 22px;
+  line-height: 1.25;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  text-align: left !important;
+}
+
+.patents-section h2::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 3px;
+  margin: 8px 0 0;
+  background: #fdb913;
+  border-radius: 2px;
+}
+
+.patents-section p {
+  margin: 0 0 12px 0;
+  padding: 0;
+  color: #475569;
+  font-size: 15px;
+  line-height: 1.75;
+  text-align: justify !important;
+  text-justify: inter-word;
+}
+
+.patents-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================
+   STATISTICS CARDS
+========================================= */
+
+.patent-stat-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 22px 18px;
+  text-align: center;
+  transition: all 0.25s ease;
+  height: 100%;
+}
+
+.patent-stat-card:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 14px rgba(0, 33, 71, 0.08);
+  transform: translateY(-2px);
+}
+
+.patent-stat-card h3 {
+  font-size: clamp(28px, 3.2vw, 36px);
+  font-weight: 800;
+  color: #002147;
+  margin: 0 0 6px 0;
+  line-height: 1.15;
+}
+
+.patent-stat-card p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+  margin: 0;
+  text-align: center !important;
+}
+
+/* =========================================
+   TIMELINE CARDS
+========================================= */
+
+.patent-timeline-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px 16px;
+  text-align: center;
+  transition: all 0.25s ease;
+  height: 100%;
+}
+
+.patent-timeline-card:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 14px rgba(0, 33, 71, 0.08);
+  transform: translateY(-2px);
+}
+
+.patent-timeline-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: rgba(0, 33, 71, 0.06);
+  color: #002147;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin: 0 auto 12px;
+  transition: all 0.25s ease;
+}
+
+.patent-timeline-card:hover .patent-timeline-icon {
+  background: #002147;
+  color: #fdb913;
+}
+
+.patent-timeline-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #002147;
+  margin-bottom: 6px;
+}
+
+.patent-timeline-card p {
+  font-size: 13.5px;
+  color: #64748b;
+  margin: 0;
+  text-align: center !important;
+}
+
+/* =========================================
+   SEARCH BAR
+========================================= */
+
+.patent-search-wrapper {
+  margin-bottom: 20px;
+}
+
+.patent-search-box {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.patent-search-box:focus-within {
+  border-color: #002147;
+  box-shadow: 0 0 0 3px rgba(0, 33, 71, 0.08);
+}
+
+.patent-search-box svg {
+  color: #64748b;
+  font-size: 16px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.patent-search-box input {
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0;
+  font-size: 14.5px;
+  color: #1e293b;
+  background: transparent;
+  width: 100%;
+}
+
+.patent-search-box input:focus {
+  outline: none;
+}
+
+/* =========================================
+   PATENTS TABLE
+========================================= */
+
+.patent-table-container {
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.patent-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  font-size: 14px;
+}
+
+.patent-table thead tr {
+  background: #002147;
+  color: #ffffff;
 }
 
 .patent-table th {
-  padding: 18px;
-
-  font-size: 15px;
-
-  font-weight: 600;
-
-  text-align: center;
-
-  vertical-align: middle;
-
+  padding: 13px 14px;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-align: left;
+  letter-spacing: 0.2px;
+  border: none;
   white-space: nowrap;
 }
 
-.patent-table td {
-  padding: 16px;
-
-  font-size: 14px;
-
-  vertical-align: middle;
-
+.patent-table th.text-center,
+.patent-table td.text-center {
   text-align: center;
 }
 
-.patent-table tbody tr {
-  transition: 0.3s;
+.patent-table td {
+  padding: 12px 14px;
+  color: #334155;
+  border-top: 1px solid #e2e8f0;
+  vertical-align: middle;
 }
 
 .patent-table tbody tr:hover {
-  background: #fff9ec;
+  background: #f8fafc;
 }
 
-/*=========================================================
-                    Status Badge
-=========================================================*/
-
-.status {
-  padding: 8px 18px;
-
-  border-radius: 50px;
-
-  font-size: 13px;
-
+.patent-title-cell {
   font-weight: 600;
+  color: #002147;
+  min-width: 220px;
+  line-height: 1.45;
+}
 
+.patent-status-badge {
   display: inline-block;
-}
-
-.status.filed {
-  background: #eaf4ff;
-
-  color: #0066cc;
-}
-
-.status.published {
-  background: #fff6e0;
-
-  color: #d48806;
-}
-
-.status.granted {
-  background: #e8f8ec;
-
-  color: #1e8e3e;
-}
-
-/*=========================================================
-                    Patent Link
-=========================================================*/
-
-.view-link {
-  text-decoration: none;
-
-  font-weight: 600;
-
-  color: #0a2e5c;
-
-  transition: 0.3s;
-}
-
-.view-link:hover {
-  color: #fdb913;
-}
-
-.view-link svg {
-  font-size: 13px;
-}
-/*=========================================================
-                    Featured Patents
-=========================================================*/
-
-.featured-section {
-  background: #f7f9fc;
-}
-
-.featured-card {
-  background: #fff;
-
-  padding: 25px;
-
-  border-radius: 20px;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  transition: 0.35s;
-
-  height: 100%;
-}
-
-.featured-card:hover {
-  transform: translateY(-10px);
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-}
-
-.featured-image {
-  width: 100%;
-
-  height: 260px;
-
-  object-fit: cover;
-
-  border-radius: 15px;
-
-  transition: 0.35s;
-}
-
-.featured-card:hover .featured-image {
-  transform: scale(1.04);
-}
-
-.featured-card h4 {
-  font-size: 24px;
-
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 12px;
   font-weight: 700;
-
-  color: #0a2e5c;
-
-  margin: 15px 0;
-
-  line-height: 1.4;
+  white-space: nowrap;
+  text-transform: capitalize;
 }
 
-.featured-card p {
-  font-size: 15px;
-
-  color: #666;
-
-  line-height: 1.8;
-
-  margin-bottom: 10px;
+.patent-status-badge.filed {
+  background: #e0f2fe;
+  color: #0369a1;
 }
 
-.featured-card .btn {
-  margin-top: 15px;
+.patent-status-badge.published {
+  background: #fef3c7;
+  color: #b45309;
+}
 
-  padding: 10px 24px;
+.patent-status-badge.granted {
+  background: #dcfce7;
+  color: #15803d;
+}
 
+.patent-view-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  font-size: 12.5px;
   font-weight: 600;
-}
-
-/*=========================================================
-                    Patent Timeline
-=========================================================*/
-
-.timeline-section {
-  background: #fff;
-}
-
-.timeline-card {
-  background: #fff;
-
-  padding: 40px 20px;
-
-  border-radius: 20px;
-
-  text-align: center;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  position: relative;
-
-  transition: 0.35s;
-
-  height: 100%;
-}
-
-.timeline-card:hover {
-  transform: translateY(-10px);
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-}
-
-.timeline-icon {
-  font-size: 55px;
-
-  color: #fdb913;
-
-  margin-bottom: 20px;
-}
-
-.timeline-card h3 {
-  font-size: 34px;
-
-  font-weight: 700;
-
-  color: #0a2e5c;
-
-  margin-bottom: 10px;
-}
-
-.timeline-card p {
-  font-size: 16px;
-
-  font-weight: 600;
-
-  color: #666;
-
-  margin: 0;
-}
-
-/*=========================================================
-                    Gallery
-=========================================================*/
-
-.gallery-section {
-  background: #f7f9fc;
-}
-
-.gallery-card {
-  overflow: hidden;
-
-  border-radius: 20px;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
-
-.gallery-card img {
-  width: 100%;
-
-  height: 260px;
-
-  object-fit: cover;
-
-  transition: 0.5s;
-}
-
-.gallery-card:hover img {
-  transform: scale(1.08);
-}
-
-/*=========================================================
-                    CTA
-=========================================================*/
-
-.patent-cta {
-  background: linear-gradient(135deg, #0a2e5c, #123f7a);
-
-  padding: 90px 0;
-
-  color: #fff;
-}
-
-.patent-cta h2 {
-  font-size: clamp(2rem, 5vw, 3rem);
-
-  font-weight: 800;
-
-  margin-bottom: 20px;
-}
-
-.patent-cta p {
-  font-size: 17px;
-
-  line-height: 1.9;
-
-  color: #e4e4e4;
-}
-
-.patent-cta .btn {
-  padding: 12px 28px;
-
-  font-weight: 600;
-
-  transition: 0.35s;
-}
-
-.patent-cta .btn-warning {
   background: #fdb913;
-
-  border: none;
-
-  color: #0a2e5c;
+  color: #002147;
+  border-radius: 4px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.2s ease;
 }
 
-.patent-cta .btn-warning:hover {
-  background: #fff;
-
-  transform: translateY(-5px);
+.patent-view-link:hover {
+  background: #002147;
+  color: #ffffff;
+  text-decoration: none;
 }
 
-.patent-cta .btn-outline-light:hover {
-  background: #fff;
+/* =========================================
+   STATUS
+========================================= */
 
-  color: #0a2e5c;
-
-  transform: translateY(-5px);
+.patents-status {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: #64748b;
+  font-size: 17px;
+  text-align: center;
+  background: #f8fafc;
 }
 
-/*=========================================================
-                    Animation
-=========================================================*/
+/* =========================================
+   RESPONSIVE
+========================================= */
 
-.stat-card,
-.featured-card,
-.timeline-card,
-.gallery-card {
-  transition: all 0.35s ease;
-}
-
-/*=========================================================
-                    Responsive
-=========================================================*/
-
-@media (max-width: 992px) {
-  .patent-hero {
-    height: 340px;
-  }
-
-  .featured-image {
-    height: 220px;
-
-    margin-bottom: 20px;
-  }
-
-  .patent-cta {
-    text-align: center;
+@media (max-width: 900px) {
+  .patents-container {
+    width: 92%;
+    max-width: 92%;
   }
 }
 
 @media (max-width: 768px) {
-  .patent-hero {
-    height: 270px;
+  .patents-hero {
+    min-height: 120px;
+    padding: 26px 18px 22px;
   }
 
-  .hero-content h1 {
-    font-size: 2.3rem;
+  .patents-hero-content h1 {
+    font-size: 24px;
   }
 
-  .hero-content p {
+  .patents-content {
+    padding: 20px 0 30px;
+  }
+
+  .patents-introduction {
+    margin: 0 0 14px 0;
+    padding: 15px 16px;
+  }
+
+  .patents-introduction p {
     font-size: 15px;
+    line-height: 1.65;
+    text-align: justify;
   }
 
-  .section-title {
-    font-size: 2rem;
+  .patents-section {
+    margin: 0 0 14px 0;
+    padding: 16px 18px;
   }
 
-  .stat-card {
-    padding: 30px 20px;
-  }
-
-  .featured-card {
-    padding: 20px;
-  }
-
-  .featured-card h4 {
+  .patents-section h2 {
     font-size: 20px;
   }
 
-  .timeline-card {
-    padding: 30px 20px;
-  }
-
-  .gallery-card img {
-    height: 220px;
-  }
-
-  .patent-table {
-    font-size: 13px;
-  }
-
-  .patent-table th,
-  .patent-table td {
-    padding: 10px;
-  }
-
-  .search-box {
-    padding: 12px 18px;
-  }
-
-  .patent-cta {
-    padding: 70px 20px;
-  }
-
-  .patent-cta .btn {
-    width: 100%;
-
-    margin-top: 12px;
-  }
-}
-
-@media (max-width: 576px) {
-  .patent-hero {
-    height: 230px;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content p {
-    font-size: 14px;
-  }
-
-  .about-image {
-    margin-bottom: 25px;
-  }
-
-  .stat-card h2 {
-    font-size: 34px;
-  }
-
-  .timeline-card h3 {
-    font-size: 28px;
-  }
-
-  .gallery-card img {
-    height: 200px;
-  }
-
-  .search-box {
-    border-radius: 15px;
+  .patents-section p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    text-align: justify;
   }
 }

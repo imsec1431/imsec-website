@@ -1,14 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Table,
-  Form,
-  Spinner,
-  Alert,
-  Pagination,
-} from "react-bootstrap";
+import { Row, Col, Spinner, Alert, Pagination } from "react-bootstrap";
 import {
   FaSearch,
   FaBookOpen,
@@ -125,281 +116,284 @@ const BooksBookChapters = () => {
     }
   };
 
-  return (
-    <>
-      {/*================ Hero =================*/}
-      <section className="books-hero">
-        <Container>
-          <div className="hero-content">
-            <h1>{content.heroTitle}</h1>
-            <p style={{ color: "white" }}>
-              Home <span>/</span> Research <span>/</span> {content.heroTitle}
-            </p>
+  if (loading) {
+    return (
+      <div className="books-chapters-page">
+        <div className="books-chapters-status">
+          <div className="text-center">
+            <Spinner
+              animation="border"
+              role="status"
+              style={{
+                width: "42px",
+                height: "42px",
+                color: "#002147",
+              }}
+            />
+            <p className="mt-3 text-muted">Loading publications...</p>
           </div>
-        </Container>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <main className="books-chapters-page">
+      {/* ================= Hero Banner ================= */}
+      <section className="books-chapters-hero">
+        <div className="books-chapters-hero-content">
+          <h1>{content.heroTitle || "Books & Book Chapters"}</h1>
+        </div>
       </section>
 
-      {/*================ About =================*/}
-      <section className="books-about py-5">
-        <Container>
-          <Row className="align-items-center g-5">
-            <Col lg={6}>
-              <img
-                src={content.aboutImage || defaultContent.aboutImage}
-                alt="Books"
-                className="img-fluid about-image"
-              />
-            </Col>
+      {/* ================= Content Area ================= */}
+      <section className="books-chapters-content">
+        <div className="books-chapters-container">
+          {error && <Alert variant="danger" className="mb-4">{error}</Alert>}
 
-            <Col lg={6}>
-              <h6 className="section-tag" style={{ color: "black" }}>
-                {content.sectionTag}
-              </h6>
-              <h2 className="section-title">
-                Books &<span> Book Chapters</span>
-              </h2>
-              <p>{content.aboutDescriptionOne}</p>
-              <p>{content.aboutDescriptionTwo}</p>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+          {/* Introduction Box */}
+          <div
+            className="books-chapters-introduction"
+            style={{ textAlign: "justify" }}
+          >
+            {content.aboutDescriptionOne && (
+              <p style={{ textAlign: "justify" }}>
+                {content.aboutDescriptionOne}
+              </p>
+            )}
+            {content.aboutDescriptionTwo && (
+              <p style={{ textAlign: "justify" }}>
+                {content.aboutDescriptionTwo}
+              </p>
+            )}
+          </div>
 
-      {/*================ Statistics =================*/}
-      {content.statistics && content.statistics.length > 0 && (
-        <section className="books-stats py-5">
-          <Container>
-            <Row className="g-4">
-              {content.statistics.map((item, index) => (
-                <Col lg={3} md={6} key={index}>
-                  <div className="stat-card">
-                    <h2>{item.number}</h2>
-                    <p>{item.title}</p>
+          {/* Statistics */}
+          {content.statistics && content.statistics.length > 0 && (
+            <section className="books-chapters-section">
+              <h2>Key Publication Statistics</h2>
+              <Row className="g-3 mt-1">
+                {content.statistics.map((item, index) => (
+                  <Col lg={3} sm={6} key={index}>
+                    <div className="book-stat-card">
+                      <h3>{item.number}</h3>
+                      <p>{item.title}</p>
+                    </div>
+                  </Col>
+                ))}
+              </Row>
+            </section>
+          )}
+
+          {/* Publication Timeline */}
+          {content.timeline && content.timeline.length > 0 && (
+            <section className="books-chapters-section">
+              <h2>Publication Timeline</h2>
+              <Row className="g-3 mt-1">
+                {content.timeline.map((item, index) => (
+                  <Col lg={3} sm={6} key={index}>
+                    <div className="book-timeline-card">
+                      <div className="book-timeline-icon">
+                        <FaBookOpen />
+                      </div>
+                      <h4>{item.year}</h4>
+                      <p>{item.count}</p>
+                    </div>
+                  </Col>
+                ))}
+              </Row>
+            </section>
+          )}
+
+          {/* Publication Categories */}
+          {content.categories && content.categories.length > 0 && (
+            <section className="books-chapters-section">
+              <h2>Books &amp; Publications Collection</h2>
+              <Row className="g-3 mt-1">
+                {content.categories.map((item, index) => (
+                  <Col lg={4} sm={6} key={index}>
+                    <div className="book-category-card">
+                      <div className="book-category-icon">
+                        <FaGlobe />
+                      </div>
+                      <h5>{item}</h5>
+                    </div>
+                  </Col>
+                ))}
+              </Row>
+            </section>
+          )}
+
+          {/* Table Section */}
+          <section
+            className="books-chapters-section"
+            id="books-table-view"
+          >
+            <h2>Books &amp; Chapters Directory</h2>
+            <p style={{ textAlign: "justify" }}>
+              Explore authored and edited books, textbooks, reference materials,
+              monographs, and specialized book chapters contributed by IMSEC
+              faculty across multiple academic disciplines.
+            </p>
+
+            {/* Search Bar */}
+            <div className="book-search-wrapper mt-3">
+              <Row>
+                <Col lg={6} md={8}>
+                  <div className="book-search-box">
+                    <FaSearch />
+                    <input
+                      type="text"
+                      placeholder="Search by Title, Author, Type or Publisher..."
+                      value={search}
+                      onChange={handleSearchChange}
+                    />
                   </div>
                 </Col>
-              ))}
-            </Row>
-          </Container>
-        </section>
-      )}
-
-      {/*================ Publication Timeline =================*/}
-      {content.timeline && content.timeline.length > 0 && (
-        <section className="books-timeline py-5">
-          <Container>
-            <div className="text-center mb-5">
-              <h6 className="section-tag" style={{ color: "black" }}>
-                YEAR WISE PUBLICATIONS
-              </h6>
-              <h2 className="section-title">
-                Publication <span> Timeline</span>
-              </h2>
+              </Row>
             </div>
 
-            <Row className="g-4">
-              {content.timeline.map((item, index) => (
-                <Col lg={3} md={6} key={index}>
-                  <div className="timeline-card">
-                    <FaBookOpen className="timeline-icon" />
-                    <h3>{item.year}</h3>
-                    <p>{item.count}</p>
-                  </div>
-                </Col>
-              ))}
-            </Row>
-          </Container>
-        </section>
-      )}
-
-      {/*================ Publication Categories =================*/}
-      {content.categories && content.categories.length > 0 && (
-        <section className="books-category py-5">
-          <Container>
-            <div className="text-center mb-5">
-              <h6 className="section-tag" style={{ color: "black" }}>
-                PUBLICATION CATEGORIES
-              </h6>
-              <h2 className="section-title">
-                Books <span> Collection</span>
-              </h2>
-            </div>
-
-            <Row className="g-4">
-              {content.categories.map((item, index) => (
-                <Col lg={4} md={6} key={index}>
-                  <div className="category-card">
-                    <FaGlobe className="category-icon" />
-                    <h4>{item}</h4>
-                  </div>
-                </Col>
-              ))}
-            </Row>
-          </Container>
-        </section>
-      )}
-      {/*================ Search =================*/}
-      <section className="search-section py-5" id="books-table-view">
-        <Container>
-          <Row className="justify-content-center">
-            <Col lg={8}>
-              <div className="search-box">
-                <FaSearch />
-                <Form.Control
-                  type="text"
-                  placeholder="Search by Title, Author, Type or Publisher..."
-                  value={search}
-                  onChange={handleSearchChange}
-                />
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
-      {/*================ Books Table =================*/}
-      <section className="books-table-section pb-5">
-        <Container>
-          {loading ? (
-            <div className="text-center py-5">
-              <Spinner animation="border" variant="primary" role="status" />
-              <p className="mt-2 text-muted">Loading publications...</p>
-            </div>
-          ) : error ? (
-            <Alert variant="danger" className="text-center">
-              {error}
-            </Alert>
-          ) : (
-            <>
-              <div className="table-responsive">
-                <Table bordered hover className="books-table">
-                  <thead>
-                    <tr>
-                      <th>S.No.</th>
-                      <th>Publication Title</th>
-                      <th>Author(s)</th>
-                      <th>Publication Type</th>
-                      <th>Publisher</th>
-                      <th>Publication Year</th>
-                      <th>ISBN</th>
-                      <th>DOI</th>
-                      <th>Access</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {currentBooks.length > 0 ? (
-                      currentBooks.map((item, index) => (
-                        <tr key={item._id || item.id || index}>
-                          <td>{indexOfFirstItem + index + 1}</td>
-                          <td>{item.title}</td>
-                          <td>{item.authors}</td>
-                          <td>
-                            <span className="publication-type">
-                              {item.type || "Book"}
-                            </span>
-                          </td>
-                          <td>{item.publisher}</td>
-                          <td>{item.publicationYear}</td>
-                          <td>{item.isbn || "—"}</td>
-                          <td>{item.doi || "—"}</td>
-                          <td>
-                            {item.bookLink && item.bookLink !== "#" ? (
-                              <a
-                                href={item.bookLink}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="view-book"
-                              >
-                                View Book
-                                <FaExternalLinkAlt className="ms-2" />
-                              </a>
-                            ) : (
-                              <span className="text-muted">N/A</span>
-                            )}
-                          </td>
-                        </tr>
-                      ))
-                    ) : (
-                      <tr>
-                        <td colSpan="9" className="text-center py-4">
-                          No publications found.
+            {/* Table */}
+            <div className="book-table-container mt-3">
+              <table className="book-table">
+                <thead>
+                  <tr>
+                    <th className="text-center" style={{ width: "60px" }}>
+                      S.No.
+                    </th>
+                    <th>Publication Title</th>
+                    <th>Author(s)</th>
+                    <th className="text-center" style={{ width: "130px" }}>
+                      Type
+                    </th>
+                    <th>Publisher</th>
+                    <th className="text-center" style={{ width: "90px" }}>
+                      Year
+                    </th>
+                    <th className="text-center" style={{ width: "130px" }}>
+                      ISBN
+                    </th>
+                    <th className="text-center" style={{ width: "120px" }}>
+                      DOI
+                    </th>
+                    <th className="text-center" style={{ width: "110px" }}>
+                      Access
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {currentBooks.length > 0 ? (
+                    currentBooks.map((item, index) => (
+                      <tr key={item._id || item.id || index}>
+                        <td className="text-center">
+                          {indexOfFirstItem + index + 1}
+                        </td>
+                        <td className="book-title-cell">{item.title}</td>
+                        <td>{item.authors}</td>
+                        <td className="text-center">
+                          <span className="book-type-badge">
+                            {item.type || "Book"}
+                          </span>
+                        </td>
+                        <td>{item.publisher}</td>
+                        <td className="text-center">{item.publicationYear}</td>
+                        <td className="text-center">{item.isbn || "—"}</td>
+                        <td className="text-center">{item.doi || "—"}</td>
+                        <td className="text-center">
+                          {item.bookLink && item.bookLink !== "#" ? (
+                            <a
+                              href={item.bookLink}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="book-view-link"
+                            >
+                              <span>View</span>
+                              <FaExternalLinkAlt style={{ fontSize: "10px" }} />
+                            </a>
+                          ) : (
+                            <span className="text-muted small">N/A</span>
+                          )}
                         </td>
                       </tr>
-                    )}
-                  </tbody>
-                </Table>
+                    ))
+                  ) : (
+                    <tr>
+                      <td colSpan="9" className="text-center py-4 text-muted">
+                        No publications found matching your search.
+                      </td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
+
+            {/* Pagination */}
+            {filteredBooks.length > itemsPerPage && (
+              <div className="d-flex justify-content-between align-items-center mt-4 flex-wrap gap-2 book-pagination-wrapper">
+                <span className="text-muted small">
+                  Showing {indexOfFirstItem + 1} to{" "}
+                  {Math.min(indexOfLastItem, filteredBooks.length)} of{" "}
+                  {filteredBooks.length} entries
+                </span>
+
+                <Pagination className="mb-0">
+                  <Pagination.First
+                    onClick={() => handlePageChange(1)}
+                    disabled={currentPage === 1}
+                  />
+                  <Pagination.Prev
+                    onClick={() => handlePageChange(currentPage - 1)}
+                    disabled={currentPage === 1}
+                  />
+
+                  {Array.from({ length: totalPages }, (_, i) => i + 1)
+                    .filter((page) => {
+                      return (
+                        page === 1 ||
+                        page === totalPages ||
+                        (page >= currentPage - 1 && page <= currentPage + 1)
+                      );
+                    })
+                    .map((page, idx, array) => {
+                      const previousPage = array[idx - 1];
+                      return (
+                        <React.Fragment key={page}>
+                          {previousPage && page - previousPage > 1 && (
+                            <Pagination.Ellipsis disabled />
+                          )}
+                          <Pagination.Item
+                            active={page === currentPage}
+                            onClick={() => handlePageChange(page)}
+                          >
+                            {page}
+                          </Pagination.Item>
+                        </React.Fragment>
+                      );
+                    })}
+
+                  <Pagination.Next
+                    onClick={() => handlePageChange(currentPage + 1)}
+                    disabled={currentPage === totalPages}
+                  />
+                  <Pagination.Last
+                    onClick={() => handlePageChange(totalPages)}
+                    disabled={currentPage === totalPages}
+                  />
+                </Pagination>
               </div>
+            )}
+          </section>
 
-              {/*================ Pagination (Only if records > 20) =================*/}
-              {filteredBooks.length > itemsPerPage && (
-                <div className="d-flex justify-content-between align-items-center mt-4 flex-wrap gap-2">
-                  <span className="text-muted small">
-                    Showing {indexOfFirstItem + 1} to{" "}
-                    {Math.min(indexOfLastItem, filteredBooks.length)} of{" "}
-                    {filteredBooks.length} entries
-                  </span>
-
-                  <Pagination className="mb-0">
-                    <Pagination.First
-                      onClick={() => handlePageChange(1)}
-                      disabled={currentPage === 1}
-                    />
-                    <Pagination.Prev
-                      onClick={() => handlePageChange(currentPage - 1)}
-                      disabled={currentPage === 1}
-                    />
-
-                    {Array.from({ length: totalPages }, (_, i) => i + 1)
-                      .filter((page) => {
-                        return (
-                          page === 1 ||
-                          page === totalPages ||
-                          (page >= currentPage - 1 && page <= currentPage + 1)
-                        );
-                      })
-                      .map((page, idx, array) => {
-                        const previousPage = array[idx - 1];
-                        return (
-                          <React.Fragment key={page}>
-                            {previousPage && page - previousPage > 1 && (
-                              <Pagination.Ellipsis disabled />
-                            )}
-                            <Pagination.Item
-                              active={page === currentPage}
-                              onClick={() => handlePageChange(page)}
-                            >
-                              {page}
-                            </Pagination.Item>
-                          </React.Fragment>
-                        );
-                      })}
-
-                    <Pagination.Next
-                      onClick={() => handlePageChange(currentPage + 1)}
-                      disabled={currentPage === totalPages}
-                    />
-                    <Pagination.Last
-                      onClick={() => handlePageChange(totalPages)}
-                      disabled={currentPage === totalPages}
-                    />
-                  </Pagination>
-                </div>
-              )}
-            </>
+          {/* CTA Banner */}
+          {content.ctaTitle && (
+            <div className="book-cta-banner">
+              <h3>{content.ctaTitle}</h3>
+              {content.ctaDescription && <p>{content.ctaDescription}</p>}
+            </div>
           )}
-        </Container>
+        </div>
       </section>
-      {/*================ CTA =================*/}
-      <section className="books-cta py-5">
-        <Container>
-          <Row className="align-items-center">
-            <Col lg={8}>
-              <h2 style={{ color: "white" }}>{content.ctaTitle}</h2>
-              <p style={{ color: "white" }}>{content.ctaDescription}</p>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-    </>
+    </main>
   );
 };
 

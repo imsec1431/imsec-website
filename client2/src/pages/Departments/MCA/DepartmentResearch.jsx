@@ -60,9 +60,8 @@ const Pagination = ({ currentPage, totalPages, onPageChange, totalItems }) => {
               <button
                 type="button"
                 key={page}
-                className={`department-research-page-number ${
-                  currentPage === page ? "active" : ""
-                }`}
+                className={`department-research-page-number ${currentPage === page ? "active" : ""
+                  }`}
                 onClick={() => onPageChange(page)}
               >
                 {page}
@@ -379,8 +378,8 @@ const DepartmentResearch = () => {
 
         setError(
           err?.response?.data?.message ||
-            err?.message ||
-            "Unable to load department research.",
+          err?.message ||
+          "Unable to load department research.",
         );
       } finally {
         setLoading(false);

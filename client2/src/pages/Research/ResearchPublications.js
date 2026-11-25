@@ -1,85 +1,63 @@
 import React, { useEffect, useMemo, useState } from "react";
-
-import { Container, Row, Col, Table, Form, Spinner } from "react-bootstrap";
-
+import { Row, Col, Spinner } from "react-bootstrap";
 import {
   FaSearch,
   FaBookOpen,
   FaGlobe,
   FaExternalLinkAlt,
 } from "react-icons/fa";
-
 import {
   getPublicResearchPublications,
   getPublicResearchPublicationContent,
 } from "../../services/researchPublicationService";
-
 import "./ResearchPublications.css";
 
 const defaultContent = {
   heroTitle: "Research Publications",
-
   sectionTag: "RESEARCH EXCELLENCE",
-
   sectionTitle: "Research Publications",
-
   aboutImage:
     "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&q=80",
-
   aboutDescriptionOne:
     "IMS Engineering College actively promotes quality research and encourages faculty members, research scholars and students to publish innovative research in reputed national and international journals.",
-
   aboutDescriptionTwo:
     "Our publications are indexed in Scopus, Web of Science, UGC CARE, Google Scholar and other recognized indexing databases, reflecting our commitment towards academic excellence and global research impact.",
-
   statistics: [],
-
   timeline: [],
-
   indexingDatabases: [],
-
   ctaTitle: "Publish with Impact. Inspire Through Research.",
-
   ctaDescription:
     "IMS Engineering College encourages faculty members, research scholars and students to publish quality research in internationally recognized journals and indexing databases.",
 };
 
 const ResearchPublications = () => {
   const [search, setSearch] = useState("");
-
   const [publications, setPublications] = useState([]);
-
   const [content, setContent] = useState(defaultContent);
-
   const [loading, setLoading] = useState(true);
-
   const [error, setError] = useState("");
 
   useEffect(() => {
     const loadResearchPublications = async () => {
       try {
         setLoading(true);
-
         setError("");
 
         const [journalData, contentData] = await Promise.all([
           getPublicResearchPublications(),
-
           getPublicResearchPublicationContent(),
         ]);
 
-        setPublications(journalData);
-
+        setPublications(journalData || []);
         setContent({
           ...defaultContent,
           ...contentData,
         });
       } catch (err) {
         console.error("Research Publications Error:", err);
-
         setError(
           err.response?.data?.message ||
-            "Unable to load research publications.",
+            "Unable to load research publications at present."
         );
       } finally {
         setLoading(false);
@@ -91,10 +69,7 @@ const ResearchPublications = () => {
 
   const filteredPublications = useMemo(() => {
     const searchText = search.trim().toLowerCase();
-
-    if (!searchText) {
-      return publications;
-    }
+    if (!searchText) return publications;
 
     return publications.filter((item) =>
       [
@@ -105,293 +80,231 @@ const ResearchPublications = () => {
         item.indexingDatabase,
       ]
         .filter(Boolean)
-        .some((value) => value.toLowerCase().includes(searchText)),
+        .some((value) => value.toLowerCase().includes(searchText))
     );
   }, [publications, search]);
 
-  const renderTitle = (title) => {
-    const words = title.trim().split(" ");
-
-    if (words.length <= 1) {
-      return title;
-    }
-
-    const lastWord = words.pop();
-
-    return (
-      <>
-        {words.join(" ")} <span>{lastWord}</span>
-      </>
-    );
-  };
-
   if (loading) {
     return (
-      <div
-        className="d-flex flex-column align-items-center justify-content-center"
-        style={{ minHeight: "400px" }}
-      >
-        <Spinner
-          animation="border"
-          role="status"
-          style={{
-            width: "40px",
-            height: "40px",
-            color: "#0a2e5c",
-          }}
-        />
-
-        <p className="mt-3">Loading research publications...</p>
+      <div className="research-publications-page">
+        <div className="research-publications-status">
+          <div className="text-center">
+            <Spinner
+              animation="border"
+              role="status"
+              style={{
+                width: "42px",
+                height: "42px",
+                color: "#002147",
+              }}
+            />
+            <p className="mt-3 text-muted">Loading research publications...</p>
+          </div>
+        </div>
       </div>
     );
   }
 
   return (
-    <>
-      {/* ================= HERO ================= */}
+    <main className="research-publications-page">
+      {/* ================= Hero Banner ================= */}
+      <section className="research-publications-hero">
+        <div className="research-publications-hero-content">
+          <h1>{content.heroTitle || "Research Publications"}</h1>
+        </div>
+      </section>
 
-      <section className="publication-hero">
-        <Container>
-          <div className="hero-content">
-            <h1>{content.heroTitle}</h1>
+      {/* ================= Content Area ================= */}
+      <section className="research-publications-content">
+        <div className="research-publications-container">
+          {error && <div className="alert alert-warning mb-4">{error}</div>}
 
-            <p style={{ color: "white" }}>
-              Home
-              <span>/</span>
-              Research
-              <span>/</span>
-              {content.heroTitle}
-            </p>
+          {/* Introduction Box */}
+          <div
+            className="research-publications-introduction"
+            style={{ textAlign: "justify" }}
+          >
+            {content.aboutDescriptionOne && (
+              <p style={{ textAlign: "justify" }}>
+                {content.aboutDescriptionOne}
+              </p>
+            )}
+            {content.aboutDescriptionTwo && (
+              <p style={{ textAlign: "justify" }}>
+                {content.aboutDescriptionTwo}
+              </p>
+            )}
           </div>
-        </Container>
-      </section>
 
-      {/* ================= ERROR ================= */}
+          {/* Statistics (if available) */}
+          {content.statistics?.length > 0 && (
+            <section className="research-publications-section">
+              <h2>Key Publication Metrics</h2>
+              <Row className="g-3 mt-1">
+                {content.statistics.map((item, index) => (
+                  <Col lg={3} sm={6} key={index}>
+                    <div className="pub-stat-card">
+                      <h3>{item.number}</h3>
+                      <p>{item.title}</p>
+                    </div>
+                  </Col>
+                ))}
+              </Row>
+            </section>
+          )}
 
-      {error && (
-        <Container className="mt-4">
-          <div className="alert alert-warning mb-0">{error}</div>
-        </Container>
-      )}
+          {/* Timeline (if available) */}
+          {content.timeline?.length > 0 && (
+            <section className="research-publications-section">
+              <h2>Publication Timeline</h2>
+              <Row className="g-3 mt-1">
+                {content.timeline.map((item, index) => (
+                  <Col lg={3} sm={6} key={index}>
+                    <div className="pub-timeline-card">
+                      <div className="pub-timeline-icon">
+                        <FaBookOpen />
+                      </div>
+                      <h4>{item.year}</h4>
+                      <p>{item.count} Publications</p>
+                    </div>
+                  </Col>
+                ))}
+              </Row>
+            </section>
+          )}
 
-      {/* ================= ABOUT ================= */}
+          {/* Indexing Databases (if available) */}
+          {content.indexingDatabases?.length > 0 && (
+            <section className="research-publications-section">
+              <h2>Research Visibility &amp; Indexing</h2>
+              <Row className="g-3 mt-1">
+                {content.indexingDatabases.map((database, index) => (
+                  <Col lg={4} sm={6} key={index}>
+                    <div className="pub-database-card">
+                      <div className="pub-database-icon">
+                        <FaGlobe />
+                      </div>
+                      <h5>{database}</h5>
+                    </div>
+                  </Col>
+                ))}
+              </Row>
+            </section>
+          )}
 
-      <section className="publication-about py-5">
-        <Container>
-          <Row className="align-items-center g-5">
-            <Col lg={6}>
-              <img
-                src={content.aboutImage || defaultContent.aboutImage}
-                alt={content.heroTitle}
-                className="img-fluid about-image"
-              />
-            </Col>
+          {/* Publications Table Section */}
+          <section className="research-publications-section">
+            <h2>Research Publications Directory</h2>
+            <p style={{ textAlign: "justify" }}>
+              Explore peer-reviewed publications, conference papers, and
+              scholarly journal articles authored by IMS Engineering College
+              faculty and research scholars.
+            </p>
 
-            <Col lg={6}>
-              <h6 className="section-tag" style={{ color: "black" }}>
-                {content.sectionTag}
-              </h6>
-
-              <h2 className="section-title">
-                {renderTitle(content.sectionTitle)}
-              </h2>
-
-              <p>{content.aboutDescriptionOne}</p>
-
-              <p>{content.aboutDescriptionTwo}</p>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
-      {/* ================= STATISTICS ================= */}
-
-      {content.statistics?.length > 0 && (
-        <section className="publication-stats py-5">
-          <Container>
-            <Row className="g-4">
-              {content.statistics.map((item, index) => (
-                <Col lg={3} md={6} key={index}>
-                  <div className="stat-card">
-                    <h2>{item.number}</h2>
-
-                    <p>{item.title}</p>
+            {/* Search Bar */}
+            <div className="pub-search-wrapper mt-3">
+              <Row>
+                <Col lg={6} md={8}>
+                  <div className="pub-search-box">
+                    <FaSearch />
+                    <input
+                      type="text"
+                      placeholder="Search by Title, Author, Department or Journal..."
+                      value={search}
+                      onChange={(e) => setSearch(e.target.value)}
+                    />
                   </div>
                 </Col>
-              ))}
-            </Row>
-          </Container>
-        </section>
-      )}
-      {/* ================= TIMELINE ================= */}
-
-      {content.timeline?.length > 0 && (
-        <section className="timeline-section py-5">
-          <Container>
-            <div className="text-center mb-5">
-              <h6 className="section-tag" style={{ color: "black" }}>
-                YEAR WISE PUBLICATIONS
-              </h6>
-
-              <h2 className="section-title">
-                Publication <span>Timeline</span>
-              </h2>
+              </Row>
             </div>
 
-            <Row className="g-4">
-              {content.timeline.map((item, index) => (
-                <Col lg={3} md={6} key={index}>
-                  <div className="timeline-card">
-                    <FaBookOpen className="timeline-icon" />
-
-                    <h3>{item.year}</h3>
-
-                    <p>{item.count}</p>
-                  </div>
-                </Col>
-              ))}
-            </Row>
-          </Container>
-        </section>
-      )}
-
-      {/* ================= INDEXING DATABASES ================= */}
-
-      {content.indexingDatabases?.length > 0 && (
-        <section className="database-section py-5">
-          <Container>
-            <div className="text-center mb-5">
-              <h6 className="section-tag" style={{ color: "black" }}>
-                INDEXING DATABASES
-              </h6>
-
-              <h2 className="section-title">
-                Research Visibility <span>Worldwide</span>
-              </h2>
-            </div>
-
-            <Row className="g-4">
-              {content.indexingDatabases.map((database, index) => (
-                <Col lg={4} md={6} key={index}>
-                  <div className="database-card">
-                    <FaGlobe className="database-icon" />
-
-                    <h4>{database}</h4>
-                  </div>
-                </Col>
-              ))}
-            </Row>
-          </Container>
-        </section>
-      )}
-      {/* ================= SEARCH ================= */}
-
-      <section className="search-section py-5">
-        <Container>
-          <Row className="justify-content-center">
-            <Col lg={8}>
-              <div className="search-box">
-                <FaSearch />
-
-                <Form.Control
-                  type="text"
-                  placeholder="Search by Title, Author or Journal..."
-                  value={search}
-                  onChange={(event) => setSearch(event.target.value)}
-                />
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-      {/* ================= PUBLICATION TABLE ================= */}
-
-      <section className="publication-table-section pb-5">
-        <Container>
-          <div className="table-responsive">
-            <Table bordered hover className="publication-table">
-              <thead>
-                <tr>
-                  <th>S.No.</th>
-                  <th>Research Paper Title</th>
-                  <th>Author(s)</th>
-                  <th>Department</th>
-                  <th>Journal</th>
-                  <th>Publication Year</th>
-                  <th>Indexing Database</th>
-                  <th>ISSN / E-ISSN</th>
-                  <th>Access</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                {filteredPublications.length > 0 ? (
-                  filteredPublications.map((item, index) => (
-                    <tr key={item._id}>
-                      <td>{index + 1}</td>
-
-                      <td>{item.researchPaperTitle}</td>
-
-                      <td>{item.authors}</td>
-
-                      <td>{item.department}</td>
-
-                      <td>{item.journal}</td>
-
-                      <td>{item.publicationYear}</td>
-
-                      <td>
-                        <span className="indexing-badge">
-                          {item.indexingDatabase}
-                        </span>
-                      </td>
-
-                      <td>{item.issn || "—"}</td>
-
-                      <td>
-                        {item.paperLink ? (
-                          <a
-                            href={item.paperLink}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="view-paper"
-                          >
-                            View Paper
-                            <FaExternalLinkAlt className="ms-2" />
-                          </a>
-                        ) : (
-                          "—"
-                        )}
+            {/* Table */}
+            <div className="pub-table-container mt-3">
+              <table className="pub-table">
+                <thead>
+                  <tr>
+                    <th className="text-center" style={{ width: "60px" }}>
+                      S.No.
+                    </th>
+                    <th>Research Paper Title</th>
+                    <th>Author(s)</th>
+                    <th>Department</th>
+                    <th>Journal</th>
+                    <th className="text-center" style={{ width: "110px" }}>
+                      Year
+                    </th>
+                    <th className="text-center" style={{ width: "130px" }}>
+                      Indexing
+                    </th>
+                    <th className="text-center" style={{ width: "120px" }}>
+                      ISSN
+                    </th>
+                    <th className="text-center" style={{ width: "120px" }}>
+                      Access
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {filteredPublications.length > 0 ? (
+                    filteredPublications.map((item, index) => (
+                      <tr key={item._id || index}>
+                        <td className="text-center">{index + 1}</td>
+                        <td className="pub-title-cell">
+                          {item.researchPaperTitle}
+                        </td>
+                        <td>{item.authors}</td>
+                        <td>{item.department}</td>
+                        <td>{item.journal}</td>
+                        <td className="text-center">{item.publicationYear}</td>
+                        <td className="text-center">
+                          {item.indexingDatabase ? (
+                            <span className="pub-badge">
+                              {item.indexingDatabase}
+                            </span>
+                          ) : (
+                            "—"
+                          )}
+                        </td>
+                        <td className="text-center">{item.issn || "—"}</td>
+                        <td className="text-center">
+                          {item.paperLink ? (
+                            <a
+                              href={item.paperLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="pub-view-link"
+                            >
+                              <span>View</span>
+                              <FaExternalLinkAlt style={{ fontSize: "10px" }} />
+                            </a>
+                          ) : (
+                            "—"
+                          )}
+                        </td>
+                      </tr>
+                    ))
+                  ) : (
+                    <tr>
+                      <td colSpan="9" className="text-center py-4 text-muted">
+                        No research publications found matching your search.
                       </td>
                     </tr>
-                  ))
-                ) : (
-                  <tr>
-                    <td colSpan="9" className="text-center py-4">
-                      No research publications found.
-                    </td>
-                  </tr>
-                )}
-              </tbody>
-            </Table>
-          </div>
-        </Container>
+                  )}
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          {/* CTA Banner */}
+          {content.ctaTitle && (
+            <div className="pub-cta-banner">
+              <h3>{content.ctaTitle}</h3>
+              {content.ctaDescription && <p>{content.ctaDescription}</p>}
+            </div>
+          )}
+        </div>
       </section>
-
-      {/* ================= CTA ================= */}
-
-      <section className="publication-cta">
-        <Container>
-          <Row className="align-items-center">
-            <Col lg={8}>
-              <h2 style={{ color: "white" }}>{content.ctaTitle}</h2>
-
-              <p style={{ color: "white" }}>{content.ctaDescription}</p>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-    </>
+    </main>
   );
 };
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Table, Form, Spinner } from "react-bootstrap";
+import { Row, Col, Spinner } from "react-bootstrap";
 import { FaSearch, FaExternalLinkAlt, FaAward } from "react-icons/fa";
 import {
   getPublicPatents,
@@ -48,19 +48,19 @@ const Patents = () => {
     (item) =>
       item.title?.toLowerCase().includes(search.toLowerCase()) ||
       item.inventors?.toLowerCase().includes(search.toLowerCase()) ||
-      item.applicationNo?.includes(search),
+      item.applicationNo?.includes(search)
   );
 
   const dynamicStats = [
     {
       id: 1,
       number: stats.filed ? `${stats.filed}+` : "150+",
-      title: "Patent Filed",
+      title: "Patents Filed",
     },
     {
       id: 2,
       number: stats.granted ? `${stats.granted}+` : "40+",
-      title: "Patent Granted",
+      title: "Patents Granted",
     },
     {
       id: 3,
@@ -74,171 +74,181 @@ const Patents = () => {
     },
   ];
 
+  if (loading) {
+    return (
+      <div className="patents-page">
+        <div className="patents-status">
+          <div className="text-center">
+            <Spinner
+              animation="border"
+              role="status"
+              style={{
+                width: "42px",
+                height: "42px",
+                color: "#002147",
+              }}
+            />
+            <p className="mt-3 text-muted">Loading Patents...</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <>
-      {/* Hero */}
-      <section className="patent-hero">
-        <Container>
-          <div className="hero-content">
-            <h1>Patents</h1>
-            <p style={{ color: "white" }}>
-              Home <span>/</span> Research <span>/</span> Patents
+    <main className="patents-page">
+      {/* ================= Hero Banner ================= */}
+      <section className="patents-hero">
+        <div className="patents-hero-content">
+          <h1>Patents &amp; Intellectual Property</h1>
+        </div>
+      </section>
+
+      {/* ================= Content Area ================= */}
+      <section className="patents-content">
+        <div className="patents-container">
+          {/* Introduction Box */}
+          <div
+            className="patents-introduction"
+            style={{ textAlign: "justify" }}
+          >
+            <p style={{ textAlign: "justify" }}>
+              {content?.description1 ||
+                "IMS Engineering College promotes innovation, creativity and intellectual property through quality research and patent filing. Faculty members and students are encouraged to transform innovative ideas into valuable intellectual assets."}
+            </p>
+            <p style={{ textAlign: "justify" }}>
+              {content?.description2 ||
+                "The institute actively supports patent drafting, filing, publication and commercialization through its dedicated Research & Development Cell, fostering entrepreneurial mindsets and technological breakthroughs."}
             </p>
           </div>
-        </Container>
-      </section>
 
-      {/* About */}
-      <section className="patent-about py-5">
-        <Container>
-          <Row className="align-items-center">
-            <Col lg={6}>
-              <img
-                src={
-                  content?.aboutImage ||
-                  "https://images.unsplash.com/photo-1581092335397-9583eb92d232?w=1200&q=80"
-                }
-                alt="Research"
-                className="img-fluid about-image"
-              />
-            </Col>
+          {/* Statistics */}
+          <section className="patents-section">
+            <h2>Intellectual Property Highlights</h2>
+            <Row className="g-3 mt-1">
+              {dynamicStats.map((item) => (
+                <Col lg={3} sm={6} key={item.id}>
+                  <div className="patent-stat-card">
+                    <h3>{item.number}</h3>
+                    <p>{item.title}</p>
+                  </div>
+                </Col>
+              ))}
+            </Row>
+          </section>
 
-            <Col lg={6}>
-              <h6 className="section-tag" style={{ color: "black" }}>
-                {content?.sectionTag || "RESEARCH & INNOVATION"}
-              </h6>
+          {/* Patent Timeline */}
+          <section className="patents-section">
+            <h2>Patent Filing Timeline</h2>
+            <Row className="g-3 mt-1">
+              {(content?.timeline && content.timeline.length > 0
+                ? content.timeline
+                : [
+                    { year: "2022", count: "15 Filed" },
+                    { year: "2023", count: "28 Filed" },
+                    { year: "2024", count: "42 Filed" },
+                    { year: "2025", count: "55 Filed" },
+                  ]
+              ).map((item, index) => (
+                <Col lg={3} sm={6} key={index}>
+                  <div className="patent-timeline-card">
+                    <div className="patent-timeline-icon">
+                      <FaAward />
+                    </div>
+                    <h4>{item.year}</h4>
+                    <p>{item.count}</p>
+                  </div>
+                </Col>
+              ))}
+            </Row>
+          </section>
 
-              <h2 className="section-title">
-                {content?.title || "Intellectual Property & Patents"}
-              </h2>
+          {/* Patent Directory Table */}
+          <section className="patents-section">
+            <h2>Patents Directory</h2>
+            <p style={{ textAlign: "justify" }}>
+              Explore the comprehensive registry of patents filed, published,
+              and granted by the Indian Patent Office and international patent
+              authorities to IMS Engineering College faculty and student
+              inventors.
+            </p>
 
-              <p>
-                {content?.description1 ||
-                  "IMS Engineering College promotes innovation, creativity and intellectual property through quality research and patent filing. Faculty members and students are encouraged to transform innovative ideas into valuable intellectual assets."}
-              </p>
-
-              <p>
-                {content?.description2 ||
-                  "The institute actively supports patent drafting, filing, publication and commercialization through its Research & Development Cell."}
-              </p>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
-      {/* Statistics */}
-      <section className="stats-section py-5">
-        <Container>
-          <Row className="g-4">
-            {dynamicStats.map((item) => (
-              <Col lg={3} md={6} key={item.id}>
-                <div className="stat-card">
-                  <h2>{item.number}</h2>
-                  <p>{item.title}</p>
-                </div>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
-      {/* Patent Timeline */}
-      <section className="timeline-section py-5">
-        <Container>
-          <div className="text-center mb-5">
-            <h6 className="section-tag" style={{ color: "black" }}>
-              PATENT TIMELINE
-            </h6>
-            <h2 className="section-title">
-              Year Wise <span>Progress</span>
-            </h2>
-          </div>
-
-          <Row className="g-4">
-            {(content?.timeline && content.timeline.length > 0
-              ? content.timeline
-              : [
-                  { year: "2022", count: "15 Filed" },
-                  { year: "2023", count: "28 Filed" },
-                  { year: "2024", count: "42 Filed" },
-                  { year: "2025", count: "55 Filed" },
-                ]
-            ).map((item, index) => (
-              <Col lg={3} md={6} key={index}>
-                <div className="timeline-card">
-                  <FaAward className="timeline-icon" />
-                  <h3>{item.year}</h3>
-                  <p>{item.count}</p>
-                </div>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
-      {/* Search */}
-      <section className="search-section py-5">
-        <Container>
-          <Row className="justify-content-center">
-            <Col lg={8}>
-              <div className="search-box">
-                <FaSearch />
-                <Form.Control
-                  type="text"
-                  placeholder="Search by Patent Title, Inventor or Application Number..."
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                />
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
-      {/* Patent Table */}
-      <section className="table-section pb-5">
-        <Container>
-          {loading ? (
-            <div className="text-center py-5">
-              <Spinner animation="border" variant="primary" />
-              <p className="mt-2 text-muted">Loading Patents...</p>
+            {/* Search Bar */}
+            <div className="patent-search-wrapper mt-3">
+              <Row>
+                <Col lg={6} md={8}>
+                  <div className="patent-search-box">
+                    <FaSearch />
+                    <input
+                      type="text"
+                      placeholder="Search by Patent Title, Inventor or Application Number..."
+                      value={search}
+                      onChange={(e) => setSearch(e.target.value)}
+                    />
+                  </div>
+                </Col>
+              </Row>
             </div>
-          ) : (
-            <div className="table-responsive">
-              <Table bordered hover className="patent-table">
+
+            {/* Table */}
+            <div className="patent-table-container mt-3">
+              <table className="patent-table">
                 <thead>
                   <tr>
-                    <th>S.No</th>
-                    <th>Application No.</th>
+                    <th className="text-center" style={{ width: "60px" }}>
+                      S.No.
+                    </th>
+                    <th style={{ width: "150px" }}>Application No.</th>
                     <th>Inventor(s)</th>
                     <th>Patent Title</th>
                     <th>Applicant</th>
-                    <th>Filed Date</th>
-                    <th>Published / Granted Date</th>
-                    <th>Publication / Grant No.</th>
-                    <th>Status</th>
-                    <th>Patent URL</th>
+                    <th className="text-center" style={{ width: "105px" }}>
+                      Filed Date
+                    </th>
+                    <th className="text-center" style={{ width: "120px" }}>
+                      Published / Granted
+                    </th>
+                    <th className="text-center" style={{ width: "130px" }}>
+                      Grant / Pub No.
+                    </th>
+                    <th className="text-center" style={{ width: "105px" }}>
+                      Status
+                    </th>
+                    <th className="text-center" style={{ width: "95px" }}>
+                      Access
+                    </th>
                   </tr>
                 </thead>
-
                 <tbody>
                   {filteredPatents.length > 0 ? (
                     filteredPatents.map((item, index) => (
                       <tr key={item._id || index}>
-                        <td>{index + 1}</td>
-                        <td>{item.applicationNo}</td>
+                        <td className="text-center">{index + 1}</td>
+                        <td style={{ fontWeight: 600 }}>
+                          {item.applicationNo}
+                        </td>
                         <td>{item.inventors}</td>
-                        <td>{item.title}</td>
+                        <td className="patent-title-cell">{item.title}</td>
                         <td>{item.applicant}</td>
-                        <td>{item.filedDate || "-"}</td>
-                        <td>{item.publishedDate || "-"}</td>
-                        <td>{item.patentNo || "-"}</td>
-                        <td>
+                        <td className="text-center">
+                          {item.filedDate || "—"}
+                        </td>
+                        <td className="text-center">
+                          {item.publishedDate || "—"}
+                        </td>
+                        <td className="text-center">
+                          {item.patentNo || "—"}
+                        </td>
+                        <td className="text-center">
                           <span
-                            className={`status ${item.status?.toLowerCase()}`}
+                            className={`patent-status-badge ${
+                              item.status ? item.status.toLowerCase() : "filed"
+                            }`}
                           >
-                            {item.status}
+                            {item.status || "Filed"}
                           </span>
                         </td>
-                        <td>
+                        <td className="text-center">
                           {item.url && item.url !== "#" ? (
                             <a
                               href={
@@ -248,13 +258,13 @@ const Patents = () => {
                               }
                               target="_blank"
                               rel="noreferrer"
-                              className="view-link"
+                              className="patent-view-link"
                             >
-                              View
-                              <FaExternalLinkAlt className="ms-2" />
+                              <span>View</span>
+                              <FaExternalLinkAlt style={{ fontSize: "10px" }} />
                             </a>
                           ) : (
-                            <span className="text-muted">-</span>
+                            <span className="text-muted small">—</span>
                           )}
                         </td>
                       </tr>
@@ -262,17 +272,17 @@ const Patents = () => {
                   ) : (
                     <tr>
                       <td colSpan={10} className="text-center py-4 text-muted">
-                        No patent records match your search criteria.
+                        No patent records found matching your search.
                       </td>
                     </tr>
                   )}
                 </tbody>
-              </Table>
+              </table>
             </div>
-          )}
-        </Container>
+          </section>
+        </div>
       </section>
-    </>
+    </main>
   );
 };
 

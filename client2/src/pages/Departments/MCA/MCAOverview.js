@@ -108,14 +108,14 @@ const MCAOverview = () => {
 
   const placementStatistics = Array.isArray(overview.placementStatistics)
     ? [...overview.placementStatistics].sort(
-        (a, b) => Number(a.priority || 1) - Number(b.priority || 1),
-      )
+      (a, b) => Number(a.priority || 1) - Number(b.priority || 1),
+    )
     : [];
 
   const gallery = Array.isArray(overview.departmentGallery)
     ? [...overview.departmentGallery].sort(
-        (a, b) => Number(a.priority || 1) - Number(b.priority || 1),
-      )
+      (a, b) => Number(a.priority || 1) - Number(b.priority || 1),
+    )
     : [];
 
   const hod = overview.headOfDepartment || null;
@@ -132,23 +132,7 @@ const MCAOverview = () => {
           DEPARTMENT HERO / BANNER
       ===================================================== */}
 
-      <section className="overviewHero">
-        <div className="overviewHeroContent">
-          <span className="overviewEyebrow">MCA DEPARTMENT</span>
 
-          <h1>
-            {overview.bannerTitle ||
-              department?.name ||
-              "Master of Computer Applications"}
-          </h1>
-
-          <p>
-            {
-              "Empowering students with advanced knowledge, practical skills and industry-oriented education."
-            }
-          </p>
-        </div>
-      </section>
 
       {/* =====================================================
           MAIN OVERVIEW IMAGE
@@ -375,28 +359,28 @@ const MCAOverview = () => {
       {(overview.joinDepartmentTitle ||
         overview.joinDepartmentDescription ||
         overview.joinDepartmentUrl) && (
-        <section className="ctaSection">
-          {overview.joinDepartmentTitle && (
-            <h2>{overview.joinDepartmentTitle}</h2>
-          )}
+          <section className="ctaSection">
+            {overview.joinDepartmentTitle && (
+              <h2>{overview.joinDepartmentTitle}</h2>
+            )}
 
-          {overview.joinDepartmentDescription && (
-            <p>{overview.joinDepartmentDescription}</p>
-          )}
+            {overview.joinDepartmentDescription && (
+              <p>{overview.joinDepartmentDescription}</p>
+            )}
 
-          {overview.joinDepartmentUrl && (
-            <a
-              href={overview.joinDepartmentUrl}
-              className="ctaButton"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Apply Now
-              <FaArrowRight />
-            </a>
-          )}
-        </section>
-      )}
+            {overview.joinDepartmentUrl && (
+              <a
+                href={overview.joinDepartmentUrl}
+                className="ctaButton"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Apply Now
+                <FaArrowRight />
+              </a>
+            )}
+          </section>
+        )}
     </div>
   );
 };

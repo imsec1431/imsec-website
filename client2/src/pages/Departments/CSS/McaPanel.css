@@ -1,109 +1,203 @@
 /*=========================================================
-  MCA PANEL (TAB LAYOUT)
+  MCA PANEL (VERTICAL SIDEBAR LAYOUT)
 =========================================================*/
 
 .mcaPanel {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
   width: 100%;
-  min-height: 60vh;
+  min-height: 100vh;
   background: #f5f7fb;
   font-family: "Segoe UI", sans-serif;
+  padding: 8px 24px 24px;
+  gap: 20px;
+  position: relative;
+  overflow: visible !important;
 }
 
 .mcaPanel * {
   box-sizing: border-box;
 }
 
-/*=========================================================
-  PANEL TITLE
-=========================================================*/
-
-.mcaPanelTitle {
-  padding: 30px 35px 0;
-}
-
-.mcaPanelTitle h2 {
-  margin: 0;
-  color: #000000;
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-}
-
-/*=========================================================
-  TAB BAR
-=========================================================*/
-
-.tabBarWrapper {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: #f5f7fb;
-  padding: 20px 35px 0;
-}
-
-.tabBar {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 14px;
-  padding: 8px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-  overflow-x: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.tabBar::-webkit-scrollbar {
-  display: none;
-}
-
-.tabItem {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.mcaPanel .tabBarWrapper {
+  width: 270px;
+  min-width: 270px;
   flex-shrink: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: calc(var(--nav-height, 106px) + 8px);
+  align-self: flex-start;
+  padding: 0;
+  margin-top: 0;
+  background: transparent;
+  z-index: 100;
+}
+
+.mcaPanel .tabBar {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+  background: #ffffff;
+  border: none;
+  border-radius: 0;
+  padding: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  max-height: calc(100vh - var(--nav-height, 106px) - 24px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(27, 69, 104, 0.25) transparent;
+}
+
+.mcaPanel .mcaPanelHeader {
+  padding: 12px 14px;
+  background: linear-gradient(135deg, #f0f4f9 0%, #e6edf5 100%);
+  border: none;
+  border-radius: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 33, 71, 0.04);
+}
+
+.mcaPanel .mcaPanelHeader h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: #002147;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.mcaPanel .mcaPanelHeader h2::before,
+.mcaPanel .mcaPanelHeader h2::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: #002147;
+  opacity: 0.3;
+  border-radius: 0;
+}
+
+.mcaPanel .tabItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  justify-content: flex-start;
+  text-align: left;
   border: none;
   background: transparent;
   color: #475569;
-  padding: 12px 20px;
-  border-radius: 10px;
-  font-size: 15px;
+  padding: 12px 18px;
+  border-radius: 0;
+  font-size: 14.5px;
   font-weight: 600;
   cursor: pointer;
   white-space: nowrap;
-  transition: all 0.25s ease;
+  transition: all 0.2s ease;
 }
 
-.tabItem:hover {
-  background: #f0f4f8;
-  color: #1b4568;
+.mcaPanel .tabItem:hover {
+  background: #f15b20;
+  color: #ffffff;
 }
 
-.tabIcon {
+.mcaPanel .tabIcon {
   font-size: 17px;
-  transition: transform 0.25s ease;
+  color: #64748b;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
 }
 
-.tabItem:hover .tabIcon {
+.mcaPanel .tabItem:hover .tabIcon {
+  color: #ffffff;
   transform: scale(1.1);
 }
 
-.tabItem.active {
-  background: linear-gradient(135deg, #1b4568, #2a5f8a);
+.mcaPanel .tabItem.active {
+  background: linear-gradient(135deg, #002147, #1b4568);
   color: #ffffff;
-  box-shadow: 0 6px 16px rgba(27, 69, 104, 0.35);
+  box-shadow: 0 4px 14px rgba(0, 33, 71, 0.25);
 }
 
-.tabItem.active .tabIcon {
-  color: #ffffff;
+.mcaPanel .tabItem.active .tabIcon {
+  color: #fdb913;
 }
 
-/* Active tab underline accent (visible even without the filled background,
-   kept for extra visual polish on larger screens) */
-.tabItem.active::after {
-  content: "";
+.mcaPanel .contentPanel {
+  flex: 1;
+  min-width: 0;
+  padding: 0;
+  margin-top: 0;
+  background: transparent;
+}
+
+.mcaPanel .overviewContainer,
+.mcaPanel .contentPanel > div,
+.mcaPanel .contentPanel > section {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+@media (max-width: 991px) {
+  .mcaPanel {
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .mcaPanel .tabBarWrapper {
+    width: 100%;
+    min-width: 100%;
+    position: sticky;
+    top: 70px;
+    overflow-x: auto;
+  }
+
+  .mcaPanel .tabBar {
+    flex-direction: row;
+    overflow-x: auto;
+    width: 100%;
+    white-space: nowrap;
+    padding: 8px;
+  }
+
+  .mcaPanel .mcaPanelHeader {
+    padding: 8px 14px;
+    margin-bottom: 0;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .mcaPanel .mcaPanelHeader h2 {
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    gap: 8px;
+  }
+
+  .mcaPanel .mcaPanelHeader h2::before,
+  .mcaPanel .mcaPanelHeader h2::after {
+    width: 12px;
+  }
+
+  .mcaPanel .tabItem {
+    width: auto;
+    flex-shrink: 0;
+    padding: 10px 16px;
+  }
+
+  .mcaPanel .contentPanel {
+    width: 100%;
+  }
 }
 
 /*=========================================================

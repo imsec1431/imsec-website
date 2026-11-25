@@ -1,751 +1,422 @@
-/*=========================================================
-                Research Policy Page
-=========================================================*/
+/* =========================================
+   RESEARCH POLICY PAGE
+   Styled in IMSEC Society Design Language
+========================================= */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+.research-policy-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  color: #1e293b;
+  font-family: "Poppins", "Segoe UI", sans-serif;
 }
 
-body {
-  overflow-x: hidden;
-  background: #fff;
-}
+/* =========================================
+   HERO BANNER
+========================================= */
 
-/*=========================================================
-                Common
-=========================================================*/
-
-.section-tag {
-  color: #fdb913;
-
-  font-size: 15px;
-
-  font-weight: 700;
-
-  letter-spacing: 2px;
-
-  text-transform: uppercase;
-
-  margin-bottom: 10px;
-}
-
-.section-title {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-
-  font-weight: 800;
-
-  color: #0a2e5c;
-
-  margin-bottom: 20px;
-}
-
-.section-title span {
-  color: #fdb913;
-}
-
-.section-title::after {
-  content: "";
-
-  display: block;
-
-  width: 90px;
-
-  height: 4px;
-
-  background: #fdb913;
-
-  border-radius: 50px;
-
-  margin-top: 15px;
-}
-
-.text-center .section-title::after {
-  margin: 15px auto 0;
-}
-
-/*=========================================================
-                Hero
-=========================================================*/
-
-.policy-hero {
-  height: 430px;
-
-  background:
-    linear-gradient(rgba(10, 46, 92, 1), rgba(10, 46, 92, 1)),
-    url("https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1600&q=80");
-
-  background-size: cover;
-
-  background-position: center;
-
+.research-policy-hero {
+  min-height: 150px;
   display: flex;
-
+  align-items: center;
   justify-content: center;
-
-  align-items: center;
-
+  padding: 32px 24px;
+  background: #002147;
+  border-bottom: 2px solid #fdb913;
+  color: #ffffff;
   text-align: center;
-
-  color: #fff;
 }
 
-.hero-content h1 {
-  font-size: clamp(2.8rem, 6vw, 4.8rem);
+.research-policy-hero-content {
+  width: 100%;
+  max-width: 1050px;
+  text-align: center;
+}
 
+.research-policy-hero-content h1 {
+  margin: 0;
+  font-size: clamp(26px, 4vw, 38px);
+  line-height: 1.2;
   font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.3px;
 }
 
-.hero-content p {
-  margin-top: 15px;
+/* =========================================
+   CONTENT CONTAINER
+========================================= */
 
-  font-size: 18px;
+.research-policy-content {
+  padding: 28px 0 45px;
+  background: #f8fafc;
 }
 
-.hero-content span {
-  margin: 0 8px;
-
-  color: #fdb913;
+.research-policy-container {
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
-/*=========================================================
-                About
-=========================================================*/
+/* =========================================
+   INTRODUCTION HIGHLIGHT BOX
+========================================= */
 
-.policy-about {
-  background: #fff;
+.research-policy-introduction {
+  margin: 0 0 20px 0;
+  padding: 18px 24px;
+  border-left: 4px solid #fdb913;
+  border-top: 1px solid #e2e8f0;
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
-.about-image {
-  width: 100%;
-
-  border-radius: 25px;
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-
-  transition: 0.35s;
+.research-policy-introduction p {
+  margin: 0 0 10px 0;
+  color: #334155;
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 450;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
-.about-image:hover {
-  transform: scale(1.03);
+.research-policy-introduction p:last-child {
+  margin-bottom: 0;
 }
 
-.policy-about p {
-  color: #666;
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
 
-  line-height: 1.9;
-
-  text-align: justify;
+.research-policy-section {
+  margin: 0 0 20px 0;
+  padding: 22px 26px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
-.policy-about .btn {
-  padding: 12px 30px;
-
-  font-weight: 600;
+.research-policy-section:last-child {
+  margin-bottom: 0;
 }
 
-/*=========================================================
-                Objectives
-=========================================================*/
-
-.objective-section {
-  background: #f8f9fb;
-}
-
-.objective-card {
-  background: #fff;
-
-  padding: 35px 25px;
-
-  text-align: center;
-
-  border-radius: 20px;
-
-  height: 100%;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  transition: 0.35s;
-
-  border-top: 4px solid transparent;
-}
-
-.objective-card:hover {
-  transform: translateY(-10px);
-
-  border-top: 4px solid #fdb913;
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-}
-
-.objective-icon {
-  font-size: 55px;
-
-  color: #fdb913;
-
-  margin-bottom: 20px;
-}
-
-.objective-card h4 {
-  font-weight: 700;
-
-  color: #0a2e5c;
-
-  margin-bottom: 15px;
-}
-
-.objective-card p {
-  color: #783d3d;
-
-  line-height: 1.8;
-}
-
-/*=========================================================
-                Policy Highlights
-=========================================================*/
-
-.highlight-section {
-  background: #fff;
-}
-
-.highlight-card {
-  background: #d6cdcd;
-
-  padding: 35px 25px;
-
-  text-align: center;
-
-  border-radius: 20px;
-
-  height: 100%;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  transition: 0.35s;
-
-  border-bottom: 4px solid transparent;
-}
-
-.highlight-card:hover {
-  transform: translateY(-10px);
-
-  border-bottom: 4px solid #010000;
-
-  box-shadow: 0 20px 45px rgba(194, 190, 190, 0.15);
-}
-
-.highlight-icon {
-  font-size: 55px;
-
-  color: #070707;
-
-  margin-bottom: 20px;
-}
-
-.highlight-card h4 {
-  font-weight: 700;
-
-  color: #0a2e5c;
-
-  margin-bottom: 15px;
-}
-
-.highlight-card p {
-  color: #e40000;
-
-  line-height: 1.8;
-}
-
-/*=========================================================
-                Research Ethics
-=========================================================*/
-
-.ethics-section {
-  background: #f8f9fb;
-}
-
-.ethics-image img {
-  width: 100%;
-
-  border-radius: 25px;
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-
-  transition: 0.35s;
-}
-
-.ethics-image img:hover {
-  transform: scale(1.03);
-}
-
-.ethics-list {
-  list-style: none;
-
+.research-policy-section h2 {
+  margin: 0 0 12px 0;
   padding: 0;
-
-  margin-top: 25px;
-}
-
-.ethics-list li {
-  display: flex;
-
-  align-items: center;
-
-  gap: 12px;
-
-  margin-bottom: 18px;
-
-  font-size: 17px;
-
-  font-weight: 500;
-
-  color: #444;
-}
-
-.ethics-list svg {
-  color: #fdb913;
-
-  font-size: 18px;
-
-  min-width: 18px;
-}
-/*=========================================================
-                Research Guidelines
-=========================================================*/
-
-.guideline-section {
-  background: #fff;
-}
-
-.guideline-card {
-  background: #fff;
-
-  padding: 35px 20px;
-
-  text-align: center;
-
-  border-radius: 20px;
-
-  height: 100%;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  transition: 0.35s;
-
-  border-top: 4px solid transparent;
-}
-
-.guideline-card:hover {
-  transform: translateY(-10px);
-
-  border-top: 4px solid #fdb913;
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-}
-
-.guideline-icon {
-  font-size: 55px;
-
-  color: #fdb913;
-
-  margin-bottom: 20px;
-}
-
-.guideline-card h5 {
-  font-weight: 700;
-
-  color: #0a2e5c;
-
-  margin: 0;
-}
-
-/*=========================================================
-                Funding Policy
-=========================================================*/
-
-.funding-section {
-  background: #f8f9fb;
-}
-
-.funding-image {
-  width: 100%;
-
-  border-radius: 25px;
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-
-  transition: 0.35s;
-}
-
-.funding-image:hover {
-  transform: scale(1.03);
-}
-
-.funding-list {
-  padding-left: 20px;
-}
-
-.funding-list li {
-  margin-bottom: 16px;
-
-  font-size: 17px;
-
-  line-height: 1.8;
-
-  color: #555;
-}
-
-/*=========================================================
-                IPR Policy
-=========================================================*/
-
-.ipr-section {
-  background: #fff;
-}
-
-.ipr-card {
-  background: #fff;
-
-  padding: 35px 20px;
-
-  text-align: center;
-
-  border-radius: 20px;
-
-  height: 100%;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  transition: 0.35s;
-
-  border-bottom: 4px solid transparent;
-}
-
-.ipr-card:hover {
-  transform: translateY(-10px);
-
-  border-bottom: 4px solid #fdb913;
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-}
-
-.ipr-icon {
-  font-size: 55px;
-
-  color: #fdb913;
-
-  margin-bottom: 20px;
-}
-
-.ipr-card h5 {
-  font-weight: 700;
-
-  color: #0a2e5c;
-
-  margin: 0;
-}
-
-/*=========================================================
-                Roles
-=========================================================*/
-
-.roles-section {
-  background: #f8f9fb;
-}
-
-.role-card {
-  background: #fff;
-
-  padding: 35px 20px;
-
-  text-align: center;
-
-  border-radius: 20px;
-
-  height: 100%;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  transition: 0.35s;
-
-  border-top: 4px solid transparent;
-}
-
-.role-card:hover {
-  transform: translateY(-10px);
-
-  border-top: 4px solid #fdb913;
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-}
-
-.role-icon {
-  font-size: 55px;
-
-  color: #fdb913;
-
-  margin-bottom: 20px;
-}
-
-.role-card h5 {
-  font-weight: 700;
-
-  color: #0a2e5c;
-
-  margin: 0;
-}
-
-/*=========================================================
-                Download Section
-=========================================================*/
-
-.download-section {
-  background: #fff;
-}
-
-.download-table {
-  background: #fff;
-
-  border-radius: 20px;
-
-  overflow: hidden;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
-
-.download-table thead {
-  background: #0a2e5c;
-
-  color: #fff;
-}
-
-.download-table th {
-  padding: 18px;
-
-  text-align: center;
-
-  font-weight: 700;
-}
-
-.download-table td {
-  padding: 16px;
-
-  text-align: center;
-
-  vertical-align: middle;
-}
-
-.download-table tbody tr:hover {
-  background: #fff8e7;
-}
-
-.download-table .btn {
-  font-weight: 600;
-
-  padding: 8px 18px;
-}
-
-/*=========================================================
-                FAQ
-=========================================================*/
-
-.faq-section {
-  background: #f8f9fb;
-}
-
-.faq-card {
-  background: #fff;
-
-  padding: 35px;
-
-  border-radius: 20px;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
-
-.faq-card h5 {
-  font-weight: 700;
-
-  color: #0a2e5c;
-
-  margin-bottom: 12px;
-}
-
-.faq-card p {
-  color: #666;
-
-  line-height: 1.8;
-}
-
-.faq-card hr {
-  margin: 25px 0;
-}
-
-/*=========================================================
-                CTA
-=========================================================*/
-
-.policy-cta {
-  background: linear-gradient(135deg, #0a2e5c, #123f7a);
-
-  padding: 90px 0;
-
-  color: #fff;
-}
-
-.policy-cta h2 {
-  font-size: clamp(2rem, 5vw, 3rem);
-
+  color: #002147;
+  font-size: 22px;
+  line-height: 1.25;
   font-weight: 800;
-
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: left !important;
 }
 
-.policy-cta p {
-  color: #ddd;
-
-  line-height: 1.8;
-}
-
-.policy-cta .btn {
-  padding: 12px 30px;
-
-  font-weight: 600;
-
-  transition: 0.35s;
-}
-
-.policy-cta .btn-warning {
+.research-policy-section h2::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 3px;
+  margin: 8px 0 0;
   background: #fdb913;
+  border-radius: 2px;
+}
 
-  color: #0a2e5c;
+.research-policy-section p {
+  margin: 0 0 12px 0;
+  padding: 0;
+  color: #475569;
+  font-size: 15px;
+  line-height: 1.75;
+  text-align: justify !important;
+  text-justify: inter-word;
+}
 
+.research-policy-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================
+   GRID CARDS (OBJECTIVES, HIGHLIGHTS, ROLES, IPR)
+========================================= */
+
+.policy-grid-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px 16px;
+  height: 100%;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.policy-grid-card:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 14px rgba(0, 33, 71, 0.08);
+  transform: translateY(-2px);
+}
+
+.policy-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: rgba(0, 33, 71, 0.06);
+  color: #002147;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 12px;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.policy-grid-card:hover .policy-card-icon {
+  background: #002147;
+  color: #fdb913;
+}
+
+.text-center .policy-card-icon {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.policy-grid-card h4,
+.policy-grid-card h5 {
+  color: #002147;
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.policy-grid-card p {
+  color: #64748b;
+  font-size: 13.5px;
+  line-height: 1.6;
+  margin: 0;
+  text-align: left !important;
+}
+
+/* =========================================
+   ETHICS SECTION
+========================================= */
+
+.policy-ethics-image {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 14px rgba(0, 33, 71, 0.06);
+  object-fit: cover;
+  max-height: 320px;
+}
+
+.policy-ethics-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.policy-ethics-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #1e293b;
+  transition: all 0.2s ease;
+}
+
+.policy-ethics-item:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 2px 8px rgba(0, 33, 71, 0.06);
+}
+
+.policy-ethics-item svg {
+  color: #fdb913;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+/* =========================================
+   DOWNLOADS / POLICY TABLE
+========================================= */
+
+.policy-table-container {
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.policy-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+}
+
+.policy-table thead tr {
+  background: #002147;
+  color: #ffffff;
+}
+
+.policy-table th {
+  padding: 14px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: left;
+  letter-spacing: 0.3px;
   border: none;
 }
 
-.policy-cta .btn-warning:hover {
-  background: #fff;
-
-  color: #0a2e5c;
-
-  transform: translateY(-5px);
+.policy-table th.text-center,
+.policy-table td.text-center {
+  text-align: center;
 }
 
-.policy-cta .btn-outline-light {
-  border: 2px solid #fff;
+.policy-table td {
+  padding: 14px 18px;
+  font-size: 14.5px;
+  color: #334155;
+  border-top: 1px solid #e2e8f0;
+  vertical-align: middle;
 }
 
-.policy-cta .btn-outline-light:hover {
-  background: #fff;
-
-  color: #0a2e5c;
-
-  transform: translateY(-5px);
+.policy-table tbody tr:hover {
+  background: #f8fafc;
 }
 
-/*=========================================================
-                Animation
-=========================================================*/
-
-.objective-card,
-.highlight-card,
-.guideline-card,
-.ipr-card,
-.role-card,
-.download-table,
-.faq-card {
-  transition: all 0.35s ease;
+.policy-doc-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: #002147;
 }
 
-/*=========================================================
-                Responsive
-=========================================================*/
+.policy-doc-title svg {
+  color: #dc2626;
+  font-size: 20px;
+  flex-shrink: 0;
+}
 
-@media (max-width: 992px) {
-  .policy-hero {
-    height: 320px;
-  }
+.policy-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #475569;
+  background: #e2e8f0;
+  border-radius: 4px;
+}
 
-  .policy-cta {
-    text-align: center;
-  }
+.policy-pdf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  font-size: 13.5px;
+  font-weight: 600;
+  background: #fdb913;
+  color: #002147;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
 
-  .funding-image {
-    margin-bottom: 30px;
+.policy-pdf-btn:hover {
+  background: #002147;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* =========================================
+   STATUS
+========================================= */
+
+.research-policy-status {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: #64748b;
+  font-size: 17px;
+  text-align: center;
+  background: #f8fafc;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .research-policy-container {
+    width: 92%;
+    max-width: 92%;
   }
 }
 
 @media (max-width: 768px) {
-  .policy-hero {
-    height: 260px;
+  .research-policy-hero {
+    min-height: 120px;
+    padding: 26px 18px 22px;
   }
 
-  .hero-content h1 {
-    font-size: 2.2rem;
+  .research-policy-hero-content h1 {
+    font-size: 24px;
   }
 
-  .hero-content p {
+  .research-policy-content {
+    padding: 20px 0 30px;
+  }
+
+  .research-policy-introduction {
+    margin: 0 0 14px 0;
+    padding: 15px 16px;
+  }
+
+  .research-policy-introduction p {
     font-size: 15px;
+    line-height: 1.65;
+    text-align: justify;
   }
 
-  .about-image {
-    margin-bottom: 25px;
+  .research-policy-section {
+    margin: 0 0 14px 0;
+    padding: 16px 18px;
   }
 
-  .objective-card,
-  .highlight-card,
-  .guideline-card,
-  .ipr-card,
-  .role-card {
-    padding: 25px;
+  .research-policy-section h2 {
+    font-size: 20px;
   }
 
-  .download-table {
-    font-size: 14px;
+  .research-policy-section p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    text-align: justify;
   }
 
-  .download-table th,
-  .download-table td {
-    padding: 12px;
-  }
-
-  .faq-card {
-    padding: 25px;
-  }
-
-  .policy-cta {
-    padding: 60px 20px;
-  }
-
-  .policy-cta .btn {
-    width: 100%;
-
-    margin-top: 12px;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .funding-list li {
-    font-size: 15px;
-  }
-
-  .download-table {
-    font-size: 13px;
-  }
-
-  .faq-card {
-    padding: 20px;
+  .policy-ethics-list {
+    grid-template-columns: 1fr;
   }
 }

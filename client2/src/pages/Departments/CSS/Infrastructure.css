@@ -6,67 +6,30 @@
 =========================================================*/
 
 .infraHero {
-  background: linear-gradient(135deg, #1b4568, #2a5f8a);
+  background: #002147;
 
   color: #fff;
 
   text-align: center;
 
-  padding: 65px 30px;
+  padding: 28px 20px;
 
-  border-radius: 20px;
+  border-radius: 0;
 
   position: relative;
 
   overflow: hidden;
 
-  margin-bottom: 35px;
+  margin-bottom: 20px;
 
   z-index: 1;
 }
 
-/* Decorative Circle - Top Right */
+/* Decorative Circles Removed */
 
-.infraHero::before {
-  content: "";
-
-  position: absolute;
-
-  width: 350px;
-
-  height: 350px;
-
-  background: rgba(255, 255, 255, 0.08);
-
-  border-radius: 50%;
-
-  top: -120px;
-
-  right: -100px;
-
-  pointer-events: none;
-}
-
-/* Decorative Circle - Bottom Left */
-
+.infraHero::before,
 .infraHero::after {
-  content: "";
-
-  position: absolute;
-
-  width: 250px;
-
-  height: 250px;
-
-  background: rgba(255, 255, 255, 0.05);
-
-  border-radius: 50%;
-
-  bottom: -80px;
-
-  left: -70px;
-
-  pointer-events: none;
+  display: none !important;
 }
 
 /* Hero Heading */
@@ -76,11 +39,11 @@
 
   z-index: 2;
 
-  font-size: 46px;
+  font-size: 30px;
 
   font-weight: 700;
 
-  margin-bottom: 18px;
+  margin-bottom: 8px;
 
   color: #ffffff;
 }
@@ -92,13 +55,13 @@
 
   z-index: 2;
 
-  max-width: 850px;
+  max-width: 800px;
 
-  margin: auto;
+  margin: 0 auto;
 
-  font-size: 17px;
+  font-size: 15px;
 
-  line-height: 1.8;
+  line-height: 1.5;
 
   color: #ffffff !important;
 }
@@ -109,77 +72,59 @@
 
 @media (max-width: 991px) {
   .infraHero {
-    padding: 55px 25px;
+    padding: 24px 18px;
 
-    border-radius: 18px;
+    border-radius: 0;
+
+    margin-bottom: 16px;
   }
 
   .infraHero h1 {
-    font-size: 38px;
+    font-size: 26px;
   }
 
   .infraHero p {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 767px) {
   .infraHero {
-    padding: 50px 20px;
+    padding: 20px 16px;
 
-    margin-bottom: 25px;
+    margin-bottom: 14px;
 
-    border-radius: 16px;
-  }
-
-  .infraHero::before {
-    width: 250px;
-
-    height: 250px;
-
-    top: -100px;
-
-    right: -100px;
-  }
-
-  .infraHero::after {
-    width: 180px;
-
-    height: 180px;
-
-    bottom: -70px;
-
-    left: -60px;
+    border-radius: 0;
   }
 
   .infraHero h1 {
-    font-size: 32px;
+    font-size: 22px;
 
-    margin-bottom: 12px;
-  }
-
-  .infraHero p {
-    font-size: 14px;
-
-    line-height: 1.7;
-  }
-}
-
-@media (max-width: 480px) {
-  .infraHero {
-    padding: 42px 16px;
-
-    border-radius: 14px;
-  }
-
-  .infraHero h1 {
-    font-size: 28px;
+    margin-bottom: 6px;
   }
 
   .infraHero p {
     font-size: 13px;
 
-    line-height: 1.6;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .infraHero {
+    padding: 16px 12px;
+
+    border-radius: 0;
+  }
+
+  .infraHero h1 {
+    font-size: 20px;
+  }
+
+  .infraHero p {
+    font-size: 12px;
+
+    line-height: 1.4;
   }
 }
 
