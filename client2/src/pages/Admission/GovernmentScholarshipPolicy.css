@@ -73,7 +73,7 @@
   color: #002147;
   background: #fdb913;
   border-radius: 4px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 800;
   letter-spacing: 1.2px;
 }
@@ -97,8 +97,8 @@
 
   color: rgba(255, 255, 255, 0.88);
 
-  font-size: 13.5px;
-  line-height: 1.6;
+  font-size: 16.5px;
+  line-height: 1.8;
 }
 
 /* =========================================================
@@ -116,13 +116,13 @@
 
 .government-scholarship-view-btn,
 .government-scholarship-download-btn {
-  min-height: 40px;
+  min-height: 44px;
 
-  padding: 8px 18px !important;
+  padding: 10px 22px !important;
 
   border-radius: 8px !important;
 
-  font-size: 12.5px;
+  font-size: 14.5px;
   font-weight: 700;
 
   box-shadow: none !important;
@@ -223,7 +223,7 @@
 .government-scholarship-document-info strong {
   color: #ffffff;
 
-  font-size: 13.5px;
+  font-size: 15px;
   font-weight: 700;
 
   line-height: 1.4;
@@ -232,7 +232,7 @@
 .government-scholarship-document-info span {
   color: rgba(255, 255, 255, 0.75);
 
-  font-size: 11px;
+  font-size: 12.5px;
 
   line-height: 1.45;
 }
@@ -246,7 +246,7 @@
 
   border-radius: 9px;
 
-  font-size: 13px;
+  font-size: 14.5px;
 }
 
 /* =========================================================
@@ -278,7 +278,7 @@
 
   gap: 20px;
 
-  padding: 16px 20px;
+  padding: 18px 22px;
 
   border-bottom: 1px solid #edf0f3;
 }
@@ -287,13 +287,13 @@
   display: inline-block;
 
   margin-bottom: 6px;
-  padding: 3px 8px;
+  padding: 4px 10px;
 
   color: #002147;
   background: rgba(0, 33, 71, 0.08);
   border-radius: 4px;
 
-  font-size: 9.5px;
+  font-size: 12px;
   font-weight: 800;
   letter-spacing: 1.2px;
 }
@@ -303,14 +303,14 @@
 
   color: #002147;
 
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
 }
 
 .government-scholarship-header-download {
-  min-height: 38px;
+  min-height: 40px;
 
-  padding: 8px 16px !important;
+  padding: 8px 18px !important;
 
   color: #ffffff !important;
   background: #002147 !important;
@@ -318,7 +318,7 @@
   border: 1px solid #002147 !important;
   border-radius: 7px !important;
 
-  font-size: 11.5px;
+  font-size: 13.5px;
   font-weight: 650;
 
   white-space: nowrap;
@@ -404,15 +404,15 @@
 
   color: #002147;
 
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .government-scholarship-pdf-unavailable p {
   margin: 0;
 
-  color: #858e9b;
+  color: #667080;
 
-  font-size: 13px;
+  font-size: 15px;
 }
 
 /* =========================================================
@@ -428,7 +428,7 @@
 
   margin-top: 18px;
   margin-bottom: 24px;
-  padding: 18px 22px;
+  padding: 20px 24px;
 
   background: #ffffff;
 
@@ -463,7 +463,7 @@
 
   color: #002147;
 
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 700;
 }
 
@@ -472,10 +472,10 @@
 
   margin: 0;
 
-  color: #707987;
+  color: #555;
 
-  font-size: 12.5px;
-  line-height: 1.65;
+  font-size: 15.5px;
+  line-height: 1.75;
 }
 
 /* =========================================================
