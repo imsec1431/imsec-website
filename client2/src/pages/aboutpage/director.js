@@ -217,21 +217,7 @@ const DirectorMessage = () => {
 
       {/* ================= Call To Action ================= */}
 
-      <section className="cta-section director-cta-section chairman-cta-section">
-        <Container>
-          <Row className="justify-content-center text-center">
-            <Col lg={10} md={12} className="text-center">
-              <h2>Become a Part of IMSEC</h2>
 
-              <p>
-                Join one of India's leading engineering institutions and start
-                your journey toward academic excellence, innovation and
-                successful careers.
-              </p>
-            </Col>
-          </Row>
-        </Container>
-      </section>
     </>
   );
 };

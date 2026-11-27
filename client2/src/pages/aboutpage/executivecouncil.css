@@ -216,11 +216,12 @@ body {
 }
 
 .executive-intro p {
-  color: #555;
-  line-height: 1.8;
+  color: #374151;
+  font-size: 17px !important;
+  line-height: 1.85 !important;
   text-align: justify !important;
   text-justify: inter-word;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 /* ===========================================
@@ -512,6 +513,11 @@ body {
   .executive-hero {
     min-height: 150px;
     padding: 20px 15px;
+  }
+
+  .executive-intro p {
+    font-size: 15.5px !important;
+    line-height: 1.75 !important;
   }
 
   .hero-content h1 {
