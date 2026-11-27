@@ -76,8 +76,8 @@
   max-width: 720px;
   margin: 0 auto;
   color: rgba(255, 255, 255, 0.9);
-  font-size: 15px;
-  line-height: 1.7;
+  font-size: 16.5px;
+  line-height: 1.8;
   text-align: center !important;
 }
 
@@ -104,7 +104,7 @@
   display: block;
   margin-bottom: 5px;
   color: #939ca7;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 800;
   letter-spacing: 1.7px;
 }
@@ -112,7 +112,7 @@
 .apply-admission-card .card-header h2 {
   margin: 0;
   color: #293342;
-  font-size: 18px;
+  font-size: 21px;
   font-weight: 700;
 }
 
@@ -128,7 +128,7 @@
   display: block;
   margin-bottom: 7px;
   color: #3c4654;
-  font-size: 11px;
+  font-size: 14.5px;
   font-weight: 650;
 }
 
@@ -138,13 +138,13 @@
 
 .apply-admission-card .form-control,
 .apply-admission-card .form-select {
-  min-height: 43px;
-  padding: 9px 12px;
+  min-height: 45px;
+  padding: 10px 14px;
   color: #303947;
   background-color: #ffffff;
   border: 1px solid #dce2e8;
   border-radius: 7px;
-  font-size: 12px;
+  font-size: 15px;
   box-shadow: none;
   transition:
     border-color 0.2s ease,
@@ -175,16 +175,16 @@
 .apply-admission-card .form-check {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: 12px;
   padding-left: 0;
 }
 
 .apply-admission-card .form-check-input {
   float: none;
   flex: 0 0 auto;
-  width: 17px;
-  height: 17px;
-  margin: 2px 0 0;
+  width: 19px;
+  height: 19px;
+  margin: 3px 0 0;
   border-color: #cbd2da;
   box-shadow: none;
 }
@@ -200,9 +200,9 @@
 }
 
 .apply-admission-card .form-check-label {
-  color: #596473;
-  font-size: 12px;
-  line-height: 1.7;
+  color: #475569;
+  font-size: 16px;
+  line-height: 1.75;
   cursor: pointer;
 }
 
@@ -219,14 +219,14 @@
 }
 
 .apply-admission-submit .btn {
-  min-width: 190px;
-  min-height: 44px;
-  padding: 10px 20px;
+  min-width: 200px;
+  min-height: 46px;
+  padding: 11px 24px;
   color: #ffffff;
   background: #293342;
   border: 1px solid #293342;
   border-radius: 7px;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 700;
   box-shadow: none;
   transition:
@@ -255,8 +255,8 @@
   padding: 20px;
   border: 1px solid #cfe5d7;
   border-radius: 9px;
-  font-size: 12px;
-  line-height: 1.7;
+  font-size: 15px;
+  line-height: 1.75;
 }
 
 .application-number-box {
@@ -273,7 +273,7 @@
 .application-number-box span {
   margin-bottom: 3px;
   color: #718078;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 800;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -281,7 +281,7 @@
 
 .application-number-box strong {
   color: #25362b;
-  font-size: 19px;
+  font-size: 21px;
   letter-spacing: 0.8px;
 }
 
@@ -291,7 +291,7 @@
 
 .apply-admission-page .alert {
   border-radius: 8px;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 /* =========================================================
@@ -319,7 +319,7 @@
 }
 
 .admission-info-modal-header .modal-title {
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 700;
   padding-right: 42px;
 }
@@ -371,7 +371,7 @@
 
 .apply-admission-page + .modal,
 .modal {
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .modal-content {
@@ -390,8 +390,8 @@
   padding: 14px 16px;
   border: 1px solid #ffe08a;
   border-radius: 8px !important;
-  font-size: 12px;
-  line-height: 1.65;
+  font-size: 15px;
+  line-height: 1.7;
 }
 
 .admission-info-alert strong {
@@ -406,9 +406,9 @@
 
 .admission-info-list li {
   margin-bottom: 9px;
-  color: #596473;
-  font-size: 12px;
-  line-height: 1.65;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.75;
 }
 
 .admission-info-list li strong {
@@ -417,12 +417,12 @@
 
 .admission-info-tip {
   padding: 14px 16px;
-  color: #596473;
+  color: #555;
   background: #f5f7fa;
   border-left: 3px solid #293342;
   border-radius: 6px;
-  font-size: 12px;
-  line-height: 1.65;
+  font-size: 15.5px;
+  line-height: 1.75;
 }
 
 .modal-footer {
@@ -433,13 +433,13 @@
 
 .admission-modal-btn {
   min-width: 190px;
-  min-height: 42px;
-  padding: 9px 18px !important;
+  min-height: 44px;
+  padding: 10px 20px !important;
   color: #ffffff !important;
   background: #293342 !important;
   border: 1px solid #293342 !important;
   border-radius: 7px !important;
-  font-size: 12px;
+  font-size: 14.5px;
   font-weight: 700;
 }
 
