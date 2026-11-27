@@ -693,13 +693,7 @@
   text-align: center;
   border-radius: 20px;
   color: #ffffff;
-
-  background:
-    radial-gradient(circle at 15% 100%,
-      rgba(253, 185, 19, 0.15),
-      transparent 30%),
-    linear-gradient(135deg, #153c5e, #1b4568, #2a5f8a);
-
+  background: #002147;
   box-shadow: var(--placement-shadow-lg);
 }
 
