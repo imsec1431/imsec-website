@@ -190,8 +190,10 @@
 .classroom-lab-about-content p {
   margin: 0 0 14px;
   color: #475569 !important;
-  font-size: 16px;
-  line-height: 1.75;
+  font-size: 16.5px;
+  line-height: 1.8;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 .classroom-lab-about-points {
@@ -206,8 +208,10 @@
   align-items: center;
   gap: 10px;
   color: #344054 !important;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 .classroom-lab-about-points svg {
@@ -299,9 +303,11 @@
 
 .classroom-lab-feature-header p {
   color: #555;
-  font-size: 15.5px;
-  line-height: 1.7;
+  font-size: 16px;
+  line-height: 1.75;
   margin: 4px 0 0;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 .classroom-lab-feature-card {
@@ -337,16 +343,18 @@
 
 .classroom-lab-feature-card h3 {
   color: #002147;
-  font-size: 17px;
+  font-size: 17.5px;
   font-weight: 700;
   margin: 0 0 6px;
 }
 
 .classroom-lab-feature-card p {
   color: #555 !important;
-  font-size: 14.5px;
-  line-height: 1.7;
+  font-size: 15.5px;
+  line-height: 1.75;
   margin: 0;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 /* =========================================================
@@ -377,8 +385,10 @@
 
 .classroom-lab-technology-content p {
   color: rgba(255, 255, 255, 0.9) !important;
-  font-size: 16px;
-  line-height: 1.75;
+  font-size: 16.5px;
+  line-height: 1.8;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 .classroom-lab-tech-card {
@@ -410,16 +420,18 @@
 
 .classroom-lab-tech-card h3 {
   color: #ffffff !important;
-  font-size: 17px;
+  font-size: 17.5px;
   font-weight: 700;
   margin-bottom: 6px;
 }
 
 .classroom-lab-tech-card p {
   color: rgba(255, 255, 255, 0.85) !important;
-  font-size: 14.5px;
-  line-height: 1.7;
+  font-size: 15.5px;
+  line-height: 1.75;
   margin: 0;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 /* =========================================================
@@ -445,9 +457,11 @@
 
 .classroom-lab-section-heading p {
   color: #555;
-  font-size: 15.5px;
-  line-height: 1.7;
+  font-size: 16px;
+  line-height: 1.75;
   margin: 0;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 .classroom-lab-highlight-card {
@@ -475,16 +489,18 @@
 
 .classroom-lab-highlight-card h3 {
   color: #002147;
-  font-size: 16.5px;
+  font-size: 17px;
   font-weight: 700;
   margin-bottom: 6px;
 }
 
 .classroom-lab-highlight-card p {
   color: #555;
-  font-size: 14.5px;
+  font-size: 15px;
   line-height: 1.7;
   margin: 0;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 /* =========================================================
@@ -515,9 +531,11 @@
 
 .classroom-lab-academic-text {
   color: #475569;
-  font-size: 16px;
-  line-height: 1.75;
+  font-size: 16.5px;
+  line-height: 1.8;
   margin: 0;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 /* =========================================================
@@ -548,9 +566,11 @@
 
 .classroom-lab-cta-content p {
   color: rgba(255, 255, 255, 0.88);
-  font-size: 16px;
-  line-height: 1.75;
+  font-size: 16.5px;
+  line-height: 1.8;
   margin: 0;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 .classroom-lab-cta-icon {
