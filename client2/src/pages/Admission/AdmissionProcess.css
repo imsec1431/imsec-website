@@ -399,7 +399,24 @@
 }
 
 /* =========================================================
-   Content Width: 90% for all sections except Hero
+   ALL SECTIONS EXCEPT HERO (90% WIDTH)
+========================================================= */
+
+.admissionJourneySection,
+.admissionEligibilitySection,
+.admissionModesSection,
+.admissionDocumentsSection,
+.admissionDatesSection,
+.admissionBottomCTA {
+  width: 90% !important;
+  max-width: 90% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+}
+
+/* =========================================================
+   INNER CONTAINER (FILLS 100% OF 90% SECTION)
 ========================================================= */
 
 .admissionJourneySection .admissionProcessContainer,
@@ -408,21 +425,12 @@
 .admissionDocumentsSection .admissionProcessContainer,
 .admissionDatesSection .admissionProcessContainer,
 .admissionBottomCTA .admissionProcessContainer {
-  width: 90% !important;
-  max-width: 90% !important;
+  width: 100% !important;
+  max-width: 100% !important;
   margin: 0 auto !important;
-}
-
-@media (max-width: 768px) {
-  .admissionJourneySection .admissionProcessContainer,
-  .admissionEligibilitySection .admissionProcessContainer,
-  .admissionModesSection .admissionProcessContainer,
-  .admissionDocumentsSection .admissionProcessContainer,
-  .admissionDatesSection .admissionProcessContainer,
-  .admissionBottomCTA .admissionProcessContainer {
-    width: 92% !important;
-    max-width: 92% !important;
-  }
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box !important;
 }
 
 /* =========================================================
@@ -430,8 +438,7 @@
 ========================================================= */
 
 .admissionJourneySection {
-  padding: 48px 0;
-
+  padding: 36px 0 20px !important;
   background: #ffffff;
 }
 
@@ -552,8 +559,13 @@
 ========================================================= */
 
 .admissionEligibilitySection {
-  padding: 45px 0;
-  background: #f8f9fb;
+  padding: 36px 24px !important;
+  background: #f8f9fb !important;
+  border-radius: 14px !important;
+  border: 1px solid #edf2f7 !important;
+  box-shadow: 0 2px 10px rgba(0, 33, 71, 0.04) !important;
+  margin-top: 15px !important;
+  margin-bottom: 25px !important;
 }
 
 /* =========================================================
@@ -702,8 +714,13 @@
 ========================================================= */
 
 .admissionDocumentsSection {
-  padding: 45px 0;
-  background: #f8f9fb;
+  padding: 36px 24px !important;
+  background: #f8f9fb !important;
+  border-radius: 14px !important;
+  border: 1px solid #edf2f7 !important;
+  box-shadow: 0 2px 10px rgba(0, 33, 71, 0.04) !important;
+  margin-top: 15px !important;
+  margin-bottom: 25px !important;
 }
 
 .admissionDocumentsLayout {
@@ -898,12 +915,14 @@
 .admissionBottomCTA {
   position: relative;
   overflow: hidden;
-  padding: 48px 20px !important;
-  margin-bottom: 35px;
+  padding: 38px 24px !important;
+  margin-top: 24px !important;
+  margin-bottom: 35px !important;
   background: #002147 !important;
   color: #ffffff !important;
-  border-top: 2px solid #fdb913;
-  border-bottom: 2px solid #fdb913;
+  border: none !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12) !important;
 }
 
 .admissionCTAContent .admissionPrimaryButton {
@@ -1009,6 +1028,18 @@
    TABLET / SMALL LAPTOP
 ========================================================= */
 
+@media (max-width: 850px) {
+  .admissionJourneySection,
+  .admissionEligibilitySection,
+  .admissionModesSection,
+  .admissionDocumentsSection,
+  .admissionDatesSection,
+  .admissionBottomCTA {
+    width: 94% !important;
+    max-width: 94% !important;
+  }
+}
+
 @media (max-width: 800px) {
   .admissionHero {
     min-height: 170px;
@@ -1040,8 +1071,18 @@
 ========================================================= */
 
 @media (max-width: 600px) {
+  .admissionJourneySection,
+  .admissionEligibilitySection,
+  .admissionModesSection,
+  .admissionDocumentsSection,
+  .admissionDatesSection,
+  .admissionBottomCTA {
+    width: calc(100% - 24px) !important;
+    max-width: calc(100% - 24px) !important;
+  }
+
   .admissionProcessContainer {
-    width: min(100% - 24px, 1180px);
+    width: 100% !important;
   }
 
   .admissionHero {

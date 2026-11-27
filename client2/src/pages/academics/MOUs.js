@@ -257,8 +257,8 @@ const MOUs = () => {
 
       <section className="mou-cta">
         <Container>
-          <Row className="align-items-center">
-            <Col lg={8}>
+          <Row className="align-items-center justify-content-center">
+            <Col lg={10} className="text-center">
               <h2 style={{ color: "white" }}>
                 Become Our Collaboration Partner
               </h2>

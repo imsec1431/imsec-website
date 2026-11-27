@@ -16,27 +16,85 @@
   box-sizing: border-box;
 }
 
-.auditorium-page .container {
+/* =========================================================
+   ALL SECTIONS EXCEPT HERO (90% WIDTH)
+========================================================= */
+
+.auditorium-introduction,
+.auditorium-features,
+.auditorium-statistics,
+.auditorium-facilities,
+.auditorium-uses,
+.auditorium-gallery,
+.auditorium-rules,
+.auditorium-faq,
+.auditorium-cta {
   width: 90% !important;
   max-width: 90% !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  box-sizing: border-box !important;
 }
 
-@media (max-width: 768px) {
-  .auditorium-page .container {
+@media (max-width: 850px) {
+  .auditorium-introduction,
+  .auditorium-features,
+  .auditorium-statistics,
+  .auditorium-facilities,
+  .auditorium-uses,
+  .auditorium-gallery,
+  .auditorium-rules,
+  .auditorium-faq,
+  .auditorium-cta {
     width: 94% !important;
     max-width: 94% !important;
   }
 }
 
-@media (max-width: 480px) {
-  .auditorium-page .container {
+@media (max-width: 600px) {
+  .auditorium-introduction,
+  .auditorium-features,
+  .auditorium-statistics,
+  .auditorium-facilities,
+  .auditorium-uses,
+  .auditorium-gallery,
+  .auditorium-rules,
+  .auditorium-faq,
+  .auditorium-cta {
     width: calc(100% - 24px) !important;
     max-width: calc(100% - 24px) !important;
   }
+}
+
+/* =========================================================
+   INNER CONTAINER (FILLS 100% OF 90% SECTION)
+========================================================= */
+
+.auditorium-introduction .container,
+.auditorium-features .container,
+.auditorium-statistics .container,
+.auditorium-facilities .container,
+.auditorium-uses .container,
+.auditorium-gallery .container,
+.auditorium-rules .container,
+.auditorium-faq .container,
+.auditorium-cta .container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.auditorium-hero-container {
+  width: 100% !important;
+  max-width: 850px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .auditorium-loading {
@@ -218,6 +276,8 @@
   color: #687586;
   font-size: 14.5px;
   line-height: 1.8;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 .auditorium-intro-points {
@@ -361,6 +421,8 @@
   color: #758191;
   font-size: 13px;
   line-height: 1.7;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 /* ============================================================
@@ -368,8 +430,12 @@
 ============================================================ */
 
 .auditorium-statistics {
-  padding: 40px 0;
+  padding: 38px 24px;
   background: #002147;
+  border-radius: 14px;
+  margin-top: 18px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
 }
 
 .auditorium-stat-card {
@@ -461,6 +527,8 @@
   color: #758191;
   font-size: 13px;
   line-height: 1.7;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 /* ============================================================
@@ -678,6 +746,8 @@
   font-size: 14px;
   line-height: 1.8;
   background: #f6f9fc;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 /* ============================================================
@@ -685,8 +755,12 @@
 ============================================================ */
 
 .auditorium-cta {
-  padding: 40px 0;
+  padding: 38px 24px;
   background: #002147;
+  border-radius: 14px;
+  margin-top: 24px;
+  margin-bottom: 35px;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
 }
 
 .auditorium-cta-inner {

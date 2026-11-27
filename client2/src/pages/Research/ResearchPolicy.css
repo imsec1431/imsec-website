@@ -43,19 +43,38 @@
   letter-spacing: -0.3px;
 }
 
-/* =========================================
-   CONTENT CONTAINER
-========================================= */
+/* =========================================================
+   ALL SECTIONS EXCEPT HERO (90% WIDTH)
+========================================================= */
+
+.research-policy-content,
+.research-policy-container {
+  width: 90% !important;
+  max-width: 90% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+}
 
 .research-policy-content {
   padding: 28px 0 45px;
-  background: #f8fafc;
+  background: transparent;
 }
 
-.research-policy-container {
-  width: 90%;
-  max-width: 90%;
-  margin: 0 auto;
+.research-policy-content .research-policy-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+.research-policy-container > section,
+.research-policy-container > div,
+.research-policy-container > .research-policy-introduction,
+.research-policy-container > .research-policy-section {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 /* =========================================
@@ -205,7 +224,8 @@
   font-size: 13.5px;
   line-height: 1.6;
   margin: 0;
-  text-align: left !important;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 /* =========================================
@@ -369,10 +389,11 @@
    RESPONSIVE
 ========================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 850px) {
+  .research-policy-content,
   .research-policy-container {
-    width: 92%;
-    max-width: 92%;
+    width: 94% !important;
+    max-width: 94% !important;
   }
 }
 
@@ -418,5 +439,13 @@
 
   .policy-ethics-list {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .research-policy-content,
+  .research-policy-container {
+    width: calc(100% - 24px) !important;
+    max-width: calc(100% - 24px) !important;
   }
 }

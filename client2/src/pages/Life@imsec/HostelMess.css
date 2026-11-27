@@ -13,30 +13,98 @@
   box-sizing: border-box;
 }
 
-.hostel-hero-container,
-.hostel-mess-page .container {
+/* =========================================================
+   ALL SECTIONS EXCEPT HERO (90% WIDTH)
+========================================================= */
+
+.hostel-about,
+.boys-hostel,
+.girls-hostel,
+.mess-section,
+.facility-section,
+.gallery-section,
+.menu-section,
+.rules-section,
+.stats-section,
+.faq-section,
+.hostel-cta {
   width: 90% !important;
   max-width: 90% !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  box-sizing: border-box !important;
+  background: transparent !important;
 }
 
-@media (max-width: 768px) {
-  .hostel-hero-container,
-  .hostel-mess-page .container {
+@media (max-width: 850px) {
+  .hostel-about,
+  .boys-hostel,
+  .girls-hostel,
+  .mess-section,
+  .facility-section,
+  .gallery-section,
+  .menu-section,
+  .rules-section,
+  .stats-section,
+  .faq-section,
+  .hostel-cta {
     width: 94% !important;
     max-width: 94% !important;
   }
 }
 
-@media (max-width: 480px) {
-  .hostel-hero-container,
-  .hostel-mess-page .container {
+@media (max-width: 600px) {
+  .hostel-about,
+  .boys-hostel,
+  .girls-hostel,
+  .mess-section,
+  .facility-section,
+  .gallery-section,
+  .menu-section,
+  .rules-section,
+  .stats-section,
+  .faq-section,
+  .hostel-cta {
     width: calc(100% - 24px) !important;
     max-width: calc(100% - 24px) !important;
   }
+}
+
+/* =========================================================
+   INNER CONTAINER (FILLS 100% OF 90% SECTION)
+========================================================= */
+
+.hostel-about .container,
+.boys-hostel .container,
+.girls-hostel .container,
+.mess-section .container,
+.facility-section .container,
+.gallery-section .container,
+.menu-section .container,
+.rules-section .container,
+.stats-section .container,
+.faq-section .container,
+.hostel-cta .container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.hostel-hero-container {
+  width: 100% !important;
+  max-width: 850px !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 /*=========================================================
@@ -85,15 +153,20 @@
 .hostel-hero {
   position: relative;
   width: 100%;
-  padding: 38px 0 42px;
+  padding: 38px 20px 42px;
   margin-bottom: 24px;
   background: #002147;
+  border-bottom: 2px solid #fdb913;
   border-radius: 0;
   box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
   color: #ffffff;
-  text-align: left;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
   min-height: auto;
   height: auto;
+  overflow: hidden;
 }
 
 .hostel-hero::before,
@@ -102,15 +175,21 @@
 }
 
 .hero-content {
-  max-width: 900px;
-  margin: 0;
-  text-align: left;
+  text-align: center !important;
   color: #ffffff;
+  padding: 0;
+  width: 100% !important;
+  max-width: 850px !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .hostel-hero-tag {
   display: inline-block;
-  margin-bottom: 8px;
+  margin: 0 auto 8px auto !important;
   color: #fdb913;
   font-size: 11px;
   font-weight: 750;
@@ -125,6 +204,7 @@
   line-height: 1.2;
   font-weight: 750;
   letter-spacing: -0.5px;
+  text-align: center !important;
 }
 
 .hero-content p {
@@ -216,8 +296,9 @@
 
 .hostel-content p {
   color: #666;
-
   line-height: 1.8;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 .hostel-content ul {
@@ -276,8 +357,9 @@
 
 .mess-section p {
   color: #666;
-
   line-height: 1.9;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 .mess-list {
@@ -359,10 +441,17 @@
 
 .facility-card h5 {
   font-weight: 700;
-
   color: #0a2e5c;
-
   margin: 0;
+}
+
+.facility-card p {
+  color: #666;
+  font-size: 13.5px;
+  line-height: 1.7;
+  margin-top: 10px;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 /*=========================================================
@@ -540,6 +629,8 @@
 .faq-card p {
   color: #666;
   line-height: 1.8;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 .faq-card hr {
@@ -552,8 +643,12 @@
 
 .hostel-cta {
   background: #002147 !important;
-  padding: 42px 0;
+  padding: 38px 28px;
   color: #fff;
+  border-radius: 14px;
+  margin-top: 24px;
+  margin-bottom: 35px;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
 }
 
 .hostel-cta h2 {

@@ -15,33 +15,44 @@
 }
 
 /* =========================================================
-   CONTAINER
+   ALL SECTIONS EXCEPT HERO (90% WIDTH)
 ========================================================= */
 
-.mou-hero-container,
-.mou-page .container {
+.mou-list,
+.mou-gallery,
+.download-section,
+.mou-cta {
   width: 90% !important;
   max-width: 90% !important;
   margin-left: auto !important;
   margin-right: auto !important;
+  box-sizing: border-box !important;
+}
+
+/* =========================================================
+   INNER CONTAINER (FILLS 100% OF 90% SECTION)
+========================================================= */
+
+.mou-list .container,
+.mou-gallery .container,
+.download-section .container,
+.mou-cta .container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
+  box-sizing: border-box !important;
 }
 
-@media (max-width: 768px) {
-  .mou-hero-container,
-  .mou-page .container {
-    width: 94% !important;
-    max-width: 94% !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .mou-hero-container,
-  .mou-page .container {
-    width: calc(100% - 24px) !important;
-    max-width: calc(100% - 24px) !important;
-  }
+.mou-hero-container {
+  width: 100% !important;
+  max-width: 850px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 /* =========================================================
@@ -244,7 +255,10 @@
 
 .mou-gallery {
   background: #f8f9fb;
-  padding: 16px 0 24px;
+  padding: 24px 20px;
+  border-radius: 14px;
+  border: 1px solid #eef2f6;
+  margin-bottom: 24px;
 }
 
 .gallery-card {
@@ -335,29 +349,46 @@
 ========================================================= */
 
 .mou-cta {
-  background: #002147;
-  color: #fff;
-  padding: 44px 0;
-  margin-top: 20px;
-  margin-bottom: 55px;
+  background: #002147 !important;
+  color: #fff !important;
+  padding: 38px 25px !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12) !important;
+  text-align: center !important;
+  margin-top: 24px !important;
+  margin-bottom: 35px !important;
 }
 
 .mou-cta h2 {
-  font-size: clamp(22px, 3.5vw, 30px);
-  font-weight: 750;
-  margin-bottom: 12px;
+  font-size: clamp(22px, 3.5vw, 30px) !important;
+  font-weight: 750 !important;
+  margin-bottom: 12px !important;
+  color: #ffffff !important;
+  text-align: center !important;
 }
 
 .mou-cta p {
-  color: rgba(255, 255, 255, 0.85);
-  line-height: 1.7;
-  font-size: 14.5px;
-  margin: 0;
+  color: rgba(255, 255, 255, 0.88) !important;
+  line-height: 1.7 !important;
+  font-size: 14.5px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  max-width: 750px !important;
 }
 
 /* =========================================================
    RESPONSIVE
 ========================================================= */
+
+@media (max-width: 850px) {
+  .mou-list,
+  .mou-gallery,
+  .download-section,
+  .mou-cta {
+    width: 94% !important;
+    max-width: 94% !important;
+  }
+}
 
 @media (max-width: 992px) {
   .mou-cta {
@@ -401,6 +432,16 @@
   .mou-cta {
     padding: 30px 16px;
     margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mou-list,
+  .mou-gallery,
+  .download-section,
+  .mou-cta {
+    width: calc(100% - 24px) !important;
+    max-width: calc(100% - 24px) !important;
   }
 }
 

@@ -303,7 +303,7 @@ const RulesRegulations = () => {
         <section className="rules-cta">
           <Container fluid className="px-0">
             <Row className="align-items-center">
-              <Col lg={12}>
+              <Col lg={12} className="text-center">
                 <h2>Need More Information?</h2>
 
                 <p>

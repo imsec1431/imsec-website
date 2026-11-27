@@ -20,36 +20,40 @@
 }
 
 /* =========================================================
-   CONTAINER (90% FLUID)
+   ALL SECTIONS EXCEPT HERO (90% WIDTH)
 ========================================================= */
 
-.nirf-public-page .container,
-.nirf-hero-container,
-.nirf-container {
+.nirf-documents-section,
+.nirf-public-info {
   width: 90% !important;
   max-width: 90% !important;
   margin-left: auto !important;
   margin-right: auto !important;
+  box-sizing: border-box !important;
+}
+
+/* =========================================================
+   INNER CONTAINER (FILLS 100% OF 90% SECTION)
+========================================================= */
+
+.nirf-documents-section .container,
+.nirf-public-info .container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
+  box-sizing: border-box !important;
 }
 
-@media (max-width: 768px) {
-  .nirf-public-page .container,
-  .nirf-hero-container,
-  .nirf-container {
-    width: 94% !important;
-    max-width: 94% !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .nirf-public-page .container,
-  .nirf-hero-container,
-  .nirf-container {
-    width: calc(100% - 24px) !important;
-    max-width: calc(100% - 24px) !important;
-  }
+.nirf-public-hero .container {
+  width: 100% !important;
+  max-width: 850px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 /* =========================================================
@@ -239,6 +243,8 @@
   color: #64748b;
   font-size: 13px;
   line-height: 1.55;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 /* =========================================================
@@ -350,6 +356,8 @@
   color: rgba(255, 255, 255, 0.85);
   font-size: 13.5px;
   line-height: 1.6;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 /* =========================================================
@@ -416,6 +424,14 @@
   }
 }
 
+@media (max-width: 850px) {
+  .nirf-documents-section,
+  .nirf-public-info {
+    width: 94% !important;
+    max-width: 94% !important;
+  }
+}
+
 @media (max-width: 768px) {
   .nirf-public-hero {
     padding: 30px 0 34px;
@@ -450,6 +466,14 @@
     align-items: flex-start;
     padding: 20px;
     gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nirf-documents-section,
+  .nirf-public-info {
+    width: calc(100% - 24px) !important;
+    max-width: calc(100% - 24px) !important;
   }
 }
 

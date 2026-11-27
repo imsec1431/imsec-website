@@ -23,26 +23,54 @@
   box-sizing: border-box;
 }
 
-.rulesContainer {
-  width: 90%;
-  max-width: 90%;
-  margin: 0 auto;
+/* =========================================================
+   ALL SECTIONS EXCEPT HERO (90% WIDTH)
+========================================================= */
+
+.rulesContainer,
+.rules-about,
+.rules-search,
+.rules-section,
+.guidelines-section,
+.faq-section,
+.rules-cta {
+  width: 90% !important;
+  max-width: 90% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
 }
 
-@media (max-width: 768px) {
-
-  .rulesContainer,
-  .rulesHeroContainer {
-    width: 94%;
-    max-width: 94%;
-  }
+.rulesContainer > section {
+  width: 100% !important;
+  max-width: 100% !important;
 }
+
+/* =========================================================
+   INNER CONTAINER (FILLS 100% OF 90% SECTION)
+========================================================= */
 
 .rulesContainer .container,
-.rulesContainer .container-fluid {
-  max-width: 100%;
-  padding-left: 0;
-  padding-right: 0;
+.rulesContainer .container-fluid,
+.rules-about .container,
+.rules-about .container-fluid,
+.rules-search .container,
+.rules-search .container-fluid,
+.rules-section .container,
+.rules-section .container-fluid,
+.guidelines-section .container,
+.guidelines-section .container-fluid,
+.faq-section .container,
+.faq-section .container-fluid,
+.rules-cta .container,
+.rules-cta .container-fluid {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box !important;
 }
 
 /* =========================================================
@@ -196,6 +224,8 @@
   color: #556980;
   font-size: 15px;
   line-height: 1.7;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 /* =========================================================
@@ -349,6 +379,8 @@
   color: #475569;
   font-size: 15px;
   line-height: 1.7;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 .rule-item .btn-warning {
@@ -416,6 +448,8 @@
   font-size: 14.5px;
   line-height: 1.65;
   margin: 0;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 /* =========================================================
@@ -446,6 +480,8 @@
   font-size: 15px;
   line-height: 1.7;
   margin: 0;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 .faq-card hr {
@@ -459,32 +495,51 @@
 ========================================================= */
 
 .rules-cta {
-  background: #002147;
-  color: #ffffff;
-  padding: 28px 32px;
-  border-radius: 14px;
-  box-shadow: 0 6px 20px rgba(0, 33, 71, 0.18);
-  text-align: left;
-  margin-top: 8px;
+  background: #002147 !important;
+  color: #ffffff !important;
+  padding: 38px 24px !important;
+  border-radius: 14px !important;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12) !important;
+  text-align: center !important;
+  margin-top: 24px !important;
+  margin-bottom: 35px !important;
 }
 
 .rules-cta h2 {
-  font-size: clamp(20px, 3vw, 24px);
-  font-weight: 750;
-  margin-bottom: 6px;
-  color: #ffffff;
+  font-size: clamp(20px, 3vw, 24px) !important;
+  font-weight: 750 !important;
+  margin-bottom: 8px !important;
+  color: #ffffff !important;
+  text-align: center !important;
 }
 
 .rules-cta p {
-  color: rgba(255, 255, 255, 0.88);
-  font-size: 14.5px;
-  line-height: 1.65;
-  margin: 0;
+  color: rgba(255, 255, 255, 0.88) !important;
+  font-size: 14.5px !important;
+  line-height: 1.65 !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  max-width: 750px !important;
 }
 
 /* =========================================================
    RESPONSIVE
 ========================================================= */
+
+@media (max-width: 850px) {
+  .rulesContainer,
+  .rulesHeroContainer,
+  .rules-about,
+  .rules-search,
+  .rules-section,
+  .guidelines-section,
+  .faq-section,
+  .rules-cta {
+    width: 94% !important;
+    max-width: 94% !important;
+  }
+}
 
 @media (max-width: 768px) {
   .rules-hero {
@@ -501,7 +556,7 @@
   }
 
   .rules-cta {
-    padding: 22px 18px;
+    padding: 28px 18px !important;
     text-align: center;
   }
 
@@ -510,14 +565,21 @@
   }
 }
 
-@media (max-width: 480px) {
-
+@media (max-width: 600px) {
   .rulesContainer,
-  .rulesHeroContainer {
-    width: calc(100% - 24px);
-    max-width: calc(100% - 24px);
+  .rulesHeroContainer,
+  .rules-about,
+  .rules-search,
+  .rules-section,
+  .guidelines-section,
+  .faq-section,
+  .rules-cta {
+    width: calc(100% - 24px) !important;
+    max-width: calc(100% - 24px) !important;
   }
+}
 
+@media (max-width: 480px) {
   .rules-hero {
     padding: 20px 0 24px;
     margin-bottom: 16px;

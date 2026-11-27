@@ -18,30 +18,39 @@
 }
 
 /* =========================================================
-   COMMON CONTAINER
+   ALL SECTIONS EXCEPT HERO (90% WIDTH)
 ========================================================= */
 
-.placement-container {
-  width: 90%;
-  max-width: 90%;
-  margin: 0 auto;
-  box-sizing: border-box;
+.placement-container,
+.placement-statistics-section,
+.placement-highlights-section,
+.placement-records-section,
+.placement-record-footer {
+  width: 90% !important;
+  max-width: 90% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
 }
 
-@media (max-width: 768px) {
-  .placement-container,
-  .placement-hero-container {
-    width: 94%;
-    max-width: 94%;
-  }
+.placement-container > section {
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
-@media (max-width: 480px) {
-  .placement-container,
-  .placement-hero-container {
-    width: calc(100% - 24px);
-    max-width: calc(100% - 24px);
-  }
+/* =========================================================
+   INNER CONTAINER (FILLS 100% OF 90% SECTION)
+========================================================= */
+
+.placement-container .container,
+.placement-container .container-fluid {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box !important;
 }
 
 /* =========================================================
@@ -493,6 +502,8 @@
   font-size: 14px;
 
   line-height: 1.75;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 /* =========================================================
@@ -901,11 +912,19 @@
    MOBILE
 ========================================================= */
 
-@media (max-width: 768px) {
-  .placement-container {
-    width: min(92%, 600px);
+@media (max-width: 850px) {
+  .placement-container,
+  .placement-hero-container,
+  .placement-statistics-section,
+  .placement-highlights-section,
+  .placement-records-section,
+  .placement-record-footer {
+    width: 94% !important;
+    max-width: 94% !important;
   }
+}
 
+@media (max-width: 768px) {
   /* Hero */
 
   .placement-record-header {
@@ -994,6 +1013,18 @@
     padding: 42px 22px;
 
     border-radius: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .placement-container,
+  .placement-hero-container,
+  .placement-statistics-section,
+  .placement-highlights-section,
+  .placement-records-section,
+  .placement-record-footer {
+    width: calc(100% - 24px) !important;
+    max-width: calc(100% - 24px) !important;
   }
 }
 

@@ -98,11 +98,10 @@ const ExecutiveCouncil = () => {
       <section className="executive-intro">
         <Container>
           <Row className="justify-content-center">
-            <Col lg={10} md={12}>
+            <Col lg={12} md={12}>
               <div className="text-center mb-4">
                 <h2 className="section-title text-center">
-                  Executive
-                  {/* <span> Council</span> */}
+                  Executive Council
                 </h2>
               </div>
 
@@ -110,7 +109,6 @@ const ExecutiveCouncil = () => {
                 style={{
                   textAlign: "justify",
                   textJustify: "inter-word",
-                  maxWidth: "900px",
                   margin: "0 auto 14px",
                 }}
               >
@@ -124,7 +122,6 @@ const ExecutiveCouncil = () => {
                 style={{
                   textAlign: "justify",
                   textJustify: "inter-word",
-                  maxWidth: "900px",
                   margin: "0 auto",
                 }}
               >
