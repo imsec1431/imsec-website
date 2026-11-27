@@ -328,9 +328,21 @@
 
 .lcl-public-cta {
   position: relative;
-  padding: 40px 0;
+  width: 90% !important;
+  max-width: 90% !important;
+  margin: 30px auto 40px !important;
+  padding: 40px 24px;
   overflow: hidden;
   background: #002147;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
+  box-sizing: border-box !important;
+}
+
+.lcl-public-cta .lcl-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
 }
 
 .lcl-public-cta::before {
@@ -369,6 +381,23 @@
   color: rgba(255, 255, 255, 0.88);
   font-size: 14.5px;
   line-height: 1.7;
+}
+
+@media (max-width: 850px) {
+  .lcl-public-cta {
+    width: 94% !important;
+    max-width: 94% !important;
+    margin: 24px auto 32px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .lcl-public-cta {
+    width: calc(100% - 24px) !important;
+    max-width: calc(100% - 24px) !important;
+    margin: 20px auto 28px !important;
+    padding: 32px 18px;
+  }
 }
 
 /* =========================
@@ -470,7 +499,7 @@
   }
 
   .lcl-public-cta {
-    padding: 32px 0;
+    padding: 30px 18px;
   }
 }
 

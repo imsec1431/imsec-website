@@ -12,7 +12,7 @@
 .alumni-page {
   width: 100%;
   min-height: 100vh;
-  background: #ffffff;
+  background: #f8fafc;
   color: #172033;
   font-family: "Poppins", sans-serif;
   overflow: hidden;
@@ -20,33 +20,64 @@
 }
 
 /* =========================================================
-   CONTAINER (90% FLUID)
+   ALL SECTIONS EXCEPT HERO (90% WIDTH)
 ========================================================= */
 
-.alumni-container,
-.alumni-hero-container {
+.alumni-page > section:not(.alumni-hero),
+.alumni-section,
+.alumni-statistics,
+.alumni-network-section,
+.alumni-contribution,
+.alumni-final-cta {
   width: 90% !important;
   max-width: 90% !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  box-sizing: border-box !important;
 }
 
-@media (max-width: 768px) {
-  .alumni-container,
-  .alumni-hero-container {
+@media (max-width: 850px) {
+  .alumni-page > section:not(.alumni-hero),
+  .alumni-section,
+  .alumni-statistics,
+  .alumni-network-section,
+  .alumni-contribution,
+  .alumni-final-cta {
     width: 94% !important;
     max-width: 94% !important;
   }
 }
 
-@media (max-width: 480px) {
-  .alumni-container,
-  .alumni-hero-container {
+@media (max-width: 600px) {
+  .alumni-page > section:not(.alumni-hero),
+  .alumni-section,
+  .alumni-statistics,
+  .alumni-network-section,
+  .alumni-contribution,
+  .alumni-final-cta {
     width: calc(100% - 24px) !important;
     max-width: calc(100% - 24px) !important;
   }
+}
+
+/* =========================================================
+   INNER CONTAINER (FILLS 100% OF 90% SECTION)
+========================================================= */
+
+.alumni-page > section:not(.alumni-hero) .alumni-container,
+.alumni-page > section:not(.alumni-hero) .container,
+.alumni-section .alumni-container,
+.alumni-statistics .alumni-container,
+.alumni-network-section .alumni-container,
+.alumni-contribution .alumni-container,
+.alumni-final-cta .alumni-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box !important;
 }
 
 /* =========================================================
@@ -56,31 +87,54 @@
 .alumni-hero {
   position: relative;
   width: 100%;
-  padding: 38px 0 42px;
+  padding: 38px 20px 42px;
   margin-bottom: 24px;
   background: #002147;
+  border-bottom: 2px solid #fdb913;
   border-radius: 0;
   box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
   color: #ffffff;
-  text-align: left;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  min-height: auto;
+  overflow: hidden;
+}
+
+.alumni-hero-container {
+  width: 100% !important;
+  max-width: 850px !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 0 !important;
 }
 
 .alumni-hero-content {
-  text-align: left;
+  text-align: center !important;
   color: #ffffff;
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
+  width: 100% !important;
+  max-width: 850px !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .alumni-hero-tag {
   display: inline-block;
-  margin-bottom: 8px;
+  margin: 0 auto 8px auto !important;
   color: #fdb913;
   font-size: 11px;
   font-weight: 750;
   letter-spacing: 2px;
   text-transform: uppercase;
+  text-align: center !important;
 }
 
 .alumni-hero-content h1 {
@@ -90,21 +144,23 @@
   line-height: 1.2;
   font-weight: 750;
   letter-spacing: -0.5px;
+  text-align: center !important;
 }
 
 .alumni-hero-content p {
-  margin: 8px 0 0;
+  margin: 8px auto 0 !important;
   color: rgba(255, 255, 255, 0.85);
   font-size: 14.5px;
   line-height: 1.6;
   max-width: 750px;
+  text-align: center !important;
 }
 
 .alumni-hero-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-top: 16px;
+  margin: 16px auto 0 !important;
   padding: 9px 20px;
   background: #fdb913;
   color: #002147;
@@ -202,10 +258,11 @@
 
 .alumni-section {
   padding: 26px 0 30px;
+  background: transparent;
 }
 
 .alumni-light-section {
-  background: #f8fafc;
+  background: transparent;
 }
 
 .alumni-section-heading {
@@ -322,6 +379,8 @@
   color: #64748b;
   font-size: 14px;
   line-height: 1.7;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 /* =========================================================
@@ -329,8 +388,12 @@
 ========================================================= */
 
 .alumni-statistics {
-  padding: 24px 0;
+  padding: 32px 24px;
   background: #002147;
+  border-radius: 14px;
+  margin-top: 18px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
 }
 
 .alumni-stat-grid {
@@ -466,6 +529,8 @@
   font-size: 13px;
   line-height: 1.6;
   margin: 0 0 10px;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 .alumni-achievement {
@@ -574,6 +639,8 @@
   color: #64748b;
   font-size: 13px;
   line-height: 1.6;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 /* =========================================================
@@ -660,6 +727,8 @@
   color: #64748b;
   font-size: 13px;
   line-height: 1.6;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 .story-link {
@@ -680,7 +749,7 @@
 ========================================================= */
 
 .alumni-testimonial-section {
-  background: #f8fafc;
+  background: transparent;
 }
 
 .alumni-testimonial-grid {
@@ -717,6 +786,8 @@
   font-size: 13px;
   line-height: 1.75;
   font-style: italic;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 .testimonial-person {
@@ -821,6 +892,8 @@
   color: #64748b;
   font-size: 13px;
   line-height: 1.6;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 .event-details {
@@ -903,6 +976,8 @@
   color: #64748b;
   font-size: 13px;
   line-height: 1.6;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 .chapter-coordinator {
@@ -941,9 +1016,13 @@
 ========================================================= */
 
 .alumni-network-section {
-  padding: 36px 0;
+  padding: 38px 28px;
   background: #002147;
   color: #ffffff;
+  border-radius: 14px;
+  margin-top: 24px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
 }
 
 .alumni-network-content {
@@ -1045,7 +1124,7 @@
 ========================================================= */
 
 .alumni-mentorship {
-  background: #ffffff;
+  background: transparent;
 }
 
 .alumni-mentorship-content p {
@@ -1054,6 +1133,8 @@
   color: #64748b;
   font-size: 14px;
   line-height: 1.7;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 .alumni-mentorship-image {
@@ -1076,8 +1157,8 @@
 ========================================================= */
 
 .alumni-contribution {
-  padding: 26px 0;
-  background: #f8fafc;
+  padding: 16px 0;
+  background: transparent;
 }
 
 .alumni-contribution-inner {
@@ -1104,6 +1185,8 @@
   color: #64748b;
   font-size: 14px;
   line-height: 1.7;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
 
 /* =========================================================
@@ -1111,10 +1194,13 @@
 ========================================================= */
 
 .alumni-final-cta {
-  padding: 40px 0;
+  padding: 38px 28px;
   background: #002147;
   color: #ffffff;
-  margin-bottom: 55px;
+  border-radius: 14px;
+  margin-top: 24px;
+  margin-bottom: 45px;
+  box-shadow: 0 4px 15px rgba(0, 33, 71, 0.12);
 }
 
 .alumni-final-cta-content {
